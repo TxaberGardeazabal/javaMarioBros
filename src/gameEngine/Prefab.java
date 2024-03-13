@@ -751,6 +751,7 @@ public class Prefab {
     public static GameObject generateUIButton() {
         SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png");
         GameObject ret = generateSpriteObject(sprites.getSprite(1), 0.55f, 0.25f);
+        ret.name = "font_render_text_object";
         
         ret.addComponent(new UIButton());
         ret.addComponent(new FontRenderer());

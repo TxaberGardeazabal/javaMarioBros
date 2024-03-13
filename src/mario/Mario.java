@@ -19,7 +19,7 @@ public class Mario {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        FontTest font = new FontTest("assets/images/fonts/super-mario-bros-nes.ttf", 64);
+        //FontTest font = new FontTest("assets/fonts/super-mario-bros-nes.ttf", 64);
         
         Window window = Window.get();
         window.run();

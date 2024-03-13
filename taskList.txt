@@ -1,26 +1,35 @@
-add rotation gizmo
+add new functionalities:
+- add rotation gizmo
+find how to initialize spritesheets automaticaly instead of hardcoding all of them (maybe in the assetpool)
++ add a menu scene and a play scene
++ add invincibility powerup
+++ follow the font tutorials and place text on the screen
+++ make UI components: text, buttons, images and variables
+
+upgrade existing functionalities:
 -- style properties window
 -- add all controlls in settings class and use those
-bug: some window focus issues
-	bug: gizmos break when being pulled out of viewport
-add invincibility powerup
-fix: imgui string editing sucks
-add boxcollider to enemies and items (for optimization)
 -- refractor
-// make saving, loading and copying of child gameobjects
-make moving thru pipes nicer
-make physics them more precise and less janky
-bug: enemies that are bellowGround despawn as they get deleted
-change loading resources on the level (requires big changes)
-	make loading of different levels
-make mario movements into separate functions and
-make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
-make pillbox changes ep #58
-bug: collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
-bug, when starting play, blocks that where boxSelected don't get their original colors
-bug, when pressing away while jdialog windows are active causes focus bugs and crashes
-bug, some blocks appear invisible
-add a menu scene and a play scene
-on savemenus show file name in selector
+- add docs
+- add boxcollider to enemies and items (for optimization)
+- on savemenus show file name in selector
 begining play saves new scenes, add a notif when you play an unsaved custom level
-follow the font tutorials and place text on the screen
+optimize loading resources on the level (requires big changes)
++ make mario movements into separate functions and
++ make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
+make moving thru pipes nicer
++ make physics them more precise and less janky
+
+bugfixing:
+- when starting play, blocks that where boxSelected don't get their original colors back
+some window focus issues:
+   gizmos break when being pulled out of viewport
+   when pressing away while jdialog windows are active causes focus bugs and crashes
+imgui string editing sucks
+some blocks appear invisible
++ enemies that are bellow Ground despawn as they get deleted
++ collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
+
+other:
+// make pillbox changes ep #58
+// make saving, loading and copying of child gameobjects (discontinued but kinda works)

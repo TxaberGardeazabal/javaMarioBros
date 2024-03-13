@@ -5,6 +5,7 @@
  */
 package render;
 
+import components.FontRenderer;
 import gameEngine.Window;
 import components.SpriteRenderer;
 import gameEngine.GameObject;
@@ -34,8 +35,7 @@ import static org.lwjgl.opengl.GL30.glBindVertexArray;
 
 /**
  * Renders the main windows contents by sending data to the GPU, basically different batches render sprites
- * that exist inside the scene gameobjects, this is some low level stuff so I don't have a extensive description
- * on this
+ * that exist inside the scene gameobjects
  * @author txaber
  */
 public class RenderBatch implements Comparable<RenderBatch>{
@@ -134,6 +134,33 @@ public class RenderBatch implements Comparable<RenderBatch>{
         if (this.numSprites >= this.maxBatchSize) {
             this.hasRoom = false;
         }
+    }
+    
+    public void addText(FontRenderer fr) {
+        String text = fr.getText();
+        float x = fr.getTextPos().x;
+        float y = fr.getTextPos().y;
+        
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            CharInfo charInfo = fr.getFont().getCharacter(c);
+            if (charInfo.width == 0) {
+                System.out.println("WARNING: unknown character" + c);
+                continue;
+            }
+            
+            addCharacter(x,y,fr.getSize(),charInfo,fr.getColor());
+            x += charInfo.width * fr.getSize();
+        }
+    }
+    
+    public void addCharacter(float x, float y, float scale, CharInfo charInfo, Vector4f rgb) {
+        // if we have no more room in the current batch, flush it and statr with a fresh batch.
+        if (vertices.length >= maxBatchSize - 4) {
+            //flushBatch();
+        }
+        // ouch, continue here
+        
     }
     
     public void render() {

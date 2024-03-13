@@ -21,6 +21,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import org.lwjgl.BufferUtils;
+import static org.lwjgl.opengl.GL11.glGenTextures;
 
 /**
  *
@@ -98,7 +99,10 @@ public class FontTest {
         } catch (IOException ex) {
             Logger.getLogger(FontTest.class.getName()).log(Level.SEVERE, null, ex);
         }*/
-        uploadTexture(img);
+        //uploadTexture(img);
+        
+        Texture fontTexture = new Texture();
+        this.textureId = fontTexture.init(img);
     }
     
     public Font registerFont(String fontFile) {
@@ -120,12 +124,16 @@ public class FontTest {
         
         ByteBuffer buffer = BufferUtils.createByteBuffer(image.getWidth() * image.getHeight() * 4);
         for (int y = 0; y < image.getHeight(); y++) {
-            for (int x = 0; x < image.getHeight(); x++) {
+            for (int x = 0; x < image.getWidth(); x++) {
                 int pixel = pixels[y * image.getWidth() + x];
-                
+                byte alphaComponnet = (byte)((pixel >> 24) & 0xFF);
+                buffer.put(alphaComponnet);
+                buffer.put(alphaComponnet);
+                buffer.put(alphaComponnet);
+                buffer.put(alphaComponnet);
             }
         }
-        
+        buffer.flip();
         
     }
     

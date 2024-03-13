@@ -5,6 +5,7 @@
  */
 package render;
 
+import java.awt.image.BufferedImage;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 import org.lwjgl.BufferUtils;
@@ -13,6 +14,7 @@ import static org.lwjgl.opengl.GL11.GL_NEAREST;
 import static org.lwjgl.opengl.GL11.GL_REPEAT;
 import static org.lwjgl.opengl.GL11.GL_RGB;
 import static org.lwjgl.opengl.GL11.GL_RGBA;
+import static org.lwjgl.opengl.GL11.GL_RGBA8;
 import static org.lwjgl.opengl.GL11.GL_TEXTURE_2D;
 import static org.lwjgl.opengl.GL11.GL_TEXTURE_MAG_FILTER;
 import static org.lwjgl.opengl.GL11.GL_TEXTURE_MIN_FILTER;
@@ -57,8 +59,6 @@ public class Texture {
 
     }
     
-    
-    
     public void init(String filePath) {
         this.filepath = filePath;
         
@@ -102,6 +102,50 @@ public class Texture {
         }
         
         stbi_image_free(image);
+    }
+    
+    public int init(BufferedImage image) {
+        int[] pixels = new int[image.getHeight() * image.getWidth()];
+        image.getRGB(0, 0, image.getWidth(), image.getHeight(), pixels, 0, image.getWidth());
+        
+        ByteBuffer buffer = BufferUtils.createByteBuffer(image.getWidth() * image.getHeight() * 4);
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                int pixel = pixels[y * image.getWidth() + x];
+                byte alphaComponent = (byte)((pixel >> 24) & 0xFF);
+                buffer.put(alphaComponent);
+                buffer.put(alphaComponent);
+                buffer.put(alphaComponent);
+                buffer.put(alphaComponent);
+            }
+        }
+        buffer.flip();
+        
+        // generate texture on GPU
+        texID = glGenTextures();
+        glBindTexture(GL_TEXTURE_2D, texID);
+        
+        // set texture parameters
+        // repeat image in both directions
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        
+        /*IntBuffer width = BufferUtils.createIntBuffer(1);
+        IntBuffer height = BufferUtils.createIntBuffer(1);
+        IntBuffer channels = BufferUtils.createIntBuffer(1);
+        */
+        //stbi_set_flip_vertically_on_load(true);
+        //ByteBuffer image = stbi_load(filepath, width, height, channels, 0);
+        
+        this.width = image.getWidth();
+        this.height = image.getHeight();
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, image.getWidth(), image.getHeight(), 
+        0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+        
+        buffer.clear();
+        return texID;
     }
     
     public void bind() {
