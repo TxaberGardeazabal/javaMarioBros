@@ -5,6 +5,7 @@ find how to initialize spritesheets automaticaly instead of hardcoding all of th
 + add invincibility powerup
 ++ follow the font tutorials and place text on the screen
 ++ make UI components: text, buttons, images and variables
+++ create a new renderBatch to render text onscreen
 
 upgrade existing functionalities:
 -- style properties window

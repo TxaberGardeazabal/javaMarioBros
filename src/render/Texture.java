@@ -42,7 +42,7 @@ public class Texture {
     public Texture() {
         this.texID = -1;
         this.width = -1;
-        this.width = -1;
+        this.height = -1;
     }
 
     public Texture(int width, int height) {
@@ -123,7 +123,7 @@ public class Texture {
         
         // generate texture on GPU
         texID = glGenTextures();
-        glBindTexture(GL_TEXTURE_2D, texID);
+        //glBindTexture(GL_TEXTURE_2D, texID);
         
         // set texture parameters
         // repeat image in both directions

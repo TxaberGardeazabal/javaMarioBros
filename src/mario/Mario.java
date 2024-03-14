@@ -6,7 +6,6 @@
 package mario;
 
 import gameEngine.Window;
-import render.FontTest;
 /**
  *  game/program to run super mario bros,
  *  game engine (jade) taken from https://www.youtube.com/c/GamesWithGabe/playlists
@@ -19,8 +18,6 @@ public class Mario {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //FontTest font = new FontTest("assets/fonts/super-mario-bros-nes.ttf", 64);
-        
         Window window = Window.get();
         window.run();
     }

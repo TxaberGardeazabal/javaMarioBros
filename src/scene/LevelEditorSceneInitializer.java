@@ -29,6 +29,7 @@ import imgui.ImVec2;
 import java.io.File;
 import java.util.Collection;
 import org.joml.Vector2f;
+import render.FontTest;
 import util.AssetPool;
 import util.Settings;
 
@@ -70,6 +71,8 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         imGuiLayer.setAssetWindow(new AssetWindow(mc));
         imGuiLayer.setPropertiesWindow(new PropertiesWindow(mc));
         imGuiLayer.setSceneHierarchy(new SceneHierarchyWindow(mc));
+        
+        FontTest font = new FontTest("assets/fonts/super-mario-bros-nes.ttf", 64);
     }
 
     @Override

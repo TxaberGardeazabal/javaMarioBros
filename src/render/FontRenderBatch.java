@@ -1,14 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package render;
 
 import components.FontRenderer;
-import gameEngine.Window;
 import components.SpriteRenderer;
 import gameEngine.GameObject;
+import gameEngine.Window;
 import java.util.ArrayList;
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
@@ -34,12 +33,10 @@ import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
 
 /**
- * Renders the main windows contents by sending data to the GPU, basically different batches render sprites
- * that exist inside the scene gameobjects
- * @author txaber
+ *
+ * @author txaber gardeazabal
  */
-public class RenderBatch implements Comparable<RenderBatch>{
-    
+public class FontRenderBatch implements Comparable<RenderBatch>{
     // Vertex
     // ======
     //
@@ -61,6 +58,8 @@ public class RenderBatch implements Comparable<RenderBatch>{
     
     private SpriteRenderer[] sprites;
     private int numSprites;
+    private FontRenderer[] numTexts;
+    private int numCharacters;
     private boolean hasRoom;
     private float[] vertices;
     private int[] texSlots = {0, 1, 2, 3, 4, 5, 6, 7};
@@ -72,8 +71,7 @@ public class RenderBatch implements Comparable<RenderBatch>{
     private int zIndex;
     private Renderer renderer;
 
-    public RenderBatch(int maxBatchSize, int zIndex, Renderer renderer) {
-        //this.shader = AssetPool.getShader("assets/shaders/default.glsl");
+    public FontRenderBatch(int maxBatchSize, int zIndex, Renderer renderer) {
         this.sprites = new SpriteRenderer[maxBatchSize];
         this.maxBatchSize = maxBatchSize;
         
@@ -362,5 +360,4 @@ public class RenderBatch implements Comparable<RenderBatch>{
     public int compareTo(RenderBatch t) {
         return Integer.compare(zIndex, t.getzIndex());
     }
-    
 }
