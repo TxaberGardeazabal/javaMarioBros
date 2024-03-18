@@ -16,6 +16,7 @@ import static org.lwjgl.opengl.ARBVertexArrayObject.glGenVertexArrays;
 import static org.lwjgl.opengl.GL11.GL_FLOAT;
 import static org.lwjgl.opengl.GL11.GL_TRIANGLES;
 import static org.lwjgl.opengl.GL11.GL_UNSIGNED_INT;
+import static org.lwjgl.opengl.GL11.glBindTexture;
 import static org.lwjgl.opengl.GL11.glDrawElements;
 import static org.lwjgl.opengl.GL13.GL_TEXTURE0;
 import static org.lwjgl.opengl.GL13.glActiveTexture;
@@ -31,6 +32,7 @@ import static org.lwjgl.opengl.GL20.glDisableVertexAttribArray;
 import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
 import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
+import static org.lwjgl.opengl.GL31.GL_TEXTURE_BUFFER;
 
 /**
  *
@@ -56,10 +58,8 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
     private final int VERTEX_SIZE = 10;
     private final int VERTEX_SIZE_BYTES = VERTEX_SIZE * Float.BYTES;
     
-    private SpriteRenderer[] sprites;
-    private int numSprites;
     private FontRenderer[] numTexts;
-    private int numCharacters;
+    private int size;
     private boolean hasRoom;
     private float[] vertices;
     private int[] texSlots = {0, 1, 2, 3, 4, 5, 6, 7};
@@ -72,13 +72,13 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
     private Renderer renderer;
 
     public FontRenderBatch(int maxBatchSize, int zIndex, Renderer renderer) {
-        this.sprites = new SpriteRenderer[maxBatchSize];
+        this.numTexts = new FontRenderer[maxBatchSize];
         this.maxBatchSize = maxBatchSize;
         
         // 4 vertices quads
         this.vertices = new float[maxBatchSize * 4 * VERTEX_SIZE];
         
-        this.numSprites = 0;
+        this.size = 0;
         this.hasRoom = true;
         this.textures = new ArrayList();
         this.zIndex = zIndex;
@@ -114,7 +114,7 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
         glEnableVertexAttribArray(4);
     }
     
-    public void addSprite(SpriteRenderer spr) {
+    /*public void addSprite(SpriteRenderer spr) {
         // get index and add renderObject
         // next index = lenght - 1 + 1
         this.sprites[this.numSprites] = spr;
@@ -133,7 +133,7 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
             this.hasRoom = false;
         }
     }
-    
+    */
     public void addText(FontRenderer fr) {
         String text = fr.getText();
         float x = fr.getTextPos().x;
@@ -147,21 +147,146 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
                 continue;
             }
             
-            addCharacter(x,y,fr.getSize(),charInfo,fr.getColor());
+            addCharacterProperties(x, y, fr, charInfo);
             x += charInfo.width * fr.getSize();
         }
     }
     
-    public void addCharacter(float x, float y, float scale, CharInfo charInfo, Vector4f rgb) {
-        // if we have no more room in the current batch, flush it and start with a fresh batch.
-        if (vertices.length >= maxBatchSize - 4) {
-            //flushBatch();
-        }
-        // ouch, continue here
+    public void addCharacterProperties(float x, float y, FontRenderer fr, CharInfo charInfo) {
+        float scale = fr.getSize();
         
+        
+        // if we have no more room in the current batch, flush it and start with a fresh batch.
+        if (vertices.length >= maxBatchSize - 1) {
+            flushBatch();
+        }
+        
+        float x0 = x;
+        float y0 = y;
+        float x1 = x + scale * charInfo.width;
+        float y1 = y + scale * charInfo.height;
+        
+        float ux0 = charInfo.textureCoordinates[0].x;
+        float uy0 = charInfo.textureCoordinates[0].y;
+        float ux1 = charInfo.textureCoordinates[1].x;
+        float uy1 = charInfo.textureCoordinates[1].y;
+        
+        int index = size * VERTEX_SIZE;
+        // TODO: refractor into a for loop
+        // load position
+        vertices[index] = x1;
+        vertices[index +1] = y0;
+
+        // load color
+        vertices[index +2] = fr.getColor().x;
+        vertices[index +3] = fr.getColor().y;
+        vertices[index +4] = fr.getColor().z;
+        vertices[index +5] = fr.getColor().w;
+
+        // load texture coordinates
+        vertices[index +6] = ux1;
+        vertices[index +7] = uy0;
+
+        // load texture id
+        vertices[index +8] = fr.getFont().textureId;
+
+        // load entity id
+        vertices[index +9] = fr.gameObject.getUid() +1;
+        
+        // second vertice
+        index += VERTEX_SIZE;
+        // load position
+        vertices[index] = x1;
+        vertices[index +1] = y1;
+
+        // load color
+        vertices[index +2] = fr.getColor().x;
+        vertices[index +3] = fr.getColor().y;
+        vertices[index +4] = fr.getColor().z;
+        vertices[index +5] = fr.getColor().w;
+
+        // load texture coordinates
+        vertices[index +6] = ux1;
+        vertices[index +7] = uy1;
+
+        // load texture id
+        vertices[index +8] = fr.getFont().textureId;
+
+        // load entity id
+        vertices[index +9] = fr.gameObject.getUid() +1;
+        
+        // third vertice
+        index += VERTEX_SIZE;
+        // load position
+        vertices[index] = x0;
+        vertices[index +1] = y1;
+
+        // load color
+        vertices[index +2] = fr.getColor().x;
+        vertices[index +3] = fr.getColor().y;
+        vertices[index +4] = fr.getColor().z;
+        vertices[index +5] = fr.getColor().w;
+
+        // load texture coordinates
+        vertices[index +6] = ux0;
+        vertices[index +7] = uy1;
+
+        // load texture id
+        vertices[index +8] = fr.getFont().textureId;
+
+        // load entity id
+        vertices[index +9] = fr.gameObject.getUid() +1;
+        
+        // forth vertice
+        index += VERTEX_SIZE;
+        // load position
+        vertices[index] = x0;
+        vertices[index +1] = y0;
+
+        // load color
+        vertices[index +2] = fr.getColor().x;
+        vertices[index +3] = fr.getColor().y;
+        vertices[index +4] = fr.getColor().z;
+        vertices[index +5] = fr.getColor().w;
+
+        // load texture coordinates
+        vertices[index +6] = ux0;
+        vertices[index +7] = uy0;
+
+        // load texture id
+        vertices[index +8] = fr.getFont().textureId;
+
+        // load entity id
+        vertices[index +9] = fr.gameObject.getUid() +1;
+        
+        size += 4;
     }
     
-    public void render() {
+    public void flushBatch() {
+        // clear buffer on the GPU, upload the CPU contents, and the draw
+        glBindBuffer(GL_ARRAY_BUFFER, vboID);
+        glBufferData(GL_ARRAY_BUFFER, Float.BYTES * VERTEX_SIZE * maxBatchSize, GL_DYNAMIC_DRAW);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, vertices);
+        
+        // draw the buffer that we just uploaded
+        Shader shader = Renderer.getBoundShader();
+        shader.use();
+        shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
+        shader.uploadMat4f("uView", Window.getScene().camera().getViewMatrix());
+        
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_BUFFER, numTexts[0].getFont().textureId);
+        shader.uploadIntArray("uTextures", texSlots);
+        
+        glBindVertexArray(vaoID);
+        
+        glDrawElements(GL_TRIANGLES, this.size * 6, GL_UNSIGNED_INT, 0);
+        
+        // reset the batch for use on next draw
+        size = 0;
+    }
+    
+    /*public void render() {
         boolean rebufferData = false;
         for (int i = 0; i < numSprites; i++) {
             SpriteRenderer spr = sprites[i];
@@ -215,7 +340,7 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
             textures.get(i).unbind();
         }
         shader.detach();
-    }
+    }*/
 
     private int[] generateIndices() {
         // 6 indices per quad (3 * 2)
@@ -242,7 +367,7 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
         elements[offsetArrayIndex +5] = offset + 1;
     }
     
-    public boolean destroyIfExists(GameObject go) {
+    /*public boolean destroyIfExists(GameObject go) {
         SpriteRenderer spr = go.getComponent(SpriteRenderer.class);
         for (int i = 0; i < numSprites; i++) {
             if (sprites[i] == spr) {
@@ -338,7 +463,7 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
         }
         
         
-    }
+    }*/
 
     public boolean hasRoom() {
         return hasRoom;
