@@ -18,10 +18,12 @@ public class Renderer {
     
     private final int MAX_BATCH_SIZE = 1000;
     private ArrayList<RenderBatch> batches;
+    private ArrayList<FontRenderBatch> fontBatches;
     private static Shader currentShader;
 
     public Renderer() {
         this.batches = new ArrayList();
+        this.fontBatches = new ArrayList();
     }
     
     public void add(GameObject go) {
