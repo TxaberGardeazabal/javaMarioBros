@@ -4,6 +4,7 @@
  */
 package render;
 
+import components.Component;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -20,26 +21,89 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import org.joml.Vector2f;
 import org.lwjgl.BufferUtils;
+import static org.lwjgl.opengl.GL11.GL_FLOAT;
 import static org.lwjgl.opengl.GL11.glGenTextures;
+import static org.lwjgl.opengl.GL15.GL_ARRAY_BUFFER;
+import static org.lwjgl.opengl.GL15.GL_ELEMENT_ARRAY_BUFFER;
+import static org.lwjgl.opengl.GL15.GL_STATIC_DRAW;
+import static org.lwjgl.opengl.GL15.glBindBuffer;
+import static org.lwjgl.opengl.GL15.glBufferData;
+import static org.lwjgl.opengl.GL15.glGenBuffers;
+import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
+import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
+import static org.lwjgl.opengl.GL30.glBindVertexArray;
+import static org.lwjgl.opengl.GL30.glGenVertexArrays;
 
 /**
  *
  * @author txaber gardeazabal
  */
-public class FontTest {
+public class FontTest extends Component{
     private String filepath;
     private int fontSize;
     private int width, height, lineHeight;
     private Map<Integer, CharInfo> characterMap;
     
     public int textureId;
+    
+    // testing code
+    private float[] vertices = {
+            // x, y,        r, g, b              ux, uy
+            0.5f, 0.5f,     1.0f, 0.2f, 0.11f,   1.0f, 0.0f,
+            0.5f, -0.5f,    1.0f, 0.2f, 0.11f,   1.0f, 1.0f,
+            -0.5f, -0.5f,   1.0f, 0.2f, 0.11f,   0.0f, 1.0f,
+            -0.5f, 0.5f,    1.0f, 0.2f, 0.11f,   0.0f, 0.0f
+    };
+
+    private int[] indices = {
+            0, 1, 3,
+            1, 2, 3
+    };
+    
+    private int vao,vbo;
+    
+    private void uploadSquare() {
+        vao = glGenVertexArrays();
+        glBindVertexArray(vao);
+
+        int vbo = glGenBuffers();
+        glBindBuffer(GL_ARRAY_BUFFER, vbo);
+        glBufferData(GL_ARRAY_BUFFER, vertices, GL_STATIC_DRAW);
+
+        int ebo = glGenBuffers();
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices, GL_STATIC_DRAW);
+
+        int stride = 7 * Float.BYTES;
+        glVertexAttribPointer(0, 2, GL_FLOAT, false, stride, 0);
+        glEnableVertexAttribArray(0);
+
+        glVertexAttribPointer(1, 3, GL_FLOAT, false, stride, 2 * Float.BYTES);
+        glEnableVertexAttribArray(1);
+
+        glVertexAttribPointer(2, 2, GL_FLOAT, false, stride, 5 * Float.BYTES);
+        glEnableVertexAttribArray(2);
+    }
+    
 
     public FontTest(String filepath, int fontSize) {
         this.filepath = filepath;
         this.fontSize = fontSize;
         this.characterMap = new HashMap<>();
         generateBitmap();
+    }
+    
+    @Override
+    public void start() {
+        Vector2f[] texCoords = getCharacter('A').textureCoordinates;
+        vertices[5] = texCoords[0].x; vertices[6] = texCoords[0].y;
+        vertices[12] = texCoords[1].x; vertices[13] = texCoords[1].y;
+        vertices[19] = texCoords[2].x; vertices[20] = texCoords[2].y;
+        vertices[26] = texCoords[3].x; vertices[27] = texCoords[3].y;
+        
+        uploadSquare();
     }
     
     public void generateBitmap() {
@@ -83,7 +147,7 @@ public class FontTest {
         g2d = img.createGraphics();
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setFont(font);
-        g2d.setColor(Color.white);
+        g2d.setColor(Color.BLACK); // cahnged color to black temporaly
         for (int i = 0; i < font.getNumGlyphs(); i++) {
             if (font.canDisplay(i)) {
                 CharInfo info = characterMap.get(i);

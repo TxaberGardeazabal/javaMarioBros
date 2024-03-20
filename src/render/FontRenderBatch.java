@@ -9,6 +9,7 @@ import components.SpriteRenderer;
 import gameEngine.GameObject;
 import gameEngine.Window;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
@@ -38,7 +39,7 @@ import static org.lwjgl.opengl.GL31.GL_TEXTURE_BUFFER;
  *
  * @author txaber gardeazabal
  */
-public class FontRenderBatch implements Comparable<RenderBatch>{
+public class FontRenderBatch implements Comparable<FontRenderBatch>{
     // Vertex
     // ======
     //
@@ -58,7 +59,8 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
     private final int VERTEX_SIZE = 10;
     private final int VERTEX_SIZE_BYTES = VERTEX_SIZE * Float.BYTES;
     
-    private FontRenderer[] numTexts;
+    private FontRenderer[] texts;
+    private int numTexts;
     private int size;
     private boolean hasRoom;
     private float[] vertices;
@@ -72,12 +74,13 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
     private Renderer renderer;
 
     public FontRenderBatch(int maxBatchSize, int zIndex, Renderer renderer) {
-        this.numTexts = new FontRenderer[maxBatchSize];
+        this.texts = new FontRenderer[maxBatchSize];
         this.maxBatchSize = maxBatchSize;
         
         // 4 vertices quads
         this.vertices = new float[maxBatchSize * 4 * VERTEX_SIZE];
         
+        this.numTexts = 0;
         this.size = 0;
         this.hasRoom = true;
         this.textures = new ArrayList();
@@ -135,6 +138,10 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
     }
     */
     public void addText(FontRenderer fr) {
+        System.out.println("adding text " + fr.getText());
+        this.texts[numTexts] = fr;
+        numTexts++;
+        
         String text = fr.getText();
         float x = fr.getTextPos().x;
         float y = fr.getTextPos().y;
@@ -157,7 +164,9 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
         
         
         // if we have no more room in the current batch, flush it and start with a fresh batch.
-        if (vertices.length >= maxBatchSize - 1) {
+        if (size * VERTEX_SIZE >= vertices.length - 4) {
+            System.out.println("batch full, flushing batch");
+            System.out.println("batch contents = " + Arrays.toString(vertices));
             flushBatch();
         }
         
@@ -275,7 +284,7 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
         shader.uploadMat4f("uView", Window.getScene().camera().getViewMatrix());
         
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_BUFFER, numTexts[0].getFont().textureId);
+        glBindTexture(GL_TEXTURE_BUFFER, texts[0].getFont().textureId);
         shader.uploadIntArray("uTextures", texSlots);
         
         glBindVertexArray(vaoID);
@@ -482,7 +491,7 @@ public class FontRenderBatch implements Comparable<RenderBatch>{
     }
 
     @Override
-    public int compareTo(RenderBatch t) {
+    public int compareTo(FontRenderBatch t) {
         return Integer.compare(zIndex, t.getzIndex());
     }
 }

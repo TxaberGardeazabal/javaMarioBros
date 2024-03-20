@@ -36,6 +36,7 @@ import physics2D.components.CircleCollider;
 import physics2D.components.PillboxCollider;
 import physics2D.components.Rigidbody2D;
 import physics2D.enums.BodyType;
+import render.FontTest;
 import util.AssetPool;
 import util.Settings;
 
@@ -754,7 +755,9 @@ public class Prefab {
         ret.name = "font_render_text_object";
         
         ret.addComponent(new UIButton());
-        ret.addComponent(new FontRenderer());
+        FontRenderer fr = new FontRenderer();
+        //fr.setFont(new FontTest("assets/fonts/super-mario-bros-nes.ttf", 1));
+        ret.addComponent(fr);
         return ret;
     }
 }

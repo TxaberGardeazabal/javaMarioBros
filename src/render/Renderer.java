@@ -5,6 +5,7 @@
  */
 package render;
 
+import components.FontRenderer;
 import gameEngine.GameObject;
 import components.SpriteRenderer;
 import java.util.ArrayList;
@@ -28,9 +29,14 @@ public class Renderer {
     
     public void add(GameObject go) {
         SpriteRenderer spr = go.getComponent(SpriteRenderer.class);
+        FontRenderer fr = go.getComponent(FontRenderer.class);
         if (spr != null) {
             add(spr);
         }
+        
+        /*if (fr != null) {
+            add(fr);
+        }*/
     }
     
     public void add(SpriteRenderer sprite) {
@@ -53,6 +59,27 @@ public class Renderer {
             batches.add(newBatch);
             newBatch.addSprite(sprite);
             Collections.sort(batches);
+        }
+    }
+    public void add(FontRenderer text) {
+        boolean added = false;
+        for (FontRenderBatch batch : fontBatches) {
+            if (batch.getzIndex() == text.gameObject.transform.zIndex) {
+                
+                batch.addText(text);
+                added = true;
+                break;
+                
+            }
+        }
+        
+        if (!added) {
+            FontRenderBatch newBatch = new FontRenderBatch(MAX_BATCH_SIZE, 
+                    text.gameObject.transform.zIndex, this);
+            newBatch.start();
+            fontBatches.add(newBatch);
+            newBatch.addText(text);
+            Collections.sort(fontBatches);
         }
     }
     

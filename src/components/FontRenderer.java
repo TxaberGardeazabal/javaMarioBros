@@ -24,10 +24,14 @@ import render.FontTest;
  */
 public class FontRenderer extends Component {
 
-    public transient FontTest font;
-    public String text = "a";
-    public int size = 1;
-    public Vector4f color = new Vector4f(1f,1f,1f,1f);
+    private transient FontTest font;
+    private String text = "a";
+    private int size = 1;
+    private Vector4f color = new Vector4f(1f,1f,1f,1f);
+
+    public FontRenderer() {
+        this.font = new FontTest("assets/fonts/super-mario-bros-nes.ttf", 1);
+    }
     
     @Override
     public void start() {
@@ -72,6 +76,6 @@ public class FontRenderer extends Component {
     }
     
     public Vector2f getTextPos() {
-        return new Vector2f(gameObject.transform.position.x,gameObject.transform.position.x);
+        return new Vector2f(gameObject.transform.position.x,gameObject.transform.position.y);
     }
 }
