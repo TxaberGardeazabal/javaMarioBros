@@ -23,6 +23,7 @@ make moving thru pipes nicer
 
 bugfixing:
 - when starting play, blocks that where boxSelected don't get their original colors back
+- picking shader doesn't prevent extra placement of gameobjects if the object color is too light
 some window focus issues:
    gizmos break when being pulled out of viewport
    when pressing away while jdialog windows are active causes focus bugs and crashes

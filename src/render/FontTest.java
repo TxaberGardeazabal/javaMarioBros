@@ -23,8 +23,29 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import org.joml.Vector2f;
 import org.lwjgl.BufferUtils;
+import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
 import static org.lwjgl.opengl.GL11.GL_FLOAT;
+import static org.lwjgl.opengl.GL11.GL_LINEAR;
+import static org.lwjgl.opengl.GL11.GL_REPEAT;
+import static org.lwjgl.opengl.GL11.GL_RGBA;
+import static org.lwjgl.opengl.GL11.GL_RGBA8;
+import static org.lwjgl.opengl.GL11.GL_TEXTURE_2D;
+import static org.lwjgl.opengl.GL11.GL_TEXTURE_MAG_FILTER;
+import static org.lwjgl.opengl.GL11.GL_TEXTURE_MIN_FILTER;
+import static org.lwjgl.opengl.GL11.GL_TEXTURE_WRAP_S;
+import static org.lwjgl.opengl.GL11.GL_TEXTURE_WRAP_T;
+import static org.lwjgl.opengl.GL11.GL_TRIANGLES;
+import static org.lwjgl.opengl.GL11.GL_UNSIGNED_BYTE;
+import static org.lwjgl.opengl.GL11.GL_UNSIGNED_INT;
+import static org.lwjgl.opengl.GL11.glBindTexture;
+import static org.lwjgl.opengl.GL11.glClear;
+import static org.lwjgl.opengl.GL11.glClearColor;
+import static org.lwjgl.opengl.GL11.glDrawElements;
 import static org.lwjgl.opengl.GL11.glGenTextures;
+import static org.lwjgl.opengl.GL11.glTexImage2D;
+import static org.lwjgl.opengl.GL11.glTexParameteri;
+import static org.lwjgl.opengl.GL13.GL_TEXTURE0;
+import static org.lwjgl.opengl.GL13.glActiveTexture;
 import static org.lwjgl.opengl.GL15.GL_ARRAY_BUFFER;
 import static org.lwjgl.opengl.GL15.GL_ELEMENT_ARRAY_BUFFER;
 import static org.lwjgl.opengl.GL15.GL_STATIC_DRAW;
@@ -35,6 +56,8 @@ import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
 import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
 import static org.lwjgl.opengl.GL30.glGenVertexArrays;
+import static org.lwjgl.opengl.GL31.GL_TEXTURE_BUFFER;
+import util.AssetPool;
 
 /**
  *
@@ -47,7 +70,6 @@ public class FontTest extends Component{
     private Map<Integer, CharInfo> characterMap;
     
     public int textureId;
-    
     // testing code
     private float[] vertices = {
             // x, y,        r, g, b              ux, uy
@@ -97,7 +119,7 @@ public class FontTest extends Component{
     
     @Override
     public void start() {
-        Vector2f[] texCoords = getCharacter('A').textureCoordinates;
+        Vector2f[] texCoords = getCharacter('k').textureCoordinates;
         vertices[5] = texCoords[0].x; vertices[6] = texCoords[0].y;
         vertices[12] = texCoords[1].x; vertices[13] = texCoords[1].y;
         vertices[19] = texCoords[2].x; vertices[20] = texCoords[2].y;
@@ -147,7 +169,7 @@ public class FontTest extends Component{
         g2d = img.createGraphics();
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setFont(font);
-        g2d.setColor(Color.BLACK); // cahnged color to black temporaly
+        g2d.setColor(Color.WHITE);
         for (int i = 0; i < font.getNumGlyphs(); i++) {
             if (font.canDisplay(i)) {
                 CharInfo info = characterMap.get(i);
@@ -163,7 +185,8 @@ public class FontTest extends Component{
         } catch (IOException ex) {
             Logger.getLogger(FontTest.class.getName()).log(Level.SEVERE, null, ex);
         }*/
-        //uploadTexture(img);
+        
+        uploadTexture(img);
         
         Texture fontTexture = new Texture();
         this.textureId = fontTexture.init(img);
@@ -183,7 +206,7 @@ public class FontTest extends Component{
 
     private void uploadTexture(BufferedImage image) {
         
-        int[] pixels = new int[image.getHeight()- image.getWidth()];
+        int[] pixels = new int[image.getHeight() * image.getWidth()];
         image.getRGB(0, 0, image.getWidth(), image.getHeight(), pixels, 0, image.getWidth());
         
         ByteBuffer buffer = BufferUtils.createByteBuffer(image.getWidth() * image.getHeight() * 4);
@@ -199,9 +222,31 @@ public class FontTest extends Component{
         }
         buffer.flip();
         
+        textureId = glGenTextures();
+        
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, image.getWidth(), image.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+        buffer.clear();
     }
     
     public CharInfo getCharacter(int codePoint) {
         return characterMap.getOrDefault(codePoint, new CharInfo(0,0,0,0));
+    }
+    
+    public void render() {
+        Shader fontShader = AssetPool.getShader("assets/shaders/fontShader.glsl");
+        fontShader.use();
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_BUFFER, textureId);
+        fontShader.uploadTexture("uFontTexture", 0);
+        
+        glBindVertexArray(vao);
+        
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        fontShader.detach();
     }
 }

@@ -44,6 +44,7 @@ import static org.lwjgl.opengl.GL11.glDisable;
 import static org.lwjgl.opengl.GL11.glViewport;
 import physics2D.Physics2D;
 import render.DebugDraw;
+import render.FontTest;
 import render.Framebuffer;
 import render.PickingTexture;
 import render.Renderer;
@@ -199,6 +200,10 @@ public class Window implements Observer{
                 
                 currentScene.render();
                 DebugDraw.draw();
+                
+                // font render test
+                GameObject go = currentScene.getGameObjectByName("Font_test");
+                go.getComponent(FontTest.class).render();
             }
             
             this.framebuffer.unbind();
