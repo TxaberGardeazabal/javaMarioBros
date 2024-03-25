@@ -34,58 +34,49 @@ import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
 import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
 import static org.lwjgl.opengl.GL31.GL_TEXTURE_BUFFER;
+import util.AssetPool;
 
 /**
  *
  * @author txaber gardeazabal
  */
-public class FontRenderBatch implements Comparable<FontRenderBatch>{
-    // Vertex
-    // ======
-    //
-    // Pos             Color                      tex coord       tex id    entity
-    // float float     float float float float    float float     float     float
+public class FontRenderBatch{
+    
+    /*private float[] vertices = {
+            // x, y,        r, g, b              ux, uy
+            0.5f, 0.5f,     1.0f, 0.2f, 0.11f,   1.0f, 0.0f,
+            0.5f, -0.5f,    1.0f, 0.2f, 0.11f,   1.0f, 1.0f,
+            -0.5f, -0.5f,   1.0f, 0.2f, 0.11f,   0.0f, 1.0f,
+            -0.5f, 0.5f,    1.0f, 0.2f, 0.11f,   0.0f, 0.0f
+    };*/
+
+    private int[] indices = {
+            0, 1, 3,
+            1, 2, 3
+    };
+
+    private int BATCH_SIZE = 100;
+    
     private final int POS_SIZE = 2;
-    private final int COLOR_SIZE = 4;
+    private final int COLOR_SIZE = 3;
     private final int TEX_COORDS_SIZE = 2;
-    private final int TEX_ID_SIZE = 1;
-    private final int ENTITY_ID_SIZE = 1;
     
     private final int POS_OFFSET = 0;
     private final int COLOR_OFFSET = POS_OFFSET + POS_SIZE * Float.BYTES;
     private final int TEX_COORDS_OFFSET = COLOR_OFFSET + COLOR_SIZE * Float.BYTES;
-    private final int TEX_ID_OFFSET = TEX_COORDS_OFFSET + TEX_COORDS_SIZE * Float.BYTES;
-    private final int ENTITY_ID_OFFSET = TEX_ID_OFFSET + TEX_ID_SIZE * Float.BYTES;
-    private final int VERTEX_SIZE = 10;
+    private final int VERTEX_SIZE = 7;
     private final int VERTEX_SIZE_BYTES = VERTEX_SIZE * Float.BYTES;
     
-    private FontRenderer[] texts;
-    private int numTexts;
-    private int size;
-    private boolean hasRoom;
     private float[] vertices;
-    private int[] texSlots = {0, 1, 2, 3, 4, 5, 6, 7};
+    private int size = 0;
     
-    private ArrayList<Texture> textures;
     private int vaoID, vboID;
-    private int maxBatchSize;
-    
-    private int zIndex;
-    private Renderer renderer;
+    private Shader shader;
+    private int textureId;
 
-    public FontRenderBatch(int maxBatchSize, int zIndex, Renderer renderer) {
-        this.texts = new FontRenderer[maxBatchSize];
-        this.maxBatchSize = maxBatchSize;
-        
-        // 4 vertices quads
-        this.vertices = new float[maxBatchSize * 4 * VERTEX_SIZE];
-        
-        this.numTexts = 0;
-        this.size = 0;
-        this.hasRoom = true;
-        this.textures = new ArrayList();
-        this.zIndex = zIndex;
-        this.renderer = renderer;
+    public FontRenderBatch() {
+        this.vertices = new float[BATCH_SIZE * VERTEX_SIZE];
+        shader = AssetPool.getShader("assets/shaders/fontShader.glsl");
     }
     
     public void start() {
@@ -100,9 +91,13 @@ public class FontRenderBatch implements Comparable<FontRenderBatch>{
         
         // create and upload indices buffer
         int eboID = glGenBuffers();
-        int[] indices = generateIndices();
+        //int[] indices = generateIndices();
+        int [] elementBuffer = new int[BATCH_SIZE * 3];
+        for (int i = 0; i < elementBuffer.length; i++) {
+            elementBuffer[i] = indices[(i % 6)] + ((i / 6) * 4);
+        }
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, eboID);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices, GL_STATIC_DRAW);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, elementBuffer, GL_STATIC_DRAW);
         
         // enable the buffer atribute pointers
         glVertexAttribPointer(0, POS_SIZE, GL_FLOAT, false, VERTEX_SIZE_BYTES, POS_OFFSET);
@@ -111,64 +106,41 @@ public class FontRenderBatch implements Comparable<FontRenderBatch>{
         glEnableVertexAttribArray(1);
         glVertexAttribPointer(2, TEX_COORDS_SIZE, GL_FLOAT, false, VERTEX_SIZE_BYTES, TEX_COORDS_OFFSET);
         glEnableVertexAttribArray(2);
-        glVertexAttribPointer(3, TEX_ID_SIZE, GL_FLOAT, false, VERTEX_SIZE_BYTES, TEX_ID_OFFSET);
+        /*glVertexAttribPointer(3, TEX_ID_SIZE, GL_FLOAT, false, VERTEX_SIZE_BYTES, TEX_ID_OFFSET);
         glEnableVertexAttribArray(3);
         glVertexAttribPointer(4, ENTITY_ID_SIZE, GL_FLOAT, false, VERTEX_SIZE_BYTES, ENTITY_ID_OFFSET);
-        glEnableVertexAttribArray(4);
+        glEnableVertexAttribArray(4);*/
     }
     
-    /*public void addSprite(SpriteRenderer spr) {
-        // get index and add renderObject
-        // next index = lenght - 1 + 1
-        this.sprites[this.numSprites] = spr;
-        
-        if (spr.getTexture() != null) {
-            if (!textures.contains(spr.getTexture())) {
-                textures.add(spr.getTexture());
-            }
-        }
-        
-        // add properties to local vertices array
-        loadVertexProperties(this.numSprites);
-        
-        this.numSprites++;
-        if (this.numSprites >= this.maxBatchSize) {
-            this.hasRoom = false;
-        }
-    }
-    */
-    public void addText(FontRenderer fr) {
-        System.out.println("adding text " + fr.getText());
-        this.texts[numTexts] = fr;
-        numTexts++;
-        
-        String text = fr.getText();
-        float x = fr.getTextPos().x;
-        float y = fr.getTextPos().y;
-        
+    public void addText(String text, int x, int y, float scale, int rgb, FontTest font) {
+        System.out.println("adding text " + text);
+
+        this.textureId = font.textureId;
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            CharInfo charInfo = fr.getFont().getCharacter(c);
+            CharInfo charInfo = font.getCharacter(c);
             if (charInfo.width == 0) {
                 System.out.println("WARNING: unknown character" + c);
                 continue;
             }
             
-            addCharacterProperties(x, y, fr, charInfo);
-            x += charInfo.width * fr.getSize();
+            addCharacterProperties(x, y, scale, charInfo, rgb);
+            x += charInfo.width * scale;
         }
     }
     
-    public void addCharacterProperties(float x, float y, FontRenderer fr, CharInfo charInfo) {
-        float scale = fr.getSize();
-        
+    public void addCharacterProperties(float x, float y, float scale, CharInfo charInfo, int rgb) {
         
         // if we have no more room in the current batch, flush it and start with a fresh batch.
-        if (size * VERTEX_SIZE >= vertices.length - 4) {
+        if (size >= BATCH_SIZE - 4) {
             System.out.println("batch full, flushing batch");
-            System.out.println("batch contents = " + Arrays.toString(vertices));
+            
             flushBatch();
         }
+        
+        float r = (float)((rgb >> 16) & 0xFF) / 255.0f;
+        float g = (float)((rgb >> 8) & 0xFF) / 255.0f;
+        float b = (float)((rgb >> 0) & 0xFF) / 255.0f;
         
         float x0 = x;
         float y0 = y;
@@ -187,20 +159,13 @@ public class FontRenderBatch implements Comparable<FontRenderBatch>{
         vertices[index +1] = y0;
 
         // load color
-        vertices[index +2] = fr.getColor().x;
-        vertices[index +3] = fr.getColor().y;
-        vertices[index +4] = fr.getColor().z;
-        vertices[index +5] = fr.getColor().w;
+        vertices[index +2] = r;
+        vertices[index +3] = g;
+        vertices[index +4] = b;
 
         // load texture coordinates
-        vertices[index +6] = ux1;
-        vertices[index +7] = uy0;
-
-        // load texture id
-        vertices[index +8] = fr.getFont().textureId;
-
-        // load entity id
-        vertices[index +9] = fr.gameObject.getUid() +1;
+        vertices[index +5] = ux1;
+        vertices[index +6] = uy0;
         
         // second vertice
         index += VERTEX_SIZE;
@@ -209,20 +174,13 @@ public class FontRenderBatch implements Comparable<FontRenderBatch>{
         vertices[index +1] = y1;
 
         // load color
-        vertices[index +2] = fr.getColor().x;
-        vertices[index +3] = fr.getColor().y;
-        vertices[index +4] = fr.getColor().z;
-        vertices[index +5] = fr.getColor().w;
+        vertices[index +2] = r;
+        vertices[index +3] = g;
+        vertices[index +4] = b;
 
         // load texture coordinates
         vertices[index +6] = ux1;
         vertices[index +7] = uy1;
-
-        // load texture id
-        vertices[index +8] = fr.getFont().textureId;
-
-        // load entity id
-        vertices[index +9] = fr.gameObject.getUid() +1;
         
         // third vertice
         index += VERTEX_SIZE;
@@ -231,20 +189,13 @@ public class FontRenderBatch implements Comparable<FontRenderBatch>{
         vertices[index +1] = y1;
 
         // load color
-        vertices[index +2] = fr.getColor().x;
-        vertices[index +3] = fr.getColor().y;
-        vertices[index +4] = fr.getColor().z;
-        vertices[index +5] = fr.getColor().w;
+        vertices[index +2] = r;
+        vertices[index +3] = g;
+        vertices[index +4] = b;
 
         // load texture coordinates
         vertices[index +6] = ux0;
         vertices[index +7] = uy1;
-
-        // load texture id
-        vertices[index +8] = fr.getFont().textureId;
-
-        // load entity id
-        vertices[index +9] = fr.gameObject.getUid() +1;
         
         // forth vertice
         index += VERTEX_SIZE;
@@ -253,39 +204,34 @@ public class FontRenderBatch implements Comparable<FontRenderBatch>{
         vertices[index +1] = y0;
 
         // load color
-        vertices[index +2] = fr.getColor().x;
-        vertices[index +3] = fr.getColor().y;
-        vertices[index +4] = fr.getColor().z;
-        vertices[index +5] = fr.getColor().w;
+        vertices[index +2] = r;
+        vertices[index +3] = g;
+        vertices[index +4] = b;
 
         // load texture coordinates
         vertices[index +6] = ux0;
         vertices[index +7] = uy0;
-
-        // load texture id
-        vertices[index +8] = fr.getFont().textureId;
-
-        // load entity id
-        vertices[index +9] = fr.gameObject.getUid() +1;
         
         size += 4;
     }
     
     public void flushBatch() {
+        System.out.println("batch contents = " + Arrays.toString(vertices));
         // clear buffer on the GPU, upload the CPU contents, and the draw
         glBindBuffer(GL_ARRAY_BUFFER, vboID);
-        glBufferData(GL_ARRAY_BUFFER, Float.BYTES * VERTEX_SIZE * maxBatchSize, GL_DYNAMIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, Float.BYTES * vertices.length, GL_DYNAMIC_DRAW);
         glBufferSubData(GL_ARRAY_BUFFER, 0, vertices);
         
         // draw the buffer that we just uploaded
-        Shader shader = Renderer.getBoundShader();
         shader.use();
         shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
         shader.uploadMat4f("uView", Window.getScene().camera().getViewMatrix());
         
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_BUFFER, texts[0].getFont().textureId);
-        shader.uploadIntArray("uTextures", texSlots);
+        glBindTexture(GL_TEXTURE_BUFFER, textureId);
+        shader.uploadTexture("uFontTexture", 0);
+        shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
+        shader.detach();
         
         glBindVertexArray(vaoID);
         
@@ -295,203 +241,5 @@ public class FontRenderBatch implements Comparable<FontRenderBatch>{
         size = 0;
     }
     
-    /*public void render() {
-        boolean rebufferData = false;
-        for (int i = 0; i < numSprites; i++) {
-            SpriteRenderer spr = sprites[i];
-            if (spr.isDirty()) {
-                if (!hasTexture(spr.getTexture())) {
-                    this.renderer.destroyGameObject(spr.gameObject);
-                    this.renderer.add(spr.gameObject);
-                } else {
-                    loadVertexProperties(i);
-                    spr.setClean();
-                    rebufferData = true;
-                }
-            }
-            
-            // TODO: video 40
-            if (spr.gameObject.transform.zIndex != this.zIndex) {
-                destroyIfExists(spr.gameObject);
-                renderer.add(spr.gameObject);
-                i--;
-            }
-        }
-        if (rebufferData) {
-            glBindBuffer(GL_ARRAY_BUFFER, vboID);
-            glBufferSubData(GL_ARRAY_BUFFER, 0, vertices);
-        }
-        
-        // use shader
-        Shader shader = Renderer.getBoundShader();
-        shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
-        shader.uploadMat4f("uView", Window.getScene().camera().getViewMatrix());
-        for (int i = 0; i < textures.size(); i++) {
-            glActiveTexture(GL_TEXTURE0 + i + 1);
-            textures.get(i).bind();
-        }
-        shader.uploadIntArray("uTextures", texSlots);
-        
-        // bind the VAO
-        glBindVertexArray(vaoID);
-        
-        // enable the vertex attribute pointers
-        glEnableVertexAttribArray(0);
-        glEnableVertexAttribArray(1);
-        
-        glDrawElements(GL_TRIANGLES, this.numSprites * 6, GL_UNSIGNED_INT, 0);
-        
-        // unbind everything
-        glDisableVertexAttribArray(0);
-        glDisableVertexAttribArray(1);
-        glBindVertexArray(0);
-        for (int i = 0; i < textures.size(); i++) {
-            textures.get(i).unbind();
-        }
-        shader.detach();
-    }*/
-
-    private int[] generateIndices() {
-        // 6 indices per quad (3 * 2)
-        int[] elements = new int[6 * maxBatchSize];
-        for (int i = 0; i < maxBatchSize; i++) {
-            loadElementIndices(elements, i);
-        }
-        
-        return elements;
-    }
-
-    private void loadElementIndices(int[] elements, int index) {
-        int offsetArrayIndex = 6 * index;
-        int offset = 4 * index;
-        
-        // triangle 1
-        elements[offsetArrayIndex] = offset + 3;
-        elements[offsetArrayIndex +1] = offset + 2;
-        elements[offsetArrayIndex +2] = offset + 0;
-        
-        // triangle 2
-        elements[offsetArrayIndex +3] = offset + 0;
-        elements[offsetArrayIndex +4] = offset + 2;
-        elements[offsetArrayIndex +5] = offset + 1;
-    }
     
-    /*public boolean destroyIfExists(GameObject go) {
-        SpriteRenderer spr = go.getComponent(SpriteRenderer.class);
-        for (int i = 0; i < numSprites; i++) {
-            if (sprites[i] == spr) {
-                // overwrite the object by moving array items forward
-                for (int j = i; j < numSprites -1; j++) {
-                    sprites[j] = sprites[j + 1];
-                    sprites[j].setDirty();
-                }
-                numSprites --;
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private void loadVertexProperties(int index) {
-        SpriteRenderer sprite = this.sprites[index];
-        
-        // find offset within array (4 vertices per sprite)
-        int offset = index * 4 * VERTEX_SIZE;
-        
-        Vector4f color = sprite.getColor();
-        Vector2f[] texCoords = sprite.getTexCoords();
-        
-        int texId = 0;
-        if (sprite.getTexture() != null) {
-            for (int i = 0; i < textures.size() && texId == 0; i++) {
-                if (textures.get(i).equals(sprite.getTexture())) {
-                    texId = i + 1;
-                }
-            }
-        }
-        
-        boolean isRotated = sprite.gameObject.transform.rotation != 0.0f;
-        Matrix4f transformMatrix = new Matrix4f().identity();
-        if (isRotated) {
-            transformMatrix.translate(sprite.gameObject.transform.position.x,
-                    sprite.gameObject.transform.position.y, 0f);
-            transformMatrix.rotate((float)Math.toRadians(sprite.gameObject.transform.rotation),
-                    0, 0, 1);
-            transformMatrix.scale(sprite.gameObject.transform.scale.x,
-                    sprite.gameObject.transform.scale.y, 1);
-        }
-        
-        // add vertice with the appropiate properties
-        float xAdd = 0.5f;
-        float yAdd = 0.5f;
-        for (int i = 0; i < 4; i++) {
-            switch (i) {
-                case 1:
-                    yAdd = -0.5f;
-                    break;
-                case 2:
-                    xAdd = -0.5f;
-                    break;
-                case 3:
-                    yAdd = 0.5f;
-                    break;
-                default:
-                    break;
-            }
-            
-            Vector4f currentPos = new Vector4f(sprite.gameObject.transform.position.x + 
-                    (xAdd * sprite.gameObject.transform.scale.x),
-                    sprite.gameObject.transform.position.y + 
-                    (yAdd * sprite.gameObject.transform.scale.y),
-                    0, 1);
-            if (isRotated) {
-                currentPos = new Vector4f(xAdd, yAdd, 0, 1).mul(transformMatrix);
-            }
-            
-            // load position
-            vertices[offset] = currentPos.x;
-            vertices[offset +1] = currentPos.y;
-            
-            // load color
-            vertices[offset +2] = color.x;
-            vertices[offset +3] = color.y;
-            vertices[offset +4] = color.z;
-            vertices[offset +5] = color.w;
-            
-            // load texture coordinates
-            vertices[offset +6] = texCoords[i].x;
-            vertices[offset +7] = texCoords[i].y;
-            
-            // load texture id
-            vertices[offset +8] = texId;
-            
-            // load entity id
-            vertices[offset +9] = sprite.gameObject.getUid() +1;
-            
-            offset += VERTEX_SIZE;
-        }
-        
-        
-    }*/
-
-    public boolean hasRoom() {
-        return hasRoom;
-    }
-    
-    public boolean hasTextureRoom() {
-        return this.textures.size() < 8;
-    }
-    
-    public boolean hasTexture(Texture tex) {
-        return this.textures.contains(tex);
-    }
-
-    public int getzIndex() {
-        return zIndex;
-    }
-
-    @Override
-    public int compareTo(FontRenderBatch t) {
-        return Integer.compare(zIndex, t.getzIndex());
-    }
 }

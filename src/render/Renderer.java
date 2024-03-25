@@ -19,12 +19,10 @@ public class Renderer {
     
     private final int MAX_BATCH_SIZE = 1000;
     private ArrayList<RenderBatch> batches;
-    private ArrayList<FontRenderBatch> fontBatches;
     private static Shader currentShader;
 
     public Renderer() {
         this.batches = new ArrayList();
-        this.fontBatches = new ArrayList();
     }
     
     public void add(GameObject go) {
@@ -61,7 +59,9 @@ public class Renderer {
             Collections.sort(batches);
         }
     }
-    public void add(FontRenderer text) {
+    
+    // TODO: remake this function once font rendering feels more safe
+    /*public void add(FontRenderer text) {
         boolean added = false;
         for (FontRenderBatch batch : fontBatches) {
             if (batch.getzIndex() == text.gameObject.transform.zIndex) {
@@ -81,7 +81,7 @@ public class Renderer {
             newBatch.addText(text);
             Collections.sort(fontBatches);
         }
-    }
+    }*/
     
     public void render() {
         currentShader.use();

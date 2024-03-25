@@ -70,45 +70,8 @@ public class FontTest extends Component{
     private Map<Integer, CharInfo> characterMap;
     
     public int textureId;
-    // testing code
-    private float[] vertices = {
-            // x, y,        r, g, b              ux, uy
-            0.5f, 0.5f,     1.0f, 0.2f, 0.11f,   1.0f, 0.0f,
-            0.5f, -0.5f,    1.0f, 0.2f, 0.11f,   1.0f, 1.0f,
-            -0.5f, -0.5f,   1.0f, 0.2f, 0.11f,   0.0f, 1.0f,
-            -0.5f, 0.5f,    1.0f, 0.2f, 0.11f,   0.0f, 0.0f
-    };
-
-    private int[] indices = {
-            0, 1, 3,
-            1, 2, 3
-    };
     
-    private int vao,vbo;
-    
-    private void uploadSquare() {
-        vao = glGenVertexArrays();
-        glBindVertexArray(vao);
-
-        int vbo = glGenBuffers();
-        glBindBuffer(GL_ARRAY_BUFFER, vbo);
-        glBufferData(GL_ARRAY_BUFFER, vertices, GL_STATIC_DRAW);
-
-        int ebo = glGenBuffers();
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices, GL_STATIC_DRAW);
-
-        int stride = 7 * Float.BYTES;
-        glVertexAttribPointer(0, 2, GL_FLOAT, false, stride, 0);
-        glEnableVertexAttribArray(0);
-
-        glVertexAttribPointer(1, 3, GL_FLOAT, false, stride, 2 * Float.BYTES);
-        glEnableVertexAttribArray(1);
-
-        glVertexAttribPointer(2, 2, GL_FLOAT, false, stride, 5 * Float.BYTES);
-        glEnableVertexAttribArray(2);
-    }
-    
+    private FontRenderBatch batch = new FontRenderBatch();
 
     public FontTest(String filepath, int fontSize) {
         this.filepath = filepath;
@@ -119,13 +82,18 @@ public class FontTest extends Component{
     
     @Override
     public void start() {
-        Vector2f[] texCoords = getCharacter('k').textureCoordinates;
-        vertices[5] = texCoords[0].x; vertices[6] = texCoords[0].y;
-        vertices[12] = texCoords[1].x; vertices[13] = texCoords[1].y;
-        vertices[19] = texCoords[2].x; vertices[20] = texCoords[2].y;
-        vertices[26] = texCoords[3].x; vertices[27] = texCoords[3].y;
-        
-        uploadSquare();
+        System.out.println("start");
+        batch.start();
+        batch.addText("hola mundo!", 200, 200, 1f, 0xFF00AB, this);
+        batch.flushBatch();
+    }
+    
+    @Override
+    public void update(float dt) {
+        // font render test
+        System.out.println("update");
+        batch.addText("hola mundo!", 200, 200, 1f, 0xFFFFFF, this);
+        batch.flushBatch();
     }
     
     public void generateBitmap() {
@@ -169,7 +137,7 @@ public class FontTest extends Component{
         g2d = img.createGraphics();
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setFont(font);
-        g2d.setColor(Color.WHITE);
+        g2d.setColor(Color.BLACK);
         for (int i = 0; i < font.getNumGlyphs(); i++) {
             if (font.canDisplay(i)) {
                 CharInfo info = characterMap.get(i);
@@ -237,16 +205,4 @@ public class FontTest extends Component{
         return characterMap.getOrDefault(codePoint, new CharInfo(0,0,0,0));
     }
     
-    public void render() {
-        Shader fontShader = AssetPool.getShader("assets/shaders/fontShader.glsl");
-        fontShader.use();
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_BUFFER, textureId);
-        fontShader.uploadTexture("uFontTexture", 0);
-        
-        glBindVertexArray(vao);
-        
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-        fontShader.detach();
-    }
 }

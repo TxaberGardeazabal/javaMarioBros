@@ -7,11 +7,13 @@ layout (location=2) in vec2 aTexCoords;
 out vec3 fColor;
 out vec2 fTexCoords;
 
+uniform mat4 uProjection;
+
 void main() 
 {
 	fColor = aColor;
 	fTexCoords = aTexCoords;
-	gl_Position = vec4(aPos, 1, 1);
+	gl_Position = uProjection * vec4(aPos, -5, 1);
 }
 
 #type fragment
@@ -27,5 +29,5 @@ out vec4 color;
 void main() 
 {
 	vec4 c = texture(uFontTexture, fTexCoords);
-	color = vec4(c.r,c.g,c.b,1) * vec4(fColor,1);
+	color = vec4(1,1,1,c.w) * vec4(fColor,1);
 }
