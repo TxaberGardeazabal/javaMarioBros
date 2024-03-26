@@ -13,6 +13,7 @@ void main()
 {
 	fColor = aColor;
 	fTexCoords = aTexCoords;
+	//gl_Position = vec4(aPos, 1, 1);
 	gl_Position = uProjection * vec4(aPos, -5, 1);
 }
 
@@ -28,6 +29,6 @@ out vec4 color;
 
 void main() 
 {
-	vec4 c = texture(uFontTexture, fTexCoords);
-	color = vec4(1,1,1,c.w) * vec4(fColor,1);
+	
+	color = texture(uFontTexture, fTexCoords) * vec4(fColor,1);
 }

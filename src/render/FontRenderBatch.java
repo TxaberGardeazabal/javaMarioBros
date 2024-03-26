@@ -155,8 +155,8 @@ public class FontRenderBatch{
         int index = size * VERTEX_SIZE;
         // TODO: refractor into a for loop
         // load position
-        vertices[index] = x1;
-        vertices[index +1] = y0;
+        vertices[index] = x0;
+        vertices[index +1] = y1;
 
         // load color
         vertices[index +2] = r;
@@ -164,8 +164,8 @@ public class FontRenderBatch{
         vertices[index +4] = b;
 
         // load texture coordinates
-        vertices[index +5] = ux1;
-        vertices[index +6] = uy0;
+        vertices[index +5] = ux0;
+        vertices[index +6] = uy1;
         
         // second vertice
         index += VERTEX_SIZE;
@@ -186,21 +186,6 @@ public class FontRenderBatch{
         index += VERTEX_SIZE;
         // load position
         vertices[index] = x0;
-        vertices[index +1] = y1;
-
-        // load color
-        vertices[index +2] = r;
-        vertices[index +3] = g;
-        vertices[index +4] = b;
-
-        // load texture coordinates
-        vertices[index +6] = ux0;
-        vertices[index +7] = uy1;
-        
-        // forth vertice
-        index += VERTEX_SIZE;
-        // load position
-        vertices[index] = x0;
         vertices[index +1] = y0;
 
         // load color
@@ -210,6 +195,21 @@ public class FontRenderBatch{
 
         // load texture coordinates
         vertices[index +6] = ux0;
+        vertices[index +7] = uy0;
+        
+        // forth vertice
+        index += VERTEX_SIZE;
+        // load position
+        vertices[index] = x1;
+        vertices[index +1] = y0;
+
+        // load color
+        vertices[index +2] = r;
+        vertices[index +3] = g;
+        vertices[index +4] = b;
+
+        // load texture coordinates
+        vertices[index +6] = ux1;
         vertices[index +7] = uy0;
         
         size += 4;
@@ -224,14 +224,14 @@ public class FontRenderBatch{
         
         // draw the buffer that we just uploaded
         shader.use();
-        shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
-        shader.uploadMat4f("uView", Window.getScene().camera().getViewMatrix());
+        //shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
+        //shader.uploadMat4f("uView", Window.getScene().camera().getViewMatrix());
         
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_BUFFER, textureId);
         shader.uploadTexture("uFontTexture", 0);
         shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
-        shader.detach();
+        
         
         glBindVertexArray(vaoID);
         
@@ -241,5 +241,7 @@ public class FontRenderBatch{
         size = 0;
     }
     
-    
+    public void detachShader() {
+        shader.detach();
+    }
 }

@@ -3,9 +3,8 @@ add new functionalities:
 find how to initialize spritesheets automaticaly instead of hardcoding all of them (maybe in the assetpool)
 + add a menu scene and a play scene
 + add invincibility powerup
-++ follow the font tutorials and place text on the screen
 ++ make UI components: text, buttons, images and variables
-++ create a new renderBatch to render text onscreen
+
 
 upgrade existing functionalities:
 -- style properties window
@@ -20,6 +19,7 @@ optimize loading resources on the level (requires big changes)
 + make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
 make moving thru pipes nicer
 + make physics them more precise and less janky
+++ follow the font tutorials
 
 bugfixing:
 - when starting play, blocks that where boxSelected don't get their original colors back
@@ -31,6 +31,7 @@ imgui string editing sucks
 some blocks appear invisible
 + enemies that are bellow Ground despawn as they get deleted
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
+++ test the new fontRenderBatch
 
 other:
 // make pillbox changes ep #58
