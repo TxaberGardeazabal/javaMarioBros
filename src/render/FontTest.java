@@ -90,14 +90,13 @@ public class FontTest extends Component{
     public void editorUpdate(float dt) {
         // font render test
         System.out.println("update");
-        batch.addText("hola mundo!", 1, 0, 0.01f, 0xFF00AB, this);
+        batch.addText("P", 1, 0, 0.01f, 0xFF00AB, this);
         batch.flushBatch();
         batch.detachShader();
     }
     @Override
     public void update(float dt) {
         // font render test
-        System.out.println("update");
         batch.addText("hola mundo!", 200, 200, 1f, 0xFF00AB, this);
         batch.flushBatch();
         batch.detachShader();

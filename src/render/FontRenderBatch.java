@@ -93,9 +93,10 @@ public class FontRenderBatch{
         int eboID = glGenBuffers();
         //int[] indices = generateIndices();
         int [] elementBuffer = new int[BATCH_SIZE * 3];
-        for (int i = 0; i < elementBuffer.length; i++) {
+        /*for (int i = 0; i < elementBuffer.length; i++) {
             elementBuffer[i] = indices[(i % 6)] + ((i / 6) * 4);
-        }
+        }*/
+        elementBuffer = generateIndices();
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, eboID);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, elementBuffer, GL_STATIC_DRAW);
         
@@ -140,7 +141,7 @@ public class FontRenderBatch{
         
         float r = (float)((rgb >> 16) & 0xFF) / 255.0f;
         float g = (float)((rgb >> 8) & 0xFF) / 255.0f;
-        float b = (float)((rgb >> 0) & 0xFF) / 255.0f;
+        float b = (float)((rgb) & 0xFF) / 255.0f;
         
         float x0 = x;
         float y0 = y;
@@ -155,8 +156,8 @@ public class FontRenderBatch{
         int index = size * VERTEX_SIZE;
         // TODO: refractor into a for loop
         // load position
-        vertices[index] = x0;
-        vertices[index +1] = y1;
+        vertices[index] = x1;
+        vertices[index +1] = y0;
 
         // load color
         vertices[index +2] = r;
@@ -164,8 +165,8 @@ public class FontRenderBatch{
         vertices[index +4] = b;
 
         // load texture coordinates
-        vertices[index +5] = ux0;
-        vertices[index +6] = uy1;
+        vertices[index +5] = ux1;
+        vertices[index +6] = uy0;
         
         // second vertice
         index += VERTEX_SIZE;
@@ -186,6 +187,21 @@ public class FontRenderBatch{
         index += VERTEX_SIZE;
         // load position
         vertices[index] = x0;
+        vertices[index +1] = y1;
+
+        // load color
+        vertices[index +2] = r;
+        vertices[index +3] = g;
+        vertices[index +4] = b;
+
+        // load texture coordinates
+        vertices[index +6] = ux0;
+        vertices[index +7] = uy1;
+        
+        // forth vertice
+        index += VERTEX_SIZE;
+        // load position
+        vertices[index] = x0;
         vertices[index +1] = y0;
 
         // load color
@@ -195,21 +211,6 @@ public class FontRenderBatch{
 
         // load texture coordinates
         vertices[index +6] = ux0;
-        vertices[index +7] = uy0;
-        
-        // forth vertice
-        index += VERTEX_SIZE;
-        // load position
-        vertices[index] = x1;
-        vertices[index +1] = y0;
-
-        // load color
-        vertices[index +2] = r;
-        vertices[index +3] = g;
-        vertices[index +4] = b;
-
-        // load texture coordinates
-        vertices[index +6] = ux1;
         vertices[index +7] = uy0;
         
         size += 4;
@@ -224,13 +225,12 @@ public class FontRenderBatch{
         
         // draw the buffer that we just uploaded
         shader.use();
-        //shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
-        //shader.uploadMat4f("uView", Window.getScene().camera().getViewMatrix());
         
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_BUFFER, textureId);
         shader.uploadTexture("uFontTexture", 0);
         shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
+        shader.uploadMat4f("uView", Window.getScene().camera().getViewMatrix());
         
         
         glBindVertexArray(vaoID);
@@ -243,5 +243,30 @@ public class FontRenderBatch{
     
     public void detachShader() {
         shader.detach();
+    }
+    
+     private int[] generateIndices() {
+        // 6 indices per quad (3 * 2)
+        int[] elements = new int[6 * BATCH_SIZE];
+        for (int i = 0; i < BATCH_SIZE; i++) {
+            loadElementIndices(elements, i);
+        }
+        
+        return elements;
+    }
+
+    private void loadElementIndices(int[] elements, int index) {
+        int offsetArrayIndex = 6 * index;
+        int offset = 4 * index;
+        
+        // triangle 1
+        elements[offsetArrayIndex] = offset + 3;
+        elements[offsetArrayIndex +1] = offset + 2;
+        elements[offsetArrayIndex +2] = offset + 0;
+        
+        // triangle 2
+        elements[offsetArrayIndex +3] = offset + 0;
+        elements[offsetArrayIndex +4] = offset + 2;
+        elements[offsetArrayIndex +5] = offset + 1;
     }
 }
