@@ -14,8 +14,8 @@ void main()
 {
 	fColor = aColor;
 	fTexCoords = aTexCoords;
-	//gl_Position = vec4(aPos, 1, 1);
-	gl_Position = uProjection * uView * vec4(aPos, -5, 1);
+	gl_Position = vec4(aPos, 1, 1);
+	//gl_Position = uProjection * uView * vec4(aPos, -5, 1);
 }
 
 #type fragment
@@ -30,6 +30,8 @@ out vec4 color;
 
 void main() 
 {
-	
-	color = texture(uFontTexture, fTexCoords) * vec4(fColor,1);
+	//float c = texture(uFontTexture, fTexCoords).r;
+	//color = vec4(fColor,1);
+	vec4 c = texture(uFontTexture, fTexCoords);
+	color = vec4(c.r,c.g,c.b,1) * vec4(fColor,1);
 }

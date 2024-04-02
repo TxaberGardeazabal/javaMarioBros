@@ -57,6 +57,7 @@ import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
 import static org.lwjgl.opengl.GL30.glGenVertexArrays;
 import static org.lwjgl.opengl.GL31.GL_TEXTURE_BUFFER;
+import static org.lwjgl.stb.STBImage.stbi_set_flip_vertically_on_load;
 import util.AssetPool;
 
 /**
@@ -68,6 +69,20 @@ public class FontTest extends Component{
     private int fontSize;
     private int width, height, lineHeight;
     private Map<Integer, CharInfo> characterMap;
+    
+    private float[] vertices = {
+            // x, y,        r, g, b              ux, uy
+            0.5f, 0.5f,     1.0f, 0.2f, 0.11f,   1.0f, 0.0f,
+            0.5f, -0.5f,    1.0f, 0.2f, 0.11f,   1.0f, 1.0f,
+            -0.5f, -0.5f,   1.0f, 0.2f, 0.11f,   0.0f, 1.0f,
+            -0.5f, 0.5f,    1.0f, 0.2f, 0.11f,   0.0f, 0.0f
+    };
+
+    private int[] indices = {
+            0, 1, 3,
+            1, 2, 3
+    };
+    int vao;
     
     public int textureId;
     
@@ -82,17 +97,25 @@ public class FontTest extends Component{
     
     @Override
     public void start() {
+        Vector2f[] texCoords = getCharacter('k').textureCoordinates;
+        vertices[5] = texCoords[1].x; vertices[6] = texCoords[1].y;
+        vertices[12] = texCoords[1].x; vertices[13] = texCoords[0].y;
+        vertices[19] = texCoords[0].x; vertices[20] = texCoords[0].y;
+        uploadSquare();
+        
         System.out.println("start");
-        batch.start();
+        //batch.start();
     }
+    
     
     @Override
     public void editorUpdate(float dt) {
         // font render test
         System.out.println("update");
-        batch.addText("P", 1, 0, 0.01f, 0xFF00AB, this);
+        /*batch.addText("A", 3, 0, 0.01f, 0xFF00AB, this);
+        batch.showTextTexture(0, 0, 0.01f, 0xFF00AB, this);
         batch.flushBatch();
-        batch.detachShader();
+        batch.detachShader();*/
     }
     @Override
     public void update(float dt) {
@@ -203,12 +226,44 @@ public class FontTest extends Component{
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
         
+        //stbi_set_flip_vertically_on_load(true);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, image.getWidth(), image.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
         buffer.clear();
     }
     
     public CharInfo getCharacter(int codePoint) {
         return characterMap.getOrDefault(codePoint, new CharInfo(0,0,0,0));
+    }
+    
+    public void render() {
+        Shader fontShader = AssetPool.getShader("assets/shaders/fontShader.glsl");
+        fontShader.use();
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_BUFFER, textureId);
+        fontShader.uploadTexture("uFontTexture", 0);
+        
+        glBindVertexArray(vao);
+
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        fontShader.detach();
+    }
+    
+    private void uploadSquare() {
+        vao = glGenVertexArrays();
+        glBindVertexArray(vao);
+        int vbo = glGenBuffers();
+        glBindBuffer(GL_ARRAY_BUFFER, vbo);
+        glBufferData(GL_ARRAY_BUFFER, vertices, GL_STATIC_DRAW);
+        int ebo = glGenBuffers();
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices, GL_STATIC_DRAW);
+        int stride = 7 * Float.BYTES;
+        glVertexAttribPointer(0, 2, GL_FLOAT, false, stride, 0);
+        glEnableVertexAttribArray(0);
+        glVertexAttribPointer(1, 3, GL_FLOAT, false, stride, 2 * Float.BYTES);
+        glEnableVertexAttribArray(1);
+        glVertexAttribPointer(2, 2, GL_FLOAT, false, stride, 5 * Float.BYTES);
+        glEnableVertexAttribArray(2);
     }
     
 }

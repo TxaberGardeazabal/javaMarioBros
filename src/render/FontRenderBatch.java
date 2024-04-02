@@ -91,12 +91,11 @@ public class FontRenderBatch{
         
         // create and upload indices buffer
         int eboID = glGenBuffers();
-        //int[] indices = generateIndices();
         int [] elementBuffer = new int[BATCH_SIZE * 3];
-        /*for (int i = 0; i < elementBuffer.length; i++) {
+        for (int i = 0; i < elementBuffer.length; i++) {
             elementBuffer[i] = indices[(i % 6)] + ((i / 6) * 4);
-        }*/
-        elementBuffer = generateIndices();
+        }
+        //elementBuffer = generateIndices();
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, eboID);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, elementBuffer, GL_STATIC_DRAW);
         
@@ -128,6 +127,15 @@ public class FontRenderBatch{
             addCharacterProperties(x, y, scale, charInfo, rgb);
             x += charInfo.width * scale;
         }
+    }
+    
+    public void showTextTexture(int x, int y, float scale, int rgb, FontTest font) {
+        this.textureId = font.textureId;
+        
+        CharInfo charInfo = new CharInfo(0,0,100,100);
+        charInfo.calculateTextCoordinates(100, 100);
+        addCharacterProperties(x, y, scale, charInfo, rgb);
+
     }
     
     public void addCharacterProperties(float x, float y, float scale, CharInfo charInfo, int rgb) {
