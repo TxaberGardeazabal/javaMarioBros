@@ -29,6 +29,8 @@ some window focus issues:
    when pressing away while jdialog windows are active causes focus bugs and crashes
 imgui string editing sucks
 some blocks appear invisible
+fireballs appear invisible
+falling from the level should kill you, but no when you're underground
 + enemies that are bellow Ground despawn as they get deleted
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 ++ test the new fontRenderBatch

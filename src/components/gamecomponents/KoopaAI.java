@@ -109,7 +109,7 @@ public class KoopaAI extends Enemy {
             } else if (component instanceof Fireball) {
                 Fireball f = (Fireball) component;
                 f.delete();
-                die();
+                die(normal.x < 0);
             }
         }
             

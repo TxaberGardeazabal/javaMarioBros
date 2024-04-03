@@ -14,6 +14,7 @@ import java.util.List;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import physics2D.components.Rigidbody2D;
+import util.AssetPool;
 import util.Settings;
 
 /**
@@ -57,6 +58,7 @@ public class Enemy extends PhysicsController{
     }
     
     public void die(boolean hitRight) {
+        AssetPool.getSound("assets/sounds/kick.ogg").play();
         isDead = true;
         gameObject.transform.scale.y = -gameObject.transform.scale.y;
         rb.setIsSensor(true);
@@ -84,6 +86,9 @@ public class Enemy extends PhysicsController{
                     stomp();
                 } else if (!playerController.isDead() && !playerController.isInvincible()){
                     playerController.hurt();
+                    contact.setEnabled(false);
+                } else if (playerController.isStarInvincible()) {
+                    die(normal.x < 0);
                     contact.setEnabled(false);
                 }
             }

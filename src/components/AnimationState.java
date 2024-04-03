@@ -67,7 +67,9 @@ public class AnimationState {
     
     public void changeUsingSpriteSheet(SpriteSheet spriteSheet, int offset) {
         for (Frame frame : animationFrames) {
-            frame.sprite = spriteSheet.getSprite(frame.spriteNumber + offset);
+            if (frame.spriteNumber + offset < spriteSheet.size()) {
+                frame.sprite = spriteSheet.getSprite(frame.spriteNumber + offset);
+            }
         }
     }
 }

@@ -32,7 +32,7 @@ import util.Settings;
 public class AssetWindow {
     
     private MouseControls mc;
-    private boolean isGround;
+    private boolean isGround = true;
     private int zIndex;
     
     public AssetWindow(MouseControls mouseControls) {
@@ -176,6 +176,23 @@ public class AssetWindow {
                 
                 if (spriteButton(koopaSprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateKoopa();
+                    mc.pickUpObject(object);
+                }
+                
+                SpriteSheet itemSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
+                
+                if (spriteButton(itemSprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateMushroom();
+                    mc.pickUpObject(object);
+                }
+                
+                if (spriteButton(itemSprites.getSprite(1),uid++)) {
+                    GameObject object = Prefab.generateFlower();
+                    mc.pickUpObject(object);
+                }
+                
+                if (spriteButton(itemSprites.getSprite(6),uid++)) {
+                    GameObject object = Prefab.generateStar();
                     mc.pickUpObject(object);
                 }
                 ImGui.endTabItem();

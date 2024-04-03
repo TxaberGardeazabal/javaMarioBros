@@ -79,7 +79,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         go.transform.scale.x = 0.25f;
         go.transform.scale.y = 0.25f;
         go.addComponent(new FontTest("assets/fonts/super-mario-bros-nes.ttf", 64));
-        Window.getScene().addGameObjectToScene(go);
+        //Window.getScene().addGameObjectToScene(go);
         
         
     }

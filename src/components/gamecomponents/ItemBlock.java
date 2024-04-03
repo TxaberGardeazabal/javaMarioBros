@@ -123,7 +123,10 @@ public class ItemBlock extends Block{
     }
 
     private void spawnStar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        GameObject star = Prefab.generateStar();
+        star.transform.position.set(gameObject.transform.position);
+        star.transform.position.y += 0.25f;
+        Window.getScene().addGameObjectToScene(star);
     }
     
     private void spawn1up() {

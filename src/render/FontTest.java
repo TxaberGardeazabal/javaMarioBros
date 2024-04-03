@@ -101,9 +101,9 @@ public class FontTest extends Component{
         vertices[5] = texCoords[1].x; vertices[6] = texCoords[1].y;
         vertices[12] = texCoords[1].x; vertices[13] = texCoords[0].y;
         vertices[19] = texCoords[0].x; vertices[20] = texCoords[0].y;
-        uploadSquare();
+        //uploadSquare();
         
-        System.out.println("start");
+        //System.out.println("start");
         //batch.start();
     }
     
@@ -111,7 +111,7 @@ public class FontTest extends Component{
     @Override
     public void editorUpdate(float dt) {
         // font render test
-        System.out.println("update");
+        //System.out.println("update");
         /*batch.addText("A", 3, 0, 0.01f, 0xFF00AB, this);
         batch.showTextTexture(0, 0, 0.01f, 0xFF00AB, this);
         batch.flushBatch();
@@ -120,9 +120,9 @@ public class FontTest extends Component{
     @Override
     public void update(float dt) {
         // font render test
-        batch.addText("hola mundo!", 200, 200, 1f, 0xFF00AB, this);
-        batch.flushBatch();
-        batch.detachShader();
+        //batch.addText("hola mundo!", 200, 200, 1f, 0xFF00AB, this);
+        //batch.flushBatch();
+        //batch.detachShader();
     }
     
     public void generateBitmap() {

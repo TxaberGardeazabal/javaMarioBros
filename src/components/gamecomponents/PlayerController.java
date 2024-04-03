@@ -56,6 +56,8 @@ public class PlayerController extends PhysicsController {
     
     private transient int hurtInvincibilityFramesLeft = 0;
     private transient int hurtInvincibilityFrames = 280;
+    private transient int invicivilityFrames = 1000;
+    private transient int invicivilityFramesLeft = 0;
     //private transient float deadMaxHeight = 0;
     //private transient float deadMinHeight = 0;
     //private transient boolean deadGoingUp = true;
@@ -290,6 +292,10 @@ public class PlayerController extends PhysicsController {
         return isInvincible || this.isHurtInvincible() || playWinAnimation;
     }
     
+    public boolean isStarInvincible() {
+        return isInvincible;
+    }
+    
     public void powerUp() {
         switch(playerState) {
             case Small:
@@ -320,7 +326,13 @@ public class PlayerController extends PhysicsController {
                 break;
             case Fire:
                 break;
-        }        
+        } 
+    }
+    
+    public void invinciblePowerUp() {
+        invincBlinkFrames = invicivilityFrames;
+        isInvincible = true;
+        AssetPool.getSound("assets/sounds/powerup.ogg").play();
     }
     
     @Override

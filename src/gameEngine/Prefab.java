@@ -25,6 +25,7 @@ import components.gamecomponents.Fireball;
 import components.gamecomponents.Flag;
 import components.gamecomponents.FlagPole;
 import components.gamecomponents.BreakableBrick;
+import components.gamecomponents.StarAI;
 import components.propertieComponents.Ground;
 import java.util.ArrayList;
 import java.util.List;
@@ -386,7 +387,7 @@ public class Prefab {
         mushroom.addComponent(rb);
         
         CircleCollider cc = new CircleCollider();
-        cc.setRadius(0.14f);
+        cc.setRadius(0.13f);
         mushroom.addComponent(cc);
         mushroom.addComponent(new MushroomAI());
         
@@ -419,7 +420,7 @@ public class Prefab {
         flower.addComponent(rb);
         
         CircleCollider cc = new CircleCollider();
-        cc.setRadius(0.14f);
+        cc.setRadius(0.13f);
         flower.addComponent(cc);
         flower.addComponent(new Flower());
         
@@ -759,5 +760,38 @@ public class Prefab {
         //fr.setFont(new FontTest("assets/fonts/super-mario-bros-nes.ttf", 1));
         ret.addComponent(fr);
         return ret;
+    }
+    
+    public static GameObject generateStar() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
+        GameObject star = generateSpriteObject(sprites.getSprite(5), 0.25f, 0.25f);
+        star.name = "star powerup";
+        
+        AnimationState flicker = new AnimationState();
+        flicker.title = "flicker";
+        float defaultFrameTime = 0.23f;
+        flicker.addFrame(sprites.getSprite(5), defaultFrameTime);
+        flicker.addFrame(sprites.getSprite(6), defaultFrameTime);
+        flicker.addFrame(sprites.getSprite(7), defaultFrameTime);
+        flicker.addFrame(sprites.getSprite(8), defaultFrameTime);
+        flicker.setLoop(true);
+
+        StateMachine stateMachine = new StateMachine();
+        stateMachine.addState(flicker);
+        stateMachine.setDefaultState(flicker.title);
+        star.addComponent(stateMachine);
+        
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Dynamic);
+        rb.setFixedRotation(true);
+        rb.setContinuousCollision(false);
+        star.addComponent(rb);
+        
+        CircleCollider cc = new CircleCollider();
+        cc.setRadius(0.13f);
+        star.addComponent(cc);
+        star.addComponent(new StarAI());
+        
+        return star;
     }
 }

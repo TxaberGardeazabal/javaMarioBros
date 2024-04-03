@@ -53,7 +53,11 @@ public class SpriteSheet {
     }
 
     public Sprite getSprite(int index) {
-        return this.sprites.get(index);
+        if (index < this.sprites.size()) {
+            return this.sprites.get(index);
+        }
+        System.out.println("Warning, sprite index "+index+" out of bound "+sprites.size());
+        return null;
     }
     
     public Texture getTexture() {
