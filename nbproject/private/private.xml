@@ -9,7 +9,7 @@
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/Sprite.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/render/FontRenderBatch.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/render/FontTest.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/GoombaAI.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Block.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/LevelEditorSceneInitializer.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Prefab.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Enemy.java</file>
@@ -18,6 +18,7 @@
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Flower.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Window.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/PlayerController.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/BreakableBrick.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/AssetWindow.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/render/Renderer.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Fireball.java</file>

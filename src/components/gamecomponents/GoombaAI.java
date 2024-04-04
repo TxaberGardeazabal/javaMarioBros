@@ -62,29 +62,10 @@ public class GoombaAI extends Enemy {
     
     @Override
     public void beginCollision(GameObject go, Contact contact, Vector2f normal) {
-        if (isStomped || isDead) {
+        if (isStomped) {
             return;
         }
-        
-        List<Component> comps = go.getAllComponents();
-        for (Component component : comps) {
-            if (component instanceof PlayerController) {
-                PlayerController playerController = (PlayerController)component;
-                    if (!playerController.isDead() && !playerController.isHurtInvincible() && normal.y > 0.58f) {
-                    playerController.enemyBounce();
-                    stomp();
-                } else if (!playerController.isDead() && !playerController.isInvincible()){
-                    playerController.hurt();
-                }
-            } else if (component instanceof Fireball) {
-                Fireball f = (Fireball) component;
-                f.delete();
-                die(normal.x < 0);
-            }
-        }
-        if (Math.abs(normal.y) < 0.1f) {
-            goingRight = normal.x < 0;
-        }
+        super.beginCollision(go,contact,normal);
     }
     
     @Override

@@ -38,11 +38,12 @@ public class Enemy extends PhysicsController{
         // stop updating if the enemy exits from the left of the screen
         // not sure if the camera will be able to move left in the future
         Camera camera = Window.getScene().camera();
-        if (this.gameObject.transform.position.x > 
+        // commented due to enemies not spawning outside of camera
+        /*if (this.gameObject.transform.position.x > 
                 camera.position.x + camera.getProjectionSize().x * camera.getZoom()) {
             gameObject.destroy();
             return;
-        }
+        }*/
         
         if (isDead) {
             addGravity();
@@ -52,6 +53,10 @@ public class Enemy extends PhysicsController{
     }
     
     public void stomp() {}
+    
+    public void fireballHit(Vector2f direction) {
+        die(direction.x < 0);
+    }
     
     public void die() {
         die(true);
@@ -81,16 +86,22 @@ public class Enemy extends PhysicsController{
         for (Component component : comps) {
             if (component instanceof PlayerController) {
                 PlayerController playerController = (PlayerController)component;
-                    if (!playerController.isDead() && !playerController.isHurtInvincible() && normal.y > 0.58f) {
-                    playerController.enemyBounce();
-                    stomp();
-                } else if (!playerController.isDead() && !playerController.isInvincible()){
-                    playerController.hurt();
-                    contact.setEnabled(false);
-                } else if (playerController.isStarInvincible()) {
-                    die(normal.x < 0);
+                if (!playerController.isDead()) {
+                    if (!playerController.isStarInvincible() && normal.y > 0.58f) {
+                        playerController.enemyBounce();
+                        stomp();
+                    } else if (!playerController.isInvincible()){
+                        playerController.hurt();
+                    } else if (playerController.isStarInvincible()) {
+                        die(normal.x < 0);
+                    }
                     contact.setEnabled(false);
                 }
+                
+            } else if (component instanceof Fireball) {
+                Fireball f = (Fireball) component;
+                f.delete();
+                fireballHit(normal);
             }
         }
         

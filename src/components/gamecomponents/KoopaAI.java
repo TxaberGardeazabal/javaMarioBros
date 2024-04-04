@@ -27,6 +27,7 @@ public class KoopaAI extends Enemy {
     private transient boolean isShelled = false;
     private transient boolean isShellMoving = false;
     private float movingDebounce = 0.32f;
+    private float stompDebounce = 0.32f;
     
     @Override
     public void update(float dt) {
@@ -36,6 +37,7 @@ public class KoopaAI extends Enemy {
         }
 
         movingDebounce -= dt;
+        stompDebounce -= dt;
         
         if (!isShelled || isShellMoving) {
             if (goingRight) {
@@ -68,49 +70,30 @@ public class KoopaAI extends Enemy {
      
     @Override
     public void stomp() {
-        this.isShelled = true;
-        this.isShellMoving = false;
-        stopAllForces();
-        this.stateMachine.trigger("squash");
-        AssetPool.getSound("assets/sounds/kick.ogg").play();
+        if (stompDebounce < 0) {
+            stompDebounce = 0.32f;
+            if (!isShelled) {
+                isShelled = true;
+                walkSpeed *= 3.0f;
+                this.stateMachine.trigger("squash");
+                stopAllForces();
+            } else {
+                if (isShellMoving) {
+                    isShellMoving = false;
+                    stopAllForces();
+                    AssetPool.getSound("assets/sounds/kick.ogg").play();
+                } else {
+                    isShellMoving = true;
+                    AssetPool.getSound("assets/sounds/kick.ogg").play();
+                }
+            }
+        }
     }
     
     @Override
     public void beginCollision(GameObject go, Contact contact, Vector2f normal) {
         if (isDead) {
             return;
-        }
-        
-        List<Component> comps = go.getAllComponents();
-        for (Component component : comps) {
-            if (component instanceof PlayerController) {
-                PlayerController playerController = (PlayerController)component;
-                if (!playerController.isDead() && !playerController.isHurtInvincible()) {
-                    if (!isShelled && normal.y > 0.58f) {
-                        playerController.enemyBounce();
-                        stomp();
-                        walkSpeed *= 3.0f;
-                    } else if (movingDebounce < 0 && (isShellMoving ||!isShelled) && normal.y < 0.58f) {
-                        playerController.hurt();
-                    } else {
-                        if (isShelled && normal.y > 0.58f) {
-                            playerController.enemyBounce();
-                            AssetPool.getSound("assets/sounds/kick.ogg").play();
-                            isShellMoving = !isShellMoving;
-                            goingRight = normal.x < 0;
-                        } else if (isShelled && !isShellMoving) {
-                            AssetPool.getSound("assets/sounds/kick.ogg").play();
-                            isShellMoving = true;
-                            goingRight = normal.x < 0;
-                            movingDebounce = 0.32f;
-                        }
-                    }
-                }
-            } else if (component instanceof Fireball) {
-                Fireball f = (Fireball) component;
-                f.delete();
-                die(normal.x < 0);
-            }
         }
             
         if (Math.abs(normal.y) < 0.1f) {
@@ -123,23 +106,63 @@ public class KoopaAI extends Enemy {
     
     @Override
     public void preSolve(GameObject go, Contact contact, Vector2f normal) {
+        if (isDead) {
+            return;
+        }
         List<Component> comps = go.getAllComponents();
         for (Component component : comps) {
-            if (component instanceof Enemy) {
+            if (component instanceof PlayerController) {
+                PlayerController playerController = (PlayerController)component;
+                if (!playerController.isDead()) {
+                    if (!isShelled) {
+                        // player to koopa interactions
+                        if (!playerController.isStarInvincible() && normal.y > 0.58f) {
+                            playerController.enemyBounce();
+                            stomp();
+                        } else if (!playerController.isInvincible()){
+                            playerController.hurt();
+                        }
+                    } else {
+                        // shell to player interactions
+                        if (movingDebounce < 0 && isShellMoving && normal.y < 0.58f && !playerController.isInvincible()) {
+                            playerController.hurt();
+                        } else {
+                            if (normal.y > 0.58f) {
+                                playerController.enemyBounce();
+                                stomp();
+                                goingRight = normal.x < 0;
+                            } else if (!isShellMoving) {
+                                stomp();
+                                goingRight = normal.x < 0;
+                                movingDebounce = 0.32f;
+                            }
+                        }
+                    }
+                    if (playerController.isStarInvincible()) {
+                        die(normal.x < 0);
+                    }
+                    contact.setEnabled(false);
+                }
+            } else if (component instanceof Fireball) {
+                Fireball f = (Fireball) component;
+                f.delete();
+                die(normal.x < 0);
+            } else if (component instanceof Enemy) {
                 if (component instanceof KoopaAI) {
-                    KoopaAI e = (KoopaAI)component;
+                    KoopaAI otherKoopa = (KoopaAI)component;
                     if (isShelled && isShellMoving) {
-                        e.die(normal.x > 0);
+                        otherKoopa.die(normal.x > 0);
                         contact.setEnabled(false);
                         AssetPool.getSound("assets/sounds/kick.ogg").play();
-                        if (e.isShelled && e.isShellMoving) {
+                        if (otherKoopa.isShelled && otherKoopa.isShellMoving) {
                             die(normal.x < 0);
                         }
                     }
+                    
                 } else {
-                    Enemy e = (Enemy)component;
+                    Enemy other = (Enemy)component;
                     if (isShelled && isShellMoving) {
-                        e.die(normal.x > 0);
+                        other.die(normal.x > 0);
                         contact.setEnabled(false);
                         AssetPool.getSound("assets/sounds/kick.ogg").play();
                     }

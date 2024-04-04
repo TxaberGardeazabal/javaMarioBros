@@ -81,7 +81,7 @@ public class AssetPool {
             }
             return AssetPool.spriteSheets.getOrDefault(file.getAbsolutePath(), null);
         } catch (IOException e) {
-            System.out.println("error: could not find texture "+name+" "+e.getMessage());
+            System.out.println("error: could not find spriteSheet "+name+" "+e.getMessage());
         }
         return null;
     }
@@ -108,7 +108,7 @@ public class AssetPool {
             }
             return AssetPool.sounds.get(file.getAbsolutePath());
         } catch (IOException e) {
-            System.out.println("error: could not find texture "+name);
+            System.out.println("error: could not find sound "+name);
         }
         return null;
     }
