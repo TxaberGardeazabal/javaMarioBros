@@ -1,8 +1,9 @@
 add new functionalities:
 - add rotation gizmo
 find how to initialize spritesheets automaticaly instead of hardcoding all of them (maybe in the assetpool)
+add a level class to check lives, coins, etc...
+blocks hit by moving shells drop contents
 + add a menu scene and a play scene
-+ add invincibility powerup
 ++ make UI components: text, buttons, images and variables
 
 
@@ -15,6 +16,7 @@ upgrade existing functionalities:
 - on savemenus show file name in selector
 begining play saves new scenes, add a notif when you play an unsaved custom level
 optimize loading resources on the level (requires big changes)
++ remake block coins
 + make mario movements into separate functions and
 + make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
 make moving thru pipes nicer

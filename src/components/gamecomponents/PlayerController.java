@@ -209,10 +209,12 @@ public class PlayerController extends PhysicsController {
                             : new Vector2f(-0.26f,0));
             
             this.stateMachine.trigger("throwFireball");
-            GameObject fireball = Prefab.generateFireball(position);
+            GameObject fireball = Prefab.generateFireball();
+            fireball.transform.position.set(position);
             fireball.getComponent(Fireball.class).goingRight = 
                     gameObject.transform.scale.x > 0;
             fireball.getComponent(Rigidbody2D.class).setAngularVelocity(-30);
+            
             Window.getScene().addGameObjectToScene(fireball);
             AssetPool.getSound("assets/sounds/fireball.ogg").play();
         }

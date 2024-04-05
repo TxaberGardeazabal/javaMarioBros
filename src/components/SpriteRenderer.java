@@ -24,6 +24,18 @@ public class SpriteRenderer extends Component{
     // dirty flag
     private transient boolean isDirty = true;
 
+    public SpriteRenderer() {
+    }
+
+    public SpriteRenderer(Vector4f color) {
+        this.color = color;
+        this.sprite = new Sprite(null);
+    }
+    
+    public SpriteRenderer(Sprite sprite) {
+        this.sprite = sprite;
+    }
+    
     @Override
     public void start() {
         this.lastTransform = gameObject.transform.copy();
@@ -55,6 +67,10 @@ public class SpriteRenderer extends Component{
 
     public Texture getTexture() {
         return sprite.getTexture();
+    }
+
+    public Sprite getSprite() {
+        return sprite;
     }
 
     public void setColor(Vector4f color) {

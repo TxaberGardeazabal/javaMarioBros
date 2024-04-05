@@ -34,9 +34,8 @@ public class Fireball extends PhysicsController{
     
     @Override
     public void start() {
+        super.start();
         fireballCount++;
-        this.rb = gameObject.getComponent(Rigidbody2D.class);
-        this.acceleration.y = Window.getPhysics().getGravity().y * Settings.worldGravityMul;
     }
     
     @Override

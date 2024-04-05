@@ -255,6 +255,18 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                Sprite fire = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/particles/marioFireball.png"));
+                /*fire.setTexCoords(new Vector2f[]{
+                    new Vector2f(fire.getWidth(),fire.getHeight()),
+                    new Vector2f(fire.getWidth(),0),
+                    new Vector2f(0,0),
+                    new Vector2f(0,fire.getHeight()),
+                });*/
+                if (spriteButton(fire,uid++)) {
+                    GameObject object = Prefab.generateUIButton();
+                    mc.pickUpObject(object);
+                }
+                
                 ImGui.sameLine();
                 ImGui.endTabItem();
             }

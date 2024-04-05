@@ -610,11 +610,15 @@ public class Prefab {
         return coin;
     }
     
-    public static GameObject generateFireball(Vector2f position) {
+    public static GameObject generateFireball() {
+        SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+        //GameObject coin = generateSpriteObject(Sprites.getSprite(4), 0.25f, 0.25f);
         Sprite sprite = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/particles/marioFireball.png"));
+        
         GameObject fireball = generateSpriteObject(sprite, 0.12f, 0.12f);
         fireball.name = "fireball";
-        fireball.transform.position.set(position);
+        
+        
         
         Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Dynamic);
