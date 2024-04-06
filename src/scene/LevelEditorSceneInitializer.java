@@ -88,7 +88,6 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     public void loadResources(Scene scene) {
         // TODO: puede que mover esta linea
         // default texture
-        //AssetPool.getTexture("assets/alfa_rojo.png");
         
         // shaders
         AssetPool.getShader("assets/shaders/default.glsl");
@@ -96,7 +95,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         
         AssetPool.addSpritesheet("assets/images/noSpriteSheet.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/noSpriteSheet.png"),
-                                16, 16, 16,0));
+                16, 16, 16,0));
         AssetPool.getTexture("assets/images/noTexture.png");
         AssetPool.addSpritesheet("assets/images/gizmos.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/gizmos.png"),

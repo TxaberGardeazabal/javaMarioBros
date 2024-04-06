@@ -255,13 +255,8 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
-                Sprite fire = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/particles/marioFireball.png"));
-                /*fire.setTexCoords(new Vector2f[]{
-                    new Vector2f(fire.getWidth(),fire.getHeight()),
-                    new Vector2f(fire.getWidth(),0),
-                    new Vector2f(0,0),
-                    new Vector2f(0,fire.getHeight()),
-                });*/
+                Sprite fire = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/marioFireball.png"));
+                
                 if (spriteButton(fire,uid++)) {
                     GameObject object = Prefab.generateUIButton();
                     mc.pickUpObject(object);
@@ -290,7 +285,6 @@ public class AssetWindow {
         ImGui.pushID(bId);
         boolean ret = ImGui.imageButton(texId, Settings.BUTTON_SIZE, Settings.BUTTON_SIZE,texCoords[2].x,texCoords[0].y,texCoords[0].x,texCoords[2].y);
         ImGui.popID();
-        
         
         ImVec2 lastButtonPos = new ImVec2();
         ImGui.getItemRectMax(lastButtonPos);

@@ -2,6 +2,7 @@ add new functionalities:
 - add rotation gizmo
 find how to initialize spritesheets automaticaly instead of hardcoding all of them (maybe in the assetpool)
 add a level class to check lives, coins, etc...
+- save the prefabs instead of hardcoding all of them
 blocks hit by moving shells drop contents
 + add a menu scene and a play scene
 ++ make UI components: text, buttons, images and variables
@@ -35,7 +36,8 @@ fireballs appear invisible
 falling from the level should kill you, but no when you're underground
 + enemies that are bellow Ground despawn as they get deleted
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
-++ test the new fontRenderBatch
++ test the new fontRenderBatch
+++ found big bug on rendering, some textures are not loaded properly
 
 other:
 // make pillbox changes ep #58
