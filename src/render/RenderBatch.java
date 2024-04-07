@@ -10,6 +10,7 @@ import gameEngine.Window;
 import components.SpriteRenderer;
 import gameEngine.GameObject;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
@@ -137,6 +138,9 @@ public class RenderBatch implements Comparable<RenderBatch>{
     }
     
     public void render() {
+        System.out.println("sprites: " + numSprites +" textures: "+ textures.size()+" full: "+!hasRoom+" zIndex: "+zIndex);
+        System.out.println(Arrays.toString(vertices));
+        
         boolean rebufferData = false;
         for (int i = 0; i < numSprites; i++) {
             SpriteRenderer spr = sprites[i];

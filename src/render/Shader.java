@@ -71,22 +71,26 @@ public class Shader {
             eol = source.indexOf("\r\n", index);
             String secondPattern = source.substring(index,eol).trim();
             
-            if(firstPattern.equals("vertex")) {
-                this.vertexSource = splitString[1];
-            } else if (firstPattern.equals("fragment")) {
-                this.fragmentSource = splitString[1];
-            }
-            else {
-                throw new IOException("Unexpected token '"+firstPattern+"'");
+            switch (firstPattern) {
+                case "vertex":
+                    this.vertexSource = splitString[1];
+                    break;
+                case "fragment":
+                    this.fragmentSource = splitString[1];
+                    break;
+                default:
+                    throw new IOException("Unexpected token '"+firstPattern+"'");
             }
             
-            if(secondPattern.equals("vertex")) {
-                this.vertexSource = splitString[2];
-            } else if (secondPattern.equals("fragment")) {
-                this.fragmentSource = splitString[2];
-            }
-            else {
-                throw new IOException("Unexpected token '"+secondPattern+"'");
+            switch (secondPattern) {
+                case "vertex":
+                    this.vertexSource = splitString[2];
+                    break;
+                case "fragment":
+                    this.fragmentSource = splitString[2];
+                    break;
+                default:
+                    throw new IOException("Unexpected token '"+secondPattern+"'");
             }
         }
         catch(IOException e) {
