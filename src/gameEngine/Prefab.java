@@ -611,9 +611,10 @@ public class Prefab {
     }
     
     public static GameObject generateFireball() {
-        SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+        SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioParticles.png");
         //GameObject coin = generateSpriteObject(Sprites.getSprite(4), 0.25f, 0.25f);
-        Sprite sprite = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/particles/marioFireball.png"));
+        Sprite sprite = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/marioFireball.png"));
+        //Sprite sprite = Sprites.getSprite(0);
         
         GameObject fireball = generateSpriteObject(sprite, 0.12f, 0.12f);
         fireball.name = "fireball";

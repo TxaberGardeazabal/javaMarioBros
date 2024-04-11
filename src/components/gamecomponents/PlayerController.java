@@ -4,7 +4,6 @@
  */
 package components.gamecomponents;
 
-import components.Component;
 import components.PhysicsController;
 import components.SpriteRenderer;
 import components.StateMachine;
@@ -19,8 +18,6 @@ import org.joml.Vector4f;
 import physics2D.components.PillboxCollider;
 import physics2D.components.Rigidbody2D;
 import physics2D.enums.BodyType;
-import render.DebugDraw;
-import scene.LevelEditorSceneInitializer;
 import scene.LevelSceneInitializer;
 import util.AssetPool;
 import util.Settings;
