@@ -84,10 +84,10 @@ public class Renderer {
     }*/
     
     public void render() {
-        System.out.println("render call, total batches: "+batches.size());
+        //System.out.println("render call, total batches: "+batches.size());
         currentShader.use();
         for (int i = 0; i < batches.size(); i++) {
-            System.out.println("batch "+(i+1));
+            //System.out.println("batch "+(i+1));
             batches.get(i).render();
         }
     }

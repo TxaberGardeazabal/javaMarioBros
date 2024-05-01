@@ -73,14 +73,14 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         imGuiLayer.setPropertiesWindow(new PropertiesWindow(mc));
         imGuiLayer.setSceneHierarchy(new SceneHierarchyWindow(mc));
         
-        GameObject go = Window.getScene().createGameObject("Font_test");
+        /*GameObject go = Window.getScene().createGameObject("Font_test");
         go.transform.position.x = 2.875f;
         go.transform.position.y = 1.625f;
         go.transform.scale.x = 0.25f;
         go.transform.scale.y = 0.25f;
         go.addComponent(new FontTest("assets/fonts/super-mario-bros-nes.ttf", 64));
-        //Window.getScene().addGameObjectToScene(go);
-        
+        Window.getScene().addGameObjectToScene(go);
+        */
         
     }
 

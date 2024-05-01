@@ -21,7 +21,6 @@ public class Flower extends Component{
     @Override
     public void start() {
         this.rb = gameObject.getComponent(Rigidbody2D.class);
-        AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
         this.rb.setIsSensor(true);
     }
     

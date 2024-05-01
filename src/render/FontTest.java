@@ -112,10 +112,9 @@ public class FontTest extends Component{
     public void editorUpdate(float dt) {
         // font render test
         //System.out.println("update");
-        /*batch.addText("A", 3, 0, 0.01f, 0xFF00AB, this);
-        batch.showTextTexture(0, 0, 0.01f, 0xFF00AB, this);
-        batch.flushBatch();
-        batch.detachShader();*/
+        //batch.addText("A", 3, 0, 0.01f, 0xFF00AB, this);
+        //batch.showTextTexture(0, 0, 0.01f, 0xFF00AB, this);
+        //batch.flushBatch();
     }
     @Override
     public void update(float dt) {
@@ -183,7 +182,7 @@ public class FontTest extends Component{
             Logger.getLogger(FontTest.class.getName()).log(Level.SEVERE, null, ex);
         }*/
         
-        uploadTexture(img);
+        //uploadTexture(img);
         
         Texture fontTexture = new Texture();
         this.textureId = fontTexture.init(img);

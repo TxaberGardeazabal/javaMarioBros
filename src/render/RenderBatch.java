@@ -139,7 +139,7 @@ public class RenderBatch implements Comparable<RenderBatch>{
     
     public void render() {
         // for testing
-        System.out.println("sprites: " + numSprites+"/"+maxBatchSize +" textures: "+ textures.size()+"/"+(texSlots.length-1)+" spritefull: "+!hasRoom+" texture full: "+ !this.hasTextureRoom()+ " zIndex: "+zIndex);
+        //System.out.println("sprites: " + numSprites+"/"+maxBatchSize +" textures: "+ textures.size()+"/"+(texSlots.length-1)+" spritefull: "+!hasRoom+" texture full: "+ !this.hasTextureRoom()+ " zIndex: "+zIndex);
         //System.out.println(Arrays.toString(vertices));
         
         boolean rebufferData = false;

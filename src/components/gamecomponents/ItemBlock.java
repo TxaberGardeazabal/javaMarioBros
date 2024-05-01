@@ -10,6 +10,7 @@ import gameEngine.GameObject;
 import gameEngine.Prefab;
 import gameEngine.Window;
 import org.joml.Vector4f;
+import util.AssetPool;
 
 /**
  *
@@ -89,6 +90,7 @@ public class ItemBlock extends Block{
     }
     
     private void doCoin() {
+        AssetPool.getSound("assets/sounds/coin.ogg").play();
         GameObject coin = Prefab.generateBlockCoin();
         coin.transform.position.set(gameObject.transform.position);
         coin.transform.position.y += 0.25f;
@@ -105,6 +107,7 @@ public class ItemBlock extends Block{
     }
     
     private void spawnMushroom() {
+        AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
         GameObject mush = Prefab.generateMushroom();
         mush.transform.position.set(gameObject.transform.position);
         mush.transform.position.y += 0.25f;
@@ -112,6 +115,7 @@ public class ItemBlock extends Block{
     }
     
     private void spawnFlower() {
+        AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
         GameObject flower = Prefab.generateFlower();
         flower.transform.position.set(gameObject.transform.position);
         flower.transform.position.y += 0.25f;
@@ -123,6 +127,7 @@ public class ItemBlock extends Block{
     }
 
     private void spawnStar() {
+        AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
         GameObject star = Prefab.generateStar();
         star.transform.position.set(gameObject.transform.position);
         star.transform.position.y += 0.25f;

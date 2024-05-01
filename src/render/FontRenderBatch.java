@@ -247,9 +247,6 @@ public class FontRenderBatch{
         
         // reset the batch for use on next draw
         size = 0;
-    }
-    
-    public void detachShader() {
         shader.detach();
     }
     
