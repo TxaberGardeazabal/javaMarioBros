@@ -10,6 +10,7 @@ import com.google.gson.GsonBuilder;
 import components.Component;
 import components.ComponentDeserializer;
 import components.SpriteRenderer;
+import editor.OImGui;
 import imgui.ImGui;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class GameObject {
     private transient int uid = -1;
     
     public String name;
+    private boolean enabled;
     private ArrayList<Component> components;
     public transient Transform transform;
     private boolean doSerialization = true;
@@ -34,8 +36,17 @@ public class GameObject {
 
     public GameObject(String name) {
         this.name = name;
+        this.enabled = true;
         this.components = new ArrayList();
         this.uid = ID_COUNTER++;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
     
     public <T extends Component> T getComponent(Class<T> componentClass) {
@@ -73,14 +84,28 @@ public class GameObject {
     }
     
     public void update(float dt) {
-        for (int i = 0; i < components.size(); i++) {
-            components.get(i).update(dt);
+        if (enabled) {
+            for (int i = 0; i < components.size(); i++) {
+                components.get(i).update(dt);
+            }
+            
+        }
+        
+    }
+    
+    public void lateUpdate(float dt) {
+        if (enabled) {
+            for (int i = 0; i < components.size(); i++) {
+                components.get(i).lateUpdate(dt);
+            }
         }
     }
     
     public void editorUpdate(float dt) {
-        for (int i = 0; i < components.size(); i++) {
-            components.get(i).editorUpdate(dt);
+        if (enabled) {
+            for (int i = 0; i < components.size(); i++) {
+                components.get(i).editorUpdate(dt);
+            }
         }
     }
     
@@ -95,6 +120,15 @@ public class GameObject {
     }
 
     public void imGui() {
+        name = OImGui.inputText("Name: ", name);
+        //enabled = ImGui.checkbox(name+": ", enabled);
+        enabled = OImGui.inputBoolean("Enabled: ", enabled);
+        if (parent != null) {
+            imgui.internal.ImGui.text("Parent: "+parent.name);
+        } else {
+            imgui.internal.ImGui.text("Parent: none");
+        }
+        
         for (Component c : components) {
             if (ImGui.collapsingHeader(c.getClass().getSimpleName())) {
                 c.imGui();

@@ -195,6 +195,7 @@ public class Window implements Observer{
                 
                 if (runtimePlaying) {
                     currentScene.update(dt);
+                    currentScene.lateUpdate(dt);
                 } else {
                     currentScene.editorUpdate(dt);
                 }

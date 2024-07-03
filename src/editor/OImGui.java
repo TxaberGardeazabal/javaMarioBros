@@ -7,6 +7,7 @@ package editor;
 import imgui.ImGui;
 import imgui.flag.ImGuiCol;
 import imgui.flag.ImGuiStyleVar;
+import imgui.type.ImBoolean;
 import imgui.type.ImString;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
@@ -142,7 +143,7 @@ public class OImGui {
         ImGui.nextColumn();
         
         ImString outString = new ImString(text, 256);
-        if (ImGui.inputText("##" + label, outString)) {
+        if (ImGui.inputText("##text" + label, outString)) {
             ImGui.columns();
             ImGui.popID();
             
@@ -153,5 +154,24 @@ public class OImGui {
         ImGui.popID();
         
         return text;
+    }
+    
+    public static boolean inputBoolean(String label, boolean bool) {
+        ImGui.pushID(label);
+        
+        ImGui.columns(2);
+        ImGui.setColumnWidth(0, defColumnWidht);
+        ImGui.text(label);
+        ImGui.nextColumn();
+        
+        if (ImGui.checkbox("##" + label, bool)) {
+            ImGui.columns(1);
+            ImGui.popID();
+            return !bool;
+        }
+        
+        ImGui.columns(1);
+        ImGui.popID();
+        return bool;
     }
 }

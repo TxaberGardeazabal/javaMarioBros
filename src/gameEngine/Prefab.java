@@ -6,6 +6,7 @@ package gameEngine;
 
 import components.gamecomponents.GoombaAI;
 import components.AnimationState;
+import components.FixedHUD;
 import components.ComplexPrefabWrapper;
 import components.FontRenderer;
 import components.gamecomponents.BlockCoin;
@@ -756,15 +757,25 @@ public class Prefab {
         return ret;
     }
     
-    public static GameObject generateUIButton() {
-        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png");
-        GameObject ret = generateSpriteObject(sprites.getSprite(1), 0.55f, 0.25f);
-        ret.name = "font_render_text_object";
+    public static GameObject generateUIText(Sprite sprite) {
+        GameObject ret = generateSpriteObject(sprite, sprite.getWidth()/338, sprite.getHeight()/338);
+        ret.name = "text_object";
+        ret.transform.zIndex = 50;
         
-        ret.addComponent(new UIButton());
-        FontRenderer fr = new FontRenderer();
-        //fr.setFont(new FontTest("assets/fonts/super-mario-bros-nes.ttf", 1));
-        ret.addComponent(fr);
+        ret.addComponent(new FixedHUD());
+        return ret;
+    }
+    
+    public static GameObject generateUIButton(Sprite sprite) {
+        GameObject ret = generateSpriteObject(sprite, sprite.getWidth()/338, sprite.getHeight()/338);
+        ret.name = "text_button_object";
+        
+        /*ret.addComponent(new UIButton() {
+            @Override
+            public void onClick() {
+                System.out.println("I have been clicked");
+            }
+        });*/
         return ret;
     }
     

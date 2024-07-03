@@ -5,8 +5,12 @@ add a level class to check lives, coins, etc...
 - save the prefabs instead of hardcoding all of them
 - in level scenes only assets that are used should be loaded.
 blocks hit by moving shells drop contents
-+ add a menu scene and a play scene
++ add a menu scene
 + create console window
++ make enabling and disableng gameObjects
+++ make UI components: text, buttons, images and variables
+++ make UI components: digit display
++++ migrate project to gradle
 
 
 upgrade existing functionalities:
@@ -31,15 +35,13 @@ some window focus issues:
    gizmos break when being pulled out of viewport
    when pressing away while jdialog windows are active causes focus bugs and crashes
 imgui string editing sucks
-some blocks appear invisible
-fireballs appear invisible
 falling from the level should kill you, but no when you're underground
 + enemies that are bellow Ground despawn as they get deleted
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
+++ setting gameobject active no working
+++ placing objects in debug mode makes two gos with the same uid
 
 other:
 // make pillbox changes ep #58
-// make saving, loading and copying of child gameobjects (discontinued but kinda works)
-// make UI components: text, buttons, images and variables
-// bug: font texture taking the place of other textures
-// remake fontRenderBatch
+// make object hierarchy and moving, saving, loading, copying and deleting of child gameobjects (discontinued but kinda works)
+// make it possible to render fonts from ttf files (discontinued)

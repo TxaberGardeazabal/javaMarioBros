@@ -14,22 +14,16 @@ import gameEngine.Camera;
 import gameEngine.GameObject;
 import gameEngine.GameObjectDeserializer;
 import gameEngine.Transform;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 import render.Renderer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.joml.Vector2f;
-import org.joml.Vector3f;
 import physics2D.Physics2D;
-import render.DebugDraw;
 import util.Settings;
 
 /**
@@ -85,7 +79,9 @@ public class Scene {
         
         for (int i = 0; i < gameObjects.size(); i++) {
             GameObject go = gameObjects.get(i);
-            go.editorUpdate(dt);
+            if (go.isEnabled()) {
+                go.editorUpdate(dt);
+            }
             if (go.isDead()) {
                 gameObjects.remove(i);
                 this.renderer.destroyGameObject(go);
@@ -110,7 +106,9 @@ public class Scene {
         
         for (int i = 0; i < gameObjects.size(); i++) {
             GameObject go = gameObjects.get(i);
-            go.update(dt);
+            if (go.isEnabled()) {
+                go.update(dt);
+            }
             if (go.isDead()) {
                 gameObjects.remove(i);
                 this.renderer.destroyGameObject(go);
@@ -132,6 +130,24 @@ public class Scene {
         //DebugDraw.addCircle2D(new Vector2f(50,400), 64, new Vector3f(0,1,0), 1);
         
     }
+    
+    // function is called every frame after the update function
+    public void lateUpdate(float dt) {
+        
+        for (int i = 0; i < gameObjects.size(); i++) {
+            GameObject go = gameObjects.get(i);
+            if (go.isEnabled()) {
+                go.lateUpdate(dt);
+            }
+            if (go.isDead()) {
+                gameObjects.remove(i);
+                this.renderer.destroyGameObject(go);
+                this.physics.destroyGameObject(go);
+                i--;
+            }
+        }
+    }
+    
     public void render() {
         this.renderer.render();
     }

@@ -4,7 +4,6 @@
  */
 package components;
 
-import components.gamecomponents.PlayerController;
 import components.propertieComponents.NonPickable;
 import components.propertieComponents.ShadowObj;
 import gameEngine.GameObject;
@@ -41,6 +40,8 @@ public class MouseControls extends Component{
     private float debounceTime = 0.2f;
     private float debounce = debounceTime;
     
+    private boolean debugDrop = false;
+    
     public void pickUpObject(GameObject go) {
         // reset functionalities
         if (this.holdingObject != null) {
@@ -65,6 +66,7 @@ public class MouseControls extends Component{
                     this.activeGameObjectOgColor.add(childGo.getComponent(SpriteRenderer.class).getColor());
                     childGo.getComponent(SpriteRenderer.class).setColor(new Vector4f(0.8f,0.8f,0.8f,0.5f));
                 }
+
                 Window.getScene().addGameObjectToScene(childGo);
             }
         }
@@ -77,31 +79,65 @@ public class MouseControls extends Component{
         if (this.holdingObject != null) {
             if (holdingObject.getComponent(ComplexPrefabWrapper.class) == null) {
                 
-                GameObject newObj = this.holdingObject.copy();
-                if (newObj.getComponent(StateMachine.class) != null) {
-                    newObj.getComponent(StateMachine.class).refreshTextures();
-                }
-                if (newObj.getComponent(SpriteRenderer.class) != null) {
-                    newObj.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(0));
-                }
+                if (debugDrop) {
+                    
+                    if (holdingObject.getComponent(StateMachine.class) != null) {
+                        holdingObject.getComponent(StateMachine.class).refreshTextures();
+                    }
+                    if (holdingObject.getComponent(SpriteRenderer.class) != null) {
+                        holdingObject.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(0));
+                    }
 
-                newObj.removeComponent(NonPickable.class);
-                newObj.removeComponent(ShadowObj.class);
-                Window.getScene().addGameObjectToScene(newObj);
-            } else {
-                ComplexPrefabWrapper cpw = this.holdingObject.getComponent(ComplexPrefabWrapper.class);
-                for (int i = 0; i < cpw.getGameObjects().size(); i++) {
-                    GameObject newObj = cpw.getGameObjects().get(i).copy();
+                    holdingObject.removeComponent(NonPickable.class);
+                    holdingObject.removeComponent(ShadowObj.class);
+                    Window.getScene().addGameObjectToScene(holdingObject);
+                    holdingObject = null;
+                } else {
+                    
+                    GameObject newObj = this.holdingObject.copy();
                     if (newObj.getComponent(StateMachine.class) != null) {
                         newObj.getComponent(StateMachine.class).refreshTextures();
                     }
                     if (newObj.getComponent(SpriteRenderer.class) != null) {
-                        newObj.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(i));
+                        newObj.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(0));
                     }
-                    
+
                     newObj.removeComponent(NonPickable.class);
                     newObj.removeComponent(ShadowObj.class);
                     Window.getScene().addGameObjectToScene(newObj);
+                }
+            } else {
+                if (debugDrop) {
+                    ComplexPrefabWrapper cpw = this.holdingObject.getComponent(ComplexPrefabWrapper.class);
+                    for (int i = 0; i < cpw.getGameObjects().size(); i++) {
+                        GameObject newObj = cpw.getGameObjects().get(i);
+                        if (newObj.getComponent(StateMachine.class) != null) {
+                            newObj.getComponent(StateMachine.class).refreshTextures();
+                        }
+                        if (newObj.getComponent(SpriteRenderer.class) != null) {
+                            newObj.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(i));
+                        }
+
+                        newObj.removeComponent(NonPickable.class);
+                        newObj.removeComponent(ShadowObj.class);
+                        Window.getScene().addGameObjectToScene(newObj);
+                        holdingObject = null;
+                    }
+                } else {
+                    ComplexPrefabWrapper cpw = this.holdingObject.getComponent(ComplexPrefabWrapper.class);
+                    for (int i = 0; i < cpw.getGameObjects().size(); i++) {
+                        GameObject newObj = cpw.getGameObjects().get(i).copy();
+                        if (newObj.getComponent(StateMachine.class) != null) {
+                            newObj.getComponent(StateMachine.class).refreshTextures();
+                        }
+                        if (newObj.getComponent(SpriteRenderer.class) != null) {
+                            newObj.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(i));
+                        }
+
+                        newObj.removeComponent(NonPickable.class);
+                        newObj.removeComponent(ShadowObj.class);
+                        Window.getScene().addGameObjectToScene(newObj);
+                    }
                 }
             }
             
@@ -135,9 +171,10 @@ public class MouseControls extends Component{
                     if (MouseListener.isMouseDraging() &&
                             !blockInSquare(holdingObject.transform.position.x - halfWidth, holdingObject.transform.position.y - halfHeight)) {
 
-
+                        
                         placeObject();
                     } else if (!MouseListener.isMouseDraging() && debounce < 0) {
+
                         placeObject();
                         debounce = debounceTime;
                     }

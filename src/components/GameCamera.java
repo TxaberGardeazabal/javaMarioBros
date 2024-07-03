@@ -23,6 +23,10 @@ public class GameCamera extends Component{
     private transient float cameraBuffer = 1.5f;
     private transient float playerBuffer = 0.25f;
     
+    private transient float Dx = 0.0f;
+    private transient float Dy = 0.0f;
+    
+    // TODO this should be stored in the level itself, not here
     private Vector4f skyColor = new Vector4f(92.0f/255.0f, 148.0f/255.0f, 252.0f/255.0f, 1.0f);
     private Vector4f underGroundColor = new Vector4f(0.0f,0.0f,0.0f,0.0f);
     
@@ -46,14 +50,17 @@ public class GameCamera extends Component{
         } else {
             if (player.getComponent(PlayerController.class) != null) {
                 if (!player.getComponent(PlayerController.class).hasWon()) {
-                    //System.out.println("should begin the camera");
+                    // mario solo se mueve a la derecha de la pantalla
+                    Dx = -(camera.position.x - Math.max(player.transform.position.x -2.5f, highestX));
                     camera.position.x = Math.max(player.transform.position.x -2.5f, highestX);
                     highestX = Math.max(highestX, camera.position.x);
 
                     if (player.transform.position.y < -playerBuffer) {
+                        Dy = -(this.camera.position.y - underGroundYLevel);
                         this.camera.position.y = underGroundYLevel;
                         this.camera.clearColor.set(underGroundColor);
                     } else if (player.transform.position.y >= 0.0f) {
+                        Dy = -(this.camera.position.y - 0.0f);
                         this.camera.position.y = 0.0f;
                         this.camera.clearColor.set(skyColor);
                     }
@@ -62,4 +69,14 @@ public class GameCamera extends Component{
         }
         
     }
+
+    public float getDeltaX() {
+        return Dx;
+    }
+
+    public float getDeltaY() {
+        return Dy;
+    }
+    
+    
 }

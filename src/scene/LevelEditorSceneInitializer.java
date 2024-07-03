@@ -86,13 +86,12 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
 
     @Override
     public void loadResources(Scene scene) {
-        // TODO: puede que mover esta linea
-        // default texture
         
         // shaders
         AssetPool.getShader("assets/shaders/default.glsl");
         AssetPool.getShader("assets/shaders/debugLine2D.glsl");
         
+        // def
         AssetPool.addSpritesheet("assets/images/noSpriteSheet.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/noSpriteSheet.png"),
                 16, 16, 16,0));
@@ -101,8 +100,29 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 new SpriteSheet(AssetPool.getTexture("assets/images/gizmos.png"),
                         22, 48, 3, 2));
         
-        // spritesheets
+        // textures
+        AssetPool.getTexture("assets/images/spriteSheets/particles/marioFireball.png");
         
+        // text textures
+        AssetPool.getTexture("assets/images/text/mario.png");
+        AssetPool.getTexture("assets/images/text/mundo.png");
+        AssetPool.getTexture("assets/images/text/tiempo.png");
+        AssetPool.getTexture("assets/images/text/empezar.png");
+        AssetPool.getTexture("assets/images/text/0.png");
+        AssetPool.getTexture("assets/images/text/1.png");
+        AssetPool.getTexture("assets/images/text/2.png");
+        AssetPool.getTexture("assets/images/text/3.png");
+        AssetPool.getTexture("assets/images/text/4.png");
+        AssetPool.getTexture("assets/images/text/5.png");
+        AssetPool.getTexture("assets/images/text/6.png");
+        AssetPool.getTexture("assets/images/text/7.png");
+        AssetPool.getTexture("assets/images/text/8.png");
+        AssetPool.getTexture("assets/images/text/9.png");
+        AssetPool.getTexture("assets/images/text/-.png");
+        AssetPool.getTexture("assets/images/text/x.png");
+        
+        
+        // spritesheets
         AssetPool.addSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png"),
                 16,16,28,0));
@@ -163,8 +183,6 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png"),
                 16,16,8,0));
-        
-        AssetPool.getTexture("assets/images/spriteSheets/particles/marioFireball.png");
 
         // sounds
         AssetPool.addSound("assets/sounds/1-up.ogg", false);

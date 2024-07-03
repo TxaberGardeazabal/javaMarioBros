@@ -239,6 +239,42 @@ public class AssetWindow {
                 ImGui.endTabItem();
             }
             
+            if (ImGui.beginTabItem("UI")) {
+                ImGui.text("elementos de la interfaz de usuario, no recomendado");
+                int uid = 0;
+                
+                Sprite text = new Sprite(AssetPool.getTexture("assets/images/text/mario.png"));
+                // mario
+                if (spriteButton(text,uid++)) {
+                    GameObject object = Prefab.generateUIText(text);
+                    mc.pickUpObject(object);
+                }
+                
+                // mundo
+                text = new Sprite(AssetPool.getTexture("assets/images/text/mundo.png"));
+                if (spriteButton(text,uid++)) {
+                    GameObject object = Prefab.generateUIText(text);
+                    mc.pickUpObject(object);
+                }
+                
+                // tiempo
+                text = new Sprite(AssetPool.getTexture("assets/images/text/tiempo.png"));
+                if (spriteButton(text,uid++)) {
+                    GameObject object = Prefab.generateUIText(text);
+                    mc.pickUpObject(object);
+                }
+                
+                // empezar
+                text = new Sprite(AssetPool.getTexture("assets/images/text/empezar.png"));
+                if (spriteButton(text,uid++)) {
+                    GameObject object = Prefab.generateUIText(text);
+                    mc.pickUpObject(object);
+                }
+                
+                ImGui.sameLine();
+                ImGui.endTabItem();
+            }
+            
             if (ImGui.beginTabItem("Experimental")) {
                 ImGui.text("objetos experimentales creados para probar funcionalidades, NO USAR pueden corromper tus niveles");
                 int uid = 0;
@@ -251,14 +287,14 @@ public class AssetWindow {
                 
                 SpriteSheet sprites2 = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png");
                 if (spriteButton(sprites2.getSprite(1),uid++)) {
-                    GameObject object = Prefab.generateUIButton();
+                    GameObject object = Prefab.generateUIButton(sprites2.getSprite(1));
                     mc.pickUpObject(object);
                 }
                 
                 Sprite fire = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/marioFireball.png"));
                 
                 if (spriteButton(fire,uid++)) {
-                    GameObject object = Prefab.generateUIButton();
+                    GameObject object = Prefab.generateUIText(fire);
                     mc.pickUpObject(object);
                 }
                 

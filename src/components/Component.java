@@ -31,6 +31,8 @@ public abstract class Component {
     
     public void update(float dt){}
     
+    public void lateUpdate(float dt) {}
+    
     public void editorUpdate(float dt) {}
     
     public void beginCollision(GameObject collidingObj,Contact cntct,Vector2f hitNormal) {}

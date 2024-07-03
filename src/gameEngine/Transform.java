@@ -83,17 +83,10 @@ public class Transform extends Component{
     
     @Override
     public void imGui(){
-        gameObject.name = OImGui.inputText("Name: ", gameObject.name);
         OImGui.drawVec2Control("Position", this.position);
         OImGui.drawVec2Control("Scale", this.scale, 32.0f);
         this.rotation = OImGui.dragFloat("Rotation", this.rotation);
         this.zIndex = OImGui.dragInt("Z-index", this.zIndex);
-        
-        if (gameObject.getParent() != null) {
-            ImGui.text("Parent: "+gameObject.getParent().name);
-        } else {
-            ImGui.text("Parent: none");
-        }
     }
     
     public Transform copy() {

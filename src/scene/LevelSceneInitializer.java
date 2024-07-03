@@ -53,6 +53,8 @@ public class LevelSceneInitializer extends SceneInitializer {
         AssetPool.getShader("assets/shaders/default.glsl");
         AssetPool.getShader("assets/shaders/debugLine2D.glsl");
         
+        AssetPool.getTexture("assets/images/text/mario.png");
+        
         // spritesheets
         AssetPool.addSpritesheet("assets/images/gizmos.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/gizmos.png"),
@@ -99,7 +101,6 @@ public class LevelSceneInitializer extends SceneInitializer {
         AssetPool.getTexture("assets/images/spriteSheets/particles/marioFireball.png");
         
         // sounds
-        AssetPool.addSound("assets/sounds/138410__cameronmusic__item-collect-2.ogg", false);
         AssetPool.addSound("assets/sounds/1-up.ogg", false);
         AssetPool.addSound("assets/sounds/bowserfalls.ogg", false);
         AssetPool.addSound("assets/sounds/bowserfire.ogg", false);
