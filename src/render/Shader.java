@@ -57,18 +57,25 @@ public class Shader {
     
     public Shader(String filepath) {
         this.filepath = filepath;
+        String eolChar;
+        if (System.getProperty("os.name").equals("Windows 10")) {
+            eolChar = "\r\n";
+        } else {
+            eolChar = "\n";
+        }
+        
         try {
             String source = new String(Files.readAllBytes(Paths.get(filepath)));
             String[] splitString = source.split("(#type)( )+([a-zA-Z]+)");
             
             // find the first pattern after #type
             int index = source.indexOf("#type") + 6;
-            int eol = source.indexOf("\r\n", index);
+            int eol = source.indexOf(eolChar, index);
             String firstPattern = source.substring(index,eol).trim();
             
             // find the second pattern after #type
             index = source.indexOf("#type", eol) + 6;
-            eol = source.indexOf("\r\n", index);
+            eol = source.indexOf(eolChar, index);
             String secondPattern = source.substring(index,eol).trim();
             
             switch (firstPattern) {
