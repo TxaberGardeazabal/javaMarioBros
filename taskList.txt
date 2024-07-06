@@ -38,7 +38,7 @@ imgui string editing sucks
 falling from the level should kill you, but no when you're underground
 + enemies that are bellow Ground despawn as they get deleted
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
-++ setting gameobject active no working
+++ disabled gos should not update nor show
 ++ placing objects in debug mode makes two gos with the same uid
 
 other:

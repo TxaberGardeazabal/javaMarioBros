@@ -23,10 +23,12 @@ public class GameObjectDeserializer implements JsonDeserializer<GameObject>{
     public GameObject deserialize(JsonElement je, Type type, JsonDeserializationContext jdc) throws JsonParseException {
         JsonObject jsonObject = je.getAsJsonObject();
         String name = jsonObject.get("name").getAsString();
+        boolean enabled = jsonObject.get("enabled").getAsBoolean();
         JsonArray components = jsonObject.getAsJsonArray("components");
         JsonArray children = jsonObject.getAsJsonArray("childGOs");
         
         GameObject go = new GameObject(name);
+        go.setEnabled(enabled);
         for (JsonElement e: components){
             Component c = jdc.deserialize(e, Component.class);
             go.addComponent(c);

@@ -5,10 +5,12 @@
  */
 package scene;
 
+import UI.ButtonBehavior;
 import components.ComponentDeserializer;
 import components.Component;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import components.ButtonBehaviorDeserializer;
 import components.propertieComponents.ShadowObj;
 import gameEngine.Camera;
 import gameEngine.GameObject;
@@ -229,6 +231,7 @@ public class Scene {
         Gson gson = new GsonBuilder().setPrettyPrinting()
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
                 .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
+                .registerTypeAdapter(ButtonBehavior.class, new ButtonBehaviorDeserializer())
                 .enableComplexMapKeySerialization()
                 .create();
         
@@ -259,6 +262,7 @@ public class Scene {
         Gson gson = new GsonBuilder().setPrettyPrinting()
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
                 .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
+                .registerTypeAdapter(ButtonBehavior.class, new ButtonBehaviorDeserializer())
                 .enableComplexMapKeySerialization()
                 .create();
         

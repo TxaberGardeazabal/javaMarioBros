@@ -24,3 +24,5 @@ hs_err_pid*
 replay_pid*
 /build/
 /dist/
+/libraries/jbox2d-jbox2d-2.2.1.1/jbox2d-jbox2d-2.2.1.1/jbox2d-library/target/
+/libraries/jbox2d-jbox2d-2.2.1.1/jbox2d-jbox2d-2.2.1.1/jbox2d-testbed-jogl/target/

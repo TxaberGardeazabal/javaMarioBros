@@ -5,8 +5,10 @@
  */
 package gameEngine;
 
+import UI.ButtonBehavior;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import components.ButtonBehaviorDeserializer;
 import components.Component;
 import components.ComponentDeserializer;
 import components.SpriteRenderer;
@@ -180,6 +182,7 @@ public class GameObject {
         Gson gson = new GsonBuilder()
                  .registerTypeAdapter(Component.class, new ComponentDeserializer())
                  .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
+                 .registerTypeAdapter(ButtonBehavior.class, new ButtonBehaviorDeserializer())
                  .enableComplexMapKeySerialization()
                  .create();
         String objToGson = gson.toJson(this);

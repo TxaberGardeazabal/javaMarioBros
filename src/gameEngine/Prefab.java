@@ -6,9 +6,8 @@ package gameEngine;
 
 import components.gamecomponents.GoombaAI;
 import components.AnimationState;
-import components.FixedHUD;
+import UI.FixedHUD;
 import components.ComplexPrefabWrapper;
-import components.FontRenderer;
 import components.gamecomponents.BlockCoin;
 import components.gamecomponents.Coin;
 import components.gamecomponents.Flower;
@@ -21,7 +20,8 @@ import components.Sprite;
 import components.SpriteRenderer;
 import components.SpriteSheet;
 import components.StateMachine;
-import components.UIButton;
+import UI.UIButton;
+import UI.buttonBehaviors.TestBehavior;
 import components.gamecomponents.Fireball;
 import components.gamecomponents.Flag;
 import components.gamecomponents.FlagPole;
@@ -770,12 +770,9 @@ public class Prefab {
         GameObject ret = generateSpriteObject(sprite, sprite.getWidth()/338, sprite.getHeight()/338);
         ret.name = "text_button_object";
         
-        /*ret.addComponent(new UIButton() {
-            @Override
-            public void onClick() {
-                System.out.println("I have been clicked");
-            }
-        });*/
+        UIButton btn = new UIButton();
+        btn.setButtonBehavior(new TestBehavior());
+        ret.addComponent(btn);
         return ret;
     }
     

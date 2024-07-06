@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package components;
+package UI;
 
+import components.Component;
+import components.SpriteRenderer;
 import gameEngine.GameObject;
 import gameEngine.MouseListener;
 import gameEngine.Window;
@@ -19,6 +21,8 @@ public class UIButton extends Component {
     private transient boolean isHovered;
     private transient boolean isHolding;
     private transient SpriteRenderer spr;
+    
+    private ButtonBehavior buttonBehavior;
     
     @Override
     public void start() {
@@ -52,7 +56,7 @@ public class UIButton extends Component {
                 // para no lanzar el evento varias veces, se vuelve un hold
                 if (!isPressed && !isHolding) {
                     isPressed = true;
-                    onClick();
+                    this.buttonBehavior.onClick();
                     onHoldStart();
                 } else {
                     isPressed = false;
@@ -68,21 +72,11 @@ public class UIButton extends Component {
         }
         
         if (isHolding){
-            onHold();
+            this.buttonBehavior.onHold();
         }
         if (isHovered) {
-            onHover();
+            this.buttonBehavior.onHover();
         }
-        
-    }
-    
-    public void onClick() {}
-    
-    public void onHover() {
-        
-    }
-    
-    public void onHold() {
         
     }
     
@@ -112,6 +106,14 @@ public class UIButton extends Component {
 
     public boolean isHolding() {
         return isHolding;
+    }
+
+    public ButtonBehavior getButtonBehavior() {
+        return buttonBehavior;
+    }
+
+    public void setButtonBehavior(ButtonBehavior buttonBehavior) {
+        this.buttonBehavior = buttonBehavior;
     }
     
     
