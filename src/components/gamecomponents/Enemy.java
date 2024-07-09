@@ -44,7 +44,6 @@ public class Enemy extends PhysicsController{
             gameObject.destroy();
             return;
         }*/
-        
         if (isDead) {
             addGravity();
             applyForces(dt);

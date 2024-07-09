@@ -32,6 +32,8 @@ public class GameObject {
     public transient Transform transform;
     private boolean doSerialization = true;
     private boolean isDead = false;
+    // dirty flag, for gos
+    private transient boolean isDirty;
     
     private List<GameObject> childGOs = new ArrayList();
     private transient GameObject parent = null;
@@ -42,13 +44,33 @@ public class GameObject {
         this.components = new ArrayList();
         this.uid = ID_COUNTER++;
     }
+    
+    public GameObject(String name, boolean enabled) {
+        this.name = name;
+        this.enabled = enabled;
+        this.components = new ArrayList();
+        this.uid = ID_COUNTER++;
+    }
 
     public boolean isEnabled() {
         return enabled;
     }
 
     public void setEnabled(boolean enabled) {
+        if (!this.enabled && enabled) {
+            isDirty = true;
+        } else if (this.enabled && !enabled) {
+            isDirty = true;
+        }
         this.enabled = enabled;
+    }
+    
+    public boolean isDirty() {
+        return isDirty;
+    }
+    
+    public void setIsDirty(boolean dirty) {
+        this.isDirty = dirty;
     }
     
     public <T extends Component> T getComponent(Class<T> componentClass) {
@@ -86,6 +108,10 @@ public class GameObject {
     }
     
     public void update(float dt) {
+        if (isDirty) {
+            isDirty = false;
+        }
+        
         if (enabled) {
             for (int i = 0; i < components.size(); i++) {
                 components.get(i).update(dt);
@@ -96,6 +122,10 @@ public class GameObject {
     }
     
     public void lateUpdate(float dt) {
+        if (isDirty) {
+            isDirty = false;
+        }
+        
         if (enabled) {
             for (int i = 0; i < components.size(); i++) {
                 components.get(i).lateUpdate(dt);
@@ -104,6 +134,10 @@ public class GameObject {
     }
     
     public void editorUpdate(float dt) {
+        if (isDirty) {
+            isDirty = false;
+        }
+        
         if (enabled) {
             for (int i = 0; i < components.size(); i++) {
                 components.get(i).editorUpdate(dt);
@@ -123,8 +157,9 @@ public class GameObject {
 
     public void imGui() {
         name = OImGui.inputText("Name: ", name);
-        //enabled = ImGui.checkbox(name+": ", enabled);
-        enabled = OImGui.inputBoolean("Enabled: ", enabled);
+        
+        boolean enabled2 = OImGui.inputBoolean("Enabled: ", enabled);
+        setEnabled(enabled2);
         if (parent != null) {
             imgui.internal.ImGui.text("Parent: "+parent.name);
         } else {

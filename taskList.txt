@@ -10,7 +10,7 @@ blocks hit by moving shells drop contents
 + make enabling and disableng gameObjects
 ++ make UI components: text, buttons, images and variables
 ++ make UI components: digit display
-+++ migrate project to gradle
+
 
 
 upgrade existing functionalities:
@@ -20,6 +20,7 @@ upgrade existing functionalities:
 - add docs
 - add boxcollider to enemies and items (for optimization)
 - on savemenus show file name in selector
+- go uids not reseting properly and stacking
 begining play saves new scenes, add a notif when you play an unsaved custom level
 optimize loading resources on the level (requires big changes)
 + remake block coins
@@ -45,3 +46,4 @@ other:
 // make pillbox changes ep #58
 // make object hierarchy and moving, saving, loading, copying and deleting of child gameobjects (discontinued but kinda works)
 // make it possible to render fonts from ttf files (discontinued)
+// migrate project to gradle (if jars don't work)

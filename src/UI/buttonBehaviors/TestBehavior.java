@@ -10,7 +10,7 @@ import UI.ButtonBehavior;
  *
  * @author txaber gardeazabal
  */
-public class TestBehavior implements ButtonBehavior{
+public class TestBehavior implements ButtonBehavior {
 
     private boolean dontsave = true;
     

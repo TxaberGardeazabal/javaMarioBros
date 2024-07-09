@@ -16258,82 +16258,6 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 0.125,
-            "y": 3.125
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "zIndex": 0,
-          "uid": 144
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 0.8,
-            "y": 0.8,
-            "z": 0.8,
-            "w": 0.5
-          },
-          "sprite": {
-            "Width": 16.0,
-            "height": 16.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
-              "height": 64,
-              "width": 112
-            },
-            "texCoords": [
-              {
-                "x": 0.42857143,
-                "y": 1.0
-              },
-              {
-                "x": 0.42857143,
-                "y": 0.75
-              },
-              {
-                "x": 0.2857143,
-                "y": 0.75
-              },
-              {
-                "x": 0.2857143,
-                "y": 1.0
-              }
-            ]
-          },
-          "uid": 145
-        }
-      },
-      {
-        "type": "components.propertieComponents.NonPickable",
-        "properties": {
-          "uid": 146
-        }
-      },
-      {
-        "type": "components.propertieComponents.ShadowObj",
-        "properties": {
-          "uid": 147
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
-    "name": "sprite_obj_gen",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
             "x": 2.625,
             "y": 2.125
           },
@@ -16383,6 +16307,692 @@
             ]
           },
           "uid": 145
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "Koopa",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.65,
+            "y": 0.4500001
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.35
+          },
+          "zIndex": 0,
+          "uid": 172
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 24.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
+              "height": 96,
+              "width": 64
+            },
+            "texCoords": [
+              {
+                "x": 0.5,
+                "y": 1.0
+              },
+              {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
+                "x": 0.25,
+                "y": 0.75
+              },
+              {
+                "x": 0.25,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 173
+        }
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "walk",
+                "trigger": "squash"
+              },
+              "shell"
+            ]
+          ],
+          "states": [
+            {
+              "title": "walk",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "shell",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "walk",
+          "uid": 174
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.1,
+          "bodyType": "Dynamic",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": true,
+          "uid": 175
+        }
+      },
+      {
+        "type": "physics2D.components.CircleCollider",
+        "properties": {
+          "radius": 0.13,
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": -0.05
+          },
+          "uid": 176
+        }
+      },
+      {
+        "type": "components.gamecomponents.KoopaAI",
+        "properties": {
+          "movingDebounce": 0.32,
+          "stompDebounce": 0.32,
+          "terminalVelocity": {
+            "x": 2.1,
+            "y": 3.1
+          },
+          "hasGravity": true,
+          "innerWidth": 0.175,
+          "castVal": -0.2,
+          "uid": 177
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.875,
+            "y": 2.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 204
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.71428573,
+                "y": 1.0
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.75
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.75
+              },
+              {
+                "x": 0.5714286,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 205
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 206
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 207
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 208
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 2.125,
+            "y": 2.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 204
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.71428573,
+                "y": 1.0
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.75
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.75
+              },
+              {
+                "x": 0.5714286,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 205
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 206
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 207
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 208
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "Koopa",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.875,
+            "y": 0.375
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.35
+          },
+          "zIndex": 0,
+          "uid": 235
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 24.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
+              "height": 96,
+              "width": 64
+            },
+            "texCoords": [
+              {
+                "x": 0.5,
+                "y": 1.0
+              },
+              {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
+                "x": 0.25,
+                "y": 0.75
+              },
+              {
+                "x": 0.25,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 236
+        }
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "walk",
+                "trigger": "squash"
+              },
+              "shell"
+            ]
+          ],
+          "states": [
+            {
+              "title": "walk",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "shell",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "walk",
+          "uid": 237
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.1,
+          "bodyType": "Dynamic",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": true,
+          "uid": 238
+        }
+      },
+      {
+        "type": "physics2D.components.CircleCollider",
+        "properties": {
+          "radius": 0.13,
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": -0.05
+          },
+          "uid": 239
+        }
+      },
+      {
+        "type": "components.gamecomponents.KoopaAI",
+        "properties": {
+          "movingDebounce": 0.32,
+          "stompDebounce": 0.32,
+          "terminalVelocity": {
+            "x": 2.1,
+            "y": 3.1
+          },
+          "hasGravity": true,
+          "innerWidth": 0.175,
+          "castVal": -0.2,
+          "uid": 240
         }
       }
     ],

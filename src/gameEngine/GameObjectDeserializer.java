@@ -27,8 +27,7 @@ public class GameObjectDeserializer implements JsonDeserializer<GameObject>{
         JsonArray components = jsonObject.getAsJsonArray("components");
         JsonArray children = jsonObject.getAsJsonArray("childGOs");
         
-        GameObject go = new GameObject(name);
-        go.setEnabled(enabled);
+        GameObject go = new GameObject(name, enabled);
         for (JsonElement e: components){
             Component c = jdc.deserialize(e, Component.class);
             go.addComponent(c);

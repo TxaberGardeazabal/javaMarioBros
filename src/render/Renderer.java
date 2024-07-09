@@ -27,12 +27,13 @@ public class Renderer {
     
     public void add(GameObject go) {
         SpriteRenderer spr = go.getComponent(SpriteRenderer.class);
-        FontRenderer fr = go.getComponent(FontRenderer.class);
+        
         if (spr != null) {
             add(spr);
         }
-        
-        /*if (fr != null) {
+        /*
+        FontRenderer fr = go.getComponent(FontRenderer.class);
+        if (fr != null) {
             add(fr);
         }*/
     }
