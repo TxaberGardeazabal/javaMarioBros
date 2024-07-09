@@ -5,10 +5,9 @@ add a level class to check lives, coins, etc...
 - save the prefabs instead of hardcoding all of them
 - in level scenes only assets that are used should be loaded.
 blocks hit by moving shells drop contents
-+ add a menu scene
+++ add a menu scene
 + create console window
-+ make enabling and disableng gameObjects
-++ make UI components: text, buttons, images and variables
+++ make UI components: text, buttons, images, events and variables
 ++ make UI components: digit display
 
 
@@ -39,7 +38,6 @@ imgui string editing sucks
 falling from the level should kill you, but no when you're underground
 + enemies that are bellow Ground despawn as they get deleted
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
-++ disabled gos should not update nor show
 ++ placing objects in debug mode makes two gos with the same uid
 
 other:

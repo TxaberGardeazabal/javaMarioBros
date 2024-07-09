@@ -10,7 +10,7 @@ import UI.ButtonBehavior;
  *
  * @author txaber gardeazabal
  */
-public class TestBehavior implements ButtonBehavior {
+public class EditorButtonBehavior implements ButtonBehavior {
     
     @Override
     public void onClick() {

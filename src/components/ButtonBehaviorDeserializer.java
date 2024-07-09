@@ -28,13 +28,11 @@ public class ButtonBehaviorDeserializer implements JsonSerializer<ButtonBehavior
         JsonObject result = new JsonObject();
         result.add("type", new JsonPrimitive(t.getClass().getCanonicalName()));
         result.add("properties", jsc.serialize(t, t.getClass()));
-        System.out.println("serializing");
         return result;
     }
 
     @Override
     public ButtonBehavior deserialize(JsonElement je, Type type, JsonDeserializationContext jdc) throws JsonParseException {
-        System.out.println("deserializing");
         JsonObject jsonObject = je.getAsJsonObject();
         String ofInstance = jsonObject.get("type").getAsString();
         JsonElement element = jsonObject.get("properties");

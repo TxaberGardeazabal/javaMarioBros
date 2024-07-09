@@ -5,16 +5,19 @@
 package UI.buttonBehaviors;
 
 import UI.ButtonBehavior;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 
 /**
  *
  * @author txaber gardeazabal
  */
-public class TestBehavior implements ButtonBehavior {
-    
+public class StartButtonBehavior implements ButtonBehavior{
+
     @Override
     public void onClick() {
-        System.out.println("click!");
+        EventSystem.notify(null, new Event(EventType.GameEngineStartPlay));
     }
 
     @Override

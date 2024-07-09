@@ -291,6 +291,12 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                Sprite text = new Sprite(AssetPool.getTexture("assets/images/text/empezar.png"));
+                if (spriteButton(text,uid++)) {
+                    GameObject object = Prefab.generateStartButton(text);
+                    mc.pickUpObject(object);
+                }
+                
                 Sprite fire = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/marioFireball.png"));
                 
                 if (spriteButton(fire,uid++)) {

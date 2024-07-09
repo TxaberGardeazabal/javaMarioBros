@@ -10,7 +10,8 @@ import UI.ButtonBehavior;
  *
  * @author txaber gardeazabal
  */
-public class TestBehavior implements ButtonBehavior {
+public class LevelSelectButtonBehavior implements ButtonBehavior {
+
     
     @Override
     public void onClick() {

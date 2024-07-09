@@ -63,6 +63,10 @@ public class GameObject {
             isDirty = true;
         }
         this.enabled = enabled;
+        
+        for (GameObject go : this.childGOs){
+            go.setEnabled(enabled);
+        }
     }
     
     public boolean isDirty() {
@@ -159,7 +163,10 @@ public class GameObject {
         name = OImGui.inputText("Name: ", name);
         
         boolean enabled2 = OImGui.inputBoolean("Enabled: ", enabled);
-        setEnabled(enabled2);
+        if (enabled2 != enabled) {
+            setEnabled(enabled2);
+        }
+        
         if (parent != null) {
             imgui.internal.ImGui.text("Parent: "+parent.name);
         } else {

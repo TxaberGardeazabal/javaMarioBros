@@ -9,9 +9,12 @@ package observers.events;
  * @author txaber gardeazabal
  */
 public enum EventType {
+        EditorStartPlay,
+        EditorStopPlay,
         GameEngineStartPlay,
         GameEngineStopPlay,
         SaveLevel,
         LoadLevel,
+        Exit,
         UserEvent
     };

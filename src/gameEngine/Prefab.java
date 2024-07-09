@@ -21,6 +21,7 @@ import components.SpriteRenderer;
 import components.SpriteSheet;
 import components.StateMachine;
 import UI.UIButton;
+import UI.buttonBehaviors.StartButtonBehavior;
 import UI.buttonBehaviors.TestBehavior;
 import components.gamecomponents.Fireball;
 import components.gamecomponents.Flag;
@@ -772,6 +773,16 @@ public class Prefab {
         
         UIButton btn = new UIButton();
         btn.setButtonBehavior(new TestBehavior());
+        ret.addComponent(btn);
+        return ret;
+    }
+    
+    public static GameObject generateStartButton(Sprite sprite) {
+        GameObject ret = generateSpriteObject(sprite, sprite.getWidth()/338, sprite.getHeight()/338);
+        ret.name = "text_button_object";
+        
+        UIButton btn = new UIButton();
+        btn.setButtonBehavior(new StartButtonBehavior());
         ret.addComponent(btn);
         return ret;
     }
