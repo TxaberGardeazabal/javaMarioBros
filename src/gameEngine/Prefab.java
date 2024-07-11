@@ -4,6 +4,8 @@
  */
 package gameEngine;
 
+import UI.Digit;
+import UI.Digitalizer;
 import components.gamecomponents.GoombaAI;
 import components.AnimationState;
 import UI.FixedHUD;
@@ -774,6 +776,185 @@ public class Prefab {
         UIButton btn = new UIButton();
         btn.setButtonBehavior(new TestBehavior());
         ret.addComponent(btn);
+        return ret;
+    }
+    
+    public static GameObject generateDigitalizer(int size) {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/text/numeros.png");
+        GameObject digitalizer = generateEmptyObject();
+        digitalizer.name = "text_digitalizer";
+        digitalizer.addComponent(new Digitalizer());
+        
+        float offset = 0.20f;
+        float currentOffset = 0;
+        for (int i = 0; i < size; i++) {
+            GameObject go = generateSpriteObject(sprites.getSprite(0), sprites.getSprite(0).getWidth()/338, sprites.getSprite(0).getHeight()/338);
+            
+            go.transform.translate(currentOffset, 0);
+            currentOffset += offset;
+            
+            AnimationState zero = new AnimationState();
+            zero.title = "0";
+            zero.addFrame(sprites.getSprite(0), 0);
+            
+            AnimationState one = new AnimationState();
+            one.title = "1";
+            one.addFrame(sprites.getSprite(1), 0);
+            
+            AnimationState two = new AnimationState();
+            two.title = "2";
+            two.addFrame(sprites.getSprite(2), 0);
+            
+            AnimationState three = new AnimationState();
+            three.title = "3";
+            three.addFrame(sprites.getSprite(3), 0);
+            
+            AnimationState four = new AnimationState();
+            four.title = "4";
+            four.addFrame(sprites.getSprite(4), 0);
+            
+            AnimationState five = new AnimationState();
+            five.title = "5";
+            five.addFrame(sprites.getSprite(5), 0);
+            
+            AnimationState six = new AnimationState();
+            six.title = "6";
+            six.addFrame(sprites.getSprite(6), 0);
+            
+            AnimationState seven = new AnimationState();
+            seven.title = "7";
+            seven.addFrame(sprites.getSprite(7), 0);
+            
+            AnimationState eigth = new AnimationState();
+            eigth.title = "8";
+            eigth.addFrame(sprites.getSprite(8), 0);
+            
+            AnimationState nine = new AnimationState();
+            nine.title = "9";
+            nine.addFrame(sprites.getSprite(9), 0);
+            
+            StateMachine sm = new StateMachine();
+            sm.addState(zero);
+            sm.addState(one);
+            sm.addState(two);
+            sm.addState(three);
+            sm.addState(four);
+            sm.addState(five);
+            sm.addState(six);
+            sm.addState(seven);
+            sm.addState(eigth);
+            sm.addState(nine);
+            sm.setDefaultState(zero.title);
+            
+            sm.addStateTrigger(one.title, zero.title, "0");
+            sm.addStateTrigger(two.title, zero.title, "0");
+            sm.addStateTrigger(three.title, zero.title, "0");
+            sm.addStateTrigger(four.title, zero.title, "0");
+            sm.addStateTrigger(five.title, zero.title, "0");
+            sm.addStateTrigger(six.title, zero.title, "0");
+            sm.addStateTrigger(seven.title, zero.title, "0");
+            sm.addStateTrigger(eigth.title, zero.title, "0");
+            sm.addStateTrigger(nine.title, zero.title, "0");
+            
+            sm.addStateTrigger(zero.title, one.title, "1");
+            sm.addStateTrigger(two.title, one.title, "1");
+            sm.addStateTrigger(three.title, one.title, "1");
+            sm.addStateTrigger(four.title, one.title, "1");
+            sm.addStateTrigger(five.title, one.title, "1");
+            sm.addStateTrigger(six.title, one.title, "1");
+            sm.addStateTrigger(seven.title, one.title, "1");
+            sm.addStateTrigger(eigth.title, one.title, "1");
+            sm.addStateTrigger(nine.title, one.title, "1");
+            
+            sm.addStateTrigger(zero.title, two.title, "2");
+            sm.addStateTrigger(one.title, two.title, "2");
+            sm.addStateTrigger(three.title, two.title, "2");
+            sm.addStateTrigger(four.title, two.title, "2");
+            sm.addStateTrigger(five.title, two.title, "2");
+            sm.addStateTrigger(six.title, two.title, "2");
+            sm.addStateTrigger(seven.title, two.title, "2");
+            sm.addStateTrigger(eigth.title, two.title, "2");
+            sm.addStateTrigger(nine.title, two.title, "2");
+            
+            sm.addStateTrigger(zero.title, three.title, "3");
+            sm.addStateTrigger(one.title, three.title, "3");
+            sm.addStateTrigger(two.title, three.title, "3");
+            sm.addStateTrigger(four.title, three.title, "3");
+            sm.addStateTrigger(five.title, three.title, "3");
+            sm.addStateTrigger(six.title, three.title, "3");
+            sm.addStateTrigger(seven.title, three.title, "3");
+            sm.addStateTrigger(eigth.title, three.title, "3");
+            sm.addStateTrigger(nine.title, three.title, "3");
+            
+            sm.addStateTrigger(zero.title, four.title, "4");
+            sm.addStateTrigger(one.title, four.title, "4");
+            sm.addStateTrigger(two.title, four.title, "4");
+            sm.addStateTrigger(three.title, four.title, "4");
+            sm.addStateTrigger(five.title, four.title, "4");
+            sm.addStateTrigger(six.title, four.title, "4");
+            sm.addStateTrigger(seven.title, four.title, "4");
+            sm.addStateTrigger(eigth.title, four.title, "4");
+            sm.addStateTrigger(nine.title, four.title, "4");
+            
+            sm.addStateTrigger(zero.title, five.title, "5");
+            sm.addStateTrigger(one.title, five.title, "5");
+            sm.addStateTrigger(two.title, five.title, "5");
+            sm.addStateTrigger(three.title, five.title, "5");
+            sm.addStateTrigger(four.title, five.title, "5");
+            sm.addStateTrigger(six.title, five.title, "5");
+            sm.addStateTrigger(seven.title, five.title, "5");
+            sm.addStateTrigger(eigth.title, five.title, "5");
+            sm.addStateTrigger(nine.title, five.title, "5");
+            
+            sm.addStateTrigger(zero.title, six.title, "6");
+            sm.addStateTrigger(one.title, six.title, "6");
+            sm.addStateTrigger(two.title, six.title, "6");
+            sm.addStateTrigger(three.title, six.title, "6");
+            sm.addStateTrigger(four.title, six.title, "6");
+            sm.addStateTrigger(five.title, six.title, "6");
+            sm.addStateTrigger(seven.title, six.title, "6");
+            sm.addStateTrigger(eigth.title, six.title, "6");
+            sm.addStateTrigger(nine.title, six.title, "6");
+            
+            sm.addStateTrigger(zero.title, seven.title, "7");
+            sm.addStateTrigger(one.title, seven.title, "7");
+            sm.addStateTrigger(two.title, seven.title, "7");
+            sm.addStateTrigger(three.title, seven.title, "7");
+            sm.addStateTrigger(four.title, seven.title, "7");
+            sm.addStateTrigger(five.title, seven.title, "7");
+            sm.addStateTrigger(six.title, seven.title, "7");
+            sm.addStateTrigger(eigth.title, seven.title, "7");
+            sm.addStateTrigger(nine.title, seven.title, "7");
+            
+            sm.addStateTrigger(zero.title, eigth.title, "8");
+            sm.addStateTrigger(one.title, eigth.title, "8");
+            sm.addStateTrigger(two.title, eigth.title, "8");
+            sm.addStateTrigger(three.title, eigth.title, "8");
+            sm.addStateTrigger(four.title, eigth.title, "8");
+            sm.addStateTrigger(five.title, eigth.title, "8");
+            sm.addStateTrigger(six.title, eigth.title, "8");
+            sm.addStateTrigger(seven.title, eigth.title, "8");
+            sm.addStateTrigger(nine.title, eigth.title, "8");
+            
+            sm.addStateTrigger(zero.title, nine.title, "9");
+            sm.addStateTrigger(one.title, nine.title, "9");
+            sm.addStateTrigger(two.title, nine.title, "9");
+            sm.addStateTrigger(three.title, nine.title, "9");
+            sm.addStateTrigger(four.title, nine.title, "9");
+            sm.addStateTrigger(five.title, nine.title, "9");
+            sm.addStateTrigger(six.title, nine.title, "9");
+            sm.addStateTrigger(seven.title, nine.title, "9");
+            sm.addStateTrigger(eigth.title, nine.title, "9");
+            
+            go.addComponent(sm);
+            go.addComponent(new Digit());
+            digitalizer.addChild(go);
+        }
+        
+        GameObject ret = generateEmptyObject();
+        ComplexPrefabWrapper pcw = new ComplexPrefabWrapper();
+        pcw.addGameObject(digitalizer);
+        ret.addComponent(pcw);
         return ret;
     }
     

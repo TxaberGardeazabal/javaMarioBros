@@ -9,6 +9,7 @@ blocks hit by moving shells drop contents
 + create console window
 ++ make UI components: text, buttons, images, events and variables
 ++ make UI components: digit display
+++ child gameobjects sould move with parent
 
 
 
@@ -45,3 +46,4 @@ other:
 // make object hierarchy and moving, saving, loading, copying and deleting of child gameobjects (discontinued but kinda works)
 // make it possible to render fonts from ttf files (discontinued)
 // migrate project to gradle (if jars don't work)
+// refactor mouseControlls class, including child object interactions, colors and the annoying gizmos

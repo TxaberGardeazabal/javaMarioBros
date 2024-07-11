@@ -5,6 +5,7 @@
  */
 package scene;
 
+import UI.Digitalizer;
 import components.EditorCamera;
 import components.FontRenderer;
 import components.GizmoSystem;
@@ -82,6 +83,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         Window.getScene().addGameObjectToScene(go);
         */
         
+        
     }
 
     @Override
@@ -98,7 +100,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.getTexture("assets/images/noTexture.png");
         AssetPool.addSpritesheet("assets/images/gizmos.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/gizmos.png"),
-                        22, 48, 3, 2));
+                22, 48, 3, 2));
         
         // textures
         AssetPool.getTexture("assets/images/spriteSheets/particles/marioFireball.png");
@@ -123,6 +125,9 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         
         
         // spritesheets
+        AssetPool.addSpritesheet("assets/images/text/numeros.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/text/numeros.png"),
+                56,56,10,8));
         AssetPool.addSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png"),
                 16,16,28,0));

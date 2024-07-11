@@ -56,6 +56,9 @@ public class LevelSceneInitializer extends SceneInitializer {
         AssetPool.getTexture("assets/images/text/mario.png");
         
         // spritesheets
+        AssetPool.addSpritesheet("assets/images/text/numeros.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/text/numeros.png"),
+                56,56,10,8));
         AssetPool.addSpritesheet("assets/images/gizmos.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/gizmos.png"),
                         22, 48, 3, 2));

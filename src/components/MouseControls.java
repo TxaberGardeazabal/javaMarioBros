@@ -117,6 +117,10 @@ public class MouseControls extends Component{
                         if (newObj.getComponent(SpriteRenderer.class) != null) {
                             newObj.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(i));
                         }
+                        
+                        for (GameObject child : newObj.getChildGOs()) {
+                            propagateRefresh(child);
+                        }
 
                         newObj.removeComponent(NonPickable.class);
                         newObj.removeComponent(ShadowObj.class);
@@ -133,6 +137,10 @@ public class MouseControls extends Component{
                         if (newObj.getComponent(SpriteRenderer.class) != null) {
                             newObj.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(i));
                         }
+                        
+                        for (GameObject child : newObj.getChildGOs()) {
+                            propagateRefresh(child);
+                        }
 
                         newObj.removeComponent(NonPickable.class);
                         newObj.removeComponent(ShadowObj.class);
@@ -141,6 +149,16 @@ public class MouseControls extends Component{
                 }
             }
             
+        }
+    }
+    
+    public void propagateRefresh(GameObject go) {
+        if (go.getComponent(StateMachine.class) != null) {
+            go.getComponent(StateMachine.class).refreshTextures();
+        }
+        
+        for (GameObject child : go.getChildGOs()) {
+            propagateRefresh(child);
         }
     }
     
