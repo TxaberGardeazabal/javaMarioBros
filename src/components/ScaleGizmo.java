@@ -35,13 +35,13 @@ public class ScaleGizmo extends Gizmo{
     
     private void scaleX() {
         for (GameObject go : activeGameObjects) {
-            go.transform.scale.x += MouseListener.getWorldDX();
+            go.transform.scale(MouseListener.getWorldDX(), 0);
         }
     }
     
     private void scaleY() {
         for (GameObject go : activeGameObjects) {
-            go.transform.scale.y += MouseListener.getWorldDY();
+            go.transform.scale(0,MouseListener.getWorldDY());
         }
     }
 }

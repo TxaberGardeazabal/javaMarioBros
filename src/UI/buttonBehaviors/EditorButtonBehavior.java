@@ -14,7 +14,7 @@ public class EditorButtonBehavior implements ButtonBehavior {
     
     @Override
     public void onClick() {
-        System.out.println("click!");
+        System.out.println("editor!");
     }
 
     @Override

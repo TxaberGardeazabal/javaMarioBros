@@ -15,7 +15,7 @@ public class LevelSelectButtonBehavior implements ButtonBehavior {
     
     @Override
     public void onClick() {
-        System.out.println("click!");
+        System.out.println("select!");
     }
 
     @Override

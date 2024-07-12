@@ -44,13 +44,13 @@ public class TranslateGizmo extends Gizmo {
         if (mouseMoveX > MOVERATE) {
             mouseMoveX -= MOVERATE;
             for (GameObject go : activeGameObjects) {
-                go.transform.position.x += MOVERATE;
+                go.transform.translate(MOVERATE, 0);
             }
 
         } else if (mouseMoveX < -(MOVERATE)) {
             mouseMoveX += MOVERATE;
             for (GameObject go : activeGameObjects) {
-                go.transform.position.x -= MOVERATE;
+                go.transform.translate(-MOVERATE, 0);
             }
         }
     }
@@ -61,27 +61,13 @@ public class TranslateGizmo extends Gizmo {
         if (mouseMoveY > MOVERATE) {
             mouseMoveY -= MOVERATE;
             for (GameObject go : activeGameObjects) {
-                go.transform.position.y += MOVERATE;
+                go.transform.translate(0,MOVERATE);
             }
         } else if (mouseMoveY < -(MOVERATE)) {
             mouseMoveY += MOVERATE;
             for (GameObject go : activeGameObjects) {
-                go.transform.position.y -= MOVERATE;
+                go.transform.translate(0,-MOVERATE);
             }
         }
     }
-    
-    /*private void translateX(GameObject go) {
-        go.transform.position.x += MouseListener.getWorldDX();
-        for (GameObject go2 : go.getChildGOs()) {
-            translateX(go2);
-        }
-    }
-    
-    private void translateY(GameObject go) {
-        go.transform.position.y += MouseListener.getWorldDY();
-        for (GameObject go2 : go.getChildGOs()) {
-            translateY(go2);
-        }
-    }*/
 }

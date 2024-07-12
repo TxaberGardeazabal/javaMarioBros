@@ -8,7 +8,7 @@
         "properties": {
           "position": {
             "x": 2.807509,
-            "y": 0.3812499
+            "y": 0.38124993
           },
           "rotation": 0.0,
           "scale": {
@@ -16533,80 +16533,6 @@
     "childGOs": []
   },
   {
-    "name": "text_button_object",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 2.875,
-            "y": 1.875
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 1.3017751,
-            "y": 0.16568047
-          },
-          "zIndex": 0,
-          "uid": 330
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 440.0,
-            "height": 56.0,
-            "texture": {
-              "filepath": "assets/images/text/empezar.png",
-              "height": 56,
-              "width": 440
-            },
-            "texCoords": [
-              {
-                "x": 1.0,
-                "y": 1.0
-              },
-              {
-                "x": 1.0,
-                "y": 0.0
-              },
-              {
-                "x": 0.0,
-                "y": 0.0
-              },
-              {
-                "x": 0.0,
-                "y": 1.0
-              }
-            ]
-          },
-          "uid": 331
-        }
-      },
-      {
-        "type": "UI.UIButton",
-        "properties": {
-          "buttonBehavior": {
-            "type": "UI.buttonBehaviors.StartButtonBehavior",
-            "properties": {}
-          },
-          "uid": 332
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
     "name": "text_digitalizer",
     "enabled": true,
     "components": [
@@ -22697,7 +22623,7 @@
               "uid": 580
             }
           ],
-          "value": 0,
+          "value": 1154,
           "uid": 556
         }
       }
@@ -35240,5 +35166,386 @@
         "childGOs": []
       }
     ]
+  },
+  {
+    "name": "start_button",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 2.9250028,
+            "y": 1.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 1.3017751,
+            "y": 0.16568047
+          },
+          "zIndex": 0,
+          "uid": 607
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 440.0,
+            "height": 56.0,
+            "texture": {
+              "filepath": "assets/images/text/empezar.png",
+              "height": 56,
+              "width": 440
+            },
+            "texCoords": [
+              {
+                "x": 1.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 608
+        }
+      },
+      {
+        "type": "UI.UIButton",
+        "properties": {
+          "buttonBehavior": {
+            "type": "UI.buttonBehaviors.StartButtonBehavior",
+            "properties": {}
+          },
+          "uid": 609
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "editor_button",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.375,
+            "y": 1.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 1.112426,
+            "y": 0.16568047
+          },
+          "zIndex": 0,
+          "uid": 612
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 376.0,
+            "height": 56.0,
+            "texture": {
+              "filepath": "assets/images/text/editor.png",
+              "height": 56,
+              "width": 376
+            },
+            "texCoords": [
+              {
+                "x": 1.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 613
+        }
+      },
+      {
+        "type": "UI.UIButton",
+        "properties": {
+          "buttonBehavior": {
+            "type": "UI.buttonBehaviors.EditorButtonBehavior",
+            "properties": {}
+          },
+          "uid": 614
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "select_button",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.875,
+            "y": 1.375
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 3.1923077,
+            "y": 0.16568047
+          },
+          "zIndex": 0,
+          "uid": 617
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 1079.0,
+            "height": 56.0,
+            "texture": {
+              "filepath": "assets/images/text/seleccionar_nivel.png",
+              "height": 56,
+              "width": 1079
+            },
+            "texCoords": [
+              {
+                "x": 1.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 618
+        }
+      },
+      {
+        "type": "UI.UIButton",
+        "properties": {
+          "buttonBehavior": {
+            "type": "UI.buttonBehaviors.LevelSelectButtonBehavior",
+            "properties": {}
+          },
+          "uid": 619
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "exit_button",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.375,
+            "y": 1.125
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.9230769,
+            "y": 0.16568047
+          },
+          "zIndex": 0,
+          "uid": 622
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 312.0,
+            "height": 56.0,
+            "texture": {
+              "filepath": "assets/images/text/salir.png",
+              "height": 56,
+              "width": 312
+            },
+            "texCoords": [
+              {
+                "x": 1.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 623
+        }
+      },
+      {
+        "type": "UI.UIButton",
+        "properties": {
+          "buttonBehavior": {
+            "type": "UI.buttonBehaviors.ExitButtonBehavior",
+            "properties": {}
+          },
+          "uid": 624
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "text_object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 16.65538,
+            "y": 2.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 1.1094675,
+            "y": 0.4408284
+          },
+          "zIndex": 50,
+          "uid": 627
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 375.0,
+            "height": 149.0,
+            "texture": {
+              "filepath": "assets/images/text/Super_Mario_Bros._Logo.png",
+              "height": 149,
+              "width": 375
+            },
+            "texCoords": [
+              {
+                "x": 1.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 628
+        }
+      },
+      {
+        "type": "UI.FixedHUD",
+        "properties": {
+          "gc": {
+            "skyColor": {
+              "x": 0.36078432,
+              "y": 0.5803922,
+              "z": 0.9882353,
+              "w": 1.0
+            },
+            "underGroundColor": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "uid": 631
+          },
+          "uid": 629
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
   }
 ]

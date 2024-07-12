@@ -19,13 +19,13 @@ import org.joml.Vector4f;
 public class OImGui {
     
     private static float defColumnWidht = 220.0f;
-    public static void drawVec2Control(String label, Vector2f values) {
-        drawVec2Control(label, values, 0.0f, defColumnWidht);
+    public static Vector2f drawVec2Control(String label, Vector2f values) {
+        return drawVec2Control(label, values, 0.0f, defColumnWidht);
     }
-    public static void drawVec2Control(String label, Vector2f values, float resetValue) {
-        drawVec2Control(label, values, resetValue, defColumnWidht);
+    public static Vector2f drawVec2Control(String label, Vector2f values, float resetValue) {
+        return drawVec2Control(label, values, resetValue, defColumnWidht);
     }
-    public static void drawVec2Control(String label, Vector2f values, float resetValue, float columnWidht) {
+    public static Vector2f drawVec2Control(String label, Vector2f values, float resetValue, float columnWidht) {
         ImGui.pushID(label);
         
         ImGui.columns(2);
@@ -77,6 +77,8 @@ public class OImGui {
         ImGui.popStyleVar();
         ImGui.columns(1);
         ImGui.popID();
+        
+        return values;
     }
     
     public static float dragFloat(String label, float value) {

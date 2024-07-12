@@ -267,7 +267,41 @@ public class AssetWindow {
                 // empezar
                 text = new Sprite(AssetPool.getTexture("assets/images/text/empezar.png"));
                 if (spriteButton(text,uid++)) {
+                    GameObject object = Prefab.generateStartButton(text);
+                    mc.pickUpObject(object);
+                }
+                
+                // salir
+                text = new Sprite(AssetPool.getTexture("assets/images/text/salir.png"));
+                if (spriteButton(text,uid++)) {
+                    GameObject object = Prefab.generateExitButton(text);
+                    mc.pickUpObject(object);
+                }
+                
+                // editor
+                text = new Sprite(AssetPool.getTexture("assets/images/text/editor.png"));
+                if (spriteButton(text,uid++)) {
+                    GameObject object = Prefab.generateEditorButton(text);
+                    mc.pickUpObject(object);
+                }
+                
+                // seleccionar
+                text = new Sprite(AssetPool.getTexture("assets/images/text/seleccionar_nivel.png"));
+                if (spriteButton(text,uid++)) {
+                    GameObject object = Prefab.generateSelectButton(text);
+                    mc.pickUpObject(object);
+                }
+                
+                // digitalizer
+                text = new Sprite(AssetPool.getTexture("assets/images/text/Super_Mario_Bros._Logo.png"));
+                if (spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateUIText(text);
+                    mc.pickUpObject(object);
+                }
+                
+                SpriteSheet text2 = AssetPool.getSpritesheet("assets/images/text/numeros.png");
+                if (spriteButton(text2.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateDigitalizer(6);
                     mc.pickUpObject(object);
                 }
                 
@@ -282,24 +316,6 @@ public class AssetWindow {
 
                 if (spriteButton(pipeSprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generatePipeExp();
-                    mc.pickUpObject(object);
-                }
-                
-                SpriteSheet sprites2 = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png");
-                if (spriteButton(sprites2.getSprite(1),uid++)) {
-                    GameObject object = Prefab.generateUIButton(sprites2.getSprite(1));
-                    mc.pickUpObject(object);
-                }
-                
-                Sprite text = new Sprite(AssetPool.getTexture("assets/images/text/empezar.png"));
-                if (spriteButton(text,uid++)) {
-                    GameObject object = Prefab.generateStartButton(text);
-                    mc.pickUpObject(object);
-                }
-                
-                SpriteSheet text2 = AssetPool.getSpritesheet("assets/images/text/numeros.png");
-                if (spriteButton(text2.getSprite(0),uid++)) {
-                    GameObject object = Prefab.generateDigitalizer(6);
                     mc.pickUpObject(object);
                 }
                 

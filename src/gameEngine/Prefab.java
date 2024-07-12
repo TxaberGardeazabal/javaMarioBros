@@ -23,6 +23,9 @@ import components.SpriteRenderer;
 import components.SpriteSheet;
 import components.StateMachine;
 import UI.UIButton;
+import UI.buttonBehaviors.EditorButtonBehavior;
+import UI.buttonBehaviors.ExitButtonBehavior;
+import UI.buttonBehaviors.LevelSelectButtonBehavior;
 import UI.buttonBehaviors.StartButtonBehavior;
 import UI.buttonBehaviors.TestBehavior;
 import components.gamecomponents.Fireball;
@@ -960,10 +963,40 @@ public class Prefab {
     
     public static GameObject generateStartButton(Sprite sprite) {
         GameObject ret = generateSpriteObject(sprite, sprite.getWidth()/338, sprite.getHeight()/338);
-        ret.name = "text_button_object";
+        ret.name = "start_button";
         
         UIButton btn = new UIButton();
         btn.setButtonBehavior(new StartButtonBehavior());
+        ret.addComponent(btn);
+        return ret;
+    }
+    
+    public static GameObject generateExitButton(Sprite sprite) {
+        GameObject ret = generateSpriteObject(sprite, sprite.getWidth()/338, sprite.getHeight()/338);
+        ret.name = "exit_button";
+        
+        UIButton btn = new UIButton();
+        btn.setButtonBehavior(new ExitButtonBehavior());
+        ret.addComponent(btn);
+        return ret;
+    }
+    
+    public static GameObject generateEditorButton(Sprite sprite) {
+        GameObject ret = generateSpriteObject(sprite, sprite.getWidth()/338, sprite.getHeight()/338);
+        ret.name = "editor_button";
+        
+        UIButton btn = new UIButton();
+        btn.setButtonBehavior(new EditorButtonBehavior());
+        ret.addComponent(btn);
+        return ret;
+    }
+    
+    public static GameObject generateSelectButton(Sprite sprite) {
+        GameObject ret = generateSpriteObject(sprite, sprite.getWidth()/338, sprite.getHeight()/338);
+        ret.name = "select_button";
+        
+        UIButton btn = new UIButton();
+        btn.setButtonBehavior(new LevelSelectButtonBehavior());
         ret.addComponent(btn);
         return ret;
     }

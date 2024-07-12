@@ -7,9 +7,7 @@ add a level class to check lives, coins, etc...
 blocks hit by moving shells drop contents
 ++ add a menu scene
 + create console window
-++ make UI components: text, buttons, images, events and variables
-++ make UI components: digit display
-++ child gameobjects sould move with parent
+++ make button events
 
 
 
@@ -36,6 +34,7 @@ some window focus issues:
    gizmos break when being pulled out of viewport
    when pressing away while jdialog windows are active causes focus bugs and crashes
 imgui string editing sucks
+imgui windows clipping into screen bar and headers not showing correctly
 falling from the level should kill you, but no when you're underground
 + enemies that are bellow Ground despawn as they get deleted
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
@@ -43,7 +42,6 @@ falling from the level should kill you, but no when you're underground
 
 other:
 // make pillbox changes ep #58
-// make object hierarchy and moving, saving, loading, copying and deleting of child gameobjects (discontinued but kinda works)
 // make it possible to render fonts from ttf files (discontinued)
 // migrate project to gradle (if jars don't work)
 // refactor mouseControlls class, including child object interactions, colors and the annoying gizmos

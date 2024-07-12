@@ -21,11 +21,6 @@ public class Transform extends Component{
     public Vector2f scale;
     public int zIndex = 0;
 
-    /*private Vector2f lastPosition = new Vector2f();
-    private float lastRotation = 0.0f;
-    private Vector2f lastScale = new Vector2f();
-    private int lastZIndex = 0;
-    */
     public Transform() {
         this.position = new Vector2f();
         this.scale = new Vector2f();
@@ -49,44 +44,28 @@ public class Transform extends Component{
         this.scale = scale;
     }
     
-    /*@Override
-    public void update(float dt) {
-        if (position != lastPosition || rotation != lastRotation || scale != lastScale || zIndex != lastZIndex) {
-            spreadChanges();
+    @Override
+    public void imGui() {
+        Vector2f pos = OImGui.drawVec2Control("Position",new Vector2f(this.position));
+        float rot = OImGui.dragFloat("Rotation", this.rotation);
+        Vector2f sca = OImGui.drawVec2Control("Scale",new Vector2f(this.scale), 32.0f);
+        int zInt = OImGui.dragInt("Z-index", this.zIndex);
+        
+        if (!this.position.equals(pos)) {
+            Vector2f tmp = new Vector2f(this.position).sub(pos);
+            this.translate(-tmp.x, -tmp.y);
+        }
+        if (rot != this.rotation) {
+            this.rotate(this.rotation - rot);
+        }
+        if (!this.scale.equals(sca)) {
+            Vector2f tmp = new Vector2f(this.scale).sub(sca);
+            this.scale(-tmp.x, -tmp.y);
+        }
+        if (zInt != this.zIndex) {
+            this.setzIndex(zInt);
         }
         
-        this.lastPosition = position;
-        this.lastRotation = rotation;
-        this.lastScale = scale;
-        this.lastZIndex = zIndex;
-    }
-    
-    @Override
-    public void editorUpdate(float dt) {
-        if (position != lastPosition || rotation != lastRotation || scale != lastScale || zIndex != lastZIndex) {
-            spreadChanges();
-        }
-        
-        this.lastPosition = position;
-        this.lastRotation = rotation;
-        this.lastScale = scale;
-        this.lastZIndex = zIndex;
-    }
-    
-    private void spreadChanges() {
-        if (position != lastPosition) {
-            for (int i = 0; i < gameObject.getChildGOs().size(); i++) {
-                gameObject.getChildGOs().get(i).transform.position.add(lastPosition.sub(position));
-            }
-        }
-    }*/
-    
-    @Override
-    public void imGui(){
-        OImGui.drawVec2Control("Position", this.position);
-        OImGui.drawVec2Control("Scale", this.scale, 32.0f);
-        this.rotation = OImGui.dragFloat("Rotation", this.rotation);
-        this.zIndex = OImGui.dragInt("Z-index", this.zIndex);
     }
     
     public Transform copy() {
@@ -114,7 +93,43 @@ public class Transform extends Component{
         Vector2f translate = new Vector2f(x,y);
         position.add(translate);
         for (GameObject go : gameObject.getChildGOs()) {
-            go.transform.translate(x, y);
+            go.transform.translate(translate);
+        }
+    }
+    
+    public void translate(Vector2f translate) {
+        position.add(translate);
+        for (GameObject go : gameObject.getChildGOs()) {
+            go.transform.translate(translate);
+        }
+    }
+    
+    public void rotate(float z) {
+        rotation += z;
+        for (GameObject go : gameObject.getChildGOs()) {
+            go.transform.rotate(z);
+        }
+    }
+    
+    public void scale(float x,float y) {
+        Vector2f scalew = new Vector2f(x,y);
+        this.scale.add(scalew);
+        for (GameObject go : gameObject.getChildGOs()) {
+            go.transform.scale(x, y);
+        }
+    }
+    
+    public void scale(Vector2f scalew) {
+        this.scale.add(scalew);
+        for (GameObject go : gameObject.getChildGOs()) {
+            go.transform.scale(scalew);
+        }
+    }
+
+    public void setzIndex(int zIndex) {
+        this.zIndex = zIndex;
+        for (GameObject go : gameObject.getChildGOs()) {
+            go.transform.setzIndex(zIndex);
         }
     }
 }
