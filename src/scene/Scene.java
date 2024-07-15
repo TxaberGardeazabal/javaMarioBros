@@ -24,6 +24,8 @@ import render.Renderer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import observers.EventSystem;
+import observers.Observer;
 import org.joml.Vector2f;
 import physics2D.Physics2D;
 import util.Settings;
@@ -42,17 +44,18 @@ public class Scene {
     private Physics2D physics;
     
     private SceneInitializer sceneInitializer;
-    //private String levelName = "level.txt";
     private String levelFilepath;
     
-    public Scene(SceneInitializer seceneInitializer, String filepath) {
-        this.sceneInitializer = seceneInitializer; 
+    public Scene(SceneInitializer sceneInitializer, String filepath) {
+        this.sceneInitializer = sceneInitializer; 
         this.physics = new Physics2D();
         this.renderer = new Renderer();
         this.gameObjects = new ArrayList<>();
         this.pendingObjects = new ArrayList<>();
         this.isRunning = false;
         this.levelFilepath = filepath;
+        
+        EventSystem.addObserver(sceneInitializer);
     }
     
     public Physics2D getPhysics() {
@@ -207,6 +210,9 @@ public class Scene {
     }
     
     public void Destroy() {
+        // remove the observer from the observer list
+        EventSystem.removeObserver(this.sceneInitializer);
+        
         for (GameObject go : gameObjects) {
             go.destroy();
         }
@@ -350,8 +356,6 @@ public class Scene {
     }
     
     private void loadObj(GameObject obj) {
-        
-        
         for (Component c: obj.getAllComponents()) {
             if (c.getUid() > maxCompId) {
                 maxCompId = c.getUid();
@@ -368,5 +372,9 @@ public class Scene {
                 child.setParent(obj);
             }
         }
+    }
+
+    public Observer getInitializer() {
+        return this.sceneInitializer;
     }
 }

@@ -5,6 +5,9 @@
 package UI.buttonBehaviors;
 
 import UI.ButtonBehavior;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 
 /**
  *
@@ -15,7 +18,7 @@ public class ExitButtonBehavior implements ButtonBehavior {
     
     @Override
     public void onClick() {
-        System.out.println("exit!");
+        EventSystem.notify(null, new Event(EventType.PlayLevel));
     }
 
     @Override

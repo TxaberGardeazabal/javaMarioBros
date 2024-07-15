@@ -768,7 +768,6 @@ public class Prefab {
         ret.name = "text_object";
         ret.transform.zIndex = 50;
         
-        ret.addComponent(new FixedHUD());
         return ret;
     }
     
@@ -955,6 +954,7 @@ public class Prefab {
         }
         
         GameObject ret = generateEmptyObject();
+        ret.addComponent(new FixedHUD());
         ComplexPrefabWrapper pcw = new ComplexPrefabWrapper();
         pcw.addGameObject(digitalizer);
         ret.addComponent(pcw);
@@ -968,6 +968,7 @@ public class Prefab {
         UIButton btn = new UIButton();
         btn.setButtonBehavior(new StartButtonBehavior());
         ret.addComponent(btn);
+        ret.addComponent(new FixedHUD());
         return ret;
     }
     
@@ -978,6 +979,7 @@ public class Prefab {
         UIButton btn = new UIButton();
         btn.setButtonBehavior(new ExitButtonBehavior());
         ret.addComponent(btn);
+        ret.addComponent(new FixedHUD());
         return ret;
     }
     
@@ -988,6 +990,7 @@ public class Prefab {
         UIButton btn = new UIButton();
         btn.setButtonBehavior(new EditorButtonBehavior());
         ret.addComponent(btn);
+        ret.addComponent(new FixedHUD());
         return ret;
     }
     
@@ -998,6 +1001,7 @@ public class Prefab {
         UIButton btn = new UIButton();
         btn.setButtonBehavior(new LevelSelectButtonBehavior());
         ret.addComponent(btn);
+        ret.addComponent(new FixedHUD());
         return ret;
     }
     

@@ -5,9 +5,7 @@ add a level class to check lives, coins, etc...
 - save the prefabs instead of hardcoding all of them
 - in level scenes only assets that are used should be loaded.
 blocks hit by moving shells drop contents
-++ add a menu scene
 + create console window
-++ make button events
 
 
 
@@ -26,6 +24,8 @@ optimize loading resources on the level (requires big changes)
 + make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
 make moving thru pipes nicer
 + make physics them more precise and less janky
+++ change the editor play scene so levelEditorScene controlls it
+refactor component so it handles object types (could hace a class impementation)
 
 bugfixing:
 - when starting play, blocks that where boxSelected don't get their original colors back
@@ -39,6 +39,7 @@ falling from the level should kill you, but no when you're underground
 + enemies that are bellow Ground despawn as they get deleted
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 ++ placing objects in debug mode makes two gos with the same uid
+refactor imguilayer to manage windows as singleton
 
 other:
 // make pillbox changes ep #58

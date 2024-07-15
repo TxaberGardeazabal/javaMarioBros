@@ -18,10 +18,16 @@ import gameEngine.Direction;
 import gameEngine.GameObject;
 import gameEngine.Prefab;
 import gameEngine.Sound;
+import gameEngine.Window;
 import imgui.ImGui;
 import imgui.ImVec2;
 import java.io.File;
 import java.util.Collection;
+import observers.events.Event;
+import static observers.events.EventType.GameEngineStartPlay;
+import static observers.events.EventType.GameEngineStopPlay;
+import static observers.events.EventType.LoadLevel;
+import static observers.events.EventType.SaveLevel;
 import org.joml.Vector2f;
 import util.AssetPool;
 
@@ -147,5 +153,28 @@ public class LevelSceneInitializer extends SceneInitializer {
 
     @Override
     public void imGui() {}
+
+    @Override
+    public void onNotify(GameObject go, Event event) {
+        switch(event.type) {
+            case GameEngineStartPlay:
+                System.out.println("starting play");
+                Window.setRuntimePlaying(true);
+                Window.getScene().save();
+                Window.changeScene(new LevelSceneInitializer(), Window.getScene().getLevelFilepath());
+                break;
+            case GameEngineStopPlay:
+                System.out.println("ending play");
+                Window.setRuntimePlaying(false);
+                Window.changeScene(new LevelEditorSceneInitializer(), Window.getScene().getLevelFilepath());
+                break;
+            case LoadLevel:
+                Window.changeScene(new LevelEditorSceneInitializer(), Window.getScene().getLevelFilepath());
+                break;
+            case SaveLevel:
+                Window.getScene().save();
+                break;
+        }
+    }
     
 }

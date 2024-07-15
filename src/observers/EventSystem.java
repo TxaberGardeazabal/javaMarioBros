@@ -20,6 +20,10 @@ public class EventSystem {
         observers.add(observer);
     }
     
+    public static boolean removeObserver(Observer observer) {
+        return observers.remove(observer);
+    }
+    
     public static void notify(GameObject go, Event event){
         for (Observer observer : observers) {
             observer.onNotify(go, event);

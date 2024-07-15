@@ -18,6 +18,7 @@ import observers.events.Event;
 import observers.events.EventType;
 import scene.LevelEditorSceneInitializer;
 import scene.LevelSceneInitializer;
+import scene.MainMenuSceneInitializer;
 import util.Settings;
 
 /**
@@ -202,6 +203,20 @@ public class MenuBar {
                     File file = new File(levelFilepath);
                     file.delete();
                     Window.changeScene(new LevelSceneInitializer(), "");
+                }
+                
+            }
+            
+            if (ImGui.menuItem("Exit")) {
+                int res = JOptionPane.showConfirmDialog(null, "you have unsaved changes on this level, do you want to save those changes before exiting?");
+                if (res != 2) {
+                    if (res == 0) {
+                        // selected yes
+                        EventSystem.notify(null, new Event(EventType.SaveLevel));
+                    }
+                    
+                    File file = new File("assets/levels/mainmenu.txt");
+                    Window.changeScene(new MainMenuSceneInitializer(), file.getAbsolutePath());
                 }
                 
             }

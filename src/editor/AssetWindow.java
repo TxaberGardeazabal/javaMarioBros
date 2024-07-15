@@ -326,6 +326,12 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                SpriteSheet text2 = AssetPool.getSpritesheet("assets/images/text/numeros.png");
+                if (spriteButton(text2.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateEmptyObject();
+                    mc.pickUpObject(object);
+                }
+                
                 ImGui.sameLine();
                 ImGui.endTabItem();
             }

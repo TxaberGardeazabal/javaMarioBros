@@ -15,6 +15,8 @@ public enum EventType {
         GameEngineStopPlay,
         SaveLevel,
         LoadLevel,
+        PlayLevel,
+        OpenInEditor,
         Exit,
         UserEvent
     };

@@ -59,7 +59,7 @@ import util.AssetPool;
  * suposedly the game will run on one window only (except all imgui stuff) so this class is singleton
  * @author txaber
  */
-public class Window implements Observer{
+public class Window {
     private String glslVersion = null;
     
     private long glfwWindow; // window pointer
@@ -81,7 +81,6 @@ public class Window implements Observer{
         this.width = 1920;
         this.height = 1080;
         this.title = "Super mario bros";
-        EventSystem.addObserver(this);
     }
 
     public void setTitle(String title) {
@@ -139,17 +138,11 @@ public class Window implements Observer{
         initWindow();
         this.imGuiLayer.initImGui(glslVersion);
         
-        File file = new File("assets/levels/NewLevel.txt");
-        /*if (!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }*/
+        //File file = new File("assets/levels/NewLevel.txt");
+        File file = new File("assets/levels/mainmenu.txt");
         
-        Window.changeScene(new LevelEditorSceneInitializer(), file.getAbsolutePath());
-        //Window.changeScene(new MainMenuSceneInitializer(), glslVersion);
+        //Window.changeScene(new LevelEditorSceneInitializer(), file.getAbsolutePath());
+        Window.changeScene(new MainMenuSceneInitializer(), file.getAbsolutePath());
     }
 
     /*
@@ -344,39 +337,17 @@ public class Window implements Observer{
     public static ImGuiLayer getImGuiLayer() {
         return get().imGuiLayer;
     }
-
-    @Override
-    public void onNotify(GameObject go, Event event) {
-        
-        switch(event.type) {
-            case GameEngineStartPlay:
-                System.out.println("starting play");
-                this.runtimePlaying = true;
-                currentScene.save();
-                Window.changeScene(new LevelSceneInitializer(), currentScene.getLevelFilepath());
-                break;
-            case GameEngineStopPlay:
-                System.out.println("ending play");
-                this.runtimePlaying = false;
-                Window.changeScene(new LevelEditorSceneInitializer(), currentScene.getLevelFilepath());
-                break;
-            case LoadLevel:
-                Window.changeScene(new LevelEditorSceneInitializer(), currentScene.getLevelFilepath());
-                break;
-            case SaveLevel:
-                currentScene.save();
-                break;
-        }
-        
-        /*if (event.type == EventType.GameEngineStartPlay) {
-            System.out.println("starting play");
-        } else if (event.type == EventType.GameEngineStopPlay) {
-            System.out.println("ending play");
-        }*/
-    }
     
     public static PickingTexture getPickingTexture() {
         return get().pickingTexture;
+    }
+
+    public static boolean isRuntimePlaying() {
+        return get().runtimePlaying;
+    }
+
+    public static void setRuntimePlaying(boolean runtimePlaying) {
+        get().runtimePlaying = runtimePlaying;
     }
     
     public void changeTitle(String newTitle) {

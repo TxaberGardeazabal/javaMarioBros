@@ -5,6 +5,12 @@
 package UI.buttonBehaviors;
 
 import UI.ButtonBehavior;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 
 /**
  *
@@ -14,7 +20,10 @@ public class EditorButtonBehavior implements ButtonBehavior {
     
     @Override
     public void onClick() {
-        System.out.println("editor!");
+        Map a = new HashMap<>();
+        File file = new File("assets/levels/NewLevel.txt");
+        a.put("filepath", file.getAbsolutePath());
+        EventSystem.notify(null, new Event(EventType.OpenInEditor, a));
     }
 
     @Override
