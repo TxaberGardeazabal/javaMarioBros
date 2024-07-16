@@ -17,6 +17,7 @@ public enum EventType {
         LoadLevel,
         PlayLevel,
         OpenInEditor,
+        EndWindow,
         Exit,
         UserEvent
     };

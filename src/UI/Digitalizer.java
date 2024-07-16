@@ -23,6 +23,7 @@ public class Digitalizer extends Component{
     public void start() {
         List<GameObject> childGOs = this.gameObject.getChildGOs();
         digits = new ArrayList<>();
+        value = 0;
 
         for (GameObject go : childGOs) {
             Digit d = go.getComponent(Digit.class);

@@ -5,6 +5,7 @@
  */
 package gameEngine;
 
+import components.MouseControls;
 import editor.AssetWindow;
 import editor.GameViewWindow;
 import editor.MenuBar;
@@ -47,11 +48,8 @@ public class ImGuiLayer {
     
     public ImGuiLayer(long glfwWindow) {
         this.glfwWindow = glfwWindow;
+        // siempre inicializa la vvista de juego
         gameViewWindow = new GameViewWindow();
-        //propertiesWindow = new PropertiesWindow(pickingTexture);
-        //assetWindow = new AssetWindow();
-        //menuBar = new MenuBar();
-        //sceneHierarchy = new SceneHierarchyWindow();
     }
     
     /*
@@ -82,7 +80,7 @@ public class ImGuiLayer {
         setupDockSpace();
         currentScene.imGui();
         // remove this
-        ImGui.showDemoWindow();
+        //ImGui.showDemoWindow();
         if (gameViewWindow != null) {
             gameViewWindow.imGui();
         }
@@ -139,14 +137,6 @@ public class ImGuiLayer {
         }
     }
     
-    public static PropertiesWindow getPropertiesWindow() {
-        return propertiesWindow;
-    }
-    
-    public static AssetWindow getAssetWindow() {
-        return assetWindow;
-    }
-    
     private void setupDockSpace() {
         //int windowFlags = ImGuiWindowFlags.MenuBar | ImGuiWindowFlags.NoDocking;
         
@@ -172,24 +162,57 @@ public class ImGuiLayer {
         ImGui.end();
     }
 
-    public static GameViewWindow getGameViewWindow() {
+    public void startAssetWindow(MouseControls mc) {
+        assetWindow = new AssetWindow(mc);
+    }
+    
+    public void startPropertiesWindow(MouseControls mc) {
+        propertiesWindow = new PropertiesWindow(mc);
+    }
+    
+    public void startSceneHierarchyWindow(MouseControls mc) {
+        sceneHierarchy = new SceneHierarchyWindow(mc);
+    }
+    
+    public void startMenuBar() {
+        menuBar = new MenuBar();
+    }
+    
+    public void endAssetWindow() {
+        assetWindow = null;
+    }
+    
+    public void endPropertiesWindow() {
+        propertiesWindow = null;
+    }
+    
+    public void endSceneHierarchyWindow() {
+        sceneHierarchy = null;
+    }
+    
+    public void endMenuBar() {
+        menuBar = null;
+    }
+    
+    public PropertiesWindow getPropertiesWindow() {
+        return propertiesWindow;
+    }
+    
+    public AssetWindow getAssetWindow() {
+        return assetWindow;
+    }
+    
+    
+    public GameViewWindow getGameViewWindow() {
         return gameViewWindow;
     }
 
-    public void setPropertiesWindow(PropertiesWindow propertiesWindow) {
-        ImGuiLayer.propertiesWindow = propertiesWindow;
+    public MenuBar getMenuBar() {
+        return menuBar;
     }
 
-    public void setMenuBar(MenuBar menuBar) {
-        ImGuiLayer.menuBar = menuBar;
-    }
-
-    public void setSceneHierarchy(SceneHierarchyWindow sceneHierarchy) {
-        ImGuiLayer.sceneHierarchy = sceneHierarchy;
-    }
-
-    public void setAssetWindow(AssetWindow assetWindow) {
-        ImGuiLayer.assetWindow = assetWindow;
+    public SceneHierarchyWindow getSceneHierarchy() {
+        return sceneHierarchy;
     }
     
     

@@ -85,8 +85,8 @@ public class PropertiesWindow {
         }
         ImGui.end();
     }
-    
-    
-    
-    
+
+    public MouseControls getMc() {
+        return mc;
+    }
 }

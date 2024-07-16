@@ -8,6 +8,7 @@ package scene;
 import UI.Digitalizer;
 import components.EditorCamera;
 import components.FontRenderer;
+import components.GameCamera;
 import components.GizmoSystem;
 import components.GridLines;
 import components.KeyControls;
@@ -73,12 +74,11 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         editor.addComponent(new GizmoSystem(gizmos,mc));
         scene.addGameObjectToScene(editor);
 
-        // de donde saque la idea de iniciar el imGuiLayer desde aqui?
         ImGuiLayer imGuiLayer = Window.getImGuiLayer();
-        imGuiLayer.setMenuBar(new MenuBar());
-        imGuiLayer.setAssetWindow(new AssetWindow(mc));
-        imGuiLayer.setPropertiesWindow(new PropertiesWindow(mc));
-        imGuiLayer.setSceneHierarchy(new SceneHierarchyWindow(mc));
+        imGuiLayer.startMenuBar();
+        imGuiLayer.startSceneHierarchyWindow(mc);
+        imGuiLayer.startAssetWindow(mc);
+        imGuiLayer.startPropertiesWindow(mc);
         
         /*GameObject go = Window.getScene().createGameObject("Font_test");
         go.transform.position.x = 2.875f;
@@ -225,6 +225,10 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSound("assets/sounds/warning.ogg", false);
         AssetPool.addSound("assets/sounds/world_clear.ogg", false);
         
+        refreshTextures(scene);
+    }
+    
+    private void refreshTextures(Scene scene) {
         // load into scene objects
         for (GameObject g : scene.getGameObjects()) {
             if (g.getComponent(SpriteRenderer.class) != null) {
@@ -240,22 +244,42 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
             }
         }
     }
+    
     @Override
     public void imGui() {        
+    }
+    
+    public void endImGui() {
+        ImGuiLayer imGuiLayer = Window.getImGuiLayer();
+        imGuiLayer.endMenuBar();
+        imGuiLayer.endSceneHierarchyWindow();
+        imGuiLayer.endAssetWindow();
+        imGuiLayer.endPropertiesWindow();
     }
 
     @Override
     public void onNotify(GameObject go, Event event) {
         switch(event.type) {
-            case GameEngineStartPlay:
+            case EditorStartPlay:
                 System.out.println("starting play");
                 Window.setRuntimePlaying(true);
                 Window.getScene().save();
-                Window.changeScene(new LevelSceneInitializer(), Window.getScene().getLevelFilepath());
+                
+                // add game camera
+                GameObject camera = Window.getScene().createGameObject("SceneCamera");
+                camera.setNoSerialize();
+                camera.addComponent(new GameCamera(Window.getScene().camera()));
+                camera.start();
+                Window.getScene().addGameObjectToScene(camera);
+                
+                Window.getImGuiLayer().getPropertiesWindow().getMc().destroyHoldingObject();
+                
+                //Window.changeScene(new LevelSceneInitializer(), Window.getScene().getLevelFilepath());
                 break;
-            case GameEngineStopPlay:
+            case EditorStopPlay:
                 System.out.println("ending play");
                 Window.setRuntimePlaying(false);
+                
                 Window.changeScene(new LevelEditorSceneInitializer(), Window.getScene().getLevelFilepath());
                 break;
             case LoadLevel:
@@ -263,6 +287,9 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 break;
             case SaveLevel:
                 Window.getScene().save();
+                break;
+            case EndWindow:
+                endImGui();
                 break;
         }
     }

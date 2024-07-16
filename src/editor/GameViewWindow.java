@@ -33,12 +33,13 @@ public class GameViewWindow {
             if (ImGui.menuItem("Play", "", isPlaying, !isPlaying)) {
 
                 isPlaying = true;
-                EventSystem.notify(null, new Event(EventType.GameEngineStartPlay));
+                EventSystem.notify(null, new Event(EventType.EditorStartPlay));
             }
             if (ImGui.menuItem("Stop", "", !isPlaying, isPlaying)) {
                 isPlaying = false;
-                EventSystem.notify(null, new Event(EventType.GameEngineStopPlay));
+                EventSystem.notify(null, new Event(EventType.EditorStopPlay));
             }
+            
             ImGui.endMenuBar(); 
         } else {
             ImGui.collapsingHeader("Game viewport", new ImBoolean(false));

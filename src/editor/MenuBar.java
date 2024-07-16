@@ -215,6 +215,7 @@ public class MenuBar {
                         EventSystem.notify(null, new Event(EventType.SaveLevel));
                     }
                     
+                    EventSystem.notify(null, new Event(EventType.EndWindow));
                     File file = new File("assets/levels/mainmenu.txt");
                     Window.changeScene(new MainMenuSceneInitializer(), file.getAbsolutePath());
                 }

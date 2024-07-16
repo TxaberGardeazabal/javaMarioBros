@@ -138,11 +138,11 @@ public class Window {
         initWindow();
         this.imGuiLayer.initImGui(glslVersion);
         
-        //File file = new File("assets/levels/NewLevel.txt");
-        File file = new File("assets/levels/mainmenu.txt");
+        File file = new File("assets/levels/NewLevel.txt");
+        //File file = new File("assets/levels/mainmenu.txt");
         
-        //Window.changeScene(new LevelEditorSceneInitializer(), file.getAbsolutePath());
-        Window.changeScene(new MainMenuSceneInitializer(), file.getAbsolutePath());
+        Window.changeScene(new LevelEditorSceneInitializer(), file.getAbsolutePath());
+        //Window.changeScene(new MainMenuSceneInitializer(), file.getAbsolutePath());
     }
 
     /*

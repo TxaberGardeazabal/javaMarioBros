@@ -25,8 +25,8 @@ public class EventSystem {
     }
     
     public static void notify(GameObject go, Event event){
-        for (Observer observer : observers) {
-            observer.onNotify(go, event);
+        for (int i = 0; i < observers.size(); i++) {
+            observers.get(i).onNotify(go, event);
         }
     }
 }
