@@ -7,6 +7,7 @@ package gameEngine;
 
 import components.MouseControls;
 import editor.AssetWindow;
+import editor.ConsoleWindow;
 import editor.GameViewWindow;
 import editor.MenuBar;
 import editor.PropertiesWindow;
@@ -45,6 +46,7 @@ public class ImGuiLayer {
     private static MenuBar menuBar;
     private static SceneHierarchyWindow sceneHierarchy;
     private static AssetWindow assetWindow;
+    private static ConsoleWindow consoleWindow;
     
     public ImGuiLayer(long glfwWindow) {
         this.glfwWindow = glfwWindow;
@@ -80,7 +82,7 @@ public class ImGuiLayer {
         setupDockSpace();
         currentScene.imGui();
         // remove this
-        //ImGui.showDemoWindow();
+        ImGui.showDemoWindow();
         if (gameViewWindow != null) {
             gameViewWindow.imGui();
         }
@@ -93,6 +95,9 @@ public class ImGuiLayer {
         }
         if (assetWindow != null) {
             assetWindow.imGui();
+        }
+        if (consoleWindow != null) {
+            //consoleWindow.imGui();
         }
         if (menuBar != null) {
             menuBar.imGui();
@@ -174,6 +179,10 @@ public class ImGuiLayer {
         sceneHierarchy = new SceneHierarchyWindow(mc);
     }
     
+    public void startConsoleWindow() {
+        consoleWindow = new ConsoleWindow();
+    }
+    
     public void startMenuBar() {
         menuBar = new MenuBar();
     }
@@ -190,6 +199,10 @@ public class ImGuiLayer {
         sceneHierarchy = null;
     }
     
+    public void endConsoleWindow() {
+        consoleWindow = null;
+    }
+    
     public void endMenuBar() {
         menuBar = null;
     }
@@ -201,7 +214,6 @@ public class ImGuiLayer {
     public AssetWindow getAssetWindow() {
         return assetWindow;
     }
-    
     
     public GameViewWindow getGameViewWindow() {
         return gameViewWindow;
@@ -215,5 +227,7 @@ public class ImGuiLayer {
         return sceneHierarchy;
     }
     
-    
+    public ConsoleWindow getConsoleWindow() {
+        return consoleWindow;
+    }
 }

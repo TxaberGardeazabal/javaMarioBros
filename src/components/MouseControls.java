@@ -90,7 +90,6 @@ public class MouseControls extends Component{
 
                     holdingObject.removeComponent(NonPickable.class);
                     holdingObject.removeComponent(ShadowObj.class);
-                    Window.getScene().addGameObjectToScene(holdingObject);
                     holdingObject = null;
                 } else {
                     
@@ -107,46 +106,26 @@ public class MouseControls extends Component{
                     Window.getScene().addGameObjectToScene(newObj);
                 }
             } else {
-                if (debugDrop) {
-                    ComplexPrefabWrapper cpw = this.holdingObject.getComponent(ComplexPrefabWrapper.class);
-                    for (int i = 0; i < cpw.getGameObjects().size(); i++) {
-                        GameObject newObj = cpw.getGameObjects().get(i);
-                        if (newObj.getComponent(StateMachine.class) != null) {
-                            newObj.getComponent(StateMachine.class).refreshTextures();
-                        }
-                        if (newObj.getComponent(SpriteRenderer.class) != null) {
-                            newObj.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(i));
-                        }
-                        
-                        for (GameObject child : newObj.getChildGOs()) {
-                            propagateRefresh(child);
-                        }
-
-                        newObj.removeComponent(NonPickable.class);
-                        newObj.removeComponent(ShadowObj.class);
-                        Window.getScene().addGameObjectToScene(newObj);
-                        holdingObject = null;
+                
+                ComplexPrefabWrapper cpw = this.holdingObject.getComponent(ComplexPrefabWrapper.class);
+                for (int i = 0; i < cpw.getGameObjects().size(); i++) {
+                    GameObject newObj = cpw.getGameObjects().get(i).copy();
+                    if (newObj.getComponent(StateMachine.class) != null) {
+                        newObj.getComponent(StateMachine.class).refreshTextures();
                     }
-                } else {
-                    ComplexPrefabWrapper cpw = this.holdingObject.getComponent(ComplexPrefabWrapper.class);
-                    for (int i = 0; i < cpw.getGameObjects().size(); i++) {
-                        GameObject newObj = cpw.getGameObjects().get(i).copy();
-                        if (newObj.getComponent(StateMachine.class) != null) {
-                            newObj.getComponent(StateMachine.class).refreshTextures();
-                        }
-                        if (newObj.getComponent(SpriteRenderer.class) != null) {
-                            newObj.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(i));
-                        }
-                        
-                        for (GameObject child : newObj.getChildGOs()) {
-                            propagateRefresh(child);
-                        }
-
-                        newObj.removeComponent(NonPickable.class);
-                        newObj.removeComponent(ShadowObj.class);
-                        Window.getScene().addGameObjectToScene(newObj);
+                    if (newObj.getComponent(SpriteRenderer.class) != null) {
+                        newObj.getComponent(SpriteRenderer.class).setColor(this.activeGameObjectOgColor.get(i));
                     }
+
+                    for (GameObject child : newObj.getChildGOs()) {
+                        propagateRefresh(child);
+                    }
+
+                    newObj.removeComponent(NonPickable.class);
+                    newObj.removeComponent(ShadowObj.class);
+                    Window.getScene().addGameObjectToScene(newObj);
                 }
+                
             }
             
         }

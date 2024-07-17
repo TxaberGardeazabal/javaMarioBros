@@ -79,6 +79,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         imGuiLayer.startSceneHierarchyWindow(mc);
         imGuiLayer.startAssetWindow(mc);
         imGuiLayer.startPropertiesWindow(mc);
+        imGuiLayer.startConsoleWindow();
         
         /*GameObject go = Window.getScene().createGameObject("Font_test");
         go.transform.position.x = 2.875f;
@@ -255,6 +256,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         imGuiLayer.endSceneHierarchyWindow();
         imGuiLayer.endAssetWindow();
         imGuiLayer.endPropertiesWindow();
+        imGuiLayer.endConsoleWindow();
     }
 
     @Override
