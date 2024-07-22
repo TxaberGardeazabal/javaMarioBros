@@ -132,8 +132,10 @@ public class MouseControls extends Component{
     }
     
     public void destroyHoldingObject() {
-        holdingObject.destroy();
-        holdingObject = null;
+        if (holdingObject != null) {
+            holdingObject.destroy();
+            holdingObject = null;
+        }
     }
     
     public void propagateRefresh(GameObject go) {

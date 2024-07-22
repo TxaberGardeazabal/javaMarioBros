@@ -20,6 +20,7 @@ import gameEngine.GameObject;
 import gameEngine.Prefab;
 import components.StateMachine;
 import editor.AssetWindow;
+import editor.ConsoleWindow;
 import editor.MenuBar;
 import editor.PropertiesWindow;
 import editor.SceneHierarchyWindow;
@@ -263,7 +264,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     public void onNotify(GameObject go, Event event) {
         switch(event.type) {
             case EditorStartPlay:
-                System.out.println("starting play");
+                ConsoleWindow.addLog("begining play", ConsoleWindow.LogCategory.info);
                 Window.setRuntimePlaying(true);
                 Window.getScene().save();
                 
@@ -279,7 +280,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 //Window.changeScene(new LevelSceneInitializer(), Window.getScene().getLevelFilepath());
                 break;
             case EditorStopPlay:
-                System.out.println("ending play");
+                ConsoleWindow.addLog("ending play", ConsoleWindow.LogCategory.info);
                 Window.setRuntimePlaying(false);
                 
                 Window.changeScene(new LevelEditorSceneInitializer(), Window.getScene().getLevelFilepath());

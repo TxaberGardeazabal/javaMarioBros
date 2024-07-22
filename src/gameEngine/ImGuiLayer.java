@@ -97,7 +97,7 @@ public class ImGuiLayer {
             assetWindow.imGui();
         }
         if (consoleWindow != null) {
-            //consoleWindow.imGui();
+            consoleWindow.imGui();
         }
         if (menuBar != null) {
             menuBar.imGui();

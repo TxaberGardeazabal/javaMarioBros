@@ -5,6 +5,7 @@
  */
 package gameEngine;
 
+import editor.ConsoleWindow;
 import editor.GameViewWindow;
 import java.io.File;
 import java.io.IOException;
@@ -124,7 +125,7 @@ public class Window {
     * begins the window lifecycle
     */
     public void run() {
-        System.out.println("using LWJGL version "+org.lwjgl.Version.getVersion());
+        ConsoleWindow.addLog("using LWJGL version "+org.lwjgl.Version.getVersion(), ConsoleWindow.LogCategory.info);
         
         init();
         loop();

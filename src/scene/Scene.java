@@ -12,6 +12,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import components.ButtonBehaviorDeserializer;
 import components.propertieComponents.ShadowObj;
+import editor.ConsoleWindow;
 import gameEngine.Camera;
 import gameEngine.GameObject;
 import gameEngine.GameObjectDeserializer;
@@ -350,7 +351,7 @@ public class Scene {
             GameObject.init(maxGoId);
             maxCompId++;
             Component.init(maxCompId);
-            System.out.println("max object id: "+maxGoId+" max component id: "+maxCompId);
+            ConsoleWindow.addLog("max object id: "+maxGoId+" max component id: "+maxCompId, ConsoleWindow.LogCategory.info);
         }
         
     }

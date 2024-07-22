@@ -5,15 +5,14 @@ add a level class to check lives, coins, etc...
 - save the prefabs instead of hardcoding all of them
 - in level scenes only assets that are used should be loaded.
 blocks hit by moving shells drop contents
-+ create console window
 
 
 
 upgrade existing functionalities:
 -- style properties window
 -- add all controlls in settings class and use those
--- refractor
-- add docs
++ refractor
++ add docs
 - add boxcollider to enemies and items (for optimization)
 - on savemenus show file name in selector
 - go uids not reseting properly and stacking
@@ -25,6 +24,7 @@ optimize loading resources on the level (requires big changes)
 make moving thru pipes nicer
 + make physics them more precise and less janky
 refactor component so it handles object types (could hace a class impementation)
++ refactor and swap all the souts with console log calls
 
 bugfixing:
 - when starting play, blocks that where boxSelected don't get their original colors back
@@ -37,7 +37,7 @@ imgui windows clipping into screen bar and headers not showing correctly
 falling from the level should kill you, but no when you're underground
 + enemies that are bellow Ground despawn as they get deleted
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
-++ placing objects in debug mode makes two gos with the same uid
+remove play buttons from level scenes (has to be only in level editor scene)
 
 other:
 // make pillbox changes ep #58
