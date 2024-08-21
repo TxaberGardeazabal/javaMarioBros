@@ -14,7 +14,7 @@ import com.google.gson.JsonParseException;
 import java.lang.reflect.Type;
 
 /**
- *
+ * Deserializer especial para GameObjects
  * @author txaber gardeazabal
  */
 public class GameObjectDeserializer implements JsonDeserializer<GameObject>{

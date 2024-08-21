@@ -4,13 +4,12 @@
  */
 package physics2D.components;
 
-import components.Component;
 import gameEngine.Window;
 import org.joml.Vector2f;
 import render.DebugDraw;
 
 /**
- *
+ * Objeto de colision de dos dimensiones con forma de circulo 
  * @author txaber gardeazabal
  */
 public class CircleCollider extends Collider{
@@ -63,6 +62,9 @@ public class CircleCollider extends Collider{
         }
     }
     
+    /**
+     * Llama a la clase physics2D para restear el colider de la simulacion
+     */
     public void resetFixture() {
         if (Window.getPhysics().isLocked()) {
             resetFixtureNextFrame = true;

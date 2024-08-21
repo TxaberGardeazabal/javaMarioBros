@@ -17,7 +17,8 @@ import org.joml.Vector3f;
 import org.joml.Vector4f;
 
 /**
- * functionalities for gameobjects
+ * La clase components engloba diferentes funcionalidades que pueden tener los gameobjects tanto en momento
+ * de jugar como en el editor.
  * @author txaber
  */
 public abstract class Component {
@@ -27,22 +28,91 @@ public abstract class Component {
     
     public transient GameObject gameObject = null;
     
+        
+    /**
+     * Da a este componente un identificador unico y diferente
+     */
+    public void generateId() {
+        if (uid == -1) {
+            uid = ID_COUNTER++;
+        }
+    }
+
+    public int getUid() {
+        return uid;
+    }
+    
+    public static void init(int maxId) {
+        ID_COUNTER = maxId;
+    }
+    
+    /**
+     * Funcion que se ejecuta al destruir el gameObject que contiene este componente
+     */
+    public void destroy() {}
+    
+    /**
+     * Funcion que se ejecuta antes del primer frame
+     */
     public void start() {}
     
+    /**
+     * Funcion que se ejecuta cada frame
+     * @param dt tiempo en segundos desde el anterior frame
+     */
     public void update(float dt){}
     
+    /**
+     * Funcion que se ejecuta cada frame despues de la funcion update
+     * @param dt tiempo en segundos desde el anterior frame
+     */
     public void lateUpdate(float dt) {}
     
+    /**
+     * Funcion que se ejecuta cada frame solo en el editor
+     * @param dt tiempo en segundos desde el anterior frame
+     */
     public void editorUpdate(float dt) {}
     
+    /**
+     * Funcion de ayuda para recibir eventos desde Box2D.
+     * Se ejecuta cuando un componente collider de este objeto acaba de tocar otro collider
+     * @param collidingObj
+     * @param cntct
+     * @param hitNormal 
+     */
     public void beginCollision(GameObject collidingObj,Contact cntct,Vector2f hitNormal) {}
     
+    /**
+     * Funcion de ayuda para recibir eventos desde Box2D.
+     * Se ejecuta despues de que un componente collider de este objeto toca otro collider
+     * @param collidingObj
+     * @param cntct
+     * @param hitNormal 
+     */
     public void endCollision(GameObject collidingObj,Contact cntct,Vector2f hitNormal) {}
     
+    /**
+     * Funcion de ayuda para recibir eventos desde Box2D.
+     * Se ejecuta antes de que un componente collider de este objeto colisiona otro collider
+     * @param collidingObj
+     * @param cntct
+     * @param hitNormal 
+     */
     public void preSolve(GameObject collidingObj,Contact cntct,Vector2f hitNormal) {}
     
+    /**
+     * Funcion de ayuda para recibir eventos desde Box2D.
+     * Se ejecuta despues de que un componente collider de este objeto ha colisionado con otro collider
+     * @param collidingObj
+     * @param cntct
+     * @param hitNormal 
+     */
     public void postSolve(GameObject collidingObj,Contact cntct,Vector2f hitNormal) {}
     
+    /**
+     * Muestra todas las variables de este componente en la ventana de propiedades
+     */
     public void imGui() {
         try {
             Field[] fields = this.getClass().getDeclaredFields();
@@ -119,20 +189,6 @@ public abstract class Component {
         }
     }
     
-    public void generateId() {
-        if (uid == -1) {
-            uid = ID_COUNTER++;
-        }
-    }
-
-    public int getUid() {
-        return uid;
-    }
-    
-    public static void init(int maxId) {
-        ID_COUNTER = maxId;
-    }
-    
     private <T extends Enum<T>> String[] getEnumValues(Class<T> enumType) {
         String[] enumValues = new String[enumType.getEnumConstants().length];
         int i = 0;
@@ -150,11 +206,5 @@ public abstract class Component {
             }
         }
         return -1;
-    }
-
-    public void destroy() {
-        // empty
-    }
-    
-    
+    }    
 }

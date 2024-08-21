@@ -7,24 +7,44 @@ package editor;
 import imgui.ImGui;
 import imgui.flag.ImGuiCol;
 import imgui.flag.ImGuiStyleVar;
-import imgui.type.ImBoolean;
 import imgui.type.ImString;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 
 /**
- *
+ * Clase con funciones imgui para mantener un aspecto consistente entre todas las ventanas
  * @author txaber gardeazabal
  */
 public class OImGui {
     
     private static float defColumnWidht = 220.0f;
+    /**
+     * Muestra un vector de 2 filas
+     * @param label texto label
+     * @param values valor a mostrar
+     * @return el nuevo valor editado en ventana
+     */
     public static Vector2f drawVec2Control(String label, Vector2f values) {
         return drawVec2Control(label, values, 0.0f, defColumnWidht);
     }
+    /**
+     * Muestra un vector de 2 filas
+     * @param label texto label
+     * @param values valor a mostrar
+     * @param resetValue valor por defecto para resetear
+     * @return el nuevo valor editado en ventana
+     */
     public static Vector2f drawVec2Control(String label, Vector2f values, float resetValue) {
         return drawVec2Control(label, values, resetValue, defColumnWidht);
     }
+    /**
+     * Muestra un vector de 2 filas
+     * @param label texto label
+     * @param values valor a mostrar
+     * @param resetValue valor por defecto para resetear
+     * @param columnWidht anchura de las columnas
+     * @return el nuevo valor editado en ventana
+     */
     public static Vector2f drawVec2Control(String label, Vector2f values, float resetValue, float columnWidht) {
         ImGui.pushID(label);
         
@@ -81,6 +101,12 @@ public class OImGui {
         return values;
     }
     
+    /**
+     * Muestra un valor float
+     * @param label texto label
+     * @param value valor a mostrar
+     * @return el nuevo valor editado en ventana
+     */
     public static float dragFloat(String label, float value) {
         ImGui.pushID(label);
         
@@ -98,6 +124,12 @@ public class OImGui {
         return valArr[0];
     }
     
+    /**
+     * Muestra un valor integer
+     * @param label texto label
+     * @param value valor a mostrar
+     * @return el nuevo valor editado en ventana
+     */
     public static int dragInt(String label, int value) {
         ImGui.pushID(label);
         
@@ -115,6 +147,12 @@ public class OImGui {
         return valArr[0];
     }
     
+    /**
+     * Muestra un valor RGBA con un selector en pantalla
+     * @param label texto label
+     * @param color valor RGBA a mostrar
+     * @return el nuevo valor editado en ventana
+     */
     public static boolean colorPicker4(String label, Vector4f color) {
         boolean res = false;
         ImGui.pushID(label);
@@ -136,6 +174,12 @@ public class OImGui {
         return res;
     }
 
+    /**
+     * Muestra un valor de texto string
+     * @param label texto label
+     * @param text texto a mostrar
+     * @return el nuevo valor editado en ventana
+     */
     public static String inputText(String label, String text) {
         ImGui.pushID(label);
         
@@ -158,6 +202,12 @@ public class OImGui {
         return text;
     }
     
+    /**
+     * Muestra un valor booleano
+     * @param label texto label
+     * @param bool valor a mostrar
+     * @return el nuevo valor editado en ventana
+     */
     public static boolean inputBoolean(String label, boolean bool) {
         ImGui.pushID(label);
         

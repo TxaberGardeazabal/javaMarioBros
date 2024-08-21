@@ -10,7 +10,8 @@ import gameEngine.GameObject;
 import gameEngine.MouseListener;
 
 /**
- *
+ * Componente del sistema de gizmos para escalar objetos.
+ * la mayoria de funcionalidades estan en la clase Gizmo
  * @author txaber gardeazabal
  */
 public class ScaleGizmo extends Gizmo{
@@ -33,12 +34,18 @@ public class ScaleGizmo extends Gizmo{
         super.editorUpdate(dt);
     }
     
+    /**
+     * Escala el objeto seleccionado y todos sus hijos en el eje X
+     */
     private void scaleX() {
         for (GameObject go : activeGameObjects) {
             go.transform.scale(MouseListener.getWorldDX(), 0);
         }
     }
     
+    /**
+     * Escala el objeto seleccionado y todos sus hijos en el eje Y
+     */
     private void scaleY() {
         for (GameObject go : activeGameObjects) {
             go.transform.scale(0,MouseListener.getWorldDY());

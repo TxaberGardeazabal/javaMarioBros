@@ -5,19 +5,18 @@
 package components;
 
 import components.propertieComponents.NonPickable;
-import editor.PropertiesWindow;
 import gameEngine.GameObject;
 import gameEngine.MouseListener;
 import gameEngine.Prefab;
 import gameEngine.Window;
 import java.util.List;
 import org.joml.Vector2f;
-import org.joml.Vector3f;
 import org.joml.Vector4f;
 import util.Settings;
 
 /**
- *
+ * Clase que contiene los componentes visuales y funcionalidades graficas para los gizmos individuales
+ * del sistema de gizmos.
  * @author txaber gardeazabal
  */
 public class Gizmo extends Component {
@@ -145,12 +144,18 @@ public class Gizmo extends Component {
         }
     }
     
+    /**
+     * muestra el gizmo en pantalla y activa sus funciones
+     */
     public void setActive() {
         this.xAxisSprite.setColor(xAxisColor);
         this.yAxisSprite.setColor(yAxisColor);
         this.xyAxisSprite.setColor(xyAxisColor);
     }
     
+    /**
+     * oculta el gizmo de la pantalla
+     */
     public void setInactive() {
         this.activeGameObjects = null;
         this.xAxisSprite.setColor(new Vector4f(0,0,0,0));
@@ -158,6 +163,10 @@ public class Gizmo extends Component {
         this.xyAxisSprite.setColor(new Vector4f(0,0,0,0));
     }
     
+    /**
+     * Busca si el cursor esta colocado sobre la flecha X de gizmo
+     * @return true si el cursor esta sobre la flecha X, false si no lo esta.
+     */
     private boolean checkXHoverState() {
         Vector2f mousePos = MouseListener.getWorld();
         if (mousePos.x <= xAxisObject.transform.position.x + (gizmoHeight / 2.0f)
@@ -172,6 +181,10 @@ public class Gizmo extends Component {
         return false;
     }
     
+    /**
+     * Busca si el cursor esta colocado sobre la flecha Y de gizmo
+     * @return true si el cursor esta sobre la flecha Y, false si no lo esta.
+     */
     private boolean checkYHoverState() {
         Vector2f mousePos = MouseListener.getWorld();
         if (mousePos.x <= yAxisObject.transform.position.x + (gizmoWidth / 2.0f)
@@ -186,6 +199,10 @@ public class Gizmo extends Component {
         return false;
     }
     
+    /**
+     * Busca si el cursor esta colocado sobre la flecha XY de gizmo
+     * @return true si el cursor esta sobre la flecha XY, false si no lo esta.
+     */
     private boolean checkXYHoverState() {
         Vector2f mousePos = MouseListener.getWorld();
         if (mousePos.x <= xyAxisObject.transform.position.x + (squareGizmoWidth / 2.0f)

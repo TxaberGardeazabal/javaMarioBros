@@ -5,8 +5,6 @@
  */
 package gameEngine;
 
-import editor.GameViewWindow;
-import imgui.ImGui;
 import java.util.Arrays;
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
@@ -16,7 +14,8 @@ import static org.lwjgl.glfw.GLFW.GLFW_PRESS;
 import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
 
 /**
- * the mouseListener class handles all mouse inputs using GLFW
+ * Escucha los eventos de entrada del raton con GLFW.
+ * Esta clase es singleton y permite saber en tiempo real los movimientos del raton estan siendo pulsados
  * @author txaber
  */
 public class MouseListener {
@@ -38,6 +37,9 @@ public class MouseListener {
         this.yPos = 0.0;
     }
     
+    /**
+     * Resetea todas las variables
+     */
     public static void clear() {
         get().scrollX = 0.0;
         get().scrollY = 0.0;
@@ -48,6 +50,10 @@ public class MouseListener {
         Arrays.fill(get().mouseButtonPressed, false);
     }
     
+    /**
+     * Obtiene la instancia de la clase
+     * @return una referencia a esta instancia
+     */
     public static MouseListener get() {
         if (MouseListener.instance == null) {
             MouseListener.instance = new MouseListener();
@@ -55,6 +61,12 @@ public class MouseListener {
         return MouseListener.instance;
     }
     
+    /**
+     * Callback de posicion para imgui
+     * @param window
+     * @param xPos
+     * @param yPos 
+     */
     public static void mousePosCallback(long window, double xPos, double yPos) {
         if (!Window.getImGuiLayer().getGameViewWindow().getWantCaptureMouse()) {
             clear();
@@ -67,6 +79,13 @@ public class MouseListener {
         get().yPos = yPos;
     }
     
+    /**
+     * Callback de botones para imgui
+     * @param window
+     * @param button
+     * @param action
+     * @param mods 
+     */
     public static void mouseButtonCallback(long window, int button, int action, int mods) { 
         if (action == GLFW_PRESS) {
             get().mouseButtonsDown++;
@@ -87,6 +106,12 @@ public class MouseListener {
         
     }
     
+    /**
+     * Callback del scroll para imgui
+     * @param window
+     * @param xOffset
+     * @param yOffset 
+     */
     public static void mouseScrollCallback(long window, double xOffset, double yOffset) {
         get().scrollX = xOffset;
         get().scrollY = yOffset;
@@ -99,26 +124,51 @@ public class MouseListener {
         get().lastWorldY = getWorldY();
     }
 
+    /**
+     * 
+     * @return la posicion X del cursor
+     */
     public static float getX() {
         return (float)get().xPos;
     }
 
+    /**
+     * 
+     * @return la posicion Y del cursor
+     */
     public static float getY() {
         return (float)get().yPos;
     }
 
+    /**
+     * 
+     * @return el scroll del raton en el eje X
+     */
     public static float getScrollX() {
         return (float)get().scrollX;
     }
 
+    /**
+     * 
+     * @return el scroll del raton en el eje Y
+     */
     public static float getScrollY() {
         return (float)get().scrollY;
     }
 
+    /**
+     * 
+     * @return true si el raton se movio en este frame, false de lo contrario
+     */
     public static boolean isMouseDraging() {
         return get().mouseDraging;
     }
     
+    /**
+     * Comprueba si un boton del raton esta siendo pulsado
+     * @param button codigo GLFW del boton
+     * @return true si el boton con el codigo pasado esta siendo pulsado, false de lo contrario
+     */
     public static boolean MouseButtonDown(int button) {
         if (button < GLFW_MOUSE_BUTTON_LAST) {
             return get().mouseButtonPressed[button];
@@ -126,6 +176,11 @@ public class MouseListener {
         return false;
     }
     
+    /**
+     * Convierte una posicion de la pantalla a la posicion dentro del mundo
+     * @param screenCoords la posicion dentro de la pantalla
+     * @return una nueva posicion dentro del mundo en la posicion de la pantalla
+     */
     public static Vector2f screenToWorld(Vector2f screenCoords) {
         Vector2f normalizedScreenCoords = new Vector2f(
             screenCoords.x / Window.getWidth(),
@@ -140,6 +195,11 @@ public class MouseListener {
         return new Vector2f(tmp.x, tmp.y);
     }
     
+    /**
+     * Convierte una posicion del mundo a la posicion en la pantalla
+     * @param worldCoords la posicion dentro del mundo
+     * @return una nueva posicion en la pantalla el la posicion del mundo
+     */
     public static Vector2f worldToScreen(Vector2f worldCoords) {
         Camera camera = Window.getScene().camera();
         Vector4f ndcSpacePos = new Vector4f(worldCoords.x, worldCoords.y, 0, 1);
@@ -153,14 +213,26 @@ public class MouseListener {
         return windowSpace;
     }
     
+    /**
+     * 
+     * @return la posicion X del cursor en la pantalla
+     */
     public static float getScreenX() {
         return getScreen().x;
     }
     
+    /**
+     * 
+     * @return la posicion Y del cursor en la pantalla
+     */
     public static float getScreenY() {
         return getScreen().y;
     }
     
+    /**
+     * 
+     * @return la posicion del cursor en la pantalla
+     */
     public static Vector2f getScreen() {
         float currentX = getX() - gameViewportPos.x;
         currentX = (currentX / gameViewportSize.x) * 1920.0f;
@@ -170,14 +242,26 @@ public class MouseListener {
         return new Vector2f(currentX,currentY);
     }
     
+    /**
+     * 
+     * @return la posicion del cursor X en el mundo
+     */
     public static float getWorldX() {
         return getWorld().x;
     }
     
+    /**
+     * 
+     * @return la posicion del cursor Y en el mundo
+     */
     public static float getWorldY() {
         return getWorld().y;
     }
     
+    /**
+     * 
+     * @return la posicion del cursor en el mundo
+     */
     public static Vector2f getWorld() {
         float currentX = getX() - gameViewportPos.x;
         currentX = (currentX / gameViewportSize.x) * 2.0f - 1.0f;
@@ -193,18 +277,34 @@ public class MouseListener {
         return new Vector2f(tmp.x, tmp.y);
     }
     
+    /**
+     * 
+     * @return la posicion X del cursor en el mundo entre el anterior frame y este frame
+     */
     public static float getWorldDX() {
         return (float)(getWorldX() - get().lastWorldX);
     }
     
+    /**
+     * 
+     * @return la posicion Y del cursor en el mundo entre el anterior frame y este frame
+     */
     public static float getWorldDY() {
         return (float)(getWorldY() - get().lastWorldY);
     }
 
+    /**
+     * Cambia la posicion de la pantalla de juego
+     * @param gameViewportPos la nueva posicion de la pantalla
+     */
     public static void setGameViewportPos(Vector2f gameViewportPos) {
         get().gameViewportPos.set(gameViewportPos);
     }
 
+    /**
+     * Cambia el tamaño de la pantalla de juego
+     * @param gameViewportSize el nuevo tamaño absoluto de la pantalla
+     */
     public static void setGameViewportSize(Vector2f gameViewportSize) {
         get().gameViewportSize.set(gameViewportSize);
     }

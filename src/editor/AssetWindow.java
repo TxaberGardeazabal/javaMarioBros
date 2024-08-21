@@ -8,25 +8,21 @@ import gameEngine.GameObject;
 import components.MouseControls;
 import components.Sprite;
 import components.SpriteSheet;
-import components.propertieComponents.Ground;
 import gameEngine.Direction;
 import gameEngine.Prefab;
 import gameEngine.Sound;
-import gameEngine.Window;
 import imgui.ImGui;
 import imgui.ImVec2;
 import imgui.type.ImInt;
 import java.io.File;
-import java.io.IOException;
 import java.util.Collection;
-import java.util.List;
 import org.joml.Vector2f;
-import scene.LevelEditorSceneInitializer;
 import util.AssetPool;
 import util.Settings;
 
 /**
- *
+ * Controlador de ventana de assets del editor.
+ * La ventana de assets muestra todas las piezas para poder usar en el juego, entre otras cosas bloques, sonidos, prefabs, componentes del UI, entidades fisicas y mas.
  * @author txaber gardeazabal
  */
 public class AssetWindow {
@@ -39,6 +35,9 @@ public class AssetWindow {
         this.mc = mouseControls;
     }
     
+    /**
+     * Ejecuta codigo imgui para mostrar y actualizar la ventana
+     */
     public void imGui(){
         ImGui.begin("Objects");
         SpriteSheet sprites;
@@ -340,6 +339,12 @@ public class AssetWindow {
         ImGui.end();
     }
     
+    /**
+     * Crea un boton imgui simple con imagen.
+     * @param sprite sprite del boton
+     * @param bId id unico para el boton
+     * @return true si el boton esta siendo pulsado, false de lo contrario.
+     */
     private boolean spriteButton(Sprite sprite, int bId) {
         ImVec2 windowPos = new ImVec2();
         ImGui.getWindowPos(windowPos);

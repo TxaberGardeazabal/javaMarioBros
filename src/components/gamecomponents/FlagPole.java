@@ -11,7 +11,7 @@ import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 
 /**
- *
+ * El poste de bandera al final del nivel
  * @author txaber gardeazabal
  */
 public class FlagPole extends Component{

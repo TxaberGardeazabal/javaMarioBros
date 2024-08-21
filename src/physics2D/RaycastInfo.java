@@ -11,7 +11,7 @@ import org.jbox2d.dynamics.Fixture;
 import org.joml.Vector2f;
 
 /**
- *
+ * Wrapper para la informacion devuelta por el rayCast
  * @author txaber gardeazabal
  */
 public class RaycastInfo implements RayCastCallback{

@@ -5,6 +5,7 @@
  */
 package render;
 
+import editor.ConsoleWindow;
 import java.awt.image.BufferedImage;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
@@ -30,7 +31,7 @@ import static org.lwjgl.stb.STBImage.stbi_load;
 import static org.lwjgl.stb.STBImage.stbi_set_flip_vertically_on_load;
 
 /**
- *
+ * Clase principal para manejar imagenes 2D en LWJGL 
  * @author txaber
  */
 public class Texture {
@@ -59,6 +60,10 @@ public class Texture {
 
     }
     
+    /**
+     * Inicializa una imagen 2D dentro de openGL
+     * @param filePath ruta absoluta del archivo de imagen
+     */
     public void init(String filePath) {
         this.filepath = filePath;
         
@@ -94,16 +99,21 @@ public class Texture {
                     glTexImage2D(GL_TEXTURE_2D, 0,GL_RGBA, intWidth.get(0), intHeight.get(0), 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
                     break;
                 default:
-                    assert false: "ERROR: (texture) unknown number of channels "+channels.get(0);
+                    ConsoleWindow.addLog("ERROR: (texture) unknown number of channels "+channels.get(0), ConsoleWindow.LogCategory.error);
                     break;
             }
         } else {
-            assert false: "ERROR: (texture) could not load image "+filepath;
+            ConsoleWindow.addLog("ERROR: (texture) could not load image "+filepath, ConsoleWindow.LogCategory.error);
         }
         
         stbi_image_free(image);
     }
     
+    /**
+     * Inicializa una imagen 2D dentro de openGL
+     * @param image informacion en bits de la imagen
+     * @return id de la textura generada
+     */
     public int init(BufferedImage image) {
         int[] pixels = new int[image.getHeight() * image.getWidth()];
         image.getRGB(0, 0, image.getWidth(), image.getHeight(), pixels, 0, image.getWidth());
@@ -148,10 +158,16 @@ public class Texture {
         return texID;
     }
     
+    /**
+     * sube esta textura en openGL
+     */
     public void bind() {
         glBindTexture(GL_TEXTURE_2D, texID);
     }
     
+    /**
+     * retira esta textura de openGL
+     */
     public void unbind() {
         glBindTexture(GL_TEXTURE_2D, 0);
     }

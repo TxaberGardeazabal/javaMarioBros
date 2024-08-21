@@ -5,13 +5,15 @@
  */
 package components;
 
-import components.Sprite;
+import editor.ConsoleWindow;
 import java.util.ArrayList;
 import org.joml.Vector2f;
 import render.Texture;
 
 /**
- *
+ * Esta clase interpreta y maneja las texturas con varias imagenes (spritesheets).
+ * La clase no puede interpretar imagenes cuyos sprites no mantienen el orden con el que estan
+ * guardados aqui (diferentes tamaños, espaciado, posicion...)
  * @author txaber
  */
 public class SpriteSheet {
@@ -52,11 +54,17 @@ public class SpriteSheet {
         }
     }
 
+    /**
+     * Devuelve la imagen que esta en la posicion index dentro del spritesheet.
+     * @param index una posicion dentro del spritesheet
+     * @return el sprite en la posicion pasada
+     */
     public Sprite getSprite(int index) {
         if (index < this.sprites.size()) {
             return this.sprites.get(index);
         }
-        System.out.println("Warning, sprite index "+index+" out of bound "+sprites.size());
+        ConsoleWindow.addLog("sprite index "+index+" out of bound "+sprites.size(),
+                ConsoleWindow.LogCategory.warning);
         return null;
     }
     

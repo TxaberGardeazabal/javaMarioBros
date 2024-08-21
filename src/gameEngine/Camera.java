@@ -11,7 +11,7 @@ import org.joml.Vector3f;
 import org.joml.Vector4f;
 
 /**
- * The camera sets your own POV of the game world
+ * La camara sirve para poder visualizar el mundo, por defecto ortografico, se pueden ajustar diferentes puntos de vista en la pantalla
  * @author txaber
  */
 public class Camera {
@@ -36,6 +36,9 @@ public class Camera {
         adjustProjection();
     }
     
+    /**
+     * Ajusta la proyeccion
+     */
     public void adjustProjection() {
         projectionMatrix.identity();
         projectionMatrix.ortho(0.0f, projectionSize.x * zoom, 0.0f, projectionSize.y * zoom, 0.0f,100.0f);
@@ -74,6 +77,10 @@ public class Camera {
         return zoom;
     }
 
+    /**
+     * Ajusta el zoom en la camara
+     * @param zoom nuevo valor
+     */
     public void setZoom(float zoom) {
         if (zoom >= zoomLimitMax) {
             this.zoom = zoomLimitMax;
@@ -84,6 +91,10 @@ public class Camera {
         }
     }
     
+    /**
+     * Añade o resta zoom a la camara depende del valor pasado
+     * @param value valor a añadir al zoom
+     */
     public void addZoom(float value) {
         if ((this.zoom + value) > zoomLimitMax) {
             this.zoom = zoomLimitMax;

@@ -11,7 +11,7 @@ import org.joml.Vector2f;
 import util.AssetPool;
 
 /**
- *
+ * Monedas recogibles por mario
  * @author txaber gardeazabal
  */
 public class Coin extends Component{
@@ -22,6 +22,7 @@ public class Coin extends Component{
         if (player != null && !player.isDead()) {
             contact.setEnabled(false);
             AssetPool.getSound("assets/sounds/coin.ogg").play();
+            // TODO: update score
             this.gameObject.destroy();
         }
     }

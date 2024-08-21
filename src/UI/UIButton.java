@@ -6,13 +6,14 @@ package UI;
 
 import components.Component;
 import components.SpriteRenderer;
+import editor.ConsoleWindow;
 import gameEngine.GameObject;
 import gameEngine.MouseListener;
 import gameEngine.Window;
 import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT;
 
 /**
- *
+ * Objeto interactuable del UI, permite detectar acciones del raton y ejecutar funciones en base a la accion recibida
  * @author txaber gardeazabal
  */
 public class UIButton extends Component {
@@ -28,20 +29,14 @@ public class UIButton extends Component {
     public void start() {
         spr = this.gameObject.getComponent(SpriteRenderer.class);
         if (spr == null) {
-            System.out.println("Warning: null sprite in object "+this.gameObject.name);
+            ConsoleWindow.addLog("null sprite in object "+this.gameObject.name,
+                    ConsoleWindow.LogCategory.warning);
         }
     }
     
     @Override
     public void update(float dt) {
-        updateVariables();
-        /*
-        System.out.println("isPressed: "+isPressed);
-        System.out.println("isHovered: "+isHovered);
-        System.out.println("isHolding: "+isHolding);*/
-    }
-    
-    public void updateVariables() {
+        
         int x = (int)MouseListener.getScreenX();
         int y = (int)MouseListener.getScreenY();
         int goId = Window.getPickingTexture().readPixel(x, y);
@@ -77,7 +72,6 @@ public class UIButton extends Component {
         if (isHovered) {
             this.buttonBehavior.onHover();
         }
-        
     }
     
     public void onHoverStart() {

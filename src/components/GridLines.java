@@ -4,7 +4,6 @@
  */
 package components;
 
-import components.Component;
 import gameEngine.Camera;
 import gameEngine.Window;
 import org.joml.Vector2f;
@@ -13,7 +12,7 @@ import render.DebugDraw;
 import util.Settings;
 
 /**
- *
+ * Componente que genera la cuadricula en la escena editor
  * @author txaber gardeazabal
  */
 public class GridLines extends Component{

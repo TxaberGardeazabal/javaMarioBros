@@ -13,7 +13,7 @@ import org.joml.Vector4f;
 import render.Texture;
 
 /**
- *
+ * Componente que añade elementos graficos (Sprites) a los objetos
  * @author txaber
  */
 public class SpriteRenderer extends Component{
@@ -100,6 +100,10 @@ public class SpriteRenderer extends Component{
         }
     }
     
+    /**
+     * Cambia la textura grafica del objeto, este mantiene el tamaño de la textura anterior
+     * @param texture 
+     */
     public void setTexture(Texture texture) {
         this.sprite.setTexture(texture);
     }

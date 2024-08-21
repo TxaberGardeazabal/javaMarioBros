@@ -4,18 +4,16 @@ find how to load spritesheets automaticaly instead of hardcoding all of them (ma
 add a level class to check lives, coins, etc...
 - save the prefabs instead of hardcoding all of them
 - in level scenes only assets that are used should be loaded.
-blocks hit by moving shells drop contents
-
-
+blocks hit by moving shells should drop contents
+falling from the level should kill you, but not when you're underground
 
 upgrade existing functionalities:
 -- style properties window
 -- add all controlls in settings class and use those
-+ refractor
-+ add docs
+- refractor
 - add boxcollider to enemies and items (for optimization)
 - on savemenus show file name in selector
-- go uids not reseting properly and stacking
+- go uids do not reset properly in scene creation
 begining play saves new scenes, add a notif when you play an unsaved custom level
 optimize loading resources on the level (requires big changes)
 + remake block coins
@@ -34,8 +32,7 @@ some window focus issues:
    when pressing away while jdialog windows are active causes focus bugs and crashes
 imgui string editing sucks
 imgui windows clipping into screen bar and headers not showing correctly
-falling from the level should kill you, but no when you're underground
-+ enemies that are bellow Ground despawn as they get deleted
++ enemies should spawn as soon as the camera reaches them, and despawn if they fall off the level
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 remove play buttons from level scenes (has to be only in level editor scene)
 

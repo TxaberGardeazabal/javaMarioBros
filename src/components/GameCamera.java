@@ -5,14 +5,16 @@
 package components;
 
 import components.gamecomponents.PlayerController;
-import components.Component;
 import gameEngine.Camera;
 import gameEngine.GameObject;
 import gameEngine.Window;
 import org.joml.Vector4f;
 
 /**
- *
+ * Camara en la vista del juego.
+ * La camara sigue a mario a traves del nivel hasta su fin,
+ * la posicion Y es fija pero cambia cuando mario entra en una tuberia
+ * la camara nunca se movera a la izquierda, pero igual cambia en el futuro
  * @author txaber gardeazabal
  */
 public class GameCamera extends Component{

@@ -4,7 +4,6 @@
  */
 package physics2D;
 
-import components.gamecomponents.PlayerController;
 import components.propertieComponents.Ground;
 import gameEngine.GameObject;
 import gameEngine.Transform;
@@ -27,7 +26,7 @@ import physics2D.components.Rigidbody2D;
 import render.DebugDraw;
 
 /**
- *
+ * Wrapper para poder usar box2D en la aplicacion
  * @author txaber gardeazabal
  */
 public class Physics2D {
@@ -44,6 +43,10 @@ public class Physics2D {
         world.setContactListener(new ContactListener2D());
     }
     
+    /**
+     * Añade un gameobject (si este tiene componentes fisicos como rigidbody2D) a box2D
+     * @param go el gameobject a añadir
+     */
     public void add(GameObject go) {
         Rigidbody2D rb = go.getComponent(Rigidbody2D.class);
         if (rb != null && rb.getRawBody() == null) {
@@ -89,6 +92,10 @@ public class Physics2D {
         }
     }
     
+    /**
+     * Elimina un gameobject de la simulacion de box2D
+     * @param go el gameobject a eliminar
+     */
     public void destroyGameObject(GameObject go) {
         Rigidbody2D rb = go.getComponent(Rigidbody2D.class);
         if (rb != null) {
@@ -98,6 +105,11 @@ public class Physics2D {
             }
         }
     }
+    
+    /**
+     * Funcion que se ejecuta en cada frame
+     * @param dt delta time
+     */
     public void update(float dt) {
         physicsTime += dt;
         if (physicsTime >= 0.0f) {
@@ -106,6 +118,11 @@ public class Physics2D {
         }
     }
     
+    /**
+     * Crea una representacion del boxcollider dentro de la simulacion de box2D
+     * @param rb referencia al rigidboby del collider
+     * @param boxCollider referencia del box2DCollider
+     */
     public void addBox2DCollider(Rigidbody2D rb, Box2DCollider boxCollider) {
         Body body = rb.getRawBody();
         assert body != null : "raw body must not be null";
@@ -126,12 +143,11 @@ public class Physics2D {
         body.createFixture(fixtureDef);
     }
     
-    public RaycastInfo raycast(GameObject requestingObj, Vector2f pointA, Vector2f pointB) {
-        RaycastInfo callback = new RaycastInfo(requestingObj);
-        world.raycast(callback, new Vec2(pointA.x, pointA.y), new Vec2(pointB.x, pointB.y));
-        return callback;
-    }
-    
+    /**
+     * Crea una representacion del circlecollider dentro de la simulacion de box2D
+     * @param rb referencia al rigidboby del collider
+     * @param circleCollider referencia del circle2DCollider
+     */
     public void addCircleCollider(Rigidbody2D rb, CircleCollider circleCollider) {
         Body body = rb.getRawBody();
         assert body != null : "raw body must not be null";
@@ -150,6 +166,11 @@ public class Physics2D {
         body.createFixture(fixtureDef);
     }
     
+    /**
+     * Crea una representacion del pillboxcollider dentro de la simulacion de box2D
+     * @param rb referencia al rigidboby del collider
+     * @param pb referencia del pillboxCollider
+     */
     public void addPillboxCollider(Rigidbody2D rb, PillboxCollider pb) {
         Body body = rb.getRawBody();
         assert body != null : "raw body must not be null";
@@ -159,19 +180,11 @@ public class Physics2D {
         addCircleCollider(rb, pb.getBottomCircle());
     }
     
-    public void resetCircleCollider(Rigidbody2D rb, CircleCollider circleCollider) {
-        Body body = rb.getRawBody();
-        if (body == null) return;
-        
-        int size = fixtureListSize(body);
-        for (int i = 0; i < size; i++) {
-            body.destroyFixture(body.getFixtureList());
-        }
-        
-        addCircleCollider(rb, circleCollider);
-        body.resetMassData();
-    }
-    
+    /**
+     * Resetea la representacion del boxcollider dentro de la simulacion de box2D
+     * @param rb referencia al rigidboby del collider
+     * @param boxCollider referencia del box2DCollider
+     */
     public void resetBox2DCollider(Rigidbody2D rb, Box2DCollider boxCollider) {
         Body body = rb.getRawBody();
         if (body == null) return;
@@ -185,6 +198,29 @@ public class Physics2D {
         body.resetMassData();
     }
     
+    /**
+     * Resetea la representacion del circlecollider dentro de la simulacion de box2D
+     * @param rb referencia al rigidboby del collider
+     * @param circleCollider referencia del circle2DCollider
+     */
+    public void resetCircleCollider(Rigidbody2D rb, CircleCollider circleCollider) {
+        Body body = rb.getRawBody();
+        if (body == null) return;
+        
+        int size = fixtureListSize(body);
+        for (int i = 0; i < size; i++) {
+            body.destroyFixture(body.getFixtureList());
+        }
+        
+        addCircleCollider(rb, circleCollider);
+        body.resetMassData();
+    }
+    
+    /**
+     * Resetea la representacion del pillboxcollider dentro de la simulacion de box2D
+     * @param rb referencia al rigidboby del collider
+     * @param pb referencia del pillboxCollider
+     */
     public void resetPillboxCollider(Rigidbody2D rb, PillboxCollider pb) {
         Body body = rb.getRawBody();
         if (body == null) return;
@@ -198,6 +234,24 @@ public class Physics2D {
         body.resetMassData();
     }
     
+    /**
+     * Hace un raycast desde el punto A al punto B
+     * @param requestingObj objeto desde donde se hizo la llamada al raycast
+     * @param pointA punto inicial del raycast
+     * @param pointB punto final del raycast
+     * @return un objeto con la informacion del raycast
+     */
+    public RaycastInfo raycast(GameObject requestingObj, Vector2f pointA, Vector2f pointB) {
+        RaycastInfo callback = new RaycastInfo(requestingObj);
+        world.raycast(callback, new Vec2(pointA.x, pointA.y), new Vec2(pointB.x, pointB.y));
+        return callback;
+    }
+    
+    /**
+     * Busca las fixtures que tiene un cuerpo fisico dentro de box2D
+     * @param body el cuerpo donde coger
+     * @return la cantidad de fixtures del cuerpo
+     */
     private int fixtureListSize(Body body) {
         int size = 0;
         Fixture fixture = body.getFixtureList();
@@ -208,6 +262,11 @@ public class Physics2D {
         return size;
     }
     
+    /**
+     * Convierte/revierte un rigidbody a un sensor, los sensores dejan pasar objetos fisicos a traves de ellos
+     * @param rb la referencia al rigidbody
+     * @param isSensor true para pasar a sensor, false para lo contrario
+     */
     public void setIsSensor(Rigidbody2D rb, boolean isSensor) {
         Body body = rb.getRawBody();
         if (body == null) return;
@@ -223,10 +282,23 @@ public class Physics2D {
         return world.isLocked();
     }
     
+    /**
+     * Busca la fuerza gravitatoria del mundo
+     * @return el vector de gravedad del mundo
+     */
     public Vector2f getGravity() {
         return new Vector2f(this.gravity.x, this.gravity.y);
     }
     
+    /**
+     * Detecta si un objeto "esta en el suelo".
+     * Realiza dos raycast a cada lado del objeto hacia abajo para buscar objetos solidos, pero solo toma como suelo objetos
+     * fisicos con el componente ground
+     * @param go el objeto para comprobar
+     * @param innerPlayerWidht la distancia aproximada del centro al exterior del objeto
+     * @param height la altura aproximada de objeto
+     * @return true si se encontro al menos una instancia del componente ground debajo del objeto, false de lo contrario
+     */
     public static boolean checkOnGround(GameObject go, float innerPlayerWidht, float height) {
         Vector2f raycastBegin = new Vector2f(go.transform.position);
         raycastBegin.sub(innerPlayerWidht / 2.0f, 0.0f);
@@ -239,6 +311,7 @@ public class Physics2D {
         
         RaycastInfo info2 = Window.getPhysics().raycast(go, raycast2Begin, raycast2End);
         
+        // fix this for debugging only
         DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1,0,0));
         DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
 

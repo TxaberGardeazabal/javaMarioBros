@@ -13,7 +13,9 @@ import imgui.flag.ImGuiTreeNodeFlags;
 import java.util.List;
 
 /**
- *
+ * Controlador de la ventana de jerarquia del editor.
+ * En la ventana de jerarquia se muestran todos los objetos dentro del nivel con las relaciones entre ellos, 
+ * desde aqui se puede alterar el orden jerarquico de estos objetos arrastrandolos con el raton
  * @author txaber gardeazabal
  */
 public class SceneHierarchyWindow {
@@ -25,6 +27,9 @@ public class SceneHierarchyWindow {
         this.mc = mouseControls;
     }
     
+    /**
+     * Ejecuta codigo imgui para mostrar y actualizar la ventana
+     */
     public void imGui() {
         ImGui.begin("Scene Hierarchy");
         
@@ -37,14 +42,17 @@ public class SceneHierarchyWindow {
                 if (payloadObj.getClass().isAssignableFrom(GameObject.class)) {
                     GameObject receivedObj = (GameObject)payloadObj;
 
-                        // delete old go reference
-                        if (receivedObj.getParent() != null) {
-                            receivedObj.getParent().removeChild(receivedObj);
-                        }
-                        receivedObj.setParent(null);
+                    // delete old go reference
+                    if (receivedObj.getParent() != null) {
+                        receivedObj.getParent().removeChild(receivedObj);
+                    }
+                    receivedObj.setParent(null);
 
-                    //System.out.println("payload receiver: root");
-                    //System.out.println("payload received: " + receivedObj.name);
+                    /*ConsoleWindow.addLog("payload receiver: root", 
+                            ConsoleWindow.LogCategory.info);
+                    ConsoleWindow.addLog("payload received: " + receivedObj.name, 
+                            ConsoleWindow.LogCategory.info);
+                    */
                 }
             }
             ImGui.endDragDropTarget();
@@ -75,6 +83,12 @@ public class SceneHierarchyWindow {
         ImGui.end();
     }
     
+    /**
+     * muestra los hijos del objeto en una estructura en arbol, hecho para llamar de forma recursiva
+     * @param obj el objeto a mostrar
+     * @param index el identificador unico para imgui
+     * @return true si el nodo esta desplegado, false de lo contrario
+     */
     private boolean doTreeNode(GameObject obj, int index) {
         ImGui.pushID(index);
         
@@ -120,8 +134,11 @@ public class SceneHierarchyWindow {
                         receivedObj.setParent(obj);
                     }
 
-                    //System.out.println("payload receiver: " + obj.name);
-                    //System.out.println("payload received: " + receivedObj.name);
+                    /*ConsoleWindow.addLog("payload receiver: root", 
+                            ConsoleWindow.LogCategory.info);
+                    ConsoleWindow.addLog("payload received: " + receivedObj.name, 
+                            ConsoleWindow.LogCategory.info);
+                    */
                 }
             }
             ImGui.endDragDropTarget();
@@ -141,7 +158,6 @@ public class SceneHierarchyWindow {
             }
         }
         ImGui.popID();
-        
         
         return treeNodeOpen;
     }

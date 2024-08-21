@@ -4,35 +4,21 @@
  */
 package scene;
 
-import components.EditorCamera;
 import components.GameCamera;
-import components.GizmoSystem;
-import components.GridLines;
-import components.KeyControls;
-import components.MouseControls;
-import components.Sprite;
 import components.SpriteRenderer;
 import components.SpriteSheet;
 import components.StateMachine;
-import gameEngine.Direction;
 import gameEngine.GameObject;
-import gameEngine.Prefab;
-import gameEngine.Sound;
 import gameEngine.Window;
-import imgui.ImGui;
-import imgui.ImVec2;
-import java.io.File;
-import java.util.Collection;
 import observers.events.Event;
 import static observers.events.EventType.GameEngineStartPlay;
 import static observers.events.EventType.GameEngineStopPlay;
 import static observers.events.EventType.LoadLevel;
 import static observers.events.EventType.SaveLevel;
-import org.joml.Vector2f;
 import util.AssetPool;
 
 /**
- *
+ * Escena de juego
  * @author txaber gardeazabal
  */
 public class LevelSceneInitializer extends SceneInitializer {

@@ -5,13 +5,6 @@
  */
 package components;
 
-import java.awt.Font;
-import java.awt.FontFormatException;
-import java.io.File;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 import render.FontTest;
@@ -19,7 +12,8 @@ import render.FontTest;
 
 
 /**
- *
+ * Componente para mostrar texto en pantalla partiendo de fuentes de texto
+ * @deprecated 
  * @author txaber
  */
 public class FontRenderer extends Component {

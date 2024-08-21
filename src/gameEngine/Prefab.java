@@ -34,9 +34,6 @@ import components.gamecomponents.FlagPole;
 import components.gamecomponents.BreakableBrick;
 import components.gamecomponents.StarAI;
 import components.propertieComponents.Ground;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 import physics2D.components.Box2DCollider;
@@ -44,12 +41,11 @@ import physics2D.components.CircleCollider;
 import physics2D.components.PillboxCollider;
 import physics2D.components.Rigidbody2D;
 import physics2D.enums.BodyType;
-import render.FontTest;
 import util.AssetPool;
 import util.Settings;
 
 /**
- *
+ * Crea objetos del juego prefabricados y preprogramados con sus funcionalidades.
  * @author txaber gardeazabal
  */
 public class Prefab {

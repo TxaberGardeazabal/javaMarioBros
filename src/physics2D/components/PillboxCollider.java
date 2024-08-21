@@ -9,10 +9,11 @@ import gameEngine.Window;
 import org.joml.Vector2f;
 
 /**
- *
+ * Objeto de colision de dos dimensiones con forma de capsula.
+ * la forma de calpsula se consigue con 2 circlecollider y un boxcollider
  * @author txaber gardeazabal
  */
-public class PillboxCollider extends Component{
+public class PillboxCollider extends Collider {
     private transient CircleCollider topCircle = new CircleCollider();
     private transient CircleCollider bottomCircle = new CircleCollider();
     private transient Box2DCollider box = new Box2DCollider();

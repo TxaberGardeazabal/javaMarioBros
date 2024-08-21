@@ -4,6 +4,7 @@
  */
 package render;
 
+import editor.ConsoleWindow;
 import org.joml.Vector2i;
 import static org.lwjgl.opengl.GL11.GL_DEPTH_COMPONENT;
 import static org.lwjgl.opengl.GL11.GL_DEPTH_TEST;
@@ -39,7 +40,9 @@ import static org.lwjgl.opengl.GL30.glFramebufferTexture2D;
 import static org.lwjgl.opengl.GL30.glGenFramebuffers;
 
 /**
- *
+ * Se refiere a una textura invisible pasado al GPU y superpuesto sobre la pantalla de juego que sirve para poder
+ * seleccionar con el cursor los objetos del mundo.
+ * Es desde la perspectiva de la camara donde se genera esta textura y la seleccion con el cursor es muy exacta.
  * @author txaber gardeazabal
  */
 public class PickingTexture {
@@ -49,7 +52,7 @@ public class PickingTexture {
 
     public PickingTexture(int width, int height) {
         if (!init(width, height)) {
-            assert false: "error: initializing picking texture failed";
+            ConsoleWindow.addLog("initializing picking texture failed", ConsoleWindow.LogCategory.error);
         }
     }
     

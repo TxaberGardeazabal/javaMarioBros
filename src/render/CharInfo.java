@@ -7,7 +7,8 @@ package render;
 import org.joml.Vector2f;
 
 /**
- *
+ * Variables de los caracteres dentro de una fuente de texto
+ * @deprecated 
  * @author txaber gardeazabal
  */
 public class CharInfo {

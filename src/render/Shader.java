@@ -5,6 +5,7 @@
  */
 package render;
 
+import editor.ConsoleWindow;
 import java.io.IOException;
 import java.nio.FloatBuffer;
 import java.nio.file.Files;
@@ -43,7 +44,7 @@ import static org.lwjgl.opengl.GL20.glUniformMatrix4fv;
 import static org.lwjgl.opengl.GL20.glUseProgram;
 
 /**
- *
+ * Clase para interpretar shaders glsl y mandarlos al GPU
  * @author txaber
  */
 public class Shader {
@@ -57,6 +58,8 @@ public class Shader {
     
     public Shader(String filepath) {
         this.filepath = filepath;
+        
+        // ajusta el caracter final dependiendo del SO
         String eolChar;
         if (System.getProperty("os.name").equals("Windows 10")) {
             eolChar = "\r\n";
@@ -101,14 +104,13 @@ public class Shader {
             }
         }
         catch(IOException e) {
-            e.printStackTrace();
-            assert false : "Error: could not open file for shader: "+ filepath; 
+            ConsoleWindow.addLog("could not open file for shader: "+ filepath, ConsoleWindow.LogCategory.error); 
         }
-        
-        //System.out.println(vertexSource);
-        //System.out.println(fragmentSource);
     }
     
+    /**
+     * Compila la informacion del shader en openGL
+     */
     public void compile() {
         int vertexID, fragmentID;
         
@@ -123,8 +125,8 @@ public class Shader {
         
         if (success == GL_FALSE) {
             int len = glGetShaderi(vertexID, GL_INFO_LOG_LENGTH);
-            System.out.println("Error: '"+filepath+" \nvertex compilation failed'");
-            System.out.println(glGetShaderInfoLog(vertexID, len));
+            ConsoleWindow.addLog("'"+filepath+" \nvertex compilation failed'", ConsoleWindow.LogCategory.error);
+            ConsoleWindow.addLog(glGetShaderInfoLog(vertexID, len), ConsoleWindow.LogCategory.error);
             assert false: "";
         }
         
@@ -140,8 +142,8 @@ public class Shader {
         
         if (success == GL_FALSE) {
             int len = glGetShaderi(fragmentID, GL_INFO_LOG_LENGTH);
-            System.out.println("Error: '"+filepath+" \nfragment compilation failed'");
-            System.out.println(glGetShaderInfoLog(fragmentID, len));
+            ConsoleWindow.addLog("'"+filepath+" \nfragment compilation failed'", ConsoleWindow.LogCategory.error);
+            ConsoleWindow.addLog(glGetShaderInfoLog(fragmentID, len), ConsoleWindow.LogCategory.error);
             assert false: "";
         }
         
@@ -155,12 +157,15 @@ public class Shader {
         success = glGetProgrami(shaderProgramID, GL_LINK_STATUS);
         if (success == GL_FALSE) {
             int len = glGetProgrami(shaderProgramID, GL_INFO_LOG_LENGTH);
-            System.out.println("Error: '"+filepath+" \nlinking of shaders failed'");
-            System.out.println(glGetProgramInfoLog(shaderProgramID, len));
+            ConsoleWindow.addLog("'"+filepath+" \nlinking of shaders failed'", ConsoleWindow.LogCategory.error);
+            ConsoleWindow.addLog(glGetProgramInfoLog(shaderProgramID, len), ConsoleWindow.LogCategory.error);
             assert false: "";
         }
     }
     
+    /**
+     * Dice a openGL que este es el shader que tiene que usar, importante llamar a la funcion detach antes de llamar a use otra vez
+     */
     public void use() {
         // bind shader program
         if (!beingUsed) {
@@ -169,13 +174,20 @@ public class Shader {
         }
     }
     
+    /**
+     * Dice a openGL que este shader no esta en uso
+     */
     public void detach() {
         glUseProgram(0);
         beingUsed = false;
     }
     
     // upload functions
-    
+    /**
+     * sube un matrix4f
+     * @param varName nombre de variable
+     * @param mat4 variable a subir
+     */
     public void uploadMat4f(String varName, Matrix4f mat4) {
         int varLocation = glGetUniformLocation(shaderProgramID, varName);
         use();
@@ -185,6 +197,11 @@ public class Shader {
         glUniformMatrix4fv(varLocation, false, matBuffer);
     }
     
+    /**
+     * sube un matrix3f
+     * @param varName nombre de variable
+     * @param mat3 variable a subir
+     */
     public void uploadMat3f(String varName, Matrix3f mat3) {
         int varLocation = glGetUniformLocation(shaderProgramID, varName);
         use();
@@ -193,42 +210,77 @@ public class Shader {
         glUniformMatrix3fv(varLocation, false, matBuffer);
     }
     
+    /**
+     * sube un vector4f
+     * @param varName nombre de variable
+     * @param vec variable a subir
+     */
     public void uploadVec4f(String varName, Vector4f vec) {
         int varLocation = glGetUniformLocation(shaderProgramID, varName);
         use();
         glUniform4f(varLocation, vec.x, vec.y, vec.z, vec.w);
     }
     
+    /**
+     * sube un vector3f
+     * @param varName nombre de variable
+     * @param vec variable a subir
+     */
     public void uploadVec3f(String varName, Vector3f vec) {
         int varLocation = glGetUniformLocation(shaderProgramID, varName);
         use();
         glUniform3f(varLocation, vec.x, vec.y, vec.z);
     }
     
+    /**
+     * sube un vector2f
+     * @param varName nombre de variable
+     * @param vec variable a subir
+     */
     public void uploadVec2f(String varName, Vector2f vec) {
         int varLocation = glGetUniformLocation(shaderProgramID, varName);
         use();
         glUniform2f(varLocation, vec.x, vec.y);
     }
     
+    /**
+     * sube un float
+     * @param varName nombre de variable
+     * @param val variable a subir
+     */
     public void uploadFloat(String varName, float val) {
         int varLocation = glGetUniformLocation(shaderProgramID, varName);
         use();
         glUniform1f(varLocation, val);
     }
     
+    /**
+     * sube un int
+     * @param varName nombre de variable
+     * @param val variable a subir
+     */
     public void uploadInt(String varName, int val) {
         int varLocation = glGetUniformLocation(shaderProgramID, varName);
         use();
         glUniform1i(varLocation, val);
     }
     
+    /**
+     * sube una textura
+     * @param varName nombre de variable
+     * @param slot posicion del uniform destino donde se va a subir
+     */
     public void uploadTexture(String varName, int slot) {
         int varLocation = glGetUniformLocation(shaderProgramID, varName);
         use();
         glUniform1i(varLocation, slot);
     }
 
+    /**
+     * sube un array de ints
+     * @param varName nombre de variable
+     * @param array variable a subir
+     */
     void uploadIntArray(String varName, int[] array) {
         int varLocation = glGetUniformLocation(shaderProgramID, varName);
         use();

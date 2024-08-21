@@ -2,6 +2,10 @@ package util;
 
 import org.joml.Vector2f;
 
+/**
+ * Funciones matematicas de ayuda
+ * @author txaber gardeazabal
+ */
 public class JMath {
 
     public static void rotate(Vector2f vec, float angleDeg, Vector2f origin) {

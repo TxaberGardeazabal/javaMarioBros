@@ -4,12 +4,10 @@
  */
 package components.gamecomponents;
 
-import components.gamecomponents.Block;
-import components.gamecomponents.PlayerController;
 import util.AssetPool;
 
 /**
- *
+ * bloques de ladrillos que se rompen al golpear
  * @author txaber gardeazabal
  */
 public class BreakableBrick extends Block {
@@ -18,6 +16,7 @@ public class BreakableBrick extends Block {
     public void playerHit(PlayerController playerController) {
         if (!playerController.isSmall()) {
             AssetPool.getSound("assets/sounds/break_block.ogg").play();
+            // TODO: maybe add particle effects to give brick breaking more impact
             gameObject.destroy();
         }
     }

@@ -7,9 +7,9 @@ package mario;
 
 import gameEngine.Window;
 /**
- *  game/program to run super mario bros,
- *  game engine (jade) taken from https://www.youtube.com/c/GamesWithGabe/playlists
- *  made for learning purposes
+ *  framework/motor para juegos para poder correr super mario bros para la NES,
+ *  motor basado en la serie de youtube creado por gabe https://www.youtube.com/c/GamesWithGabe/playlists
+ *  hecho con propositos de aprendizaje
  *  @author txaber
  */
 public class Mario {

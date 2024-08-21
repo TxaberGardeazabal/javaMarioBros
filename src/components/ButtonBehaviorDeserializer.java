@@ -16,13 +16,11 @@ import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
 
 /**
- *
+ * Deserializer especial para ButtonBehavior
  * @author txaber gardeazabal
  */
 public class ButtonBehaviorDeserializer implements JsonSerializer<ButtonBehavior>, JsonDeserializer<ButtonBehavior>{
 
-    
-    
     @Override
     public JsonElement serialize(ButtonBehavior t, Type type, JsonSerializationContext jsc) {
         JsonObject result = new JsonObject();

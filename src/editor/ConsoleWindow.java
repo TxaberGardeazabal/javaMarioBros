@@ -13,11 +13,11 @@ import imgui.flag.ImGuiWindowFlags;
 import imgui.type.ImBoolean;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
-import org.joml.Vector2f;
 import org.joml.Vector2i;
 
 /**
- *
+ * Controlador de ventana de consola.
+ * La ventana de consola muestra informacion interna y mensajes internos a tiempo real.
  * @author txaber gardeazabal
  */
 public class ConsoleWindow {
@@ -33,11 +33,19 @@ public class ConsoleWindow {
         lineOffsets = new Vector2i();
     }
     
+    /**
+     * Limpia todos los mensajes anteriores
+     */
     public void clear() {
         buf.clear();
         lineOffsets.zero();
     }
     
+    /**
+     * Añade un mensaje a ser mostrado en la pantalla de la ventana de consola
+     * @param line el mensaje a mostrar
+     * @param cat la categoria informativa del mensaje
+     */
     public static void addLog(String line, LogCategory cat) {
         // todo el formatting aqui
         String log = "";
@@ -53,6 +61,9 @@ public class ConsoleWindow {
         buf.add(log);
     }
     
+    /**
+     * Ejecuta codigo imgui para mostrar y actualizar la ventana
+     */
     public void imGui() {
         
         if (!ImGui.begin("logs"))
@@ -114,7 +125,9 @@ public class ConsoleWindow {
         ImGui.end();
     }
     
-    
+    /**
+     * Las diferentes categorias informativas de los mensajes
+     */
     public enum LogCategory {
         info,
         warning,

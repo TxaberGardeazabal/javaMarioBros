@@ -31,7 +31,7 @@ import static org.lwjgl.system.MemoryStack.stackPush;
 import static org.lwjgl.system.libc.LibCStdlib.free;
 
 /**
- *
+ * Controllador del audio y efectos de sonido
  * @author txaber gardeazabal
  */
 public class Sound {
@@ -89,11 +89,17 @@ public class Sound {
         free(rawAudioBuffer);
     }
     
+    /**
+     * Elimina el buffer de sonido antes de borrar el objeto.
+     */
     public void delete() {
         alDeleteSources(sourceId);
         alDeleteBuffers(bufferId);
     }
     
+    /**
+     * Toca el sonido/musica
+     */
     public void play() {
         int state = alGetSourcei(sourceId, AL_SOURCE_STATE);
         if (state == AL_STOPPED) {
@@ -107,12 +113,18 @@ public class Sound {
         alSourcePlay(sourceId);
     }
     
+    /**
+     * Toca el sonido/musica si no esta activo, esto previene overlapping
+     */
     public void playIfNotPlaying() {
         if (!isPlaying()) {
             play();
         }
     }
     
+    /**
+     * Detiene el sonido/musica
+     */
     public void stop() {
         if (isPlaying) {
             alSourceStop(sourceId);
@@ -120,10 +132,18 @@ public class Sound {
         }
     }
 
+    /**
+     * Devuelve la ruta del archivo de musica
+     * @return la ruta absoluta del archivo en string
+     */
     public String getFilepath() {
         return filepath;
     }
 
+    /**
+     * Esta sonando el track
+     * @return true si el sonido esta reproduciendose/todavia no a acabado, false de lo contrario
+     */
     public boolean isPlaying() {
         int state = alGetSourcei(sourceId, AL_SOURCE_STATE);
         if (state == AL_STOPPED) {

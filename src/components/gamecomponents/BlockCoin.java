@@ -6,10 +6,9 @@ package components.gamecomponents;
 
 import components.Component;
 import org.joml.Vector2f;
-import util.AssetPool;
 
 /**
- *
+ * Monedas en los bloques de interrogacion
  * @author txaber gardeazabal
  */
 public class BlockCoin extends Component{

@@ -5,7 +5,7 @@
 package gameEngine;
 
 /**
- *
+ * Enum con las cuatro direcciones cardinales
  * @author txaber gardeazabal
  */
 public enum Direction {

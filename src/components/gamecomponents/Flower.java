@@ -9,10 +9,9 @@ import gameEngine.GameObject;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import physics2D.components.Rigidbody2D;
-import util.AssetPool;
 
 /**
- *
+ * Powerup flor de fuego
  * @author txaber gardeazabal
  */
 public class Flower extends Component{

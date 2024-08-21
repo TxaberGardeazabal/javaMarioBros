@@ -10,17 +10,11 @@ import components.SpriteSheet;
 import components.StateMachine;
 import gameEngine.GameObject;
 import gameEngine.Window;
-import imgui.ImGui;
-import imgui.flag.ImGuiWindowFlags;
 import observers.events.Event;
-import static observers.events.EventType.GameEngineStartPlay;
-import static observers.events.EventType.GameEngineStopPlay;
-import static observers.events.EventType.LoadLevel;
-import static observers.events.EventType.SaveLevel;
 import util.AssetPool;
 
 /**
- *
+ * Escena de menu principal
  * @author txaber gardeazabal
  */
 public class MainMenuSceneInitializer extends SceneInitializer{
@@ -44,9 +38,6 @@ public class MainMenuSceneInitializer extends SceneInitializer{
 
     @Override
     public void loadResources(Scene scene) {
-        // TODO: puede que mover esta linea
-        // default texture
-        //AssetPool.getTexture("assets/alfa_rojo.png");
         
         // shaders
         AssetPool.getShader("assets/shaders/default.glsl");
@@ -161,8 +152,7 @@ public class MainMenuSceneInitializer extends SceneInitializer{
             case Exit:
                 Window.get().destroy();
                 break;
-            default:
-                System.out.println("Warning: uncaught event: "+event.type+" in main menu initializer");
+            
         }
     }
     

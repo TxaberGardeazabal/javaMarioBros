@@ -4,6 +4,7 @@
  */
 package render;
 
+import editor.ConsoleWindow;
 import static org.lwjgl.opengl.GL11.GL_TEXTURE_2D;
 import static org.lwjgl.opengl.GL14.GL_DEPTH_COMPONENT32;
 import static org.lwjgl.opengl.GL30.GL_COLOR_ATTACHMENT0;
@@ -21,7 +22,8 @@ import static org.lwjgl.opengl.GL30.glGenRenderbuffers;
 import static org.lwjgl.opengl.GL30.glRenderbufferStorage;
 
 /**
- *
+ * El framebuffer que contiene la pantalla principal del juego.
+ * La pantalla de juego se coge del GPU para poder mostrar en imgui en forma de textura.
  * @author txaber gardeazabal
  */
 public class Framebuffer {
@@ -44,7 +46,7 @@ public class Framebuffer {
         glFramebufferRenderbuffer(GL_FRAMEBUFFER,GL_DEPTH_ATTACHMENT,GL_RENDERBUFFER,rboID);
         
         if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
-            assert false: "error: Framebuffer is not complete";
+            ConsoleWindow.addLog("Framebuffer is not complete", ConsoleWindow.LogCategory.error);
         }
         
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -58,10 +60,16 @@ public class Framebuffer {
         return texture.getTexID();
     }
 
+    /**
+     * Ata el buffer al GPU
+     */
     public void bind() {
         glBindFramebuffer(GL_FRAMEBUFFER, fboID);
     }
     
+    /**
+     * Quita el buffer del GPU
+     */
     public void unbind() {
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
     }

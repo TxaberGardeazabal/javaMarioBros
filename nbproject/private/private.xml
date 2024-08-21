@@ -12,19 +12,7 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/GameViewWindow.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/observers/events/EventType.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/ImGuiLayer.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Prefab.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/LevelEditorSceneInitializer.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/mario/Mario.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/LevelSceneInitializer.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Window.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/AssetWindow.java</file>
-            <file>jar:file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/libraries/java-libraries/imgui-binding-1.86.11-sources.jar!/imgui/ImGui.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/MenuBar.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/Scene.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/ConsoleWindow.java</file>
         </group>
     </open-files>
 </project-private>

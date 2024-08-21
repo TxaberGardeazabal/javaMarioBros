@@ -7,7 +7,7 @@ package components.propertieComponents;
 import components.Component;
 
 /**
- *
+ * Define el objeto para que no se pueda seleccionar con el raton en el editor.
  * @author txaber gardeazabal
  */
 public class NonPickable extends Component{

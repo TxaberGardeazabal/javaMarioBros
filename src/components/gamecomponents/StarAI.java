@@ -13,10 +13,10 @@ import physics2D.components.Rigidbody2D;
 import util.Settings;
 
 /**
- *
+ * Controllador del powerup estrella
  * @author txaber gardeazabal
  */
-public class StarAI extends PhysicsController{
+public class StarAI extends PhysicsController {
     
     private transient float speed = 1.7f;
     private transient float bounceForce = 1.5f;
@@ -30,12 +30,6 @@ public class StarAI extends PhysicsController{
     
     @Override
     public void update(float dt) {
-        
-        /*CircleCollider cc = gameObject.getComponent(CircleCollider.class);
-        if (!cc.showBoundaries) {
-            cc.showBoundaries = true;
-        }*/
-        
         if (goingRight) {
             velocity.x = speed;
         } else {

@@ -5,14 +5,16 @@
  */
 package render;
 
-import components.FontRenderer;
 import gameEngine.GameObject;
 import components.SpriteRenderer;
 import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- *
+ * Controlador del renderizado del juego principal.
+ * Muestra los objetos en pantalla a base de pasar varios batches de informacion de renderizado al GPU,
+ * el GPU luego interpreta la informacion recibida con un shader y lo muestra en pantalla.
+ * Es posible tener multiples renderers, pero no he querido testearlo
  * @author txaber
  */
 public class Renderer {
@@ -25,6 +27,10 @@ public class Renderer {
         this.batches = new ArrayList();
     }
     
+    /**
+     * Incluye la parte grafica (spriteRenderer) del objeto para dibujar
+     * @param go un gameobject que contiene un spriterenderer
+     */
     public void add(GameObject go) {
         SpriteRenderer spr = go.getComponent(SpriteRenderer.class);
         
@@ -38,6 +44,10 @@ public class Renderer {
         }*/
     }
     
+    /**
+     * Añade un sprite para dibujar en uno de los batches
+     * @param sprite un spriteRenderer para añadir
+     */
     public void add(SpriteRenderer sprite) {
         boolean added = false;
         for (RenderBatch batch : batches) {
@@ -61,29 +71,9 @@ public class Renderer {
         }
     }
     
-    // TODO: remake this function once font rendering feels more safe
-    /*public void add(FontRenderer text) {
-        boolean added = false;
-        for (FontRenderBatch batch : fontBatches) {
-            if (batch.getzIndex() == text.gameObject.transform.zIndex) {
-                
-                batch.addText(text);
-                added = true;
-                break;
-                
-            }
-        }
-        
-        if (!added) {
-            FontRenderBatch newBatch = new FontRenderBatch(MAX_BATCH_SIZE, 
-                    text.gameObject.transform.zIndex, this);
-            newBatch.start();
-            fontBatches.add(newBatch);
-            newBatch.addText(text);
-            Collections.sort(fontBatches);
-        }
-    }*/
-    
+    /**
+     * Renderiza el contenido de todos los batches en la GPU
+     */
     public void render() {
         //System.out.println("render call, total batches: "+batches.size());
         currentShader.use();
@@ -93,6 +83,11 @@ public class Renderer {
         }
     }
     
+    /**
+     * Elimina el sprite del objeto especifico de ser dibujado.
+     * Esta funcion se llama cuando se borra un objeto.
+     * @param go el gameobject que contiene un spriterenderer
+     */
     public void destroyGameObject(GameObject go) {
         if (go.getComponent(SpriteRenderer.class) == null) return;
         for (RenderBatch batch : batches) {
@@ -103,10 +98,18 @@ public class Renderer {
         
     }
     
+    /**
+     * Set currentShader.
+     * @param shader un shader nuevo para asignar
+     */
     public static void bindShader(Shader shader) {
         currentShader = shader;
     }
     
+    /**
+     * Get currentShader.
+     * @return currentShader
+     */
     public static Shader getBoundShader() {
         return currentShader;
     }

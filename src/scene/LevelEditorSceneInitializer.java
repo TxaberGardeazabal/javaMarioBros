@@ -5,53 +5,31 @@
  */
 package scene;
 
-import UI.Digitalizer;
+
 import components.EditorCamera;
-import components.FontRenderer;
 import components.GameCamera;
 import components.GizmoSystem;
 import components.GridLines;
 import components.KeyControls;
 import components.MouseControls;
-import components.Sprite;
 import components.SpriteRenderer;
 import components.SpriteSheet;
 import gameEngine.GameObject;
-import gameEngine.Prefab;
 import components.StateMachine;
-import editor.AssetWindow;
 import editor.ConsoleWindow;
-import editor.MenuBar;
-import editor.PropertiesWindow;
-import editor.SceneHierarchyWindow;
-import gameEngine.Direction;
 import gameEngine.ImGuiLayer;
-import gameEngine.Sound;
 import gameEngine.Window;
-import imgui.ImGui;
-import imgui.ImVec2;
-import java.io.File;
-import java.util.Collection;
-import observers.Observer;
 import observers.events.Event;
-import static observers.events.EventType.GameEngineStartPlay;
-import static observers.events.EventType.GameEngineStopPlay;
 import static observers.events.EventType.LoadLevel;
 import static observers.events.EventType.SaveLevel;
-import org.joml.Vector2f;
-import render.FontTest;
 import util.AssetPool;
-import util.Settings;
 
 
 /**
- * Level editor scene for the editing of levels
+ * Escena de edicion de niveles, aqui se pueden crear, editar, jugar y borrar nuevos niveles, aparte de tener todo el acceso a los assets del motor,
  * @author txaber
  */
 public class LevelEditorSceneInitializer extends SceneInitializer {
-            
-    //private GameObject obj1;
-    //private SpriteSheet sprites;
     
     // gameobject to contain most basic functionalities of the level editor
     private GameObject editor; 
@@ -81,16 +59,6 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         imGuiLayer.startAssetWindow(mc);
         imGuiLayer.startPropertiesWindow(mc);
         imGuiLayer.startConsoleWindow();
-        
-        /*GameObject go = Window.getScene().createGameObject("Font_test");
-        go.transform.position.x = 2.875f;
-        go.transform.position.y = 1.625f;
-        go.transform.scale.x = 0.25f;
-        go.transform.scale.y = 0.25f;
-        go.addComponent(new FontTest("assets/fonts/super-mario-bros-nes.ttf", 64));
-        Window.getScene().addGameObjectToScene(go);
-        */
-        
         
     }
 

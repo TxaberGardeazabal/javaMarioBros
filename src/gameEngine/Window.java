@@ -8,7 +8,6 @@ package gameEngine;
 import editor.ConsoleWindow;
 import editor.GameViewWindow;
 import java.io.File;
-import java.io.IOException;
 import scene.LevelEditorSceneInitializer;
 import scene.Scene;
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
@@ -23,10 +22,6 @@ import static org.lwjgl.opengl.GL11.glClear;
 import static org.lwjgl.opengl.GL11.glClearColor;
 import static org.lwjgl.opengl.GL11.glEnable;
 import static org.lwjgl.system.MemoryUtil.NULL;
-import observers.EventSystem;
-import observers.Observer;
-import observers.events.Event;
-import observers.events.EventType;
 import org.joml.Vector4f;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.openal.AL;
@@ -45,19 +40,14 @@ import static org.lwjgl.opengl.GL11.glDisable;
 import static org.lwjgl.opengl.GL11.glViewport;
 import physics2D.Physics2D;
 import render.DebugDraw;
-import render.FontRenderBatch;
-import render.FontTest;
 import render.Framebuffer;
 import render.PickingTexture;
 import render.Renderer;
 import render.Shader;
-import scene.LevelSceneInitializer;
-import scene.MainMenuSceneInitializer;
 import scene.SceneInitializer;
 import util.AssetPool;
 /**
- * window for my game
- * suposedly the game will run on one window only (except all imgui stuff) so this class is singleton
+ * Ventana principal del programa, al solo necesitar una es singleton
  * @author txaber
  */
 public class Window {

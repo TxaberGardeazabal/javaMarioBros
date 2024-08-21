@@ -6,21 +6,18 @@ package editor;
 
 import components.MouseControls;
 import gameEngine.GameObject;
-import components.SpriteRenderer;
 import components.gamecomponents.BreakableBrick;
 import components.propertieComponents.Ground;
 import imgui.internal.ImGui;
-import java.util.ArrayList;
 import java.util.List;
-import org.joml.Vector4f;
 import physics2D.components.Box2DCollider;
 import physics2D.components.CircleCollider;
 import physics2D.components.Rigidbody2D;
-import render.PickingTexture;
-import scene.Scene;
 
 /**
- *
+ * Controlador de la ventana de propiedades del editor.
+ * La ventana de editor muestra los componentes y los valores de variables del objeto seleccionado, donde se pueden alterar, añadir y borrar
+ * para cambiar las funcionalidades por defecto de los gameobject.
  * @author txaber gardeazabal
  */
 public class PropertiesWindow {
@@ -34,6 +31,9 @@ public class PropertiesWindow {
         
     }
     
+    /**
+     * Ejecuta codigo imgui para mostrar y actualizar la ventana
+     */
     public void imGui() {
         ImGui.begin("Inspector");
         List<GameObject> activeGameObjects = mc.getActiveGameObjects();

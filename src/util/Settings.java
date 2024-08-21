@@ -6,8 +6,9 @@ package util;
 
 import java.io.File;
 import static org.lwjgl.glfw.GLFW.*;
+
 /**
- *
+ * Clase con todos los controles de la aplicacion.
  * @author txaber gardeazabal
  */
 public class Settings {
@@ -59,13 +60,23 @@ public class Settings {
     public static float worldGravityMul = 0.7f;
     public static String defaultLevel = "add filepath here when I make default level";
     
-    
+    /**
+     * Convierte una ruta de asset absoluta en una relativa a la carpeta raiz
+     * @param absPath
+     * @return 
+     */
     public static String getRelativePath(String absPath) {
         String rootFolder = "assets"; // could customize this?
         String[] res = absPath.split(rootFolder);
         return rootFolder.concat(res[1]);
     }
     
+    /**
+     * Comprueba si un archivo es de la extension deseada.
+     * @param filepath ruta absoluta del fichero
+     * @param desiredTypes tipo de archivo deseada
+     * @return true si el archivo es de la extension esperada, false si tiene otra extension, o no existe
+     */
     public static boolean isValidFile(String filepath, String desiredTypes) {
         File file = new File(filepath);
         if (!file.exists()) {

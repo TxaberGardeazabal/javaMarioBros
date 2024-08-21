@@ -7,18 +7,17 @@ package components.gamecomponents;
 import components.Component;
 import components.PhysicsController;
 import components.StateMachine;
+import editor.ConsoleWindow;
 import gameEngine.Camera;
 import gameEngine.GameObject;
 import gameEngine.Window;
 import java.util.List;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
-import physics2D.components.Rigidbody2D;
 import util.AssetPool;
-import util.Settings;
 
 /**
- *
+ * Funcionalidades basicas que comparten todos los enemigos del juego
  * @author txaber gardeazabal
  */
 public class Enemy extends PhysicsController{
@@ -31,6 +30,10 @@ public class Enemy extends PhysicsController{
     public void start() {
         super.start();
         this.stateMachine = gameObject.getComponent(StateMachine.class);
+        if (stateMachine == null) {
+            ConsoleWindow.addLog("couldn't find statemachine in enemy "+gameObject.name,
+                    ConsoleWindow.LogCategory.warning);
+        }
     }
     
     @Override
@@ -51,16 +54,33 @@ public class Enemy extends PhysicsController{
         
     }
     
+    /**
+     * Funcion que se llama cuando mario pisa al enemigo por encima.
+     */
     public void stomp() {}
     
+    /**
+     * Funcion que se llama cuando es golpeado por una bola de fuego lanzado por mario.
+     * por defecto el enemigo muere
+     * @param direction normal por donde ha sido golpeado
+     */
     public void fireballHit(Vector2f direction) {
         die(direction.x < 0);
     }
     
+    /**
+     * Mata al enemigo, llamado cuando deberia morir.
+     * por defecto inverte su sprite y añade velocidad hacia la izquierda de la pantalla
+     */
     public void die() {
         die(true);
     }
     
+    /**
+     * Mata al enemigo, llamado cuando deberia morir.
+     * por defecto inverte su sprite y añade velocidad hacia un lado de la pantalla
+     * @param hitRight si fue golpeado por la derecha, sera lanzado para la izquierda, lo contrario si es false
+     */
     public void die(boolean hitRight) {
         AssetPool.getSound("assets/sounds/kick.ogg").play();
         isDead = true;
@@ -112,6 +132,7 @@ public class Enemy extends PhysicsController{
             return;
         }
         
+        // cambiar direccion
         if (Math.abs(normal.y) < 0.1f) {
             goingRight = normal.x < 0;
         }

@@ -4,13 +4,12 @@
  */
 package physics2D.components;
 
-import components.Component;
 import gameEngine.Window;
 import org.joml.Vector2f;
 import render.DebugDraw;
 
 /**
- *
+ * Objeto de colision de dos dimensiones con forma de cuadrado 
  * @author txaber gardeazabal
  */
 public class Box2DCollider extends Collider{
@@ -64,6 +63,9 @@ public class Box2DCollider extends Collider{
         }
     }
     
+    /**
+     * Llama a la clase physics2D para restear el colider de la simulacion
+     */
     public void resetFixture() {
         if (Window.getPhysics().isLocked()) {
             resetFixtureNextFrame = true;

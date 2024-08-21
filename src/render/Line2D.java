@@ -8,7 +8,8 @@ import org.joml.Vector2f;
 import org.joml.Vector3f;
 
 /**
- *
+ * Crea una linea para poder mostrarla en DebugDraw.
+ * Esta clase es el equivalente al LineRenderer de unity, igual necesita cambiar el nombre
  * @author txaber gardeazabal
  */
 public class Line2D {

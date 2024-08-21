@@ -7,40 +7,40 @@ package gameEngine;
 
 import components.Component;
 import editor.OImGui;
-import imgui.internal.ImGui;
 import org.joml.Vector2f;
 
 /**
- * A transform holds information of the position and scale of an object inside the world
+ * La clase transform contiene la informacion de la posicion, rotacion y escala de un objeto dentro del mundo de juego
  * @author txaber
  */
 public class Transform extends Component{
     
     public Vector2f position;
-    public float rotation = 0.0f;
+    public float rotation;
     public Vector2f scale;
     public int zIndex = 0;
 
     public Transform() {
         this.position = new Vector2f();
+        this.rotation = 0;
         this.scale = new Vector2f();
     }
 
     public Transform(Vector2f position) {
         this.position = position;
-        //this.lastPosition = position;
+        this.rotation = 0;
         this.scale = new Vector2f();
     }
     
     public Transform(Vector2f position, Vector2f scale) {
         this.position = position;
-        //this.lastPosition = position;
+        this.rotation = 0;
         this.scale = scale;
-        //this.lastScale = scale;
     }
     
-    public void init(Vector2f position, Vector2f scale) {
+    public Transform(Vector2f position, float rotation, Vector2f scale) {
         this.position = position;
+        this.rotation = rotation;
         this.scale = scale;
     }
     
@@ -68,13 +68,25 @@ public class Transform extends Component{
         
     }
     
+    /**
+     * Copia este objeto
+     * @return un objeto nuevo con los mismos parametros de este objeto
+     */
     public Transform copy() {
-        return new Transform(new Vector2f(this.position), new Vector2f(this.scale));       
+        Transform ret = new Transform(new Vector2f(this.position), this.rotation, new Vector2f(this.scale));
+        ret.zIndex = this.zIndex;
+        return ret;
     }
     
+    /**
+     * Copia este objeto
+     * @param to un transform donde copiar este objeto
+     */
     public void copy(Transform to) {
         to.position.set(this.position);
+        to.rotation = this.rotation;
         to.scale.set(this.scale);
+        to.zIndex = this.zIndex;
     }
     
     @Override
@@ -89,6 +101,11 @@ public class Transform extends Component{
                 t.rotation == this.rotation && t.zIndex == this.zIndex;
     }
     
+    /**
+     * Mueve este transform y todos sus hijos
+     * @param x movimiento en el eje x
+     * @param y movimiento en el eje y
+     */
     public void translate(float x,float y) {
         Vector2f translate = new Vector2f(x,y);
         position.add(translate);
@@ -97,6 +114,10 @@ public class Transform extends Component{
         }
     }
     
+    /**
+     * Mueve este transform y todos sus hijos
+     * @param translate vector de movimiento
+     */
     public void translate(Vector2f translate) {
         position.add(translate);
         for (GameObject go : gameObject.getChildGOs()) {
@@ -104,6 +125,10 @@ public class Transform extends Component{
         }
     }
     
+    /**
+     * Rota este transform y todos sus hijos, solo en el eje z
+     * @param z movimiento de rotacion en grados
+     */
     public void rotate(float z) {
         rotation += z;
         for (GameObject go : gameObject.getChildGOs()) {
@@ -111,6 +136,11 @@ public class Transform extends Component{
         }
     }
     
+    /**
+     * Escala este transform y todos sus hijos
+     * @param x escalado en el eje x
+     * @param y escalado en el eje y
+     */
     public void scale(float x,float y) {
         Vector2f scalew = new Vector2f(x,y);
         this.scale.add(scalew);
@@ -119,6 +149,10 @@ public class Transform extends Component{
         }
     }
     
+    /**
+     * Escala este transform y todos sus hijos
+     * @param scalew vector en el que escalar
+     */
     public void scale(Vector2f scalew) {
         this.scale.add(scalew);
         for (GameObject go : gameObject.getChildGOs()) {
@@ -126,6 +160,10 @@ public class Transform extends Component{
         }
     }
 
+    /**
+     * Asigna el zindex y el de todos sus hijos
+     * @param zIndex nuevo valor del zindex
+     */
     public void setzIndex(int zIndex) {
         this.zIndex = zIndex;
         for (GameObject go : gameObject.getChildGOs()) {

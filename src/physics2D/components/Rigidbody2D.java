@@ -12,7 +12,9 @@ import org.joml.Vector2f;
 import physics2D.enums.BodyType;
 
 /**
- *
+ * Wrapper para traducir las variables de objetos fisicos rigidos de Box2D.
+ * Con esta clase se pueden controllar los objetos fisicos dentro de la simulacion de Box2D tanto parado como en ejecucion, 
+ * estas variables se traducen al objeto dentro del juego mientras Box2D calcula sus valores
  * @author txaber gardeazabal
  */
 public class Rigidbody2D extends Component{
@@ -45,7 +47,6 @@ public class Rigidbody2D extends Component{
             }
         }
         
-        //System.out.println(this.gameObject.transform.position.x +" "+this.gameObject.transform.position.y);
     }
     
     public void addVelocity(Vector2f force) {

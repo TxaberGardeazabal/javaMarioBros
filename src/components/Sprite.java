@@ -9,7 +9,7 @@ import org.joml.Vector2f;
 import render.Texture;
 
 /**
- *
+ * Esta clase engloba la representacion de imagenes graficas 2D (sprites) dentro del mundo
  * @author txaber
  */
 public class Sprite {

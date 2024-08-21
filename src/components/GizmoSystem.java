@@ -5,11 +5,10 @@
 package components;
 
 import gameEngine.KeyListener;
-import gameEngine.Window;
 import util.Settings;
 
 /**
- *
+ * Componente que controla las funcionalidades del sistema de gizmos.
  * @author txaber gardeazabal
  */
 public class GizmoSystem extends Component{

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * Un evento sirve para mandar informacion a objetos en diferentes niveles de abstraccion de manera sencilla.
  * @author txaber gardeazabal
  */
 public class Event {
@@ -30,6 +30,11 @@ public class Event {
         this.type = EventType.UserEvent;
     }
     
+    /**
+     * Accede a la informacion contenida dentro del evento.
+     * @param name label de la informacion a recibir
+     * @return un string con la informacion solicitada, si no existe o no se pudo encontrar devolvera null
+     */
     public String getPayload(String name) {
         return this.payload.getOrDefault(name, null);
     }

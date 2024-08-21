@@ -4,11 +4,7 @@
  */
 package components;
 
-import components.SpriteSheet;
-import components.SpriteRenderer;
-import components.Frame;
-import components.AnimationState;
-import components.Component;
+import editor.ConsoleWindow;
 import imgui.ImGui;
 import imgui.type.ImBoolean;
 import imgui.type.ImString;
@@ -18,10 +14,14 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- *
+ * Clase controladora de animaciones basadas en sprites. El componente statemachine controla las diferentes
+ * animaciones de un objeto grafico asi como los cambios de estado entre una animacion y otra.
  * @author txaber gardeazabal
  */
 public class StateMachine extends Component{
+    /**
+     * Una clase para poder notificar los cambios de animacion es necesaria
+     */
     private class StateTrigger {
         public String state;
         public String trigger;
@@ -49,20 +49,37 @@ public class StateMachine extends Component{
     private transient AnimationState currentState = null;
     private String defaultStateTitle = "";
     
+    /**
+     * Refresca las texturas de todos los frames de animacion
+     */
     public void refreshTextures() {
         for (AnimationState state : states) {
             state.refreshTexture();
         }
     }
     
+    /**
+     * define un cambio de una animacion a otra mediante una palabra "trigger"
+     * @param from el identificador de la animacion origen
+     * @param to el identificador de la animacion destino
+     * @param onTrigger palabra clave para notificar el cambio
+     */
     public void addStateTrigger(String from, String to, String onTrigger) {
         this.stateTransfers.put(new StateTrigger(from, onTrigger), to);
     }
     
+    /**
+     * Incuye una animacion
+     * @param state la animacion a guardar
+     */
     public void addState(AnimationState state) {
         this.states.add(state);
     }
     
+    /**
+     * Define una animacion como el primer estado
+     * @param animTitle identificador de la animacion por defecto
+     */
     public void setDefaultState(String animTitle) {
         for (AnimationState state: states) {
             if (state.title.equals(animTitle)) {
@@ -73,10 +90,13 @@ public class StateMachine extends Component{
                 }
             }
         }
-        
-        System.out.println("Unable to find state '"+animTitle+"' in set default state");
+        ConsoleWindow.addLog("Unable to find state '"+animTitle+"' in set default state", ConsoleWindow.LogCategory.warning);
     }
     
+    /**
+     * Notifica un cambio de animacion.
+     * @param trigger palabra clave del cambio
+     */
     public void trigger(String trigger) {
         for (StateTrigger state : stateTransfers.keySet()) {
             if (state.state.equals(currentState.title) && state.trigger.equals(trigger)) {
@@ -98,10 +118,18 @@ public class StateMachine extends Component{
                 return;
             }
         }
-        
-        //System.out.println("unable to find trigger " + trigger);
+        //ConsoleWindow.addLog("unable to find trigger " + trigger, ConsoleWindow.LogCategory.info);
     }
     
+    /**
+     * Altera todos los sprites de todas las animaciones con los de un spritesheet diferente.
+     * el orden numerico de los sprites cambiados seran siendo los mismos, por ello
+     * es importante que el nuevo spritesheet respete el orden original de los sprites,
+     * se puede usar mientras corre el juego sin problemas
+     * 
+     * @param spriteSheet el spritesheet nuevo
+     * @param offset distancia numerica relativa de los sprites originales hacia el nuevo spritesheet
+     */
     public void changeUsingSpriteSheet(SpriteSheet spriteSheet, int offset) {
         for (AnimationState state : states) {
             state.changeUsingSpriteSheet(spriteSheet, offset);

@@ -5,7 +5,7 @@
 package observers.events;
 
 /**
- *
+ * Tipos de eventos
  * @author txaber gardeazabal
  */
 public enum EventType {

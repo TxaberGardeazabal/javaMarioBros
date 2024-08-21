@@ -15,7 +15,8 @@ import observers.events.Event;
 import observers.events.EventType;
 import org.joml.Vector2f;
 /**
- *
+ * Controlador de ventana principal del juego.
+ * En esta ventana se muestra todo el juego parado o en marcha
  * @author txaber gardeazabal
  */
 public class GameViewWindow {
@@ -24,6 +25,9 @@ public class GameViewWindow {
     private boolean isPlaying = false;
     private boolean showMenuBar = true;
     
+    /**
+     * Ejecuta codigo imgui para mostrar y actualizar la ventana
+     */
     public void imGui() {
         ImGui.begin("Game viewport", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse
                         | ImGuiWindowFlags.MenuBar);
@@ -70,6 +74,10 @@ public class GameViewWindow {
         ImGui.end();
     }
     
+    /**
+     * Calcula el tamaño de la ventana
+     * @return un vector con la posicion mas lejana de la ventana
+     */
     private ImVec2 getLargestSizeForViewport() {
         ImVec2 windowSize = new ImVec2();
         ImGui.getContentRegionAvail(windowSize);
@@ -84,6 +92,11 @@ public class GameViewWindow {
         return new ImVec2(aspectWidth,aspectHeight);
     }
     
+    /**
+     * calcula el punto medio de la ventana
+     * @param aspectSize un vector con la posicion centrada relativa de la ventana
+     * @return 
+     */
     private ImVec2 getCenteredPositionForViewport(ImVec2 aspectSize) {
         ImVec2 windowSize = new ImVec2();
         ImGui.getContentRegionAvail(windowSize);
@@ -103,13 +116,22 @@ public class GameViewWindow {
         this.showMenuBar = showMenuBar;
     }
     
+    /**
+     * Calcula si el cursor esta dentro de la ventana
+     * @return true si el cursor esta dentro del borde de la ventana, false de lo contrario
+     */
     public boolean getWantCaptureMouse() {
         return MouseListener.getX() >= leftX && MouseListener.getX() <= rightX &&
                 MouseListener.getY() <= topY && MouseListener.getY() >= bottomY; // inverted top-bottom
     }
     
+    /**
+     * Lanza un mensaje con la posicion del cursor en relacion a las dimensiones de la ventana, solo para debugging.
+     */
     public void debugSoutViewportBounds() {
-        System.out.println(String.valueOf(leftX) + " " + String.valueOf(rightX) + " " + String.valueOf(bottomY) + " " + String.valueOf(topY));
-        System.out.println(String.valueOf("mouse position= " + MouseListener.getX()) + " " + String.valueOf(MouseListener.getY()));
+        ConsoleWindow.addLog("Window dimentions " + String.valueOf(leftX) + " " + String.valueOf(rightX) + " " + String.valueOf(bottomY) + " " + String.valueOf(topY), 
+                ConsoleWindow.LogCategory.info);
+        ConsoleWindow.addLog(String.valueOf("mouse position= " + MouseListener.getX()) + " " + String.valueOf(MouseListener.getY()), 
+                ConsoleWindow.LogCategory.info);
     }
 }

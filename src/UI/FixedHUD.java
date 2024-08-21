@@ -10,7 +10,7 @@ import gameEngine.GameObject;
 import gameEngine.Window;
 
 /**
- *
+ * Clase para componentes del HUD principal, que mantienen su posicion relativa a la camara
  * @author txaber gardeazabal
  */
 public class FixedHUD extends Component{

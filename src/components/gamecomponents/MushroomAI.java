@@ -4,39 +4,41 @@
  */
 package components.gamecomponents;
 
-import components.Component;
+import components.PhysicsController;
 import gameEngine.GameObject;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
-import physics2D.components.Rigidbody2D;
-import util.AssetPool;
 
 /**
- *
+ * Controllador del powerup champiñon
  * @author txaber gardeazabal
  */
-public class MushroomAI extends Component{
+public class MushroomAI extends PhysicsController {
     private transient boolean goingRight = true;
-    private transient Rigidbody2D rb;
-    private transient Vector2f speed = new Vector2f(1.0f, 0.0f);
-    private transient float maxSpeed = 0.8f;
+    private transient float speed = 0.8f;
     private transient boolean hitPlayer = false;
     
     @Override
     public void start() {
-        this.rb = gameObject.getComponent(Rigidbody2D.class);
-        AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
+        super.start();
+        hasGravity = false;
     }
     
     @Override
     public void update(float dt) {
-        if (Math.abs(rb.getVelocity().x) < maxSpeed) {
-            if (goingRight) {
-                rb.addVelocity(speed);
-            } else {
-                rb.addVelocity(new Vector2f(-speed.x, speed.y));
-            }
+        
+        if (goingRight) {
+            velocity.x = speed;
+        } else {
+            velocity.x = -speed;
         }
+        
+        if (checkOnGround()) {
+            velocity.y = 0;
+        } else {
+            addGravity();
+        }
+        applyForces(dt);
     }
     
     @Override

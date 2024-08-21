@@ -5,12 +5,10 @@
  */
 package render;
 
-import components.FontRenderer;
 import gameEngine.Window;
 import components.SpriteRenderer;
 import gameEngine.GameObject;
 import java.util.ArrayList;
-import java.util.Arrays;
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
@@ -35,8 +33,9 @@ import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
 
 /**
- * Renders the main windows contents by sending data to the GPU, basically different batches render sprites
- * that exist inside the scene gameobjects
+ * Renderiza el aspecto grafico de los objetos en escena en el GPU.
+ * Multiples batches pueden renderizar una cantidad definida de sprites basandose en 7 texturas diferentes y en orden del z-index,
+ * esto incluye spriteRenderer, UI, animaciones, particulas y mas...
  * @author txaber
  */
 public class RenderBatch implements Comparable<RenderBatch>{
@@ -88,6 +87,9 @@ public class RenderBatch implements Comparable<RenderBatch>{
         this.renderer = renderer;
     }
     
+    /**
+     * inicializa esta clase en la GPU, llamado antes del primer frame.
+     */
     public void start() {
         // generate and bind VAO
         vaoID = glGenVertexArrays();
@@ -117,6 +119,11 @@ public class RenderBatch implements Comparable<RenderBatch>{
         glEnableVertexAttribArray(4);
     }
     
+    /**
+     * Añade un sprite para dibujar.
+     * Esta funcion no comprueba si el batch esta lleno antes de añadir
+     * @param spr 
+     */
     public void addSprite(SpriteRenderer spr) {
         // get index and add renderObject
         // next index = lenght - 1 + 1
@@ -137,6 +144,9 @@ public class RenderBatch implements Comparable<RenderBatch>{
         }
     }
     
+    /**
+     * dibuja todos los sprites de este batch en el GPU
+     */
     public void render() {
         // for testing
         //System.out.println("sprites: " + numSprites+"/"+maxBatchSize +" textures: "+ textures.size()+"/"+(texSlots.length-1)+" spritefull: "+!hasRoom+" texture full: "+ !this.hasTextureRoom()+ " zIndex: "+zIndex);
@@ -197,6 +207,10 @@ public class RenderBatch implements Comparable<RenderBatch>{
         shader.detach();
     }
 
+    /**
+     * Crea la lista de indices para el GPU
+     * @return 
+     */
     private int[] generateIndices() {
         // 6 indices per quad (3 * 2)
         int[] elements = new int[6 * maxBatchSize];
@@ -207,6 +221,11 @@ public class RenderBatch implements Comparable<RenderBatch>{
         return elements;
     }
 
+    /**
+     * Carga los indices de cada elemento individual
+     * @param elements el array de indices donde guardar el resultado
+     * @param index numero de indices generados / 6
+     */
     private void loadElementIndices(int[] elements, int index) {
         int offsetArrayIndex = 6 * index;
         int offset = 4 * index;
@@ -222,6 +241,12 @@ public class RenderBatch implements Comparable<RenderBatch>{
         elements[offsetArrayIndex +5] = offset + 1;
     }
     
+    /**
+     * Elimina del batch el sprite del objeto especifico.
+     * Esta funcion se llama cuando se borra un objeto.
+     * @param go el gameobject que contiene un spriterenderer
+     * @return true si se encuentra el sprite del objeto enviado, false de lo contrario
+     */
     public boolean destroyIfExists(GameObject go) {
         SpriteRenderer spr = go.getComponent(SpriteRenderer.class);
         for (int i = 0; i < numSprites; i++) {
@@ -238,6 +263,10 @@ public class RenderBatch implements Comparable<RenderBatch>{
         return false;
     }
 
+    /**
+     * Carga cada sprite individual en el array para pasar al GPU
+     * @param index indice de la lista de sprites
+     */
     private void loadVertexProperties(int index) {
         SpriteRenderer sprite = this.sprites[index];
         
@@ -320,14 +349,27 @@ public class RenderBatch implements Comparable<RenderBatch>{
         
     }
 
+    /**
+     * 
+     * @return true si la lista de sprites no esta lleno, false de lo contrario
+     */
     public boolean hasRoom() {
         return hasRoom;
     }
     
+    /**
+     * 
+     * @return true si el array de texturas no esta lleno, false de lo contrario
+     */
     public boolean hasTextureRoom() {
         return this.textures.size() < texSlots.length -1;
     }
     
+    /**
+     * 
+     * @param tex Textura a buscar
+     * @return true si la textura existe dentro de la lista de este batch, false de lo contrario
+     */
     public boolean hasTexture(Texture tex) {
         return this.textures.contains(tex);
     }

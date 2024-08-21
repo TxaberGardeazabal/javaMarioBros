@@ -15,7 +15,7 @@ import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
 
 /**
- *
+ * Deserializer especial para Componentes
  * @author txaber gardeazabal
  */
 public class ComponentDeserializer implements JsonSerializer<Component>, JsonDeserializer<Component>{

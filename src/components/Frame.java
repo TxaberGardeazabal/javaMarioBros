@@ -5,7 +5,7 @@
 package components;
 
 /**
- *
+ * Cada frame individual de una animacion
  * @author txaber gardeazabal
  */
 public class Frame {
@@ -13,9 +13,7 @@ public class Frame {
     public float frameTime;
     public int spriteNumber = 0;
     
-    public Frame() {
-        
-    }
+    public Frame() {}
     
     public Frame(Sprite sprite, float time) {
         this.sprite = sprite;

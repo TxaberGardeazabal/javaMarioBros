@@ -5,16 +5,18 @@
 package UI;
 
 import components.Component;
+import editor.ConsoleWindow;
 import gameEngine.GameObject;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- *
+ * Componente de UI que usa digitos individuales para mostrar un display con numeros que se pueden cambiar en tiempo real,
+ * no puede hacer lo mismo con texto
  * @author txaber gardeazabal
  */
-public class Digitalizer extends Component{
+public class Digitalizer extends Component {
     
     private ArrayList<Digit> digits = new ArrayList<>();
     private int value = 0;
@@ -35,13 +37,20 @@ public class Digitalizer extends Component{
     
     @Override
     public void update(float dt) {
-        add(1);
     }
     
+    /**
+     * Añade un valor al valor actual.
+     * @param number el valor a añadir
+     */
     public void add(int number) {
         setValue(value+number);
     }
 
+    /**
+     * Resta un valor al valor actual.
+     * @param number el valor a restar
+     */
     public void sub(int number) {
         setValue(value-number);
     }
@@ -57,7 +66,8 @@ public class Digitalizer extends Component{
         String[] valArray = String.valueOf(value).split("");
         if (valArray.length > this.digits.size()) {
             // to long to display
-            System.out.println("warning: number "+value+" too long to be diplayed for size "+this.digits.size()+" in "+this.gameObject.name);
+            ConsoleWindow.addLog("warning: number "+value+" too long to be diplayed for size "+this.digits.size()+" in "+this.gameObject.name,
+                    ConsoleWindow.LogCategory.warning);
             valArray = new String [this.digits.size()];
             Arrays.fill(valArray, "9");
         }
@@ -67,11 +77,15 @@ public class Digitalizer extends Component{
             digits.get(i+diff-1).setDigit(valArray[i-1]);
             
             if (Integer.parseInt(valArray[i-1]) > 9 || Integer.parseInt(valArray[i-1]) < 0) {
-                System.out.println("warning: number "+valArray[i-1]+" cannot be displayed in a single digit in "+this.gameObject.name);
+                ConsoleWindow.addLog("number "+valArray[i-1]+" cannot be displayed in a single digit in "+this.gameObject.name,
+                        ConsoleWindow.LogCategory.warning);
             }
         }
     }
     
+    /**
+    *   @return la cantidad de digitos numericos del display.
+    */
     public int getMaxSize() {
         return this.digits.size();
     }

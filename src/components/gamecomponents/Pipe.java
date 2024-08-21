@@ -15,7 +15,7 @@ import util.AssetPool;
 import util.Settings;
 
 /**
- *
+ * Tuberias que llevan a mario a otras zonas
  * @author txaber gardeazabal
  */
 public class Pipe extends Component {
@@ -98,7 +98,11 @@ public class Pipe extends Component {
         }
     }
 
-    
+    /**
+     * Devuelve la posicion donde mario debe aparecer en la tuberia destino.
+     * @param pipe el gameobject con el componente de la tuberia destino
+     * @return la posicion encima de la boca de la tuberia, si no se encuentra el componente devuelve un vector vacio.
+     */
     private Vector2f getPlayerPosition(GameObject pipe) {
         Pipe pipeComponent = pipe.getComponent(Pipe.class);
         if (pipeComponent != null) {
@@ -117,6 +121,10 @@ public class Pipe extends Component {
         
     }
     
+    /**
+     * Comprueba si mario esta sobre la entrada de la tuberia
+     * @return true si esta sobre la entrada de la tuberia, da igual la direccion, false de lo contrario
+     */
     public boolean playerAtEntrance() {
         if (collidingPlayer == null) {
             return false;

@@ -5,7 +5,7 @@
 package UI;
 
 /**
- *
+ * Clase del que heredan todas las funciones a ejecutar cuando se pulsa en elementos pulsables del UI
  * @author txaber gardeazabal
  */
 public interface ButtonBehavior {

@@ -7,7 +7,7 @@ package components.propertieComponents;
 import components.Component;
 
 /**
- *
+ * Define el objeto como "suelo" que no puede ser atravesado.
  * @author txaber gardeazabal
  */
 public class Ground extends Component{

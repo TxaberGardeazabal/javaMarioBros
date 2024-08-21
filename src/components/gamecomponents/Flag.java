@@ -7,7 +7,7 @@ package components.gamecomponents;
 import components.Component;
 
 /**
- *
+ * La bandera arriba del poste al final del nivel
  * @author txaber gardeazabal
  */
 public class Flag extends Component{

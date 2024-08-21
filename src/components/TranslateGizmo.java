@@ -9,7 +9,8 @@ import gameEngine.MouseListener;
 import util.Settings;
 
 /**
- *
+ * Componente del sistema de gizmos para mover objetos.
+ * la mayoria de funcionalidades estan en la clase Gizmo
  * @author txaber gardeazabal
  */
 public class TranslateGizmo extends Gizmo {
@@ -38,6 +39,9 @@ public class TranslateGizmo extends Gizmo {
         super.editorUpdate(dt);
     }
     
+    /**
+     * Mueve el objeto seleccionado y todos sus hijos en el eje X
+     */
     private void moveX() {
         mouseMoveX += MouseListener.getWorldDX();
                 
@@ -55,6 +59,9 @@ public class TranslateGizmo extends Gizmo {
         }
     }
     
+    /**
+     * Mueve el objeto seleccionado y todos sus hijos en el eje Y
+     */
     private void moveY() {
         mouseMoveY += MouseListener.getWorldDY();
                 

@@ -7,7 +7,7 @@ package physics2D.components;
 import components.Component;
 
 /**
- *
+ * Actua como wrapper para englobar la colisiones de objetos fisicos
  * @author txaber gardeazabal
  */
 public abstract class Collider extends Component{

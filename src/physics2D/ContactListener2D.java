@@ -14,7 +14,8 @@ import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 
 /**
- *
+ * Implementacion de la clase contactListener de box2D.
+ * Controla los datos de interacciones entre dos objetos fisicos del mundo, lo que significa que ocurre cuando dos objetos fisicos se tocan
  * @author txaber gardeazabal
  */
 public class ContactListener2D implements ContactListener{

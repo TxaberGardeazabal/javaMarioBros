@@ -23,7 +23,7 @@ import util.AssetPool;
 import util.Settings;
 
 /**
- *
+ * Controles del jugador
  * @author txaber gardeazabal
  */
 public class PlayerController extends PhysicsController {
@@ -63,6 +63,10 @@ public class PlayerController extends PhysicsController {
     private transient int transformFramesLeft = 0;
     private transient int invincBlinkFrames = 0;
     
+    /**
+     * Esta mario en su estado de victoria
+     * @return true si mario esta en su estado de victoria, false de lo contrario
+     */
     public boolean hasWon() {
         // technically when mario wins inmediatly starts its winAnimation
         return playWinAnimation;
@@ -85,7 +89,6 @@ public class PlayerController extends PhysicsController {
     
     @Override
     public void update(float dt) {
-        //System.out.println(this.terminalVelocity.y);
         if (isDead) {
             dieAnimation(dt);
             return;
@@ -243,7 +246,6 @@ public class PlayerController extends PhysicsController {
             
         } else if (!onGround) {
             if (this.jumpTime > 0) {
-                //System.out.println(this.velocity.y);
                 this.velocity.y *= 0.5f;
                 this.jumpTime = 0;
             }
@@ -384,6 +386,10 @@ public class PlayerController extends PhysicsController {
     
     private transient int dieStopFrames = 65;
     private transient int framesBeforeRestart = 400;
+    /**
+     * Ejecuta la animacion de muerte de mario
+     * @param dt delta time
+     */
     public void dieAnimation(float dt) {
 
         if (dieStopFrames > 0) {
@@ -406,6 +412,10 @@ public class PlayerController extends PhysicsController {
         }
     }
     
+    /**
+     * Ejecuta la animacion de transformacion de mario
+     * @param dt delta time
+     */
     public void transformAnimation(float dt) {
         transformFramesLeft--;
         stopAllForces();
@@ -427,6 +437,10 @@ public class PlayerController extends PhysicsController {
     }
     
     public transient int blinkS = 0;
+    /**
+     * Ejecuta la animacion de parpadeo estrella de mario, mario es invencible durante esta animacion y mata enemigos al contacto
+     * @param dt delta time
+     */
     public void blinkAnimation(float dt) {
         invincBlinkFrames--;
         if (!isInvincible) {
@@ -466,6 +480,10 @@ public class PlayerController extends PhysicsController {
         }
     }
     
+    /**
+     * Ejecuta la animacion de parpadeo de mario, mario es invencible durante ensta animacion
+     * @param dt delta time
+     */
     public void hurtBlink(float dt) {
         SpriteRenderer spr = this.gameObject.getComponent(SpriteRenderer.class);
         if (hurtInvincibilityFramesLeft % 8 == 0) {
@@ -492,6 +510,10 @@ public class PlayerController extends PhysicsController {
     private transient boolean playWinAnimation = false;
     private transient float timeToCastle = 4.5f;
     private transient float walkTime = 2.2f;
+    /**
+     * Ejecuta la animacion de victoria de mario
+     * @param flagPole el gameobject de la bandera (para la posicion)
+     */
     public void playWinAnimation(GameObject flagPole) {
         if (!playWinAnimation) {
             playWinAnimation = true;

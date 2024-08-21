@@ -4,15 +4,8 @@
  */
 package render;
 
-import components.FontRenderer;
-import components.SpriteRenderer;
-import gameEngine.GameObject;
 import gameEngine.Window;
-import java.util.ArrayList;
 import java.util.Arrays;
-import org.joml.Matrix4f;
-import org.joml.Vector2f;
-import org.joml.Vector4f;
 import static org.lwjgl.opengl.ARBVertexArrayObject.glGenVertexArrays;
 import static org.lwjgl.opengl.GL11.GL_FLOAT;
 import static org.lwjgl.opengl.GL11.GL_TRIANGLES;
@@ -29,7 +22,6 @@ import static org.lwjgl.opengl.GL15.glBindBuffer;
 import static org.lwjgl.opengl.GL15.glBufferData;
 import static org.lwjgl.opengl.GL15.glBufferSubData;
 import static org.lwjgl.opengl.GL15.glGenBuffers;
-import static org.lwjgl.opengl.GL20.glDisableVertexAttribArray;
 import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
 import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
@@ -37,7 +29,8 @@ import static org.lwjgl.opengl.GL31.GL_TEXTURE_BUFFER;
 import util.AssetPool;
 
 /**
- *
+ * El batch para dibujar texto en pantalla
+ * @deprecated 
  * @author txaber gardeazabal
  */
 public class FontRenderBatch{

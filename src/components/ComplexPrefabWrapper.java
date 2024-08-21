@@ -10,25 +10,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Clase de ayuda para poder añadir multiples objetos a la vez al nivel desde prefabs.
+ * Se hace una lista con todos los objetos que forman parte de un grupo para poder interacutar
+ * simultaneamente con todos
  * @author txaber gardeazabal
  */
 public class ComplexPrefabWrapper extends Component{
-    public List<GameObject> gameObjects = new ArrayList();
-    public List<Transform> ofsets = new ArrayList();
+    private List<GameObject> gameObjects = new ArrayList();
+    private List<Transform> ofsets = new ArrayList();
 
+    /**
+     * Devuelve todas las referencias a GOs
+     * @return la lista con los GOs
+     */
     public List<GameObject> getGameObjects() {
         return gameObjects;
     }
+    
+    /**
+     * Devuelve todos los ofsets de los GOs relativos al GO de esta clase
+     * @return la lista con los transform relativos paralelas a la lista de GOs
+     */
+    public List<Transform> getOfsets() {
+        return ofsets;
+    }
 
+    /**
+     * Añade una GO a la lista
+     * @param gameObject objeto a añadir a la lista
+     */
     public void addGameObject(GameObject gameObject) {
         this.gameObjects.add(gameObject);
         this.ofsets.add(gameObject.transform);
     }
-
-    public List<Transform> getOfsets() {
-        return ofsets;
-    }
-    
-    
 }

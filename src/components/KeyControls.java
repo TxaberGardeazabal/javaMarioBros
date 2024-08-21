@@ -14,7 +14,12 @@ import static org.lwjgl.glfw.GLFW.GLFW_KEY_LEFT_CONTROL;
 import util.Settings;
 
 /**
- *
+ * Componente que controla las acciones que hacen los inputs del teclado.
+ * Esta clase se usa solo en el editor y todas sus funcionalidades no llegan fuera de este.
+ * 
+ * @see la implementacion de esta clase y mouseControlls no es perfecta, me gustaria haberlo hecho de otra forma
+ * como tener esta clase en la propia escena en vez de añadirlo al nivel como componente,
+ * pero he llegado lejos como esta y no me interesa cambiarlo.
  * @author txaber gardeazabal
  */
 public class KeyControls extends Component {

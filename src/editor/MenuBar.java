@@ -22,10 +22,15 @@ import scene.MainMenuSceneInitializer;
 import util.Settings;
 
 /**
- *
+ * Controlador de la barra de menu del editor.
+ * Contiene las funcionalidades y herramientas principales de la barra de menu
  * @author txaber gardeazabal
  */
 public class MenuBar {
+    
+    /**
+     * Ejecuta codigo imgui para mostrar y actualizar la ventana
+     */
     public void imGui() {
         ImGui.beginMainMenuBar();
         if (ImGui.beginMenu("File")) {
@@ -228,6 +233,10 @@ public class MenuBar {
         ImGui.endMainMenuBar();
     }
     
+    /**
+     * Muestra una ventana para seleccionar niveles
+     * @return la ventana creada
+     */
     private JFileChooser configSaveWindow() {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setCurrentDirectory(new File("assets/levels"));

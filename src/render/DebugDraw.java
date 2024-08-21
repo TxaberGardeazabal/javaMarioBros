@@ -30,7 +30,8 @@ import util.AssetPool;
 import util.JMath;
 
 /**
- *
+ * Clase que dibuja lineas y otras formas geometricas en pantalla para debugear.
+ * Esta clase funciona de manera estatica, las nuevas lineas se añaden con llamadas a esta clase, todas las lineas se dibujan despues de dibijar la escena y encima de todos los gameobject. 
  * @author txaber gardeazabal
  */
 public class DebugDraw {
@@ -46,6 +47,9 @@ public class DebugDraw {
 
     private static boolean started = false;
     
+    /**
+     * inicializa esta clase en la GPU, llamado antes del primer frame.
+     */
     public static void start() {
         // generate the vao
         vaoID = glGenVertexArrays();
@@ -66,12 +70,14 @@ public class DebugDraw {
         glLineWidth(2.0f);
     }
     
+    /**
+     * Prepara para dibujar la siguiente frame
+     */
     public static void beginFrame(){
         if (!started) {
             start();
             started = true;
         }
-        //System.out.println(lines.size());
         
         // remove dead lines
         for (int i = lines.size(); i > 0; i--) {
@@ -81,6 +87,9 @@ public class DebugDraw {
         }
     }
     
+    /**
+     * Dibuja todas las lineas y formas guardadas en la pantalla
+     */
     public static void draw(){
         if (lines.size() <= 0) return;
             
@@ -138,6 +147,13 @@ public class DebugDraw {
         addLine2D(start, end, color,1);
     }
     
+    /**
+     * Guarda una linea para dibujar
+     * @param start punto A de la linea
+     * @param end punto B de la linea
+     * @param color color rgb de la linea
+     * @param lifetime cantidad de frames donde se va a dibujar la linea antes de borrarlo de la pantalla
+     */
     public static void addLine2D(Vector2f start,Vector2f end, Vector3f color, int lifetime){
         Camera camera = Window.getScene().camera();
         Vector2f cameraLeft = new Vector2f(camera.position).add(new Vector2f(-2.0f,-2.0f));
@@ -163,6 +179,14 @@ public class DebugDraw {
         addBox2D(center, dimentions, rotation,color,1);
     }
     
+    /**
+     * Guarda 4 lineas para dibujar un cuadrado.
+     * @param center posicion del centro del cuadrado
+     * @param dimentions dimensiones en x e y del cuadrado (pueden ser diferentes)
+     * @param rotation rotacion del cuadrado
+     * @param color color de las lineas del cuadrado
+     * @param lifetime cantidad de frames donde se va a dibujar la linea antes de borrarlo de la pantalla
+     */
     public static void addBox2D(Vector2f center,Vector2f dimentions, float rotation, Vector3f color, int lifetime){
         Vector2f min = new Vector2f(center).sub(new Vector2f(dimentions).mul(0.5f));
         Vector2f max = new Vector2f(center).add(new Vector2f(dimentions).mul(0.5f));
@@ -195,6 +219,13 @@ public class DebugDraw {
         addCircle2D(center, radius, color,1);
     }
     
+    /**
+     * Guarda 20 lineas para dibujar un circulo
+     * @param center posicion del centro del circulo
+     * @param radius radio del circulo
+     * @param color color rgb de la circumferencia
+     * @param lifetime cantidad de frames donde se va a dibujar la linea antes de borrarlo de la pantalla
+     */
     public static void addCircle2D(Vector2f center,float radius, Vector3f color, int lifetime){
         Vector2f[] points = new Vector2f[20];
         int increment = 360 / points.length;

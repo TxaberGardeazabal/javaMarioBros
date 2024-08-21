@@ -5,14 +5,13 @@
 package components.gamecomponents;
 
 import components.Component;
-import components.gamecomponents.PlayerController;
 import gameEngine.GameObject;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import util.AssetPool;
 
 /**
- *
+ * Funcionalidad general de los bloques interactuables por mario en el nivel
  * @author txaber gardeazabal
  */
 public abstract class Block extends Component{
@@ -61,9 +60,16 @@ public abstract class Block extends Component{
         }
     }
     
+    /**
+     * Pone el bloque en su estado 'inactivo'
+     */
     public void setInactive() {
         this.active = false;
     }
     
+    /**
+     * Funcion a ejecutar cuando mario golpea el bloque
+     * @param playerController 
+     */
     protected abstract void playerHit(PlayerController playerController);
 }

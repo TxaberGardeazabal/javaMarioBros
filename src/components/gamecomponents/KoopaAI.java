@@ -5,22 +5,15 @@
 package components.gamecomponents;
 
 import components.Component;
-import components.gamecomponents.PlayerController;
-import components.StateMachine;
-import gameEngine.Camera;
 import gameEngine.GameObject;
 import gameEngine.Window;
 import java.util.List;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
-import physics2D.Physics2D;
-import physics2D.components.CircleCollider;
-import physics2D.components.Rigidbody2D;
 import util.AssetPool;
-import util.Settings;
 
 /**
- *
+ * Controllador del enemigo goomba
  * @author txaber gardeazabal
  */
 public class KoopaAI extends Enemy {
@@ -62,10 +55,11 @@ public class KoopaAI extends Enemy {
         applyForces(dt);
         
         // removes when falling of the level
+        /*
         if (this.gameObject.transform.position.x < Window.getScene().camera().position.x - 0.5f 
                 || this.gameObject.transform.position.y < 0.0f) {
             this.gameObject.destroy();
-        }
+        }*/
     }
      
     @Override

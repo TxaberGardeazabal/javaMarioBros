@@ -6,6 +6,7 @@
 package util;
 
 import components.SpriteSheet;
+import editor.ConsoleWindow;
 import gameEngine.Sound;
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +17,10 @@ import render.Shader;
 import render.Texture;
 
 /**
- *
+ * Clase que engloba la base de datos de assets disponibles.
+ * La clase assetPool contiene las referencias a todos los assets que tiene el motor, estos incluyen
+ * texturas, shaders, spritesheets y sonidos, estos se cargan al iniciar el nivel y pueden ser accedidos con
+ * llamadas estaticas a esta clase, usando la ruta relativa como referencia al asset a buscar
  * @author txaber
  */
 public class AssetPool {
@@ -25,6 +29,11 @@ public class AssetPool {
     private static Map<String, SpriteSheet> spriteSheets = new HashMap<>();
     private static Map<String, Sound> sounds = new HashMap<>();
     
+    /**
+     * Busca un shader dentro de la base de datos.
+     * @param name string clave (ruta relativa) del asset
+     * @return el shader relacionado con la clave, o null si no existe.
+     */
     public static Shader getShader(String name) {
         try {
             File file = new File(name);
@@ -42,11 +51,16 @@ public class AssetPool {
                 return shader;
             }
         } catch (IOException e) {
-            System.out.println("error: could not find texture "+name);
+            ConsoleWindow.addLog("error: could not find texture "+name+"\n"+e.getMessage(), ConsoleWindow.LogCategory.warning);
         }
         return null;
     }
     
+    /**
+     * Busca una textura dentro de la base de datos.
+     * @param name string clave (ruta relativa) del asset
+     * @return la textura relacionado con la clave, o null si no existe.
+     */
     public static Texture getTexture(String name) {
         try {
             File file = new File(name);
@@ -64,11 +78,17 @@ public class AssetPool {
                 return texture;
             }
         } catch (IOException e) {
-            System.out.println("error: could not find texture "+name+" "+e.getMessage());
+            ConsoleWindow.addLog("error: could not find texture "+name+"\n"+e.getMessage(), ConsoleWindow.LogCategory.warning);
         }
         return null;
     }
     
+    /**
+     * Añade un spritesheet a la base de datos de assets.
+     * @param name string clave (ruta relativa) del asset
+     * @param spriteSheet el spritesheet
+     * @return el spritesheet si ha sido añadido, si no fue añadido correctamente devuelve null.
+     */
     public static SpriteSheet addSpritesheet(String name, SpriteSheet spriteSheet) {
         try {
             File file = new File(name);
@@ -81,20 +101,31 @@ public class AssetPool {
             }
             return AssetPool.spriteSheets.getOrDefault(file.getAbsolutePath(), null);
         } catch (IOException e) {
-            System.out.println("error: could not find spriteSheet "+name+" "+e.getMessage());
+            ConsoleWindow.addLog("error: could not find spriteSheet "+name+"\n"+e.getMessage(), ConsoleWindow.LogCategory.warning);
         }
         return null;
     }
     
+    /**
+     * Busca un spritesheet dentro de la base de datos.
+     * @param name string clave (ruta relativa) del asset
+     * @return el spritesheet relacionado con la clave, o null si no existe.
+     */
     public static SpriteSheet getSpritesheet(String name) {
         File file = new File(name);
         if (!AssetPool.spriteSheets.containsKey(file.getAbsolutePath())) {
-            assert false : "ERROR: (assetpool) tried to access spritesheet "+name+" and it has not been added yet";
+            ConsoleWindow.addLog("ERROR: (assetpool) tried to access spritesheet "+name+" and it has not been added yet", ConsoleWindow.LogCategory.warning);
         }
         
         return AssetPool.spriteSheets.getOrDefault(file.getAbsolutePath(), null);
     }
     
+    /**
+     * Añade un audio a la base de datos de assets.
+     * @param name string clave (ruta relativa) del asset
+     * @param loops si el audio tiene bucle
+     * @return el audio si ha sido añadido, si no fue añadido correctamente devuelve null.
+     */
     public static Sound addSound(String name, boolean loops) {
         try {
             File file = new File(name);
@@ -108,15 +139,20 @@ public class AssetPool {
             }
             return AssetPool.sounds.get(file.getAbsolutePath());
         } catch (IOException e) {
-            System.out.println("error: could not find sound "+name);
+            ConsoleWindow.addLog("error: could not find sound "+name+"\n"+e.getMessage(), ConsoleWindow.LogCategory.warning);
         }
         return null;
     }
     
+    /**
+     * Busca un audio dentro de la base de datos.
+     * @param name string clave (ruta relativa) del asset
+     * @return el audio relacionado con la clave, o null si no existe.
+     */
     public static Sound getSound(String name) {
         File file = new File(name); 
         if (!AssetPool.sounds.containsKey(file.getAbsolutePath())) {
-            assert false : "ERROR: (assetpool) tried to access sound file "+name+" and it has not been added yet";
+            ConsoleWindow.addLog("ERROR: (assetpool) tried to access sound file "+name+" and it has not been added yet", ConsoleWindow.LogCategory.warning);
         }
         return AssetPool.sounds.get(file.getAbsolutePath());
     }

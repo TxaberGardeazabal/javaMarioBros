@@ -13,7 +13,7 @@ import org.joml.Vector4f;
 import util.AssetPool;
 
 /**
- *
+ * Bloque con interrogacion
  * @author txaber gardeazabal
  */
 public class ItemBlock extends Block{
@@ -135,6 +135,7 @@ public class ItemBlock extends Block{
     }
     
     private void spawn1up() {
+        AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     

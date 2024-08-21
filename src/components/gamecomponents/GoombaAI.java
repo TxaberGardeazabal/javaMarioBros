@@ -4,22 +4,14 @@
  */
 package components.gamecomponents;
 
-import components.Component;
-import components.gamecomponents.PlayerController;
-import components.StateMachine;
-import gameEngine.Camera;
 import gameEngine.GameObject;
 import gameEngine.Window;
-import java.util.List;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
-import physics2D.Physics2D;
-import physics2D.components.CircleCollider;
-import physics2D.components.Rigidbody2D;
 import util.AssetPool;
 
 /**
- *
+ * Controllador del enemigo goomba
  * @author txaber gardeazabal
  */
 public class GoombaAI extends Enemy {    
@@ -73,6 +65,10 @@ public class GoombaAI extends Enemy {
         stomp(true);
     }
 
+    /**
+     * Mata al goomba, llamado cuando mario lo pisa.
+     * @param playSound true para que suene el sonido de aplastado, false de lo contrario
+     */
     public void stomp(boolean playSound) {
         this.isStomped = true;
         stopAllForces();

@@ -4,7 +4,6 @@
  */
 package components;
 
-import components.Component;
 import gameEngine.Camera;
 import gameEngine.KeyListener;
 import gameEngine.MouseListener;
@@ -12,7 +11,8 @@ import org.joml.Vector2f;
 import util.Settings;
 
 /**
- *
+ * Camara en la vista de editor.
+ * incluye funcionalidades varias para ayudar a la edicion: como mouse drag, zoom y reset de posicion.
  * @author txaber gardeazabal
  */
 public class EditorCamera extends Component{
@@ -32,8 +32,6 @@ public class EditorCamera extends Component{
         this.levelEditorCamera = levelEditorCamera;
         this.clickOrigin = new Vector2f();
     }
-    
-    
     
     @Override
     public void editorUpdate(float dt) {

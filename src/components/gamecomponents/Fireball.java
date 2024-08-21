@@ -4,22 +4,19 @@
  */
 package components.gamecomponents;
 
-import components.Component;
 import components.PhysicsController;
-import gameEngine.Camera;
 import gameEngine.GameObject;
 import gameEngine.Window;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
-import physics2D.Physics2D;
-import physics2D.components.Rigidbody2D;
 import util.Settings;
 
 /**
- *
+ * Bola de fuego que lanza mario en su forma de mario fuego, las bolas botan por la pantalla
  * @author txaber gardeazabal
  */
 public class Fireball extends PhysicsController{
+    // cuantas bolas pueden existir al mismo de tiempo
     private static final int LIMIT = 4;
     private static int fireballCount;
     private transient float fireballSpeed = 1.7f;
@@ -27,7 +24,10 @@ public class Fireball extends PhysicsController{
     private transient float bounceForce = 1.5f;
     public transient boolean goingRight = false;
     
-    
+    /**
+     * Puede haber mas bolas en el nivel
+     * @return Bolas en el nivel < bolas maximas.
+     */
     public static boolean canSpawn()  {
         return fireballCount < LIMIT;
     }
@@ -46,13 +46,7 @@ public class Fireball extends PhysicsController{
             return;
         }
         
-        /*CircleCollider cc = gameObject.getComponent(CircleCollider.class);
-        if (!cc.showBoundaries) {
-            cc.showBoundaries = true;
-        }*/
-        
         rb.setAngularVelocity(rb.getAngularVelocity() - dt * 5);
-        //System.out.println(gameObject.transform.rotation);
         
         if (goingRight) {
             velocity.x = fireballSpeed;
@@ -87,11 +81,17 @@ public class Fireball extends PhysicsController{
         }
     }
     
+    /**
+     * Elimina la bola del nivel y actualiza la cantidad de estos
+     */
     public void delete() {
         fireballCount--;
         this.gameObject.destroy();
     }
     
+    /**
+     * Resetea la cantidad de bolas a 0
+     */
     public static void reset() {
         fireballCount = 0;
     }

@@ -1,1 +1,3238 @@
-[]
+[
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.125,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.375,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.625,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.875,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 2.125,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 2.375,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 2.625,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 2.875,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.125,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.375,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.625,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.875,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 4.125,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 4.375,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 4.625,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 26
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 27
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 28
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 29
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 30
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "item block",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 2.625,
+            "y": 1.375
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 33
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "height": 64,
+              "width": 64
+            },
+            "texCoords": [
+              {
+                "x": 0.5,
+                "y": 1.0
+              },
+              {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
+                "x": 0.25,
+                "y": 0.75
+              },
+              {
+                "x": 0.25,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 34
+        }
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "flicker",
+                "trigger": "setInactive"
+              },
+              "inactive"
+            ]
+          ],
+          "states": [
+            {
+              "title": "flicker",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "inactive",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "flicker",
+          "uid": 35
+        }
+      },
+      {
+        "type": "components.gamecomponents.ItemBlock",
+        "properties": {
+          "contents": "Mushroom",
+          "numberCoins": 5,
+          "isInvisible": false,
+          "bopSpeed": 0.4,
+          "uid": 36
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 37
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 38
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {
+          "uid": 39
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "mario",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 2.125,
+            "y": 0.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 1,
+          "uid": 42
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+              "height": 32,
+              "width": 240
+            },
+            "texCoords": [
+              {
+                "x": 0.06666667,
+                "y": 1.0
+              },
+              {
+                "x": 0.06666667,
+                "y": 0.5
+              },
+              {
+                "x": 0.0,
+                "y": 0.5
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 43
+        }
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "sprint",
+                "trigger": "stopMoving"
+              },
+              "idle"
+            ],
+            [
+              {
+                "state": "sprint",
+                "trigger": "jump"
+              },
+              "jump"
+            ],
+            [
+              {
+                "state": "skid",
+                "trigger": "stopMoving"
+              },
+              "idle"
+            ],
+            [
+              {
+                "state": "jump",
+                "trigger": "touchWater"
+              },
+              "swim"
+            ],
+            [
+              {
+                "state": "climb",
+                "trigger": "toWalk"
+              },
+              "walk"
+            ],
+            [
+              {
+                "state": "skid",
+                "trigger": "toSprint"
+              },
+              "sprint"
+            ],
+            [
+              {
+                "state": "shrink",
+                "trigger": "stopShrink"
+              },
+              "jump"
+            ],
+            [
+              {
+                "state": "flap",
+                "trigger": "resumeSwiming"
+              },
+              "swim"
+            ],
+            [
+              {
+                "state": "jump",
+                "trigger": "throwFireball"
+              },
+              "fireball"
+            ],
+            [
+              {
+                "state": "jump",
+                "trigger": "startShrink"
+              },
+              "shrink"
+            ],
+            [
+              {
+                "state": "jump",
+                "trigger": "die"
+              },
+              "die"
+            ],
+            [
+              {
+                "state": "sprint",
+                "trigger": "toSkid"
+              },
+              "skid"
+            ],
+            [
+              {
+                "state": "skid",
+                "trigger": "die"
+              },
+              "die"
+            ],
+            [
+              {
+                "state": "idle",
+                "trigger": "toSprint"
+              },
+              "sprint"
+            ],
+            [
+              {
+                "state": "idle",
+                "trigger": "toCrouch"
+              },
+              "crouch"
+            ],
+            [
+              {
+                "state": "idle",
+                "trigger": "toWalk"
+              },
+              "walk"
+            ],
+            [
+              {
+                "state": "jump",
+                "trigger": "startCimbing"
+              },
+              "climb"
+            ],
+            [
+              {
+                "state": "sprint",
+                "trigger": "die"
+              },
+              "die"
+            ],
+            [
+              {
+                "state": "walk",
+                "trigger": "jump"
+              },
+              "jump"
+            ],
+            [
+              {
+                "state": "idle",
+                "trigger": "jump"
+              },
+              "jump"
+            ],
+            [
+              {
+                "state": "walk",
+                "trigger": "stopMoving"
+              },
+              "idle"
+            ],
+            [
+              {
+                "state": "climb",
+                "trigger": "stopClimbing"
+              },
+              "jump"
+            ],
+            [
+              {
+                "state": "jump",
+                "trigger": "startGrow"
+              },
+              "grow"
+            ],
+            [
+              {
+                "state": "idle",
+                "trigger": "throwFireball"
+              },
+              "fireball"
+            ],
+            [
+              {
+                "state": "jump",
+                "trigger": "touchFloorIdle"
+              },
+              "idle"
+            ],
+            [
+              {
+                "state": "climb",
+                "trigger": "die"
+              },
+              "die"
+            ],
+            [
+              {
+                "state": "crouch",
+                "trigger": "die"
+              },
+              "die"
+            ],
+            [
+              {
+                "state": "swim",
+                "trigger": "exitWater"
+              },
+              "jump"
+            ],
+            [
+              {
+                "state": "sprint",
+                "trigger": "toWalk"
+              },
+              "walk"
+            ],
+            [
+              {
+                "state": "flap",
+                "trigger": "die"
+              },
+              "die"
+            ],
+            [
+              {
+                "state": "walk",
+                "trigger": "toCrouch"
+              },
+              "crouch"
+            ],
+            [
+              {
+                "state": "walk",
+                "trigger": "die"
+              },
+              "die"
+            ],
+            [
+              {
+                "state": "swim",
+                "trigger": "die"
+              },
+              "die"
+            ],
+            [
+              {
+                "state": "walk",
+                "trigger": "toSprint"
+              },
+              "sprint"
+            ],
+            [
+              {
+                "state": "fireball",
+                "trigger": "die"
+              },
+              "die"
+            ],
+            [
+              {
+                "state": "fireball",
+                "trigger": "jump"
+              },
+              "jump"
+            ],
+            [
+              {
+                "state": "swim",
+                "trigger": "flap"
+              },
+              "flap"
+            ],
+            [
+              {
+                "state": "idle",
+                "trigger": "die"
+              },
+              "die"
+            ],
+            [
+              {
+                "state": "sprint",
+                "trigger": "toCrouch"
+              },
+              "crouch"
+            ],
+            [
+              {
+                "state": "grow",
+                "trigger": "stopGrow"
+              },
+              "jump"
+            ],
+            [
+              {
+                "state": "skid",
+                "trigger": "toWalk"
+              },
+              "walk"
+            ],
+            [
+              {
+                "state": "crouch",
+                "trigger": "stopMoving"
+              },
+              "idle"
+            ],
+            [
+              {
+                "state": "fireball",
+                "trigger": "stopThrow"
+              },
+              "idle"
+            ]
+          ],
+          "states": [
+            {
+              "title": "idle",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.06666667,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.0,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            },
+            {
+              "title": "walk",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.13333334,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.19,
+                  "spriteNumber": 1
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.2,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.19,
+                  "spriteNumber": 2
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.26666668,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.26666668,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.19,
+                  "spriteNumber": 3
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "sprint",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.13333334,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.09,
+                  "spriteNumber": 1
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.2,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.09,
+                  "spriteNumber": 2
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.26666668,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.26666668,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.09,
+                  "spriteNumber": 3
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "skid",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.33333334,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.33333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.26666668,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.26666668,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.0,
+                  "spriteNumber": 4
+                }
+              ],
+              "doesLoop": false
+            },
+            {
+              "title": "jump",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.4,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.4,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.33333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.33333334,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.0,
+                  "spriteNumber": 5
+                }
+              ],
+              "doesLoop": false
+            },
+            {
+              "title": "climb",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.53333336,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.53333336,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.46666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.46666667,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.19,
+                  "spriteNumber": 7
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.6,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.6,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.53333336,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.53333336,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.19,
+                  "spriteNumber": 8
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "swim",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.93333334,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.93333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.8666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.8666667,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.19,
+                  "spriteNumber": 13
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.93333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.93333334,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.19,
+                  "spriteNumber": 14
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "flap",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.73333335,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.73333335,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.6666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.6666667,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.19,
+                  "spriteNumber": 10
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.8666667,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.8666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.19,
+                  "spriteNumber": 12
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.93333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.93333334,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.19,
+                  "spriteNumber": 14
+                }
+              ],
+              "doesLoop": false
+            },
+            {
+              "title": "crouch",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.46666667,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.46666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.4,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.4,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.0,
+                  "spriteNumber": 6
+                }
+              ],
+              "doesLoop": false
+            },
+            {
+              "title": "grow",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.06666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1,
+                  "spriteNumber": 15
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.06666667,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "shrink",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.06666667,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.06666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1,
+                  "spriteNumber": 15
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "fireball",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.13333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.0,
+                  "spriteNumber": 16
+                }
+              ],
+              "doesLoop": false
+            },
+            {
+              "title": "die",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                      "height": 32,
+                      "width": 240
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.46666667,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.46666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.4,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.4,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.0,
+                  "spriteNumber": 6
+                }
+              ],
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "idle",
+          "uid": 44
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 25.0,
+          "bodyType": "Dynamic",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false,
+          "uid": 45
+        }
+      },
+      {
+        "type": "physics2D.components.PillboxCollider",
+        "properties": {
+          "showBoundaries": false,
+          "width": 0.39,
+          "height": 0.31,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 46
+        }
+      },
+      {
+        "type": "components.gamecomponents.PlayerController",
+        "properties": {
+          "walkSpeed": 1.8,
+          "sprintSpeed": 3.0,
+          "accel": 3.0,
+          "jumpBoost": 1.0,
+          "slowdownForce": 0.05,
+          "playerState": "Small",
+          "terminalVelocity": {
+            "x": 3.0,
+            "y": 3.1
+          },
+          "hasGravity": true,
+          "innerWidth": 0.15,
+          "castVal": -0.14,
+          "uid": 47
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "mushroom",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 2.625,
+            "y": 1.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0,
+          "uid": 50
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
+              "height": 64,
+              "width": 144
+            },
+            "texCoords": [
+              {
+                "x": 0.11111111,
+                "y": 1.0
+              },
+              {
+                "x": 0.11111111,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 51
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Dynamic",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false,
+          "uid": 52
+        }
+      },
+      {
+        "type": "physics2D.components.CircleCollider",
+        "properties": {
+          "radius": 0.13,
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 53
+        }
+      },
+      {
+        "type": "components.gamecomponents.MushroomAI",
+        "properties": {
+          "terminalVelocity": {
+            "x": 10.0,
+            "y": 10.0
+          },
+          "hasGravity": false,
+          "innerWidth": 0.175,
+          "castVal": -0.14,
+          "uid": 54
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  }
+]
