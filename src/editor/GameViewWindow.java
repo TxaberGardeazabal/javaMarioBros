@@ -134,4 +134,12 @@ public class GameViewWindow {
         ConsoleWindow.addLog(String.valueOf("mouse position= " + MouseListener.getX()) + " " + String.valueOf(MouseListener.getY()), 
                 ConsoleWindow.LogCategory.info);
     }
+
+    public boolean isIsPlaying() {
+        return isPlaying;
+    }
+
+    public void setIsPlaying(boolean isPlaying) {
+        this.isPlaying = isPlaying;
+    }
 }

@@ -16,6 +16,7 @@ import components.SpriteRenderer;
 import components.SpriteSheet;
 import gameEngine.GameObject;
 import components.StateMachine;
+import components.gamecomponents.HoleLogic;
 import editor.ConsoleWindow;
 import gameEngine.ImGuiLayer;
 import gameEngine.Window;
@@ -60,6 +61,19 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         imGuiLayer.startPropertiesWindow(mc);
         imGuiLayer.startConsoleWindow();
         
+        GameObject overworldholeDetection = scene.createGameObject("overworldGround");
+        overworldholeDetection.transform.position.y += -0.5;
+        overworldholeDetection.setNoSerialize();
+        overworldholeDetection.addComponent(new HoleLogic());
+        overworldholeDetection.start();
+        scene.addGameObjectToScene(overworldholeDetection);
+        
+        GameObject undergroundholeDetection = scene.createGameObject("undergroundGround");
+        undergroundholeDetection.transform.position.y += -5;
+        undergroundholeDetection.setNoSerialize();
+        undergroundholeDetection.addComponent(new HoleLogic());
+        undergroundholeDetection.start();
+        scene.addGameObjectToScene(undergroundholeDetection);
     }
 
     @Override
@@ -234,14 +248,32 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
             case EditorStartPlay:
                 ConsoleWindow.addLog("begining play", ConsoleWindow.LogCategory.info);
                 Window.setRuntimePlaying(true);
-                Window.getScene().save();
+                Scene scene = Window.getScene();
+                scene.save();
+                
+                scene.camera().resetZoom();
                 
                 // add game camera
-                GameObject camera = Window.getScene().createGameObject("SceneCamera");
+                GameObject camera = scene.createGameObject("SceneCamera");
                 camera.setNoSerialize();
-                camera.addComponent(new GameCamera(Window.getScene().camera()));
+                camera.addComponent(new GameCamera(scene.camera()));
                 camera.start();
-                Window.getScene().addGameObjectToScene(camera);
+                scene.addGameObjectToScene(camera);
+                
+                // add hole killzones
+                GameObject overworldholeDetection = scene.createGameObject("overworldGround");
+                overworldholeDetection.transform.position.y += -0.5;
+                overworldholeDetection.setNoSerialize();
+                overworldholeDetection.addComponent(new HoleLogic());
+                overworldholeDetection.start();
+                scene.addGameObjectToScene(overworldholeDetection);
+
+                GameObject undergroundholeDetection = scene.createGameObject("undergroundGround");
+                undergroundholeDetection.transform.position.y += -5;
+                undergroundholeDetection.setNoSerialize();
+                undergroundholeDetection.addComponent(new HoleLogic());
+                undergroundholeDetection.start();
+                scene.addGameObjectToScene(undergroundholeDetection);
                 
                 Window.getImGuiLayer().getPropertiesWindow().getMc().destroyHoldingObject();
                 
@@ -250,6 +282,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
             case EditorStopPlay:
                 ConsoleWindow.addLog("ending play", ConsoleWindow.LogCategory.info);
                 Window.setRuntimePlaying(false);
+                Window.getImGuiLayer().getGameViewWindow().setIsPlaying(false);
                 
                 Window.changeScene(new LevelEditorSceneInitializer(), Window.getScene().getLevelFilepath());
                 break;

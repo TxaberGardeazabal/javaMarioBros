@@ -357,16 +357,17 @@ public class Prefab {
     }
 
     public static GameObject generateBlockCoin() {
-        SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
-        GameObject coin = generateSpriteObject(Sprites.getSprite(4), 0.25f, 0.25f);
+        SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/blockCoin.png");
+        GameObject coin = generateSpriteObject(Sprites.getSprite(0), 0.12f, 0.25f);
         coin.name = "coin particle";
         
         AnimationState idle = new AnimationState();
         idle.title = "flicker";
-        float defaultFrameTime = 0.23f;
-        idle.addFrame(Sprites.getSprite(4), defaultFrameTime);
-        idle.addFrame(Sprites.getSprite(5), defaultFrameTime);
-        idle.addFrame(Sprites.getSprite(6), defaultFrameTime);
+        float defaultFrameTime = 0.15f;
+        idle.addFrame(Sprites.getSprite(0), defaultFrameTime);
+        idle.addFrame(Sprites.getSprite(1), defaultFrameTime);
+        idle.addFrame(Sprites.getSprite(2), defaultFrameTime);
+        idle.addFrame(Sprites.getSprite(3), defaultFrameTime);
         idle.setLoop(true);
 
         StateMachine stateMachine = new StateMachine();

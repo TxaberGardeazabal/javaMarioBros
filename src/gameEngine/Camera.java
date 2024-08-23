@@ -104,4 +104,11 @@ public class Camera {
             this.zoom += value;
         }        
     }
+    
+    /**
+     * pone el zoom a 1
+     */
+    public void resetZoom() {
+        this.zoom = 1;
+    }
 }

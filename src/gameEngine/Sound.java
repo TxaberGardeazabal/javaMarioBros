@@ -4,6 +4,7 @@
  */
 package gameEngine;
 
+import editor.ConsoleWindow;
 import java.nio.IntBuffer;
 import java.nio.ShortBuffer;
 import static org.lwjgl.openal.AL10.AL_BUFFER;
@@ -53,7 +54,7 @@ public class Sound {
         ShortBuffer rawAudioBuffer = 
                 stb_vorbis_decode_filename(filepath, channelBuffer,sampleRateBuffer);
         if (rawAudioBuffer == null) {
-            System.out.println("Could not load sound: "+filepath);
+            ConsoleWindow.addLog("Could not load sound: "+filepath, ConsoleWindow.LogCategory.warning);
             stackPop();
             stackPop();
             return;

@@ -12,13 +12,19 @@ import gameEngine.GameObject;
 import gameEngine.KeyListener;
 import gameEngine.Prefab;
 import gameEngine.Window;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 import physics2D.components.PillboxCollider;
 import physics2D.components.Rigidbody2D;
 import physics2D.enums.BodyType;
+import scene.LevelEditorSceneInitializer;
 import scene.LevelSceneInitializer;
+import scene.MainMenuSceneInitializer;
+import scene.Scene;
 import util.AssetPool;
 import util.Settings;
 
@@ -55,9 +61,6 @@ public class PlayerController extends PhysicsController {
     private transient int hurtInvincibilityFrames = 280;
     private transient int invicivilityFrames = 1000;
     private transient int invicivilityFramesLeft = 0;
-    //private transient float deadMaxHeight = 0;
-    //private transient float deadMinHeight = 0;
-    //private transient boolean deadGoingUp = true;
     private transient float blinkTime = 0.0f;
     private transient int transformFrames = 100;
     private transient int transformFramesLeft = 0;
@@ -351,6 +354,15 @@ public class PlayerController extends PhysicsController {
         }
     }
     
+    public void die() {
+        this.stateMachine.trigger("die");
+        this.velocity.set(0,0);
+        this.acceleration.set(0.0);
+        this.isDead = true;
+        this.rb.setIsSensor(true);
+        AssetPool.getSound("assets/sounds/mario_die.ogg").play();
+    }
+    
     public void hurt() {
         switch(this.playerState) {
             case Small:
@@ -408,7 +420,14 @@ public class PlayerController extends PhysicsController {
         framesBeforeRestart--;
         if (framesBeforeRestart == 0) {
             // die for real
-            Window.changeScene(new LevelSceneInitializer(), Window.getScene().getLevelFilepath());
+            if (Window.getScene().getInitializer() instanceof LevelSceneInitializer) {
+                // TODO: level dead logic here
+            } else if (Window.getScene().getInitializer() instanceof LevelEditorSceneInitializer) {
+                // stop the editor runtime
+                EventSystem.notify(gameObject, new Event(EventType.EditorStopPlay));
+            } else if (Window.getScene().getInitializer() instanceof MainMenuSceneInitializer) {
+                // do nothing
+            }
         }
     }
     

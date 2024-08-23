@@ -4,8 +4,9 @@ find how to load spritesheets automaticaly instead of hardcoding all of them (ma
 add a level class to check lives, coins, etc...
 - save the prefabs instead of hardcoding all of them
 - in level scenes only assets that are used should be loaded.
-blocks hit by moving shells should drop contents
-falling from the level should kill you, but not when you're underground
+create a prebuilt new level
+refactor non sprite based animations (mario, blockCoin)
+add above cloud zones
 
 upgrade existing functionalities:
 -- style properties window
@@ -13,18 +14,17 @@ upgrade existing functionalities:
 - refractor
 - add boxcollider to enemies and items (for optimization)
 - on savemenus show file name in selector
-- go uids do not reset properly in scene creation
 begining play saves new scenes, add a notif when you play an unsaved custom level
 optimize loading resources on the level (requires big changes)
-+ remake block coins
+blocks hit by moving shells should drop contents
 + make mario movements into separate functions and
 + make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
 make moving thru pipes nicer
 + make physics them more precise and less janky
 refactor component so it handles object types (could hace a class impementation)
-+ refactor and swap all the souts with console log calls
 
 bugfixing:
+- go uids do not reset properly in scene creation
 - when starting play, blocks that where boxSelected don't get their original colors back
 - picking shader doesn't prevent extra placement of gameobjects if the object color is too light
 some window focus issues:
@@ -35,6 +35,7 @@ imgui windows clipping into screen bar and headers not showing correctly
 + enemies should spawn as soon as the camera reaches them, and despawn if they fall off the level
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 remove play buttons from level scenes (has to be only in level editor scene)
++ when falling of the stage the camera changes to underground position
 
 other:
 // make pillbox changes ep #58

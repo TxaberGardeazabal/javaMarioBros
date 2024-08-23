@@ -13,7 +13,9 @@ import org.joml.Vector2f;
  */
 public class BlockCoin extends Component{
     private Vector2f topY;
-    private float coinSpeed = 1.4f;
+    private float coinSpeed = 1.8f;
+    private float timeToKill = 0.15f;
+    private boolean isTop = false;
     
     @Override
     public void start() {
@@ -22,11 +24,18 @@ public class BlockCoin extends Component{
     
     @Override
     public void update(float dt) {
-        if  (this.gameObject.transform.position.y < topY.y) {
+        if  (this.gameObject.transform.position.y < topY.y && isTop == false) {
             this.gameObject.transform.position.y += dt * coinSpeed;
-            this.gameObject.transform.scale.x -= (0.5f * dt) % -1.0f;
+            if (this.gameObject.transform.position.y > topY.y) {
+                this.isTop = true;
+            }
         } else {
-            gameObject.destroy();
+            if (timeToKill > 0) {
+                this.gameObject.transform.position.y -= dt * coinSpeed;
+                timeToKill -= dt; 
+            } else {
+                gameObject.destroy();
+            }
         }
     }
 }

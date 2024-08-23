@@ -8,6 +8,7 @@ import components.GameCamera;
 import components.SpriteRenderer;
 import components.SpriteSheet;
 import components.StateMachine;
+import components.gamecomponents.HoleLogic;
 import gameEngine.GameObject;
 import gameEngine.Window;
 import observers.events.Event;
@@ -33,6 +34,13 @@ public class LevelSceneInitializer extends SceneInitializer {
         camera.addComponent(new GameCamera(scene.camera()));
         camera.start();
         scene.addGameObjectToScene(camera);
+        
+        GameObject overworldholeDetection = scene.createGameObject("overworldGround");
+        overworldholeDetection.transform.position.y += -2;
+        overworldholeDetection.setNoSerialize();
+        overworldholeDetection.addComponent(new HoleLogic());
+        overworldholeDetection.start();
+        scene.addGameObjectToScene(overworldholeDetection);
     }
 
     @Override
