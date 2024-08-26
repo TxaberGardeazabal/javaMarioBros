@@ -22,8 +22,8 @@ public class GameCamera extends Component{
     private transient Camera camera;
     private transient float highestX = Float.MIN_VALUE;
     private transient float underGroundYLevel = 0.0f;
-    private transient float cameraBuffer = 1.5f;
-    private transient float playerBuffer = 0.25f;
+    private transient float cameraOffset = 2.25f;
+    private transient float playerOffset = 0.75f;
     
     private transient float Dx = 0.0f;
     private transient float Dy = 0.0f;
@@ -41,7 +41,7 @@ public class GameCamera extends Component{
         this.player = Window.getScene().getGameObjectWith(PlayerController.class);
         this.camera.clearColor.set(skyColor);
         this.underGroundYLevel = this.camera.position.y - 
-                this.camera.getProjectionSize().y - this.cameraBuffer;
+                this.camera.getProjectionSize().y - this.cameraOffset;
     }
     
     @Override
@@ -57,7 +57,7 @@ public class GameCamera extends Component{
                     camera.position.x = Math.max(player.transform.position.x -2.5f, highestX);
                     highestX = Math.max(highestX, camera.position.x);
 
-                    if (player.transform.position.y < -playerBuffer) {
+                    if (player.transform.position.y < -playerOffset) {
                         Dy = -(this.camera.position.y - underGroundYLevel);
                         this.camera.position.y = underGroundYLevel;
                         this.camera.clearColor.set(underGroundColor);

@@ -35,7 +35,6 @@ imgui windows clipping into screen bar and headers not showing correctly
 + enemies should spawn as soon as the camera reaches them, and despawn if they fall off the level
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 remove play buttons from level scenes (has to be only in level editor scene)
-+ when falling of the stage the camera changes to underground position
 
 other:
 // make pillbox changes ep #58

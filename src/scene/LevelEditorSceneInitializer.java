@@ -69,11 +69,19 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         scene.addGameObjectToScene(overworldholeDetection);
         
         GameObject undergroundholeDetection = scene.createGameObject("undergroundGround");
-        undergroundholeDetection.transform.position.y += -5;
+        undergroundholeDetection.transform.position.y += -5.5;
         undergroundholeDetection.setNoSerialize();
         undergroundholeDetection.addComponent(new HoleLogic());
         undergroundholeDetection.start();
         scene.addGameObjectToScene(undergroundholeDetection);
+        
+        // TODO: here should not be a killzone but a special check, this is a placeholder
+        GameObject skyholeDetection = scene.createGameObject("skyGround");
+        skyholeDetection.transform.position.y += 4.75;
+        skyholeDetection.setNoSerialize();
+        skyholeDetection.addComponent(new HoleLogic());
+        skyholeDetection.start();
+        scene.addGameObjectToScene(skyholeDetection);
     }
 
     @Override
@@ -269,15 +277,22 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 scene.addGameObjectToScene(overworldholeDetection);
 
                 GameObject undergroundholeDetection = scene.createGameObject("undergroundGround");
-                undergroundholeDetection.transform.position.y += -5;
+                undergroundholeDetection.transform.position.y += -5.5;
                 undergroundholeDetection.setNoSerialize();
                 undergroundholeDetection.addComponent(new HoleLogic());
                 undergroundholeDetection.start();
                 scene.addGameObjectToScene(undergroundholeDetection);
                 
+                // TODO: here should not be a killzone but a special check, this is a placeholder
+                GameObject skyholeDetection = scene.createGameObject("skyGround");
+                skyholeDetection.transform.position.y += 4.75;
+                skyholeDetection.setNoSerialize();
+                skyholeDetection.addComponent(new HoleLogic());
+                skyholeDetection.start();
+                scene.addGameObjectToScene(skyholeDetection);
+                
                 Window.getImGuiLayer().getPropertiesWindow().getMc().destroyHoldingObject();
                 
-                //Window.changeScene(new LevelSceneInitializer(), Window.getScene().getLevelFilepath());
                 break;
             case EditorStopPlay:
                 ConsoleWindow.addLog("ending play", ConsoleWindow.LogCategory.info);
