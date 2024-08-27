@@ -9,6 +9,7 @@ import gameEngine.Camera;
 import gameEngine.GameObject;
 import gameEngine.Window;
 import org.joml.Vector4f;
+import org.joml.Vector4fc;
 
 /**
  * Camara en la vista del juego.
@@ -28,10 +29,8 @@ public class GameCamera extends Component{
     private transient float Dx = 0.0f;
     private transient float Dy = 0.0f;
     
-    // TODO this should be stored in the level itself, not here
-    private Vector4f skyColor = new Vector4f(92.0f/255.0f, 148.0f/255.0f, 252.0f/255.0f, 1.0f);
-    private Vector4f underGroundColor = new Vector4f(0.0f,0.0f,0.0f,0.0f);
-    
+    Vector4fc skyColor = new Vector4f(0,0,0,0);
+    Vector4fc underGroundColor = new Vector4f(0,0,0,0);
     public GameCamera(Camera camera) {
         this.camera = camera;
     }
@@ -46,6 +45,7 @@ public class GameCamera extends Component{
     
     @Override
     public void update(float dt) {
+        
         if (player == null) {
             
             this.camera.clearColor.set(skyColor);

@@ -24,7 +24,6 @@ import physics2D.enums.BodyType;
 import scene.LevelEditorSceneInitializer;
 import scene.LevelSceneInitializer;
 import scene.MainMenuSceneInitializer;
-import scene.Scene;
 import util.AssetPool;
 import util.Settings;
 
@@ -34,7 +33,7 @@ import util.Settings;
  */
 public class PlayerController extends PhysicsController {
     
-    private enum PlayerState {
+    public enum PlayerState {
         Small,
         Big,
         Fire

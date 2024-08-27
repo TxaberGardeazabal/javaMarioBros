@@ -13,6 +13,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
+import editor.ConsoleWindow;
 import java.lang.reflect.Type;
 
 /**
@@ -38,6 +39,7 @@ public class ButtonBehaviorDeserializer implements JsonSerializer<ButtonBehavior
         try  {
             return jdc.deserialize(element, Class.forName(ofInstance));
         } catch (ClassNotFoundException e) {
+            ConsoleWindow.addLog("Unknown element type: "+ofInstance, ConsoleWindow.LogCategory.warning);
             throw new JsonParseException("Unknown element type: "+ofInstance,e);
         }
     }

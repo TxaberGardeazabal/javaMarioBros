@@ -17,6 +17,7 @@ import components.SpriteSheet;
 import gameEngine.GameObject;
 import components.StateMachine;
 import components.gamecomponents.HoleLogic;
+import components.gamecomponents.LevelController;
 import editor.ConsoleWindow;
 import gameEngine.ImGuiLayer;
 import gameEngine.Window;
@@ -82,6 +83,11 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         skyholeDetection.addComponent(new HoleLogic());
         skyholeDetection.start();
         scene.addGameObjectToScene(skyholeDetection);
+        
+        GameObject lc = scene.createGameObject("levelController");
+        lc.addComponent(new LevelController());
+        lc.start();
+        scene.addGameObjectToScene(lc);
     }
 
     @Override

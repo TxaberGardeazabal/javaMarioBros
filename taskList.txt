@@ -1,12 +1,12 @@
 add new functionalities:
 - add rotation gizmo
 find how to load spritesheets automaticaly instead of hardcoding all of them (maybe in the assetpool).
-add a level class to check lives, coins, etc...
 - save the prefabs instead of hardcoding all of them
 - in level scenes only assets that are used should be loaded.
 create a prebuilt new level
 refactor non sprite based animations (mario, blockCoin)
 add above cloud zones
+- create transition animations for player, pipes, items...
 
 upgrade existing functionalities:
 -- style properties window
@@ -19,9 +19,10 @@ optimize loading resources on the level (requires big changes)
 blocks hit by moving shells should drop contents
 + make mario movements into separate functions and
 + make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
-make moving thru pipes nicer
 + make physics them more precise and less janky
 refactor component so it handles object types (could hace a class impementation)
+adjust the screen size so is 1:1 with the original game
+++ finish the levelController
 
 bugfixing:
 - go uids do not reset properly in scene creation
@@ -32,9 +33,10 @@ some window focus issues:
    when pressing away while jdialog windows are active causes focus bugs and crashes
 imgui string editing sucks
 imgui windows clipping into screen bar and headers not showing correctly
-+ enemies should spawn as soon as the camera reaches them, and despawn if they fall off the level
++ enemies should spawn as soon as the camera reaches them
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 remove play buttons from level scenes (has to be only in level editor scene)
++ change location of the save file to assets/
 
 other:
 // make pillbox changes ep #58

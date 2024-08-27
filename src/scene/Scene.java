@@ -392,7 +392,7 @@ public class Scene {
             
             inFile = new String(Files.readAllBytes(Paths.get(levelName)));
         } catch (IOException ex ) {
-            ConsoleWindow.addLog("Error al cargar: No se pudo acceder al archivo: "+levelFilepath+" ,comprueba que el archivo exista y esta aplicacion tenga permisos de acceso",
+            ConsoleWindow.addLog("Error al cargar: No se pudo acceder al archivo: "+levelFilepath+" ,comprueba que el archivo exista y esta aplicacion tenga permisos de edicion",
                     ConsoleWindow.LogCategory.error);
         }
         
