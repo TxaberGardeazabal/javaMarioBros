@@ -7,7 +7,9 @@ package editor;
 import components.MouseControls;
 import gameEngine.GameObject;
 import components.gamecomponents.BreakableBrick;
+import components.gamecomponents.LevelController;
 import components.propertieComponents.Ground;
+import gameEngine.Window;
 import imgui.internal.ImGui;
 import java.util.List;
 import physics2D.components.Box2DCollider;
@@ -35,54 +37,80 @@ public class PropertiesWindow {
      * Ejecuta codigo imgui para mostrar y actualizar la ventana
      */
     public void imGui() {
-        ImGui.begin("Inspector");
-        List<GameObject> activeGameObjects = mc.getActiveGameObjects();
-        if (activeGameObjects.size() == 1 && activeGameObjects.get(0) != null) {
-            GameObject activeGameObject = activeGameObjects.get(0);
-            activeGameObject.imGui();
-            
-            // TODO: add more components here (and maybe make it better)
-            if (ImGui.beginPopupContextWindow("ComponentAdder")) {
-                if (ImGui.menuItem("Add rigidbody")) {
-                    if (activeGameObject.getComponent(Rigidbody2D.class) == null) {
-                        activeGameObject.addComponent(new Rigidbody2D());
+        ImGui.begin("properties");
+        
+        if (ImGui.beginTabBar("WindowTabBar")) {
+            if (ImGui.beginTabItem("Inspector")) {
+                List<GameObject> activeGameObjects = mc.getActiveGameObjects();
+                if (activeGameObjects.size() == 1 && activeGameObjects.get(0) != null) {
+                    GameObject activeGameObject = activeGameObjects.get(0);
+                    activeGameObject.imGui();
+
+                    // TODO: add more components here (and maybe make it better)
+                    if (ImGui.beginPopupContextWindow("ComponentAdder")) {
+                        if (ImGui.menuItem("Add rigidbody")) {
+                            if (activeGameObject.getComponent(Rigidbody2D.class) == null) {
+                                activeGameObject.addComponent(new Rigidbody2D());
+                            }
+                        }
+
+                        if (ImGui.menuItem("Add box collider")) {
+                            if (activeGameObject.getComponent(Box2DCollider.class) == null &&
+                                    activeGameObject.getComponent(CircleCollider.class) == null) {
+                                activeGameObject.addComponent(new Box2DCollider());
+                            }
+                        }
+
+                        if (ImGui.menuItem("Add circle collider")) {
+                            if (activeGameObject.getComponent(CircleCollider.class) == null &&
+                                    activeGameObject.getComponent(Box2DCollider.class) == null) {
+                                activeGameObject.addComponent(new CircleCollider());
+                            }
+                        }
+
+                        if (ImGui.menuItem("Add ground")) {
+                            if (activeGameObject.getComponent(Ground.class) == null) {
+                                activeGameObject.addComponent(new Ground());
+                            }
+                        }
+
+                        if (ImGui.menuItem("Add breakable")) {
+                            if (activeGameObject.getComponent(BreakableBrick.class) == null) {
+                                activeGameObject.addComponent(new BreakableBrick());
+                            }
+                        }
+
+                        ImGui.endPopup();
                     }
+                } else if (!activeGameObjects.isEmpty()) {
+                    ImGui.text(activeGameObjects.size() + " selected objects");
                 }
-                
-                if (ImGui.menuItem("Add box collider")) {
-                    if (activeGameObject.getComponent(Box2DCollider.class) == null &&
-                            activeGameObject.getComponent(CircleCollider.class) == null) {
-                        activeGameObject.addComponent(new Box2DCollider());
-                    }
+                else {
+                    ImGui.text("nothing to show");
                 }
-                
-                if (ImGui.menuItem("Add circle collider")) {
-                    if (activeGameObject.getComponent(CircleCollider.class) == null &&
-                            activeGameObject.getComponent(Box2DCollider.class) == null) {
-                        activeGameObject.addComponent(new CircleCollider());
-                    }
-                }
-                
-                if (ImGui.menuItem("Add ground")) {
-                    if (activeGameObject.getComponent(Ground.class) == null) {
-                        activeGameObject.addComponent(new Ground());
-                    }
-                }
-                
-                if (ImGui.menuItem("Add breakable")) {
-                    if (activeGameObject.getComponent(BreakableBrick.class) == null) {
-                        activeGameObject.addComponent(new BreakableBrick());
-                    }
-                }
-                
-                ImGui.endPopup();
+                ImGui.endTabItem();
             }
-        } else if (!activeGameObjects.isEmpty()) {
-            ImGui.text(activeGameObjects.size() + " selected objects");
+            if (ImGui.beginTabItem("Level configuration")) {
+                LevelController lc = Window.getScene().getGameObjectWith(LevelController.class).getComponent(LevelController.class);
+                if (lc != null) {
+                    lc.world = OImGui.inputText("mundo", lc.world);
+                    lc.level = OImGui.inputText("nivel", lc.level);
+                    lc.time = OImGui.dragFloat("tiempo maximo", lc.time);
+                    lc.nextLevel = OImGui.inputText("nivel siguiente", lc.nextLevel);
+
+                    OImGui.colorPicker4("color de cielo", lc.skyColor);
+                    OImGui.colorPicker4("color de superficie", lc.overworldColor);
+                    OImGui.colorPicker4("color de subterraneo", lc.underGroundColor);
+                } else {
+                    ConsoleWindow.addLog("Properties window: level controller not found",
+                            ConsoleWindow.LogCategory.warning);
+                }
+                ImGui.endTabItem();
+            }
+            
+            ImGui.endTabBar();
         }
-        else {
-            ImGui.text("nothing to show");
-        }
+        
         ImGui.end();
     }
 

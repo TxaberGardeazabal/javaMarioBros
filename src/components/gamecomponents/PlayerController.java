@@ -115,6 +115,7 @@ public class PlayerController extends PhysicsController {
                 
                 if (timeToCastle <= 0) {
                     // end game
+                    EventSystem.notify(this.gameObject, new Event(EventType.MarioWin));
                     Window.changeScene(new LevelSceneInitializer(), Window.getScene().getLevelFilepath());
                 }
             }
@@ -274,6 +275,10 @@ public class PlayerController extends PhysicsController {
         this.gameObject.transform.position.set(newPos);
         this.rb.setPosition(newPos);
     }
+
+    public PlayerState getPlayerState() {
+        return playerState;
+    }
     
     public void enemyBounce() {
         this.enemyBounce = 16;
@@ -419,14 +424,7 @@ public class PlayerController extends PhysicsController {
         framesBeforeRestart--;
         if (framesBeforeRestart == 0) {
             // die for real
-            if (Window.getScene().getInitializer() instanceof LevelSceneInitializer) {
-                // TODO: level dead logic here
-            } else if (Window.getScene().getInitializer() instanceof LevelEditorSceneInitializer) {
-                // stop the editor runtime
-                EventSystem.notify(gameObject, new Event(EventType.EditorStopPlay));
-            } else if (Window.getScene().getInitializer() instanceof MainMenuSceneInitializer) {
-                // do nothing
-            }
+            EventSystem.notify(this.gameObject, new Event(EventType.MarioDie));
         }
     }
     

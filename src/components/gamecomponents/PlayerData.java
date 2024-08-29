@@ -9,9 +9,9 @@ package components.gamecomponents;
  * @author txaber gardeazabal
  */
 public class PlayerData {
-    public int coins;
-    public int lives;
-    public int score;
-    public PlayerController.PlayerState playerState;
+    public int coins = 0;
+    public int lives = 3;
+    public int score = 0;
+    public PlayerController.PlayerState playerState = PlayerController.PlayerState.Small;
     public int topScore = 0;
 }

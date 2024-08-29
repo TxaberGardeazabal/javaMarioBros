@@ -19,5 +19,12 @@ public enum EventType {
         OpenInEditor,
         EndWindow,
         Exit,
-        UserEvent
+        UserEvent,
+        
+        // game events
+        CoinGet,
+        MarioWin,
+        MarioDie,
+        oneUp,
+        ScoreUpdate
     };

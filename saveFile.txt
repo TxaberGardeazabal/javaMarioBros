@@ -1,7 +1,7 @@
 {
-  "coins": 10,
-  "lives": 10,
+  "coins": 21,
+  "lives": 9,
   "score": 100,
-  "playerState": "Small",
-  "topScore": 0
+  "playerState": "Big",
+  "topScore": 100
 }

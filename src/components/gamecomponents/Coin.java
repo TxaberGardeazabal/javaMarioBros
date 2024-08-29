@@ -7,6 +7,9 @@ package components.gamecomponents;
 import components.Component;
 import org.jbox2d.dynamics.contacts.Contact;
 import gameEngine.GameObject;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 import org.joml.Vector2f;
 import util.AssetPool;
 
@@ -22,7 +25,8 @@ public class Coin extends Component{
         if (player != null && !player.isDead()) {
             contact.setEnabled(false);
             AssetPool.getSound("assets/sounds/coin.ogg").play();
-            // TODO: update score
+            
+            EventSystem.notify(this.gameObject, new Event(EventType.CoinGet));
             this.gameObject.destroy();
         }
     }

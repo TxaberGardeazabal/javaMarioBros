@@ -5,6 +5,9 @@
 package components.gamecomponents;
 
 import components.Component;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 import org.joml.Vector2f;
 
 /**
@@ -20,6 +23,7 @@ public class BlockCoin extends Component{
     @Override
     public void start() {
         topY = new Vector2f(gameObject.transform.position.y).add(0,0.5f);
+        EventSystem.notify(this.gameObject, new Event(EventType.CoinGet));
     }
     
     @Override

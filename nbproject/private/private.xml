@@ -12,19 +12,18 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/GameViewWindow.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/observers/events/Event.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/HoleLogic.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Prefab.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/LevelEditorSceneInitializer.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/mario/Mario.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/LevelSceneInitializer.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/OImGui.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/PlayerController.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/physics2D/RaycastInfo.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Sound.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/PropertiesWindow.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/LevelController.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/AssetWindow.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/LevelEditorSceneInitializer.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/PlayerData.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/Scene.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/GameCamera.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Fireball.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/mario/Mario.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/ComponentDeserializer.java</file>
         </group>
     </open-files>
 </project-private>
