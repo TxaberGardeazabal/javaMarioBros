@@ -351,10 +351,8 @@ public class Scene {
                 .create();
         
         try {
-            String[] temp = levelFilepath.split("/");
-            String levelName = temp[temp.length-1];
             
-            FileWriter fe = new FileWriter(levelName);
+            FileWriter fe = new FileWriter(levelFilepath);
             ArrayList<GameObject> objsToSerialize = new ArrayList<>();
             for (GameObject obj : this.gameObjects) {
                 if (obj.getParent() == null) {
@@ -387,10 +385,8 @@ public class Scene {
         
         String inFile = "";
         try {
-            String[] temp = levelFilepath.split("/");
-            String levelName = temp[temp.length-1];
             
-            inFile = new String(Files.readAllBytes(Paths.get(levelName)));
+            inFile = new String(Files.readAllBytes(Paths.get(levelFilepath)));
         } catch (IOException ex ) {
             ConsoleWindow.addLog("Error al cargar: No se pudo acceder al archivo: "+levelFilepath+" ,comprueba que el archivo exista y esta aplicacion tenga permisos de edicion",
                     ConsoleWindow.LogCategory.error);

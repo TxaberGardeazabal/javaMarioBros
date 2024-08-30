@@ -4,6 +4,7 @@
  */
 package components.gamecomponents;
 
+import UI.Digitalizer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import components.Component;
@@ -32,6 +33,7 @@ public class LevelController extends Component implements Observer{
     
     private boolean hasBegun = false;
     private String saveFile = "assets/saveFile.txt";
+    private transient GameObject hud;
     
     // level data
     public Vector4f skyColor = new Vector4f(92.0f, 148.0f, 252.0f, 1.0f);
@@ -53,6 +55,13 @@ public class LevelController extends Component implements Observer{
     private transient PlayerController.PlayerState playerState;
     private transient int topScore;*/
     
+    // hud
+    Digitalizer scoreD;
+    Digitalizer coinsD;
+    Digitalizer worldD;
+    Digitalizer levelD;
+    Digitalizer timeD;
+    
     
     @Override
     public void start() {
@@ -63,10 +72,7 @@ public class LevelController extends Component implements Observer{
         
         String inFile = "";
         try {
-            String[] temp = saveFile.split("/");
-            String levelName = temp[temp.length-1];
-            
-            inFile = new String(Files.readAllBytes(Paths.get(levelName)));
+            inFile = new String(Files.readAllBytes(Paths.get(saveFile)));
         } catch (IOException ex ) {
             ConsoleWindow.addLog("Error al cargar: No se pudo acceder al archivo: "+saveFile+" ,comprueba que el archivo exista y esta aplicacion tenga permisos de edicion",
                     ConsoleWindow.LogCategory.error);
@@ -82,30 +88,34 @@ public class LevelController extends Component implements Observer{
                     ConsoleWindow.LogCategory.warning);
         }
         
+        hud = Window.getScene().getGameObjectByName("HUD");
+        if (hud == null) {
+            ConsoleWindow.addLog("LevelController: hud reference not found",
+                    ConsoleWindow.LogCategory.warning);
+        }
+        timeLeft = time;
+        
         EventSystem.addObserver(this);
     }
     
     @Override
     public void update(float dt) {
-        if (!hasBegun) {
+        /*if (!hasBegun) {
             return;
-        }
+        }*/
+        scoreD = hud.getChildByName("puntos").getComponent(Digitalizer.class);
+        coinsD = hud.getChildByName("monedas").getComponent(Digitalizer.class);
+        worldD = hud.getChildByName("mundo").getComponent(Digitalizer.class);
+        levelD = hud.getChildByName("nivel").getComponent(Digitalizer.class);
+        timeD = hud.getChildByName("tiempo").getComponent(Digitalizer.class);
         
+        scoreD.setValue(pData.score);
+        coinsD.setValue(pData.coins);
+        worldD.setValue(Integer.parseInt(world));
+        levelD.setValue(Integer.parseInt(level));
+        timeD.setValue((int) Math.floor(timeLeft));
         
-    }
-    
-    @Override
-    public void editorUpdate(float dt) {
-        if (hasBegun) {
-            ConsoleWindow.addLog(pData.coins+" "+pData.score+" "+pData.topScore, ConsoleWindow.LogCategory.info);
-            /*pData = new PlayerData();
-            pData.coins = 10;
-            pData.coins = 10;
-            pData.score = 100;
-            pData.playerState = PlayerState.Small;
-            pData.topScore = 0;
-            saveProgress();*/
-        }
+        timeLeft -= dt;
     }
     
     public void imgui() {
@@ -152,6 +162,7 @@ public class LevelController extends Component implements Observer{
                 
                 if (Window.getScene().getInitializer() instanceof LevelSceneInitializer) {
                     // move to next level
+                    saveProgress();
                     Window.changeScene(new LevelSceneInitializer(), nextLevel);
                 } else if (Window.getScene().getInitializer() instanceof LevelEditorSceneInitializer) {
                     // stop the editor runtime
@@ -162,6 +173,10 @@ public class LevelController extends Component implements Observer{
 
                 return;
             case MarioDie:
+                if (Window.getScene().getInitializer() instanceof MainMenuSceneInitializer) {
+                    // do nothing
+                    return;
+                }
                 
                 pData.lives--;
                 if (pData.lives <= 0) {

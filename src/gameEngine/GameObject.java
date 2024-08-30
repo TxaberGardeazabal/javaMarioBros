@@ -361,11 +361,25 @@ public class GameObject {
     }
 
     /**
-     * Devuelve los hijos de este objeto
+     * Devuelve los hijos de este objeto.
      * @return una lista con todos los hijos de este objeto
      */
     public List<GameObject> getChildGOs() {
         return childGOs;
+    }
+    
+    /**
+     * Busca y devuelve un hijo por un nombre.
+     * @param name Nombre del go a buscar
+     * @return la primera instancia de gameobject que tenga el nombre dentro de los hijos de este gameobject, si no hay un gameobject con ese nombre dvuelve null
+     */
+    public GameObject getChildByName(String name) {
+        for (GameObject child : childGOs) {
+            if (child.name.equals(name)) {
+                return child;
+            }
+        }
+        return null;
     }
 
     /**
@@ -382,16 +396,23 @@ public class GameObject {
      * @param parent el nuevo objeto padre
      */
     public void setParent(GameObject parent) {
-        if (this.parent.equals(this)) {
-            return;
-        }
         
-        if (this.parent != null) {
-            this.parent.removeChild(this);
-        }
-        this.parent = parent;
-        if (!parent.getChildGOs().contains(this)) {
-            parent.addChild(this);
+        
+        if (parent == null) {
+            if (this.parent != null) 
+                this.parent.removeChild(this);
+                
+            this.parent = null;
+        } else if (!parent.equals(this.parent) && !parent.equals(this)) {
+            if (this.parent != null) 
+                this.parent.removeChild(this);
+
+            this.parent = parent;
+            if (!parent.getChildGOs().contains(this)) 
+                parent.addChild(this);
+                
+                
+            
         }
     }
 }

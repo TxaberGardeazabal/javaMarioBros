@@ -325,8 +325,8 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
-                SpriteSheet text2 = AssetPool.getSpritesheet("assets/images/text/numeros.png");
-                if (spriteButton(text2.getSprite(0),uid++)) {
+                Sprite sprite = new Sprite(AssetPool.getTexture("assets/images/text/x.png"));
+                if (spriteButton(sprite,uid++)) {
                     GameObject object = Prefab.generateEmptyObject();
                     mc.pickUpObject(object);
                 }

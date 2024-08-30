@@ -4,7 +4,9 @@
  */
 package components;
 
+import components.gamecomponents.LevelController;
 import components.gamecomponents.PlayerController;
+import editor.ConsoleWindow;
 import gameEngine.Camera;
 import gameEngine.GameObject;
 import gameEngine.Window;
@@ -29,8 +31,9 @@ public class GameCamera extends Component{
     private transient float Dx = 0.0f;
     private transient float Dy = 0.0f;
     
-    Vector4fc skyColor = new Vector4f(0,0,0,0);
-    Vector4fc underGroundColor = new Vector4f(0,0,0,0);
+    Vector4fc skyColor = new Vector4f();
+    Vector4fc overworldColor = new Vector4f();
+    Vector4fc underGroundColor = new Vector4f();
     public GameCamera(Camera camera) {
         this.camera = camera;
     }
@@ -38,7 +41,20 @@ public class GameCamera extends Component{
     @Override
     public void start() {
         this.player = Window.getScene().getGameObjectWith(PlayerController.class);
-        this.camera.clearColor.set(skyColor);
+        if (player == null) {
+            ConsoleWindow.addLog("Game camera: player not found", ConsoleWindow.LogCategory.warning);
+        }
+        GameObject lc = Window.getScene().getGameObjectWith(LevelController.class);
+        if (lc != null) {
+            this.skyColor = lc.getComponent(LevelController.class).skyColor;
+            this.overworldColor = lc.getComponent(LevelController.class).overworldColor;
+            this.underGroundColor = lc.getComponent(LevelController.class).underGroundColor;
+            
+        } else {
+            ConsoleWindow.addLog("Game camera: level controller not found", ConsoleWindow.LogCategory.warning);
+        }
+        
+        this.camera.clearColor.set(overworldColor);
         this.underGroundYLevel = this.camera.position.y - 
                 this.camera.getProjectionSize().y - this.cameraOffset;
     }
@@ -48,7 +64,7 @@ public class GameCamera extends Component{
         
         if (player == null) {
             
-            this.camera.clearColor.set(skyColor);
+            this.camera.clearColor.set(overworldColor);
         } else {
             if (player.getComponent(PlayerController.class) != null) {
                 if (!player.getComponent(PlayerController.class).hasWon()) {
@@ -64,7 +80,7 @@ public class GameCamera extends Component{
                     } else if (player.transform.position.y >= 0.0f) {
                         Dy = -(this.camera.position.y - 0.0f);
                         this.camera.position.y = 0.0f;
-                        this.camera.clearColor.set(skyColor);
+                        this.camera.clearColor.set(overworldColor);
                     }
                 }
             }

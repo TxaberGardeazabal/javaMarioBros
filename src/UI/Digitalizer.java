@@ -35,10 +35,6 @@ public class Digitalizer extends Component {
         }
     }
     
-    @Override
-    public void update(float dt) {
-    }
-    
     /**
      * Añade un valor al valor actual.
      * @param number el valor a añadir
