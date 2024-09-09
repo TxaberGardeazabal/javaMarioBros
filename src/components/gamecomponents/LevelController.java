@@ -49,11 +49,6 @@ public class LevelController extends Component implements Observer{
     // player data
     private transient PlayerData pData;
     private transient PlayerController player;
-    /*private transient int coins;
-    private transient int lives;
-    private transient int score;
-    private transient PlayerController.PlayerState playerState;
-    private transient int topScore;*/
     
     // hud
     Digitalizer scoreD;
@@ -103,6 +98,10 @@ public class LevelController extends Component implements Observer{
         /*if (!hasBegun) {
             return;
         }*/
+        if (timeLeft <= 0) {
+            return;
+        }
+        
         scoreD = hud.getChildByName("puntos").getComponent(Digitalizer.class);
         coinsD = hud.getChildByName("monedas").getComponent(Digitalizer.class);
         worldD = hud.getChildByName("mundo").getComponent(Digitalizer.class);
@@ -116,6 +115,10 @@ public class LevelController extends Component implements Observer{
         timeD.setValue((int) Math.floor(timeLeft));
         
         timeLeft -= dt;
+        
+        if (timeLeft <= 0 && !player.isDead()) {
+            player.die();
+        }
     }
     
     public void imgui() {

@@ -4,6 +4,7 @@
  */
 package editor;
 
+import UI.FixedHUD;
 import components.MouseControls;
 import gameEngine.GameObject;
 import components.gamecomponents.BreakableBrick;
@@ -79,6 +80,12 @@ public class PropertiesWindow {
                                 activeGameObject.addComponent(new BreakableBrick());
                             }
                         }
+                        
+                        if (ImGui.menuItem("Add fixed position")) {
+                            if (activeGameObject.getComponent(FixedHUD.class) == null) {
+                                activeGameObject.addComponent(new FixedHUD());
+                            }
+                        }
 
                         ImGui.endPopup();
                     }
@@ -102,6 +109,7 @@ public class PropertiesWindow {
                     OImGui.colorPicker4("color de superficie", lc.overworldColor);
                     OImGui.colorPicker4("color de subterraneo", lc.underGroundColor);
                 } else {
+                    ImGui.text("No hay nivel");
                     ConsoleWindow.addLog("Properties window: level controller not found",
                             ConsoleWindow.LogCategory.warning);
                 }

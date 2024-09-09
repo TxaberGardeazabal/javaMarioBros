@@ -239,7 +239,7 @@ public class AssetWindow {
             }
             
             if (ImGui.beginTabItem("UI")) {
-                ImGui.text("elementos de la interfaz de usuario, no recomendado");
+                ImGui.text("elementos de la interfaz de usuario");
                 int uid = 0;
                 
                 Sprite text = new Sprite(AssetPool.getTexture("assets/images/text/mario.png"));
@@ -298,7 +298,7 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
-                SpriteSheet text2 = AssetPool.getSpritesheet("assets/images/text/numeros.png");
+                SpriteSheet text2 = AssetPool.getSpritesheet("assets/images/text/fontFace.png");
                 if (spriteButton(text2.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateDigitalizer(6);
                     mc.pickUpObject(object);

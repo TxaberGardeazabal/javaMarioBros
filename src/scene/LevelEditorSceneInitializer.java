@@ -17,7 +17,6 @@ import components.SpriteSheet;
 import gameEngine.GameObject;
 import components.StateMachine;
 import components.gamecomponents.HoleLogic;
-import components.gamecomponents.LevelController;
 import editor.ConsoleWindow;
 import gameEngine.ImGuiLayer;
 import gameEngine.Window;
@@ -198,6 +197,9 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png"),
                 16,16,8,0));
+        AssetPool.addSpritesheet("assets/images/text/fontFace.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/text/fontFace.png"),
+                56,56,38,8));
 
         // sounds
         AssetPool.addSound("assets/sounds/1-up.ogg", false);

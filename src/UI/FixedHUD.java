@@ -6,8 +6,10 @@ package UI;
 
 import components.Component;
 import components.GameCamera;
+import editor.ConsoleWindow;
 import gameEngine.GameObject;
 import gameEngine.Window;
+import org.joml.Vector2f;
 
 /**
  * Clase para componentes del HUD principal, que mantienen su posicion relativa a la camara
@@ -22,6 +24,7 @@ public class FixedHUD extends Component{
         GameObject camera = Window.getScene().getGameObjectWith(GameCamera.class);
         if (camera != null) {
             gc = camera.getComponent(GameCamera.class);
+            System.out.println("camera added");
         }
     }
     
@@ -31,9 +34,10 @@ public class FixedHUD extends Component{
             float Dx = gc.getDeltaX();
             float Dy = gc.getDeltaY();
             
-            this.gameObject.transform.position.x += Dx;
-            this.gameObject.transform.position.y += Dy;
-            
+            //this.gameObject.transform.position.x += Dx;
+            //this.gameObject.transform.position.y += Dy;
+            System.out.println(Dx);
+            this.gameObject.transform.translate(new Vector2f(Dx,Dy));
         }
     }
 }

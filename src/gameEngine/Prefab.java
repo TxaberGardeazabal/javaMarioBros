@@ -779,7 +779,7 @@ public class Prefab {
     }
     
     public static GameObject generateDigitalizer(int size) {
-        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/text/numeros.png");
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/text/fontFace.png");
         GameObject digitalizer = generateEmptyObject();
         digitalizer.name = "text_digitalizer";
         digitalizer.addComponent(new Digitalizer());

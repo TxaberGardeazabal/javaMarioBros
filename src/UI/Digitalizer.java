@@ -25,7 +25,6 @@ public class Digitalizer extends Component {
     public void start() {
         List<GameObject> childGOs = this.gameObject.getChildGOs();
         digits = new ArrayList<>();
-        value = 0;
 
         for (GameObject go : childGOs) {
             Digit d = go.getComponent(Digit.class);
@@ -33,6 +32,12 @@ public class Digitalizer extends Component {
                 digits.add(d);
             }
         }
+        
+    }
+    
+    @Override
+    public void editorUpdate(float dt) {
+        setValue(value);
     }
     
     /**
@@ -76,6 +81,10 @@ public class Digitalizer extends Component {
                 ConsoleWindow.addLog("number "+valArray[i-1]+" cannot be displayed in a single digit in "+this.gameObject.name,
                         ConsoleWindow.LogCategory.warning);
             }
+        }
+        // reset dead digits
+        for (int i = 0; i < diff;i++) {
+            digits.get(i).setDigit("0");
         }
     }
     
