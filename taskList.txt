@@ -23,7 +23,6 @@ blocks hit by moving shells should drop contents
 refactor component so it handles object types (could hace a class impementation)
 adjust the screen size so is 1:1 with the original game
 ++ finish the levelController
-++ use the font spritesheet for text and numbers
 
 bugfixing:
 - go uids do not reset properly in scene creation
@@ -37,7 +36,7 @@ imgui windows clipping into screen bar and headers not showing correctly
 + enemies should spawn as soon as the camera reaches them
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 remove play buttons from level scenes (has to be only in level editor scene)
-+ fixed hud not detecting level camera
+child-parent infinite loop still present
 
 other:
 // make pillbox changes ep #58

@@ -304,6 +304,24 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                for (int i = 0; i < text2.size(); i++) {
+                    if (spriteButton(text2.getSprite(i), uid++)) {
+                        GameObject object = Prefab.generateUIText(text2.getSprite(i));
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                SpriteSheet extra = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/UIExtra.png");
+                if (spriteButton(extra.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateUIText(extra.getSprite(0));
+                    mc.pickUpObject(object);
+                }
+                
+                if (spriteButton(extra.getSprite(1),uid++)) {
+                    GameObject object = Prefab.generateUICoin();
+                    mc.pickUpObject(object);
+                }
+                
                 ImGui.sameLine();
                 ImGui.endTabItem();
             }

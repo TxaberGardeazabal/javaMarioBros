@@ -186,10 +186,6 @@ public class Window {
                 
                 currentScene.render();
                 DebugDraw.draw();
-                
-                // font render test
-                //GameObject go = currentScene.getGameObjectByName("Font_test");
-                //go.getComponent(FontTest.class).render();
             }
             
             this.framebuffer.unbind();

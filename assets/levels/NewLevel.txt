@@ -17552,19 +17552,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 1.0
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -18059,19 +18059,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 1.0
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -28081,19 +28081,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               }
             ]
@@ -28299,19 +28299,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               }
             ]
@@ -28517,19 +28517,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               }
             ]
@@ -28735,19 +28735,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               }
             ]
@@ -37759,7 +37759,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "zIndex": 0,
+          "zIndex": 20,
           "uid": 1666
         }
       },
@@ -37789,7 +37789,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "zIndex": 1,
+              "zIndex": 20,
               "uid": 1475
             }
           },
@@ -43888,7 +43888,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1477
                 }
               },
@@ -45977,7 +45977,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1481
                 }
               },
@@ -48066,7 +48066,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1485
                 }
               },
@@ -50155,7 +50155,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1489
                 }
               },
@@ -52244,7 +52244,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1493
                 }
               },
@@ -54333,7 +54333,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1497
                 }
               },
@@ -56424,7 +56424,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "zIndex": 1,
+              "zIndex": 20,
               "uid": 1520
             }
           },
@@ -59490,7 +59490,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1522
                 }
               },
@@ -61579,7 +61579,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1526
                 }
               },
@@ -63668,7 +63668,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1530
                 }
               },
@@ -65759,7 +65759,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "zIndex": 1,
+              "zIndex": 20,
               "uid": 1553
             }
           },
@@ -66803,7 +66803,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1555
                 }
               },
@@ -68894,7 +68894,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "zIndex": 1,
+              "zIndex": 20,
               "uid": 1586
             }
           },
@@ -69938,7 +69938,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1588
                 }
               },
@@ -72021,7 +72021,7 @@
             "type": "gameEngine.Transform",
             "properties": {
               "position": {
-                "x": 2.125,
+                "x": 2.375001,
                 "y": 2.625
               },
               "rotation": 0.0,
@@ -72029,7 +72029,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "zIndex": 0,
+              "zIndex": 20,
               "uid": 1624
             }
           },
@@ -74076,7 +74076,7 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 2.125,
+                    "x": 2.375001,
                     "y": 2.625
                   },
                   "rotation": 0.0,
@@ -74084,7 +74084,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1626
                 }
               },
@@ -76165,7 +76165,7 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 2.325,
+                    "x": 2.575001,
                     "y": 2.625
                   },
                   "rotation": 0.0,
@@ -76173,7 +76173,7 @@
                     "x": 0.16568047,
                     "y": 0.16568047
                   },
-                  "zIndex": 1,
+                  "zIndex": 20,
                   "uid": 1630
                 }
               },
@@ -78264,7 +78264,7 @@
                 "x": 0.8994083,
                 "y": 0.16568047
               },
-              "zIndex": 49,
+              "zIndex": 20,
               "uid": 1508
             }
           },
@@ -78328,7 +78328,7 @@
                 "x": 0.9230769,
                 "y": 0.16568047
               },
-              "zIndex": 49,
+              "zIndex": 20,
               "uid": 1512
             }
           },
@@ -78392,7 +78392,7 @@
                 "x": 1.0650887,
                 "y": 0.16568047
               },
-              "zIndex": 50,
+              "zIndex": 20,
               "uid": 1516
             }
           },
@@ -78433,6 +78433,274 @@
                 ]
               },
               "uid": 1517
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "XText",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 2.1500003,
+                "y": 2.625
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.15,
+                "y": 0.15
+              },
+              "zIndex": 20,
+              "uid": 1732
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/UIExtra.png",
+                  "height": 16,
+                  "width": 64
+                },
+                "texCoords": [
+                  {
+                    "x": 0.25,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 0.25,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              },
+              "uid": 1733
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "animated_coin",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 1.9749997,
+                "y": 2.625
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 20,
+              "uid": 1736
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/UIExtra.png",
+                  "height": 16,
+                  "width": 64
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 1.0
+                  }
+                ]
+              },
+              "uid": 1737
+            }
+          },
+          {
+            "type": "components.StateMachine",
+            "properties": {
+              "stateTransfers": {},
+              "states": [
+                {
+                  "title": "idle",
+                  "animationFrames": [
+                    {
+                      "sprite": {
+                        "Width": 16.0,
+                        "height": 16.0,
+                        "texture": {
+                          "filepath": "assets/images/spriteSheets/particles/UIExtra.png",
+                          "height": 16,
+                          "width": 64
+                        },
+                        "texCoords": [
+                          {
+                            "x": 0.5,
+                            "y": 1.0
+                          },
+                          {
+                            "x": 0.5,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.25,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.25,
+                            "y": 1.0
+                          }
+                        ]
+                      },
+                      "frameTime": 0.33,
+                      "spriteNumber": 0
+                    },
+                    {
+                      "sprite": {
+                        "Width": 16.0,
+                        "height": 16.0,
+                        "texture": {
+                          "filepath": "assets/images/spriteSheets/particles/UIExtra.png",
+                          "height": 16,
+                          "width": 64
+                        },
+                        "texCoords": [
+                          {
+                            "x": 0.75,
+                            "y": 1.0
+                          },
+                          {
+                            "x": 0.75,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.5,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.5,
+                            "y": 1.0
+                          }
+                        ]
+                      },
+                      "frameTime": 0.23,
+                      "spriteNumber": 0
+                    },
+                    {
+                      "sprite": {
+                        "Width": 16.0,
+                        "height": 16.0,
+                        "texture": {
+                          "filepath": "assets/images/spriteSheets/particles/UIExtra.png",
+                          "height": 16,
+                          "width": 64
+                        },
+                        "texCoords": [
+                          {
+                            "x": 1.0,
+                            "y": 1.0
+                          },
+                          {
+                            "x": 1.0,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.75,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.75,
+                            "y": 1.0
+                          }
+                        ]
+                      },
+                      "frameTime": 0.23,
+                      "spriteNumber": 0
+                    },
+                    {
+                      "sprite": {
+                        "Width": 16.0,
+                        "height": 16.0,
+                        "texture": {
+                          "filepath": "assets/images/spriteSheets/particles/UIExtra.png",
+                          "height": 16,
+                          "width": 64
+                        },
+                        "texCoords": [
+                          {
+                            "x": 0.75,
+                            "y": 1.0
+                          },
+                          {
+                            "x": 0.75,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.5,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.5,
+                            "y": 1.0
+                          }
+                        ]
+                      },
+                      "frameTime": 0.23,
+                      "spriteNumber": 0
+                    }
+                  ],
+                  "doesLoop": true
+                }
+              ],
+              "defaultStateTitle": "idle",
+              "uid": 1738
             }
           }
         ],

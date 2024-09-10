@@ -778,6 +778,28 @@ public class Prefab {
         return ret;
     }
     
+    public static GameObject generateUICoin() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/UIExtra.png");
+        GameObject ret = generateSpriteObject(sprites.getSprite(1), sprites.getSprite(1).getWidth()/50, sprites.getSprite(1).getHeight()/50);
+        ret.name = "animated_coin";
+        
+        AnimationState flicker = new AnimationState();
+        flicker.title = "idle";
+        float defaultFrameTime = 0.23f;
+        flicker.addFrame(sprites.getSprite(1), defaultFrameTime + 0.10f);
+        flicker.addFrame(sprites.getSprite(2), defaultFrameTime);
+        flicker.addFrame(sprites.getSprite(3), defaultFrameTime);
+        flicker.addFrame(sprites.getSprite(2), defaultFrameTime);
+        flicker.setLoop(true);
+
+        StateMachine stateMachine = new StateMachine();
+        stateMachine.addState(flicker);
+        stateMachine.setDefaultState(flicker.title);
+        ret.addComponent(stateMachine);
+        
+        return ret;
+    }
+    
     public static GameObject generateDigitalizer(int size) {
         SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/text/fontFace.png");
         GameObject digitalizer = generateEmptyObject();

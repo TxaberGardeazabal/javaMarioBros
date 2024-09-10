@@ -200,7 +200,11 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/text/fontFace.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/text/fontFace.png"),
                 56,56,38,8));
-
+        AssetPool.addSpritesheet("assets/images/spriteSheets/particles/UIExtra.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/UIExtra.png"),
+                16,16,4,0));
+        
+        
         // sounds
         AssetPool.addSound("assets/sounds/1-up.ogg", false);
         AssetPool.addSound("assets/sounds/bowserfalls.ogg", false);
@@ -265,10 +269,8 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         switch(event.type) {
             case EditorStartPlay:
                 ConsoleWindow.addLog("begining play", ConsoleWindow.LogCategory.info);
-                Window.setRuntimePlaying(true);
                 Scene scene = Window.getScene();
                 scene.save();
-                
                 scene.camera().resetZoom();
                 
                 // add game camera
@@ -277,6 +279,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 camera.addComponent(new GameCamera(scene.camera()));
                 camera.start();
                 scene.addGameObjectToScene(camera);
+                
                 
                 // add hole killzones
                 GameObject overworldholeDetection = scene.createGameObject("overworldGround");
@@ -302,7 +305,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 scene.addGameObjectToScene(skyholeDetection);
                 
                 Window.getImGuiLayer().getPropertiesWindow().getMc().destroyHoldingObject();
-                
+                Window.setRuntimePlaying(true);
                 break;
             case EditorStopPlay:
                 ConsoleWindow.addLog("ending play", ConsoleWindow.LogCategory.info);
