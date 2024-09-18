@@ -39,6 +39,7 @@ public class GameObject {
     // dirty flag, for gos
     private transient boolean isDirty;
     
+    // hierarchy
     private List<GameObject> childGOs = new ArrayList();
     private transient GameObject parent = null;
 
@@ -335,6 +336,22 @@ public class GameObject {
     public void generateUid() {
        this.uid = ID_COUNTER++;
    }
+    
+    /**
+     * Devuelve los hijos de este objeto.
+     * @return una lista con todos los hijos de este objeto
+     */
+    public List<GameObject> getChildGOs() {
+        return childGOs;
+    }
+    
+    /**
+     * devuelve el objeto padre de este objeto
+     * @return el objeto padre
+     */
+    public GameObject getParent() {
+        return parent;
+    }
    
     /**
      * Añade un hijo en la jerarquia de este objeto
@@ -359,13 +376,19 @@ public class GameObject {
             go.setParent(null);
         }
     }
-
+    
     /**
-     * Devuelve los hijos de este objeto.
-     * @return una lista con todos los hijos de este objeto
+     * Asigna un padre a este objeto.
+     * Nota que esta funcion no añade el objeto en la lista de hijos del padre, ni lo elimina de la lista del anterior padre si tenia,
+     * para un buen uso llamar primero a padre.removeChild() y nuevoPadre.addChild()
+     * @param parent el nuevo objeto padre
      */
-    public List<GameObject> getChildGOs() {
-        return childGOs;
+    public void setParent(GameObject parent) {
+        if (parent == null) {
+            this.parent = null;
+        } else if (!parent.equals(this.parent) && !parent.equals(this)) {
+            this.parent = parent;
+        }
     }
     
     /**
@@ -383,36 +406,10 @@ public class GameObject {
     }
 
     /**
-     * devuelve el objeto padre de este objeto
-     * @return el objeto padre
+     * pone la siguiente id del siguiente componente a cero, esta funcion se usa para el 
+     * cambio entre escenas y su uso pueder llevar a bugs como ids duplicadas
      */
-    public GameObject getParent() {
-        return parent;
-    }
-
-    /**
-     * Asigna un padre a este objeto.
-     * Nota que esta funcion no añade el objeto en la lista de hijos del padre, ni lo elimina de la lista del anterior padre si tenia
-     * @param parent el nuevo objeto padre
-     */
-    public void setParent(GameObject parent) {
-        
-        
-        if (parent == null) {
-            if (this.parent != null) 
-                this.parent.removeChild(this);
-                
-            this.parent = null;
-        } else if (!parent.equals(this.parent) && !parent.equals(this)) {
-            if (this.parent != null) 
-                this.parent.removeChild(this);
-
-            this.parent = parent;
-            if (!parent.getChildGOs().contains(this)) 
-                parent.addChild(this);
-                
-                
-            
-        }
+    public static void resetIds() {
+        ID_COUNTER = 0;
     }
 }

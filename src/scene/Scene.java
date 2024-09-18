@@ -396,6 +396,9 @@ public class Scene {
         }
         
         if (!inFile.equals("")) {
+            // reset stored ids
+            GameObject.resetIds();
+            Component.resetIds();
             maxGoId = -1;
             maxCompId = -1;
             GameObject[] objs = gson.fromJson(inFile, GameObject[].class);

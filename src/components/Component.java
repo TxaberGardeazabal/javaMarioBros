@@ -24,7 +24,7 @@ import org.joml.Vector4f;
 public abstract class Component {
     
     private static int ID_COUNTER = 0;
-    private int uid = -1;
+    private transient int uid = -1;
     
     public transient GameObject gameObject = null;
     
@@ -206,5 +206,13 @@ public abstract class Component {
             }
         }
         return -1;
-    }    
+    }
+    
+    /**
+     * pone la siguiente id del siguiente gameobject a cero, esta funcion se usa para el 
+     * cambio entre escenas y su uso pueder llevar a bugs como ids duplicadas
+     */
+    public static void resetIds() {
+        ID_COUNTER = 0;
+    }
 }
