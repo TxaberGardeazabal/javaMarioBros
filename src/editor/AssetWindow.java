@@ -10,6 +10,7 @@ import components.Sprite;
 import components.SpriteSheet;
 import gameEngine.Direction;
 import gameEngine.Prefab;
+import gameEngine.PrefabSave;
 import gameEngine.Sound;
 import imgui.ImGui;
 import imgui.ImVec2;
@@ -347,6 +348,12 @@ public class AssetWindow {
                 if (spriteButton(sprite,uid++)) {
                     GameObject object = Prefab.generateEmptyObject();
                     mc.pickUpObject(object);
+                }
+                
+                PrefabSave test = new PrefabSave("assets/prefabs/test.txt");
+                if (ImGui.button("assets/prefabs/test.txt")) {
+                    test.load();
+                    mc.pickUpObject(test.getPrefab());
                 }
                 
                 ImGui.sameLine();

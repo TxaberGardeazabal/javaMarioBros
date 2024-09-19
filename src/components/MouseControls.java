@@ -9,7 +9,9 @@ import components.propertieComponents.ShadowObj;
 import gameEngine.GameObject;
 import gameEngine.KeyListener;
 import gameEngine.MouseListener;
+import gameEngine.PrefabSave;
 import gameEngine.Window;
+import imgui.ImGui;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -179,6 +181,13 @@ public class MouseControls extends Component{
             }
             
         }
+        
+        /*if (ImGui.beginPopupContextWindow("Prefab save")) {
+            if (ImGui.menuItem("create prefab")) {
+                //saveAsPrefab();
+            }
+            ImGui.endPopup();
+        }*/
     }
     
     /*
@@ -424,4 +433,10 @@ public class MouseControls extends Component{
     public PickingTexture getPickingTexture() {
         return pickingTexture;
     }
+    
+    /*private void saveAsPrefab() {
+        PrefabSave x = new PrefabSave("assets/prefabs/test.txt");
+        x.setPrefab(this.holdingObject);
+        x.save();
+    }*/
 }

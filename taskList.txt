@@ -6,6 +6,7 @@ add new functionalities:
 - create a prebuilt new level
 - open the saveAs window when playing a new level (playing auto saves)
 add above cloud zones
+show contents of assetpool in editor (database)
 + make mario movements into separate functions and
 + make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
 + create transition animations for non sprite based animations (mario, blockCoin) (transition system?)

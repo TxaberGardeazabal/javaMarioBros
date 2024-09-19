@@ -26,7 +26,7 @@ import scene.MainMenuSceneInitializer;
 import util.AssetPool;
 
 /**
- *
+ * 
  * @author txaber gardeazabal
  */
 public class LevelController extends Component implements Observer{
@@ -125,16 +125,16 @@ public class LevelController extends Component implements Observer{
         
     }
     
+    /**
+     * guarda las variables actuales del jugador en el archivo de save.
+     */
     public void saveProgress() {
         Gson gson = new GsonBuilder().setPrettyPrinting()
                 .enableComplexMapKeySerialization()
                 .create();
         
-        try {
-            String[] temp = saveFile.split("/");
-            String levelName = temp[temp.length-1];
-            
-            FileWriter fe = new FileWriter(levelName);
+        try {            
+            FileWriter fe = new FileWriter(saveFile);
             
             fe.write(gson.toJson(pData));
             fe.close();
