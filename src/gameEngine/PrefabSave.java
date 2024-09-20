@@ -42,8 +42,6 @@ public class PrefabSave {
         }
     }
     
-    
-    
     public void save() {
         Gson gson = new GsonBuilder().setPrettyPrinting()
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())

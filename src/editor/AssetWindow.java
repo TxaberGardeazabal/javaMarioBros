@@ -349,9 +349,28 @@ public class AssetWindow {
                     GameObject object = Prefab.generateEmptyObject();
                     mc.pickUpObject(object);
                 }
+                ImGui.separator();
                 
-                PrefabSave test = new PrefabSave("assets/prefabs/test.txt");
-                if (ImGui.button("assets/prefabs/test.txt")) {
+                PrefabSave test = new PrefabSave("assets/prefabs/block.prefab");
+                if (ImGui.button("assets/prefabs/block.prefab")) {
+                    test.load();
+                    mc.pickUpObject(test.getPrefab());
+                }
+                
+                test = new PrefabSave("assets/prefabs/coinBlock.prefab");
+                if (ImGui.button("assets/prefabs/coinBlock.prefab")) {
+                    test.load();
+                    mc.pickUpObject(test.getPrefab());
+                }
+                
+                test = new PrefabSave("assets/prefabs/coin.prefab");
+                if (ImGui.button("assets/prefabs/coin.prefab")) {
+                    test.load();
+                    mc.pickUpObject(test.getPrefab());
+                }
+                
+                test = new PrefabSave("assets/prefabs/cannon.prefab");
+                if (ImGui.button("assets/prefabs/cannon.prefab")) {
                     test.load();
                     mc.pickUpObject(test.getPrefab());
                 }

@@ -7,6 +7,7 @@ add new functionalities:
 - open the saveAs window when playing a new level (playing auto saves)
 add above cloud zones
 show contents of assetpool in editor (database)
+create in settings multi button input variables (control + x...)
 + make mario movements into separate functions and
 + make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
 + create transition animations for non sprite based animations (mario, blockCoin) (transition system?)
@@ -36,6 +37,7 @@ imgui string editing sucks
 + enemies should spawn only as soon as the camera reaches them
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 remove play buttons from level scenes (has to be only in level editor scene)
++ issue in mousecontrols with big prefab position offsets
 
 other:
 // make pillbox changes ep #58

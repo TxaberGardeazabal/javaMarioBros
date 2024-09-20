@@ -5,17 +5,26 @@
 package editor;
 
 import UI.FixedHUD;
+import components.ComplexPrefabWrapper;
 import components.MouseControls;
 import gameEngine.GameObject;
 import components.gamecomponents.BreakableBrick;
 import components.gamecomponents.LevelController;
 import components.propertieComponents.Ground;
+import gameEngine.PrefabSave;
 import gameEngine.Window;
 import imgui.internal.ImGui;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import physics2D.components.Box2DCollider;
 import physics2D.components.CircleCollider;
 import physics2D.components.Rigidbody2D;
+import scene.LevelEditorSceneInitializer;
+import util.Settings;
 
 /**
  * Controlador de la ventana de propiedades del editor.
@@ -25,6 +34,7 @@ import physics2D.components.Rigidbody2D;
  */
 public class PropertiesWindow {
     private MouseControls mc;
+    
 
     public PropertiesWindow(MouseControls mouseControls) {
         this.mc = mouseControls;
@@ -47,6 +57,20 @@ public class PropertiesWindow {
                     GameObject activeGameObject = activeGameObjects.get(0);
                     activeGameObject.imGui();
 
+                    ImGui.separator();
+                    if (ImGui.button("save as prefab")) {
+                        String res = JOptionPane.showInputDialog("introduce name of the prefab");
+                        
+                        if (res != null && !res.equals("")) {
+                            // save in custom prefabs
+                            PrefabSave file = new PrefabSave(Settings.customPrefabPath+"/"+res+".prefab");
+                            file.setPrefab(activeGameObject);
+                            file.save();
+                            
+                        }
+                    }
+                    
+                    
                     // TODO: add more components here (and maybe make it better)
                     if (ImGui.beginPopupContextWindow("ComponentAdder")) {
                         if (ImGui.menuItem("Add rigidbody")) {
@@ -91,6 +115,26 @@ public class PropertiesWindow {
                     }
                 } else if (!activeGameObjects.isEmpty()) {
                     ImGui.text(activeGameObjects.size() + " selected objects");
+                    
+                    ImGui.separator();
+                    if (ImGui.button("save as prefab")) {
+                        String res = JOptionPane.showInputDialog("introduce name of the prefab");
+                        
+                        if (res != null && !res.equals("")) {
+                            // save in custom prefabs
+                            GameObject root = Window.getScene().createGameObject("root");
+                            ComplexPrefabWrapper cpw = new ComplexPrefabWrapper();
+                            for ( GameObject go : activeGameObjects) {
+                                cpw.addGameObject(go);
+                            }
+                            
+                            root.addComponent(cpw);
+                            PrefabSave file = new PrefabSave(Settings.customPrefabPath+"/"+res+".prefab");
+                            file.setPrefab(root);
+                            file.save();
+                            
+                        }
+                    }
                 }
                 else {
                     ImGui.text("nothing to show");

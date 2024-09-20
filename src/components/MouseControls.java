@@ -182,12 +182,6 @@ public class MouseControls extends Component{
             
         }
         
-        /*if (ImGui.beginPopupContextWindow("Prefab save")) {
-            if (ImGui.menuItem("create prefab")) {
-                //saveAsPrefab();
-            }
-            ImGui.endPopup();
-        }*/
     }
     
     /*

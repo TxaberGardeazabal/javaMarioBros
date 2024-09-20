@@ -1,6 +1,5 @@
 [
   {
-    "uid": 0,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -104,7 +103,6 @@
     "childGOs": []
   },
   {
-    "uid": 1,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -208,7 +206,6 @@
     "childGOs": []
   },
   {
-    "uid": 2,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -312,7 +309,6 @@
     "childGOs": []
   },
   {
-    "uid": 3,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -416,7 +412,6 @@
     "childGOs": []
   },
   {
-    "uid": 4,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -520,7 +515,6 @@
     "childGOs": []
   },
   {
-    "uid": 5,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -624,7 +618,6 @@
     "childGOs": []
   },
   {
-    "uid": 6,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -728,7 +721,6 @@
     "childGOs": []
   },
   {
-    "uid": 7,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -832,7 +824,6 @@
     "childGOs": []
   },
   {
-    "uid": 8,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -936,7 +927,6 @@
     "childGOs": []
   },
   {
-    "uid": 9,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -1040,7 +1030,6 @@
     "childGOs": []
   },
   {
-    "uid": 10,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -1144,7 +1133,6 @@
     "childGOs": []
   },
   {
-    "uid": 11,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -1248,7 +1236,6 @@
     "childGOs": []
   },
   {
-    "uid": 12,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -1352,7 +1339,6 @@
     "childGOs": []
   },
   {
-    "uid": 13,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -1456,7 +1442,6 @@
     "childGOs": []
   },
   {
-    "uid": 14,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -1560,7 +1545,6 @@
     "childGOs": []
   },
   {
-    "uid": 15,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -1664,7 +1648,6 @@
     "childGOs": []
   },
   {
-    "uid": 16,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -1768,7 +1751,6 @@
     "childGOs": []
   },
   {
-    "uid": 17,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -1872,7 +1854,6 @@
     "childGOs": []
   },
   {
-    "uid": 18,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -1976,7 +1957,6 @@
     "childGOs": []
   },
   {
-    "uid": 19,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -2080,7 +2060,6 @@
     "childGOs": []
   },
   {
-    "uid": 20,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -2184,7 +2163,6 @@
     "childGOs": []
   },
   {
-    "uid": 21,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -2288,7 +2266,6 @@
     "childGOs": []
   },
   {
-    "uid": 22,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -2392,7 +2369,6 @@
     "childGOs": []
   },
   {
-    "uid": 23,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -2455,7 +2431,6 @@
     "childGOs": []
   },
   {
-    "uid": 24,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -2518,7 +2493,6 @@
     "childGOs": []
   },
   {
-    "uid": 25,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -2581,7 +2555,6 @@
     "childGOs": []
   },
   {
-    "uid": 26,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -2644,7 +2617,6 @@
     "childGOs": []
   },
   {
-    "uid": 27,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -2707,7 +2679,6 @@
     "childGOs": []
   },
   {
-    "uid": 28,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -2770,7 +2741,6 @@
     "childGOs": []
   },
   {
-    "uid": 29,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -2833,7 +2803,6 @@
     "childGOs": []
   },
   {
-    "uid": 30,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -2896,7 +2865,6 @@
     "childGOs": []
   },
   {
-    "uid": 31,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -2959,7 +2927,6 @@
     "childGOs": []
   },
   {
-    "uid": 32,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3022,7 +2989,6 @@
     "childGOs": []
   },
   {
-    "uid": 33,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3085,7 +3051,6 @@
     "childGOs": []
   },
   {
-    "uid": 34,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3148,7 +3113,6 @@
     "childGOs": []
   },
   {
-    "uid": 35,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3211,7 +3175,6 @@
     "childGOs": []
   },
   {
-    "uid": 36,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3274,7 +3237,6 @@
     "childGOs": []
   },
   {
-    "uid": 37,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3337,7 +3299,6 @@
     "childGOs": []
   },
   {
-    "uid": 38,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3400,7 +3361,6 @@
     "childGOs": []
   },
   {
-    "uid": 39,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3463,7 +3423,6 @@
     "childGOs": []
   },
   {
-    "uid": 40,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3526,7 +3485,6 @@
     "childGOs": []
   },
   {
-    "uid": 41,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3589,7 +3547,6 @@
     "childGOs": []
   },
   {
-    "uid": 42,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3652,7 +3609,6 @@
     "childGOs": []
   },
   {
-    "uid": 43,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3715,7 +3671,6 @@
     "childGOs": []
   },
   {
-    "uid": 44,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3778,7 +3733,6 @@
     "childGOs": []
   },
   {
-    "uid": 45,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3841,7 +3795,6 @@
     "childGOs": []
   },
   {
-    "uid": 46,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3904,7 +3857,6 @@
     "childGOs": []
   },
   {
-    "uid": 47,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -3967,7 +3919,6 @@
     "childGOs": []
   },
   {
-    "uid": 48,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4030,7 +3981,6 @@
     "childGOs": []
   },
   {
-    "uid": 49,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4093,7 +4043,6 @@
     "childGOs": []
   },
   {
-    "uid": 50,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4156,7 +4105,6 @@
     "childGOs": []
   },
   {
-    "uid": 51,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4219,7 +4167,6 @@
     "childGOs": []
   },
   {
-    "uid": 52,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4282,7 +4229,6 @@
     "childGOs": []
   },
   {
-    "uid": 53,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4345,7 +4291,6 @@
     "childGOs": []
   },
   {
-    "uid": 54,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4408,7 +4353,6 @@
     "childGOs": []
   },
   {
-    "uid": 55,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4471,7 +4415,6 @@
     "childGOs": []
   },
   {
-    "uid": 56,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4534,7 +4477,6 @@
     "childGOs": []
   },
   {
-    "uid": 57,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4597,7 +4539,6 @@
     "childGOs": []
   },
   {
-    "uid": 58,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4660,7 +4601,6 @@
     "childGOs": []
   },
   {
-    "uid": 59,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4723,7 +4663,6 @@
     "childGOs": []
   },
   {
-    "uid": 60,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4786,7 +4725,6 @@
     "childGOs": []
   },
   {
-    "uid": 61,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4849,7 +4787,6 @@
     "childGOs": []
   },
   {
-    "uid": 62,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4912,7 +4849,6 @@
     "childGOs": []
   },
   {
-    "uid": 63,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -4975,7 +4911,6 @@
     "childGOs": []
   },
   {
-    "uid": 64,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5038,7 +4973,6 @@
     "childGOs": []
   },
   {
-    "uid": 65,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5101,7 +5035,6 @@
     "childGOs": []
   },
   {
-    "uid": 66,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5164,7 +5097,6 @@
     "childGOs": []
   },
   {
-    "uid": 67,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5227,7 +5159,6 @@
     "childGOs": []
   },
   {
-    "uid": 68,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5290,7 +5221,6 @@
     "childGOs": []
   },
   {
-    "uid": 69,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5353,7 +5283,6 @@
     "childGOs": []
   },
   {
-    "uid": 70,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5416,7 +5345,6 @@
     "childGOs": []
   },
   {
-    "uid": 71,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5479,7 +5407,6 @@
     "childGOs": []
   },
   {
-    "uid": 72,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5542,7 +5469,6 @@
     "childGOs": []
   },
   {
-    "uid": 73,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5605,7 +5531,6 @@
     "childGOs": []
   },
   {
-    "uid": 74,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5668,7 +5593,6 @@
     "childGOs": []
   },
   {
-    "uid": 75,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5731,7 +5655,6 @@
     "childGOs": []
   },
   {
-    "uid": 76,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5794,7 +5717,6 @@
     "childGOs": []
   },
   {
-    "uid": 77,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5857,7 +5779,6 @@
     "childGOs": []
   },
   {
-    "uid": 78,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5920,7 +5841,6 @@
     "childGOs": []
   },
   {
-    "uid": 79,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -5983,7 +5903,6 @@
     "childGOs": []
   },
   {
-    "uid": 80,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6046,7 +5965,6 @@
     "childGOs": []
   },
   {
-    "uid": 81,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6109,7 +6027,6 @@
     "childGOs": []
   },
   {
-    "uid": 82,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6172,7 +6089,6 @@
     "childGOs": []
   },
   {
-    "uid": 83,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6235,7 +6151,6 @@
     "childGOs": []
   },
   {
-    "uid": 84,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6298,7 +6213,6 @@
     "childGOs": []
   },
   {
-    "uid": 85,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6361,7 +6275,6 @@
     "childGOs": []
   },
   {
-    "uid": 86,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6424,7 +6337,6 @@
     "childGOs": []
   },
   {
-    "uid": 87,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6487,7 +6399,6 @@
     "childGOs": []
   },
   {
-    "uid": 88,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6550,7 +6461,6 @@
     "childGOs": []
   },
   {
-    "uid": 89,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6613,7 +6523,6 @@
     "childGOs": []
   },
   {
-    "uid": 90,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6676,7 +6585,6 @@
     "childGOs": []
   },
   {
-    "uid": 91,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6739,7 +6647,6 @@
     "childGOs": []
   },
   {
-    "uid": 92,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6802,7 +6709,6 @@
     "childGOs": []
   },
   {
-    "uid": 93,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6865,7 +6771,6 @@
     "childGOs": []
   },
   {
-    "uid": 94,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6928,7 +6833,6 @@
     "childGOs": []
   },
   {
-    "uid": 95,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -6991,7 +6895,6 @@
     "childGOs": []
   },
   {
-    "uid": 96,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7054,7 +6957,6 @@
     "childGOs": []
   },
   {
-    "uid": 97,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7117,7 +7019,6 @@
     "childGOs": []
   },
   {
-    "uid": 98,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7180,7 +7081,6 @@
     "childGOs": []
   },
   {
-    "uid": 99,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7243,7 +7143,6 @@
     "childGOs": []
   },
   {
-    "uid": 100,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7306,7 +7205,6 @@
     "childGOs": []
   },
   {
-    "uid": 101,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7369,7 +7267,6 @@
     "childGOs": []
   },
   {
-    "uid": 102,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7432,7 +7329,6 @@
     "childGOs": []
   },
   {
-    "uid": 103,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7495,7 +7391,6 @@
     "childGOs": []
   },
   {
-    "uid": 104,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7558,7 +7453,6 @@
     "childGOs": []
   },
   {
-    "uid": 105,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7621,7 +7515,6 @@
     "childGOs": []
   },
   {
-    "uid": 106,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7684,7 +7577,6 @@
     "childGOs": []
   },
   {
-    "uid": 107,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7747,7 +7639,6 @@
     "childGOs": []
   },
   {
-    "uid": 108,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7810,7 +7701,6 @@
     "childGOs": []
   },
   {
-    "uid": 109,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7873,7 +7763,6 @@
     "childGOs": []
   },
   {
-    "uid": 110,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7936,7 +7825,6 @@
     "childGOs": []
   },
   {
-    "uid": 111,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -7999,7 +7887,6 @@
     "childGOs": []
   },
   {
-    "uid": 112,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8062,7 +7949,6 @@
     "childGOs": []
   },
   {
-    "uid": 113,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8125,7 +8011,6 @@
     "childGOs": []
   },
   {
-    "uid": 114,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8188,7 +8073,6 @@
     "childGOs": []
   },
   {
-    "uid": 115,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8251,7 +8135,6 @@
     "childGOs": []
   },
   {
-    "uid": 116,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8314,7 +8197,6 @@
     "childGOs": []
   },
   {
-    "uid": 117,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8377,7 +8259,6 @@
     "childGOs": []
   },
   {
-    "uid": 118,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8440,7 +8321,6 @@
     "childGOs": []
   },
   {
-    "uid": 119,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8503,7 +8383,6 @@
     "childGOs": []
   },
   {
-    "uid": 120,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8566,7 +8445,6 @@
     "childGOs": []
   },
   {
-    "uid": 121,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8629,7 +8507,6 @@
     "childGOs": []
   },
   {
-    "uid": 122,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8692,7 +8569,6 @@
     "childGOs": []
   },
   {
-    "uid": 123,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8755,7 +8631,6 @@
     "childGOs": []
   },
   {
-    "uid": 124,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8818,7 +8693,6 @@
     "childGOs": []
   },
   {
-    "uid": 125,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8881,7 +8755,6 @@
     "childGOs": []
   },
   {
-    "uid": 126,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -8944,7 +8817,6 @@
     "childGOs": []
   },
   {
-    "uid": 127,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9007,7 +8879,6 @@
     "childGOs": []
   },
   {
-    "uid": 128,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9070,7 +8941,6 @@
     "childGOs": []
   },
   {
-    "uid": 129,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9133,7 +9003,6 @@
     "childGOs": []
   },
   {
-    "uid": 130,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9196,7 +9065,6 @@
     "childGOs": []
   },
   {
-    "uid": 131,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9259,7 +9127,6 @@
     "childGOs": []
   },
   {
-    "uid": 132,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9322,7 +9189,6 @@
     "childGOs": []
   },
   {
-    "uid": 133,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9385,7 +9251,6 @@
     "childGOs": []
   },
   {
-    "uid": 134,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9448,7 +9313,6 @@
     "childGOs": []
   },
   {
-    "uid": 135,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9511,7 +9375,6 @@
     "childGOs": []
   },
   {
-    "uid": 136,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9574,7 +9437,6 @@
     "childGOs": []
   },
   {
-    "uid": 137,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9637,7 +9499,6 @@
     "childGOs": []
   },
   {
-    "uid": 138,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9700,7 +9561,6 @@
     "childGOs": []
   },
   {
-    "uid": 139,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9763,7 +9623,6 @@
     "childGOs": []
   },
   {
-    "uid": 140,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9826,7 +9685,6 @@
     "childGOs": []
   },
   {
-    "uid": 141,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9889,7 +9747,6 @@
     "childGOs": []
   },
   {
-    "uid": 142,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -9952,7 +9809,6 @@
     "childGOs": []
   },
   {
-    "uid": 143,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10015,7 +9871,6 @@
     "childGOs": []
   },
   {
-    "uid": 144,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10078,7 +9933,6 @@
     "childGOs": []
   },
   {
-    "uid": 145,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10141,7 +9995,6 @@
     "childGOs": []
   },
   {
-    "uid": 146,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10204,7 +10057,6 @@
     "childGOs": []
   },
   {
-    "uid": 147,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10267,7 +10119,6 @@
     "childGOs": []
   },
   {
-    "uid": 148,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10330,7 +10181,6 @@
     "childGOs": []
   },
   {
-    "uid": 149,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10393,7 +10243,6 @@
     "childGOs": []
   },
   {
-    "uid": 150,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10456,7 +10305,6 @@
     "childGOs": []
   },
   {
-    "uid": 151,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10519,7 +10367,6 @@
     "childGOs": []
   },
   {
-    "uid": 152,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10582,7 +10429,6 @@
     "childGOs": []
   },
   {
-    "uid": 153,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10645,7 +10491,6 @@
     "childGOs": []
   },
   {
-    "uid": 154,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10708,7 +10553,6 @@
     "childGOs": []
   },
   {
-    "uid": 155,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10771,7 +10615,6 @@
     "childGOs": []
   },
   {
-    "uid": 156,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10834,7 +10677,6 @@
     "childGOs": []
   },
   {
-    "uid": 157,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10897,7 +10739,6 @@
     "childGOs": []
   },
   {
-    "uid": 158,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -10960,7 +10801,6 @@
     "childGOs": []
   },
   {
-    "uid": 159,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11023,7 +10863,6 @@
     "childGOs": []
   },
   {
-    "uid": 160,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11086,7 +10925,6 @@
     "childGOs": []
   },
   {
-    "uid": 161,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11149,7 +10987,6 @@
     "childGOs": []
   },
   {
-    "uid": 162,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11212,7 +11049,6 @@
     "childGOs": []
   },
   {
-    "uid": 163,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11275,7 +11111,6 @@
     "childGOs": []
   },
   {
-    "uid": 164,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11338,7 +11173,6 @@
     "childGOs": []
   },
   {
-    "uid": 165,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11401,7 +11235,6 @@
     "childGOs": []
   },
   {
-    "uid": 166,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11464,7 +11297,6 @@
     "childGOs": []
   },
   {
-    "uid": 167,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11527,7 +11359,6 @@
     "childGOs": []
   },
   {
-    "uid": 168,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11590,7 +11421,6 @@
     "childGOs": []
   },
   {
-    "uid": 169,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11653,7 +11483,6 @@
     "childGOs": []
   },
   {
-    "uid": 170,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11716,7 +11545,6 @@
     "childGOs": []
   },
   {
-    "uid": 171,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11779,7 +11607,6 @@
     "childGOs": []
   },
   {
-    "uid": 172,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11842,7 +11669,6 @@
     "childGOs": []
   },
   {
-    "uid": 173,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11905,7 +11731,6 @@
     "childGOs": []
   },
   {
-    "uid": 174,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -11968,7 +11793,6 @@
     "childGOs": []
   },
   {
-    "uid": 175,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12031,7 +11855,6 @@
     "childGOs": []
   },
   {
-    "uid": 176,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12094,7 +11917,6 @@
     "childGOs": []
   },
   {
-    "uid": 177,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12157,7 +11979,6 @@
     "childGOs": []
   },
   {
-    "uid": 178,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12220,7 +12041,6 @@
     "childGOs": []
   },
   {
-    "uid": 179,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12283,7 +12103,6 @@
     "childGOs": []
   },
   {
-    "uid": 180,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12346,7 +12165,6 @@
     "childGOs": []
   },
   {
-    "uid": 181,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12409,7 +12227,6 @@
     "childGOs": []
   },
   {
-    "uid": 182,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12472,7 +12289,6 @@
     "childGOs": []
   },
   {
-    "uid": 183,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12535,7 +12351,6 @@
     "childGOs": []
   },
   {
-    "uid": 184,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12598,7 +12413,6 @@
     "childGOs": []
   },
   {
-    "uid": 185,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12661,7 +12475,6 @@
     "childGOs": []
   },
   {
-    "uid": 186,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12724,7 +12537,6 @@
     "childGOs": []
   },
   {
-    "uid": 187,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12787,7 +12599,6 @@
     "childGOs": []
   },
   {
-    "uid": 188,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12850,7 +12661,6 @@
     "childGOs": []
   },
   {
-    "uid": 189,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12913,7 +12723,6 @@
     "childGOs": []
   },
   {
-    "uid": 190,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -12976,7 +12785,6 @@
     "childGOs": []
   },
   {
-    "uid": 191,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13039,7 +12847,6 @@
     "childGOs": []
   },
   {
-    "uid": 192,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13102,7 +12909,6 @@
     "childGOs": []
   },
   {
-    "uid": 193,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13165,7 +12971,6 @@
     "childGOs": []
   },
   {
-    "uid": 194,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13228,7 +13033,6 @@
     "childGOs": []
   },
   {
-    "uid": 195,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13291,7 +13095,6 @@
     "childGOs": []
   },
   {
-    "uid": 196,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13354,7 +13157,6 @@
     "childGOs": []
   },
   {
-    "uid": 197,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13417,7 +13219,6 @@
     "childGOs": []
   },
   {
-    "uid": 198,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13480,7 +13281,6 @@
     "childGOs": []
   },
   {
-    "uid": 199,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13543,7 +13343,6 @@
     "childGOs": []
   },
   {
-    "uid": 200,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13606,7 +13405,6 @@
     "childGOs": []
   },
   {
-    "uid": 201,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13669,7 +13467,6 @@
     "childGOs": []
   },
   {
-    "uid": 202,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13732,7 +13529,6 @@
     "childGOs": []
   },
   {
-    "uid": 203,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13795,7 +13591,6 @@
     "childGOs": []
   },
   {
-    "uid": 204,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13858,7 +13653,6 @@
     "childGOs": []
   },
   {
-    "uid": 205,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13921,7 +13715,6 @@
     "childGOs": []
   },
   {
-    "uid": 206,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -13984,7 +13777,6 @@
     "childGOs": []
   },
   {
-    "uid": 207,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14047,7 +13839,6 @@
     "childGOs": []
   },
   {
-    "uid": 208,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14110,7 +13901,6 @@
     "childGOs": []
   },
   {
-    "uid": 209,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14173,7 +13963,6 @@
     "childGOs": []
   },
   {
-    "uid": 210,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14236,7 +14025,6 @@
     "childGOs": []
   },
   {
-    "uid": 211,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14299,7 +14087,6 @@
     "childGOs": []
   },
   {
-    "uid": 212,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14362,7 +14149,6 @@
     "childGOs": []
   },
   {
-    "uid": 213,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14425,7 +14211,6 @@
     "childGOs": []
   },
   {
-    "uid": 214,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14488,7 +14273,6 @@
     "childGOs": []
   },
   {
-    "uid": 215,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14551,7 +14335,6 @@
     "childGOs": []
   },
   {
-    "uid": 216,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14614,7 +14397,6 @@
     "childGOs": []
   },
   {
-    "uid": 217,
     "name": "sprite_obj_gen",
     "enabled": true,
     "components": [
@@ -14677,7 +14459,6 @@
     "childGOs": []
   },
   {
-    "uid": 218,
     "name": "mario",
     "enabled": true,
     "components": [
@@ -15891,7 +15672,6 @@
     "childGOs": []
   },
   {
-    "uid": 219,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -15995,7 +15775,6 @@
     "childGOs": []
   },
   {
-    "uid": 220,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -16099,7 +15878,6 @@
     "childGOs": []
   },
   {
-    "uid": 221,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -16203,7 +15981,6 @@
     "childGOs": []
   },
   {
-    "uid": 222,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -16307,7 +16084,6 @@
     "childGOs": []
   },
   {
-    "uid": 223,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -16411,7 +16187,6 @@
     "childGOs": []
   },
   {
-    "uid": 224,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -16515,7 +16290,6 @@
     "childGOs": []
   },
   {
-    "uid": 225,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -16619,7 +16393,6 @@
     "childGOs": []
   },
   {
-    "uid": 226,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -16723,7 +16496,6 @@
     "childGOs": []
   },
   {
-    "uid": 227,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -16827,7 +16599,6 @@
     "childGOs": []
   },
   {
-    "uid": 228,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -16931,7 +16702,6 @@
     "childGOs": []
   },
   {
-    "uid": 229,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -17035,7 +16805,6 @@
     "childGOs": []
   },
   {
-    "uid": 230,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -17139,7 +16908,6 @@
     "childGOs": []
   },
   {
-    "uid": 231,
     "name": "item block",
     "enabled": true,
     "components": [
@@ -17405,7 +17173,6 @@
     "childGOs": []
   },
   {
-    "uid": 232,
     "name": "Koopa",
     "enabled": true,
     "components": [
@@ -17443,19 +17210,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 1.0
               },
               {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
                 "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 1.0
               }
             ]
@@ -17634,7 +17401,6 @@
     "childGOs": []
   },
   {
-    "uid": 233,
     "name": "item block",
     "enabled": true,
     "components": [
@@ -17900,7 +17666,6 @@
     "childGOs": []
   },
   {
-    "uid": 234,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -18004,7 +17769,6 @@
     "childGOs": []
   },
   {
-    "uid": 235,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -18108,7 +17872,6 @@
     "childGOs": []
   },
   {
-    "uid": 236,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -18212,7 +17975,6 @@
     "childGOs": []
   },
   {
-    "uid": 237,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -18316,7 +18078,6 @@
     "childGOs": []
   },
   {
-    "uid": 238,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -18420,7 +18181,6 @@
     "childGOs": []
   },
   {
-    "uid": 239,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -18524,7 +18284,6 @@
     "childGOs": []
   },
   {
-    "uid": 240,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -18628,7 +18387,6 @@
     "childGOs": []
   },
   {
-    "uid": 241,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -18732,7 +18490,6 @@
     "childGOs": []
   },
   {
-    "uid": 242,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -18836,7 +18593,6 @@
     "childGOs": []
   },
   {
-    "uid": 243,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -18940,7 +18696,6 @@
     "childGOs": []
   },
   {
-    "uid": 244,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -19044,7 +18799,6 @@
     "childGOs": []
   },
   {
-    "uid": 245,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -19148,7 +18902,6 @@
     "childGOs": []
   },
   {
-    "uid": 246,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -19252,7 +19005,6 @@
     "childGOs": []
   },
   {
-    "uid": 247,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -19356,7 +19108,6 @@
     "childGOs": []
   },
   {
-    "uid": 248,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -19460,7 +19211,6 @@
     "childGOs": []
   },
   {
-    "uid": 249,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -19564,7 +19314,6 @@
     "childGOs": []
   },
   {
-    "uid": 250,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -19668,7 +19417,6 @@
     "childGOs": []
   },
   {
-    "uid": 251,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -19772,7 +19520,6 @@
     "childGOs": []
   },
   {
-    "uid": 252,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -19876,7 +19623,6 @@
     "childGOs": []
   },
   {
-    "uid": 253,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -19980,7 +19726,6 @@
     "childGOs": []
   },
   {
-    "uid": 254,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -20084,7 +19829,6 @@
     "childGOs": []
   },
   {
-    "uid": 255,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -20188,7 +19932,6 @@
     "childGOs": []
   },
   {
-    "uid": 256,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -20292,7 +20035,6 @@
     "childGOs": []
   },
   {
-    "uid": 257,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -20396,7 +20138,6 @@
     "childGOs": []
   },
   {
-    "uid": 258,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -20500,7 +20241,6 @@
     "childGOs": []
   },
   {
-    "uid": 259,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -20604,7 +20344,6 @@
     "childGOs": []
   },
   {
-    "uid": 260,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -20708,7 +20447,6 @@
     "childGOs": []
   },
   {
-    "uid": 261,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -20812,7 +20550,6 @@
     "childGOs": []
   },
   {
-    "uid": 262,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -20916,7 +20653,6 @@
     "childGOs": []
   },
   {
-    "uid": 263,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -21020,7 +20756,6 @@
     "childGOs": []
   },
   {
-    "uid": 264,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -21124,7 +20859,6 @@
     "childGOs": []
   },
   {
-    "uid": 265,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -21228,7 +20962,6 @@
     "childGOs": []
   },
   {
-    "uid": 266,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -21332,7 +21065,6 @@
     "childGOs": []
   },
   {
-    "uid": 267,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -21436,7 +21168,6 @@
     "childGOs": []
   },
   {
-    "uid": 268,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -21540,7 +21271,6 @@
     "childGOs": []
   },
   {
-    "uid": 269,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -21644,7 +21374,6 @@
     "childGOs": []
   },
   {
-    "uid": 270,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -21748,7 +21477,6 @@
     "childGOs": []
   },
   {
-    "uid": 271,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -21852,7 +21580,6 @@
     "childGOs": []
   },
   {
-    "uid": 272,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -21956,7 +21683,6 @@
     "childGOs": []
   },
   {
-    "uid": 273,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -22060,7 +21786,6 @@
     "childGOs": []
   },
   {
-    "uid": 274,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -22164,7 +21889,6 @@
     "childGOs": []
   },
   {
-    "uid": 275,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -22268,7 +21992,6 @@
     "childGOs": []
   },
   {
-    "uid": 276,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -22372,7 +22095,6 @@
     "childGOs": []
   },
   {
-    "uid": 277,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -22476,7 +22198,6 @@
     "childGOs": []
   },
   {
-    "uid": 278,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -22580,7 +22301,6 @@
     "childGOs": []
   },
   {
-    "uid": 279,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -22684,7 +22404,6 @@
     "childGOs": []
   },
   {
-    "uid": 280,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -22788,7 +22507,6 @@
     "childGOs": []
   },
   {
-    "uid": 281,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -22892,7 +22610,6 @@
     "childGOs": []
   },
   {
-    "uid": 282,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -22996,7 +22713,6 @@
     "childGOs": []
   },
   {
-    "uid": 283,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -23100,7 +22816,6 @@
     "childGOs": []
   },
   {
-    "uid": 284,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -23204,7 +22919,6 @@
     "childGOs": []
   },
   {
-    "uid": 285,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -23308,7 +23022,6 @@
     "childGOs": []
   },
   {
-    "uid": 286,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -23412,7 +23125,6 @@
     "childGOs": []
   },
   {
-    "uid": 287,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -23516,7 +23228,6 @@
     "childGOs": []
   },
   {
-    "uid": 288,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -23620,7 +23331,6 @@
     "childGOs": []
   },
   {
-    "uid": 289,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -23724,7 +23434,6 @@
     "childGOs": []
   },
   {
-    "uid": 290,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -23828,7 +23537,6 @@
     "childGOs": []
   },
   {
-    "uid": 291,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -23932,7 +23640,6 @@
     "childGOs": []
   },
   {
-    "uid": 292,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -24036,7 +23743,6 @@
     "childGOs": []
   },
   {
-    "uid": 293,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -24140,7 +23846,6 @@
     "childGOs": []
   },
   {
-    "uid": 294,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -24244,7 +23949,6 @@
     "childGOs": []
   },
   {
-    "uid": 295,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -24348,7 +24052,6 @@
     "childGOs": []
   },
   {
-    "uid": 296,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -24452,7 +24155,6 @@
     "childGOs": []
   },
   {
-    "uid": 297,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -24556,7 +24258,6 @@
     "childGOs": []
   },
   {
-    "uid": 298,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -24660,7 +24361,6 @@
     "childGOs": []
   },
   {
-    "uid": 299,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -24764,7 +24464,6 @@
     "childGOs": []
   },
   {
-    "uid": 300,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -24868,7 +24567,6 @@
     "childGOs": []
   },
   {
-    "uid": 301,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -24972,7 +24670,6 @@
     "childGOs": []
   },
   {
-    "uid": 302,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -25076,7 +24773,6 @@
     "childGOs": []
   },
   {
-    "uid": 303,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -25180,7 +24876,6 @@
     "childGOs": []
   },
   {
-    "uid": 304,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -25284,7 +24979,6 @@
     "childGOs": []
   },
   {
-    "uid": 305,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -25388,7 +25082,6 @@
     "childGOs": []
   },
   {
-    "uid": 306,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -25492,7 +25185,6 @@
     "childGOs": []
   },
   {
-    "uid": 307,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -25596,7 +25288,6 @@
     "childGOs": []
   },
   {
-    "uid": 308,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -25700,7 +25391,6 @@
     "childGOs": []
   },
   {
-    "uid": 309,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -25804,7 +25494,6 @@
     "childGOs": []
   },
   {
-    "uid": 310,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -25908,7 +25597,6 @@
     "childGOs": []
   },
   {
-    "uid": 311,
     "name": "levelController",
     "enabled": true,
     "components": [
@@ -25962,7 +25650,6 @@
     "childGOs": []
   },
   {
-    "uid": 312,
     "name": "flag",
     "enabled": true,
     "components": [
@@ -26051,7 +25738,6 @@
     "childGOs": []
   },
   {
-    "uid": 313,
     "name": "flagTop",
     "enabled": true,
     "components": [
@@ -26157,7 +25843,6 @@
     "childGOs": []
   },
   {
-    "uid": 314,
     "name": "flagPole",
     "enabled": true,
     "components": [
@@ -26263,7 +25948,6 @@
     "childGOs": []
   },
   {
-    "uid": 315,
     "name": "flagPole",
     "enabled": true,
     "components": [
@@ -26369,7 +26053,6 @@
     "childGOs": []
   },
   {
-    "uid": 316,
     "name": "flagPole",
     "enabled": true,
     "components": [
@@ -26475,7 +26158,6 @@
     "childGOs": []
   },
   {
-    "uid": 317,
     "name": "flagPole",
     "enabled": true,
     "components": [
@@ -26581,7 +26263,6 @@
     "childGOs": []
   },
   {
-    "uid": 318,
     "name": "flagPole",
     "enabled": true,
     "components": [
@@ -26687,7 +26368,6 @@
     "childGOs": []
   },
   {
-    "uid": 319,
     "name": "flagPole",
     "enabled": true,
     "components": [
@@ -26793,7 +26473,6 @@
     "childGOs": []
   },
   {
-    "uid": 320,
     "name": "flagPole",
     "enabled": true,
     "components": [
@@ -26899,7 +26578,6 @@
     "childGOs": []
   },
   {
-    "uid": 321,
     "name": "flagPole",
     "enabled": true,
     "components": [
@@ -27005,7 +26683,6 @@
     "childGOs": []
   },
   {
-    "uid": 322,
     "name": "flagPole",
     "enabled": true,
     "components": [
@@ -27111,7 +26788,6 @@
     "childGOs": []
   },
   {
-    "uid": 323,
     "name": "flagBase",
     "enabled": true,
     "components": [
@@ -27215,7 +26891,6 @@
     "childGOs": []
   },
   {
-    "uid": 324,
     "name": "coin",
     "enabled": true,
     "components": [
@@ -27427,7 +27102,6 @@
     "childGOs": []
   },
   {
-    "uid": 325,
     "name": "coin",
     "enabled": true,
     "components": [
@@ -27639,7 +27313,6 @@
     "childGOs": []
   },
   {
-    "uid": 326,
     "name": "coin",
     "enabled": true,
     "components": [
@@ -27851,7 +27524,6 @@
     "childGOs": []
   },
   {
-    "uid": 327,
     "name": "coin",
     "enabled": true,
     "components": [
@@ -28063,7 +27735,6 @@
     "childGOs": []
   },
   {
-    "uid": 328,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -28167,7 +27838,6 @@
     "childGOs": []
   },
   {
-    "uid": 329,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -28271,7 +27941,6 @@
     "childGOs": []
   },
   {
-    "uid": 330,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -28375,7 +28044,6 @@
     "childGOs": []
   },
   {
-    "uid": 331,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -28479,7 +28147,6 @@
     "childGOs": []
   },
   {
-    "uid": 332,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -28583,7 +28250,6 @@
     "childGOs": []
   },
   {
-    "uid": 333,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -28687,7 +28353,6 @@
     "childGOs": []
   },
   {
-    "uid": 334,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -28791,7 +28456,6 @@
     "childGOs": []
   },
   {
-    "uid": 335,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -28895,7 +28559,6 @@
     "childGOs": []
   },
   {
-    "uid": 336,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -28999,7 +28662,6 @@
     "childGOs": []
   },
   {
-    "uid": 337,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -29103,7 +28765,6 @@
     "childGOs": []
   },
   {
-    "uid": 338,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -29207,7 +28868,6 @@
     "childGOs": []
   },
   {
-    "uid": 339,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -29311,7 +28971,6 @@
     "childGOs": []
   },
   {
-    "uid": 340,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -29415,7 +29074,6 @@
     "childGOs": []
   },
   {
-    "uid": 341,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -29519,7 +29177,6 @@
     "childGOs": []
   },
   {
-    "uid": 342,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -29623,7 +29280,6 @@
     "childGOs": []
   },
   {
-    "uid": 343,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -29727,7 +29383,6 @@
     "childGOs": []
   },
   {
-    "uid": 344,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -29831,7 +29486,6 @@
     "childGOs": []
   },
   {
-    "uid": 345,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -29935,7 +29589,6 @@
     "childGOs": []
   },
   {
-    "uid": 346,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -30039,7 +29692,6 @@
     "childGOs": []
   },
   {
-    "uid": 347,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -30143,7 +29795,6 @@
     "childGOs": []
   },
   {
-    "uid": 348,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -30247,7 +29898,6 @@
     "childGOs": []
   },
   {
-    "uid": 349,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -30351,7 +30001,6 @@
     "childGOs": []
   },
   {
-    "uid": 350,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -30455,7 +30104,6 @@
     "childGOs": []
   },
   {
-    "uid": 351,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -30559,7 +30207,6 @@
     "childGOs": []
   },
   {
-    "uid": 352,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -30663,7 +30310,6 @@
     "childGOs": []
   },
   {
-    "uid": 353,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -30767,7 +30413,6 @@
     "childGOs": []
   },
   {
-    "uid": 354,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -30871,7 +30516,6 @@
     "childGOs": []
   },
   {
-    "uid": 355,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -30975,7 +30619,6 @@
     "childGOs": []
   },
   {
-    "uid": 356,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -31079,7 +30722,6 @@
     "childGOs": []
   },
   {
-    "uid": 357,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -31183,7 +30825,6 @@
     "childGOs": []
   },
   {
-    "uid": 358,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -31287,7 +30928,6 @@
     "childGOs": []
   },
   {
-    "uid": 359,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -31391,7 +31031,6 @@
     "childGOs": []
   },
   {
-    "uid": 360,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -31495,7 +31134,6 @@
     "childGOs": []
   },
   {
-    "uid": 361,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -31599,7 +31237,6 @@
     "childGOs": []
   },
   {
-    "uid": 362,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -31703,7 +31340,6 @@
     "childGOs": []
   },
   {
-    "uid": 363,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -31807,7 +31443,6 @@
     "childGOs": []
   },
   {
-    "uid": 364,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -31911,7 +31546,6 @@
     "childGOs": []
   },
   {
-    "uid": 365,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -32015,7 +31649,6 @@
     "childGOs": []
   },
   {
-    "uid": 366,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -32119,7 +31752,6 @@
     "childGOs": []
   },
   {
-    "uid": 367,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -32223,7 +31855,6 @@
     "childGOs": []
   },
   {
-    "uid": 368,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -32327,7 +31958,6 @@
     "childGOs": []
   },
   {
-    "uid": 369,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -32431,7 +32061,6 @@
     "childGOs": []
   },
   {
-    "uid": 370,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -32535,7 +32164,6 @@
     "childGOs": []
   },
   {
-    "uid": 371,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -32639,7 +32267,6 @@
     "childGOs": []
   },
   {
-    "uid": 372,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -32743,7 +32370,6 @@
     "childGOs": []
   },
   {
-    "uid": 373,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -32847,7 +32473,6 @@
     "childGOs": []
   },
   {
-    "uid": 374,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -32951,7 +32576,6 @@
     "childGOs": []
   },
   {
-    "uid": 375,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -33055,7 +32679,6 @@
     "childGOs": []
   },
   {
-    "uid": 376,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -33159,7 +32782,6 @@
     "childGOs": []
   },
   {
-    "uid": 377,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -33263,7 +32885,6 @@
     "childGOs": []
   },
   {
-    "uid": 378,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -33367,7 +32988,6 @@
     "childGOs": []
   },
   {
-    "uid": 379,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -33471,7 +33091,6 @@
     "childGOs": []
   },
   {
-    "uid": 380,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -33575,7 +33194,6 @@
     "childGOs": []
   },
   {
-    "uid": 381,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -33679,7 +33297,6 @@
     "childGOs": []
   },
   {
-    "uid": 382,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -33783,7 +33400,6 @@
     "childGOs": []
   },
   {
-    "uid": 383,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -33887,7 +33503,6 @@
     "childGOs": []
   },
   {
-    "uid": 384,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -33991,7 +33606,6 @@
     "childGOs": []
   },
   {
-    "uid": 385,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -34095,7 +33709,6 @@
     "childGOs": []
   },
   {
-    "uid": 386,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -34199,7 +33812,6 @@
     "childGOs": []
   },
   {
-    "uid": 387,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -34303,7 +33915,6 @@
     "childGOs": []
   },
   {
-    "uid": 388,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -34407,7 +34018,6 @@
     "childGOs": []
   },
   {
-    "uid": 389,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -34511,7 +34121,6 @@
     "childGOs": []
   },
   {
-    "uid": 390,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -34615,7 +34224,6 @@
     "childGOs": []
   },
   {
-    "uid": 391,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -34719,7 +34327,6 @@
     "childGOs": []
   },
   {
-    "uid": 392,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -34823,7 +34430,6 @@
     "childGOs": []
   },
   {
-    "uid": 393,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -34927,7 +34533,6 @@
     "childGOs": []
   },
   {
-    "uid": 394,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -35031,7 +34636,6 @@
     "childGOs": []
   },
   {
-    "uid": 395,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -35135,7 +34739,6 @@
     "childGOs": []
   },
   {
-    "uid": 396,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -35239,7 +34842,6 @@
     "childGOs": []
   },
   {
-    "uid": 397,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -35343,7 +34945,6 @@
     "childGOs": []
   },
   {
-    "uid": 398,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -35447,7 +35048,6 @@
     "childGOs": []
   },
   {
-    "uid": 399,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -35551,7 +35151,6 @@
     "childGOs": []
   },
   {
-    "uid": 400,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -35655,7 +35254,6 @@
     "childGOs": []
   },
   {
-    "uid": 401,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -35759,7 +35357,6 @@
     "childGOs": []
   },
   {
-    "uid": 402,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -35863,7 +35460,6 @@
     "childGOs": []
   },
   {
-    "uid": 403,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -35967,7 +35563,6 @@
     "childGOs": []
   },
   {
-    "uid": 404,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -36071,7 +35666,6 @@
     "childGOs": []
   },
   {
-    "uid": 405,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -36175,7 +35769,6 @@
     "childGOs": []
   },
   {
-    "uid": 406,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -36279,7 +35872,6 @@
     "childGOs": []
   },
   {
-    "uid": 407,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -36383,7 +35975,6 @@
     "childGOs": []
   },
   {
-    "uid": 408,
     "name": "ground object",
     "enabled": true,
     "components": [
@@ -36487,7 +36078,6 @@
     "childGOs": []
   },
   {
-    "uid": 409,
     "name": "HUD",
     "enabled": true,
     "components": [
@@ -36515,7 +36105,6 @@
     "isDead": false,
     "childGOs": [
       {
-        "uid": 410,
         "name": "puntos",
         "enabled": true,
         "components": [
@@ -42601,7 +42190,6 @@
         "isDead": false,
         "childGOs": [
           {
-            "uid": 411,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -44686,7 +44274,6 @@
             "childGOs": []
           },
           {
-            "uid": 412,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -46771,7 +46358,6 @@
             "childGOs": []
           },
           {
-            "uid": 413,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -48856,7 +48442,6 @@
             "childGOs": []
           },
           {
-            "uid": 414,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -50941,7 +50526,6 @@
             "childGOs": []
           },
           {
-            "uid": 415,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -53026,7 +52610,6 @@
             "childGOs": []
           },
           {
-            "uid": 416,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -55113,7 +54696,6 @@
         ]
       },
       {
-        "uid": 417,
         "name": "tiempo",
         "enabled": true,
         "components": [
@@ -58172,7 +57754,6 @@
         "isDead": false,
         "childGOs": [
           {
-            "uid": 418,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -60257,7 +59838,6 @@
             "childGOs": []
           },
           {
-            "uid": 419,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -62342,7 +61922,6 @@
             "childGOs": []
           },
           {
-            "uid": 420,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -64429,7 +64008,6 @@
         ]
       },
       {
-        "uid": 421,
         "name": "mundo",
         "enabled": true,
         "components": [
@@ -65470,7 +65048,6 @@
         "isDead": false,
         "childGOs": [
           {
-            "uid": 422,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -67557,7 +67134,6 @@
         ]
       },
       {
-        "uid": 423,
         "name": "nivel",
         "enabled": true,
         "components": [
@@ -68598,7 +68174,6 @@
         "isDead": false,
         "childGOs": [
           {
-            "uid": 424,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -70685,7 +70260,6 @@
         ]
       },
       {
-        "uid": 425,
         "name": "monedas",
         "enabled": true,
         "components": [
@@ -72735,7 +72309,6 @@
         "isDead": false,
         "childGOs": [
           {
-            "uid": 426,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -74820,7 +74393,6 @@
             "childGOs": []
           },
           {
-            "uid": 427,
             "name": "sprite_obj_gen",
             "enabled": true,
             "components": [
@@ -76907,7 +76479,6 @@
         ]
       },
       {
-        "uid": 428,
         "name": "marioText",
         "enabled": true,
         "components": [
@@ -76970,7 +76541,6 @@
         "childGOs": []
       },
       {
-        "uid": 429,
         "name": "mundoText",
         "enabled": true,
         "components": [
@@ -77033,7 +76603,6 @@
         "childGOs": []
       },
       {
-        "uid": 430,
         "name": "tiempoText",
         "enabled": true,
         "components": [
@@ -77096,7 +76665,6 @@
         "childGOs": []
       },
       {
-        "uid": 431,
         "name": "XText",
         "enabled": true,
         "components": [
@@ -77159,7 +76727,6 @@
         "childGOs": []
       },
       {
-        "uid": 432,
         "name": "animated_coin",
         "enabled": true,
         "components": [
@@ -77361,5 +76928,270 @@
         "childGOs": []
       }
     ]
+  },
+  {
+    "name": "item block",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.6249857,
+            "y": 1.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "height": 64,
+              "width": 64
+            },
+            "texCoords": [
+              {
+                "x": 0.25,
+                "y": 1.0
+              },
+              {
+                "x": 0.25,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "flicker",
+                "trigger": "setInactive"
+              },
+              "inactive"
+            ]
+          ],
+          "states": [
+            {
+              "title": "inactiv",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "inactiv",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "flicker"
+        }
+      },
+      {
+        "type": "components.gamecomponents.ItemBlock",
+        "properties": {
+          "contents": "Mushroom",
+          "numberCoins": 5,
+          "isInvisible": false,
+          "bopSpeed": 0.4
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
   }
 ]

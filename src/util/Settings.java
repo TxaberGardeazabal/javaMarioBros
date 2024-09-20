@@ -59,6 +59,7 @@ public class Settings {
     // other
     public static float worldGravityMul = 0.7f;
     public static String defaultLevel = "add filepath here when I make default level";
+    public static String customPrefabPath = "assets/prefabs";
     
     /**
      * Convierte una ruta de asset absoluta en una relativa a la carpeta raiz
