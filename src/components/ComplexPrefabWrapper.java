@@ -8,7 +8,6 @@ import gameEngine.GameObject;
 import gameEngine.Transform;
 import java.util.ArrayList;
 import java.util.List;
-import org.joml.Vector2f;
 
 /**
  * Clase de ayuda para poder añadir multiples objetos a la vez al nivel desde prefabs.
@@ -18,7 +17,6 @@ import org.joml.Vector2f;
  */
 public class ComplexPrefabWrapper extends Component{
     private List<GameObject> gameObjects = new ArrayList();
-    private List<Transform> ofsets = new ArrayList();
     private Transform anchor;
     private boolean first = true;
 
@@ -29,30 +27,24 @@ public class ComplexPrefabWrapper extends Component{
     public List<GameObject> getGameObjects() {
         return gameObjects;
     }
-    
-    /**
-     * Devuelve todos los ofsets de los GOs relativos al GO de esta clase
-     * @return la lista con los transform relativos paralelas a la lista de GOs
-     */
-    public List<Transform> getOfsets() {
-        return ofsets;
-    }
 
     /**
      * Añade una GO a la lista
      * @param gameObject objeto a añadir a la lista
      */
     public void addGameObject(GameObject gameObject) {
-        this.gameObjects.add(gameObject);
+        // the first object passed becomes the anchor point (0,0) for the rest
+        // of objects, then they are save separately from the level
         if (first) {
             anchor = new Transform(gameObject.transform.position);
-            Transform t = gameObject.transform.copy();
-            t.position.zero();
-            this.ofsets.add(t);
+            GameObject newObj = gameObject.copy();
+            newObj.transform.position.zero();
+            this.gameObjects.add(newObj);
+            first = false;
         } else {
-            Transform t = gameObject.transform.copy();
-            t.position.sub(anchor.position);
-            this.ofsets.add(t);
+            GameObject newObj = gameObject.copy();
+            newObj.transform.position.sub(anchor.position);
+            this.gameObjects.add(newObj);
         }
         
     }

@@ -269,6 +269,8 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         switch(event.type) {
             case EditorStartPlay:
                 ConsoleWindow.addLog("begining play", ConsoleWindow.LogCategory.info);
+                Window.getImGuiLayer().getPropertiesWindow().getMc().destroyHoldingObject();
+                Window.getImGuiLayer().getPropertiesWindow().getMc().clearColor();
                 Scene scene = Window.getScene();
                 scene.save();
                 scene.camera().resetZoom();
@@ -304,7 +306,6 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 skyholeDetection.start();
                 scene.addGameObjectToScene(skyholeDetection);
                 
-                Window.getImGuiLayer().getPropertiesWindow().getMc().destroyHoldingObject();
                 Window.setRuntimePlaying(true);
                 break;
             case EditorStopPlay:
@@ -318,6 +319,8 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 Window.changeScene(new LevelEditorSceneInitializer(), Window.getScene().getLevelFilepath());
                 break;
             case SaveLevel:
+                Window.getImGuiLayer().getPropertiesWindow().getMc().destroyHoldingObject();
+                Window.getImGuiLayer().getPropertiesWindow().getMc().clearSelected();
                 Window.getScene().save();
                 break;
             case EndWindow:

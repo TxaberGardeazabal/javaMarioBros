@@ -64,7 +64,10 @@ public class PropertiesWindow {
                         if (res != null && !res.equals("")) {
                             // save in custom prefabs
                             PrefabSave file = new PrefabSave(Settings.customPrefabPath+"/"+res+".prefab");
-                            file.setPrefab(activeGameObject);
+                            // set position to 0
+                            GameObject newObj = activeGameObject.copy();
+                            newObj.transform.position.zero();
+                            file.setPrefab(newObj);
                             file.save();
                             
                         }
@@ -121,6 +124,8 @@ public class PropertiesWindow {
                         String res = JOptionPane.showInputDialog("introduce name of the prefab");
                         
                         if (res != null && !res.equals("")) {
+                            mc.clearColor();
+                            
                             // save in custom prefabs
                             GameObject root = Window.getScene().createGameObject("root");
                             ComplexPrefabWrapper cpw = new ComplexPrefabWrapper();

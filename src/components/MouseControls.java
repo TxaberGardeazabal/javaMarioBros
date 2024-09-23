@@ -9,9 +9,7 @@ import components.propertieComponents.ShadowObj;
 import gameEngine.GameObject;
 import gameEngine.KeyListener;
 import gameEngine.MouseListener;
-import gameEngine.PrefabSave;
 import gameEngine.Window;
-import imgui.ImGui;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -172,7 +170,7 @@ public class MouseControls extends Component{
                 }
             }
             // check if only one object was valid and selected, if so dont store its color like in 
-            // multiple selections, the color may change while editing
+            // multiple selections, the color may change whils't editing
             if (this.activeGameObjects.size() == 1) {
                 this.activeGameObjects.get(0)
                         .getComponent(SpriteRenderer.class)
@@ -374,6 +372,14 @@ public class MouseControls extends Component{
      * Libera la seleccion de objetos y los restaura a su estado original
      */
     public void clearSelected() {
+        clearColor();
+        this.activeGameObjects.clear();
+    }
+    
+    /**
+     * Resetea el color original de los objetos multiples seleccionados
+     */
+    public void clearColor() {
         if (!this.activeGameObjectOgColor.isEmpty()) {
             int i = 0;
             for (GameObject go : activeGameObjects) {
@@ -384,7 +390,6 @@ public class MouseControls extends Component{
                 i++;
             }
         }
-        this.activeGameObjects.clear();
         this.activeGameObjectOgColor.clear();
     }
     
