@@ -31,6 +31,7 @@ public class GameViewWindow {
     public void imGui() {
         ImGui.begin("Game viewport", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse
                         | ImGuiWindowFlags.MenuBar);
+        
         if (showMenuBar) {
            ImGui.beginMenuBar();
         

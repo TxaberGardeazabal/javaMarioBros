@@ -42,6 +42,8 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     public void init(Scene scene) {
         Window.get().changeTitle("Mario level editor: " + Window.getScene().getLevelFilepath());
         
+        Window.getImGuiLayer().getGameViewWindow().setShowMenuBar(true);
+        
         SpriteSheet gizmos = AssetPool.getSpritesheet("assets/images/gizmos.png");
         
         editor = scene.createGameObject("LevelEditorStuff");

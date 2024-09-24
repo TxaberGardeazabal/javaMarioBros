@@ -1,13 +1,13 @@
 {
-  "name": "item block",
+  "name": "invisible block",
   "enabled": true,
   "components": [
     {
       "type": "gameEngine.Transform",
       "properties": {
         "position": {
-          "x": 3.625,
-          "y": 1.125
+          "x": 0.0,
+          "y": 0.0
         },
         "rotation": 0.0,
         "scale": {
@@ -24,7 +24,7 @@
           "x": 1.0,
           "y": 1.0,
           "z": 1.0,
-          "w": 1.0
+          "w": 0.5
         },
         "sprite": {
           "Width": 16.0,
@@ -36,19 +36,19 @@
           },
           "texCoords": [
             {
-              "x": 0.5,
+              "x": 0.25,
               "y": 1.0
             },
             {
-              "x": 0.5,
-              "y": 0.75
-            },
-            {
               "x": 0.25,
               "y": 0.75
             },
             {
-              "x": 0.25,
+              "x": 0.0,
+              "y": 0.75
+            },
+            {
+              "x": 0.0,
               "y": 1.0
             }
           ]
@@ -61,7 +61,7 @@
         "stateTransfers": [
           [
             {
-              "state": "flicker",
+              "state": "active",
               "trigger": "setInactive"
             },
             "inactive"
@@ -69,7 +69,7 @@
         ],
         "states": [
           {
-            "title": "flicker",
+            "title": "active",
             "animationFrames": [
               {
                 "sprite": {
@@ -99,73 +99,11 @@
                     }
                   ]
                 },
-                "frameTime": 0.23,
-                "spriteNumber": 0
-              },
-              {
-                "sprite": {
-                  "Width": 16.0,
-                  "height": 16.0,
-                  "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                    "height": 64,
-                    "width": 64
-                  },
-                  "texCoords": [
-                    {
-                      "x": 0.5,
-                      "y": 1.0
-                    },
-                    {
-                      "x": 0.5,
-                      "y": 0.75
-                    },
-                    {
-                      "x": 0.25,
-                      "y": 0.75
-                    },
-                    {
-                      "x": 0.25,
-                      "y": 1.0
-                    }
-                  ]
-                },
-                "frameTime": 0.23,
-                "spriteNumber": 0
-              },
-              {
-                "sprite": {
-                  "Width": 16.0,
-                  "height": 16.0,
-                  "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                    "height": 64,
-                    "width": 64
-                  },
-                  "texCoords": [
-                    {
-                      "x": 0.75,
-                      "y": 1.0
-                    },
-                    {
-                      "x": 0.75,
-                      "y": 0.75
-                    },
-                    {
-                      "x": 0.5,
-                      "y": 0.75
-                    },
-                    {
-                      "x": 0.5,
-                      "y": 1.0
-                    }
-                  ]
-                },
-                "frameTime": 0.23,
+                "frameTime": 0.1,
                 "spriteNumber": 0
               }
             ],
-            "doesLoop": true
+            "doesLoop": false
           },
           {
             "title": "inactive",
@@ -205,15 +143,15 @@
             "doesLoop": false
           }
         ],
-        "defaultStateTitle": "flicker"
+        "defaultStateTitle": "active"
       }
     },
     {
       "type": "components.gamecomponents.ItemBlock",
       "properties": {
-        "contents": "Mushroom",
+        "contents": "Coin",
         "numberCoins": 5,
-        "isInvisible": false,
+        "isInvisible": true,
         "bopSpeed": 0.4
       }
     },

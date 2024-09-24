@@ -28,7 +28,9 @@ public class LevelSceneInitializer extends SceneInitializer {
     }
     
     @Override
-    public void init(Scene scene) {        
+    public void init(Scene scene) { 
+        Window.getImGuiLayer().getGameViewWindow().setShowMenuBar(false);
+        
         GameObject camera = scene.createGameObject("SceneCamera");
         camera.setNoSerialize();
         camera.addComponent(new GameCamera(scene.camera()));

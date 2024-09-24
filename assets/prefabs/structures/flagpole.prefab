@@ -1,0 +1,2380 @@
+{
+  "name": "flagBase",
+  "enabled": true,
+  "components": [
+    {
+      "type": "gameEngine.Transform",
+      "properties": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 0.0,
+        "scale": {
+          "x": 0.25,
+          "y": 0.25
+        },
+        "zIndex": 0
+      }
+    },
+    {
+      "type": "components.SpriteRenderer",
+      "properties": {
+        "color": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0,
+          "w": 1.0
+        },
+        "sprite": {
+          "Width": 16.0,
+          "height": 16.0,
+          "texture": {
+            "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+            "height": 64,
+            "width": 112
+          },
+          "texCoords": [
+            {
+              "x": 0.14285715,
+              "y": 0.75
+            },
+            {
+              "x": 0.14285715,
+              "y": 0.5
+            },
+            {
+              "x": 0.0,
+              "y": 0.5
+            },
+            {
+              "x": 0.0,
+              "y": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "physics2D.components.Rigidbody2D",
+      "properties": {
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "angularDamping": 0.8,
+        "linearDamping": 0.9,
+        "mass": 0.1,
+        "bodyType": "Static",
+        "friction": 0.1,
+        "angularVelocity": 0.0,
+        "gravityScale": 1.0,
+        "isSensor": false,
+        "fixedRotation": true,
+        "continuousCollision": true
+      }
+    },
+    {
+      "type": "physics2D.components.Box2DCollider",
+      "properties": {
+        "halfSize": {
+          "x": 0.25,
+          "y": 0.25
+        },
+        "origin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "showBoundaries": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0
+        }
+      }
+    },
+    {
+      "type": "components.propertieComponents.Ground",
+      "properties": {}
+    }
+  ],
+  "doSerialization": true,
+  "isDead": false,
+  "childGOs": [
+    {
+      "name": "flag",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.759992,
+              "y": 2.625
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/particles/marioParticles.png",
+                "height": 80,
+                "width": 64
+              },
+              "texCoords": [
+                {
+                  "x": 0.25,
+                  "y": 0.4
+                },
+                {
+                  "x": 0.25,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "components.gamecomponents.Flag",
+          "properties": {
+            "flagReached": false,
+            "distanceToTravel": 1.9
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagTop",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.874992,
+              "y": 2.875
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.6
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.6
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.12
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": -0.065
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.874992,
+              "y": 0.625
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.874992,
+              "y": 0.875
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.874992,
+              "y": 1.125
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.874992,
+              "y": 1.375
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.874992,
+              "y": 1.625
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.874992,
+              "y": 1.875
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.874992,
+              "y": 2.125
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.874992,
+              "y": 2.375
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 4.874992,
+              "y": 2.625
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": 0.25
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": 0.5
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": 0.75
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": 1.0
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": 1.25
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": 1.5
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flag",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -0.11499977,
+              "y": 1.5
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/particles/marioParticles.png",
+                "height": 80,
+                "width": 64
+              },
+              "texCoords": [
+                {
+                  "x": 0.25,
+                  "y": 0.4
+                },
+                {
+                  "x": 0.25,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "components.gamecomponents.Flag",
+          "properties": {
+            "flagReached": false,
+            "distanceToTravel": 1.9
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagTop",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": 1.75
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.6
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.6
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.12
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": -0.065
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": -0.5
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "flagPole",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": -0.25
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 0.4
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.875,
+                  "y": 0.4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": true,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.02,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.FlagPole",
+          "properties": {
+            "isTop": true
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    }
+  ]
+}

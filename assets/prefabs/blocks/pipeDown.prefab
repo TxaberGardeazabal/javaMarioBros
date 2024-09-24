@@ -1,0 +1,111 @@
+{
+  "name": "pipeDown",
+  "enabled": true,
+  "components": [
+    {
+      "type": "gameEngine.Transform",
+      "properties": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 0.0,
+        "scale": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "zIndex": -1
+      }
+    },
+    {
+      "type": "components.SpriteRenderer",
+      "properties": {
+        "color": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0,
+          "w": 1.0
+        },
+        "sprite": {
+          "Width": 32.0,
+          "height": 32.0,
+          "texture": {
+            "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesFull.png",
+            "height": 32,
+            "width": 128
+          },
+          "texCoords": [
+            {
+              "x": 0.75,
+              "y": 1.0
+            },
+            {
+              "x": 0.75,
+              "y": 0.0
+            },
+            {
+              "x": 0.5,
+              "y": 0.0
+            },
+            {
+              "x": 0.5,
+              "y": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "physics2D.components.Rigidbody2D",
+      "properties": {
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "angularDamping": 0.8,
+        "linearDamping": 0.9,
+        "mass": 0.0,
+        "bodyType": "Static",
+        "friction": 0.1,
+        "angularVelocity": 0.0,
+        "gravityScale": 1.0,
+        "isSensor": false,
+        "fixedRotation": true,
+        "continuousCollision": false
+      }
+    },
+    {
+      "type": "physics2D.components.Box2DCollider",
+      "properties": {
+        "halfSize": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "origin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "showBoundaries": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0
+        }
+      }
+    },
+    {
+      "type": "components.gamecomponents.Pipe",
+      "properties": {
+        "direction": "Down",
+        "connectingPipeName": "",
+        "isTraversable": false
+      }
+    },
+    {
+      "type": "components.propertieComponents.Ground",
+      "properties": {}
+    }
+  ],
+  "doSerialization": true,
+  "isDead": false,
+  "childGOs": []
+}

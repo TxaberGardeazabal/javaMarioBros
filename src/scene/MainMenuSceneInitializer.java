@@ -26,6 +26,8 @@ public class MainMenuSceneInitializer extends SceneInitializer{
     public void init(Scene scene) {
         Window.get().changeTitle("Super mario bros");   
         
+        Window.getImGuiLayer().getGameViewWindow().setShowMenuBar(false);
+        
         GameObject camera = scene.createGameObject("SceneCamera");
         camera.setNoSerialize();
         camera.addComponent(new GameCamera(scene.camera()));
