@@ -19,6 +19,7 @@ import observers.EventSystem;
 import observers.Observer;
 import observers.events.Event;
 import observers.events.EventType;
+import org.joml.Vector2f;
 import org.joml.Vector4f;
 import scene.LevelEditorSceneInitializer;
 import scene.LevelSceneInitializer;
@@ -87,7 +88,10 @@ public class LevelController extends Component implements Observer{
         if (hud == null) {
             ConsoleWindow.addLog("LevelController: hud reference not found",
                     ConsoleWindow.LogCategory.warning);
+        } else {
+            hud.transform.translate(new Vector2f(0,0));
         }
+        
         timeLeft = time;
         
         EventSystem.addObserver(this);

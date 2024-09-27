@@ -1,0 +1,4675 @@
+{
+  "name": "castle_large",
+  "enabled": true,
+  "components": [
+    {
+      "type": "gameEngine.Transform",
+      "properties": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 0.0,
+        "scale": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "zIndex": 0
+      }
+    }
+  ],
+  "doSerialization": true,
+  "isDead": false,
+  "childGOs": [
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -1.9073486E-6,
+              "y": -5.066395E-7
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.2499981,
+              "y": -5.066395E-7
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.4999981,
+              "y": -5.066395E-7
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.74997234,
+              "y": -4.7683716E-7
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.9999981,
+              "y": -5.066395E-7
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2499733,
+              "y": -4.7683716E-7
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.4999981,
+              "y": -5.066395E-7
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.7499952,
+              "y": -4.7683716E-7
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.9999952,
+              "y": -4.7683716E-7
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -3.8146973E-6,
+              "y": 0.24999955
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.24999619,
+              "y": 0.24999955
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.4999981,
+              "y": 0.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.74997044,
+              "y": 0.24999958
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -5
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.9999981,
+              "y": 0.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2499714,
+              "y": 0.24999958
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.4999981,
+              "y": 0.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.7499933,
+              "y": 0.24999958
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.9999933,
+              "y": 0.24999958
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -5.722046E-6,
+              "y": 0.49999943
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.24999428,
+              "y": 0.49999943
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.49998665,
+              "y": 0.4999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.74998665,
+              "y": 0.4999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.99998665,
+              "y": 0.4999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2499866,
+              "y": 0.4999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.4999866,
+              "y": 0.4999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.7499866,
+              "y": 0.4999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.9999866,
+              "y": 0.4999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -7.6293945E-6,
+              "y": 0.74999917
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.24999237,
+              "y": 0.74999917
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.4999733,
+              "y": 0.7499993
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.7499981,
+              "y": 0.7499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -2
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.99997425,
+              "y": 0.7499993
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2499981,
+              "y": 0.7499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.4999838,
+              "y": 0.7499993
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.7499838,
+              "y": 0.7499993
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.9999838,
+              "y": 0.7499993
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -9.536743E-6,
+              "y": 0.99999905
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.24999046,
+              "y": 0.99999905
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.49997425,
+              "y": 0.99999905
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.7499981,
+              "y": 0.9999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.99997425,
+              "y": 0.99999905
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2499981,
+              "y": 0.9999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.4999809,
+              "y": 0.99999905
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.7499809,
+              "y": 0.99999905
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.9999809,
+              "y": 0.99999905
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -1.9073486E-6,
+              "y": 1.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.2499981,
+              "y": 1.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.4999981,
+              "y": 1.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.7499981,
+              "y": 1.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.9999981,
+              "y": 1.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2499981,
+              "y": 1.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.4999981,
+              "y": 1.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.7499981,
+              "y": 1.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.9999981,
+              "y": 1.2499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.5000038,
+              "y": 1.499999
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.7500038,
+              "y": 1.499999
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.0000038,
+              "y": 1.499999
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2500038,
+              "y": 1.499999
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 5
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.5000038,
+              "y": 1.499999
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.5000038,
+              "y": 1.749999
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.7500038,
+              "y": 1.749999
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.0000038,
+              "y": 1.749999
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2500038,
+              "y": 1.749999
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 5
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.5000038,
+              "y": 1.749999
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.5000038,
+              "y": 1.9999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.7500038,
+              "y": 1.9999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.0000038,
+              "y": 1.9999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2500038,
+              "y": 1.9999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.85714287,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.85714287,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.5000038,
+              "y": 1.9999995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.7500038,
+              "y": 2.2500007
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.0000038,
+              "y": 2.2500007
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.42857143,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.42857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.2857143,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castleWindow",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2500038,
+              "y": 2.2500007
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.7500038,
+              "y": 2.5000014
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.0000038,
+              "y": 2.5000014
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "castle",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.2500038,
+              "y": 2.5000014
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.71428573,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.71428573,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 0.75
+                },
+                {
+                  "x": 0.5714286,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    }
+  ]
+}

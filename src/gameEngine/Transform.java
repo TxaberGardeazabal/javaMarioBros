@@ -79,7 +79,7 @@ public class Transform extends Component{
     }
     
     /**
-     * Copia este objeto
+     * Copia los valores de este transform
      * @param to un transform donde copiar este objeto
      */
     public void copy(Transform to) {
@@ -168,6 +168,19 @@ public class Transform extends Component{
         this.zIndex = zIndex;
         for (GameObject go : gameObject.getChildGOs()) {
             go.transform.setzIndex(zIndex);
+        }
+    }
+    
+    /**
+     * Mueve este transform a una posicion, pasando el movimiento a sus hijos
+     * @param newPos un posicion dentro del mundo donde mover el objeto
+     */
+    public void setPosition(Vector2f newPos) {
+        Vector2f delta = new Vector2f(newPos).sub(this.position);
+        this.position = newPos;
+        
+        for (GameObject go : gameObject.getChildGOs()) {
+            go.transform.translate(delta);
         }
     }
 }

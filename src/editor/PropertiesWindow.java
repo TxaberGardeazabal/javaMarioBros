@@ -14,16 +14,12 @@ import components.propertieComponents.Ground;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
 import imgui.internal.ImGui;
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import org.joml.Vector2f;
 import physics2D.components.Box2DCollider;
 import physics2D.components.CircleCollider;
 import physics2D.components.Rigidbody2D;
-import scene.LevelEditorSceneInitializer;
 import util.Settings;
 
 /**
@@ -66,10 +62,10 @@ public class PropertiesWindow {
                             PrefabSave file = new PrefabSave(Settings.customPrefabPath+"/"+res+".prefab");
                             // set position to 0
                             GameObject newObj = activeGameObject.copy();
-                            newObj.transform.position.zero();
+                            newObj.transform.setPosition(new Vector2f().zero());
                             file.setPrefab(newObj);
                             file.save();
-                            
+                            newObj.destroy();
                         }
                     }
                     
@@ -137,7 +133,7 @@ public class PropertiesWindow {
                             PrefabSave file = new PrefabSave(Settings.customPrefabPath+"/"+res+".prefab");
                             file.setPrefab(root);
                             file.save();
-                            
+                            file.destroy();
                         }
                     }
                 }

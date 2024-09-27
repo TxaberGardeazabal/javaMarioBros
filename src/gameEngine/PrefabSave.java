@@ -11,11 +11,14 @@ import components.ButtonBehaviorDeserializer;
 import components.ComplexPrefabWrapper;
 import components.Component;
 import components.ComponentDeserializer;
+import components.SpriteRenderer;
+import components.StateMachine;
 import editor.ConsoleWindow;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import util.AssetPool;
 
 /**
  *
@@ -84,6 +87,24 @@ public class PrefabSave {
             if (prefab.getComponent(ComplexPrefabWrapper.class) != null) {
                 this.cpw = prefab.getComponent(ComplexPrefabWrapper.class);
             }
+            
+            if (this.cpw == null) {
+                this.prefab.refreshTextures();
+            } else {
+                for (GameObject go : this.cpw.getGameObjects()) {
+                    go.refreshTextures();
+                }
+            }
         }
+    }    
+    
+    public void destroy() {
+        for (GameObject go : this.cpw.getGameObjects()) {
+            go.destroy();
+        }
+        
+        this.prefab.destroy();
     }
+    
+    
 }

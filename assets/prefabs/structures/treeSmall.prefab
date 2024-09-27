@@ -1,5 +1,5 @@
 {
-  "name": "bush1_small",
+  "name": "tree_small",
   "enabled": true,
   "components": [
     {
@@ -22,22 +22,22 @@
   "isDead": false,
   "childGOs": [
     {
-      "name": "bush",
+      "name": "tree",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.125,
-              "y": 0.375
+              "x": 0.0,
+              "y": 0.0
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": -1
           }
         },
         {
@@ -53,26 +53,26 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
               },
               "texCoords": [
                 {
-                  "x": 0.125,
-                  "y": 0.8
+                  "x": 0.2857143,
+                  "y": 0.25
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.6
+                  "x": 0.2857143,
+                  "y": 0.0
                 },
                 {
-                  "x": 0.0,
-                  "y": 0.6
+                  "x": 0.14285715,
+                  "y": 0.0
                 },
                 {
-                  "x": 0.0,
-                  "y": 0.8
+                  "x": 0.14285715,
+                  "y": 0.25
                 }
               ]
             }
@@ -84,84 +84,22 @@
       "childGOs": []
     },
     {
-      "name": "bush",
+      "name": "tree",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.375,
-              "y": 0.375
+              "x": 0.0,
+              "y": 0.25
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
-          }
-        },
-        {
-          "type": "components.SpriteRenderer",
-          "properties": {
-            "color": {
-              "x": 1.0,
-              "y": 1.0,
-              "z": 1.0,
-              "w": 1.0
-            },
-            "sprite": {
-              "Width": 16.0,
-              "height": 16.0,
-              "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
-              },
-              "texCoords": [
-                {
-                  "x": 0.25,
-                  "y": 0.8
-                },
-                {
-                  "x": 0.25,
-                  "y": 0.6
-                },
-                {
-                  "x": 0.125,
-                  "y": 0.6
-                },
-                {
-                  "x": 0.125,
-                  "y": 0.8
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "doSerialization": true,
-      "isDead": false,
-      "childGOs": []
-    },
-    {
-      "name": "bush",
-      "enabled": true,
-      "components": [
-        {
-          "type": "gameEngine.Transform",
-          "properties": {
-            "position": {
-              "x": 0.625,
-              "y": 0.375
-            },
-            "rotation": 0.0,
-            "scale": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "zIndex": -2
+            "zIndex": -1
           }
         },
         {
@@ -184,19 +122,19 @@
               "texCoords": [
                 {
                   "x": 0.375,
-                  "y": 0.8
+                  "y": 0.6
                 },
                 {
                   "x": 0.375,
-                  "y": 0.6
+                  "y": 0.4
+                },
+                {
+                  "x": 0.25,
+                  "y": 0.4
                 },
                 {
                   "x": 0.25,
                   "y": 0.6
-                },
-                {
-                  "x": 0.25,
-                  "y": 0.8
                 }
               ]
             }

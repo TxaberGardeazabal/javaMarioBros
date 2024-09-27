@@ -12,6 +12,7 @@ import components.ButtonBehaviorDeserializer;
 import components.Component;
 import components.ComponentDeserializer;
 import components.SpriteRenderer;
+import components.StateMachine;
 import editor.ConsoleWindow;
 import editor.OImGui;
 import imgui.ImGui;
@@ -411,5 +412,28 @@ public class GameObject {
      */
     public static void resetIds() {
         ID_COUNTER = 0;
+    }
+    
+    /**
+     * Recursivamente refresca las texturas de los componentes graficos de los objetos.
+     * esta funcion esta pensada para cuando se necesite cargar un asset de juego despues del
+     * cargado inicial, el propio programa busca la textura correspondiente o lo añade si no estaba ya.
+     */
+    public void refreshTextures() {
+        if (getComponent(SpriteRenderer.class) != null) {
+            SpriteRenderer spr = getComponent(SpriteRenderer.class);
+            if (spr.getTexture() != null) {
+                spr.setTexture(AssetPool.getTexture(spr.getTexture().getFilepath()));
+            }
+        }
+
+        if (getComponent(StateMachine.class) != null) {
+            StateMachine stateMachine = getComponent(StateMachine.class);
+            stateMachine.refreshTextures();
+        }
+        
+        for (GameObject go2 : getChildGOs()) {
+            go2.refreshTextures();
+        }
     }
 }

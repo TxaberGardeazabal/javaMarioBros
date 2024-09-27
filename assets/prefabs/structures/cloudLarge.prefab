@@ -1,5 +1,5 @@
 {
-  "name": "bush2_large",
+  "name": "cloud_large",
   "enabled": true,
   "components": [
     {
@@ -14,7 +14,7 @@
           "x": 0.0,
           "y": 0.0
         },
-        "zIndex": 0
+        "zIndex": -2
       }
     }
   ],
@@ -22,22 +22,22 @@
   "isDead": false,
   "childGOs": [
     {
-      "name": "bush",
+      "name": "cloud",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 3.125,
-              "y": 0.125
+              "x": 0.024999738,
+              "y": 0.0
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": -1
           }
         },
         {
@@ -53,141 +53,17 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/skyOverworld.png",
+                "height": 32,
+                "width": 80
               },
               "texCoords": [
                 {
-                  "x": 0.125,
-                  "y": 0.4
+                  "x": 0.2,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.0,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.0,
-                  "y": 0.4
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "doSerialization": true,
-      "isDead": false,
-      "childGOs": []
-    },
-    {
-      "name": "bush",
-      "enabled": true,
-      "components": [
-        {
-          "type": "gameEngine.Transform",
-          "properties": {
-            "position": {
-              "x": 3.375,
-              "y": 0.125
-            },
-            "rotation": 0.0,
-            "scale": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "zIndex": -2
-          }
-        },
-        {
-          "type": "components.SpriteRenderer",
-          "properties": {
-            "color": {
-              "x": 1.0,
-              "y": 1.0,
-              "z": 1.0,
-              "w": 1.0
-            },
-            "sprite": {
-              "Width": 16.0,
-              "height": 16.0,
-              "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
-              },
-              "texCoords": [
-                {
-                  "x": 0.25,
-                  "y": 0.4
-                },
-                {
-                  "x": 0.25,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.125,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.125,
-                  "y": 0.4
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "doSerialization": true,
-      "isDead": false,
-      "childGOs": []
-    },
-    {
-      "name": "bush",
-      "enabled": true,
-      "components": [
-        {
-          "type": "gameEngine.Transform",
-          "properties": {
-            "position": {
-              "x": 3.625,
-              "y": 0.125
-            },
-            "rotation": 0.0,
-            "scale": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "zIndex": -2
-          }
-        },
-        {
-          "type": "components.SpriteRenderer",
-          "properties": {
-            "color": {
-              "x": 1.0,
-              "y": 1.0,
-              "z": 1.0,
-              "w": 1.0
-            },
-            "sprite": {
-              "Width": 16.0,
-              "height": 16.0,
-              "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
-              },
-              "texCoords": [
-                {
-                  "x": 0.125,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.125,
+                  "x": 0.2,
                   "y": 0.0
                 },
                 {
@@ -196,7 +72,7 @@
                 },
                 {
                   "x": 0.0,
-                  "y": 0.2
+                  "y": 0.5
                 }
               ]
             }
@@ -208,22 +84,22 @@
       "childGOs": []
     },
     {
-      "name": "bush",
+      "name": "cloud",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 3.875,
-              "y": 0.125
+              "x": 0.25,
+              "y": 0.0
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": -1
           }
         },
         {
@@ -239,26 +115,26 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/skyOverworld.png",
+                "height": 32,
+                "width": 80
               },
               "texCoords": [
                 {
-                  "x": 0.375,
-                  "y": 0.4
+                  "x": 0.4,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.375,
-                  "y": 0.2
+                  "x": 0.4,
+                  "y": 0.0
                 },
                 {
-                  "x": 0.25,
-                  "y": 0.2
+                  "x": 0.2,
+                  "y": 0.0
                 },
                 {
-                  "x": 0.25,
-                  "y": 0.4
+                  "x": 0.2,
+                  "y": 0.5
                 }
               ]
             }
@@ -270,22 +146,22 @@
       "childGOs": []
     },
     {
-      "name": "bush",
+      "name": "cloud",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 4.125,
-              "y": 0.125
+              "x": 0.50000167,
+              "y": 0.0
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": -1
           }
         },
         {
@@ -301,26 +177,26 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/skyOverworld.png",
+                "height": 32,
+                "width": 80
               },
               "texCoords": [
                 {
-                  "x": 0.5,
-                  "y": 0.4
+                  "x": 0.4,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.5,
-                  "y": 0.2
+                  "x": 0.4,
+                  "y": 0.0
                 },
                 {
-                  "x": 0.375,
-                  "y": 0.2
+                  "x": 0.2,
+                  "y": 0.0
                 },
                 {
-                  "x": 0.375,
-                  "y": 0.4
+                  "x": 0.2,
+                  "y": 0.5
                 }
               ]
             }
@@ -332,22 +208,22 @@
       "childGOs": []
     },
     {
-      "name": "bush",
+      "name": "cloud",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 3.375,
-              "y": 0.375
+              "x": 0.7500026,
+              "y": 0.0
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": -1
           }
         },
         {
@@ -363,26 +239,150 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/skyOverworld.png",
+                "height": 32,
+                "width": 80
               },
               "texCoords": [
                 {
-                  "x": 0.125,
-                  "y": 0.4
+                  "x": 0.4,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.2
+                  "x": 0.4,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.2,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.2,
+                  "y": 0.5
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "cloud",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 1.0000029,
+              "y": 0.0
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/skyOverworld.png",
+                "height": 32,
+                "width": 80
+              },
+              "texCoords": [
+                {
+                  "x": 0.6,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.6,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.4,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.4,
+                  "y": 0.5
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "cloud",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -2.3841858E-7,
+              "y": 0.25
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/skyOverworld.png",
+                "height": 32,
+                "width": 80
+              },
+              "texCoords": [
+                {
+                  "x": 0.2,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.2,
+                  "y": 0.5
                 },
                 {
                   "x": 0.0,
-                  "y": 0.2
+                  "y": 0.5
                 },
                 {
                   "x": 0.0,
-                  "y": 0.4
+                  "y": 1.0
                 }
               ]
             }
@@ -394,15 +394,77 @@
       "childGOs": []
     },
     {
-      "name": "bush",
+      "name": "cloud",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 3.625,
-              "y": 0.375
+              "x": 0.25,
+              "y": 0.25
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/skyOverworld.png",
+                "height": 32,
+                "width": 80
+              },
+              "texCoords": [
+                {
+                  "x": 0.4,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.4,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.2,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.2,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "cloud",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.50000167,
+              "y": 0.25
             },
             "rotation": 0.0,
             "scale": {
@@ -425,26 +487,26 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/skyOverworld.png",
+                "height": 32,
+                "width": 80
               },
               "texCoords": [
                 {
-                  "x": 0.25,
-                  "y": 0.4
+                  "x": 0.4,
+                  "y": 1.0
                 },
                 {
-                  "x": 0.25,
-                  "y": 0.2
+                  "x": 0.4,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.2
+                  "x": 0.2,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.4
+                  "x": 0.2,
+                  "y": 1.0
                 }
               ]
             }
@@ -456,22 +518,22 @@
       "childGOs": []
     },
     {
-      "name": "bush",
+      "name": "cloud",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 3.875,
-              "y": 0.375
+              "x": 0.7500026,
+              "y": 0.25
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": -1
           }
         },
         {
@@ -487,26 +549,26 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/skyOverworld.png",
+                "height": 32,
+                "width": 80
               },
               "texCoords": [
                 {
-                  "x": 0.5,
-                  "y": 0.4
+                  "x": 0.4,
+                  "y": 1.0
                 },
                 {
-                  "x": 0.5,
-                  "y": 0.2
+                  "x": 0.4,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.375,
-                  "y": 0.2
+                  "x": 0.2,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.375,
-                  "y": 0.4
+                  "x": 0.2,
+                  "y": 1.0
                 }
               ]
             }
@@ -518,22 +580,22 @@
       "childGOs": []
     },
     {
-      "name": "bush",
+      "name": "cloud",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 3.625,
-              "y": 0.625
+              "x": 1.0000029,
+              "y": 0.25
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": -1
           }
         },
         {
@@ -549,26 +611,26 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/skyOverworld.png",
+                "height": 32,
+                "width": 80
               },
               "texCoords": [
                 {
-                  "x": 0.25,
-                  "y": 0.6
+                  "x": 0.6,
+                  "y": 1.0
                 },
                 {
-                  "x": 0.25,
-                  "y": 0.4
+                  "x": 0.6,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.4
+                  "x": 0.4,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.6
+                  "x": 0.4,
+                  "y": 1.0
                 }
               ]
             }

@@ -351,26 +351,26 @@ public class AssetWindow {
                 }
                 ImGui.separator();
                 
-                PrefabSave test = new PrefabSave("assets/prefabs/block.prefab");
-                if (ImGui.button("assets/prefabs/block.prefab")) {
+                PrefabSave test = new PrefabSave("assets/prefabs/bush1large.prefab");
+                if (ImGui.button("assets/prefabs/bush1large.prefab")) {
                     test.load();
                     mc.pickUpObject(test.getPrefab());
                 }
                 
-                test = new PrefabSave("assets/prefabs/coinBlock.prefab");
-                if (ImGui.button("assets/prefabs/coinBlock.prefab")) {
+                test = new PrefabSave("assets/prefabs/cloudsmall.prefab");
+                if (ImGui.button("assets/prefabs/cloudsmall.prefab")) {
                     test.load();
                     mc.pickUpObject(test.getPrefab());
                 }
                 
-                test = new PrefabSave("assets/prefabs/coin.prefab");
-                if (ImGui.button("assets/prefabs/coin.prefab")) {
+                test = new PrefabSave("assets/prefabs/bush1medium.prefab");
+                if (ImGui.button("assets/prefabs/bush1medium.prefab")) {
                     test.load();
                     mc.pickUpObject(test.getPrefab());
                 }
                 
-                test = new PrefabSave("assets/prefabs/cannon.prefab");
-                if (ImGui.button("assets/prefabs/cannon.prefab")) {
+                test = new PrefabSave("assets/prefabs/bush1large.prefab");
+                if (ImGui.button("assets/prefabs/bush1large.prefab")) {
                     test.load();
                     mc.pickUpObject(test.getPrefab());
                 }

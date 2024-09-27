@@ -1,5 +1,5 @@
 {
-  "name": "bush2_large",
+  "name": "bridge",
   "enabled": true,
   "components": [
     {
@@ -22,14 +22,14 @@
   "isDead": false,
   "childGOs": [
     {
-      "name": "bush",
+      "name": "bridge",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": -4.7683716E-7,
+              "x": 0.0,
               "y": 0.0
             },
             "rotation": 0.0,
@@ -37,7 +37,7 @@
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": 0
           }
         },
         {
@@ -53,30 +53,71 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
               },
               "texCoords": [
                 {
-                  "x": 0.125,
-                  "y": 0.4
+                  "x": 0.42857143,
+                  "y": 0.75
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.2
+                  "x": 0.42857143,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.0,
-                  "y": 0.2
+                  "x": 0.2857143,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.0,
-                  "y": 0.4
+                  "x": 0.2857143,
+                  "y": 0.75
                 }
               ]
             }
           }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.0,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": false,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.propertieComponents.Ground",
+          "properties": {}
         }
       ],
       "doSerialization": true,
@@ -84,14 +125,14 @@
       "childGOs": []
     },
     {
-      "name": "bush",
+      "name": "bridge",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.24999952,
+              "x": 0.25,
               "y": 0.0
             },
             "rotation": 0.0,
@@ -99,7 +140,7 @@
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": 0
           }
         },
         {
@@ -115,30 +156,71 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
               },
               "texCoords": [
                 {
-                  "x": 0.25,
-                  "y": 0.4
+                  "x": 0.42857143,
+                  "y": 0.75
                 },
                 {
-                  "x": 0.25,
-                  "y": 0.2
+                  "x": 0.42857143,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.2
+                  "x": 0.2857143,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.4
+                  "x": 0.2857143,
+                  "y": 0.75
                 }
               ]
             }
           }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.0,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": false,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.propertieComponents.Ground",
+          "properties": {}
         }
       ],
       "doSerialization": true,
@@ -146,14 +228,14 @@
       "childGOs": []
     },
     {
-      "name": "bush",
+      "name": "bridge",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.49999952,
+              "x": 0.5,
               "y": 0.0
             },
             "rotation": 0.0,
@@ -161,7 +243,7 @@
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": 0
           }
         },
         {
@@ -177,154 +259,71 @@
               "Width": 16.0,
               "height": 16.0,
               "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                "height": 64,
+                "width": 112
               },
               "texCoords": [
                 {
-                  "x": 0.125,
-                  "y": 0.2
+                  "x": 0.42857143,
+                  "y": 0.75
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.0
+                  "x": 0.42857143,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.0,
-                  "y": 0.0
+                  "x": 0.2857143,
+                  "y": 0.5
                 },
                 {
-                  "x": 0.0,
-                  "y": 0.2
+                  "x": 0.2857143,
+                  "y": 0.75
                 }
               ]
             }
           }
-        }
-      ],
-      "doSerialization": true,
-      "isDead": false,
-      "childGOs": []
-    },
-    {
-      "name": "bush",
-      "enabled": true,
-      "components": [
+        },
         {
-          "type": "gameEngine.Transform",
+          "type": "physics2D.components.Rigidbody2D",
           "properties": {
-            "position": {
-              "x": 0.7499995,
+            "velocity": {
+              "x": 0.0,
               "y": 0.0
             },
-            "rotation": 0.0,
-            "scale": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "zIndex": -2
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.0,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "angularVelocity": 0.0,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": false,
+            "continuousCollision": true
           }
         },
         {
-          "type": "components.SpriteRenderer",
+          "type": "physics2D.components.Box2DCollider",
           "properties": {
-            "color": {
-              "x": 1.0,
-              "y": 1.0,
-              "z": 1.0,
-              "w": 1.0
+            "halfSize": {
+              "x": 0.25,
+              "y": 0.25
             },
-            "sprite": {
-              "Width": 16.0,
-              "height": 16.0,
-              "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
-              },
-              "texCoords": [
-                {
-                  "x": 0.375,
-                  "y": 0.4
-                },
-                {
-                  "x": 0.375,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.25,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.25,
-                  "y": 0.4
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "doSerialization": true,
-      "isDead": false,
-      "childGOs": []
-    },
-    {
-      "name": "bush",
-      "enabled": true,
-      "components": [
-        {
-          "type": "gameEngine.Transform",
-          "properties": {
-            "position": {
-              "x": 0.9999995,
+            "origin": {
+              "x": 0.0,
               "y": 0.0
             },
-            "rotation": 0.0,
-            "scale": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "zIndex": -2
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
           }
         },
         {
-          "type": "components.SpriteRenderer",
-          "properties": {
-            "color": {
-              "x": 1.0,
-              "y": 1.0,
-              "z": 1.0,
-              "w": 1.0
-            },
-            "sprite": {
-              "Width": 16.0,
-              "height": 16.0,
-              "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
-              },
-              "texCoords": [
-                {
-                  "x": 0.5,
-                  "y": 0.4
-                },
-                {
-                  "x": 0.5,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.375,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.375,
-                  "y": 0.4
-                }
-              ]
-            }
-          }
+          "type": "components.propertieComponents.Ground",
+          "properties": {}
         }
       ],
       "doSerialization": true,
@@ -332,14 +331,14 @@
       "childGOs": []
     },
     {
-      "name": "bush",
+      "name": "bridge",
       "enabled": true,
       "components": [
         {
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.24999952,
+              "x": 0.0,
               "y": 0.25
             },
             "rotation": 0.0,
@@ -347,7 +346,7 @@
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": -2
+            "zIndex": -1
           }
         },
         {
@@ -369,206 +368,144 @@
               },
               "texCoords": [
                 {
-                  "x": 0.125,
-                  "y": 0.4
+                  "x": 0.625,
+                  "y": 0.8
                 },
                 {
-                  "x": 0.125,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.0,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.0,
-                  "y": 0.4
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "doSerialization": true,
-      "isDead": false,
-      "childGOs": []
-    },
-    {
-      "name": "bush",
-      "enabled": true,
-      "components": [
-        {
-          "type": "gameEngine.Transform",
-          "properties": {
-            "position": {
-              "x": 0.49999952,
-              "y": 0.25
-            },
-            "rotation": 0.0,
-            "scale": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "zIndex": -2
-          }
-        },
-        {
-          "type": "components.SpriteRenderer",
-          "properties": {
-            "color": {
-              "x": 1.0,
-              "y": 1.0,
-              "z": 1.0,
-              "w": 1.0
-            },
-            "sprite": {
-              "Width": 16.0,
-              "height": 16.0,
-              "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
-              },
-              "texCoords": [
-                {
-                  "x": 0.25,
-                  "y": 0.4
-                },
-                {
-                  "x": 0.25,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.125,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.125,
-                  "y": 0.4
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "doSerialization": true,
-      "isDead": false,
-      "childGOs": []
-    },
-    {
-      "name": "bush",
-      "enabled": true,
-      "components": [
-        {
-          "type": "gameEngine.Transform",
-          "properties": {
-            "position": {
-              "x": 0.7499995,
-              "y": 0.25
-            },
-            "rotation": 0.0,
-            "scale": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "zIndex": -2
-          }
-        },
-        {
-          "type": "components.SpriteRenderer",
-          "properties": {
-            "color": {
-              "x": 1.0,
-              "y": 1.0,
-              "z": 1.0,
-              "w": 1.0
-            },
-            "sprite": {
-              "Width": 16.0,
-              "height": 16.0,
-              "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
-              },
-              "texCoords": [
-                {
-                  "x": 0.5,
-                  "y": 0.4
-                },
-                {
-                  "x": 0.5,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.375,
-                  "y": 0.2
-                },
-                {
-                  "x": 0.375,
-                  "y": 0.4
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "doSerialization": true,
-      "isDead": false,
-      "childGOs": []
-    },
-    {
-      "name": "bush",
-      "enabled": true,
-      "components": [
-        {
-          "type": "gameEngine.Transform",
-          "properties": {
-            "position": {
-              "x": 0.49999952,
-              "y": 0.5
-            },
-            "rotation": 0.0,
-            "scale": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "zIndex": -2
-          }
-        },
-        {
-          "type": "components.SpriteRenderer",
-          "properties": {
-            "color": {
-              "x": 1.0,
-              "y": 1.0,
-              "z": 1.0,
-              "w": 1.0
-            },
-            "sprite": {
-              "Width": 16.0,
-              "height": 16.0,
-              "texture": {
-                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                "height": 80,
-                "width": 128
-              },
-              "texCoords": [
-                {
-                  "x": 0.25,
+                  "x": 0.625,
                   "y": 0.6
                 },
                 {
-                  "x": 0.25,
-                  "y": 0.4
-                },
-                {
-                  "x": 0.125,
-                  "y": 0.4
-                },
-                {
-                  "x": 0.125,
+                  "x": 0.5,
                   "y": 0.6
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.8
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "bridge",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 0.625,
+                  "y": 0.8
+                },
+                {
+                  "x": 0.625,
+                  "y": 0.6
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.6
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.8
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "bridge",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.5,
+              "y": 0.25
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 0.625,
+                  "y": 0.8
+                },
+                {
+                  "x": 0.625,
+                  "y": 0.6
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.6
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.8
                 }
               ]
             }

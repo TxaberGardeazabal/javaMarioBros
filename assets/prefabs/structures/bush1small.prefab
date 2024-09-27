@@ -29,15 +29,15 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.125,
-              "y": 0.375
+              "x": 0.0,
+              "y": -2.9802322E-8
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": 0
+            "zIndex": -2
           }
         },
         {
@@ -77,47 +77,6 @@
               ]
             }
           }
-        },
-        {
-          "type": "physics2D.components.Rigidbody2D",
-          "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
-            "angularDamping": 0.8,
-            "linearDamping": 0.9,
-            "mass": 0.0,
-            "bodyType": "Static",
-            "friction": 0.1,
-            "angularVelocity": 0.0,
-            "gravityScale": 1.0,
-            "isSensor": false,
-            "fixedRotation": false,
-            "continuousCollision": true
-          }
-        },
-        {
-          "type": "physics2D.components.Box2DCollider",
-          "properties": {
-            "halfSize": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "origin": {
-              "x": 0.0,
-              "y": 0.0
-            },
-            "showBoundaries": false,
-            "offset": {
-              "x": 0.0,
-              "y": 0.0
-            }
-          }
-        },
-        {
-          "type": "components.propertieComponents.Ground",
-          "properties": {}
         }
       ],
       "doSerialization": true,
@@ -132,15 +91,15 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.375,
-              "y": 0.375
+              "x": 0.25,
+              "y": -2.9802322E-8
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": 0
+            "zIndex": -2
           }
         },
         {
@@ -180,47 +139,6 @@
               ]
             }
           }
-        },
-        {
-          "type": "physics2D.components.Rigidbody2D",
-          "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
-            "angularDamping": 0.8,
-            "linearDamping": 0.9,
-            "mass": 0.0,
-            "bodyType": "Static",
-            "friction": 0.1,
-            "angularVelocity": 0.0,
-            "gravityScale": 1.0,
-            "isSensor": false,
-            "fixedRotation": false,
-            "continuousCollision": true
-          }
-        },
-        {
-          "type": "physics2D.components.Box2DCollider",
-          "properties": {
-            "halfSize": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "origin": {
-              "x": 0.0,
-              "y": 0.0
-            },
-            "showBoundaries": false,
-            "offset": {
-              "x": 0.0,
-              "y": 0.0
-            }
-          }
-        },
-        {
-          "type": "components.propertieComponents.Ground",
-          "properties": {}
         }
       ],
       "doSerialization": true,
@@ -235,15 +153,15 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.625,
-              "y": 0.375
+              "x": 0.5,
+              "y": -2.9802322E-8
             },
             "rotation": 0.0,
             "scale": {
               "x": 0.25,
               "y": 0.25
             },
-            "zIndex": 0
+            "zIndex": -2
           }
         },
         {
@@ -283,47 +201,6 @@
               ]
             }
           }
-        },
-        {
-          "type": "physics2D.components.Rigidbody2D",
-          "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
-            "angularDamping": 0.8,
-            "linearDamping": 0.9,
-            "mass": 0.0,
-            "bodyType": "Static",
-            "friction": 0.1,
-            "angularVelocity": 0.0,
-            "gravityScale": 1.0,
-            "isSensor": false,
-            "fixedRotation": false,
-            "continuousCollision": true
-          }
-        },
-        {
-          "type": "physics2D.components.Box2DCollider",
-          "properties": {
-            "halfSize": {
-              "x": 0.25,
-              "y": 0.25
-            },
-            "origin": {
-              "x": 0.0,
-              "y": 0.0
-            },
-            "showBoundaries": false,
-            "offset": {
-              "x": 0.0,
-              "y": 0.0
-            }
-          }
-        },
-        {
-          "type": "components.propertieComponents.Ground",
-          "properties": {}
         }
       ],
       "doSerialization": true,

@@ -8,6 +8,7 @@ import gameEngine.GameObject;
 import gameEngine.Transform;
 import java.util.ArrayList;
 import java.util.List;
+import org.joml.Vector2f;
 
 /**
  * Clase de ayuda para poder añadir multiples objetos a la vez al nivel desde prefabs.
@@ -38,7 +39,7 @@ public class ComplexPrefabWrapper extends Component{
         if (first) {
             anchor = new Transform(gameObject.transform.position);
             GameObject newObj = gameObject.copy();
-            newObj.transform.position.zero();
+            newObj.transform.setPosition(new Vector2f(0,0));
             this.gameObjects.add(newObj);
             first = false;
         } else {
