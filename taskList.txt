@@ -11,7 +11,6 @@ create in settings multi button input variables (control + x...)
 + make mario movements into separate functions and
 + make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
 + create transition animations for non sprite based animations (mario, blockCoin) (transition system?)
-+ add the option to create, save and edit prefabs in files, turn the hardcoded prefabs into json files
 
 
 upgrade existing functionalities:
@@ -20,6 +19,7 @@ upgrade existing functionalities:
 - refractor
 - add boxcollider to enemies and items (for optimization)
 - on savemenus show file name in selector
+make prefabs of ui elements
 + blocks hit by moving shells should drop contents
 + make physics them more precise and less janky
 refactor component so it handles object types (could hace a class impementation)
@@ -36,8 +36,6 @@ some window focus issues:
 imgui string editing sucks
 + enemies should spawn only as soon as the camera reaches them
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
-+ fix black squares in prefabs
-+ delete copies of prefabs after save
 
 other:
 // make pillbox changes ep #58

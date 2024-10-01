@@ -8,6 +8,7 @@ import components.SpriteRenderer;
 import components.StateMachine;
 import gameEngine.GameObject;
 import gameEngine.Prefab;
+import gameEngine.PrefabSave;
 import gameEngine.Window;
 import org.joml.Vector4f;
 import util.AssetPool;
@@ -91,10 +92,13 @@ public class ItemBlock extends Block{
     
     private void doCoin() {
         AssetPool.getSound("assets/sounds/coin.ogg").play();
-        GameObject coin = Prefab.generateBlockCoin();
-        coin.transform.position.set(gameObject.transform.position);
-        coin.transform.position.y += 0.25f;
-        Window.getScene().addGameObjectToScene(coin);
+        PrefabSave coinPre = new PrefabSave("assets/prefabs/particles/blockCoin.prefab");
+        GameObject coin = coinPre.load();
+        if (coin != null) {
+            coin.transform.position.set(gameObject.transform.position);
+            coin.transform.position.y += 0.25f;
+            Window.getScene().addGameObjectToScene(coin);
+        }
     }
 
     private void doPowerup(PlayerController playerController) {

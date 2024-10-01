@@ -1,0 +1,213 @@
+{
+  "name": "coin particle",
+  "enabled": true,
+  "components": [
+    {
+      "type": "gameEngine.Transform",
+      "properties": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 0.0,
+        "scale": {
+          "x": 0.12,
+          "y": 0.25
+        },
+        "zIndex": 0
+      }
+    },
+    {
+      "type": "components.SpriteRenderer",
+      "properties": {
+        "color": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0,
+          "w": 1.0
+        },
+        "sprite": {
+          "Width": 8.0,
+          "height": 16.0,
+          "texture": {
+            "filepath": "assets/images/spriteSheets/particles/blockCoin.png",
+            "height": 16,
+            "width": 32
+          },
+          "texCoords": [
+            {
+              "x": 0.5,
+              "y": 1.0
+            },
+            {
+              "x": 0.5,
+              "y": 0.0
+            },
+            {
+              "x": 0.25,
+              "y": 0.0
+            },
+            {
+              "x": 0.25,
+              "y": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "components.StateMachine",
+      "properties": {
+        "stateTransfers": {},
+        "states": [
+          {
+            "title": "flicker",
+            "animationFrames": [
+              {
+                "sprite": {
+                  "Width": 8.0,
+                  "height": 16.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/particles/blockCoin.png",
+                    "height": 16,
+                    "width": 32
+                  },
+                  "texCoords": [
+                    {
+                      "x": 0.25,
+                      "y": 1.0
+                    },
+                    {
+                      "x": 0.25,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 1.0
+                    }
+                  ]
+                },
+                "frameTime": 0.15,
+                "spriteNumber": 0
+              },
+              {
+                "sprite": {
+                  "Width": 8.0,
+                  "height": 16.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/particles/blockCoin.png",
+                    "height": 16,
+                    "width": 32
+                  },
+                  "texCoords": [
+                    {
+                      "x": 0.5,
+                      "y": 1.0
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.25,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.25,
+                      "y": 1.0
+                    }
+                  ]
+                },
+                "frameTime": 0.15,
+                "spriteNumber": 0
+              },
+              {
+                "sprite": {
+                  "Width": 8.0,
+                  "height": 16.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/particles/blockCoin.png",
+                    "height": 16,
+                    "width": 32
+                  },
+                  "texCoords": [
+                    {
+                      "x": 0.75,
+                      "y": 1.0
+                    },
+                    {
+                      "x": 0.75,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 1.0
+                    }
+                  ]
+                },
+                "frameTime": 0.15,
+                "spriteNumber": 0
+              },
+              {
+                "sprite": {
+                  "Width": 8.0,
+                  "height": 16.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/particles/blockCoin.png",
+                    "height": 16,
+                    "width": 32
+                  },
+                  "texCoords": [
+                    {
+                      "x": 1.0,
+                      "y": 1.0
+                    },
+                    {
+                      "x": 1.0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.75,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.75,
+                      "y": 1.0
+                    }
+                  ]
+                },
+                "frameTime": 0.15,
+                "spriteNumber": 0
+              }
+            ],
+            "doesLoop": true
+          }
+        ],
+        "defaultStateTitle": "flicker"
+      }
+    },
+    {
+      "type": "components.gamecomponents.BlockCoin",
+      "properties": {
+        "topY": {
+          "x": 2.375,
+          "y": 2.875
+        },
+        "coinSpeed": 1.8,
+        "timeToKill": 0.15,
+        "isTop": false
+      }
+    }
+  ],
+  "doSerialization": true,
+  "isDead": false,
+  "childGOs": []
+}

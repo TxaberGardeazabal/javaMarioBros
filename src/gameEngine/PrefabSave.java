@@ -18,7 +18,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import util.AssetPool;
 
 /**
  *
@@ -36,6 +35,10 @@ public class PrefabSave {
 
     public GameObject getPrefab() {
         return prefab;
+    }
+
+    public void setFilepath(String filepath) {
+        this.filepath = filepath;
     }
 
     public void setPrefab(GameObject prefab) {
@@ -65,7 +68,7 @@ public class PrefabSave {
         }
     }
     
-    public void load() {
+    public GameObject load() {
         Gson gson = new GsonBuilder().setPrettyPrinting()
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
                 .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
@@ -95,6 +98,10 @@ public class PrefabSave {
                     go.refreshTextures();
                 }
             }
+            
+            return prefab;
+        } else {
+            return null;
         }
     }    
     

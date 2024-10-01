@@ -95,8 +95,7 @@ public class SceneHierarchyWindow {
         boolean treeNodeOpen = false;
         if (!obj.getChildGOs().isEmpty()) {
             treeNodeOpen = ImGui.treeNodeEx(
-            obj.name, ImGuiTreeNodeFlags.DefaultOpen |
-                    ImGuiTreeNodeFlags.FramePadding |
+            obj.name, ImGuiTreeNodeFlags.FramePadding |
                     ImGuiTreeNodeFlags.OpenOnArrow |
                     ImGuiTreeNodeFlags.SpanAvailWidth, obj.name);
 

@@ -100,122 +100,171 @@ public class AssetWindow {
             
             if (ImGui.beginTabItem("Special blocks")) {
                 int uid = 0;
-                SpriteSheet pipeSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesFull.png");
                 
-                if (spriteButton(pipeSprites.getSprite(0),uid++)) {
-                    GameObject object = Prefab.generatePipe(Direction.Up);
-                    mc.pickUpObject(object);
+                PrefabSave pre = new PrefabSave("");
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesFull.png");
+                
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/pipeUp.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                if (spriteButton(pipeSprites.getSprite(1),uid++)) {
-                    GameObject object = Prefab.generatePipe(Direction.Left);
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(1),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/pipeLeft.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                if (spriteButton(pipeSprites.getSprite(2),uid++)) {
-                    GameObject object = Prefab.generatePipe(Direction.Down);
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(2),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/pipeDown.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                if (spriteButton(pipeSprites.getSprite(3),uid++)) {
-                    GameObject object = Prefab.generatePipe(Direction.Right);
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(3),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/pipeRight.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                SpriteSheet blockSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 
-                if (spriteButton(blockSprites.getSprite(0),uid++)) {
-                    GameObject object = Prefab.generateItemBlock(blockSprites);
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/itemBlock.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                SpriteSheet brickSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png");
-                
-                if (spriteButton(brickSprites.getSprite(1),uid++)) {
-                    GameObject object = Prefab.generateItemBrickBlock(brickSprites.getSprite(1), blockSprites);
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(3),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/invisibleItemBlock.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                if (spriteButton(brickSprites.getSprite(2),uid++)) {
-                    GameObject object = Prefab.generateItemBrickBlock(brickSprites.getSprite(2), blockSprites);
-                    mc.pickUpObject(object);
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png");
+                
+                if (spriteButton(sprites.getSprite(1),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickItemBlock1.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                if (spriteButton(blockSprites.getSprite(3),uid++)) {
-                    GameObject object = Prefab.generateInvItemBlock(blockSprites);
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(2),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickItemBlock2.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 ImGui.endTabItem();
             }
             
             if (ImGui.beginTabItem("Entities")) {
                 int uid = 0;
-                SpriteSheet playerSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png");
                 
-                if (spriteButton(playerSprites.getSprite(0),uid++)) {
-                    GameObject object = Prefab.generateMario();
-                    mc.pickUpObject(object);
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png");
+                PrefabSave pre = new PrefabSave("");
+                
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/mario.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                SpriteSheet coinSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 
-                if (spriteButton(coinSprites.getSprite(4),uid++)) {
-                    GameObject object = Prefab.generateCoin();
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(4),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/levelCoin.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                SpriteSheet enemieSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png");
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png");
                 
-                
-                if (spriteButton(enemieSprites.getSprite(0),uid++)) {
-                    GameObject object = Prefab.generateGoomba();
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/goomba.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                SpriteSheet koopaSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
                 
-                if (spriteButton(koopaSprites.getSprite(0),uid++)) {
-                    GameObject object = Prefab.generateKoopa();
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/greenKoopa.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                SpriteSheet itemSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
                 
-                if (spriteButton(itemSprites.getSprite(0),uid++)) {
-                    GameObject object = Prefab.generateMushroom();
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/mushroom.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                if (spriteButton(itemSprites.getSprite(1),uid++)) {
-                    GameObject object = Prefab.generateFlower();
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(1),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/fireFlower.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 
-                if (spriteButton(itemSprites.getSprite(6),uid++)) {
-                    GameObject object = Prefab.generateStar();
-                    mc.pickUpObject(object);
+                if (spriteButton(sprites.getSprite(6),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/star.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
                 }
                 ImGui.endTabItem();
             }
             
             if (ImGui.beginTabItem("assembled structures")) {
                 int uid = 0;
-                SpriteSheet bushSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png");
-
-                if (spriteButton(bushSprites.getSprite(9),uid++)) {
-                    GameObject object = Prefab.generateBush1();
-                    mc.pickUpObject(object);
-                }
-                ImGui.sameLine();
+                PrefabSave pre = new PrefabSave("");
                 
-                SpriteSheet flagSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioParticles.png");
-
-                if (spriteButton(flagSprites.getSprite(12),uid++)) {
-                    GameObject object = Prefab.generateFlag();
-                    mc.pickUpObject(object);
-                }
-                ImGui.sameLine();
                 
+                File StructureDir = new File("assets/prefabs/structures");
+                File[] blocks = StructureDir.listFiles();
+                for (File file : blocks) {
+                    pre.setFilepath(file.getAbsolutePath());
+                    
+                    if (ImGui.button(Settings.getRelativePath(file.getAbsolutePath()))) {
+                        GameObject go = pre.load();
+                        if (go != null) {
+                            mc.pickUpObject(go);
+                        }                    
+                        
+                    }
+                    
+                }
                 ImGui.endTabItem();
             }
             
@@ -243,6 +292,7 @@ public class AssetWindow {
                 ImGui.text("elementos de la interfaz de usuario");
                 int uid = 0;
                 
+                // TODO: make  theese into prefabs
                 Sprite text = new Sprite(AssetPool.getTexture("assets/images/text/mario.png"));
                 // mario
                 if (spriteButton(text,uid++)) {
@@ -349,31 +399,13 @@ public class AssetWindow {
                     GameObject object = Prefab.generateEmptyObject();
                     mc.pickUpObject(object);
                 }
+                
+                sprite = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/blockCoin.png").getSprite(0);
+                if (spriteButton(sprite,uid++)) {
+                    GameObject object = Prefab.generateBlockCoin();
+                    mc.pickUpObject(object);
+                }
                 ImGui.separator();
-                
-                PrefabSave test = new PrefabSave("assets/prefabs/bush1large.prefab");
-                if (ImGui.button("assets/prefabs/bush1large.prefab")) {
-                    test.load();
-                    mc.pickUpObject(test.getPrefab());
-                }
-                
-                test = new PrefabSave("assets/prefabs/cloudsmall.prefab");
-                if (ImGui.button("assets/prefabs/cloudsmall.prefab")) {
-                    test.load();
-                    mc.pickUpObject(test.getPrefab());
-                }
-                
-                test = new PrefabSave("assets/prefabs/bush1medium.prefab");
-                if (ImGui.button("assets/prefabs/bush1medium.prefab")) {
-                    test.load();
-                    mc.pickUpObject(test.getPrefab());
-                }
-                
-                test = new PrefabSave("assets/prefabs/bush1large.prefab");
-                if (ImGui.button("assets/prefabs/bush1large.prefab")) {
-                    test.load();
-                    mc.pickUpObject(test.getPrefab());
-                }
                 
                 ImGui.sameLine();
                 ImGui.endTabItem();

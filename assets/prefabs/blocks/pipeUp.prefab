@@ -1,5 +1,5 @@
 {
-  "name": "pipeUp",
+  "name": "warpPipeUp",
   "enabled": true,
   "components": [
     {
@@ -14,7 +14,7 @@
           "x": 0.5,
           "y": 0.5
         },
-        "zIndex": 1
+        "zIndex": 3
       }
     },
     {

@@ -1,5 +1,5 @@
 {
-  "name": "pipeLeft",
+  "name": "warpPipeLeft",
   "enabled": true,
   "components": [
     {
