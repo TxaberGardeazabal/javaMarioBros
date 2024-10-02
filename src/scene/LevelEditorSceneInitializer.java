@@ -121,18 +121,6 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.getTexture("assets/images/text/salir.png");
         AssetPool.getTexture("assets/images/text/seleccionar_nivel.png");
         AssetPool.getTexture("assets/images/text/Super_Mario_Bros._Logo.png");
-        AssetPool.getTexture("assets/images/text/0.png");
-        AssetPool.getTexture("assets/images/text/1.png");
-        AssetPool.getTexture("assets/images/text/2.png");
-        AssetPool.getTexture("assets/images/text/3.png");
-        AssetPool.getTexture("assets/images/text/4.png");
-        AssetPool.getTexture("assets/images/text/5.png");
-        AssetPool.getTexture("assets/images/text/6.png");
-        AssetPool.getTexture("assets/images/text/7.png");
-        AssetPool.getTexture("assets/images/text/8.png");
-        AssetPool.getTexture("assets/images/text/9.png");
-        AssetPool.getTexture("assets/images/text/-.png");
-        AssetPool.getTexture("assets/images/text/x.png");
         
         
         // spritesheets

@@ -394,14 +394,14 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
-                Sprite sprite = new Sprite(AssetPool.getTexture("assets/images/text/x.png"));
-                if (spriteButton(sprite,uid++)) {
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/UIExtra.png");
+                if (spriteButton(sprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateEmptyObject();
                     mc.pickUpObject(object);
                 }
                 
-                sprite = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/blockCoin.png").getSprite(0);
-                if (spriteButton(sprite,uid++)) {
+                fire = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/blockCoin.png").getSprite(0);
+                if (spriteButton(fire,uid++)) {
                     GameObject object = Prefab.generateBlockCoin();
                     mc.pickUpObject(object);
                 }

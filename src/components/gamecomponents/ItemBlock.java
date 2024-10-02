@@ -51,13 +51,13 @@ public class ItemBlock extends Block{
     }
     
     @Override
-    protected void playerHit(PlayerController playerController) {
+    protected void hit(boolean shouldOpen) {
         switch(contents) {
             case Coin:
                 doCoin();
                 break;
             case Powerup:
-                doPowerup(playerController);
+                doPowerup(shouldOpen);
                 break;
             case Vine:
                 spawnVine();
@@ -101,8 +101,8 @@ public class ItemBlock extends Block{
         }
     }
 
-    private void doPowerup(PlayerController playerController) {
-        if (playerController.isSmall()) {
+    private void doPowerup(boolean isSmall) {
+        if (isSmall) {
             spawnMushroom();
         } else {
             spawnFlower();

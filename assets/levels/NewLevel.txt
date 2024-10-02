@@ -14466,7 +14466,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 0.10000075,
+            "x": 0.6250007,
             "y": 0.375
           },
           "rotation": 0.0,

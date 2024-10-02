@@ -17,8 +17,8 @@ import util.AssetPool;
  * @author txaber gardeazabal
  */
 public class KoopaAI extends Enemy {
-    private transient boolean isShelled = false;
-    private transient boolean isShellMoving = false;
+    public transient boolean isShelled = false;
+    public transient boolean isShellMoving = false;
     private float movingDebounce = 0.32f;
     private float stompDebounce = 0.32f;
     

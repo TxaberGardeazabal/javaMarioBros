@@ -56,7 +56,16 @@ public abstract class Block extends Component{
         if (active && playerController != null && contactN.y < -0.8f) {
             doBopAnimation = true;
             AssetPool.getSound("assets/sounds/bump.ogg").play();
-            playerHit(playerController);
+            hit(!playerController.isSmall());
+        }
+        
+        if (active && collidingObj.getComponent(KoopaAI.class) != null) {
+            
+            KoopaAI koopa = collidingObj.getComponent(KoopaAI.class);
+            if (koopa.isShelled && koopa.isShellMoving && contactN.y < 0.8f) { 
+                doBopAnimation = true;
+                hit(true);
+            }
         }
     }
     
@@ -68,8 +77,9 @@ public abstract class Block extends Component{
     }
     
     /**
-     * Funcion a ejecutar cuando mario golpea el bloque
-     * @param playerController 
+     * Funcion a ejecutar cuando el jugador u otra entidad golpea el bloque
+     * @param shouldOpen si el objeto debe soltar sus contenidos al golpear
      */
-    protected abstract void playerHit(PlayerController playerController);
+    protected abstract void hit(boolean shouldOpen);
+    
 }

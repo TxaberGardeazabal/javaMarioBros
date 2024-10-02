@@ -143,18 +143,19 @@ public class PropertiesWindow {
                 ImGui.endTabItem();
             }
             if (ImGui.beginTabItem("Level configuration")) {
-                LevelController lc = Window.getScene().getGameObjectWith(LevelController.class).getComponent(LevelController.class);
-                if (lc != null) {
-                    lc.world = OImGui.inputText("mundo", lc.world);
-                    lc.level = OImGui.inputText("nivel", lc.level);
-                    lc.time = OImGui.dragFloat("tiempo maximo", lc.time);
-                    lc.nextLevel = OImGui.inputText("nivel siguiente", lc.nextLevel);
+                GameObject lcObj = Window.getScene().getGameObjectWith(LevelController.class);
+                if (lcObj != null) {
+                    LevelController lc = lcObj.getComponent(LevelController.class);
+                    lc.world = OImGui.inputText("world", lc.world);
+                    lc.level = OImGui.inputText("level", lc.level);
+                    lc.time = OImGui.dragFloat("level timer", lc.time);
+                    lc.nextLevel = OImGui.inputText("next level", lc.nextLevel);
 
-                    OImGui.colorPicker4("color de cielo", lc.skyColor);
-                    OImGui.colorPicker4("color de superficie", lc.overworldColor);
-                    OImGui.colorPicker4("color de subterraneo", lc.underGroundColor);
+                    OImGui.colorPicker4("sky color", lc.skyColor);
+                    OImGui.colorPicker4("overworld color", lc.overworldColor);
+                    OImGui.colorPicker4("underground color", lc.underGroundColor);
                 } else {
-                    ImGui.text("No hay nivel");
+                    ImGui.text("no level controller");
                     ConsoleWindow.addLog("Properties window: level controller not found",
                             ConsoleWindow.LogCategory.warning);
                 }
