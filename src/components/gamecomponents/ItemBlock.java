@@ -6,15 +6,18 @@ package components.gamecomponents;
 
 import components.SpriteRenderer;
 import components.StateMachine;
+import components.propertieComponents.Ground;
+import editor.ConsoleWindow;
 import gameEngine.GameObject;
-import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
+import org.jbox2d.dynamics.contacts.Contact;
+import org.joml.Vector2f;
 import org.joml.Vector4f;
 import util.AssetPool;
 
 /**
- * Bloque con interrogacion
+ * controlador del bloque con interrogacion
  * @author txaber gardeazabal
  */
 public class ItemBlock extends Block{
@@ -39,15 +42,20 @@ public class ItemBlock extends Block{
     public void start() {
         super.start();
         this.stateMachine = gameObject.getComponent(StateMachine.class);
+        
     }
     
+    private boolean firstFlag = true;
     @Override
     public void update(float dt) {
         super.update(dt);
-        if (isInvisible) {
+        
+        if (isInvisible && firstFlag) {
+            this.gameObject.removeComponent(Ground.class);
             SpriteRenderer spr = gameObject.getComponent(SpriteRenderer.class);
             spr.setColor(new Vector4f(1,1,1,0));
         }
+        firstFlag = false;
     }
     
     @Override
@@ -86,6 +94,7 @@ public class ItemBlock extends Block{
                 isInvisible = false;
                 SpriteRenderer spr = gameObject.getComponent(SpriteRenderer.class);
                 spr.setColor(new Vector4f(1,1,1,1));
+                this.gameObject.addComponent(new Ground());
             }
         }
     }
@@ -101,46 +110,60 @@ public class ItemBlock extends Block{
         }
     }
 
-    private void doPowerup(boolean isSmall) {
-        if (isSmall) {
-            spawnMushroom();
-        } else {
+    private void doPowerup(boolean isBig) {
+        if (isBig) {
             spawnFlower();
+        } else {
+            spawnMushroom();
         }
-        
     }
     
     private void spawnMushroom() {
         AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
-        GameObject mush = Prefab.generateMushroom();
-        mush.transform.position.set(gameObject.transform.position);
-        mush.transform.position.y += 0.25f;
-        Window.getScene().addGameObjectToScene(mush);
+        PrefabSave mushPre = new PrefabSave("assets/prefabs/entities/mushroom.prefab");
+        GameObject mush = mushPre.load();
+        if (mush != null) {
+            mush.transform.position.set(gameObject.transform.position);
+            mush.transform.position.y += 0.25f;
+            Window.getScene().addGameObjectToScene(mush);
+        }
     }
     
     private void spawnFlower() {
-        AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
-        GameObject flower = Prefab.generateFlower();
-        flower.transform.position.set(gameObject.transform.position);
-        flower.transform.position.y += 0.25f;
-        Window.getScene().addGameObjectToScene(flower);
+        AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();        
+        PrefabSave flowerPre = new PrefabSave("assets/prefabs/entities/fireFlower.prefab");
+        GameObject flower = flowerPre.load();
+        if (flower != null) {
+            flower.transform.position.set(gameObject.transform.position);
+            flower.transform.position.y += 0.25f;
+            Window.getScene().addGameObjectToScene(flower);
+        }
     }
     
     private void spawnVine() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ConsoleWindow.addLog("OOPS, not implemented yet", ConsoleWindow.LogCategory.info);
     }
 
     private void spawnStar() {
         AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
-        GameObject star = Prefab.generateStar();
-        star.transform.position.set(gameObject.transform.position);
-        star.transform.position.y += 0.25f;
-        Window.getScene().addGameObjectToScene(star);
+        PrefabSave starPre = new PrefabSave("assets/prefabs/entities/star.prefab");
+        GameObject star = starPre.load();
+        if (star != null) {
+            star.transform.position.set(gameObject.transform.position);
+            star.transform.position.y += 0.25f;
+            Window.getScene().addGameObjectToScene(star);
+        }
     }
     
     private void spawn1up() {
         AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        PrefabSave lifePre = new PrefabSave("assets/prefabs/entities/oneUpMushroom.prefab");
+        GameObject life = lifePre.load();
+        if (life != null) {
+            life.transform.position.set(gameObject.transform.position);
+            life.transform.position.y += 0.25f;
+            Window.getScene().addGameObjectToScene(life);
+        }
     }
     
     private void doCoinMultiple() {
@@ -152,8 +175,41 @@ public class ItemBlock extends Block{
 
     public void setIsInvisible(boolean isInvisible) {
         this.isInvisible = isInvisible;
+        if (isInvisible) {
+            this.gameObject.removeComponent(Ground.class);
+        } else {
+            this.gameObject.addComponent(new Ground());
+        }
     }
     
+    @Override
+    public void beginCollision(GameObject collidingObj, Contact contact, Vector2f contactN) {
+        PlayerController playerController = collidingObj.getComponent(PlayerController.class);
+        
+        if (active && playerController != null && contactN.y < -0.8f) {
+                doBopAnimation = true;
+                AssetPool.getSound("assets/sounds/bump.ogg").play();
+                hit(!playerController.isSmall());
+                if (isInvisible) {
+                    isInvisible = false;
+                }
+            }
+
+            if (active && collidingObj.getComponent(KoopaAI.class) != null && !isInvisible) {
+
+                KoopaAI koopa = collidingObj.getComponent(KoopaAI.class);
+                if (koopa.isShelled && koopa.isShellMoving && contactN.y < 0.8f) { 
+                    doBopAnimation = true;
+                    hit(true);
+                }
+            }
+    }
     
+    @Override
+    public void preSolve(GameObject collidingObj, Contact contact, Vector2f contactN) {
+        if (isInvisible) {
+            contact.setEnabled(false);
+        }
+    }
 }
 

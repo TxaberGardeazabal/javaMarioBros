@@ -156,8 +156,6 @@ public class PropertiesWindow {
                     OImGui.colorPicker4("underground color", lc.underGroundColor);
                 } else {
                     ImGui.text("no level controller");
-                    ConsoleWindow.addLog("Properties window: level controller not found",
-                            ConsoleWindow.LogCategory.warning);
                 }
                 ImGui.endTabItem();
             }

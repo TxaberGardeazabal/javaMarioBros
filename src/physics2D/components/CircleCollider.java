@@ -52,10 +52,10 @@ public class CircleCollider extends Collider{
     
     @Override
     public void update(float dt) {
-        /*if (showBoundaries) {
+        if (showBoundaries) {
             Vector2f center = new Vector2f(this.gameObject.transform.position).add(this.offset);
             DebugDraw.addCircle2D(center, radius);
-        }*/
+        }
         
         if (resetFixtureNextFrame) {
             resetFixture();

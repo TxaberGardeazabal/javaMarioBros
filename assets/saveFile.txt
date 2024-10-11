@@ -1,6 +1,6 @@
 {
-  "coins": 57,
-  "lives": 9,
+  "coins": 58,
+  "lives": 6,
   "score": 100,
   "playerState": "Big",
   "topScore": 100

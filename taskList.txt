@@ -9,11 +9,11 @@ add above cloud zones
 show contents of assetpool in editor (database)
 create in settings multi button input variables (control + x...)
 make water levels?
-+ add more enemys and obstacles
++ add more enemies and obstacles
 + make mario movements into separate functions and
 + make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
 + create transition animations for non sprite based animations (mario, blockCoin) (transition system?)
-
++ add a debug section with debug options (console, debugDraw, colision boundaries)
 
 upgrade existing functionalities:
 -- style properties window
@@ -21,6 +21,7 @@ upgrade existing functionalities:
 - refractor
 - on savemenus show file name in selector
 make prefabs of ui elements
+hitting blocks with enemies should kill the enemies
 + make physics them more precise and less janky
 + add boxcollider to enemies and items (for optimization)
 refactor component so it handles object types (could hace a class impementation)
@@ -38,7 +39,8 @@ imgui string editing sucks
 mario title image renders incorrectly
 + enemies should spawn only as soon as the camera reaches them
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
-+ invisible blocks have an active colision instead of a sensor
++ mario has incorrect hitboxes in his big state
++ upon winning game crashes due to not finding hud element
 
 other:
 // make pillbox changes ep #58

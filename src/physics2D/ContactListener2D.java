@@ -6,6 +6,7 @@ package physics2D;
 
 import components.Component;
 import gameEngine.GameObject;
+import java.util.ArrayList;
 import org.jbox2d.callbacks.ContactImpulse;
 import org.jbox2d.callbacks.ContactListener;
 import org.jbox2d.collision.Manifold;
@@ -29,11 +30,15 @@ public class ContactListener2D implements ContactListener{
         Vector2f aNormal = new Vector2f(worldManifold.normal.x,worldManifold.normal.y);
         Vector2f bNormal = new Vector2f(aNormal).negate();
         
-        for (Component c : objA.getAllComponents()) {
-            c.beginCollision(objB, cntct, aNormal);
+        ArrayList<Component> objAcomp = objA.getAllComponents();
+        ArrayList<Component> objBcomp = objB.getAllComponents();
+        
+        for (int i = 0; i < objAcomp.size(); i++) {
+            objAcomp.get(i).beginCollision(objB, cntct, aNormal);
         }
-        for (Component c : objB.getAllComponents()) {
-            c.beginCollision(objA, cntct, bNormal);
+        
+        for (int i = 0; i < objBcomp.size(); i++) {
+            objBcomp.get(i).beginCollision(objA, cntct, bNormal);
         }
     }
 
@@ -46,12 +51,16 @@ public class ContactListener2D implements ContactListener{
         Vector2f aNormal = new Vector2f(worldManifold.normal.x,worldManifold.normal.y);
         Vector2f bNormal = new Vector2f(aNormal).negate();
         
-        for (Component c : objA.getAllComponents()) {
-            c.endCollision(objB, cntct, aNormal);
+        ArrayList<Component> objAcomp = objA.getAllComponents();
+        ArrayList<Component> objBcomp = objB.getAllComponents();
+        
+        for (int i = 0; i < objAcomp.size(); i++) {
+            objAcomp.get(i).endCollision(objB, cntct, aNormal);
         }
-        for (Component c : objB.getAllComponents()) {
-            c.endCollision(objA, cntct, bNormal);
-        }    
+        
+        for (int i = 0; i < objBcomp.size(); i++) {
+            objBcomp.get(i).endCollision(objA, cntct, bNormal);
+        }   
     }
 
     @Override
@@ -63,12 +72,16 @@ public class ContactListener2D implements ContactListener{
         Vector2f aNormal = new Vector2f(worldManifold.normal.x,worldManifold.normal.y);
         Vector2f bNormal = new Vector2f(aNormal).negate();
         
-        for (Component c : objA.getAllComponents()) {
-            c.preSolve(objB, cntct, aNormal);
+        ArrayList<Component> objAcomp = objA.getAllComponents();
+        ArrayList<Component> objBcomp = objB.getAllComponents();
+        
+        for (int i = 0; i < objAcomp.size(); i++) {
+            objAcomp.get(i).preSolve(objB, cntct, aNormal);
         }
-        for (Component c : objB.getAllComponents()) {
-            c.preSolve(objA, cntct, bNormal);
-        }    
+        
+        for (int i = 0; i < objBcomp.size(); i++) {
+            objBcomp.get(i).preSolve(objA, cntct, bNormal);
+        }
     }
 
     @Override
@@ -80,12 +93,16 @@ public class ContactListener2D implements ContactListener{
         Vector2f aNormal = new Vector2f(worldManifold.normal.x,worldManifold.normal.y);
         Vector2f bNormal = new Vector2f(aNormal).negate();
         
-        for (Component c : objA.getAllComponents()) {
-            c.postSolve(objB, cntct, aNormal);
+        ArrayList<Component> objAcomp = objA.getAllComponents();
+        ArrayList<Component> objBcomp = objB.getAllComponents();
+        
+        for (int i = 0; i < objAcomp.size(); i++) {
+            objAcomp.get(i).postSolve(objB, cntct, aNormal);
         }
-        for (Component c : objB.getAllComponents()) {
-            c.postSolve(objA, cntct, bNormal);
-        }    
+        
+        for (int i = 0; i < objBcomp.size(); i++) {
+            objBcomp.get(i).postSolve(objA, cntct, bNormal);
+        }   
     }
     
 }

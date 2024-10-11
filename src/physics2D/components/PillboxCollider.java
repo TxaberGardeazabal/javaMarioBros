@@ -39,6 +39,20 @@ public class PillboxCollider extends Collider {
     
     @Override
     public void update(float dt) {
+        if (showBoundaries) {
+            topCircle.showBoundaries = true;
+            bottomCircle.showBoundaries = true;
+            box.showBoundaries = true;
+        } else {
+            box.showBoundaries = false;
+            topCircle.showBoundaries = false;
+            bottomCircle.showBoundaries = false;
+        }
+        
+        topCircle.update(dt);
+        bottomCircle.update(dt);
+        box.update(dt);
+        
         if (resetFixtureNextFrame) {
             resetFixture();
         }
@@ -60,9 +74,9 @@ public class PillboxCollider extends Collider {
         bottomCircle.editorUpdate(dt);
         box.editorUpdate(dt);
         
-        if (resetFixtureNextFrame) {
+        /*if (resetFixtureNextFrame) {
             resetFixture();
-        }
+        }*/
         
     }
 

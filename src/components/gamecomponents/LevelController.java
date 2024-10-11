@@ -162,14 +162,18 @@ public class LevelController extends Component implements Observer{
                 return;
             case MarioWin:
                 
-                pData.playerState = player.getPlayerState();
-                // convert time to score
+                
+                
                 // TODO: move this call to level scene only
                 saveProgress();
                 
                 if (Window.getScene().getInitializer() instanceof LevelSceneInitializer) {
-                    // move to next level
+                    
+                    pData.playerState = player.getPlayerState();
+                    // convert time to score
+                    
                     saveProgress();
+                    // move to next level
                     Window.changeScene(new LevelSceneInitializer(), nextLevel);
                 } else if (Window.getScene().getInitializer() instanceof LevelEditorSceneInitializer) {
                     // stop the editor runtime
@@ -205,6 +209,7 @@ public class LevelController extends Component implements Observer{
 
                 return;
             case oneUp:
+                AssetPool.getSound("assets/sounds/1-up.ogg").play();
                 if (pData.lives < 99) {
                     pData.lives++;
                 }

@@ -21,9 +21,7 @@ import org.joml.Vector4f;
 import physics2D.components.PillboxCollider;
 import physics2D.components.Rigidbody2D;
 import physics2D.enums.BodyType;
-import scene.LevelEditorSceneInitializer;
 import scene.LevelSceneInitializer;
-import scene.MainMenuSceneInitializer;
 import util.AssetPool;
 import util.Settings;
 
@@ -345,7 +343,7 @@ public class PlayerController extends PhysicsController {
     
     @Override
     public void beginCollision(GameObject collidingObj, Contact contact, Vector2f contactN) {
-        if (isDead) return;
+        if (isDead || !contact.isEnabled()) return;
         
         if (collidingObj.getComponent(Ground.class) != null) {
             if (Math.abs(contactN.x) > 0.8f) {

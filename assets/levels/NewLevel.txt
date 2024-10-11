@@ -17123,6 +17123,7 @@
           "contents": "CoinMultiple",
           "numberCoins": 99,
           "isInvisible": false,
+          "firstFlag": true,
           "bopSpeed": 0.4
         }
       },
@@ -17616,6 +17617,7 @@
           "contents": "Mushroom",
           "numberCoins": 5,
           "isInvisible": false,
+          "firstFlag": true,
           "bopSpeed": 0.4
         }
       },
@@ -76764,19 +76766,19 @@
                 },
                 "texCoords": [
                   {
-                    "x": 0.5,
+                    "x": 0.75,
                     "y": 1.0
                   },
                   {
+                    "x": 0.75,
+                    "y": 0.0
+                  },
+                  {
                     "x": 0.5,
                     "y": 0.0
                   },
                   {
-                    "x": 0.25,
-                    "y": 0.0
-                  },
-                  {
-                    "x": 0.25,
+                    "x": 0.5,
                     "y": 1.0
                   }
                 ]

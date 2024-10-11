@@ -16,10 +16,10 @@ import util.AssetPool;
  */
 public abstract class Block extends Component{
     private transient boolean bopGoingUp = true;
-    private transient boolean doBopAnimation = false;
+    protected transient boolean doBopAnimation = false;
     private transient Vector2f bopStart;
     private transient Vector2f topBopLocation;
-    private transient boolean active = true;
+    protected transient boolean active = true;
     
     public float bopSpeed = 0.4f;
     

@@ -8,7 +8,6 @@ import gameEngine.GameObject;
 import components.MouseControls;
 import components.Sprite;
 import components.SpriteSheet;
-import gameEngine.Direction;
 import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Sound;
@@ -243,6 +242,14 @@ public class AssetWindow {
                         mc.pickUpObject(object);
                     }
                 }
+                
+                if (spriteButton(sprites.getSprite(9),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/oneUpMushroom.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
                 ImGui.endTabItem();
             }
             
@@ -405,6 +412,7 @@ public class AssetWindow {
                     GameObject object = Prefab.generateBlockCoin();
                     mc.pickUpObject(object);
                 }
+                
                 ImGui.separator();
                 
                 ImGui.sameLine();

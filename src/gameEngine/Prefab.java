@@ -32,6 +32,7 @@ import components.gamecomponents.Fireball;
 import components.gamecomponents.Flag;
 import components.gamecomponents.FlagPole;
 import components.gamecomponents.BreakableBrick;
+import components.gamecomponents.LiveMushroom;
 import components.gamecomponents.StarAI;
 import components.propertieComponents.Ground;
 import org.joml.Vector2f;
@@ -1055,5 +1056,24 @@ public class Prefab {
         star.addComponent(new StarAI());
         
         return star;
+    }
+    
+    public static GameObject generateLiveMushroom() {
+        SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
+        GameObject mushroom = generateSpriteObject(Sprites.getSprite(9), 0.25f, 0.25f);
+        mushroom.name = "1-up";
+
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Dynamic);
+        rb.setFixedRotation(true);
+        rb.setContinuousCollision(false);
+        mushroom.addComponent(rb);
+        
+        CircleCollider cc = new CircleCollider();
+        cc.setRadius(0.13f);
+        mushroom.addComponent(cc);
+        mushroom.addComponent(new LiveMushroom());
+        
+        return mushroom;
     }
 }

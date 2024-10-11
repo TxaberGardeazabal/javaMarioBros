@@ -13,7 +13,7 @@ import org.joml.Vector2f;
 import util.AssetPool;
 
 /**
- * Controllador del enemigo goomba
+ * Controllador del enemigo koopa verde
  * @author txaber gardeazabal
  */
 public class KoopaAI extends Enemy {
