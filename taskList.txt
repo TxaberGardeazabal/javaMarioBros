@@ -1,5 +1,5 @@
 add new functionalities:
-- add rotation gizmo
+-- add rotation gizmo
 - find how to load spritesheets automaticaly instead of hardcoding all of them (maybe in the assetpool).
 - make adding, changing and removing of spritesheets in gameobjects
 - in level scenes only assets that are used should be loaded.
@@ -37,6 +37,7 @@ some window focus issues:
    imgui windows clipping into screen bar and headers not showing correctly
 imgui string editing sucks
 mario title image renders incorrectly
+transition desync issue: due to delta time variation the same transition may last more or less frames to complete leading to desyncs
 + enemies should spawn only as soon as the camera reaches them
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 + mario has incorrect hitboxes in his big state

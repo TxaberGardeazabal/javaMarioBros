@@ -11,8 +11,8 @@ import components.ButtonBehaviorDeserializer;
 import components.ComplexPrefabWrapper;
 import components.Component;
 import components.ComponentDeserializer;
-import components.SpriteRenderer;
-import components.StateMachine;
+import components.TransitionState;
+import components.TransitionStateDeserializer;
 import editor.ConsoleWindow;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -53,6 +53,7 @@ public class PrefabSave {
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
                 .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
                 .registerTypeAdapter(ButtonBehavior.class, new ButtonBehaviorDeserializer())
+                .registerTypeAdapter(TransitionState.class, new TransitionStateDeserializer())
                 .enableComplexMapKeySerialization()
                 .create();
         
@@ -73,6 +74,7 @@ public class PrefabSave {
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
                 .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
                 .registerTypeAdapter(ButtonBehavior.class, new ButtonBehaviorDeserializer())
+                .registerTypeAdapter(TransitionState.class, new TransitionStateDeserializer())
                 .enableComplexMapKeySerialization()
                 .create();
         

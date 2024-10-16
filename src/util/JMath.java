@@ -40,4 +40,20 @@ public class JMath {
     public static boolean compare(Vector2f vec1, Vector2f vec2) {
         return compare(vec1.x, vec2.x) && compare(vec1.y, vec2.y);
     }
+    
+    public static float lerp(float a, float b, float f)
+    {
+        return (float) (a * (1.0 - f) + (b * f));
+    }
+    
+    /**
+    * Normalize x.
+    * @param x The value to be normalized.
+    * @return The result of the normalization.
+    */
+   public static float normalize(float x, float dataHigh, float dataLow, float normalizedHigh, float normalizedLow) {
+       return ((x - dataLow) 
+               / (dataHigh - dataLow))
+               * (normalizedHigh - normalizedLow) + normalizedLow;
+   }
 }

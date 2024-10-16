@@ -130,7 +130,7 @@ public class StateMachine extends Component{
      * @param spriteSheet el spritesheet nuevo
      * @param offset distancia numerica relativa de los sprites originales hacia el nuevo spritesheet
      */
-    public void changeUsingSpriteSheet(SpriteSheet spriteSheet, int offset) {
+    public void changeSpriteSheetSkin(SpriteSheet spriteSheet, int offset) {
         for (AnimationState state : states) {
             state.changeUsingSpriteSheet(spriteSheet, offset);
             state.refreshTexture();

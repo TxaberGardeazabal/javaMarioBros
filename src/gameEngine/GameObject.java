@@ -13,6 +13,8 @@ import components.Component;
 import components.ComponentDeserializer;
 import components.SpriteRenderer;
 import components.StateMachine;
+import components.TransitionState;
+import components.TransitionStateDeserializer;
 import editor.ConsoleWindow;
 import editor.OImGui;
 import imgui.ImGui;
@@ -282,6 +284,7 @@ public class GameObject {
                  .registerTypeAdapter(Component.class, new ComponentDeserializer())
                  .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
                  .registerTypeAdapter(ButtonBehavior.class, new ButtonBehaviorDeserializer())
+                 .registerTypeAdapter(TransitionState.class, new TransitionStateDeserializer())
                  .enableComplexMapKeySerialization()
                  .create();
         String objToGson = gson.toJson(this);

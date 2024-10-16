@@ -12,6 +12,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import components.ButtonBehaviorDeserializer;
 import components.GameCamera;
+import components.TransitionState;
+import components.TransitionStateDeserializer;
 import components.gamecomponents.HoleLogic;
 import components.gamecomponents.PlayerController;
 import components.propertieComponents.ShadowObj;
@@ -350,6 +352,7 @@ public class Scene {
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
                 .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
                 .registerTypeAdapter(ButtonBehavior.class, new ButtonBehaviorDeserializer())
+                .registerTypeAdapter(TransitionState.class, new TransitionStateDeserializer())
                 .enableComplexMapKeySerialization()
                 .create();
         
@@ -383,6 +386,7 @@ public class Scene {
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
                 .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
                 .registerTypeAdapter(ButtonBehavior.class, new ButtonBehaviorDeserializer())
+                .registerTypeAdapter(TransitionState.class, new TransitionStateDeserializer())
                 .enableComplexMapKeySerialization()
                 .create();
         

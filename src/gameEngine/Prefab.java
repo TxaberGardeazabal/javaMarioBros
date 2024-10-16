@@ -28,6 +28,9 @@ import UI.buttonBehaviors.ExitButtonBehavior;
 import UI.buttonBehaviors.LevelSelectButtonBehavior;
 import UI.buttonBehaviors.StartButtonBehavior;
 import UI.buttonBehaviors.TestBehavior;
+import components.TransitionMachine;
+import components.TransitionState;
+import components.TranslateTransition;
 import components.gamecomponents.Fireball;
 import components.gamecomponents.Flag;
 import components.gamecomponents.FlagPole;
@@ -1075,5 +1078,48 @@ public class Prefab {
         mushroom.addComponent(new LiveMushroom());
         
         return mushroom;
+    }
+    
+    public static GameObject generateItemBlockExp(SpriteSheet sprites) {
+        GameObject itemBlock = generateSpriteObject(sprites.getSprite(3), 0.25f, 0.25f);
+        itemBlock.name = "new item block";
+        
+        AnimationState idle = new AnimationState();
+        idle.title = "flicker";
+        float defaultFrameTime = 0.23f;
+        idle.addFrame(sprites.getSprite(0), defaultFrameTime);
+        idle.addFrame(sprites.getSprite(1), defaultFrameTime);
+        idle.addFrame(sprites.getSprite(2), defaultFrameTime);
+        idle.setLoop(true);
+        
+        AnimationState inactive = new AnimationState();
+        inactive.title = "inactive";
+        inactive.addFrame(sprites.getSprite(3), 0.1f);
+        
+        StateMachine stateMachine = new StateMachine();
+        stateMachine.addState(idle);
+        stateMachine.addState(inactive);
+        stateMachine.setDefaultState(idle.title);
+        stateMachine.addStateTrigger(idle.title, inactive.title, "setInactive");
+        itemBlock.addComponent(stateMachine);
+        
+        
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Static);
+        itemBlock.addComponent(rb);
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.25f, 0.25f));
+        itemBlock.addComponent(b2d);
+        itemBlock.addComponent(new Ground());
+        
+        TransitionState move1 = new TranslateTransition(new Vector2f(0,1f),3);
+        TransitionState move2 = new TranslateTransition(new Vector2f(0,-1f),3);
+        
+        TransitionMachine tm = new TransitionMachine(false);
+        tm.addTransition(move1);
+        tm.addTransition(move2);
+        itemBlock.addComponent(tm);
+        
+        return itemBlock;
     }
 }

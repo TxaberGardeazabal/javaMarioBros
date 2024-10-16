@@ -317,7 +317,7 @@ public class PlayerController extends PhysicsController {
                 }
                 setCastVal(-0.24f);
                 
-                stateMachine.changeUsingSpriteSheet(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioBig.png"),0);
+                stateMachine.changeSpriteSheetSkin(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioBig.png"),0);
                 stateMachine.trigger("jump");
                 stateMachine.trigger("startGrow");
                 transformFramesLeft = transformFrames;
@@ -438,7 +438,7 @@ public class PlayerController extends PhysicsController {
             stateMachine.trigger("stopGrow");
             stateMachine.trigger("stopShrink");
             if (this.playerState == PlayerState.Small) {
-                stateMachine.changeUsingSpriteSheet(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png"), 0);
+                stateMachine.changeSpriteSheetSkin(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png"), 0);
                 gameObject.transform.scale.y = 0.25f;
                 PillboxCollider pb = gameObject.getComponent(PillboxCollider.class);
                 if (pb != null) {
@@ -463,9 +463,9 @@ public class PlayerController extends PhysicsController {
         
         if (invincBlinkFrames % 16 == 0) {
             if (this.playerState == PlayerState.Small) {
-                stateMachine.changeUsingSpriteSheet(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmallStar.png"), blinkS * 15);
+                stateMachine.changeSpriteSheetSkin(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmallStar.png"), blinkS * 15);
             } else {
-                stateMachine.changeUsingSpriteSheet(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioBigStar.png"), blinkS * 18);
+                stateMachine.changeSpriteSheetSkin(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioBigStar.png"), blinkS * 18);
             }
         }
         
@@ -481,13 +481,13 @@ public class PlayerController extends PhysicsController {
             }
             switch (this.playerState) {
                 case Small:
-                    stateMachine.changeUsingSpriteSheet(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png"), 0);
+                    stateMachine.changeSpriteSheetSkin(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png"), 0);
                     break;
                 case Big:
-                    stateMachine.changeUsingSpriteSheet(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioBig.png"),0);
+                    stateMachine.changeSpriteSheetSkin(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioBig.png"),0);
                     break;
                 case Fire:
-                    stateMachine.changeUsingSpriteSheet(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioBig.png"),36);
+                    stateMachine.changeSpriteSheetSkin(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioBig.png"),36);
                     break;
             }
             
