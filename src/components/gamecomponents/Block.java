@@ -5,6 +5,7 @@
 package components.gamecomponents;
 
 import components.Component;
+import components.TransitionMachine;
 import gameEngine.GameObject;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
@@ -15,46 +16,23 @@ import util.AssetPool;
  * @author txaber gardeazabal
  */
 public abstract class Block extends Component{
-    private transient boolean bopGoingUp = true;
-    protected transient boolean doBopAnimation = false;
-    private transient Vector2f bopStart;
-    private transient Vector2f topBopLocation;
+    protected transient TransitionMachine tm;
     protected transient boolean active = true;
     
     public float bopSpeed = 0.4f;
     
     @Override
     public void start() {
-        this.bopStart = new Vector2f(this.gameObject.transform.position);
-        this.topBopLocation = new Vector2f(bopStart).add(0.0f,0.05f);
+        this.tm = gameObject.getComponent(TransitionMachine.class);
     }
-    
-    @Override
-    public void update(float dt) {
-        if (doBopAnimation) {
-            if (bopGoingUp) {
-                if (this.gameObject.transform.position.y < topBopLocation.y) {
-                    this.gameObject.transform.position.y += bopSpeed * dt;
-                } else {
-                    bopGoingUp = false;
-                }
-            } else {
-                if(this.gameObject.transform.position.y > bopStart.y) {
-                    this.gameObject.transform.position.y -= bopSpeed * dt;
-                } else {
-                    this.gameObject.transform.position.y = bopStart.y;
-                    bopGoingUp = true;
-                    doBopAnimation = false;
-                }
-            }
-        }
-    }
-    
+
     @Override
     public void beginCollision(GameObject collidingObj, Contact contact, Vector2f contactN) {
         PlayerController playerController = collidingObj.getComponent(PlayerController.class);
         if (active && playerController != null && contactN.y < -0.8f) {
-            doBopAnimation = true;
+            if (tm != null) {
+                tm.begin();
+            }
             AssetPool.getSound("assets/sounds/bump.ogg").play();
             hit(!playerController.isSmall());
         }
@@ -63,7 +41,9 @@ public abstract class Block extends Component{
             
             KoopaAI koopa = collidingObj.getComponent(KoopaAI.class);
             if (koopa.isShelled && koopa.isShellMoving && contactN.y < 0.8f) { 
-                doBopAnimation = true;
+                if (tm != null) {
+                    tm.begin();
+                }
                 hit(true);
             }
         }

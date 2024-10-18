@@ -147,15 +147,6 @@
       }
     },
     {
-      "type": "components.gamecomponents.ItemBlock",
-      "properties": {
-        "contents": "Coin",
-        "numberCoins": 5,
-        "isInvisible": true,
-        "bopSpeed": 0.4
-      }
-    },
-    {
       "type": "physics2D.components.Rigidbody2D",
       "properties": {
         "velocity": {
@@ -193,8 +184,45 @@
       }
     },
     {
-      "type": "components.propertieComponents.Ground",
-      "properties": {}
+      "type": "components.TransitionMachine",
+      "properties": {
+        "states": [
+          {
+            "type": "components.TranslateTransition",
+            "properties": {
+              "offset": {
+                "x": 0.0,
+                "y": 0.05
+              },
+              "duration": 0.15,
+              "finished": false
+            }
+          },
+          {
+            "type": "components.TranslateTransition",
+            "properties": {
+              "offset": {
+                "x": 0.0,
+                "y": -0.05
+              },
+              "duration": 0.15,
+              "finished": false
+            }
+          }
+        ],
+        "loops": false,
+        "isPlaying": false
+      }
+    },
+    {
+      "type": "components.gamecomponents.ItemBlock",
+      "properties": {
+        "contents": "Coin",
+        "numberCoins": 5,
+        "isInvisible": true,
+        "firstFlag": true,
+        "bopSpeed": 0.4
+      }
     }
   ],
   "doSerialization": true,

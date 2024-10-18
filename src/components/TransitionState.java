@@ -12,7 +12,7 @@ import gameEngine.GameObject;
  */
 public abstract class TransitionState {
     
-    protected boolean finished = false;
+    protected transient boolean finished = false;
     protected transient float timeTracker = 0.0f;
     protected transient GameObject gameObject;
     

@@ -28,8 +28,6 @@ public class TransitionMachine extends Component {
         for (TransitionState state : states) {
             state.gameObject = this.gameObject;
         }
-        
-        begin();
     }
     
     @Override

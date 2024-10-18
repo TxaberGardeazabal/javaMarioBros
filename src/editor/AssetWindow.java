@@ -415,7 +415,7 @@ public class AssetWindow {
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 if (spriteButton(sprites.getSprite(3),uid++)) {
-                    GameObject object = Prefab.generateItemBlockExp(sprites);
+                    GameObject object = Prefab.generateItemBlock(sprites);
                     mc.pickUpObject(object);
                 }
                 

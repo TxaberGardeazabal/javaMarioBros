@@ -6,6 +6,8 @@ package components.gamecomponents;
 
 import components.SpriteRenderer;
 import components.StateMachine;
+import components.TransitionMachine;
+import components.TranslateTransition;
 import components.propertieComponents.Ground;
 import editor.ConsoleWindow;
 import gameEngine.GameObject;
@@ -123,8 +125,17 @@ public class ItemBlock extends Block{
         PrefabSave mushPre = new PrefabSave("assets/prefabs/entities/mushroom.prefab");
         GameObject mush = mushPre.load();
         if (mush != null) {
+            TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
+            TransitionMachine mushtm = new TransitionMachine(false);
+            mushtm.addTransition(move);
+            mush.addComponent(mushtm);
+            
             mush.transform.position.set(gameObject.transform.position);
-            mush.transform.position.y += 0.25f;
+            mush.transform.position.y += 0.05f;
+            mush.getComponent(MushroomAI.class).setActive(false);
+            
+            mushtm.start();
+            mushtm.begin();
             Window.getScene().addGameObjectToScene(mush);
         }
     }
@@ -187,7 +198,9 @@ public class ItemBlock extends Block{
         PlayerController playerController = collidingObj.getComponent(PlayerController.class);
         
         if (active && playerController != null && contactN.y < -0.8f) {
-                doBopAnimation = true;
+                if (tm != null) {
+                    tm.begin();
+                }
                 AssetPool.getSound("assets/sounds/bump.ogg").play();
                 hit(!playerController.isSmall());
                 if (isInvisible) {
@@ -199,7 +212,9 @@ public class ItemBlock extends Block{
 
                 KoopaAI koopa = collidingObj.getComponent(KoopaAI.class);
                 if (koopa.isShelled && koopa.isShellMoving && contactN.y < 0.8f) { 
-                    doBopAnimation = true;
+                    if (tm != null) {
+                        tm.begin();
+                    }
                     hit(true);
                 }
             }
