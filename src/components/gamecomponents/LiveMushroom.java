@@ -15,7 +15,7 @@ import org.joml.Vector2f;
  * Controlador del champiñon de vida extra
  * @author txaber gardeazabal
  */
-public class LiveMushroom extends MushroomAI{
+public class LiveMushroom extends MushroomAI {
     @Override
     public void preSolve(GameObject go, Contact contact, Vector2f normal) {
         PlayerController playerController = go.getComponent(PlayerController.class);

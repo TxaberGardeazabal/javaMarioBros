@@ -5,6 +5,7 @@
 package components.gamecomponents;
 
 import components.Component;
+import components.TransitionMachine;
 import gameEngine.GameObject;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;

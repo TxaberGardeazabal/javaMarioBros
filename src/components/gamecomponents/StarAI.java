@@ -5,6 +5,7 @@
 package components.gamecomponents;
 
 import components.PhysicsController;
+import components.TransitionMachine;
 import gameEngine.GameObject;
 import gameEngine.Window;
 import org.jbox2d.dynamics.contacts.Contact;
@@ -21,6 +22,7 @@ public class StarAI extends PhysicsController {
     private transient float speed = 1.7f;
     private transient float bounceForce = 1.5f;
     public transient boolean goingRight = true;
+    private boolean active = true;
     
     @Override
     public void start() {
@@ -30,21 +32,27 @@ public class StarAI extends PhysicsController {
     
     @Override
     public void update(float dt) {
-        if (goingRight) {
-            velocity.x = speed;
+        if (active) {
+            if (goingRight) {
+                velocity.x = speed;
+            } else {
+                velocity.x = -speed;
+            } 
+
+            checkOnGround();
+            if (onGround) {
+                this.acceleration.y = bounceForce;
+                this.velocity.y = 2f;
+            } else {
+                this.acceleration.y = Window.getPhysics().getGravity().y * Settings.worldGravityMul;
+            }
+            applyForces(dt);
         } else {
-            velocity.x = -speed;
-        } 
-        
-        checkOnGround();
-        if (onGround) {
-            this.acceleration.y = bounceForce;
-            this.velocity.y = 2f;
-        } else {
-            this.acceleration.y = Window.getPhysics().getGravity().y * Settings.worldGravityMul;
+            TransitionMachine tm = this.gameObject.getComponent(TransitionMachine.class);
+            if (tm != null && !tm.isPlaying()) {
+                active = true;
+            }
         }
-        
-        applyForces(dt);
     }
     
     @Override
@@ -59,6 +67,14 @@ public class StarAI extends PhysicsController {
             gameObject.destroy();
         }
         
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
     
     

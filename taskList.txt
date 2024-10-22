@@ -8,11 +8,12 @@ add new functionalities:
 add above cloud zones
 show contents of assetpool in editor (database)
 create in settings multi button input variables (control + x...)
-make water levels?
+- make water levels?
++ add particles for bricks
 + add more enemies and obstacles
 + make mario movements into separate functions and
 + make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
-+ create transition animations for non sprite based animations (mario, blockCoin) (transition system?)
++ add transitions for pipes
 + add a debug section with debug options (console, debugDraw, colision boundaries)
 
 upgrade existing functionalities:
@@ -20,14 +21,12 @@ upgrade existing functionalities:
 -- add all controlls in settings class and use those
 - refractor
 - on savemenus show file name in selector
-make prefabs of ui elements
 hitting blocks with enemies should kill the enemies
 + make physics them more precise and less janky
 + add boxcollider to enemies and items (for optimization)
 refactor component so it handles object types (could hace a class impementation)
 adjust the screen size so is 1:1 with the original game
 ++ finish the levelController
-add prefabs in assetpool??
 
 bugfixing:
 - picking shader doesn't prevent extra placement of gameobjects if the object color is too light
@@ -40,7 +39,7 @@ mario title image renders incorrectly
 transition desync issue: due to delta time variation the same transition may last more or less frames to complete leading to desyncs
 + enemies should spawn only as soon as the camera reaches them
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
-+ mario has incorrect hitboxes in his big state
++ adjust mario hitboxes in the big and small forms to prevent clipping
 + upon winning game crashes due to not finding hud element
 
 other:

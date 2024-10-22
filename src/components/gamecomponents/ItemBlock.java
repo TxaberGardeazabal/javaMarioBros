@@ -145,8 +145,16 @@ public class ItemBlock extends Block{
         PrefabSave flowerPre = new PrefabSave("assets/prefabs/entities/fireFlower.prefab");
         GameObject flower = flowerPre.load();
         if (flower != null) {
+            TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
+            TransitionMachine flowertm = new TransitionMachine(false);
+            flowertm.addTransition(move);
+            flower.addComponent(flowertm);
+            
             flower.transform.position.set(gameObject.transform.position);
-            flower.transform.position.y += 0.25f;
+            flower.transform.position.y += 0.05f;
+            
+            flowertm.start();
+            flowertm.begin();
             Window.getScene().addGameObjectToScene(flower);
         }
     }
@@ -160,8 +168,17 @@ public class ItemBlock extends Block{
         PrefabSave starPre = new PrefabSave("assets/prefabs/entities/star.prefab");
         GameObject star = starPre.load();
         if (star != null) {
+            TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
+            TransitionMachine startm = new TransitionMachine(false);
+            startm.addTransition(move);
+            star.addComponent(startm);
+            
             star.transform.position.set(gameObject.transform.position);
-            star.transform.position.y += 0.25f;
+            star.transform.position.y += 0.05f;
+            star.getComponent(StarAI.class).setActive(false);
+            
+            startm.start();
+            startm.begin();
             Window.getScene().addGameObjectToScene(star);
         }
     }
@@ -171,8 +188,17 @@ public class ItemBlock extends Block{
         PrefabSave lifePre = new PrefabSave("assets/prefabs/entities/oneUpMushroom.prefab");
         GameObject life = lifePre.load();
         if (life != null) {
+            TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
+            TransitionMachine mushtm = new TransitionMachine(false);
+            mushtm.addTransition(move);
+            life.addComponent(mushtm);
+            
             life.transform.position.set(gameObject.transform.position);
-            life.transform.position.y += 0.25f;
+            life.transform.position.y += 0.05f;
+            life.getComponent(LiveMushroom.class).setActive(false);
+            
+            mushtm.start();
+            mushtm.begin();
             Window.getScene().addGameObjectToScene(life);
         }
     }

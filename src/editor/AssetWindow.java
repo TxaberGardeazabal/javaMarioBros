@@ -389,35 +389,38 @@ public class AssetWindow {
                 int uid = 0;
                 SpriteSheet pipeSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesFull.png");
 
+                // old pipe w inheritance
                 if (spriteButton(pipeSprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generatePipeExp();
                     mc.pickUpObject(object);
                 }
                 
+                // fireball sprite for render test
                 Sprite fire = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/marioFireball.png"));
-                
                 if (spriteButton(fire,uid++)) {
                     GameObject object = Prefab.generateUIText(fire);
                     mc.pickUpObject(object);
                 }
                 
+                // empty object
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/UIExtra.png");
                 if (spriteButton(sprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateEmptyObject();
                     mc.pickUpObject(object);
                 }
                 
+                // coin inside of blocks
                 fire = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/blockCoin.png").getSprite(0);
                 if (spriteButton(fire,uid++)) {
                     GameObject object = Prefab.generateBlockCoin();
                     mc.pickUpObject(object);
                 }
                 
-                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+                /*sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 if (spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateItemBlock(sprites);
                     mc.pickUpObject(object);
-                }
+                }*/
                 
                 ImGui.separator();
                 

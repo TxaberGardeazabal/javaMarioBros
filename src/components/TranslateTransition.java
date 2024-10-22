@@ -13,8 +13,8 @@ import util.JMath;
  */
 public class TranslateTransition extends TransitionState {
     
-    private Vector2f pointA;
-    private Vector2f pointB;
+    private transient Vector2f pointA;
+    private transient Vector2f pointB;
     private Vector2f offset;
     private float duration;
 
