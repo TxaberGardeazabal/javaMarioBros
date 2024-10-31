@@ -15,16 +15,18 @@ import util.AssetPool;
 import util.Settings;
 
 /**
- * Tuberias que llevan a mario a otras zonas
+ * Tuberias pasadizas que trasportan a mario a otras zonas
  * @author txaber gardeazabal
  */
 public class Pipe extends Component {
-    private Direction direction;
-    private String connectingPipeName ="";
+    public Direction direction;
+    private String connectingPipeName = "";
     private boolean isTraversable = false;
     private transient GameObject connectingPipe = null;
     private transient float entranceVectorTolerance = 0.6f;
     private transient PlayerController collidingPlayer = null;
+    private transient boolean playerEntering = false;
+    private transient boolean playerExiting = false;
 
     public Pipe(Direction direction) {
         this.direction = direction;
@@ -41,8 +43,23 @@ public class Pipe extends Component {
             return;
         }
         
-        if (isTraversable && collidingPlayer != null) {
-            boolean playerEntering = false;
+        if (playerEntering != false) {
+            if (!collidingPlayer.getTransitionMachine().isPlaying()) {
+                playerEntering = false;
+                playerExiting = true;
+                AssetPool.getSound("assets/sounds/pipe.ogg").play();
+                collidingPlayer.setPosition(getPlayerPosition(connectingPipe));
+                collidingPlayer.playPipeExitAnimation(direction);
+            }
+        } else if (playerExiting != false) {
+            if (!collidingPlayer.getTransitionMachine().isPlaying()) {
+                playerExiting = false;
+                collidingPlayer.setDisableForces(false);
+                collidingPlayer = null;
+                // transition end
+            }
+        } else if (isTraversable && collidingPlayer != null) {
+            playerEntering = false;
             
             switch(direction) {
                 case Up:
@@ -75,9 +92,9 @@ public class Pipe extends Component {
                     break;
             }
             if (playerEntering) {
-                collidingPlayer.setPosition(getPlayerPosition(connectingPipe));
+                collidingPlayer.setDisableForces(true);
+                collidingPlayer.playPipeEnterAnimation(direction);
                 AssetPool.getSound("assets/sounds/pipe.ogg").play();
-                    
             }
         }
     }
@@ -93,7 +110,7 @@ public class Pipe extends Component {
     @Override
     public void endCollision(GameObject go, Contact cntc, Vector2f normal) {
         PlayerController playerController = go.getComponent(PlayerController.class);
-        if (playerController != null) {
+        if (playerController != null && !(playerEntering || playerExiting)) {
             collidingPlayer = null;
         }
     }

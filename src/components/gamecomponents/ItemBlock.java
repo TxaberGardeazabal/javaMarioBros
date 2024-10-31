@@ -126,7 +126,7 @@ public class ItemBlock extends Block{
         GameObject mush = mushPre.load();
         if (mush != null) {
             TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
-            TransitionMachine mushtm = new TransitionMachine(false);
+            TransitionMachine mushtm = new TransitionMachine(true,false);
             mushtm.addTransition(move);
             mush.addComponent(mushtm);
             
@@ -146,7 +146,7 @@ public class ItemBlock extends Block{
         GameObject flower = flowerPre.load();
         if (flower != null) {
             TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
-            TransitionMachine flowertm = new TransitionMachine(false);
+            TransitionMachine flowertm = new TransitionMachine(true,false);
             flowertm.addTransition(move);
             flower.addComponent(flowertm);
             
@@ -169,7 +169,7 @@ public class ItemBlock extends Block{
         GameObject star = starPre.load();
         if (star != null) {
             TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
-            TransitionMachine startm = new TransitionMachine(false);
+            TransitionMachine startm = new TransitionMachine(true,false);
             startm.addTransition(move);
             star.addComponent(startm);
             
@@ -189,7 +189,7 @@ public class ItemBlock extends Block{
         GameObject life = lifePre.load();
         if (life != null) {
             TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
-            TransitionMachine mushtm = new TransitionMachine(false);
+            TransitionMachine mushtm = new TransitionMachine(true,false);
             mushtm.addTransition(move);
             life.addComponent(mushtm);
             

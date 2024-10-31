@@ -5,9 +5,10 @@
 package components.gamecomponents;
 
 import components.PhysicsController;
-import components.SpriteRenderer;
 import components.StateMachine;
+import components.TransitionMachine;
 import components.propertieComponents.Ground;
+import gameEngine.Direction;
 import gameEngine.GameObject;
 import gameEngine.KeyListener;
 import gameEngine.Prefab;
@@ -45,17 +46,18 @@ public class PlayerController extends PhysicsController {
     
     private PlayerState playerState = PlayerState.Small;
     public transient boolean isInvincible = false;
+    public transient boolean disableForces = false;
     private transient float groundDebounce = 0.0f;
     private transient float groundDebounceTime = 0.1f;
     private transient StateMachine stateMachine;
+    private transient TransitionMachine transitionMachine;
     private transient float bigJumpBoostFactor = 1.05f;
     private transient float playerWidth = 0.25f;
     private transient int jumpTime = 0;
     private transient boolean isDead = false;
+    private transient boolean isHurtInvincible = false;
     private transient int enemyBounce = 0;
     
-    private transient int hurtInvincibilityFramesLeft = 0;
-    private transient int hurtInvincibilityFrames = 280;
     private transient int invicivilityFrames = 1000;
     private transient int invicivilityFramesLeft = 0;
     private transient float blinkTime = 0.0f;
@@ -77,6 +79,7 @@ public class PlayerController extends PhysicsController {
         super.start();
         setInnerWidth(playerWidth * 0.6f);
         this.stateMachine = gameObject.getComponent(StateMachine.class);
+        this.transitionMachine = gameObject.getComponent(TransitionMachine.class);
         this.rb.setGravityScale(0.0f);
         
         Fireball.reset();
@@ -131,9 +134,10 @@ public class PlayerController extends PhysicsController {
             }
         }
         
-        if (hurtInvincibilityFramesLeft > 0) {
-            hurtBlink(dt);
-            hurtInvincibilityFramesLeft --;
+        if (isHurtInvincible) {
+            if (!transitionMachine.isPlaying()) {
+                isHurtInvincible = false;
+            }
         }
         
         if (KeyListener.isKeyPressed(Settings.MOVERIGHT) && !KeyListener.isKeyPressed(Settings.MOVELEFT)) {
@@ -260,8 +264,12 @@ public class PlayerController extends PhysicsController {
             this.groundDebounce = this.groundDebounceTime;
         }
         
-        applyForces(dt);
-        
+        if (!this.disableForces) {
+            applyForces(dt);
+        } else {
+            this.stopAllForces();
+        }
+                
         if (!onGround) {
             stateMachine.trigger("jump");
         } else {
@@ -291,7 +299,7 @@ public class PlayerController extends PhysicsController {
     }
     
     public boolean isHurtInvincible() {
-        return this.hurtInvincibilityFramesLeft > 0;
+        return isHurtInvincible;
     }
     
     public boolean isInvincible() {
@@ -381,7 +389,8 @@ public class PlayerController extends PhysicsController {
             case Big:
                 this.playerState = PlayerState.Small;
                 setCastVal(-0.14f);
-                hurtInvincibilityFramesLeft = hurtInvincibilityFrames;
+                transitionMachine.startTransition(4);
+                isHurtInvincible = true;
                 stateMachine.trigger("jump");
                 stateMachine.trigger("startShrink");
                 transformFramesLeft = transformFrames;
@@ -390,7 +399,8 @@ public class PlayerController extends PhysicsController {
                 break;
             case Fire:
                 this.playerState = PlayerState.Big;
-                hurtInvincibilityFramesLeft = hurtInvincibilityFrames;
+                isHurtInvincible = true;
+                transitionMachine.startTransition(4);
                 invincBlinkFrames = transformFrames;
                 
                 AssetPool.getSound("assets/sounds/pipe.ogg").play();
@@ -494,33 +504,6 @@ public class PlayerController extends PhysicsController {
         }
     }
     
-    /**
-     * Ejecuta la animacion de parpadeo de mario, mario es invencible durante ensta animacion
-     * @param dt delta time
-     */
-    public void hurtBlink(float dt) {
-        SpriteRenderer spr = this.gameObject.getComponent(SpriteRenderer.class);
-        if (hurtInvincibilityFramesLeft % 8 == 0) {
-            blinkS++;
-            if (blinkS == 2) {
-                blinkS = 0;
-            }
-        
-            if (blinkS == 0) {
-                spr.setColor(new Vector4f(1f,1f,1f,1f));
-            } else {
-                spr.setColor(new Vector4f(1f,1f,1f,0.7f));
-            }
-        }
-        
-        
-        
-        if (hurtInvincibilityFramesLeft == 1) {
-            spr.setColor(new Vector4f(1f,1f,1f,1f));
-            //no invincible
-        }
-    }
-    
     private transient boolean playWinAnimation = false;
     private transient float timeToCastle = 4.5f;
     private transient float walkTime = 2.2f;
@@ -538,4 +521,49 @@ public class PlayerController extends PhysicsController {
             AssetPool.getSound("assets/sounds/flagpole.ogg").play();
         }
     }
+    
+    public void playPipeEnterAnimation(Direction d) {
+        switch(d) {
+            case Up:
+                transitionMachine.startTransition(3);
+                break;
+            case Down:
+                transitionMachine.startTransition(2);
+                break;
+            case Left:
+                transitionMachine.startTransition(0);
+                break;
+            case Right:
+                transitionMachine.startTransition(1);
+                break;
+        }
+    }
+    
+    public void playPipeExitAnimation(Direction d) {
+        // same as enter but with flipped animations
+        switch(d) {
+            case Up:
+                transitionMachine.startTransition(2);
+                break;
+            case Down:
+                transitionMachine.startTransition(3);
+                break;
+            case Left:
+                transitionMachine.startTransition(1);
+                break;
+            case Right:
+                transitionMachine.startTransition(0);
+                break;
+        }
+    }
+
+    public TransitionMachine getTransitionMachine() {
+        return transitionMachine;
+    }
+
+    public void setDisableForces(boolean disableForces) {
+        this.disableForces = disableForces;
+    }
+    
+    
 }

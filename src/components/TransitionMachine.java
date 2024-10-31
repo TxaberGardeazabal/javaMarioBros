@@ -4,7 +4,6 @@
  */
 package components;
 
-import editor.ConsoleWindow;
 import java.util.ArrayList;
 
 /**
@@ -16,10 +15,12 @@ public class TransitionMachine extends Component {
     private ArrayList<TransitionState> states = new ArrayList();
     private transient TransitionState currentState;
     private transient int stateIndex = 0;
+    private boolean linear = true;
     private boolean loops;
     private boolean isPlaying = false;
 
-    public TransitionMachine(boolean loops) {
+    public TransitionMachine(boolean isLinear, boolean loops) {
+        this.linear = isLinear;
         this.loops = loops;
     }
     
@@ -36,18 +37,27 @@ public class TransitionMachine extends Component {
             currentState.step(dt);
             
             if (currentState.hasEnded()) {
-                stateIndex++;
-                if (stateIndex >= states.size()) {
-                    if (!loops) {
-                        end();
+                if (!linear) {
+                    if (loops) {
+                        currentState.start();
                     } else {
-                        stateIndex = 0;
+                        stop();
+                    }
+                    
+                } else {
+                    stateIndex++;
+                    if (stateIndex >= states.size()) {
+                        if (!loops) {
+                            end();
+                        } else {
+                            stateIndex = 0;
+                            currentState = states.get(stateIndex);
+                            currentState.start();
+                        }
+                    } else {
                         currentState = states.get(stateIndex);
                         currentState.start();
                     }
-                } else {
-                    currentState = states.get(stateIndex);
-                    currentState.start();
                 }
             }
         }
@@ -78,5 +88,13 @@ public class TransitionMachine extends Component {
     
     public void addTransition(TransitionState state) {
         this.states.add(state);
+    }
+    
+    public void startTransition(int index) {
+        if (index > 0 && index < states.size()) {
+            currentState = states.get(index);
+            currentState.start();
+            isPlaying = true;
+        }
     }
 }

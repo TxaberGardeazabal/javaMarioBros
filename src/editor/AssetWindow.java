@@ -416,6 +416,14 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png");
+                
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateMario();
+                    mc.pickUpObject(object);
+                    
+                }
+                
                 /*sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 if (spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateItemBlock(sprites);

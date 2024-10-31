@@ -28,6 +28,7 @@ import UI.buttonBehaviors.ExitButtonBehavior;
 import UI.buttonBehaviors.LevelSelectButtonBehavior;
 import UI.buttonBehaviors.StartButtonBehavior;
 import UI.buttonBehaviors.TestBehavior;
+import components.BlinkTransition;
 import components.TransitionMachine;
 import components.TransitionState;
 import components.TranslateTransition;
@@ -99,7 +100,6 @@ public class Prefab {
         float defaultFrameTime = 0.19f;
         
         // animation states
-        
         AnimationState idle = new AnimationState();
         idle.title = "idle";
         idle.addFrame(playerSprites.getSprite(0), 0, 0);
@@ -235,6 +235,23 @@ public class Prefab {
         
         mario.addComponent(stateMachine);
         
+        // pipe and blink transitions
+        TranslateTransition pipeRight = new TranslateTransition(new Vector2f(1,0),1.5f);
+        TranslateTransition pipeLeft = new TranslateTransition(new Vector2f(-1,0),1.5f);
+        TranslateTransition pipeTop = new TranslateTransition(new Vector2f(0,1),1.5f);
+        TranslateTransition pipeBottom = new TranslateTransition(new Vector2f(0,-1),1.5f);
+        
+        BlinkTransition bt = new BlinkTransition(3);
+        
+        TransitionMachine tm = new TransitionMachine(false,false);
+        tm.addTransition(pipeRight);
+        tm.addTransition(pipeLeft);
+        tm.addTransition(pipeTop);
+        tm.addTransition(pipeBottom);
+        tm.addTransition(bt);
+        
+        mario.addComponent(tm);
+        
         // pillbox collider
         PillboxCollider pb = new PillboxCollider();
         pb.width = 0.39f;
@@ -291,7 +308,7 @@ public class Prefab {
         TransitionState move1 = new TranslateTransition(new Vector2f(0,0.05f),0.15f);
         TransitionState move2 = new TranslateTransition(new Vector2f(0,-0.05f),0.15f);
         
-        TransitionMachine tm = new TransitionMachine(false);
+        TransitionMachine tm = new TransitionMachine(true,false);
         tm.addTransition(move1);
         tm.addTransition(move2);
         itemBlock.addComponent(tm);
@@ -331,7 +348,7 @@ public class Prefab {
         TransitionState move1 = new TranslateTransition(new Vector2f(0,0.05f),0.15f);
         TransitionState move2 = new TranslateTransition(new Vector2f(0,-0.05f),0.15f);
         
-        TransitionMachine tm = new TransitionMachine(false);
+        TransitionMachine tm = new TransitionMachine(true,false);
         tm.addTransition(move1);
         tm.addTransition(move2);
         itemBlock.addComponent(tm);
@@ -372,7 +389,7 @@ public class Prefab {
         TransitionState move1 = new TranslateTransition(new Vector2f(0,0.05f),0.15f);
         TransitionState move2 = new TranslateTransition(new Vector2f(0,-0.05f),0.15f);
         
-        TransitionMachine tm = new TransitionMachine(false);
+        TransitionMachine tm = new TransitionMachine(true,false);
         tm.addTransition(move1);
         tm.addTransition(move2);
         itemBlock.addComponent(tm);
@@ -405,7 +422,7 @@ public class Prefab {
         TranslateTransition move1 = new TranslateTransition(new Vector2f(0,0.75f),0.3f);
         TranslateTransition move2 = new TranslateTransition(new Vector2f(0,-0.5f),0.2f);
         
-        TransitionMachine tm = new TransitionMachine(false);
+        TransitionMachine tm = new TransitionMachine(true,false);
         tm.addTransition(move1);
         tm.addTransition(move2);
         coin.addComponent(tm);
