@@ -236,10 +236,10 @@ public class Prefab {
         mario.addComponent(stateMachine);
         
         // pipe and blink transitions
-        TranslateTransition pipeRight = new TranslateTransition(new Vector2f(1,0),1.5f);
-        TranslateTransition pipeLeft = new TranslateTransition(new Vector2f(-1,0),1.5f);
-        TranslateTransition pipeTop = new TranslateTransition(new Vector2f(0,1),1.5f);
-        TranslateTransition pipeBottom = new TranslateTransition(new Vector2f(0,-1),1.5f);
+        TranslateTransition pipeRight = new TranslateTransition(new Vector2f(0.5f,0),1f);
+        TranslateTransition pipeLeft = new TranslateTransition(new Vector2f(-0.5f,0),1f);
+        TranslateTransition pipeTop = new TranslateTransition(new Vector2f(0,0.5f),1f);
+        TranslateTransition pipeBottom = new TranslateTransition(new Vector2f(0,-0.5f),1f);
         
         BlinkTransition bt = new BlinkTransition(3);
         

@@ -1,5 +1,5 @@
 {
-  "coins": 58,
+  "coins": 64,
   "lives": 6,
   "score": 100,
   "playerState": "Big",

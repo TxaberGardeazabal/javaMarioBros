@@ -48,8 +48,13 @@ public class Pipe extends Component {
                 playerEntering = false;
                 playerExiting = true;
                 AssetPool.getSound("assets/sounds/pipe.ogg").play();
-                collidingPlayer.setPosition(getPlayerPosition(connectingPipe));
-                collidingPlayer.playPipeExitAnimation(direction);
+                if (connectingPipe.getComponent(Pipe.class) != null) {
+                    collidingPlayer.setPosition(getPlayerPosition(connectingPipe));
+                    collidingPlayer.playPipeExitAnimation(connectingPipe.getComponent(Pipe.class).direction);
+                } else {
+                    collidingPlayer.playPipeExitAnimation(direction);
+                }
+                
             }
         } else if (playerExiting != false) {
             if (!collidingPlayer.getTransitionMachine().isPlaying()) {
@@ -122,7 +127,7 @@ public class Pipe extends Component {
      */
     private Vector2f getPlayerPosition(GameObject pipe) {
         Pipe pipeComponent = pipe.getComponent(Pipe.class);
-        if (pipeComponent != null) {
+        /*if (pipeComponent != null) {
             switch(pipeComponent.direction) {
                 case Up:
                     return new Vector2f(pipe.transform.position).add(0.0f, 0.5f);
@@ -133,8 +138,8 @@ public class Pipe extends Component {
                 case Right:
                     return new Vector2f(pipe.transform.position).add(0.0f, -0.5f);
             }
-        }
-        return new Vector2f();
+        }*/
+        return new Vector2f(pipe.transform.position);
         
     }
     

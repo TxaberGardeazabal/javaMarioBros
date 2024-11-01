@@ -364,6 +364,14 @@ public class PlayerController extends PhysicsController {
         }
     }
     
+    @Override
+    public void preSolve(GameObject collidingObj, Contact contact, Vector2f contactN) {
+        if (disableForces) {
+            this.stopAllForces();
+            return;
+        }
+    }
+    
     public void die() {
         this.stateMachine.trigger("die");
         this.velocity.set(0,0);

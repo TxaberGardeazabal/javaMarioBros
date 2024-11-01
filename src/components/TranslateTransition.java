@@ -4,7 +4,9 @@
  */
 package components;
 
+import components.gamecomponents.PlayerController;
 import org.joml.Vector2f;
+import physics2D.components.Rigidbody2D;
 import util.JMath;
 
 /**
@@ -35,8 +37,17 @@ public class TranslateTransition extends TransitionState {
     @Override
     public void step(float dt) {
         float factor = JMath.normalize(timeTracker,duration,0.0f,1.0f,0.0f);
-        this.gameObject.transform.position.x = JMath.lerp(pointA.x, pointB.x, factor);
-        this.gameObject.transform.position.y = JMath.lerp(pointA.y, pointB.y, factor);
+        if (this.gameObject.getComponent(PlayerController.class) != null) {
+            this.gameObject.getComponent(PlayerController.class).setPosition(new Vector2f(
+                    JMath.lerp(pointA.x, pointB.x, factor),
+                    JMath.lerp(pointA.y, pointB.y, factor)));
+        } else {
+            this.gameObject.transform.translate(new Vector2f(
+                    JMath.lerp(pointA.x, pointB.x, factor),
+                    JMath.lerp(pointA.y, pointB.y, factor)
+            ));
+        }
+        
         //System.out.println("time "+timeTracker);
         //System.out.println(factor);
         timeTracker += dt;

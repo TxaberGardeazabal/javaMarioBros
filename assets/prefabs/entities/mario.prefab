@@ -1158,6 +1158,62 @@
       }
     },
     {
+      "type": "components.TransitionMachine",
+      "properties": {
+        "states": [
+          {
+            "type": "components.TranslateTransition",
+            "properties": {
+              "offset": {
+                "x": 0.5,
+                "y": 0.0
+              },
+              "duration": 1.0
+            }
+          },
+          {
+            "type": "components.TranslateTransition",
+            "properties": {
+              "offset": {
+                "x": -0.5,
+                "y": 0.0
+              },
+              "duration": 1.0
+            }
+          },
+          {
+            "type": "components.TranslateTransition",
+            "properties": {
+              "offset": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "duration": 1.0
+            }
+          },
+          {
+            "type": "components.TranslateTransition",
+            "properties": {
+              "offset": {
+                "x": 0.0,
+                "y": -0.5
+              },
+              "duration": 1.0
+            }
+          },
+          {
+            "type": "components.BlinkTransition",
+            "properties": {
+              "duration": 3.0
+            }
+          }
+        ],
+        "linear": false,
+        "loops": false,
+        "isPlaying": false
+      }
+    },
+    {
       "type": "physics2D.components.Rigidbody2D",
       "properties": {
         "velocity": {
@@ -1179,7 +1235,7 @@
     {
       "type": "physics2D.components.PillboxCollider",
       "properties": {
-        "showBoundaries": false,
+        "showBoundaries": true,
         "width": 0.39,
         "height": 0.31,
         "offset": {
