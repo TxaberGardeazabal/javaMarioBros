@@ -126,21 +126,7 @@ public class Pipe extends Component {
      * @return la posicion encima de la boca de la tuberia, si no se encuentra el componente devuelve un vector vacio.
      */
     private Vector2f getPlayerPosition(GameObject pipe) {
-        Pipe pipeComponent = pipe.getComponent(Pipe.class);
-        /*if (pipeComponent != null) {
-            switch(pipeComponent.direction) {
-                case Up:
-                    return new Vector2f(pipe.transform.position).add(0.0f, 0.5f);
-                case Left:
-                    return new Vector2f(pipe.transform.position).add(-0.5f, 0.0f);
-                case Down:
-                    return new Vector2f(pipe.transform.position).add(0.5f, 0.0f);
-                case Right:
-                    return new Vector2f(pipe.transform.position).add(0.0f, -0.5f);
-            }
-        }*/
         return new Vector2f(pipe.transform.position);
-        
     }
     
     /**

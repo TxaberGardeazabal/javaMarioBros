@@ -65,15 +65,6 @@ public class PlayerController extends PhysicsController {
     private transient int transformFramesLeft = 0;
     private transient int invincBlinkFrames = 0;
     
-    /**
-     * Esta mario en su estado de victoria
-     * @return true si mario esta en su estado de victoria, false de lo contrario
-     */
-    public boolean hasWon() {
-        // technically when mario wins inmediatly starts its winAnimation
-        return playWinAnimation;
-    }
-    
     @Override
     public void start() {
         super.start();
@@ -98,6 +89,7 @@ public class PlayerController extends PhysicsController {
         }
         
         if (playWinAnimation) {
+            // refactor this
             checkOnGround();
             if (!onGround) {
                 gameObject.transform.scale.x = -0.25f;
@@ -127,7 +119,7 @@ public class PlayerController extends PhysicsController {
             transformAnimation(dt);
             return;
         } else if (invincBlinkFrames > 0) {
-            blinkAnimation(dt);
+            invBlinkAnimation(dt);
             if (!isInvincible) {
                 // is transforming to fire mario
                 return;
@@ -141,60 +133,18 @@ public class PlayerController extends PhysicsController {
         }
         
         if (KeyListener.isKeyPressed(Settings.MOVERIGHT) && !KeyListener.isKeyPressed(Settings.MOVELEFT)) {
-            this.gameObject.transform.scale.x = playerWidth;
-            
-            this.acceleration.x = accel;
             if (KeyListener.isKeyPressed(Settings.SPRINT)) {
-                this.terminalVelocity.x = sprintSpeed;
-            
-                if (this.velocity.x < 0) {
-                    this.stateMachine.trigger("toSkid");
-                    this.velocity.x += slowdownForce;
-                } else {
-                    this.stateMachine.trigger("toSprint");
-                } 
+                sprint(dt, true);
             } else {
-                this.terminalVelocity.x = walkSpeed;
-            
-                if (this.velocity.x < 0) {
-                    this.velocity.x += slowdownForce;
-                } else {
-                    if (KeyListener.isKeyPressed(Settings.SPRINT)) {
-                        this.stateMachine.trigger("toSprint");
-                    } else {
-                        this.stateMachine.trigger("toWalk");
-                    }
-                } 
+                move(dt, true);
             }
             
         } else if (KeyListener.isKeyPressed(Settings.MOVELEFT) && !KeyListener.isKeyPressed(Settings.MOVERIGHT)) {
-            this.gameObject.transform.scale.x = -playerWidth;
-            
-            this.acceleration.x = -accel;
             if (KeyListener.isKeyPressed(Settings.SPRINT)) {
-                this.terminalVelocity.x = sprintSpeed;
-            
-                if (this.velocity.x > 0) {
-                    this.stateMachine.trigger("toSkid");
-                    this.velocity.x -= slowdownForce;
-                } else {
-                    this.stateMachine.trigger("toSprint");
-                } 
+                sprint(dt, false);
             } else {
-                this.terminalVelocity.x = walkSpeed;
-            
-                if (this.velocity.x > 0) {
-                    this.velocity.x -= slowdownForce;
-                } else {
-                    if (KeyListener.isKeyPressed(Settings.SPRINT)) {
-                        this.stateMachine.trigger("toSprint");
-                    } else {
-                        this.stateMachine.trigger("toWalk");
-                    }
-                }
+                move(dt, false);
             }
-            
-            
         } else {
             this.acceleration.x = 0;
             if (this.velocity.x > 0) {
@@ -209,41 +159,12 @@ public class PlayerController extends PhysicsController {
         }
         
         if (KeyListener.keyBeginPress(Settings.FIREBALL) && playerState == PlayerState.Fire && Fireball.canSpawn()) {
-            Vector2f position = new Vector2f(gameObject.transform.position)
-                    .add(gameObject.transform.scale.x > 0 ? new Vector2f(0.26f,0)
-                            : new Vector2f(-0.26f,0));
-            
-            this.stateMachine.trigger("throwFireball");
-            GameObject fireball = Prefab.generateFireball();
-            fireball.transform.position.set(position);
-            fireball.getComponent(Fireball.class).goingRight = 
-                    gameObject.transform.scale.x > 0;
-            fireball.getComponent(Rigidbody2D.class).setAngularVelocity(-30);
-            
-            Window.getScene().addGameObjectToScene(fireball);
-            AssetPool.getSound("assets/sounds/fireball.ogg").play();
+            fireball();
         }
         
         checkOnGround();
         if (KeyListener.isKeyPressed(Settings.JUMP) && (jumpTime > 0 || onGround || groundDebounce > 0)) {
-            if ((onGround || groundDebounce > 0) && jumpTime == 0) {
-                if (playerState == PlayerState.Small) {
-                    AssetPool.getSound("assets/sounds/jump-small.ogg").stop();
-                    AssetPool.getSound("assets/sounds/jump-small.ogg").play();
-                } else {
-                    AssetPool.getSound("assets/sounds/jump-super.ogg").stop();
-                    AssetPool.getSound("assets/sounds/jump-super.ogg").play();
-                }
-                
-                jumpTime = 57;
-                //this.velocity.y = jumpImpulse;
-            } else if (jumpTime > 0) {
-                jumpTime --;
-                this.velocity.y = ((jumpTime / 6f) * jumpBoost);
-            } else {
-                this.velocity.y = 0;
-            }
-            groundDebounce = 0;
+            jump(dt);
             
         } else if (enemyBounce > 0) {
             enemyBounce--;
@@ -277,17 +198,120 @@ public class PlayerController extends PhysicsController {
         }
     }
     
+    public void move(float dt, boolean right) {
+        if (right) {
+            this.gameObject.transform.scale.x = playerWidth;
+            this.acceleration.x = accel;
+            
+            if (this.velocity.x < 0) {
+                this.velocity.x += slowdownForce;
+            } else {
+                this.stateMachine.trigger("toWalk");
+            } 
+        } else {
+            this.gameObject.transform.scale.x = -playerWidth;
+            this.acceleration.x = -accel;
+            
+            
+            if (this.velocity.x > 0) {
+                this.velocity.x -= slowdownForce;
+            } else {
+                this.stateMachine.trigger("toWalk");
+            } 
+        }
+        this.terminalVelocity.x = walkSpeed;
+    }
+    
+    public void sprint(float dt, boolean right) {
+        if (right) {
+            this.gameObject.transform.scale.x = playerWidth;
+            this.acceleration.x = accel;
+            
+            if (this.velocity.x < 0) {
+                this.stateMachine.trigger("toSkid");
+                this.velocity.x += slowdownForce;
+            } else {
+                this.stateMachine.trigger("toSprint");
+            } 
+        } else {
+            this.gameObject.transform.scale.x = -playerWidth;
+            this.acceleration.x = -accel;
+            
+            
+            if (this.velocity.x > 0) {
+                this.stateMachine.trigger("toSkid");
+                this.velocity.x -= slowdownForce;
+            } else {
+                this.stateMachine.trigger("toSprint");
+            } 
+        }
+        this.terminalVelocity.x = sprintSpeed;
+    }
+    
+    public void jump(float dt) {
+        if ((onGround || groundDebounce > 0) && jumpTime == 0) {
+            if (playerState == PlayerState.Small) {
+                AssetPool.getSound("assets/sounds/jump-small.ogg").stop();
+                AssetPool.getSound("assets/sounds/jump-small.ogg").play();
+            } else {
+                AssetPool.getSound("assets/sounds/jump-super.ogg").stop();
+                AssetPool.getSound("assets/sounds/jump-super.ogg").play();
+            }
+
+            jumpTime = 57;
+            //this.velocity.y = jumpImpulse;
+        } else if (jumpTime > 0) {
+            jumpTime --;
+            this.velocity.y = ((jumpTime / 6f) * jumpBoost);
+        } else {
+            this.velocity.y = 0;
+        }
+        groundDebounce = 0;
+            
+    }
+    
+    public void crouch(float dt) {
+        
+    }
+    
+    public void fireball() {
+        if (playerState == PlayerState.Fire && Fireball.canSpawn()) {
+            Vector2f position = new Vector2f(gameObject.transform.position)
+                    .add(gameObject.transform.scale.x > 0 ? new Vector2f(0.26f,0)
+                    : new Vector2f(-0.26f,0));
+
+            this.stateMachine.trigger("throwFireball");
+            GameObject fireball = Prefab.generateFireball();
+            fireball.transform.position.set(position);
+            fireball.getComponent(Fireball.class).goingRight = 
+                    gameObject.transform.scale.x > 0;
+            fireball.getComponent(Rigidbody2D.class).setAngularVelocity(-30);
+
+            Window.getScene().addGameObjectToScene(fireball);
+            AssetPool.getSound("assets/sounds/fireball.ogg").play();
+        }
+    }
+    
+    /**
+     * Esta mario en su estado de victoria
+     * @return true si mario esta en su estado de victoria, false de lo contrario
+     */
+    public boolean hasWon() {
+        // technically when mario wins inmediatly starts its winAnimation
+        return playWinAnimation;
+    }
+    
     public void setPosition(Vector2f newPos) {
         this.gameObject.transform.position.set(newPos);
         this.rb.setPosition(newPos);
     }
-
-    public PlayerState getPlayerState() {
-        return playerState;
-    }
     
     public void enemyBounce() {
         this.enemyBounce = 16;
+    }
+
+    public PlayerState getPlayerState() {
+        return playerState;
     }
 
     public boolean isDead() {
@@ -364,14 +388,6 @@ public class PlayerController extends PhysicsController {
         }
     }
     
-    @Override
-    public void preSolve(GameObject collidingObj, Contact contact, Vector2f contactN) {
-        if (disableForces) {
-            this.stopAllForces();
-            return;
-        }
-    }
-    
     public void die() {
         this.stateMachine.trigger("die");
         this.velocity.set(0,0);
@@ -390,6 +406,7 @@ public class PlayerController extends PhysicsController {
                 this.rb.setVelocity(new Vector2f());
                 this.isDead = true;
                 this.rb.setIsSensor(true);
+                
                 AssetPool.getSound("assets/sounds/mario_die.ogg").play();
                 jumpTime = 25;
                 this.rb.setBodyType(BodyType.Kinematic);
@@ -473,7 +490,7 @@ public class PlayerController extends PhysicsController {
      * Ejecuta la animacion de parpadeo estrella de mario, mario es invencible durante esta animacion y mata enemigos al contacto
      * @param dt delta time
      */
-    public void blinkAnimation(float dt) {
+    public void invBlinkAnimation(float dt) {
         invincBlinkFrames--;
         if (!isInvincible) {
             stopAllForces();

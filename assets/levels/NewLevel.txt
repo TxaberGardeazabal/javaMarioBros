@@ -15484,19 +15484,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 1.0
               },
               {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
                 "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 1.0
               }
             ]
@@ -24937,19 +24937,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
-                "y": 0.5
-              },
-              {
                 "x": 0.25,
                 "y": 0.5
               },
               {
-                "x": 0.25,
+                "x": 0.0,
+                "y": 0.5
+              },
+              {
+                "x": 0.0,
                 "y": 0.75
               }
             ]
@@ -25148,19 +25148,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
-                "y": 0.5
-              },
-              {
                 "x": 0.25,
                 "y": 0.5
               },
               {
-                "x": 0.25,
+                "x": 0.0,
+                "y": 0.5
+              },
+              {
+                "x": 0.0,
                 "y": 0.75
               }
             ]
@@ -25359,19 +25359,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
-                "y": 0.5
-              },
-              {
                 "x": 0.25,
                 "y": 0.5
               },
               {
-                "x": 0.25,
+                "x": 0.0,
+                "y": 0.5
+              },
+              {
+                "x": 0.0,
                 "y": 0.75
               }
             ]
@@ -25570,19 +25570,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
-                "y": 0.5
-              },
-              {
                 "x": 0.25,
                 "y": 0.5
               },
               {
-                "x": 0.25,
+                "x": 0.0,
+                "y": 0.5
+              },
+              {
+                "x": 0.0,
                 "y": 0.75
               }
             ]
@@ -74052,19 +74052,19 @@
                 },
                 "texCoords": [
                   {
-                    "x": 1.0,
+                    "x": 0.75,
                     "y": 1.0
                   },
                   {
-                    "x": 1.0,
-                    "y": 0.0
-                  },
-                  {
                     "x": 0.75,
                     "y": 0.0
                   },
                   {
-                    "x": 0.75,
+                    "x": 0.5,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.5,
                     "y": 1.0
                   }
                 ]
@@ -74214,580 +74214,70 @@
         "doSerialization": true,
         "isDead": false,
         "childGOs": []
+      },
+      {
+        "name": "dashText",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 3.85,
+                "y": 2.625
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.16568047,
+                "y": 0.16568047
+              },
+              "zIndex": 50
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 56.0,
+                "height": 56.0,
+                "texture": {
+                  "filepath": "assets/images/text/fontFace.png",
+                  "height": 184,
+                  "width": 959
+                },
+                "texCoords": [
+                  {
+                    "x": 0.52554744,
+                    "y": 0.3043478
+                  },
+                  {
+                    "x": 0.52554744,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.46715328,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.46715328,
+                    "y": 0.3043478
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
       }
     ]
-  },
-  {
-    "name": "new item block",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 1.375,
-            "y": 2.1249995
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 16.0,
-            "height": 16.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-              "height": 64,
-              "width": 64
-            },
-            "texCoords": [
-              {
-                "x": 0.5,
-                "y": 1.0
-              },
-              {
-                "x": 0.5,
-                "y": 0.75
-              },
-              {
-                "x": 0.25,
-                "y": 0.75
-              },
-              {
-                "x": 0.25,
-                "y": 1.0
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "components.StateMachine",
-        "properties": {
-          "stateTransfers": [
-            [
-              {
-                "state": "flicker",
-                "trigger": "setInactive"
-              },
-              "inactive"
-            ]
-          ],
-          "states": [
-            {
-              "title": "flicker",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                      "height": 64,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                      "height": 64,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                      "height": 64,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.75,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": true
-            },
-            {
-              "title": "inactive",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                      "height": 64,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 1.0,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 1.0,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.1,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": false
-            }
-          ],
-          "defaultStateTitle": "flicker"
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.0,
-          "bodyType": "Static",
-          "friction": 0.1,
-          "angularVelocity": 0.0,
-          "gravityScale": 1.0,
-          "isSensor": false,
-          "fixedRotation": false,
-          "continuousCollision": true
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": false,
-          "offset": {
-            "x": 0.0,
-            "y": 0.0
-          }
-        }
-      },
-      {
-        "type": "components.propertieComponents.Ground",
-        "properties": {}
-      },
-      {
-        "type": "components.TransitionMachine",
-        "properties": {
-          "states": [
-            {
-              "type": "components.TranslateTransition",
-              "properties": {
-                "offset": {
-                  "x": 0.0,
-                  "y": 1.0
-                },
-                "duration": 3.0
-              }
-            },
-            {
-              "type": "components.TranslateTransition",
-              "properties": {
-                "offset": {
-                  "x": 0.0,
-                  "y": -1.0
-                },
-                "duration": 3.0
-              }
-            }
-          ],
-          "linear": false,
-          "loops": true,
-          "isPlaying": false
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
-    "name": "new item block",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 1.125,
-            "y": 2.1249995
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 16.0,
-            "height": 16.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-              "height": 64,
-              "width": 64
-            },
-            "texCoords": [
-              {
-                "x": 0.5,
-                "y": 1.0
-              },
-              {
-                "x": 0.5,
-                "y": 0.75
-              },
-              {
-                "x": 0.25,
-                "y": 0.75
-              },
-              {
-                "x": 0.25,
-                "y": 1.0
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "components.StateMachine",
-        "properties": {
-          "stateTransfers": [
-            [
-              {
-                "state": "flicker",
-                "trigger": "setInactive"
-              },
-              "inactive"
-            ]
-          ],
-          "states": [
-            {
-              "title": "flicker",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                      "height": 64,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                      "height": 64,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                      "height": 64,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.75,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": true
-            },
-            {
-              "title": "inactive",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                      "height": 64,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 1.0,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 1.0,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.1,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": false
-            }
-          ],
-          "defaultStateTitle": "flicker"
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.0,
-          "bodyType": "Static",
-          "friction": 0.1,
-          "angularVelocity": 0.0,
-          "gravityScale": 1.0,
-          "isSensor": false,
-          "fixedRotation": false,
-          "continuousCollision": true
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": false,
-          "offset": {
-            "x": 0.0,
-            "y": 0.0
-          }
-        }
-      },
-      {
-        "type": "components.propertieComponents.Ground",
-        "properties": {}
-      },
-      {
-        "type": "components.TransitionMachine",
-        "properties": {
-          "states": [
-            {
-              "type": "components.TranslateTransition",
-              "properties": {
-                "offset": {
-                  "x": 0.0,
-                  "y": 1.0
-                },
-                "duration": 3.0
-              }
-            },
-            {
-              "type": "components.TranslateTransition",
-              "properties": {
-                "offset": {
-                  "x": 0.0,
-                  "y": -1.0
-                },
-                "duration": 3.0
-              }
-            }
-          ],
-          "linear": false,
-          "loops": false,
-          "isPlaying": false
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
   },
   {
     "name": "item block",
@@ -74827,19 +74317,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.5,
-                "y": 0.75
-              },
-              {
                 "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -75073,7 +74563,7 @@
       {
         "type": "components.gamecomponents.ItemBlock",
         "properties": {
-          "contents": "Powerup",
+          "contents": "Flower",
           "numberCoins": 5,
           "isInvisible": false,
           "firstFlag": true,
@@ -75123,19 +74613,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.5,
-                "y": 0.75
-              },
-              {
                 "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -75436,346 +74926,6 @@
               }
             ]
           }
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
-    "name": "coin particle",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 1.625,
-            "y": 1.125
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.12,
-            "y": 0.25
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 8.0,
-            "height": 16.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/particles/blockCoin.png",
-              "height": 16,
-              "width": 32
-            },
-            "texCoords": [
-              {
-                "x": 1.0,
-                "y": 1.0
-              },
-              {
-                "x": 1.0,
-                "y": 0.0
-              },
-              {
-                "x": 0.75,
-                "y": 0.0
-              },
-              {
-                "x": 0.75,
-                "y": 1.0
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "components.StateMachine",
-        "properties": {
-          "stateTransfers": {},
-          "states": [
-            {
-              "title": "flicker",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 8.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/blockCoin.png",
-                      "height": 16,
-                      "width": 32
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.08,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 8.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/blockCoin.png",
-                      "height": 16,
-                      "width": 32
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.08,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 8.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/blockCoin.png",
-                      "height": 16,
-                      "width": 32
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.75,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.08,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 8.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/blockCoin.png",
-                      "height": 16,
-                      "width": 32
-                    },
-                    "texCoords": [
-                      {
-                        "x": 1.0,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 1.0,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.08,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": true
-            }
-          ],
-          "defaultStateTitle": "flicker"
-        }
-      },
-      {
-        "type": "components.TransitionMachine",
-        "properties": {
-          "states": [
-            {
-              "type": "components.TranslateTransition",
-              "properties": {
-                "offset": {
-                  "x": 0.0,
-                  "y": 0.75
-                },
-                "duration": 0.3
-              }
-            },
-            {
-              "type": "components.TranslateTransition",
-              "properties": {
-                "offset": {
-                  "x": 0.0,
-                  "y": -0.5
-                },
-                "duration": 0.2
-              }
-            }
-          ],
-          "linear": false,
-          "loops": false,
-          "isPlaying": true
-        }
-      },
-      {
-        "type": "components.gamecomponents.BlockCoin",
-        "properties": {}
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
-    "name": "mushroom",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 2.375,
-            "y": 1.375
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 16.0,
-            "height": 16.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
-              "height": 64,
-              "width": 144
-            },
-            "texCoords": [
-              {
-                "x": 0.11111111,
-                "y": 1.0
-              },
-              {
-                "x": 0.11111111,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
-                "y": 1.0
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.0,
-          "bodyType": "Dynamic",
-          "friction": 0.1,
-          "angularVelocity": 0.0,
-          "gravityScale": 1.0,
-          "isSensor": false,
-          "fixedRotation": true,
-          "continuousCollision": false
-        }
-      },
-      {
-        "type": "physics2D.components.CircleCollider",
-        "properties": {
-          "radius": 0.13,
-          "showBoundaries": false,
-          "offset": {
-            "x": 0.0,
-            "y": 0.0
-          }
-        }
-      },
-      {
-        "type": "components.gamecomponents.MushroomAI",
-        "properties": {
-          "active": true,
-          "terminalVelocity": {
-            "x": 10.0,
-            "y": 10.0
-          },
-          "hasGravity": false,
-          "innerWidth": 0.175,
-          "castVal": -0.14
         }
       }
     ],
@@ -77171,8 +76321,8 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 1.125,
-            "y": 1.625
+            "x": 0.50000477,
+            "y": -2.7499998
           },
           "rotation": 0.0,
           "scale": {
@@ -77268,6 +76418,378 @@
       {
         "type": "components.propertieComponents.Ground",
         "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "sprite_obj_gen",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.125,
+            "y": 2.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": -1
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "sprite_obj_gen",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.375,
+            "y": 2.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": -1
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "sprite_obj_gen",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.625,
+            "y": 2.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": -1
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "sprite_obj_gen",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.625,
+            "y": 2.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": -1
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "sprite_obj_gen",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.375,
+            "y": 2.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": -1
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "sprite_obj_gen",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.125,
+            "y": 2.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": -1
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
       }
     ],
     "doSerialization": true,
