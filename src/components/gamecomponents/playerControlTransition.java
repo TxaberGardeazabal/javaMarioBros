@@ -11,17 +11,20 @@ import java.util.ArrayList;
  *
  * @author txaber gardeazabal
  */
-public class playerControlTransition extends TransitionState {
+public class PlayerControlTransition extends TransitionState {
 
-    private ArrayList<SubStep> movement;
+    private ArrayList<SubStep> movement = new ArrayList();
     private int index;
     private PlayerController player;
+
+    public PlayerControlTransition() {}
     
     @Override
     public void start() {
         index = 0;
         player = this.gameObject.getComponent(PlayerController.class);
         for (SubStep s : movement) {
+            s.setPlayer(player);
             s.reset();
         }
     }
@@ -29,11 +32,13 @@ public class playerControlTransition extends TransitionState {
     @Override
     public void step(float dt) {
         
-        movement.get(index).step(dt);
-        if (movement.get(index).isFinished()) {
-            index++;
-            if (index == movement.size()) {
-                finished = true;
+        if (!movement.isEmpty()) {
+            movement.get(index).step(dt);
+            if (movement.get(index).isFinished()) {
+                index++;
+                if (index == movement.size()) {
+                    finished = true;
+                }
             }
         }
     }
@@ -48,10 +53,11 @@ public class playerControlTransition extends TransitionState {
         Wait
     }
     
-    public class SubStep {
+    private class SubStep {
         private PlayerControl action;
         private float duration;
         private float timeTracker;
+        private PlayerController player;
         private boolean finished = false;
 
         public SubStep(PlayerControl action, float duration) {
@@ -62,6 +68,10 @@ public class playerControlTransition extends TransitionState {
 
         public boolean isFinished() {
             return finished;
+        }
+
+        public void setPlayer(PlayerController player) {
+            this.player = player;
         }
         
         public void reset() {
@@ -97,9 +107,14 @@ public class playerControlTransition extends TransitionState {
             }
             
             timeTracker += dt;
+            System.out.println(timeTracker);
             if (timeTracker >= duration) {
                 finished = true;
             }
         }
+    }
+    
+    public void addSubStep(PlayerControl control, float duration) {
+        movement.add(new SubStep(control, duration));
     }
 }

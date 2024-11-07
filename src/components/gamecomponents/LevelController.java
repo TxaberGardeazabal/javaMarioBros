@@ -162,12 +162,12 @@ public class LevelController extends Component implements Observer{
                 return;
             case MarioWin:
                 
-                
+                ConsoleWindow.addLog("you won!", ConsoleWindow.LogCategory.info);
                 
                 // TODO: move this call to level scene only
-                saveProgress();
+                //saveProgress();
                 
-                if (Window.getScene().getInitializer() instanceof LevelSceneInitializer) {
+                /*if (Window.getScene().getInitializer() instanceof LevelSceneInitializer) {
                     
                     pData.playerState = player.getPlayerState();
                     // convert time to score
@@ -180,7 +180,7 @@ public class LevelController extends Component implements Observer{
                     EventSystem.notify(gameObject, new Event(EventType.EditorStopPlay));
                 } else if (Window.getScene().getInitializer() instanceof MainMenuSceneInitializer) {
                     // do nothing
-                }
+                }*/
 
                 return;
             case MarioDie:

@@ -90,6 +90,10 @@ public class TransitionMachine extends Component {
         this.states.add(state);
     }
     
+    public TransitionState getCurrentState() {
+        return this.currentState;
+    }
+    
     public void startTransition(int index) {
         if (index > 0 && index < states.size()) {
             currentState = states.get(index);

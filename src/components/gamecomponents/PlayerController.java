@@ -18,11 +18,9 @@ import observers.events.Event;
 import observers.events.EventType;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
-import org.joml.Vector4f;
 import physics2D.components.PillboxCollider;
 import physics2D.components.Rigidbody2D;
 import physics2D.enums.BodyType;
-import scene.LevelSceneInitializer;
 import util.AssetPool;
 import util.Settings;
 
@@ -46,7 +44,10 @@ public class PlayerController extends PhysicsController {
     
     private PlayerState playerState = PlayerState.Small;
     public transient boolean isInvincible = false;
+    public transient boolean isControlled = true;
+    public transient boolean isJumping = false;
     public transient boolean disableForces = false;
+    private transient boolean hasEnded = false;
     private transient float groundDebounce = 0.0f;
     private transient float groundDebounceTime = 0.1f;
     private transient StateMachine stateMachine;
@@ -89,30 +90,23 @@ public class PlayerController extends PhysicsController {
         }
         
         if (playWinAnimation) {
-            // refactor this
             checkOnGround();
-            if (!onGround) {
-                gameObject.transform.scale.x = -0.25f;
-                gameObject.transform.position.y -= dt;
-                stateMachine.trigger("startCimbing");
-            } else {
-                if (this.walkTime > 0) {
-                    gameObject.transform.scale.x = 0.25f;
-                    gameObject.transform.position.x += dt;
-                    stateMachine.trigger("toWalk");
+            
+            if (!transitionMachine.isPlaying() && hasEnded) {
+                // TODO: event doesn't seem to work
+                EventSystem.notify(this.gameObject, new Event(EventType.MarioWin));
+                
+            } else if (!Window.getScene().getGameObjectByName("flag").getComponent(TransitionMachine.class).isPlaying()) {
+                disableForces = false;
+                if (!transitionMachine.isPlaying()) {
+                    transitionMachine.startTransition(6);
                 }
+                stateMachine.trigger("toWalk");
                 AssetPool.getSound("assets/sounds/stage_clear.ogg").playIfNotPlaying();
-                
-                timeToCastle -= dt;
-                walkTime -= dt;
-                
-                if (timeToCastle <= 0) {
-                    // end game
-                    EventSystem.notify(this.gameObject, new Event(EventType.MarioWin));
-                    Window.changeScene(new LevelSceneInitializer(), Window.getScene().getLevelFilepath());
-                }
+                hasEnded = true;
+            } else if (onGround) {
+                transitionMachine.stop();
             }
-            return;
         }
         
         if (transformFramesLeft > 0) {
@@ -132,58 +126,70 @@ public class PlayerController extends PhysicsController {
             }
         }
         
-        if (KeyListener.isKeyPressed(Settings.MOVERIGHT) && !KeyListener.isKeyPressed(Settings.MOVELEFT)) {
-            if (KeyListener.isKeyPressed(Settings.SPRINT)) {
-                sprint(dt, true);
-            } else {
-                move(dt, true);
-            }
-            
-        } else if (KeyListener.isKeyPressed(Settings.MOVELEFT) && !KeyListener.isKeyPressed(Settings.MOVERIGHT)) {
-            if (KeyListener.isKeyPressed(Settings.SPRINT)) {
-                sprint(dt, false);
-            } else {
-                move(dt, false);
-            }
-        } else {
-            this.acceleration.x = 0;
-            if (this.velocity.x > 0) {
-                this.velocity.x = Math.max(0, this.velocity.x - slowdownForce);
-            } else if (this.velocity.x < 0) {
-                this.velocity.x = Math.min(0, this.velocity.x + slowdownForce);
-            }
-            
-            if (this.velocity.x == 0) {
-                this.stateMachine.trigger("stopMoving");
-            }
-        }
+        /*if (!transitionMachine.isPlaying()) {
+            isControlled = true;
+        }*/
         
-        if (KeyListener.keyBeginPress(Settings.FIREBALL) && playerState == PlayerState.Fire && Fireball.canSpawn()) {
-            fireball();
+        // controlls here
+        if (isControlled) {
+            if (KeyListener.isKeyPressed(Settings.MOVERIGHT) && !KeyListener.isKeyPressed(Settings.MOVELEFT)) {
+                if (KeyListener.isKeyPressed(Settings.SPRINT)) {
+                    sprint(dt, true);
+                } else {
+                    move(dt, true);
+                }
+
+            } else if (KeyListener.isKeyPressed(Settings.MOVELEFT) && !KeyListener.isKeyPressed(Settings.MOVERIGHT)) {
+                if (KeyListener.isKeyPressed(Settings.SPRINT)) {
+                    sprint(dt, false);
+                } else {
+                    move(dt, false);
+                }
+            } else {
+                this.acceleration.x = 0;
+                if (this.velocity.x > 0) {
+                    this.velocity.x = Math.max(0, this.velocity.x - slowdownForce);
+                } else if (this.velocity.x < 0) {
+                    this.velocity.x = Math.min(0, this.velocity.x + slowdownForce);
+                }
+
+                if (this.velocity.x == 0) {
+                    this.stateMachine.trigger("stopMoving");
+                }
+            }
+
+            if (KeyListener.keyBeginPress(Settings.FIREBALL) && playerState == PlayerState.Fire && Fireball.canSpawn()) {
+                fireball();
+                isControlled = false;
+            }
         }
         
         checkOnGround();
-        if (KeyListener.isKeyPressed(Settings.JUMP) && (jumpTime > 0 || onGround || groundDebounce > 0)) {
-            jump(dt);
-            
-        } else if (enemyBounce > 0) {
-            enemyBounce--;
-            this.velocity.y = ((enemyBounce / 2) * jumpBoost);
-            
-        } else if (!onGround) {
-            if (this.jumpTime > 0) {
-                this.velocity.y *= 0.5f;
+        if (isControlled) {
+            // TODO: possibly refactor this into the jump function so it can be controlled outside of the player controlls
+            if (KeyListener.isKeyPressed(Settings.JUMP) && (jumpTime > 0 || onGround || groundDebounce > 0)) {
+                jump(dt);
+                
+            } else if (enemyBounce > 0) {
+                enemyBounce--;
+                this.velocity.y = ((enemyBounce / 2) * jumpBoost);
+
+            } else if (!onGround) {
+                if (this.jumpTime > 0) {
+                    this.velocity.y *= 0.5f;
+                    this.jumpTime = 0;
+                }
+
+                groundDebounce -= dt;
+                this.acceleration.y = Window.getPhysics().getGravity().y * 0.7f;
+            } else {
                 this.jumpTime = 0;
+                this.velocity.y = 0;
+                this.acceleration.y = 0;
+                this.groundDebounce = this.groundDebounceTime;
             }
-            
-            groundDebounce -= dt;
-            this.acceleration.y = Window.getPhysics().getGravity().y * 0.7f;
-        } else {
-            this.jumpTime = 0;
-            this.velocity.y = 0;
-            this.acceleration.y = 0;
-            this.groundDebounce = this.groundDebounceTime;
         }
+        
         
         if (!this.disableForces) {
             applyForces(dt);
@@ -267,7 +273,7 @@ public class PlayerController extends PhysicsController {
             this.velocity.y = 0;
         }
         groundDebounce = 0;
-            
+        
     }
     
     public void crouch(float dt) {
@@ -530,8 +536,6 @@ public class PlayerController extends PhysicsController {
     }
     
     private transient boolean playWinAnimation = false;
-    private transient float timeToCastle = 4.5f;
-    private transient float walkTime = 2.2f;
     /**
      * Ejecuta la animacion de victoria de mario
      * @param flagPole el gameobject de la bandera (para la posicion)
@@ -540,10 +544,13 @@ public class PlayerController extends PhysicsController {
         if (!playWinAnimation) {
             playWinAnimation = true;
             stopAllForces();
-            rb.setIsSensor(true);
-            rb.setBodyType(BodyType.Static);
+            isControlled = false;
+            disableForces = true;
             gameObject.transform.position.x = flagPole.transform.position.x + 0.1f;
             AssetPool.getSound("assets/sounds/flagpole.ogg").play();
+            stateMachine.trigger("startCimbing");
+            gameObject.transform.scale.x = -0.25f;
+            transitionMachine.startTransition(5);
         }
     }
     

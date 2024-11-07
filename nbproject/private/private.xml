@@ -13,18 +13,19 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/TranslateTransition.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/MushroomAI.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/LevelController.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/LevelEditorSceneInitializer.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Prefab.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/GameObject.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/TransitionMachine.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Flag.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/mario/Mario.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/taskList.txt</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Window.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Pipe.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/PlayerController.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/AssetWindow.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/TransitionState.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/PlayerControlTransition.java</file>
         </group>
     </open-files>
 </project-private>

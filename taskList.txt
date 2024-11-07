@@ -1,25 +1,23 @@
 add new functionalities:
 -- add rotation gizmo
-- find how to load spritesheets automaticaly instead of hardcoding all of them (maybe in the assetpool).
-- make adding, changing and removing of spritesheets in gameobjects
+-- find how to load spritesheets automaticaly instead of hardcoding all of them (maybe in the assetpool).
+-- make adding, changing and removing of spritesheets in gameobjects
 - in level scenes only assets that are used should be loaded.
-- create a prebuilt new level
-- open the saveAs window when playing a new level (playing auto saves)
-add above cloud zones
+-- make water levels
+-- add above cloud zones
++ create a prebuilt new level
++ open the saveAs window when playing a new level (playing auto saves)
 show contents of assetpool in editor (database)
 create in settings multi button input variables (control + x...)
-- make water levels?
-+ add particles for bricks
+add particles for bricks
 + add more enemies and obstacles
-+ make mario movements into separate functions and
-+ make an computer playercontroller that controlls mario during cutscenes (where the player is not in control)
 + add a debug section with debug options (console, debugDraw, colision boundaries)
 + add more customization in properties window (adding/removing components)
 
 upgrade existing functionalities:
 -- style properties window
 -- add all controlls in settings class and use those
-- refractor
+- refractor and document
 - on savemenus show file name in selector
 hitting blocks with enemies should kill the enemies
 + make physics them more precise and less janky
@@ -35,8 +33,8 @@ some window focus issues:
    when pressing away while jdialog windows are active causes focus bugs and crashes
    imgui windows clipping into screen bar and headers not showing correctly
 imgui string editing sucks
+player transitions jump function doesn't work correctly
 mario title image renders incorrectly
-transition desync issue: due to delta time variation the same transition may last more or less frames to complete leading to desyncs
 + enemies should spawn only as soon as the camera reaches them
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 + adjust mario hitboxes in the big and small forms to prevent clipping
@@ -48,3 +46,4 @@ other:
 // make it possible to render fonts from ttf files (discontinued)
 // migrate project to gradle (if jars don't work)
 // refactor mouseControlls class, including child object interactions, colors and the annoying gizmos
+// transition desync issue: due to delta time variation the same transition may last more or less frames to complete leading to desyncs

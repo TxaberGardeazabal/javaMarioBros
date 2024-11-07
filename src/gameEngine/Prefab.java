@@ -37,6 +37,8 @@ import components.gamecomponents.Flag;
 import components.gamecomponents.FlagPole;
 import components.gamecomponents.BreakableBrick;
 import components.gamecomponents.LiveMushroom;
+import components.gamecomponents.PlayerControlTransition;
+import components.gamecomponents.PlayerControlTransition.PlayerControl;
 import components.gamecomponents.StarAI;
 import components.propertieComponents.Ground;
 import org.joml.Vector2f;
@@ -243,12 +245,25 @@ public class Prefab {
         
         BlinkTransition bt = new BlinkTransition(3);
         
+        // cutscene transitions
+        TranslateTransition flag1 = new TranslateTransition(new Vector2f(0,-2),2);
+        PlayerControlTransition flag2 = new PlayerControlTransition();
+        flag2.addSubStep(PlayerControl.MoveRight, 2);
+        
+        /*PlayerControlTransition test = new PlayerControlTransition();
+        test.addSubStep(PlayerControl.MoveRight, 1);
+        //test.addSubStep(PlayerControl.Jump, 1);
+        test.addSubStep(PlayerControl.Wait, 0.5f);
+        test.addSubStep(PlayerControl.MoveLeft, 1);
+        */
         TransitionMachine tm = new TransitionMachine(false,false);
         tm.addTransition(pipeRight);
         tm.addTransition(pipeLeft);
         tm.addTransition(pipeTop);
         tm.addTransition(pipeBottom);
         tm.addTransition(bt);
+        tm.addTransition(flag1);
+        tm.addTransition(flag2);
         
         mario.addComponent(tm);
         
@@ -738,11 +753,15 @@ public class Prefab {
         flag.name = "flag";
         flag.transform.position.set(-0.14f, Settings.GRID_HEIGHT * (poleSize - 1));
         
-        Rigidbody2D rb = new Rigidbody2D();
+        TransitionMachine tm = new TransitionMachine(true,false);
+        tm.addTransition(new TranslateTransition(new Vector2f(0,-2f),2));
+        flag.addComponent(tm);
+        
+        /*Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Static);
         rb.setFixedRotation(true);
         rb.setMass(0.1f);
-        flag.addComponent(rb);
+        flag.addComponent(rb);*/
         flag.addComponent(new Flag());
         
         //b2d = new Box2DCollider();
@@ -757,7 +776,7 @@ public class Prefab {
         GameObject flagPole = generateSpriteObject(poleSprites.getSprite(23), 0.25f, 0.25f);
         flagPole.name = "flagTop";
         
-        rb = new Rigidbody2D();
+        Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Static);
         rb.setFixedRotation(true);
         rb.setMass(0.1f);

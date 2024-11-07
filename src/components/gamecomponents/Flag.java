@@ -5,6 +5,7 @@
 package components.gamecomponents;
 
 import components.Component;
+import components.TransitionMachine;
 
 /**
  * La bandera arriba del poste al final del nivel
@@ -17,15 +18,17 @@ public class Flag extends Component{
     @Override
     public void update(float dt) {
         
-        if (flagReached) {
+        /*if (flagReached) {
             if (distanceToTravel > 0) {
                 distanceToTravel -= dt;
                 gameObject.transform.position.y -= dt;
             }
-        }
+        }*/
     }
     
     public void reachFlag() {
-       flagReached = true; 
+        if (!this.gameObject.getComponent(TransitionMachine.class).isPlaying()) {
+            this.gameObject.getComponent(TransitionMachine.class).begin();
+        }
     }
 }
