@@ -17,7 +17,7 @@ public class TransitionMachine extends Component {
     private transient int stateIndex = 0;
     private boolean linear = true;
     private boolean loops;
-    private boolean isPlaying = false;
+    private transient boolean isPlaying = false;
 
     public TransitionMachine(boolean isLinear, boolean loops) {
         this.linear = isLinear;

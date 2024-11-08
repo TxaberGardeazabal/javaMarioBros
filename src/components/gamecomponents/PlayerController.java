@@ -95,6 +95,8 @@ public class PlayerController extends PhysicsController {
             if (!transitionMachine.isPlaying() && hasEnded) {
                 // TODO: event doesn't seem to work
                 EventSystem.notify(this.gameObject, new Event(EventType.MarioWin));
+                stateMachine.trigger("stopMoving");
+                stopAllForces();
                 
             } else if (!Window.getScene().getGameObjectByName("flag").getComponent(TransitionMachine.class).isPlaying()) {
                 disableForces = false;

@@ -11,6 +11,7 @@ import gameEngine.GameObject;
 import components.gamecomponents.BreakableBrick;
 import components.gamecomponents.LevelController;
 import components.propertieComponents.Ground;
+import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
 import imgui.internal.ImGui;
@@ -156,6 +157,14 @@ public class PropertiesWindow {
                     OImGui.colorPicker4("underground color", lc.underGroundColor);
                 } else {
                     ImGui.text("no level controller");
+                    
+                    if (ImGui.button("add level controller object")) {
+                        if (Window.getScene().getGameObjectWith(LevelController.class) == null) {
+                            GameObject object = Prefab.generateLevelController();
+                            Window.getScene().addGameObjectToScene(object);
+
+                        }
+                    }
                 }
                 ImGui.endTabItem();
             }

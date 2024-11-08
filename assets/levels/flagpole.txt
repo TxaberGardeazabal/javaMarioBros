@@ -4015,8 +4015,7 @@
             }
           ],
           "linear": false,
-          "loops": false,
-          "isPlaying": false
+          "loops": false
         }
       },
       {
@@ -4184,7 +4183,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.2250004,
+            "x": 3.125,
             "y": 2.625
           },
           "rotation": 0.0,
@@ -4249,16 +4248,12 @@
             }
           ],
           "linear": true,
-          "loops": false,
-          "isPlaying": false
+          "loops": false
         }
       },
       {
         "type": "components.gamecomponents.Flag",
-        "properties": {
-          "flagReached": false,
-          "distanceToTravel": 1.9
-        }
+        "properties": {}
       }
     ],
     "doSerialization": true,
@@ -4273,7 +4268,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 2.875
           },
           "rotation": 0.0,
@@ -4378,7 +4373,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 0.625
           },
           "rotation": 0.0,
@@ -4483,7 +4478,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 0.875
           },
           "rotation": 0.0,
@@ -4588,7 +4583,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 1.125
           },
           "rotation": 0.0,
@@ -4693,7 +4688,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 1.375
           },
           "rotation": 0.0,
@@ -4798,7 +4793,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 1.625
           },
           "rotation": 0.0,
@@ -4903,7 +4898,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 1.875
           },
           "rotation": 0.0,
@@ -5008,7 +5003,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 2.125
           },
           "rotation": 0.0,
@@ -5113,7 +5108,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 2.375
           },
           "rotation": 0.0,
@@ -5218,7 +5213,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 2.625
           },
           "rotation": 0.0,
@@ -5323,7 +5318,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 3.3650002,
+            "x": 3.2649999,
             "y": 0.375
           },
           "rotation": 0.0,
@@ -5412,6 +5407,57 @@
       {
         "type": "components.propertieComponents.Ground",
         "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "levelController",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.gamecomponents.LevelController",
+        "properties": {
+          "hasBegun": false,
+          "saveFile": "assets/saveFile.txt",
+          "skyColor": {
+            "x": 92.0,
+            "y": 148.0,
+            "z": 252.0,
+            "w": 1.0
+          },
+          "overworldColor": {
+            "x": 92.0,
+            "y": 148.0,
+            "z": 252.0,
+            "w": 1.0
+          },
+          "underGroundColor": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "nextLevel": "",
+          "time": 20.0
+        }
       }
     ],
     "doSerialization": true,

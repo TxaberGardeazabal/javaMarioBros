@@ -46,6 +46,8 @@ public class LevelController extends Component implements Observer{
     public String level;
     public float time;
     private transient float timeLeft = time;
+    private transient float timeBeforeLevelSwitch = 5;
+    private transient boolean levelDone;
     
     // player data
     private transient PlayerData pData;
@@ -78,10 +80,12 @@ public class LevelController extends Component implements Observer{
             pData = gson.fromJson(inFile, PlayerData.class);
         }
         
-        player = Window.getScene().getGameObjectWith(PlayerController.class).getComponent(PlayerController.class);
-        if (player == null) {
+        GameObject tmp = Window.getScene().getGameObjectWith(PlayerController.class);
+        if (tmp == null) {
             ConsoleWindow.addLog("LevelController: player not found",
                     ConsoleWindow.LogCategory.warning);
+        } else {
+            player = tmp.getComponent(PlayerController.class);
         }
         
         hud = Window.getScene().getGameObjectByName("HUD");
@@ -93,6 +97,7 @@ public class LevelController extends Component implements Observer{
         }
         
         timeLeft = time;
+        levelDone = false;
         
         EventSystem.addObserver(this);
     }
@@ -102,30 +107,56 @@ public class LevelController extends Component implements Observer{
         /*if (!hasBegun) {
             return;
         }*/
-        if (timeLeft <= 0) {
+        if (player == null) {
             return;
         }
         
-        scoreD = hud.getChildByName("puntos").getComponent(Digitalizer.class);
-        coinsD = hud.getChildByName("monedas").getComponent(Digitalizer.class);
-        worldD = hud.getChildByName("mundo").getComponent(Digitalizer.class);
-        levelD = hud.getChildByName("nivel").getComponent(Digitalizer.class);
-        timeD = hud.getChildByName("tiempo").getComponent(Digitalizer.class);
-        
-        scoreD.setValue(pData.score);
-        coinsD.setValue(pData.coins);
-        worldD.setValue(Integer.parseInt(world));
-        levelD.setValue(Integer.parseInt(level));
-        timeD.setValue((int) Math.floor(timeLeft));
-        
-        timeLeft -= dt;
-        
-        if (timeLeft <= 0 && !player.isDead()) {
-            player.die();
+        if (hud != null) {
+            scoreD = hud.getChildByName("puntos").getComponent(Digitalizer.class);
+            coinsD = hud.getChildByName("monedas").getComponent(Digitalizer.class);
+            worldD = hud.getChildByName("mundo").getComponent(Digitalizer.class);
+            levelD = hud.getChildByName("nivel").getComponent(Digitalizer.class);
+            timeD = hud.getChildByName("tiempo").getComponent(Digitalizer.class);
+
+            scoreD.setValue(pData.score);
+            coinsD.setValue(pData.coins);
+            worldD.setValue(Integer.parseInt(world));
+            levelD.setValue(Integer.parseInt(level));
+            timeD.setValue((int) Math.floor(timeLeft));
         }
-    }
-    
-    public void imgui() {
+        
+        
+        if (levelDone) {
+            timeBeforeLevelSwitch -= dt;
+            if (timeLeft <= 0 && timeBeforeLevelSwitch <= 0) {
+                // end level
+                if (Window.getScene().getInitializer() instanceof LevelSceneInitializer) {
+                    
+                    pData.playerState = player.getPlayerState();
+                    saveProgress();
+                    // move to next level
+                    Window.changeScene(new LevelSceneInitializer(), nextLevel);
+                } else if (Window.getScene().getInitializer() instanceof LevelEditorSceneInitializer) {
+                    // stop the editor runtime
+                    EventSystem.notify(gameObject, new Event(EventType.EditorStopPlay));
+                } else if (Window.getScene().getInitializer() instanceof MainMenuSceneInitializer) {
+                    // do nothing
+                }
+            } else if (timeLeft >= 0) {
+                timeLeft--;
+                pData.score += 100;
+                AssetPool.getSound("assets/sounds/coin.ogg").play();
+            } 
+        } else {
+            if (timeLeft <= 0 || player.hasWon()) {
+                return;
+            }
+            timeLeft -= dt;
+        
+            if (timeLeft <= 0 && !player.isDead()) {
+                player.die();
+            }
+        }
         
     }
     
@@ -161,26 +192,7 @@ public class LevelController extends Component implements Observer{
                 }
                 return;
             case MarioWin:
-                
-                ConsoleWindow.addLog("you won!", ConsoleWindow.LogCategory.info);
-                
-                // TODO: move this call to level scene only
-                //saveProgress();
-                
-                /*if (Window.getScene().getInitializer() instanceof LevelSceneInitializer) {
-                    
-                    pData.playerState = player.getPlayerState();
-                    // convert time to score
-                    
-                    saveProgress();
-                    // move to next level
-                    Window.changeScene(new LevelSceneInitializer(), nextLevel);
-                } else if (Window.getScene().getInitializer() instanceof LevelEditorSceneInitializer) {
-                    // stop the editor runtime
-                    EventSystem.notify(gameObject, new Event(EventType.EditorStopPlay));
-                } else if (Window.getScene().getInitializer() instanceof MainMenuSceneInitializer) {
-                    // do nothing
-                }*/
+                levelDone = true;
 
                 return;
             case MarioDie:

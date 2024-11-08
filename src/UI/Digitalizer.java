@@ -62,6 +62,9 @@ public class Digitalizer extends Component {
 
     public void setValue(int value) {
         this.value = value;
+        if (value < 0) {
+            return;
+        }
         
         // display the value
         String[] valArray = String.valueOf(value).split("");

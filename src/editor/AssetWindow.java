@@ -8,9 +8,11 @@ import gameEngine.GameObject;
 import components.MouseControls;
 import components.Sprite;
 import components.SpriteSheet;
+import components.gamecomponents.LevelController;
 import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Sound;
+import gameEngine.Window;
 import imgui.ImGui;
 import imgui.ImVec2;
 import imgui.type.ImInt;
@@ -416,18 +418,53 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                // mario
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png");
-                
                 if (spriteButton(sprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateMario();
                     mc.pickUpObject(object);
                     
                 }
                 
+                // flagpole
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioParticles.png");
                 if (spriteButton(sprites.getSprite(12),uid++)) {
                     GameObject object = Prefab.generateFlag();
                     mc.pickUpObject(object);
+                }
+                
+                // item blocks
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+                if (spriteButton(sprites.getSprite(3),uid++)) {
+                    GameObject object = Prefab.generateInvItemBlock(sprites);
+                    mc.pickUpObject(object);
+                }
+                
+                
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateItemBlock(sprites);
+                    mc.pickUpObject(object);
+                }
+                
+                SpriteSheet sprites2 = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png");
+                if (spriteButton(sprites2.getSprite(1),uid++)) {
+                    GameObject object = Prefab.generateItemBrickBlock(sprites2.getSprite(1),sprites);
+                    mc.pickUpObject(object);
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+                if (spriteButton(sprites2.getSprite(2),uid++)) {
+                    GameObject object = Prefab.generateItemBrickBlock(sprites2.getSprite(2),sprites);
+                    mc.pickUpObject(object);
+                }
+                // level controller
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/UIExtra.png");
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    if (Window.getScene().getGameObjectWith(LevelController.class) == null) {
+                        GameObject object = Prefab.generateLevelController();
+                        Window.getScene().addGameObjectToScene(object);
+                        //object.start();
+                    }
                 }
                 
                 /*sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");

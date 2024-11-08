@@ -12,20 +12,6 @@ import components.TransitionMachine;
  * @author txaber gardeazabal
  */
 public class Flag extends Component{
-    private boolean flagReached = false;
-    private float distanceToTravel = 1.9f;
-    
-    @Override
-    public void update(float dt) {
-        
-        /*if (flagReached) {
-            if (distanceToTravel > 0) {
-                distanceToTravel -= dt;
-                gameObject.transform.position.y -= dt;
-            }
-        }*/
-    }
-    
     public void reachFlag() {
         if (!this.gameObject.getComponent(TransitionMachine.class).isPlaying()) {
             this.gameObject.getComponent(TransitionMachine.class).begin();

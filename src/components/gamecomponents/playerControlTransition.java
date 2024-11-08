@@ -107,7 +107,7 @@ public class PlayerControlTransition extends TransitionState {
             }
             
             timeTracker += dt;
-            System.out.println(timeTracker);
+
             if (timeTracker >= duration) {
                 finished = true;
             }

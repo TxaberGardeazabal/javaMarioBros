@@ -14,7 +14,7 @@
           "x": 0.25,
           "y": 0.25
         },
-        "zIndex": 0
+        "zIndex": 1
       }
     },
     {
@@ -198,8 +198,7 @@
                 "x": 0.0,
                 "y": 0.05
               },
-              "duration": 0.15,
-              "finished": false
+              "duration": 0.15
             }
           },
           {
@@ -209,11 +208,11 @@
                 "x": 0.0,
                 "y": -0.05
               },
-              "duration": 0.15,
-              "finished": false
+              "duration": 0.15
             }
           }
         ],
+        "linear": true,
         "loops": false,
         "isPlaying": false
       }

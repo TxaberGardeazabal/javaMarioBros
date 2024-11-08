@@ -20,14 +20,14 @@ upgrade existing functionalities:
 - refractor and document
 - on savemenus show file name in selector
 hitting blocks with enemies should kill the enemies
+add tiny flag on castle/towers
++ update prefabs
 + make physics them more precise and less janky
 + add boxcollider to enemies and items (for optimization)
 refactor component so it handles object types (could hace a class impementation)
 adjust the screen size so is 1:1 with the original game
-++ finish the levelController
 
 bugfixing:
-- picking shader doesn't prevent extra placement of gameobjects if the object color is too light
 some window focus issues:
    gizmos break when being pulled out of viewport
    when pressing away while jdialog windows are active causes focus bugs and crashes
@@ -38,12 +38,14 @@ mario title image renders incorrectly
 + enemies should spawn only as soon as the camera reaches them
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 + adjust mario hitboxes in the big and small forms to prevent clipping
-+ upon winning game crashes due to not finding hud element
 seting rotation via imgui causes it to become -inf, also causes bugs with box2d
+deleting the level you're on sends you to the shadow realm
+sometimes playing the scene loads incorrect variables on some components, this is posibly due to scene stop and start functions
 
 other:
 // make pillbox changes ep #58
 // make it possible to render fonts from ttf files (discontinued)
 // migrate project to gradle (if jars don't work)
 // refactor mouseControlls class, including child object interactions, colors and the annoying gizmos
-// transition desync issue: due to delta time variation the same transition may last more or less frames to complete leading to desyncs
+// transition desync issue: due to delta time variation the same transition may last more or less frames to complete leading to desyncs (known bug)
+// picking shader doesn't prevent extra placement of gameobjects if the object color is too light (known bug)

@@ -85,12 +85,6 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         skyholeDetection.start();
         scene.addGameObjectToScene(skyholeDetection);
         
-        /*GameObject lc = scene.createGameObject("levelController");
-        lc.addComponent(new LevelController());
-        lc.addComponent(new ShadowObj());
-        lc.start();
-        scene.addGameObjectToScene(lc);*/
-        
     }
 
     @Override

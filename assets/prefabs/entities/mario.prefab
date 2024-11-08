@@ -1206,6 +1206,30 @@
             "properties": {
               "duration": 3.0
             }
+          },
+          {
+            "type": "components.TranslateTransition",
+            "properties": {
+              "offset": {
+                "x": 0.0,
+                "y": -2.0
+              },
+              "duration": 2.0
+            }
+          },
+          {
+            "type": "components.gamecomponents.PlayerControlTransition",
+            "properties": {
+              "movement": [
+                {
+                  "action": "MoveRight",
+                  "duration": 2.0,
+                  "timeTracker": 0.0,
+                  "finished": false
+                }
+              ],
+              "index": 0
+            }
           }
         ],
         "linear": false,
@@ -1235,7 +1259,7 @@
     {
       "type": "physics2D.components.PillboxCollider",
       "properties": {
-        "showBoundaries": true,
+        "showBoundaries": false,
         "width": 0.39,
         "height": 0.31,
         "offset": {

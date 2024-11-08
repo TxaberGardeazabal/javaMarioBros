@@ -36,11 +36,13 @@ import components.gamecomponents.Fireball;
 import components.gamecomponents.Flag;
 import components.gamecomponents.FlagPole;
 import components.gamecomponents.BreakableBrick;
+import components.gamecomponents.LevelController;
 import components.gamecomponents.LiveMushroom;
 import components.gamecomponents.PlayerControlTransition;
 import components.gamecomponents.PlayerControlTransition.PlayerControl;
 import components.gamecomponents.StarAI;
 import components.propertieComponents.Ground;
+import components.propertieComponents.ShadowObj;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 import physics2D.components.Box2DCollider;
@@ -292,6 +294,7 @@ public class Prefab {
     public static GameObject generateItemBlock(SpriteSheet sprites) {
         GameObject itemBlock = generateSpriteObject(sprites.getSprite(0), 0.25f, 0.25f);
         itemBlock.name = "item block";
+        itemBlock.transform.zIndex = 1;
         
         AnimationState idle = new AnimationState();
         idle.title = "flicker";
@@ -335,6 +338,7 @@ public class Prefab {
     public static GameObject generateItemBrickBlock(Sprite sprite1, SpriteSheet sprites2) {
         GameObject itemBlock = generateSpriteObject(sprite1, 0.25f, 0.25f);
         itemBlock.name = "brick item block";
+        itemBlock.transform.zIndex = 1;
         
         AnimationState idle = new AnimationState();
         idle.title = "active";
@@ -375,6 +379,7 @@ public class Prefab {
     public static GameObject generateInvItemBlock(SpriteSheet sprites) {
         GameObject itemBlock = generateSpriteObject(sprites.getSprite(0), 0.25f, 0.25f);
         itemBlock.name = "invisible block";
+        itemBlock.transform.zIndex = 1;
         
         itemBlock.getComponent(SpriteRenderer.class).setColor(new Vector4f(1,1,1,0.5f));
         
@@ -1145,5 +1150,13 @@ public class Prefab {
         mushroom.addComponent(new LiveMushroom());
         
         return mushroom;
+    }
+    
+    public static GameObject generateLevelController() {
+        GameObject lc = generateEmptyObject();
+        lc.name = "levelController";
+        lc.addComponent(new LevelController());
+        //lc.addComponent(new ShadowObj());
+        return lc;
     }
 }

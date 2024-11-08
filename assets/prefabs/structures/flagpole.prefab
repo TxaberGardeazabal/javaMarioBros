@@ -1232,30 +1232,28 @@
           }
         },
         {
-          "type": "physics2D.components.Rigidbody2D",
+          "type": "components.TransitionMachine",
           "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
-            "angularDamping": 0.8,
-            "linearDamping": 0.9,
-            "mass": 0.1,
-            "bodyType": "Static",
-            "friction": 0.1,
-            "angularVelocity": 0.0,
-            "gravityScale": 1.0,
-            "isSensor": false,
-            "fixedRotation": true,
-            "continuousCollision": true
+            "states": [
+              {
+                "type": "components.TranslateTransition",
+                "properties": {
+                  "offset": {
+                    "x": 0.0,
+                    "y": -2.0
+                  },
+                  "duration": 2.0
+                }
+              }
+            ],
+            "linear": true,
+            "loops": false,
+            "isPlaying": false
           }
         },
         {
           "type": "components.gamecomponents.Flag",
-          "properties": {
-            "flagReached": false,
-            "distanceToTravel": 1.9
-          }
+          "properties": {}
         }
       ],
       "doSerialization": true,
