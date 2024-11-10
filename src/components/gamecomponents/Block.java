@@ -19,8 +19,6 @@ public abstract class Block extends Component{
     protected transient TransitionMachine tm;
     protected transient boolean active = true;
     
-    public float bopSpeed = 0.4f;
-    
     @Override
     public void start() {
         this.tm = gameObject.getComponent(TransitionMachine.class);

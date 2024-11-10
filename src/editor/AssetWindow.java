@@ -467,6 +467,42 @@ public class AssetWindow {
                     }
                 }
                 
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png");
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateGoomba();
+                    mc.pickUpObject(object);
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateKoopa();
+                    mc.pickUpObject(object);
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
+                if (spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateMushroom();
+                    mc.pickUpObject(object);
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
+                if (spriteButton(sprites.getSprite(9),uid++)) {
+                    GameObject object = Prefab.generateLiveMushroom();
+                    mc.pickUpObject(object);
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
+                if (spriteButton(sprites.getSprite(1),uid++)) {
+                    GameObject object = Prefab.generateFlower();
+                    mc.pickUpObject(object);
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
+                if (spriteButton(sprites.getSprite(6),uid++)) {
+                    GameObject object = Prefab.generateStar();
+                    mc.pickUpObject(object);
+                }
+                
                 /*sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 if (spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateItemBlock(sprites);

@@ -12,15 +12,20 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/LevelController.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Block.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/GoombaAI.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/LevelEditorSceneInitializer.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Prefab.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Enemy.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/TransitionMachine.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/ItemBlock.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/taskList.txt</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Window.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/PlayerController.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/AssetWindow.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/LevelController.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Coin.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/LevelEditorSceneInitializer.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Prefab.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/TransitionMachine.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/PhysicsController.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/Scene.java</file>
         </group>
     </open-files>

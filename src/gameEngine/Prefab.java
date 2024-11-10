@@ -460,11 +460,13 @@ public class Prefab {
         rb.setBodyType(BodyType.Dynamic);
         rb.setFixedRotation(true);
         rb.setContinuousCollision(false);
+        rb.setGravityScale(0);
         mushroom.addComponent(rb);
         
-        CircleCollider cc = new CircleCollider();
-        cc.setRadius(0.13f);
-        mushroom.addComponent(cc);
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.2f, 0.2f));
+        b2d.setOffset(new Vector2f(0,0.02f));
+        mushroom.addComponent(b2d);
         mushroom.addComponent(new MushroomAI());
         
         return mushroom;
@@ -493,11 +495,14 @@ public class Prefab {
         rb.setBodyType(BodyType.Static);
         rb.setFixedRotation(true);
         rb.setContinuousCollision(false);
+        rb.setGravityScale(0);
         flower.addComponent(rb);
         
-        CircleCollider cc = new CircleCollider();
-        cc.setRadius(0.13f);
-        flower.addComponent(cc);
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.2f, 0.2f));
+        b2d.setOffset(new Vector2f(0,0.02f));
+        flower.addComponent(b2d);
+        
         flower.addComponent(new Flower());
         
         return flower;
@@ -530,11 +535,13 @@ public class Prefab {
         rb.setBodyType(BodyType.Dynamic);
         rb.setFixedRotation(true);
         rb.setMass(0.1f);
+        rb.setGravityScale(0);
         goomba.addComponent(rb);
         
-        CircleCollider cc = new CircleCollider();
-        cc.setRadius(0.12f);
-        goomba.addComponent(cc);
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.17f, 0.1f));
+        b2d.setOffset(new Vector2f(0, -0.01f));
+        goomba.addComponent(b2d);
         
         GoombaAI gAi = new GoombaAI();
         gAi.setTerminalVelocity(new Vector2f(2.1f,3.1f));
@@ -572,12 +579,13 @@ public class Prefab {
         rb.setBodyType(BodyType.Dynamic);
         rb.setFixedRotation(true);
         rb.setMass(0.1f);
+        rb.setGravityScale(0);
         turtle.addComponent(rb);
         
-        CircleCollider cc = new CircleCollider();
-        cc.setRadius(0.13f);
-        cc.setOffset(new Vector2f(0, -0.05f));
-        turtle.addComponent(cc);
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.19f, 0.19f));
+        b2d.setOffset(new Vector2f(0, -0.05f));
+        turtle.addComponent(b2d);
         
         KoopaAI kAi = new KoopaAI();
         kAi.setTerminalVelocity(new Vector2f(2.1f,3.1f));
@@ -696,8 +704,6 @@ public class Prefab {
         GameObject fireball = generateSpriteObject(sprite, 0.12f, 0.12f);
         fireball.name = "fireball";
         
-        
-        
         Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Dynamic);
         rb.setFixedRotation(true);
@@ -762,19 +768,7 @@ public class Prefab {
         tm.addTransition(new TranslateTransition(new Vector2f(0,-2f),2));
         flag.addComponent(tm);
         
-        /*Rigidbody2D rb = new Rigidbody2D();
-        rb.setBodyType(BodyType.Static);
-        rb.setFixedRotation(true);
-        rb.setMass(0.1f);
-        flag.addComponent(rb);*/
         flag.addComponent(new Flag());
-        
-        //b2d = new Box2DCollider();
-        //b2d.setHalfSize(new Vector2f(0.02f,0.12f));
-        //b2d.setOffset(new Vector2f(0f,-0.065f));
-        //flag.addComponent(b2d);
-        //flag.addComponent(new FlagPole(true));
-        
         pcw.addGameObject(flag);
         
         // flag top
@@ -1123,11 +1117,13 @@ public class Prefab {
         rb.setBodyType(BodyType.Dynamic);
         rb.setFixedRotation(true);
         rb.setContinuousCollision(false);
+        rb.setGravityScale(0);
         star.addComponent(rb);
         
-        CircleCollider cc = new CircleCollider();
-        cc.setRadius(0.13f);
-        star.addComponent(cc);
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.2f, 0.2f));
+        b2d.setOffset(new Vector2f(0,0.02f));
+        star.addComponent(b2d);
         star.addComponent(new StarAI());
         
         return star;
@@ -1142,11 +1138,13 @@ public class Prefab {
         rb.setBodyType(BodyType.Dynamic);
         rb.setFixedRotation(true);
         rb.setContinuousCollision(false);
+        rb.setGravityScale(0);
         mushroom.addComponent(rb);
         
-        CircleCollider cc = new CircleCollider();
-        cc.setRadius(0.13f);
-        mushroom.addComponent(cc);
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.2f, 0.2f));
+        b2d.setOffset(new Vector2f(0,0.02f));
+        mushroom.addComponent(b2d);
         mushroom.addComponent(new LiveMushroom());
         
         return mushroom;
@@ -1156,7 +1154,6 @@ public class Prefab {
         GameObject lc = generateEmptyObject();
         lc.name = "levelController";
         lc.addComponent(new LevelController());
-        //lc.addComponent(new ShadowObj());
         return lc;
     }
 }

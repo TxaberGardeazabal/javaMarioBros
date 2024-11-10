@@ -23,7 +23,6 @@ hitting blocks with enemies should kill the enemies
 add tiny flag on castle/towers
 + update prefabs
 + make physics them more precise and less janky
-+ add boxcollider to enemies and items (for optimization)
 refactor component so it handles object types (could hace a class impementation)
 adjust the screen size so is 1:1 with the original game
 
