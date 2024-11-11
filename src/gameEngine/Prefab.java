@@ -59,6 +59,9 @@ import util.Settings;
  */
 public class Prefab {
     
+    /*
+        Funciones principales para el motor:
+    */
     public static GameObject generateEmptyObject() {
         GameObject go = Window.getScene().createGameObject("empty_obj_gen");
         return go;
@@ -89,9 +92,38 @@ public class Prefab {
         return go;
     }
     
+    /*
+        Funciones para crear gameobjects para el resto de la aplicacion, se mantienen por si los prefabs dejan de funcionar.
+    */
     public static GameObject generateBreakableObject(Sprite sprite,float sizeX, float sizeY) {
-        GameObject go = generateSpriteObject(sprite,sizeX, sizeY);
-        go.name = "breakable object";
+        SpriteSheet particleSprite = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioParticles.png");
+        GameObject go = generateGroundObject(sprite,sizeX, sizeY);
+        go.name = "breakable brick block";
+        
+        AnimationState idle = new AnimationState();
+        idle.title = "idle";
+        idle.addFrame(sprite, 0);
+        
+        AnimationState broke = new AnimationState();
+        broke.title = "broken";
+        broke.addFrame(particleSprite.getSprite(0), 0);
+        
+        StateMachine sm = new StateMachine();
+        sm.addState(idle);
+        sm.addState(broke);
+        sm.setDefaultState(idle.title);
+        
+        sm.addStateTrigger(idle.title, broke.title, "break");
+        go.addComponent(sm);
+        
+        TransitionState move1 = new TranslateTransition(new Vector2f(0,0.05f),0.15f);
+        TransitionState move2 = new TranslateTransition(new Vector2f(0,-0.05f),0.15f);
+        
+        TransitionMachine tm = new TransitionMachine(true,false);
+        tm.addTransition(move1);
+        tm.addTransition(move2);
+        go.addComponent(tm);
+        
         go.addComponent(new BreakableBrick());
         return go;
     }

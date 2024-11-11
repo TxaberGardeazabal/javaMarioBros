@@ -9,21 +9,19 @@ add new functionalities:
 + open the saveAs window when playing a new level (playing auto saves)
 show contents of assetpool in editor (database)
 create in settings multi button input variables (control + x...)
-add particles for bricks
 + add more enemies and obstacles
 + add a debug section with debug options (console, debugDraw, colision boundaries)
-+ add more customization in properties window (adding/removing components)
++ add more customization options in properties window (adding/removing components)
 
 upgrade existing functionalities:
 -- style properties window
 -- add all controlls in settings class and use those
 - refractor and document
 - on savemenus show file name in selector
-hitting blocks with enemies should kill the enemies
 add tiny flag on castle/towers
 + update prefabs
 + make physics them more precise and less janky
-refactor component so it handles object types (could hace a class impementation)
+refactor component so it handles object types (could have a class impementation)
 adjust the screen size so is 1:1 with the original game
 
 bugfixing:

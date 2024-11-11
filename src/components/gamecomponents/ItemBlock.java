@@ -13,9 +13,12 @@ import editor.ConsoleWindow;
 import gameEngine.GameObject;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
+import physics2D.RaycastInfo;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
+import org.joml.Vector3f;
 import org.joml.Vector4f;
+import render.DebugDraw;
 import util.AssetPool;
 
 /**
@@ -47,7 +50,7 @@ public class ItemBlock extends Block{
         
     }
     
-    private boolean firstFlag = true;
+    private transient boolean firstFlag = true;
     @Override
     public void update(float dt) {
         super.update(dt);
@@ -62,6 +65,26 @@ public class ItemBlock extends Block{
     
     @Override
     protected void hit(boolean shouldOpen) {
+        // detect an enemy on top 
+        Vector2f raycastBegin = new Vector2f(this.gameObject.transform.position);
+        raycastBegin.sub(0.145f / 2.0f, 0f);
+        Vector2f raycastEnd = new Vector2f(raycastBegin).add(0.0f, 0.2f);
+        
+        RaycastInfo info = Window.getPhysics().raycast(this.gameObject, raycastBegin, raycastEnd);
+        
+        Vector2f raycast2Begin = new Vector2f(raycastBegin).add(0.145f, 0.0f);
+        Vector2f raycast2End = new Vector2f(raycastEnd).add(0.145f, 0.0f);
+        
+        RaycastInfo info2 = Window.getPhysics().raycast(this.gameObject, raycast2Begin, raycast2End);
+        
+        // fix this for debugging only
+        DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1,0,0));
+        DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
+
+        if (info.hit && info.hitObj != null && info.hitObj.getComponent(Enemy.class) != null) {
+            info.hitObj.getComponent(Enemy.class).die();
+        }
+        
         switch(contents) {
             case Coin:
                 doCoin();

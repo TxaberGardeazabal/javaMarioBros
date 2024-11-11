@@ -162,7 +162,6 @@ public class PlayerController extends PhysicsController {
 
             if (KeyListener.keyBeginPress(Settings.FIREBALL) && playerState == PlayerState.Fire && Fireball.canSpawn()) {
                 fireball();
-                isControlled = false;
             }
         }
         

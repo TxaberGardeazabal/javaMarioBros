@@ -503,6 +503,12 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png");
+                if (spriteButton(sprites.getSprite(2),uid++)) {
+                    GameObject object = Prefab.generateBreakableObject(sprites.getSprite(2), 0.25f, 0.25f);
+                    mc.pickUpObject(object);
+                }
+                
                 /*sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 if (spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateItemBlock(sprites);
