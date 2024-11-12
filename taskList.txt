@@ -19,7 +19,6 @@ upgrade existing functionalities:
 - refractor and document
 - on savemenus show file name in selector
 add tiny flag on castle/towers
-+ update prefabs
 + make physics them more precise and less janky
 refactor component so it handles object types (could have a class impementation)
 adjust the screen size so is 1:1 with the original game
@@ -32,12 +31,11 @@ some window focus issues:
 imgui string editing sucks
 player transitions jump function doesn't work correctly
 mario title image renders incorrectly
-+ enemies should spawn only as soon as the camera reaches them
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 + adjust mario hitboxes in the big and small forms to prevent clipping
 seting rotation via imgui causes it to become -inf, also causes bugs with box2d
 deleting the level you're on sends you to the shadow realm
-sometimes playing the scene loads incorrect variables on some components, this is posibly due to scene stop and start functions
+sometimes playing the scene loads incorrect variables on some components, especially box2d physics comonents
 
 other:
 // make pillbox changes ep #58
@@ -46,3 +44,4 @@ other:
 // refactor mouseControlls class, including child object interactions, colors and the annoying gizmos
 // transition desync issue: due to delta time variation the same transition may last more or less frames to complete leading to desyncs (known bug)
 // picking shader doesn't prevent extra placement of gameobjects if the object color is too light (known bug)
+// deleting spriteRenderers from the editor doesn't remove them from the renderer (known bug)

@@ -24,7 +24,11 @@ public class Enemy extends PhysicsController{
     protected transient boolean goingRight = false;
     protected transient float walkSpeed = 0.6f;
     protected transient boolean isDead = false;
+    protected transient boolean inCamera = false;
     protected transient StateMachine stateMachine;
+    
+    protected float sizeX = 0;
+    protected float sizeY = 0;
     
     @Override
     public void start() {
@@ -38,15 +42,17 @@ public class Enemy extends PhysicsController{
     
     @Override
     public void update(float dt) {
-        // stop updating if the enemy exits from the left of the screen
-        // not sure if the camera will be able to move left in the future
         Camera camera = Window.getScene().camera();
-        // commented due to enemies not spawning outside of camera
-        /*if (this.gameObject.transform.position.x > 
-                camera.position.x + camera.getProjectionSize().x * camera.getZoom()) {
-            gameObject.destroy();
-            return;
-        }*/
+        
+        inCamera = !(this.gameObject.transform.position.x - (sizeX / 2)> 
+                camera.position.x + camera.getProjectionSize().x * camera.getZoom() ||
+                this.gameObject.transform.position.x  + (sizeX / 2) < 
+                camera.position.x * camera.getZoom() ||
+                this.gameObject.transform.position.y + (sizeY / 2) > 
+                camera.position.y + camera.getProjectionSize().y * camera.getZoom() ||
+                this.gameObject.transform.position.y - (sizeY / 2) <
+                camera.position.y * camera.getZoom());
+        
         if (isDead) {
             addGravity();
             applyForces(dt);

@@ -18,6 +18,7 @@ import components.TransitionStateDeserializer;
 import editor.ConsoleWindow;
 import editor.OImGui;
 import imgui.ImGui;
+import imgui.type.ImBoolean;
 import java.util.ArrayList;
 import java.util.List;
 import util.AssetPool;
@@ -110,7 +111,7 @@ public class GameObject {
     }
     
     /**
-     * Elimina el comonente con la clase T dentro del gameobject.
+     * Elimina el componente con la clase T dentro del gameobject.
      * nota: esta funcion solo elimina la primera instancia encontrada de objeto encontrada
      * @param <T> clase que hereda de la clase componente
      * @param componentClass clase de componente a eliminar
@@ -119,7 +120,21 @@ public class GameObject {
         for (int i = 0; i < components.size(); i++) {
             Component c = components.get(i);
             if (componentClass.isAssignableFrom(c.getClass())) {
-                
+                components.remove(i);
+                return;
+                               
+            }
+        }
+    }
+    
+    /**
+     * Elimina el componente que tenga el componentID ID dentro del gameobject.
+     * @param <T> clase que hereda de la clase componente
+     * @param ID el ComponentID a eliminar
+     */
+    public <T extends Component> void removeComponentById(int ID) {
+        for (int i = 0; i < components.size(); i++) {
+            if (components.get(i).getUid() == ID) {
                 components.remove(i);
                 return;
                                
@@ -217,9 +232,17 @@ public class GameObject {
             imgui.internal.ImGui.text("Parent: none");
         }
         
-        for (Component c : components) {
-            if (ImGui.collapsingHeader(c.getClass().getSimpleName())) {
-                c.imGui();
+        for (int i = 0; i < components.size(); i++) {
+            ImBoolean test = new ImBoolean(true);
+            if (ImGui.collapsingHeader(components.get(i).getClass().getSimpleName(), test)) {
+                components.get(i).imGui();
+                
+                
+            }
+            if (!test.get()) {
+                this.components.remove(i);
+                System.out.println(components.size());
+                i--;
             }
         }
     }

@@ -25,7 +25,7 @@ public class KoopaAI extends Enemy {
     @Override
     public void update(float dt) {
         super.update(dt);
-        if (isDead) {
+        if (isDead || !inCamera) {
             return;
         }
 
@@ -53,13 +53,6 @@ public class KoopaAI extends Enemy {
         }
         
         applyForces(dt);
-        
-        // removes when falling of the level
-        /*
-        if (this.gameObject.transform.position.x < Window.getScene().camera().position.x - 0.5f 
-                || this.gameObject.transform.position.y < 0.0f) {
-            this.gameObject.destroy();
-        }*/
     }
      
     @Override

@@ -21,7 +21,7 @@ public class GoombaAI extends Enemy {
     @Override
     public void update(float dt) {
         super.update(dt);
-        if (isDead) {
+        if (isDead || !inCamera) {
             return;
         }
         

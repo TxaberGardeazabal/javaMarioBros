@@ -115,6 +115,12 @@ public abstract class Component {
      */
     public void imGui() {
         try {
+            // TODO: impement superclass(es)
+            Class a = this.getClass().getSuperclass();
+            if (a != null) {
+                this.getClass().getSuperclass().getDeclaredFields();
+            }
+            
             Field[] fields = this.getClass().getDeclaredFields();
             for (Field field:fields) {
                 // we don't expose transient variables, skip if found

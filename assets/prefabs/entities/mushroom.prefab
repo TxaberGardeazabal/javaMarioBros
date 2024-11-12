@@ -68,26 +68,34 @@
         "bodyType": "Dynamic",
         "friction": 0.1,
         "angularVelocity": 0.0,
-        "gravityScale": 1.0,
+        "gravityScale": 0.0,
         "isSensor": false,
         "fixedRotation": true,
         "continuousCollision": false
       }
     },
     {
-      "type": "physics2D.components.CircleCollider",
+      "type": "physics2D.components.Box2DCollider",
       "properties": {
-        "radius": 0.13,
+        "halfSize": {
+          "x": 0.2,
+          "y": 0.2
+        },
+        "origin": {
+          "x": 0.0,
+          "y": 0.0
+        },
         "showBoundaries": false,
         "offset": {
           "x": 0.0,
-          "y": 0.0
+          "y": 0.02
         }
       }
     },
     {
       "type": "components.gamecomponents.MushroomAI",
       "properties": {
+        "active": true,
         "terminalVelocity": {
           "x": 10.0,
           "y": 10.0

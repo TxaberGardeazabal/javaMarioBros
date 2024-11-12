@@ -36,19 +36,19 @@
           },
           "texCoords": [
             {
-              "x": 0.33333334,
+              "x": 0.6666667,
               "y": 1.0
             },
             {
+              "x": 0.6666667,
+              "y": 0.6666667
+            },
+            {
               "x": 0.33333334,
               "y": 0.6666667
             },
             {
-              "x": 0.0,
-              "y": 0.6666667
-            },
-            {
-              "x": 0.0,
+              "x": 0.33333334,
               "y": 1.0
             }
           ]
@@ -190,20 +190,27 @@
         "bodyType": "Dynamic",
         "friction": 0.1,
         "angularVelocity": 0.0,
-        "gravityScale": 1.0,
+        "gravityScale": 0.0,
         "isSensor": false,
         "fixedRotation": true,
         "continuousCollision": true
       }
     },
     {
-      "type": "physics2D.components.CircleCollider",
+      "type": "physics2D.components.Box2DCollider",
       "properties": {
-        "radius": 0.12,
+        "halfSize": {
+          "x": 0.17,
+          "y": 0.1
+        },
+        "origin": {
+          "x": 0.0,
+          "y": 0.0
+        },
         "showBoundaries": false,
         "offset": {
           "x": 0.0,
-          "y": 0.0
+          "y": -0.01
         }
       }
     },

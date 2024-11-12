@@ -4,13 +4,33 @@
  */
 package editor;
 
+import UI.Digit;
+import UI.Digitalizer;
 import UI.FixedHUD;
+import UI.UIButton;
 import components.ComplexPrefabWrapper;
 import components.MouseControls;
+import components.StateMachine;
+import components.TransitionMachine;
+import components.gamecomponents.BlockCoin;
 import gameEngine.GameObject;
 import components.gamecomponents.BreakableBrick;
+import components.gamecomponents.Coin;
+import components.gamecomponents.Flag;
+import components.gamecomponents.FlagPole;
+import components.gamecomponents.Flower;
+import components.gamecomponents.GoombaAI;
+import components.gamecomponents.HoleLogic;
+import components.gamecomponents.ItemBlock;
+import components.gamecomponents.KoopaAI;
 import components.gamecomponents.LevelController;
+import components.gamecomponents.LiveMushroom;
+import components.gamecomponents.MushroomAI;
+import components.gamecomponents.Pipe;
+import components.gamecomponents.PlayerController;
+import components.gamecomponents.StarAI;
 import components.propertieComponents.Ground;
+import gameEngine.Direction;
 import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
@@ -20,6 +40,7 @@ import javax.swing.JOptionPane;
 import org.joml.Vector2f;
 import physics2D.components.Box2DCollider;
 import physics2D.components.CircleCollider;
+import physics2D.components.PillboxCollider;
 import physics2D.components.Rigidbody2D;
 import util.Settings;
 
@@ -73,43 +94,171 @@ public class PropertiesWindow {
                     
                     // TODO: add more components here (and maybe make it better)
                     if (ImGui.beginPopupContextWindow("ComponentAdder")) {
-                        if (ImGui.menuItem("Add rigidbody")) {
-                            if (activeGameObject.getComponent(Rigidbody2D.class) == null) {
-                                activeGameObject.addComponent(new Rigidbody2D());
+                        if (ImGui.collapsingHeader("Physics")) {
+                            if (ImGui.menuItem("Add rigidbody")) {
+                                if (activeGameObject.getComponent(Rigidbody2D.class) == null) {
+                                    activeGameObject.addComponent(new Rigidbody2D());
+                                }
                             }
-                        }
 
-                        if (ImGui.menuItem("Add box collider")) {
-                            if (activeGameObject.getComponent(Box2DCollider.class) == null &&
-                                    activeGameObject.getComponent(CircleCollider.class) == null) {
+                            if (ImGui.menuItem("Add box collider")) {
                                 activeGameObject.addComponent(new Box2DCollider());
                             }
-                        }
 
-                        if (ImGui.menuItem("Add circle collider")) {
-                            if (activeGameObject.getComponent(CircleCollider.class) == null &&
-                                    activeGameObject.getComponent(Box2DCollider.class) == null) {
+                            if (ImGui.menuItem("Add circle collider")) {
                                 activeGameObject.addComponent(new CircleCollider());
                             }
-                        }
-
-                        if (ImGui.menuItem("Add ground")) {
-                            if (activeGameObject.getComponent(Ground.class) == null) {
-                                activeGameObject.addComponent(new Ground());
-                            }
-                        }
-
-                        if (ImGui.menuItem("Add breakable")) {
-                            if (activeGameObject.getComponent(BreakableBrick.class) == null) {
-                                activeGameObject.addComponent(new BreakableBrick());
+                            
+                            if (ImGui.menuItem("Add pillbox collider")) {
+                                activeGameObject.addComponent(new PillboxCollider());
                             }
                         }
                         
-                        if (ImGui.menuItem("Add fixed position")) {
-                            if (activeGameObject.getComponent(FixedHUD.class) == null) {
-                                activeGameObject.addComponent(new FixedHUD());
+                        
+                        
+                        if (ImGui.collapsingHeader("Other")) {
+                            if (ImGui.menuItem("Add State machine")) {
+                                if (activeGameObject.getComponent(StateMachine.class) == null) {
+                                    activeGameObject.addComponent(new StateMachine());
+                                }
+                            }
+                            
+                            if (ImGui.menuItem("Add Transition machine")) {
+                                if (activeGameObject.getComponent(TransitionMachine.class) == null) {
+                                    activeGameObject.addComponent(new TransitionMachine(false,false));
+                                }
                             }
                         }
+                        
+                        if (ImGui.collapsingHeader("UI")) {
+                            if (ImGui.menuItem("Add fixed position")) {
+                                if (activeGameObject.getComponent(FixedHUD.class) == null) {
+                                    activeGameObject.addComponent(new FixedHUD());
+                                }
+                            }
+                            
+                            if (ImGui.menuItem("Add digitalizer")) {
+                                if (activeGameObject.getComponent(Digitalizer.class) == null) {
+                                    activeGameObject.addComponent(new Digitalizer());
+                                }
+                            }
+                            
+                            if (ImGui.menuItem("Add digit")) {
+                                if (activeGameObject.getComponent(Digit.class) == null) {
+                                    activeGameObject.addComponent(new Digit());
+                                }
+                            }
+                            
+                            if (ImGui.menuItem("Add button")) {
+                                if (activeGameObject.getComponent(UIButton.class) == null) {
+                                    activeGameObject.addComponent(new UIButton());
+                                }
+                            }
+                        }
+                        
+                        if (ImGui.collapsingHeader("game Logic")) {
+                            if (ImGui.collapsingHeader("Player")) {
+                                if (ImGui.menuItem("Add playerController")) {
+                                    if (activeGameObject.getComponent(PlayerController.class) == null) {
+                                        activeGameObject.addComponent(new PlayerController());
+                                    }
+                                }
+                            }
+
+                            if (ImGui.collapsingHeader("enemies")) {
+                                if (ImGui.menuItem("Add goomba AI")) {
+                                    if (activeGameObject.getComponent(GoombaAI.class) == null) {
+                                        activeGameObject.addComponent(new GoombaAI());
+                                    }
+                                }
+                                if (ImGui.menuItem("Add koopa AI")) {
+                                    if (activeGameObject.getComponent(KoopaAI.class) == null) {
+                                        activeGameObject.addComponent(new KoopaAI());
+                                    }
+                                }
+
+                            }
+
+                            if (ImGui.collapsingHeader("items")) {
+                                if (ImGui.menuItem("Add mushroom AI")) {
+                                    if (activeGameObject.getComponent(MushroomAI.class) == null) {
+                                        activeGameObject.addComponent(new MushroomAI());
+                                    }
+                                }
+                                if (ImGui.menuItem("Add fire flower AI")) {
+                                    if (activeGameObject.getComponent(Flower.class) == null) {
+                                        activeGameObject.addComponent(new Flower());
+                                    }
+                                }
+                                if (ImGui.menuItem("Add star AI")) {
+                                    if (activeGameObject.getComponent(StarAI.class) == null) {
+                                        activeGameObject.addComponent(new StarAI());
+                                    }
+                                }
+                                if (ImGui.menuItem("Add 1up mushroom AI")) {
+                                    if (activeGameObject.getComponent(LiveMushroom.class) == null) {
+                                        activeGameObject.addComponent(new LiveMushroom());
+                                    }
+                                }
+                                if (ImGui.menuItem("Add coin")) {
+                                    if (activeGameObject.getComponent(Coin.class) == null) {
+                                        activeGameObject.addComponent(new Coin());
+                                    }
+                                }
+                                if (ImGui.menuItem("Add BlockCoin")) {
+                                    if (activeGameObject.getComponent(BlockCoin.class) == null) {
+                                        activeGameObject.addComponent(new BlockCoin());
+                                    }
+                                }
+                            }
+                            
+                            if (ImGui.collapsingHeader("Blocks")) {
+                                if (ImGui.menuItem("Add ground")) {
+                                    if (activeGameObject.getComponent(Ground.class) == null) {
+                                        activeGameObject.addComponent(new Ground());
+                                    }
+                                }
+
+                                if (ImGui.menuItem("Add breakable")) {
+                                    if (activeGameObject.getComponent(BreakableBrick.class) == null) {
+                                        activeGameObject.addComponent(new BreakableBrick());
+                                    }
+                                }
+
+                                if (ImGui.menuItem("Add itemBlock")) {
+                                    if (activeGameObject.getComponent(ItemBlock.class) == null) {
+                                        activeGameObject.addComponent(new ItemBlock());
+                                    }
+                                }
+                            }
+                            
+                            if (ImGui.collapsingHeader("Other")) {
+                                if (ImGui.menuItem("Add pipe")) {
+                                    if (activeGameObject.getComponent(Pipe.class) == null) {
+                                        activeGameObject.addComponent(new Pipe(Direction.Down));
+                                    }
+                                }
+                                
+                                if (ImGui.menuItem("Add Hole logic")) {
+                                    if (activeGameObject.getComponent(HoleLogic.class) == null) {
+                                        activeGameObject.addComponent(new HoleLogic());
+                                    }
+                                }
+                                
+                                if (ImGui.menuItem("Add flag logic")) {
+                                    if (activeGameObject.getComponent(Flag.class) == null) {
+                                        activeGameObject.addComponent(new Flag());
+                                    }
+                                }
+                                
+                                if (ImGui.menuItem("Add flagpole logic")) {
+                                    if (activeGameObject.getComponent(FlagPole.class) == null) {
+                                        activeGameObject.addComponent(new FlagPole(false));
+                                    }
+                                }
+                            }
+                        }
+                        
 
                         ImGui.endPopup();
                     }
