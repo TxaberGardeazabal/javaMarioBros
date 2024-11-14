@@ -44,6 +44,16 @@ public class Settings {
     public static int EDITOR_MOVE_RIGHT = GLFW_KEY_RIGHT;
     public static int EDITOR_MOVE_INCREASE = GLFW_KEY_LEFT_SHIFT;
     
+    // control keys
+    public static int LEFT_CONTROL = GLFW_KEY_LEFT_CONTROL;
+    public static int LEFT_SHIFT = GLFW_KEY_LEFT_SHIFT;
+    public static int EDITOR_DUPLICATE_SELECTION = GLFW_KEY_D;
+    public static int EDITOR_NEW_LEVEL = GLFW_KEY_N;
+    public static int EDITOR_OPEN_LEVEL = GLFW_KEY_O;
+    public static int EDITOR_SAVE_LEVEL = GLFW_KEY_S;
+    public static int EDITOR_RELOAD_LEVEL = GLFW_KEY_R;
+    public static int EDITOR_DELETE_LEVEL = GLFW_KEY_D;
+    
     // mario controlls
     public static int MOVELEFT = GLFW_KEY_A;
     public static int MOVERIGHT = GLFW_KEY_D;

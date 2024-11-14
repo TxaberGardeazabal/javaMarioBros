@@ -8,10 +8,8 @@ add new functionalities:
 + create a prebuilt new level
 + open the saveAs window when playing a new level (playing auto saves)
 show contents of assetpool in editor (database)
-create in settings multi button input variables (control + x...)
 + add more enemies and obstacles
 + add a debug section with debug options (console, debugDraw, colision boundaries)
-+ add more customization options in properties window (adding/removing components)
 
 upgrade existing functionalities:
 -- style properties window
@@ -34,8 +32,8 @@ mario title image renders incorrectly
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 + adjust mario hitboxes in the big and small forms to prevent clipping
 seting rotation via imgui causes it to become -inf, also causes bugs with box2d
-deleting the level you're on sends you to the shadow realm
-sometimes playing the scene loads incorrect variables on some components, especially box2d physics comonents
+sometimes playing the scene loads incorrect variables on some components, especially box2d physics components
+minimize the use of javaswing to prevent incompatibility crashes
 
 other:
 // make pillbox changes ep #58

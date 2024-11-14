@@ -11,17 +11,15 @@ import components.Component;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import components.ButtonBehaviorDeserializer;
-import components.GameCamera;
 import components.TransitionState;
 import components.TransitionStateDeserializer;
-import components.gamecomponents.HoleLogic;
-import components.gamecomponents.PlayerController;
 import components.propertieComponents.ShadowObj;
 import editor.ConsoleWindow;
 import gameEngine.Camera;
 import gameEngine.GameObject;
 import gameEngine.GameObjectDeserializer;
 import gameEngine.Transform;
+import gameEngine.Window;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -71,7 +69,7 @@ public class Scene {
     }
     
     /**
-     * Funcion que se ejecuta antes del primer frame
+     * Funcion que se ejecuta antes del primer frame, en el editor no se ejecuta cuando das a play
      */
     public void start() {
         
@@ -348,6 +346,11 @@ public class Scene {
      * Guarda todo el nivel en el estado actual en el archivo
      */
     public void save() {
+        if (Window.isRuntimePlaying()) {
+            ConsoleWindow.addLog("you can only save the level outside of runtime", ConsoleWindow.LogCategory.info);
+            return;
+        }
+        
         Gson gson = new GsonBuilder().setPrettyPrinting()
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
                 .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())

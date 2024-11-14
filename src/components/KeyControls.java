@@ -9,8 +9,6 @@ import gameEngine.KeyListener;
 import gameEngine.Window;
 import java.util.ArrayList;
 import java.util.List;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_D;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_LEFT_CONTROL;
 import util.Settings;
 
 /**
@@ -39,19 +37,18 @@ public class KeyControls extends Component {
         List<GameObject> activeGameObjects = mc.getActiveGameObjects();
         float multiplier = KeyListener.isKeyPressed(Settings.EDITOR_MOVE_INCREASE) ? 1.0f : 0.1f;
         
-        if (KeyListener.isKeyPressed(GLFW_KEY_LEFT_CONTROL) &&
-                KeyListener.keyBeginPress(GLFW_KEY_D) && activeGameObject != null) {
+        if (KeyListener.isKeyPressed(Settings.LEFT_CONTROL) &&
+                KeyListener.keyBeginPress(Settings.EDITOR_DUPLICATE_SELECTION) && activeGameObject != null) {
             GameObject newGo = activeGameObject.copy();
-            newGo.transform.translate(0.25f, 0.0f);
+            newGo.transform.translate(Settings.GRID_WIDTH, 0.0f);
             Window.getScene().addGameObjectToScene(newGo);
-            //newGo.transform.position.add(Settings.GRID_WIDTH,0.0f);
             mc.setActiveGameObject(newGo);
             if (newGo.getComponent(StateMachine.class) != null) {
                 newGo.getComponent(StateMachine.class).refreshTextures();
             }
                 
-        } else if (KeyListener.isKeyPressed(GLFW_KEY_LEFT_CONTROL) &&
-                KeyListener.keyBeginPress(GLFW_KEY_D) && !activeGameObjects.isEmpty()) {
+        } else if (KeyListener.isKeyPressed(Settings.LEFT_CONTROL) &&
+                KeyListener.keyBeginPress(Settings.EDITOR_DUPLICATE_SELECTION) && !activeGameObjects.isEmpty()) {
             List<GameObject> gameObjects = new ArrayList<>(activeGameObjects);
             mc.clearSelected();
             for (GameObject go : gameObjects) {
