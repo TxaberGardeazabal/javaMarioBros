@@ -4,6 +4,7 @@
  */
 package gameEngine;
 
+import components.gamecomponents.PiranhaPlantAi;
 import UI.Digit;
 import UI.Digitalizer;
 import components.gamecomponents.GoombaAI;
@@ -42,7 +43,6 @@ import components.gamecomponents.PlayerControlTransition;
 import components.gamecomponents.PlayerControlTransition.PlayerControl;
 import components.gamecomponents.StarAI;
 import components.propertieComponents.Ground;
-import components.propertieComponents.ShadowObj;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 import physics2D.components.Box2DCollider;
@@ -1187,5 +1187,39 @@ public class Prefab {
         lc.name = "levelController";
         lc.addComponent(new LevelController());
         return lc;
+    }
+    
+    public static GameObject generatePiranhaPlant() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
+        GameObject plant = generateSpriteObject(sprites.getSprite(4), 0.25f, 0.35f);
+        plant.name = "Plant";
+        
+        AnimationState idle = new AnimationState();
+        idle.title = "idle";
+        idle.setLoop(true);
+        float defaultFrameTime = 0.23f;
+        idle.addFrame(sprites.getSprite(4), defaultFrameTime);
+        idle.addFrame(sprites.getSprite(5), defaultFrameTime);
+        
+        StateMachine sm = new StateMachine();
+        sm.addState(idle);
+        sm.setDefaultState(idle.title);
+        plant.addComponent(sm);
+        
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Kinematic);
+        rb.setFixedRotation(true);
+        rb.setMass(0.1f);
+        rb.setGravityScale(0);
+        plant.addComponent(rb);
+        
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.19f, 0.19f));
+        b2d.setOffset(new Vector2f(0, -0.05f));
+        b2d.showBoundaries = true;
+        plant.addComponent(b2d);
+        
+        plant.addComponent(new PiranhaPlantAi());
+        return plant;
     }
 }

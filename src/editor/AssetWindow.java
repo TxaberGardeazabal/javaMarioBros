@@ -509,6 +509,12 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
+                if (spriteButton(sprites.getSprite(4),uid++)) {
+                    GameObject object = Prefab.generatePiranhaPlant();
+                    mc.pickUpObject(object);
+                }
+                
                 /*sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 if (spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateItemBlock(sprites);

@@ -5,9 +5,12 @@
 package components.gamecomponents;
 
 import components.Component;
+import components.TransitionMachine;
+import components.TranslateTransition;
 import gameEngine.Direction;
 import gameEngine.GameObject;
 import gameEngine.KeyListener;
+import gameEngine.Prefab;
 import gameEngine.Window;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
@@ -22,11 +25,14 @@ public class Pipe extends Component {
     public Direction direction;
     private String connectingPipeName = "";
     private boolean isTraversable = false;
+    private boolean hasPiranhaPlant = false;
+    
     private transient GameObject connectingPipe = null;
     private transient float entranceVectorTolerance = 0.6f;
     private transient PlayerController collidingPlayer = null;
     private transient boolean playerEntering = false;
     private transient boolean playerExiting = false;
+    private transient boolean spawnFlag = false;
 
     public Pipe(Direction direction) {
         this.direction = direction;
@@ -39,6 +45,48 @@ public class Pipe extends Component {
     
     @Override
     public void update(float dt) {
+        if (!spawnFlag && hasPiranhaPlant) {
+            Vector2f entranceOffset = new Vector2f();
+            int rotation = 0;
+            Vector2f translateV = new Vector2f();
+            
+            switch (direction) {
+                case Up:
+                    entranceOffset = new Vector2f(0,0.4f);
+                    translateV = new Vector2f(this.gameObject.transform.position);
+                    break;
+                case Down:
+                    entranceOffset = new Vector2f(0,-0.4f);
+                    rotation = 180;
+                    translateV = new Vector2f(this.gameObject.transform.position);
+                    break;
+                case Left:
+                    entranceOffset = new Vector2f(-0.4f,0);
+                    rotation = 90;
+                    translateV = new Vector2f(this.gameObject.transform.position);
+                    break;
+                case Right:
+                    entranceOffset = new Vector2f(0.4f,0);
+                    rotation = -90;
+                    translateV = new Vector2f(this.gameObject.transform.position);
+                    break;
+            }
+
+            GameObject plant = Prefab.generatePiranhaPlant();
+            plant.transform.setPosition(new Vector2f(gameObject.transform.position).add(entranceOffset));
+            plant.transform.rotate(rotation);
+            
+            TranslateTransition move1 = new TranslateTransition(new Vector2f(entranceOffset).negate(), 1);
+            TranslateTransition move2 = new TranslateTransition(entranceOffset, 1);
+            TransitionMachine planttm = new TransitionMachine(false,false);
+            planttm.addTransition(move1);
+            planttm.addTransition(move2);
+            plant.addComponent(planttm);
+
+            Window.getScene().addGameObjectToScene(plant);
+            spawnFlag = true;
+        }
+        
         if (connectingPipe == null) {
             return;
         }

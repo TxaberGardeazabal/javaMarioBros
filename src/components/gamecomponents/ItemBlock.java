@@ -18,6 +18,7 @@ import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
+import physics2D.components.Box2DCollider;
 import render.DebugDraw;
 import util.AssetPool;
 
@@ -176,6 +177,7 @@ public class ItemBlock extends Block{
             flower.transform.position.set(gameObject.transform.position);
             flower.transform.position.y += 0.05f;
             
+            flower.getComponent(Box2DCollider.class).showBoundaries = true;
             flowertm.start();
             flowertm.begin();
             Window.getScene().addGameObjectToScene(flower);

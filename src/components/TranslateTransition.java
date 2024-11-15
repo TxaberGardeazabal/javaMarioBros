@@ -52,7 +52,7 @@ public class TranslateTransition extends TransitionState {
         if (timeTracker >= duration) {
             finished = true;
             // set to be safe
-            this.gameObject.transform.position = pointB;
+            this.gameObject.transform.setPosition(pointB);
         }
     }
     
