@@ -84,6 +84,7 @@ public abstract class PhysicsController extends Component{
      */
     public boolean checkOnGround() {
         onGround = Physics2D.checkOnGround(gameObject, innerWidth, castVal);
+        
         return onGround;
     }
 

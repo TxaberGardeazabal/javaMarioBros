@@ -11,6 +11,7 @@ import gameEngine.Direction;
 import gameEngine.GameObject;
 import gameEngine.KeyListener;
 import gameEngine.Prefab;
+import gameEngine.PrefabSave;
 import gameEngine.Window;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
@@ -72,18 +73,22 @@ public class Pipe extends Component {
                     break;
             }
 
-            GameObject plant = Prefab.generatePiranhaPlant();
-            plant.transform.setPosition(new Vector2f(gameObject.transform.position).add(entranceOffset));
-            plant.transform.rotate(rotation);
-            
-            TranslateTransition move1 = new TranslateTransition(new Vector2f(entranceOffset).negate(), 1);
-            TranslateTransition move2 = new TranslateTransition(entranceOffset, 1);
-            TransitionMachine planttm = new TransitionMachine(false,false);
-            planttm.addTransition(move1);
-            planttm.addTransition(move2);
-            plant.addComponent(planttm);
+            //GameObject plant = Prefab.generatePiranhaPlant();
+            PrefabSave plantPre = new PrefabSave("assets/prefabs/entities/piranhaPlantOverworld.prefab");
+            GameObject plant = plantPre.load();
+            if (plant != null) {
+                plant.transform.setPosition(new Vector2f(gameObject.transform.position).add(entranceOffset));
+                plant.transform.rotate(rotation);
 
-            Window.getScene().addGameObjectToScene(plant);
+                TranslateTransition move1 = new TranslateTransition(new Vector2f(entranceOffset).negate(), 1);
+                TranslateTransition move2 = new TranslateTransition(entranceOffset, 1);
+                TransitionMachine planttm = new TransitionMachine(false,false);
+                planttm.addTransition(move1);
+                planttm.addTransition(move2);
+                plant.addComponent(planttm);
+
+                Window.getScene().addGameObjectToScene(plant);
+            }
             spawnFlag = true;
         }
         

@@ -304,7 +304,7 @@ public class Prefab {
         // pillbox collider
         PillboxCollider pb = new PillboxCollider();
         pb.width = 0.39f;
-        pb.height = 0.31f;
+        pb.height = 0.30f;
         Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Dynamic);
         rb.setContinuousCollision(false);
@@ -1207,15 +1207,15 @@ public class Prefab {
         plant.addComponent(sm);
         
         Rigidbody2D rb = new Rigidbody2D();
-        rb.setBodyType(BodyType.Kinematic);
+        rb.setBodyType(BodyType.Static);
         rb.setFixedRotation(true);
-        rb.setMass(0.1f);
         rb.setGravityScale(0);
+        rb.setContinuousCollision(false);
         plant.addComponent(rb);
         
         Box2DCollider b2d = new Box2DCollider();
-        b2d.setHalfSize(new Vector2f(0.19f, 0.19f));
-        b2d.setOffset(new Vector2f(0, -0.05f));
+        b2d.setHalfSize(new Vector2f(0.12f, 0.18f));
+        b2d.setOffset(new Vector2f(0, 0.01f));
         b2d.showBoundaries = true;
         plant.addComponent(b2d);
         

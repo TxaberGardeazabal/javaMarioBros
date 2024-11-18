@@ -4,7 +4,6 @@
  */
 package physics2D.components;
 
-import components.Component;
 import gameEngine.Window;
 import org.joml.Vector2f;
 
@@ -74,10 +73,6 @@ public class PillboxCollider extends Collider {
         bottomCircle.editorUpdate(dt);
         box.editorUpdate(dt);
         
-        /*if (resetFixtureNextFrame) {
-            resetFixture();
-        }*/
-        
     }
 
     public void setWidth(float width) {
@@ -110,11 +105,12 @@ public class PillboxCollider extends Collider {
     public void recalculateColliders() {
         float circleRadius = width / 4.0f;
         float boxHeight = height - 2 * circleRadius;
+        
         topCircle.setRadius(circleRadius);
         bottomCircle.setRadius(circleRadius);
         topCircle.setOffset(new Vector2f(offset).add(0,boxHeight / 4.0f));
-        topCircle.setOffset(new Vector2f(offset).sub(0,boxHeight / 4.0f));
-        box.setHalfSize(new Vector2f(width / 2.0f, boxHeight / 2.0f));
+        bottomCircle.setOffset(new Vector2f(offset).sub(0,boxHeight / 4.0f));
+        box.setHalfSize(new Vector2f(width / 2.0f - 0.03f, boxHeight / 2.0f)); // tiny offset to prevent the box collider clipping
         box.setOffset(offset);
     }
 

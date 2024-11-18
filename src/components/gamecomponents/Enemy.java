@@ -14,7 +14,9 @@ import gameEngine.Window;
 import java.util.List;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
+import physics2D.enums.BodyType;
 import util.AssetPool;
+import util.Settings;
 
 /**
  * Funcionalidades basicas que comparten todos los enemigos del juego
@@ -27,8 +29,8 @@ public class Enemy extends PhysicsController{
     protected transient boolean inCamera = false;
     protected transient StateMachine stateMachine;
     
-    protected float sizeX = 0;
-    protected float sizeY = 0;
+    protected float sizeX = Settings.GRID_WIDTH;
+    protected float sizeY = Settings.GRID_HEIGHT;
     
     @Override
     public void start() {
@@ -42,6 +44,10 @@ public class Enemy extends PhysicsController{
     
     @Override
     public void update(float dt) {
+        if (isDead) {
+            addGravity();
+            applyForces(dt);
+        }
         Camera camera = Window.getScene().camera();
         
         inCamera = !(this.gameObject.transform.position.x - (sizeX / 2)> 
@@ -52,12 +58,6 @@ public class Enemy extends PhysicsController{
                 camera.position.y + camera.getProjectionSize().y * camera.getZoom() ||
                 this.gameObject.transform.position.y - (sizeY / 2) <
                 camera.position.y * camera.getZoom());
-        
-        if (isDead) {
-            addGravity();
-            applyForces(dt);
-        }
-        
     }
     
     /**
@@ -92,6 +92,9 @@ public class Enemy extends PhysicsController{
         isDead = true;
         gameObject.transform.scale.y = -gameObject.transform.scale.y;
         rb.setIsSensor(true);
+        rb.setBodyType(BodyType.Dynamic);
+        rb.reset();
+        
         if (hitRight) {
             acceleration.set(new Vector2f(0, 2f));
             velocity.set(new Vector2f(1,1.6f));

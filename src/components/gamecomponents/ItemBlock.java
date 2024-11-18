@@ -11,6 +11,7 @@ import components.TranslateTransition;
 import components.propertieComponents.Ground;
 import editor.ConsoleWindow;
 import gameEngine.GameObject;
+import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
 import physics2D.RaycastInfo;
@@ -178,7 +179,7 @@ public class ItemBlock extends Block{
             flower.transform.position.y += 0.05f;
             
             flower.getComponent(Box2DCollider.class).showBoundaries = true;
-            flowertm.start();
+            flower.start();
             flowertm.begin();
             Window.getScene().addGameObjectToScene(flower);
         }

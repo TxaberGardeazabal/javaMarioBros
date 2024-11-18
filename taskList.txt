@@ -17,7 +17,6 @@ upgrade existing functionalities:
 - refractor and document
 - on savemenus show file name in selector
 add tiny flag on castle/towers
-+ make physics them more precise and less janky
 refactor component so it handles object types (could have a class impementation)
 adjust the screen size so is 1:1 with the original game
 
@@ -30,10 +29,10 @@ imgui string editing sucks
 player transitions jump function doesn't work correctly
 mario title image renders incorrectly
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
-+ adjust mario hitboxes in the big and small forms to prevent clipping
 seting rotation via imgui causes it to become -inf, also causes bugs with box2d
 sometimes playing the scene loads incorrect variables on some components, especially box2d physics components
 minimize the use of javaswing to prevent incompatibility crashes
++ find why dynamic box mushrooms can come out of blocks but dynamic box plants cant
 
 other:
 // make pillbox changes ep #58

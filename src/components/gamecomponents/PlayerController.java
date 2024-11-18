@@ -354,7 +354,7 @@ public class PlayerController extends PhysicsController {
                     walkSpeed *= bigJumpBoostFactor;
                     pb.setHeight(0.63f);
                 }
-                setCastVal(-0.24f);
+                setCastVal(-0.22f);
                 
                 stateMachine.changeSpriteSheetSkin(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioBig.png"),0);
                 stateMachine.trigger("jump");

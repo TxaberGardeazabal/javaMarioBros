@@ -36,6 +36,12 @@ public class PiranhaPlantAi extends Enemy {
     @Override
     public void update(float dt) {
         super.update(dt);
+        if (isDead) {
+            if (tm != null) {
+                tm.stop();
+            }
+            return;
+        }
         
         if (tm != null) {
             timeTracker -= dt;
@@ -46,7 +52,7 @@ public class PiranhaPlantAi extends Enemy {
                     goingIn = false;
                 } else {
                     timeTracker = timeBeforeGoingOut;
-                     tm.startTransition(0);
+                    tm.startTransition(0);
                     goingIn = true;
                 }
             }
@@ -59,7 +65,6 @@ public class PiranhaPlantAi extends Enemy {
         if (isDead) {
             return;
         }
-        contact.setEnabled(false);
         
         List<Component> comps = go.getAllComponents();
         for (Component component : comps) {

@@ -18,19 +18,20 @@ import physics2D.enums.BodyType;
  * @author txaber gardeazabal
  */
 public class Rigidbody2D extends Component{
-    private Vector2f velocity = new Vector2f();
+    private transient Vector2f velocity = new Vector2f();
+    private transient float angularVelocity = 0.0f;
     private float angularDamping = 0.8f;
     private float linearDamping = 0.9f;
     private float mass = 0;
     private BodyType bodyType = BodyType.Dynamic;
     private float friction = 0.1f;
-    private float angularVelocity = 0.0f;
     private float gravityScale = 1.0f;
     private boolean isSensor = false;
     private boolean fixedRotation = false;
     private boolean continuousCollision = true;
     
     private transient Body rawBody = null;
+    private transient boolean resetBodyNextFrame = false;
     
     @Override
     public void update(float dt) {
@@ -47,6 +48,9 @@ public class Rigidbody2D extends Component{
             }
         }
         
+        if (resetBodyNextFrame) {
+            reset();
+        }
     }
     
     public void addVelocity(Vector2f force) {
@@ -173,5 +177,15 @@ public class Rigidbody2D extends Component{
         if (rawBody != null) {
             Window.getPhysics().setIsSensor(this, isSensor);
         }
+    }
+    
+    public void reset() {
+        if (Window.getPhysics().isLocked()) {
+            resetBodyNextFrame = true;
+            return;
+        }
+        resetBodyNextFrame = false;
+        
+        Window.getPhysics().resetRigidBody(this, gameObject);
     }
 }

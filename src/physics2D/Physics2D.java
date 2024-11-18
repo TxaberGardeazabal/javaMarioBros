@@ -234,6 +234,35 @@ public class Physics2D {
         body.resetMassData();
     }
     
+    public void resetRigidBody(Rigidbody2D rb, GameObject go) {
+        if (rb.getRawBody() != null) {
+            world.destroyBody(rb.getRawBody());
+        }
+        
+        Transform transform = go.transform;
+            
+            BodyDef bodyDef = new BodyDef();
+            bodyDef.angle = (float)Math.toRadians(transform.rotation);
+            bodyDef.position.set(transform.position.x, transform.position.y);
+            bodyDef.angularDamping = rb.getAngularDamping();
+            bodyDef.linearDamping = rb.getLinearDamping();
+            bodyDef.fixedRotation = rb.isFixedRotation();
+            bodyDef.bullet = rb.isContinuousCollision();
+            bodyDef.gravityScale = rb.getGravityScale();
+            bodyDef.angularVelocity = rb.getAngularVelocity();
+            bodyDef.userData = rb.gameObject;
+            
+            switch(rb.getBodyType()) {
+                case Kinematic: bodyDef.type = BodyType.KINEMATIC; break;
+                case Static: bodyDef.type = BodyType.STATIC; break;
+                case Dynamic: bodyDef.type = BodyType.DYNAMIC; break;
+            }
+            
+            Body body = this.world.createBody(bodyDef);
+            body.m_mass = rb.getMass();
+            rb.setRawBody(body);
+    }
+    
     /**
      * Hace un raycast desde el punto A al punto B
      * @param requestingObj objeto desde donde se hizo la llamada al raycast
