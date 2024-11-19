@@ -73,7 +73,7 @@ public class PiranhaPlantAi extends Enemy {
                 if (!playerController.isDead()) {
                     if (playerController.isStarInvincible()) {
                         die(normal.x < 0);
-                    } else {
+                    } else if (!playerController.isInvincible()) {
                         playerController.hurt();
                     }
                     contact.setEnabled(false);

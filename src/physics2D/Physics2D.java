@@ -50,45 +50,7 @@ public class Physics2D {
     public void add(GameObject go) {
         Rigidbody2D rb = go.getComponent(Rigidbody2D.class);
         if (rb != null && rb.getRawBody() == null) {
-            Transform transform = go.transform;
-            
-            BodyDef bodyDef = new BodyDef();
-            bodyDef.angle = (float)Math.toRadians(transform.rotation);
-            bodyDef.position.set(transform.position.x, transform.position.y);
-            bodyDef.angularDamping = rb.getAngularDamping();
-            bodyDef.linearDamping = rb.getLinearDamping();
-            bodyDef.fixedRotation = rb.isFixedRotation();
-            bodyDef.bullet = rb.isContinuousCollision();
-            bodyDef.gravityScale = rb.getGravityScale();
-            bodyDef.angularVelocity = rb.getAngularVelocity();
-            bodyDef.userData = rb.gameObject;
-            
-            switch(rb.getBodyType()) {
-                case Kinematic: bodyDef.type = BodyType.KINEMATIC; break;
-                case Static: bodyDef.type = BodyType.STATIC; break;
-                case Dynamic: bodyDef.type = BodyType.DYNAMIC; break;
-            }
-            
-            Body body = this.world.createBody(bodyDef);
-            body.m_mass = rb.getMass();
-            rb.setRawBody(body);
-            
-            CircleCollider circleCollider;
-            Box2DCollider boxCollider;
-            PillboxCollider pillboxCollider;
-            
-            if ((circleCollider = go.getComponent(CircleCollider.class)) != null) {
-                addCircleCollider(rb, circleCollider);
-            } 
-                
-            if ((boxCollider = go.getComponent(Box2DCollider.class)) != null) {
-                addBox2DCollider(rb, boxCollider);
-            }
-            
-            if ((pillboxCollider = go.getComponent(PillboxCollider.class)) != null) {
-                addPillboxCollider(rb, pillboxCollider);
-                //System.out.println("added pillbox");
-            }
+            createBody(rb, go);
         }
     }
     
@@ -131,7 +93,7 @@ public class Physics2D {
         
         Vector2f halfSize = new Vector2f(boxCollider.getHalfSize()).mul(0.5f);
         Vector2f offset = boxCollider.getOffset();
-        Vector2f origin = new Vector2f(boxCollider.getOrigin());
+        //Vector2f origin = new Vector2f(boxCollider.getOrigin());
         shape.setAsBox(halfSize.x, halfSize.y, new Vec2(offset.x, offset.y), 0);
         
         FixtureDef fixtureDef = new FixtureDef();
@@ -234,33 +196,65 @@ public class Physics2D {
         body.resetMassData();
     }
     
+    /**
+     * Reinicia el cuerpo en simulacion de un objeto especifico, nota: esto detendra todas las fisicas aplicadas al objeto en cuestion naturalmente.
+     * @param rb rigidbody2D donde esta asignado el cuerpo a reiniciar
+     * @param go objeto al que resetear las fisicas
+     */
     public void resetRigidBody(Rigidbody2D rb, GameObject go) {
         if (rb.getRawBody() != null) {
             world.destroyBody(rb.getRawBody());
         }
         
+        createBody(rb, go);
+    }
+
+    /**
+     * Crea un cuerpo fisico en box2D usando los parametros definidos
+     * por un rigidBody y colliders, (solo permite tener un collider del mismo tipo)
+     * @param rb Componente rigidbody al que asignar los parametros del cuerpo
+     * @param go GameObject al que ira asignado el nuevo cuerpo
+     */
+
+    public void createBody(Rigidbody2D rb, GameObject go) {
         Transform transform = go.transform;
             
-            BodyDef bodyDef = new BodyDef();
-            bodyDef.angle = (float)Math.toRadians(transform.rotation);
-            bodyDef.position.set(transform.position.x, transform.position.y);
-            bodyDef.angularDamping = rb.getAngularDamping();
-            bodyDef.linearDamping = rb.getLinearDamping();
-            bodyDef.fixedRotation = rb.isFixedRotation();
-            bodyDef.bullet = rb.isContinuousCollision();
-            bodyDef.gravityScale = rb.getGravityScale();
-            bodyDef.angularVelocity = rb.getAngularVelocity();
-            bodyDef.userData = rb.gameObject;
-            
-            switch(rb.getBodyType()) {
-                case Kinematic: bodyDef.type = BodyType.KINEMATIC; break;
-                case Static: bodyDef.type = BodyType.STATIC; break;
-                case Dynamic: bodyDef.type = BodyType.DYNAMIC; break;
-            }
-            
-            Body body = this.world.createBody(bodyDef);
-            body.m_mass = rb.getMass();
-            rb.setRawBody(body);
+        BodyDef bodyDef = new BodyDef();
+        bodyDef.angle = (float)Math.toRadians(transform.rotation);
+        bodyDef.position.set(transform.position.x, transform.position.y);
+        bodyDef.angularDamping = rb.getAngularDamping();
+        bodyDef.linearDamping = rb.getLinearDamping();
+        bodyDef.fixedRotation = rb.isFixedRotation();
+        bodyDef.bullet = rb.isContinuousCollision();
+        bodyDef.gravityScale = rb.getGravityScale();
+        bodyDef.angularVelocity = rb.getAngularVelocity();
+        bodyDef.userData = rb.gameObject;
+
+        switch(rb.getBodyType()) {
+            case Kinematic: bodyDef.type = BodyType.KINEMATIC; break;
+            case Static: bodyDef.type = BodyType.STATIC; break;
+            case Dynamic: bodyDef.type = BodyType.DYNAMIC; break;
+        }
+
+        Body body = this.world.createBody(bodyDef);
+        body.m_mass = rb.getMass();
+        rb.setRawBody(body);
+
+        CircleCollider circleCollider;
+        Box2DCollider boxCollider;
+        PillboxCollider pillboxCollider;
+
+        if ((circleCollider = go.getComponent(CircleCollider.class)) != null) {
+            addCircleCollider(rb, circleCollider);
+        } 
+
+        if ((boxCollider = go.getComponent(Box2DCollider.class)) != null) {
+            addBox2DCollider(rb, boxCollider);
+        }
+
+        if ((pillboxCollider = go.getComponent(PillboxCollider.class)) != null) {
+            addPillboxCollider(rb, pillboxCollider);
+        }
     }
     
     /**

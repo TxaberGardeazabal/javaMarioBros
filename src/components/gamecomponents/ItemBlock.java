@@ -20,6 +20,8 @@ import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
 import physics2D.components.Box2DCollider;
+import physics2D.components.Rigidbody2D;
+import physics2D.enums.BodyType;
 import render.DebugDraw;
 import util.AssetPool;
 
@@ -83,7 +85,8 @@ public class ItemBlock extends Block{
         DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1,0,0));
         DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
 
-        if (info.hit && info.hitObj != null && info.hitObj.getComponent(Enemy.class) != null) {
+        if ((info.hit && info.hitObj != null && info.hitObj.getComponent(Enemy.class) != null)
+                || (info2.hit && info2.hitObj != null && info2.hitObj.getComponent(Enemy.class) != null)) {
             info.hitObj.getComponent(Enemy.class).die();
         }
         
@@ -150,6 +153,7 @@ public class ItemBlock extends Block{
         PrefabSave mushPre = new PrefabSave("assets/prefabs/entities/mushroom.prefab");
         GameObject mush = mushPre.load();
         if (mush != null) {
+            mush.getComponent(Rigidbody2D.class).setBodyType(BodyType.Static);
             TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
             TransitionMachine mushtm = new TransitionMachine(true,false);
             mushtm.addTransition(move);
@@ -159,6 +163,7 @@ public class ItemBlock extends Block{
             mush.transform.position.y += 0.05f;
             mush.getComponent(MushroomAI.class).setActive(false);
             
+            mush.getComponent(Box2DCollider.class).showBoundaries = true;
             mushtm.start();
             mushtm.begin();
             Window.getScene().addGameObjectToScene(mush);
@@ -194,6 +199,7 @@ public class ItemBlock extends Block{
         PrefabSave starPre = new PrefabSave("assets/prefabs/entities/star.prefab");
         GameObject star = starPre.load();
         if (star != null) {
+            star.getComponent(Rigidbody2D.class).setBodyType(BodyType.Static);
             TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
             TransitionMachine startm = new TransitionMachine(true,false);
             startm.addTransition(move);
@@ -203,6 +209,7 @@ public class ItemBlock extends Block{
             star.transform.position.y += 0.05f;
             star.getComponent(StarAI.class).setActive(false);
             
+            star.getComponent(Box2DCollider.class).showBoundaries = true;
             startm.start();
             startm.begin();
             Window.getScene().addGameObjectToScene(star);
@@ -214,6 +221,7 @@ public class ItemBlock extends Block{
         PrefabSave lifePre = new PrefabSave("assets/prefabs/entities/oneUpMushroom.prefab");
         GameObject life = lifePre.load();
         if (life != null) {
+            life.getComponent(Rigidbody2D.class).setBodyType(BodyType.Static);
             TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
             TransitionMachine mushtm = new TransitionMachine(true,false);
             mushtm.addTransition(move);
@@ -223,6 +231,7 @@ public class ItemBlock extends Block{
             life.transform.position.y += 0.05f;
             life.getComponent(LiveMushroom.class).setActive(false);
             
+            life.getComponent(Box2DCollider.class).showBoundaries = true;
             mushtm.start();
             mushtm.begin();
             Window.getScene().addGameObjectToScene(life);

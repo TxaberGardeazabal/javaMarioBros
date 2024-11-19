@@ -60,9 +60,9 @@ public class Settings {
     public static int CROUCH = GLFW_KEY_S;
     public static int JUMP = GLFW_KEY_SPACE;
     public static int ENTERPIPEDOWN = GLFW_KEY_S;
-    public static int ENTERPIPELEFT = GLFW_KEY_D;
+    public static int ENTERPIPELEFT = GLFW_KEY_A;
     public static int ENTERPIPEUP = GLFW_KEY_W;
-    public static int ENTERPIPERIGHT = GLFW_KEY_A;
+    public static int ENTERPIPERIGHT = GLFW_KEY_D;
     public static int FIREBALL = GLFW_KEY_E;    
     public static int SPRINT = GLFW_KEY_LEFT_SHIFT;
     

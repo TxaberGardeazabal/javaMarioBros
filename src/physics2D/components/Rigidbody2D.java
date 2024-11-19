@@ -123,6 +123,7 @@ public class Rigidbody2D extends Component{
 
     public void setBodyType(BodyType bodyType) {
         this.bodyType = bodyType;
+        reset();
     }
 
     public boolean isFixedRotation() {

@@ -32,7 +32,8 @@ mario title image renders incorrectly
 seting rotation via imgui causes it to become -inf, also causes bugs with box2d
 sometimes playing the scene loads incorrect variables on some components, especially box2d physics components
 minimize the use of javaswing to prevent incompatibility crashes
-+ find why dynamic box mushrooms can come out of blocks but dynamic box plants cant
++ fix: pipe entrance tolerance and enemy camera focus activation
++ tweak check on ground to make objects stay at the same distance from the ground
 
 other:
 // make pillbox changes ep #58

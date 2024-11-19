@@ -59,16 +59,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -162,16 +157,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -265,16 +255,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -368,16 +353,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -471,16 +451,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -574,16 +549,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -677,16 +647,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -780,16 +745,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -883,16 +843,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -986,16 +941,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1089,16 +1039,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1192,16 +1137,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1295,16 +1235,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1398,16 +1333,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1501,16 +1431,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1604,16 +1529,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1707,16 +1627,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1810,16 +1725,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1913,16 +1823,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2016,16 +1921,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2119,16 +2019,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2222,16 +2117,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2325,16 +2215,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -14208,16 +14093,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -14311,16 +14191,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -14414,16 +14289,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -14517,16 +14387,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -14620,16 +14485,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -14723,16 +14583,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -14826,16 +14681,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -14929,16 +14779,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -15032,16 +14877,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -15135,16 +14975,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -15238,16 +15073,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -15341,16 +15171,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -15444,16 +15269,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -15547,16 +15367,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -15650,16 +15465,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -15753,16 +15563,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -15856,16 +15661,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -15959,16 +15759,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -16062,16 +15857,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -16165,16 +15955,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -16268,16 +16053,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -16371,16 +16151,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -16474,16 +16249,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -16577,16 +16347,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -16680,16 +16445,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -16783,16 +16543,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -16886,16 +16641,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -16989,16 +16739,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -17092,16 +16837,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -17195,16 +16935,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -17298,16 +17033,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -17401,16 +17131,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -17504,16 +17229,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -17607,16 +17327,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -17710,16 +17425,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -17813,16 +17523,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -17916,16 +17621,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -18019,16 +17719,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -18122,16 +17817,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -18225,16 +17915,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -18328,16 +18013,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -18431,16 +18111,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -18534,16 +18209,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -18637,16 +18307,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -18740,16 +18405,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -18843,16 +18503,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -18946,16 +18601,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -19049,16 +18699,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -19152,16 +18797,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -19255,16 +18895,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -19358,16 +18993,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -19461,16 +19091,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -19564,16 +19189,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -19667,16 +19287,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -19770,16 +19385,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -19873,16 +19483,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -19976,16 +19581,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -20079,16 +19679,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -20182,16 +19777,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -20285,16 +19875,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -20388,16 +19973,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -20491,16 +20071,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -20594,16 +20169,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -20697,16 +20267,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -20800,16 +20365,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -20903,16 +20463,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -21006,16 +20561,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -21109,16 +20659,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -21212,16 +20757,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -21315,16 +20855,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -21418,16 +20953,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -21521,16 +21051,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -21624,16 +21149,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -21727,16 +21247,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -21830,16 +21345,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -21933,16 +21443,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -22036,16 +21541,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -22139,16 +21639,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -22242,16 +21737,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -22345,16 +21835,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -22448,16 +21933,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -22551,16 +22031,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -22654,16 +22129,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -22757,16 +22227,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -22860,16 +22325,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -22963,16 +22423,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -23066,16 +22521,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -23169,16 +22619,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -23272,16 +22717,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -23406,19 +22846,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               }
             ]
@@ -23536,16 +22976,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -23617,19 +23052,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               }
             ]
@@ -23747,16 +23182,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -23828,19 +23258,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               }
             ]
@@ -23958,16 +23388,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -24039,19 +23464,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.5
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               }
             ]
@@ -24169,16 +23594,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -24272,16 +23692,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -24375,16 +23790,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -24478,16 +23888,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -24581,16 +23986,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -24684,16 +24084,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -24787,16 +24182,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -24890,16 +24280,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -24993,16 +24378,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -25096,16 +24476,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -25199,16 +24574,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -25302,16 +24672,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -25405,16 +24770,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -25508,16 +24868,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -25611,16 +24966,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -25714,16 +25064,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -25817,16 +25162,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -25920,16 +25260,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -26023,16 +25358,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -26126,16 +25456,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -26229,16 +25554,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -26332,16 +25652,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -26435,16 +25750,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -26538,16 +25848,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -26641,16 +25946,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -26744,16 +26044,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -26847,16 +26142,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -26950,16 +26240,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -27053,16 +26338,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -27156,16 +26436,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -27259,16 +26534,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -27362,16 +26632,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -27465,16 +26730,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -27568,16 +26828,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -27671,16 +26926,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -27774,16 +27024,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -27877,16 +27122,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -27980,16 +27220,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -28083,16 +27318,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -28186,16 +27416,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -28289,16 +27514,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -28392,16 +27612,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -28495,16 +27710,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -28598,16 +27808,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -28701,16 +27906,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -28804,16 +28004,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -28907,16 +28102,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -29010,16 +28200,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -29113,16 +28298,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -29216,16 +28396,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -29319,16 +28494,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -29422,16 +28592,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -29525,16 +28690,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -29628,16 +28788,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -29731,16 +28886,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -29834,16 +28984,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -29937,16 +29082,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -30040,16 +29180,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -30143,16 +29278,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -30246,16 +29376,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -30349,16 +29474,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -30452,16 +29572,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -30555,16 +29670,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -30658,16 +29768,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -30761,16 +29866,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -30864,16 +29964,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -30967,16 +30062,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -31070,16 +30160,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -31173,16 +30258,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -31276,16 +30356,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -31379,16 +30454,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -31482,16 +30552,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -31585,16 +30650,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -31688,16 +30748,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -31791,16 +30846,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -72521,19 +71571,19 @@
                 },
                 "texCoords": [
                   {
-                    "x": 0.75,
+                    "x": 0.5,
                     "y": 1.0
                   },
                   {
-                    "x": 0.75,
-                    "y": 0.0
-                  },
-                  {
                     "x": 0.5,
                     "y": 0.0
                   },
                   {
-                    "x": 0.5,
+                    "x": 0.25,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.25,
                     "y": 1.0
                   }
                 ]
@@ -72870,16 +71920,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -73439,16 +72484,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -73544,16 +72584,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -73649,16 +72684,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -73754,16 +72784,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -73859,16 +72884,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -73964,16 +72984,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -74069,16 +73084,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -74174,16 +73184,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -74279,16 +73284,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -74384,16 +73384,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -74489,16 +73484,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -74592,16 +73582,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -74695,16 +73680,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -74798,16 +73778,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -74901,16 +73876,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -75004,16 +73974,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -75107,16 +74072,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -75210,16 +74170,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -75313,16 +74268,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -75416,16 +74366,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -75519,16 +74464,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -75622,16 +74562,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -75725,16 +74660,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -75828,16 +74758,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -75931,16 +74856,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -76012,19 +74932,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 1.0
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -76187,16 +75107,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -76466,16 +75381,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Dynamic",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 0.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -76642,16 +75552,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 0.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -76736,19 +75641,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 1.0
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -76911,16 +75816,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -77051,16 +75951,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -77163,16 +76058,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -77275,16 +76165,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -77387,16 +76272,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -77477,19 +76357,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 1.0
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.75
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -77652,16 +76532,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -78973,16 +77848,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 25.0,
           "bodyType": "Dynamic",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 0.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -79206,16 +78076,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Dynamic",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 0.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -79443,16 +78308,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Dynamic",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 0.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -79558,16 +78418,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -79602,22 +78457,22 @@
     "childGOs": []
   },
   {
-    "name": "flower",
+    "name": "item block",
     "enabled": true,
     "components": [
       {
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 1.125,
-            "y": 0.375
+            "x": 0.375,
+            "y": 1.125
           },
           "rotation": 0.0,
           "scale": {
             "x": 0.25,
             "y": 0.25
           },
-          "zIndex": 0
+          "zIndex": 1
         }
       },
       {
@@ -79633,25 +78488,25 @@
             "Width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
+              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
               "height": 64,
-              "width": 144
+              "width": 64
             },
             "texCoords": [
               {
-                "x": 0.44444445,
+                "x": 0.75,
                 "y": 1.0
               },
               {
-                "x": 0.44444445,
+                "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.33333334,
+                "x": 0.5,
                 "y": 0.75
               },
               {
-                "x": 0.33333334,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -79661,7 +78516,15 @@
       {
         "type": "components.StateMachine",
         "properties": {
-          "stateTransfers": {},
+          "stateTransfers": [
+            [
+              {
+                "state": "flicker",
+                "trigger": "setInactive"
+              },
+              "inactive"
+            ]
+          ],
           "states": [
             {
               "title": "flicker",
@@ -79671,25 +78534,25 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
                       "height": 64,
-                      "width": 144
+                      "width": 64
                     },
                     "texCoords": [
                       {
-                        "x": 0.22222222,
+                        "x": 0.25,
                         "y": 1.0
                       },
                       {
-                        "x": 0.22222222,
+                        "x": 0.25,
                         "y": 0.75
                       },
                       {
-                        "x": 0.11111111,
+                        "x": 0.0,
                         "y": 0.75
                       },
                       {
-                        "x": 0.11111111,
+                        "x": 0.0,
                         "y": 1.0
                       }
                     ]
@@ -79702,25 +78565,25 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
                       "height": 64,
-                      "width": 144
+                      "width": 64
                     },
                     "texCoords": [
                       {
-                        "x": 0.33333334,
+                        "x": 0.5,
                         "y": 1.0
                       },
                       {
-                        "x": 0.33333334,
+                        "x": 0.5,
                         "y": 0.75
                       },
                       {
-                        "x": 0.22222222,
+                        "x": 0.25,
                         "y": 0.75
                       },
                       {
-                        "x": 0.22222222,
+                        "x": 0.25,
                         "y": 1.0
                       }
                     ]
@@ -79733,56 +78596,25 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
                       "height": 64,
-                      "width": 144
+                      "width": 64
                     },
                     "texCoords": [
                       {
-                        "x": 0.44444445,
+                        "x": 0.75,
                         "y": 1.0
                       },
                       {
-                        "x": 0.44444445,
+                        "x": 0.75,
                         "y": 0.75
                       },
                       {
-                        "x": 0.33333334,
+                        "x": 0.5,
                         "y": 0.75
                       },
                       {
-                        "x": 0.33333334,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
-                      "height": 64,
-                      "width": 144
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.5555556,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.5555556,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.44444445,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.44444445,
+                        "x": 0.5,
                         "y": 1.0
                       }
                     ]
@@ -79792,6 +78624,43 @@
                 }
               ],
               "doesLoop": true
+            },
+            {
+              "title": "inactive",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
             }
           ],
           "defaultStateTitle": "flicker"
@@ -79800,28 +78669,23 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
-          "gravityScale": 0.0,
-          "isSensor": true,
-          "fixedRotation": true,
-          "continuousCollision": false
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true
         }
       },
       {
         "type": "physics2D.components.Box2DCollider",
         "properties": {
           "halfSize": {
-            "x": 0.2,
-            "y": 0.2
+            "x": 0.25,
+            "y": 0.25
           },
           "origin": {
             "x": 0.0,
@@ -79830,13 +78694,50 @@
           "showBoundaries": false,
           "offset": {
             "x": 0.0,
-            "y": 0.02
+            "y": 0.0
           }
         }
       },
       {
-        "type": "components.gamecomponents.Flower",
+        "type": "components.propertieComponents.Ground",
         "properties": {}
+      },
+      {
+        "type": "components.TransitionMachine",
+        "properties": {
+          "states": [
+            {
+              "type": "components.TranslateTransition",
+              "properties": {
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.05
+                },
+                "duration": 0.15
+              }
+            },
+            {
+              "type": "components.TranslateTransition",
+              "properties": {
+                "offset": {
+                  "x": 0.0,
+                  "y": -0.05
+                },
+                "duration": 0.15
+              }
+            }
+          ],
+          "linear": true,
+          "loops": false
+        }
+      },
+      {
+        "type": "components.gamecomponents.ItemBlock",
+        "properties": {
+          "contents": "Flower",
+          "numberCoins": 5,
+          "isInvisible": false
+        }
       }
     ],
     "doSerialization": true,

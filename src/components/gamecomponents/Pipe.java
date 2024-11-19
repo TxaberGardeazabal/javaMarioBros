@@ -191,8 +191,8 @@ public class Pipe extends Component {
             return false;
         }
         
-        Vector2f min = new Vector2f(gameObject.transform.position).sub(new Vector2f(gameObject.transform.scale).mul(0.5f));
-        Vector2f max = new Vector2f(gameObject.transform.position).add(new Vector2f(gameObject.transform.scale).mul(0.5f));
+        Vector2f min = new Vector2f(gameObject.transform.position).sub(new Vector2f(gameObject.transform.scale).mul(0.25f));
+        Vector2f max = new Vector2f(gameObject.transform.position).add(new Vector2f(gameObject.transform.scale).mul(0.25f));
         Vector2f playerMin = new Vector2f(collidingPlayer.gameObject.transform.position).sub(new Vector2f(collidingPlayer.gameObject.transform.scale).mul(0.5f));
         Vector2f playerMax = new Vector2f(collidingPlayer.gameObject.transform.position).add(new Vector2f(collidingPlayer.gameObject.transform.scale).mul(0.5f));
         
@@ -203,15 +203,16 @@ public class Pipe extends Component {
                         playerMax.x >= min.x &&
                         playerMax.x <= max.x;
             case Left:
-                return playerMin.x >= max.x &&
+                boolean a = playerMax.x <= min.x &&
                         playerMax.y >= min.y &&
                         playerMin.y <= max.y;
+                return a;
             case Down:
                 return playerMax.y <= min.y &&
                         playerMax.x >= min.x &&
                         playerMax.x <= max.x;
             case Right:
-                return playerMax.x <= min.x &&
+                return playerMin.x >= max.x &&
                         playerMax.y >= min.y &&
                         playerMin.y <= max.y;
         }

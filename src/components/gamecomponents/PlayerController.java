@@ -43,7 +43,6 @@ public class PlayerController extends PhysicsController {
     public float slowdownForce = 0.05f;
     
     private PlayerState playerState = PlayerState.Small;
-    public transient boolean isInvincible = false;
     public transient boolean isControlled = true;
     public transient boolean isJumping = false;
     public transient boolean disableForces = false;
@@ -56,6 +55,7 @@ public class PlayerController extends PhysicsController {
     private transient float playerWidth = 0.25f;
     private transient int jumpTime = 0;
     private transient boolean isDead = false;
+    private transient boolean isInvincible = false;
     private transient boolean isHurtInvincible = false;
     private transient int enemyBounce = 0;
     

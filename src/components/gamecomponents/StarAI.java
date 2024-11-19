@@ -11,6 +11,7 @@ import gameEngine.Window;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import physics2D.components.Rigidbody2D;
+import physics2D.enums.BodyType;
 import util.Settings;
 
 /**
@@ -51,6 +52,7 @@ public class StarAI extends PhysicsController {
             TransitionMachine tm = this.gameObject.getComponent(TransitionMachine.class);
             if (tm != null && !tm.isPlaying()) {
                 active = true;
+                rb.setBodyType(BodyType.Dynamic);
             }
         }
     }
