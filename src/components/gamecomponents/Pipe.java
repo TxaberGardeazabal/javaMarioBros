@@ -15,6 +15,8 @@ import gameEngine.PrefabSave;
 import gameEngine.Window;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
+import org.joml.Vector3f;
+import render.DebugDraw;
 import util.AssetPool;
 import util.Settings;
 
@@ -29,7 +31,7 @@ public class Pipe extends Component {
     private boolean hasPiranhaPlant = false;
     
     private transient GameObject connectingPipe = null;
-    private transient float entranceVectorTolerance = 0.6f;
+    private transient float entranceVectorTolerance = 0.7f;
     private transient PlayerController collidingPlayer = null;
     private transient boolean playerEntering = false;
     private transient boolean playerExiting = false;
@@ -191,30 +193,39 @@ public class Pipe extends Component {
             return false;
         }
         
-        Vector2f min = new Vector2f(gameObject.transform.position).sub(new Vector2f(gameObject.transform.scale).mul(0.25f));
-        Vector2f max = new Vector2f(gameObject.transform.position).add(new Vector2f(gameObject.transform.scale).mul(0.25f));
+        /*
+            find the boundaries of the pipe and the player to find if the player is in the pipe entrance,
+            we add a tiny offset to the pipe so it doesn't require perfect positioning, it's still a bit weird but I don't care
+        */
+        Vector2f min = new Vector2f(gameObject.transform.position).sub(new Vector2f(gameObject.transform.scale).mul(0.5f)).add(0.025f,0.025f);
+        Vector2f max = new Vector2f(gameObject.transform.position).add(new Vector2f(gameObject.transform.scale).mul(0.5f)).sub(0.025f,0.025f);
         Vector2f playerMin = new Vector2f(collidingPlayer.gameObject.transform.position).sub(new Vector2f(collidingPlayer.gameObject.transform.scale).mul(0.5f));
         Vector2f playerMax = new Vector2f(collidingPlayer.gameObject.transform.position).add(new Vector2f(collidingPlayer.gameObject.transform.scale).mul(0.5f));
         
+        // for debug only
+        Vector2f dimen = new Vector2f(max).sub(min);
+        DebugDraw.addBox2D(new Vector2f(gameObject.transform.position), dimen, 0, new Vector3f(0,0.5f,1), 50);
+        Vector2f dimen2 = new Vector2f(playerMax).sub(playerMin);
+        DebugDraw.addBox2D(new Vector2f(collidingPlayer.gameObject.transform.position), dimen2, 0, new Vector3f(0,0.5f,1), 50);
         
         switch(direction) {
             case Up:
                 return playerMin.y >= max.y &&
-                        playerMax.x >= min.x &&
+                        playerMin.x >= min.x &&
                         playerMax.x <= max.x;
             case Left:
                 boolean a = playerMax.x <= min.x &&
-                        playerMax.y >= min.y &&
-                        playerMin.y <= max.y;
+                        playerMin.y >= min.y &&
+                        playerMax.y <= max.y;
                 return a;
             case Down:
                 return playerMax.y <= min.y &&
-                        playerMax.x >= min.x &&
+                        playerMin.x >= min.x &&
                         playerMax.x <= max.x;
             case Right:
                 return playerMin.x >= max.x &&
-                        playerMax.y >= min.y &&
-                        playerMin.y <= max.y;
+                        playerMin.y >= min.y &&
+                        playerMax.y <= max.y;
         }
         return false;
     }

@@ -622,7 +622,7 @@ public class Prefab {
         KoopaAI kAi = new KoopaAI();
         kAi.setTerminalVelocity(new Vector2f(2.1f,3.1f));
         kAi.setInnerWidth(0.25f * 0.7f);
-        kAi.setCastVal(-0.2f);
+        kAi.setCastVal(-0.19f);
         turtle.addComponent(kAi);
         
         return turtle;

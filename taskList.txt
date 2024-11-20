@@ -7,7 +7,7 @@ add new functionalities:
 -- add above cloud zones
 + create a prebuilt new level
 + open the saveAs window when playing a new level (playing auto saves)
-show contents of assetpool in editor (database)
+- show contents of assetpool in editor (database)
 + add more enemies and obstacles
 + add a debug section with debug options (console, debugDraw, colision boundaries)
 
@@ -32,8 +32,7 @@ mario title image renders incorrectly
 seting rotation via imgui causes it to become -inf, also causes bugs with box2d
 sometimes playing the scene loads incorrect variables on some components, especially box2d physics components
 minimize the use of javaswing to prevent incompatibility crashes
-+ fix: pipe entrance tolerance and enemy camera focus activation
-+ tweak check on ground to make objects stay at the same distance from the ground
++ tweak check on ground to make objects stay at the same distance from the ground (how?)
 
 other:
 // make pillbox changes ep #58

@@ -9,7 +9,6 @@ import components.TransitionMachine;
 import gameEngine.GameObject;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
-import physics2D.components.Rigidbody2D;
 import physics2D.enums.BodyType;
 
 /**
@@ -48,6 +47,7 @@ public class MushroomAI extends PhysicsController {
             if (tm != null && !tm.isPlaying()) {
                 active = true;
                 rb.setBodyType(BodyType.Dynamic);
+                rb.reset();
             }
         }
     }

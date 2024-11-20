@@ -50,13 +50,13 @@ public class Enemy extends PhysicsController{
         }
         Camera camera = Window.getScene().camera();
         
-        inCamera = !(this.gameObject.transform.position.x - (sizeX / 2)> 
+        inCamera = !(this.gameObject.transform.position.x - (sizeX / 2) > 
                 camera.position.x + camera.getProjectionSize().x * camera.getZoom() ||
                 this.gameObject.transform.position.x  + (sizeX / 2) < 
                 camera.position.x * camera.getZoom() ||
-                this.gameObject.transform.position.y + (sizeY / 2) > 
+                this.gameObject.transform.position.y - (sizeY / 2) > 
                 camera.position.y + camera.getProjectionSize().y * camera.getZoom() ||
-                this.gameObject.transform.position.y - (sizeY / 2) <
+                this.gameObject.transform.position.y + (sizeY / 2) <
                 camera.position.y * camera.getZoom());
     }
     

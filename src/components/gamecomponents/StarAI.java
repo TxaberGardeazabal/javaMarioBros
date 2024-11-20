@@ -53,6 +53,7 @@ public class StarAI extends PhysicsController {
             if (tm != null && !tm.isPlaying()) {
                 active = true;
                 rb.setBodyType(BodyType.Dynamic);
+                rb.reset();
             }
         }
     }
