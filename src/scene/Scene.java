@@ -32,6 +32,9 @@ import observers.EventSystem;
 import observers.Observer;
 import org.joml.Vector2f;
 import physics2D.Physics2D;
+import physics2D.components.Box2DCollider;
+import physics2D.components.CircleCollider;
+import physics2D.components.PillboxCollider;
 import util.Settings;
 
 /**
@@ -227,6 +230,16 @@ public class Scene {
         }
         for(GameObject child : go.getChildGOs()) {
             addGameObjectToScene(child);
+        }
+        
+        if (go.getComponent(Box2DCollider.class) != null) {
+            go.getComponent(Box2DCollider.class).showBoundaries = Settings.mColisionBorders;
+        }
+        if (go.getComponent(CircleCollider.class) != null) {
+            go.getComponent(CircleCollider.class).showBoundaries = Settings.mColisionBorders;
+        }
+        if (go.getComponent(PillboxCollider.class) != null) {
+            go.getComponent(PillboxCollider.class).showBoundaries = Settings.mColisionBorders;
         }
     }
     

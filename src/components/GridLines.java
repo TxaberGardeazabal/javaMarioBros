@@ -19,6 +19,10 @@ public class GridLines extends Component{
     
     @Override
     public void editorUpdate(float dt) {
+        if (!Settings.mGrid) {
+            return;
+        }
+        
         Camera camera = Window.getScene().camera();
         Vector2f cameraPos = camera.position;
         Vector2f projectionSize = camera.getProjectionSize();

@@ -9,7 +9,6 @@ add new functionalities:
 + open the saveAs window when playing a new level (playing auto saves)
 - show contents of assetpool in editor (database)
 + add more enemies and obstacles
-+ add a debug section with debug options (console, debugDraw, colision boundaries)
 
 upgrade existing functionalities:
 -- style properties window

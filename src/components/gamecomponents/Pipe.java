@@ -202,11 +202,12 @@ public class Pipe extends Component {
         Vector2f playerMin = new Vector2f(collidingPlayer.gameObject.transform.position).sub(new Vector2f(collidingPlayer.gameObject.transform.scale).mul(0.5f));
         Vector2f playerMax = new Vector2f(collidingPlayer.gameObject.transform.position).add(new Vector2f(collidingPlayer.gameObject.transform.scale).mul(0.5f));
         
-        // for debug only
-        Vector2f dimen = new Vector2f(max).sub(min);
-        DebugDraw.addBox2D(new Vector2f(gameObject.transform.position), dimen, 0, new Vector3f(0,0.5f,1), 50);
-        Vector2f dimen2 = new Vector2f(playerMax).sub(playerMin);
-        DebugDraw.addBox2D(new Vector2f(collidingPlayer.gameObject.transform.position), dimen2, 0, new Vector3f(0,0.5f,1), 50);
+        if (Settings.mPipeBorders) {
+            Vector2f dimen = new Vector2f(max).sub(min);
+            DebugDraw.addBox2D(new Vector2f(gameObject.transform.position), dimen, 0, new Vector3f(0,0.5f,1), 50);
+            Vector2f dimen2 = new Vector2f(playerMax).sub(playerMin);
+            DebugDraw.addBox2D(new Vector2f(collidingPlayer.gameObject.transform.position), dimen2, 0, new Vector3f(0,0.5f,1), 50);
+        }
         
         switch(direction) {
             case Up:

@@ -35,7 +35,7 @@ import util.JMath;
  * @author txaber gardeazabal
  */
 public class DebugDraw {
-    private static final int MAX_LINES = 3000;
+    private static final int MAX_LINES = 4000;
     
     private static List<Line2D> lines = new ArrayList<>();
     // 6 floats per vertex,2 vertices per line

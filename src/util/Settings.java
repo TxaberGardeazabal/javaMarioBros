@@ -66,8 +66,20 @@ public class Settings {
     public static int FIREBALL = GLFW_KEY_E;    
     public static int SPRINT = GLFW_KEY_LEFT_SHIFT;
     
+    // menu options
+    public static boolean mGrid = true;
+    public static boolean mBorders = false;
+    public static boolean mColisionBorders = false;
+    public static boolean mPipeBorders = false;
+    public static boolean mRaycasts = false;
+    public static boolean mGroundRaycast = false;
+    public static boolean mPitRaycast = true;
+    public static boolean mOtherRaycast = false;
+    public static boolean mConsole = true;
+    
     // other
     public static float worldGravityMul = 0.7f;
+    public static String mainMenuPath = "assets/levels/mainmenu.txt";
     public static String defaultLevel = "add filepath here when I make default level";
     public static String customPrefabPath = "assets/prefabs";
     

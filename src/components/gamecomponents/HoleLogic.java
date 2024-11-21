@@ -13,6 +13,7 @@ import org.joml.Vector2f;
 import org.joml.Vector3f;
 import physics2D.RaycastInfo;
 import render.DebugDraw;
+import util.Settings;
 
 /**
  *
@@ -56,6 +57,8 @@ public class HoleLogic extends Component{
     
     @Override
     public void editorUpdate(float dt) {
-        DebugDraw.addLine2D( this.gameObject.transform.position, levelEndPos, new Vector3f(1,0,0));
+        if (Settings.mPitRaycast) {
+            DebugDraw.addLine2D( this.gameObject.transform.position, levelEndPos, new Vector3f(1,0,0));
+        }
     }
 }

@@ -24,6 +24,7 @@ import physics2D.components.CircleCollider;
 import physics2D.components.PillboxCollider;
 import physics2D.components.Rigidbody2D;
 import render.DebugDraw;
+import util.Settings;
 
 /**
  * Wrapper para poder usar box2D en la aplicacion
@@ -334,9 +335,10 @@ public class Physics2D {
         
         RaycastInfo info2 = Window.getPhysics().raycast(go, raycast2Begin, raycast2End);
         
-        // fix this for debugging only
-        DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1,0,0));
-        DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
+        if (Settings.mGroundRaycast) {
+            DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1,0,0));
+         DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
+        }
 
         return (info.hit && info.hitObj != null && info.hitObj.getComponent(Ground.class) != null)
                 || (info2.hit && info2.hitObj != null && info2.hitObj.getComponent(Ground.class) != null);

@@ -11,6 +11,7 @@ import org.joml.Vector3f;
 import physics2D.RaycastInfo;
 import render.DebugDraw;
 import util.AssetPool;
+import util.Settings;
 
 /**
  * bloques de ladrillos que se rompen al golpear
@@ -45,11 +46,13 @@ public class BreakableBrick extends Block {
         
         RaycastInfo info2 = Window.getPhysics().raycast(this.gameObject, raycast2Begin, raycast2End);
         
-        // fix this for debugging only
-        DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1,0,0));
-        DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
+        if (Settings.mOtherRaycast) {
+            DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1,0,0));
+            DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
+        }
 
-        if (info.hit && info.hitObj != null && info.hitObj.getComponent(Enemy.class) != null) {
+        if ((info.hit && info.hitObj != null && info.hitObj.getComponent(Enemy.class) != null)
+                || (info2.hit && info2.hitObj != null && info2.hitObj.getComponent(Enemy.class) != null)) {
             info.hitObj.getComponent(Enemy.class).die();
         }
     }

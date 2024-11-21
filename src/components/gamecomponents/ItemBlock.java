@@ -19,11 +19,11 @@ import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
-import physics2D.components.Box2DCollider;
 import physics2D.components.Rigidbody2D;
 import physics2D.enums.BodyType;
 import render.DebugDraw;
 import util.AssetPool;
+import util.Settings;
 
 /**
  * controlador del bloque con interrogacion
@@ -81,9 +81,10 @@ public class ItemBlock extends Block{
         
         RaycastInfo info2 = Window.getPhysics().raycast(this.gameObject, raycast2Begin, raycast2End);
         
-        // fix this for debugging only
-        DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1,0,0));
-        DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
+        if (Settings.mOtherRaycast) {
+            DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1,0,0));
+            DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
+        }
 
         if ((info.hit && info.hitObj != null && info.hitObj.getComponent(Enemy.class) != null)
                 || (info2.hit && info2.hitObj != null && info2.hitObj.getComponent(Enemy.class) != null)) {
@@ -163,7 +164,6 @@ public class ItemBlock extends Block{
             mush.transform.position.y += 0.05f;
             mush.getComponent(MushroomAI.class).setActive(false);
             
-            mush.getComponent(Box2DCollider.class).showBoundaries = true;
             mushtm.start();
             mushtm.begin();
             Window.getScene().addGameObjectToScene(mush);
@@ -183,7 +183,6 @@ public class ItemBlock extends Block{
             flower.transform.position.set(gameObject.transform.position);
             flower.transform.position.y += 0.05f;
             
-            flower.getComponent(Box2DCollider.class).showBoundaries = true;
             flower.start();
             flowertm.begin();
             Window.getScene().addGameObjectToScene(flower);
@@ -209,7 +208,6 @@ public class ItemBlock extends Block{
             star.transform.position.y += 0.05f;
             star.getComponent(StarAI.class).setActive(false);
             
-            star.getComponent(Box2DCollider.class).showBoundaries = true;
             startm.start();
             startm.begin();
             Window.getScene().addGameObjectToScene(star);
@@ -231,7 +229,6 @@ public class ItemBlock extends Block{
             life.transform.position.y += 0.05f;
             life.getComponent(LiveMushroom.class).setActive(false);
             
-            life.getComponent(Box2DCollider.class).showBoundaries = true;
             mushtm.start();
             mushtm.begin();
             Window.getScene().addGameObjectToScene(life);

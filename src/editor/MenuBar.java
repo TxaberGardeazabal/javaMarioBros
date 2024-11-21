@@ -4,11 +4,13 @@
  */
 package editor;
 
+import gameEngine.GameObject;
 import gameEngine.KeyListener;
 import gameEngine.Window;
 import imgui.ImGui;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -17,6 +19,9 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import observers.EventSystem;
 import observers.events.Event;
 import observers.events.EventType;
+import physics2D.components.Box2DCollider;
+import physics2D.components.CircleCollider;
+import physics2D.components.PillboxCollider;
 import scene.LevelEditorSceneInitializer;
 import scene.LevelSceneInitializer;
 import scene.MainMenuSceneInitializer;
@@ -29,7 +34,6 @@ import util.Settings;
  */
 public class MenuBar {
     
-    private String mainMenuPath = "assets/levels/mainmenu.txt";
     /**
      * Ejecuta codigo imgui para mostrar y actualizar la ventana
      */
@@ -70,7 +74,7 @@ public class MenuBar {
                     }
                     
                     EventSystem.notify(null, new Event(EventType.EndWindow));
-                    File file = new File(mainMenuPath);
+                    File file = new File(Settings.mainMenuPath);
                     Window.changeScene(new MainMenuSceneInitializer(), file.getAbsolutePath());
                 }
             }
@@ -78,7 +82,7 @@ public class MenuBar {
             ImGui.endMenu();
         }
         
-        // key controlls
+        // key shortcuts
         if (KeyListener.isKeyPressed(Settings.LEFT_CONTROL) &&
                 KeyListener.keyBeginPress(Settings.EDITOR_NEW_LEVEL))
             newFile();
@@ -96,6 +100,67 @@ public class MenuBar {
                 KeyListener.keyBeginPress(Settings.EDITOR_DELETE_LEVEL))
             delete();
 
+        if (ImGui.beginMenu("Debug")) {
+            
+            if (ImGui.menuItem("Show grid", null, Settings.mGrid)) {
+                Settings.mGrid = !Settings.mGrid; 
+            }
+            if (ImGui.beginMenu("Show collision boundaries")) {
+                if (ImGui.menuItem("All", null, Settings.mBorders)) {
+                    Settings.mBorders = !Settings.mBorders;
+                    Settings.mColisionBorders = Settings.mBorders;
+                    Settings.mPipeBorders = Settings.mBorders;
+                    if (Settings.mColisionBorders) {
+                        showAllPhysicsCollisions();
+                    } else {
+                        disableAllPhysicsCollisions();
+                    }
+                    
+                }
+                if (ImGui.menuItem("Body collisions", null, Settings.mColisionBorders)) {
+                    Settings.mColisionBorders = !Settings.mColisionBorders;
+                    if (Settings.mColisionBorders) {
+                        showAllPhysicsCollisions();
+                    } else {
+                        disableAllPhysicsCollisions();
+                    }
+                }
+                if (ImGui.menuItem("Pipe boundaries", null, Settings.mPipeBorders)) {
+                    Settings.mPipeBorders = !Settings.mPipeBorders; 
+                }
+                
+                ImGui.endMenu();
+            }
+            if (ImGui.beginMenu("Show raycasts")) {
+                if (ImGui.menuItem("All", null, Settings.mRaycasts)) {
+                    Settings.mRaycasts = !Settings.mRaycasts;
+                    Settings.mGroundRaycast = Settings.mRaycasts;
+                    Settings.mPitRaycast = Settings.mRaycasts;
+                    Settings.mOtherRaycast = Settings.mRaycasts;
+                }
+                if (ImGui.menuItem("Ground raycasts", null, Settings.mGroundRaycast)) {
+                    Settings.mGroundRaycast = !Settings.mGroundRaycast; 
+                }
+                if (ImGui.menuItem("Pit Level", null, Settings.mPitRaycast)) {
+                    Settings.mPitRaycast = !Settings.mPitRaycast; 
+                }
+                if (ImGui.menuItem("Other raycasts", null, Settings.mOtherRaycast)) {
+                    Settings.mOtherRaycast = !Settings.mOtherRaycast;
+                }
+                
+                ImGui.endMenu();
+            }
+            if (ImGui.menuItem("Console window", null, Settings.mConsole)) {
+                Settings.mConsole = !Settings.mConsole;
+                if (Settings.mConsole) {
+                    Window.getImGuiLayer().startConsoleWindow();
+                } else {
+                    Window.getImGuiLayer().endConsoleWindow();
+                }
+            }
+            ImGui.endMenu();
+        }
+        
         ImGui.endMainMenuBar();
     }
     
@@ -246,8 +311,40 @@ public class MenuBar {
             String levelFilepath = Window.getScene().getLevelFilepath();
             File file = new File(levelFilepath);
             file.delete();
-            File file2 = new File(mainMenuPath);
+            File file2 = new File(Settings.mainMenuPath);
             Window.changeScene(new LevelSceneInitializer(), file2.getAbsolutePath());
+        }
+    }
+    
+    private void showAllPhysicsCollisions() {
+        List<GameObject> GOs = Window.getScene().getGameObjects();
+        
+        for (GameObject go : GOs) {
+            if (go.getComponent(Box2DCollider.class) != null) {
+                go.getComponent(Box2DCollider.class).showBoundaries = true;
+            }
+            if (go.getComponent(CircleCollider.class) != null) {
+                go.getComponent(CircleCollider.class).showBoundaries = true;
+            }
+            if (go.getComponent(PillboxCollider.class) != null) {
+                go.getComponent(PillboxCollider.class).showBoundaries = true;
+            }
+        }
+    }
+    
+    private void disableAllPhysicsCollisions() {
+        List<GameObject> GOs = Window.getScene().getGameObjects();
+        
+        for (GameObject go : GOs) {
+            if (go.getComponent(Box2DCollider.class) != null) {
+                go.getComponent(Box2DCollider.class).showBoundaries = false;
+            }
+            if (go.getComponent(CircleCollider.class) != null) {
+                go.getComponent(CircleCollider.class).showBoundaries = false;
+            }
+            if (go.getComponent(PillboxCollider.class) != null) {
+                go.getComponent(PillboxCollider.class).showBoundaries = false;
+            }
         }
     }
 }
