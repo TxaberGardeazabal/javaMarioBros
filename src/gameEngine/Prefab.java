@@ -39,6 +39,7 @@ import components.gamecomponents.FlagPole;
 import components.gamecomponents.BreakableBrick;
 import components.gamecomponents.LevelController;
 import components.gamecomponents.LiveMushroom;
+import components.gamecomponents.MovingPlatform;
 import components.gamecomponents.PlayerControlTransition;
 import components.gamecomponents.PlayerControlTransition.PlayerControl;
 import components.gamecomponents.StarAI;
@@ -1216,10 +1217,36 @@ public class Prefab {
         Box2DCollider b2d = new Box2DCollider();
         b2d.setHalfSize(new Vector2f(0.12f, 0.18f));
         b2d.setOffset(new Vector2f(0, 0.01f));
-        b2d.showBoundaries = true;
         plant.addComponent(b2d);
         
         plant.addComponent(new PiranhaPlantAi());
         return plant;
+    }
+    
+    public static GameObject generateMovingPlatform() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable.png");
+        GameObject platform = generateSpriteObject(sprites.getSprite(0), 0.125f, 0.125f);
+        platform.name = "Platform";
+        
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Static);
+        rb.setFixedRotation(true);
+        rb.setGravityScale(0);
+        rb.setContinuousCollision(false);
+        platform.addComponent(rb);
+        
+        Box2DCollider b2d = new Box2DCollider();
+        platform.addComponent(b2d);
+        platform.addComponent(new Ground());
+        
+        TranslateTransition move = new TranslateTransition(new Vector2f(0,1), 5);
+        TranslateTransition moveBack = new TranslateTransition(new Vector2f(0,-1), 5);
+        TransitionMachine tm = new TransitionMachine(true,true);
+        tm.addTransition(move);
+        tm.addTransition(moveBack);
+        platform.addComponent(tm);
+        platform.addComponent(new MovingPlatform());
+        
+        return platform;
     }
 }

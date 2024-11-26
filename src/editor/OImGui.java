@@ -4,12 +4,15 @@
  */
 package editor;
 
+import components.Sprite;
 import imgui.ImGui;
+import imgui.ImVec2;
 import imgui.flag.ImGuiCol;
 import imgui.flag.ImGuiStyleVar;
 import imgui.type.ImString;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
+import util.Settings;
 
 /**
  * Clase con funciones imgui para mantener un aspecto consistente entre todas las ventanas
@@ -225,5 +228,37 @@ public class OImGui {
         ImGui.columns(1);
         ImGui.popID();
         return bool;
+    }
+    
+    /**
+     * Crea un boton imgui simple con imagen.
+     * @param sprite sprite del boton
+     * @param bId id unico para el boton
+     * @return true si el boton esta siendo pulsado, false de lo contrario.
+     */
+    public static boolean spriteButton(Sprite sprite, int bId) {
+        ImVec2 windowPos = new ImVec2();
+        ImGui.getWindowPos(windowPos);
+        ImVec2 windowSize = new ImVec2();
+        ImGui.getWindowContentRegionMax(windowSize);
+        ImVec2 itemSpacing = new ImVec2();
+        ImGui.getStyle().getItemSpacing(itemSpacing);
+        float windowX2 = windowPos.x + windowSize.x;
+                
+        int texId = sprite.getTexId();
+        Vector2f[] texCoords = sprite.getTexCoords();
+
+        ImGui.pushID(bId);
+        boolean ret = ImGui.imageButton(texId, Settings.BUTTON_SIZE, Settings.BUTTON_SIZE,texCoords[2].x,texCoords[0].y,texCoords[0].x,texCoords[2].y);
+        ImGui.popID();
+        
+        ImVec2 lastButtonPos = new ImVec2();
+        ImGui.getItemRectMax(lastButtonPos);
+        float lastButtonX2 = lastButtonPos.x;
+        float nextButtonX2 = lastButtonX2 + itemSpacing.x + Settings.BUTTON_SIZE;
+        if (nextButtonX2 < windowX2) {
+            ImGui.sameLine();
+        }
+        return ret;
     }
 }

@@ -78,7 +78,7 @@ public class AssetWindow {
                     for (int i = 0; i < sprites.size(); i++) {
                         Sprite sprite = sprites.getSprite(i);
                         
-                        if (spriteButton(sprite,i)) {
+                        if (OImGui.spriteButton(sprite,i)) {
                             GameObject object;
                             if (isGround) {
                                 object = Prefab.generateGroundObject(sprite, Settings.BLOCK_WIDTH, Settings.BLOCK_HEIGHT);
@@ -105,7 +105,7 @@ public class AssetWindow {
                 PrefabSave pre = new PrefabSave("");
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesFull.png");
                 
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     pre.setFilepath("assets/prefabs/blocks/pipeUp.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -113,7 +113,7 @@ public class AssetWindow {
                     }
                 }
                 
-                if (spriteButton(sprites.getSprite(1),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(1),uid++)) {
                     pre.setFilepath("assets/prefabs/blocks/pipeLeft.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -121,7 +121,7 @@ public class AssetWindow {
                     }
                 }
                 
-                if (spriteButton(sprites.getSprite(2),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(2),uid++)) {
                     pre.setFilepath("assets/prefabs/blocks/pipeDown.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -129,7 +129,7 @@ public class AssetWindow {
                     }
                 }
                 
-                if (spriteButton(sprites.getSprite(3),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
                     pre.setFilepath("assets/prefabs/blocks/pipeRight.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -139,7 +139,7 @@ public class AssetWindow {
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     pre.setFilepath("assets/prefabs/blocks/itemBlock.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -147,7 +147,7 @@ public class AssetWindow {
                     }
                 }
                 
-                if (spriteButton(sprites.getSprite(3),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
                     pre.setFilepath("assets/prefabs/blocks/invisibleItemBlock.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -157,7 +157,7 @@ public class AssetWindow {
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png");
                 
-                if (spriteButton(sprites.getSprite(1),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(1),uid++)) {
                     pre.setFilepath("assets/prefabs/blocks/brickItemBlock1.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -165,7 +165,7 @@ public class AssetWindow {
                     }
                 }
                 
-                if (spriteButton(sprites.getSprite(2),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(2),uid++)) {
                     pre.setFilepath("assets/prefabs/blocks/brickItemBlock2.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -181,7 +181,7 @@ public class AssetWindow {
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png");
                 PrefabSave pre = new PrefabSave("");
                 
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     pre.setFilepath("assets/prefabs/entities/mario.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -191,7 +191,7 @@ public class AssetWindow {
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 
-                if (spriteButton(sprites.getSprite(4),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
                     pre.setFilepath("assets/prefabs/entities/levelCoin.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -201,7 +201,7 @@ public class AssetWindow {
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png");
                 
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     pre.setFilepath("assets/prefabs/entities/goomba.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -211,7 +211,7 @@ public class AssetWindow {
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
                 
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     pre.setFilepath("assets/prefabs/entities/greenKoopa.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -221,7 +221,7 @@ public class AssetWindow {
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
                 
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     pre.setFilepath("assets/prefabs/entities/mushroom.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -229,7 +229,7 @@ public class AssetWindow {
                     }
                 }
                 
-                if (spriteButton(sprites.getSprite(1),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(1),uid++)) {
                     pre.setFilepath("assets/prefabs/entities/fireFlower.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -237,7 +237,7 @@ public class AssetWindow {
                     }
                 }
                 
-                if (spriteButton(sprites.getSprite(6),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(6),uid++)) {
                     pre.setFilepath("assets/prefabs/entities/star.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -245,7 +245,7 @@ public class AssetWindow {
                     }
                 }
                 
-                if (spriteButton(sprites.getSprite(9),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(9),uid++)) {
                     pre.setFilepath("assets/prefabs/entities/oneUpMushroom.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
@@ -304,80 +304,80 @@ public class AssetWindow {
                 // TODO: make  theese into prefabs
                 Sprite text = new Sprite(AssetPool.getTexture("assets/images/text/mario.png"));
                 // mario
-                if (spriteButton(text,uid++)) {
+                if (OImGui.spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateUIText(text);
                     mc.pickUpObject(object);
                 }
                 
                 // mundo
                 text = new Sprite(AssetPool.getTexture("assets/images/text/mundo.png"));
-                if (spriteButton(text,uid++)) {
+                if (OImGui.spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateUIText(text);
                     mc.pickUpObject(object);
                 }
                 
                 // tiempo
                 text = new Sprite(AssetPool.getTexture("assets/images/text/tiempo.png"));
-                if (spriteButton(text,uid++)) {
+                if (OImGui.spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateUIText(text);
                     mc.pickUpObject(object);
                 }
                 
                 // empezar
                 text = new Sprite(AssetPool.getTexture("assets/images/text/empezar.png"));
-                if (spriteButton(text,uid++)) {
+                if (OImGui.spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateStartButton(text);
                     mc.pickUpObject(object);
                 }
                 
                 // salir
                 text = new Sprite(AssetPool.getTexture("assets/images/text/salir.png"));
-                if (spriteButton(text,uid++)) {
+                if (OImGui.spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateExitButton(text);
                     mc.pickUpObject(object);
                 }
                 
                 // editor
                 text = new Sprite(AssetPool.getTexture("assets/images/text/editor.png"));
-                if (spriteButton(text,uid++)) {
+                if (OImGui.spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateEditorButton(text);
                     mc.pickUpObject(object);
                 }
                 
                 // seleccionar
                 text = new Sprite(AssetPool.getTexture("assets/images/text/seleccionar_nivel.png"));
-                if (spriteButton(text,uid++)) {
+                if (OImGui.spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateSelectButton(text);
                     mc.pickUpObject(object);
                 }
                 
                 // digitalizer
                 text = new Sprite(AssetPool.getTexture("assets/images/text/Super_Mario_Bros._Logo.png"));
-                if (spriteButton(text,uid++)) {
+                if (OImGui.spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateUIText(text);
                     mc.pickUpObject(object);
                 }
                 
                 SpriteSheet text2 = AssetPool.getSpritesheet("assets/images/text/fontFace.png");
-                if (spriteButton(text2.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(text2.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateDigitalizer(6);
                     mc.pickUpObject(object);
                 }
                 
                 for (int i = 0; i < text2.size(); i++) {
-                    if (spriteButton(text2.getSprite(i), uid++)) {
+                    if (OImGui.spriteButton(text2.getSprite(i), uid++)) {
                         GameObject object = Prefab.generateUIText(text2.getSprite(i));
                         mc.pickUpObject(object);
                     }
                 }
                 
                 SpriteSheet extra = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/UIExtra.png");
-                if (spriteButton(extra.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(extra.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateUIText(extra.getSprite(0));
                     mc.pickUpObject(object);
                 }
                 
-                if (spriteButton(extra.getSprite(1),uid++)) {
+                if (OImGui.spriteButton(extra.getSprite(1),uid++)) {
                     GameObject object = Prefab.generateUICoin();
                     mc.pickUpObject(object);
                 }
@@ -392,35 +392,35 @@ public class AssetWindow {
                 SpriteSheet pipeSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesFull.png");
 
                 // old pipe w inheritance
-                if (spriteButton(pipeSprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(pipeSprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generatePipeExp();
                     mc.pickUpObject(object);
                 }
                 
                 // fireball sprite for render test
                 Sprite fire = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/marioFireball.png"));
-                if (spriteButton(fire,uid++)) {
+                if (OImGui.spriteButton(fire,uid++)) {
                     GameObject object = Prefab.generateUIText(fire);
                     mc.pickUpObject(object);
                 }
                 
                 // empty object
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/UIExtra.png");
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateEmptyObject();
                     mc.pickUpObject(object);
                 }
                 
                 // coin inside of blocks
                 fire = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/blockCoin.png").getSprite(0);
-                if (spriteButton(fire,uid++)) {
+                if (OImGui.spriteButton(fire,uid++)) {
                     GameObject object = Prefab.generateBlockCoin();
                     mc.pickUpObject(object);
                 }
                 
                 // mario
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png");
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateMario();
                     mc.pickUpObject(object);
                     
@@ -428,38 +428,38 @@ public class AssetWindow {
                 
                 // flagpole
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioParticles.png");
-                if (spriteButton(sprites.getSprite(12),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(12),uid++)) {
                     GameObject object = Prefab.generateFlag();
                     mc.pickUpObject(object);
                 }
                 
                 // item blocks
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
-                if (spriteButton(sprites.getSprite(3),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateInvItemBlock(sprites);
                     mc.pickUpObject(object);
                 }
                 
                 
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateItemBlock(sprites);
                     mc.pickUpObject(object);
                 }
                 
                 SpriteSheet sprites2 = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png");
-                if (spriteButton(sprites2.getSprite(1),uid++)) {
+                if (OImGui.spriteButton(sprites2.getSprite(1),uid++)) {
                     GameObject object = Prefab.generateItemBrickBlock(sprites2.getSprite(1),sprites);
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
-                if (spriteButton(sprites2.getSprite(2),uid++)) {
+                if (OImGui.spriteButton(sprites2.getSprite(2),uid++)) {
                     GameObject object = Prefab.generateItemBrickBlock(sprites2.getSprite(2),sprites);
                     mc.pickUpObject(object);
                 }
                 // level controller
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/UIExtra.png");
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     if (Window.getScene().getGameObjectWith(LevelController.class) == null) {
                         GameObject object = Prefab.generateLevelController();
                         Window.getScene().addGameObjectToScene(object);
@@ -468,55 +468,67 @@ public class AssetWindow {
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png");
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateGoomba();
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateKoopa();
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
-                if (spriteButton(sprites.getSprite(0),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateMushroom();
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
-                if (spriteButton(sprites.getSprite(9),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(9),uid++)) {
                     GameObject object = Prefab.generateLiveMushroom();
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
-                if (spriteButton(sprites.getSprite(1),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(1),uid++)) {
                     GameObject object = Prefab.generateFlower();
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
-                if (spriteButton(sprites.getSprite(6),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(6),uid++)) {
                     GameObject object = Prefab.generateStar();
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png");
-                if (spriteButton(sprites.getSprite(2),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(2),uid++)) {
                     GameObject object = Prefab.generateBreakableObject(sprites.getSprite(2), 0.25f, 0.25f);
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
-                if (spriteButton(sprites.getSprite(4),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
                     GameObject object = Prefab.generatePiranhaPlant();
                     mc.pickUpObject(object);
                 }
                 
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateMovingPlatform();
+                    mc.pickUpObject(object);
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable.png");
+                if (OImGui.spriteButton(sprites.getSprite(2),uid++)) {
+                    GameObject object = Prefab.generateSpriteObject(sprites.getSprite(0), 0.125f, 0.125f);
+                    mc.pickUpObject(object);
+                }
+                
                 /*sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
-                if (spriteButton(sprites.getSprite(3),uid++)) {
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateItemBlock(sprites);
                     mc.pickUpObject(object);
                 }*/
@@ -531,35 +543,4 @@ public class AssetWindow {
         ImGui.end();
     }
     
-    /**
-     * Crea un boton imgui simple con imagen.
-     * @param sprite sprite del boton
-     * @param bId id unico para el boton
-     * @return true si el boton esta siendo pulsado, false de lo contrario.
-     */
-    private boolean spriteButton(Sprite sprite, int bId) {
-        ImVec2 windowPos = new ImVec2();
-        ImGui.getWindowPos(windowPos);
-        ImVec2 windowSize = new ImVec2();
-        ImGui.getWindowContentRegionMax(windowSize);
-        ImVec2 itemSpacing = new ImVec2();
-        ImGui.getStyle().getItemSpacing(itemSpacing);
-        float windowX2 = windowPos.x + windowSize.x;
-                
-        int texId = sprite.getTexId();
-        Vector2f[] texCoords = sprite.getTexCoords();
-
-        ImGui.pushID(bId);
-        boolean ret = ImGui.imageButton(texId, Settings.BUTTON_SIZE, Settings.BUTTON_SIZE,texCoords[2].x,texCoords[0].y,texCoords[0].x,texCoords[2].y);
-        ImGui.popID();
-        
-        ImVec2 lastButtonPos = new ImVec2();
-        ImGui.getItemRectMax(lastButtonPos);
-        float lastButtonX2 = lastButtonPos.x;
-        float nextButtonX2 = lastButtonX2 + itemSpacing.x + Settings.BUTTON_SIZE;
-        if (nextButtonX2 < windowX2) {
-            ImGui.sameLine();
-        }
-        return ret;
-    }
 }

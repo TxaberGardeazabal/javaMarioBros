@@ -48,7 +48,9 @@ public class PlayerController extends PhysicsController {
     public transient boolean disableForces = false;
     private transient boolean hasEnded = false;
     private transient float groundDebounce = 0.0f;
-    private transient float groundDebounceTime = 0.1f;
+    private transient float groundDebounceTime = 0.2f;
+    private transient float airDebounce = 0.0f;
+    private transient float airDebounceTime = 0.08f;
     private transient StateMachine stateMachine;
     private transient TransitionMachine transitionMachine;
     private transient float bigJumpBoostFactor = 1.05f;
@@ -199,9 +201,16 @@ public class PlayerController extends PhysicsController {
         }
                 
         if (!onGround) {
-            stateMachine.trigger("jump");
+            // offsets the transition to jump by a bit so mario doesn't freak out when in constant state changes to jump
+            // such as stepping on staircases or moving platforms
+            airDebounce -= dt; 
+            if (airDebounce < 0) {
+                stateMachine.trigger("jump");
+                airDebounce = airDebounceTime; 
+            }
         } else {
             stateMachine.trigger("touchFloorIdle");
+            airDebounce = airDebounceTime;
         }
     }
     

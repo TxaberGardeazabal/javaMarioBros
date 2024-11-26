@@ -187,6 +187,9 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/spriteSheets/particles/UIExtra.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/UIExtra.png"),
                 16,16,4,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/particles/platformsTileable.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/platformsTileable.png"),
+                8,8,4,0));
         
         
         // sounds

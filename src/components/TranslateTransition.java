@@ -56,4 +56,7 @@ public class TranslateTransition extends TransitionState {
         }
     }
     
+    public void setOffset(Vector2f offset) {
+        this.offset = offset;
+    }
 }

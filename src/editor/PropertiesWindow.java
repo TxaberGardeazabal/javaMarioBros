@@ -25,6 +25,7 @@ import components.gamecomponents.ItemBlock;
 import components.gamecomponents.KoopaAI;
 import components.gamecomponents.LevelController;
 import components.gamecomponents.LiveMushroom;
+import components.gamecomponents.MovingPlatform;
 import components.gamecomponents.MushroomAI;
 import components.gamecomponents.Pipe;
 import components.gamecomponents.PlayerController;
@@ -254,6 +255,12 @@ public class PropertiesWindow {
                                 if (ImGui.menuItem("Add flagpole logic")) {
                                     if (activeGameObject.getComponent(FlagPole.class) == null) {
                                         activeGameObject.addComponent(new FlagPole(false));
+                                    }
+                                }
+                                
+                                if (ImGui.menuItem("Add MovingPlatform logic")) {
+                                    if (activeGameObject.getComponent(MovingPlatform.class) == null) {
+                                        activeGameObject.addComponent(new MovingPlatform());
                                     }
                                 }
                             }

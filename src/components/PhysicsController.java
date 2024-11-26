@@ -102,4 +102,12 @@ public abstract class PhysicsController extends Component{
     public void setHasGravity(boolean hasGravity) {
         this.hasGravity = hasGravity;
     }
+    
+    public void addVelocity(Vector2f vel) {
+        this.velocity.add(vel);
+    }
+    
+    public void addAcceleration(Vector2f acc) {
+        this.acceleration.add(acc);
+    }
 }

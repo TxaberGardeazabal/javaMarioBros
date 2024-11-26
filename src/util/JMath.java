@@ -51,9 +51,33 @@ public class JMath {
     * @param x The value to be normalized.
     * @return The result of the normalization.
     */
-   public static float normalize(float x, float dataHigh, float dataLow, float normalizedHigh, float normalizedLow) {
-       return ((x - dataLow) 
-               / (dataHigh - dataLow))
-               * (normalizedHigh - normalizedLow) + normalizedLow;
-   }
+    public static float normalize(float x, float dataHigh, float dataLow, float normalizedHigh, float normalizedLow) {
+        return ((x - dataLow) 
+                / (dataHigh - dataLow))
+                * (normalizedHigh - normalizedLow) + normalizedLow;
+    }
+    
+    public static float flip(float x) {
+        return 1 - x;
+    }
+    
+    public static float easeIn(float x) {
+        return x*x;
+    }
+    
+    public static float easeOut(float x) {
+        return flip(flip(x) * flip(x));
+    }
+    
+    public static float easeInOut(float x) {
+        return lerp(easeIn(x), easeOut(x), x);
+    }
+    
+    /*
+        ease in = x^2  incrementa el exponente para mayor curva
+        flip = 1 - x  invertir
+        ease out = 1 - ((1 - x)^2) incrementa el exponente para mayor curva
+        ease in out = lerp(x^2, 1 - ((1 - x)^2), x)
+        spike = if(x <= 0.5 ){return x}else{return (1 - x)} empieza y acaba en el mismo lugar
+    */
 }
