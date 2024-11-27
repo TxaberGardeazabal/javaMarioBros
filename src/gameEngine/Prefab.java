@@ -1224,9 +1224,8 @@ public class Prefab {
     }
     
     public static GameObject generateMovingPlatform() {
-        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable.png");
-        GameObject platform = generateSpriteObject(sprites.getSprite(0), 0.125f, 0.125f);
-        platform.name = "Platform";
+        GameObject platform = generateEmptyObject();
+        platform.name = "Moving platform";
         
         Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Static);
@@ -1236,16 +1235,27 @@ public class Prefab {
         platform.addComponent(rb);
         
         Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.24f,0.12f));
         platform.addComponent(b2d);
         platform.addComponent(new Ground());
         
-        TranslateTransition move = new TranslateTransition(new Vector2f(0,1), 5);
-        TranslateTransition moveBack = new TranslateTransition(new Vector2f(0,-1), 5);
-        TransitionMachine tm = new TransitionMachine(true,true);
-        tm.addTransition(move);
-        tm.addTransition(moveBack);
-        platform.addComponent(tm);
         platform.addComponent(new MovingPlatform());
+        
+        return platform;
+    }
+    
+    public static GameObject generatePlatformFoundation() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable.png");
+        GameObject platform = generateSpriteObject(sprites.getSprite(0), 0.125f, 0.125f);
+        platform.name = "Platform";
+        
+        return platform;
+    }
+    
+    public static GameObject generatePlatformFoundation2() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable2.png");
+        GameObject platform = generateSpriteObject(sprites.getSprite(0), 0.25f, 0.125f);
+        platform.name = "Platform";
         
         return platform;
     }

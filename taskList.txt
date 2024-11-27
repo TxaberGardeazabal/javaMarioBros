@@ -9,6 +9,7 @@ add new functionalities:
 + open the saveAs window when playing a new level (playing auto saves)
 - show contents of assetpool in editor (database)
 + add all that is left for the first levels
++ make (big mario) crouch
 
 upgrade existing functionalities:
 -- style properties window
@@ -32,6 +33,7 @@ seting rotation via imgui causes it to become -inf, also causes bugs with box2d
 sometimes playing the scene loads incorrect variables on some components, especially box2d physics components
 minimize the use of javaswing to prevent incompatibility crashes
 + tweak check on ground to make objects stay at the same distance from the ground (how?)
++ you can set parent object as its childs child and cause them to implode
 
 other:
 // make pillbox changes ep #58

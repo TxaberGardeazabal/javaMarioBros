@@ -8,6 +8,8 @@ package gameEngine;
 import components.Component;
 import editor.OImGui;
 import org.joml.Vector2f;
+import physics2D.Physics2D;
+import physics2D.components.Rigidbody2D;
 
 /**
  * La clase transform contiene la informacion de la posicion, rotacion y escala de un objeto dentro del mundo de juego
@@ -109,6 +111,12 @@ public class Transform extends Component{
     public void translate(float x,float y) {
         Vector2f translate = new Vector2f(x,y);
         position.add(translate);
+        
+        // actualizar cuerpo fisico
+        if (gameObject.getComponent(Rigidbody2D.class) != null) {
+            gameObject.getComponent(Rigidbody2D.class).setPosition(position);
+        }
+        
         for (GameObject go : gameObject.getChildGOs()) {
             go.transform.translate(translate);
         }
@@ -120,6 +128,12 @@ public class Transform extends Component{
      */
     public void translate(Vector2f translate) {
         position.add(translate);
+        
+        // actualizar cuerpo fisico
+        if (gameObject.getComponent(Rigidbody2D.class) != null) {
+            gameObject.getComponent(Rigidbody2D.class).setPosition(position);
+        }
+        
         for (GameObject go : gameObject.getChildGOs()) {
             go.transform.translate(translate);
         }
@@ -131,6 +145,12 @@ public class Transform extends Component{
      */
     public void rotate(float z) {
         rotation += z;
+        
+        // actualizar cuerpo fisico
+        if (gameObject.getComponent(Rigidbody2D.class) != null) {
+            gameObject.getComponent(Rigidbody2D.class).setPosition(position);
+        }
+        
         for (GameObject go : gameObject.getChildGOs()) {
             go.transform.rotate(z);
         }
@@ -178,6 +198,11 @@ public class Transform extends Component{
     public void setPosition(Vector2f newPos) {
         Vector2f delta = new Vector2f(newPos).sub(this.position);
         this.position = newPos;
+        
+        // actualizar cuerpo fisico
+        if (gameObject.getComponent(Rigidbody2D.class) != null) {
+            gameObject.getComponent(Rigidbody2D.class).setPosition(position);
+        }
         
         for (GameObject go : gameObject.getChildGOs()) {
             go.transform.translate(delta);

@@ -521,9 +521,14 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
-                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable.png");
-                if (OImGui.spriteButton(sprites.getSprite(2),uid++)) {
-                    GameObject object = Prefab.generateSpriteObject(sprites.getSprite(0), 0.125f, 0.125f);
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generatePlatformFoundation();
+                    mc.pickUpObject(object);
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable2.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generatePlatformFoundation2();
                     mc.pickUpObject(object);
                 }
                 

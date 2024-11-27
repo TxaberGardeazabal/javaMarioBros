@@ -399,9 +399,6 @@ public class GameObject {
      */
     public void removeChild(GameObject go) {
         this.childGOs.remove(go);
-        if (go.getParent() != null) {
-            go.setParent(null);
-        }
     }
     
     /**
