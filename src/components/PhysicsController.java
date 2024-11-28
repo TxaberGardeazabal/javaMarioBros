@@ -12,7 +12,9 @@ import physics2D.components.Rigidbody2D;
 import util.Settings;
 
 /**
- * Clase para objetos que usaran las fisicas con Box2D, contiene las funcionalidades mas basicas
+ * Componente esencial para cualquier objeto con fisicas dinamicas controladas, contiene las funcionalidades mas basicas de
+ * interaccion con Box2D como movimiento, gravedad y control de suelo, es necesario que tambien posea un rigidbody2D no estatico para funcionar.
+ * (nota:) no confundir esta clase con el wrapper para Box2D (Physics2D, rigidbody2D), esta clase sirve para controlar fisicas customizables dentro de la escena
  * @author txaber gardeazabal
  */
 public abstract class PhysicsController extends Component{

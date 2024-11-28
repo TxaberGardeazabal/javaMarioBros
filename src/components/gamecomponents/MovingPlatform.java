@@ -21,11 +21,13 @@ public class MovingPlatform extends Component{
     private Direction direction = Direction.Left;
     private float distance = 2;
     private float duration = 1.5f;
+    private boolean destroyOnEnd = false;
+    private boolean loops = true;
+    private boolean linear = false;
     
     private transient Vector2f target = new Vector2f();
     private transient Vector2f start;
-    private transient float time = 0;
-    private transient Vector2f oldPos = new Vector2f();
+    private float time = 0;
     private transient GameObject collidingPlayer = null;
     
     @Override
@@ -53,26 +55,83 @@ public class MovingPlatform extends Component{
     public void update(float dt) {
 
             if (time < duration) {
-                if (time/duration <= 0.5f) {
+                if (linear) {
                     this.gameObject.transform.setPosition(new Vector2f(
-                        JMath.lerp(start.x, target.x, JMath.easeInOut((time/duration)/0.5f)),
-                        JMath.lerp(start.y, target.y, JMath.easeInOut((time/duration)/0.5f))));
+                        JMath.lerp(start.x, target.x, time/duration),
+                        JMath.lerp(start.y, target.y, time/duration)));
                 } else {
-                    this.gameObject.transform.setPosition(new Vector2f(
-                        JMath.lerp(start.x, target.x, JMath.easeInOut(JMath.flip(time/duration)/0.5f)),
-                        JMath.lerp(start.y, target.y, JMath.easeInOut(JMath.flip(time/duration)/0.5f))));
+                    if (time/duration <= 0.5f) {
+                        this.gameObject.transform.setPosition(new Vector2f(
+                            JMath.lerp(start.x, target.x, JMath.easeInOut((time/duration)/0.5f)),
+                            JMath.lerp(start.y, target.y, JMath.easeInOut((time/duration)/0.5f))));
+                    } else {
+                        this.gameObject.transform.setPosition(new Vector2f(
+                            JMath.lerp(start.x, target.x, JMath.easeInOut(JMath.flip(time/duration)/0.5f)),
+                            JMath.lerp(start.y, target.y, JMath.easeInOut(JMath.flip(time/duration)/0.5f))));
+                    }
                 }
                 time += dt;
-
             } else {
-                time = 0;
+                if (loops) {
+                    time = 0; 
+                } else if (destroyOnEnd) {
+                    this.gameObject.destroy();
+                }
             }
         
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
+    public float getDistance() {
+        return distance;
+    }
+
+    public void setDistance(float distance) {
+        this.distance = distance;
+    }
+
+    public float getDuration() {
+        return duration;
+    }
+
+    public void setDuration(float duration) {
+        this.duration = duration;
+    }
+
+    public boolean isDestroyOnEnd() {
+        return destroyOnEnd;
+    }
+
+    public void setDestroyOnEnd(boolean destroyOnEnd) {
+        this.destroyOnEnd = destroyOnEnd;
+    }
+
+    public boolean isLoops() {
+        return loops;
+    }
+
+    public void setLoops(boolean loops) {
+        this.loops = loops;
+    }
+
+    public boolean isLinear() {
+        return linear;
+    }
+
+    public void setLinear(boolean linear) {
+        this.linear = linear;
     }
     
     @Override
     public void beginCollision(GameObject collidingObj,Contact cntct,Vector2f hitNormal) {
-        if (collidingObj.getComponent(PhysicsController.class) != null) {
+        if (collidingObj.getComponent(PhysicsController.class) != null && hitNormal.y > 0.8f) {
             this.gameObject.addChild(collidingObj);
             collidingPlayer = collidingObj;
         }
@@ -82,7 +141,17 @@ public class MovingPlatform extends Component{
     public void endCollision(GameObject go, Contact cntc, Vector2f normal) {
         if (go.equals(collidingPlayer)) {
             this.gameObject.removeChild(collidingPlayer);
+            collidingPlayer.setParent(null);
             collidingPlayer = null;
         }
+    }
+    
+    @Override
+    public void destroy() {
+        this.gameObject.removeChild(collidingPlayer);
+        if (collidingPlayer != null) {
+            collidingPlayer.setParent(null);
+        }
+        collidingPlayer = null;
     }
 }

@@ -261,16 +261,16 @@ public class GameObject {
     public void destroy() {
         this.isDead = true;
         
+        for (int i = components.size(); i > 0; i--) {
+            components.get(i-1).destroy();
+        }
+        
         for (int i = childGOs.size(); i > 0; i--) {
             childGOs.get(i-1).destroy();
         }
         
         if (parent != null) {
             parent.getChildGOs().remove(this);
-        }
-        
-        for (int i = components.size(); i > 0; i--) {
-            components.get(i-1).destroy();
         }
     }
     

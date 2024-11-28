@@ -1,0 +1,197 @@
+{
+  "name": "Moving platform",
+  "enabled": true,
+  "components": [
+    {
+      "type": "gameEngine.Transform",
+      "properties": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 0.0,
+        "scale": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "zIndex": 0
+      }
+    },
+    {
+      "type": "physics2D.components.Rigidbody2D",
+      "properties": {
+        "angularDamping": 0.8,
+        "linearDamping": 0.9,
+        "mass": 0.0,
+        "bodyType": "Static",
+        "friction": 0.1,
+        "gravityScale": 0.0,
+        "isSensor": false,
+        "fixedRotation": true,
+        "continuousCollision": false
+      }
+    },
+    {
+      "type": "physics2D.components.Box2DCollider",
+      "properties": {
+        "halfSize": {
+          "x": 0.36,
+          "y": 0.12
+        },
+        "origin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "showBoundaries": false,
+        "offset": {
+          "x": 0.03,
+          "y": 0.0
+        }
+      }
+    },
+    {
+      "type": "components.propertieComponents.Ground",
+      "properties": {}
+    },
+    {
+      "type": "components.gamecomponents.MovingPlatform",
+      "properties": {
+        "direction": "Right",
+        "distance": 0.5,
+        "duration": 1.5,
+        "destroyOnEnd": false,
+        "loops": true,
+        "linear": false,
+        "time": 0.0
+      }
+    }
+  ],
+  "doSerialization": true,
+  "isDead": false,
+  "childGOs": [
+    {
+      "name": "Platform",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -0.025000095,
+              "y": 0.0
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.125
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 8.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                "height": 16,
+                "width": 16
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 1.0
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.0,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "Platform",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.15000057,
+              "y": -5.9604645E-8
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.125,
+              "y": 0.125
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 8.0,
+              "height": 8.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/particles/platformsTileable.png",
+                "height": 16,
+                "width": 16
+              },
+              "texCoords": [
+                {
+                  "x": 0.5,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.0,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    }
+  ]
+}

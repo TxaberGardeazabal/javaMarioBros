@@ -40,6 +40,7 @@ import components.gamecomponents.BreakableBrick;
 import components.gamecomponents.LevelController;
 import components.gamecomponents.LiveMushroom;
 import components.gamecomponents.MovingPlatform;
+import components.gamecomponents.MovingPlatformSource;
 import components.gamecomponents.PlayerControlTransition;
 import components.gamecomponents.PlayerControlTransition.PlayerControl;
 import components.gamecomponents.StarAI;
@@ -1258,5 +1259,58 @@ public class Prefab {
         platform.name = "Platform";
         
         return platform;
+    }
+    
+    public static GameObject generatePlatformSpawner() {
+        GameObject spawner = generateEmptyObject();
+        spawner.name = "Platform generator";
+        
+        spawner.addComponent(new MovingPlatformSource("assets/prefabs/blocks/movingPlatformX4.prefab"));
+        return spawner;
+    }
+    
+    public static GameObject generateRedKoopa() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesRed.png");
+        GameObject turtle = generateSpriteObject(sprites.getSprite(0), 0.25f, 0.35f);
+        turtle.name = "Koopa";
+        
+        AnimationState walk = new AnimationState();
+        walk.title = "walk";
+        float defaultFrameTime = 0.23f;
+        walk.addFrame(sprites.getSprite(0), defaultFrameTime);
+        walk.addFrame(sprites.getSprite(1), defaultFrameTime);
+        walk.setLoop(true);
+        
+        AnimationState xqzd = new AnimationState();
+        xqzd.title = "shell";
+        xqzd.addFrame(sprites.getSprite(4), defaultFrameTime);
+
+        StateMachine stateMachine = new StateMachine();
+        stateMachine.addState(walk);
+        stateMachine.addState(xqzd);
+        stateMachine.setDefaultState(walk.title);
+        stateMachine.addStateTrigger(walk.title, xqzd.title, "squash");
+        turtle.addComponent(stateMachine);
+        
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Dynamic);
+        rb.setFixedRotation(true);
+        rb.setMass(0.1f);
+        rb.setGravityScale(0);
+        turtle.addComponent(rb);
+        
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.19f, 0.19f));
+        b2d.setOffset(new Vector2f(0, -0.05f));
+        turtle.addComponent(b2d);
+        
+        KoopaAI kAi = new KoopaAI();
+        kAi.setTerminalVelocity(new Vector2f(2.1f,3.1f));
+        kAi.setInnerWidth(0.25f * 0.7f);
+        kAi.setCastVal(-0.19f);
+        kAi.setFallsOnEdges(false);
+        turtle.addComponent(kAi);
+        
+        return turtle;
     }
 }

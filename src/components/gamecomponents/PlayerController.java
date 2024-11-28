@@ -158,8 +158,12 @@ public class PlayerController extends PhysicsController {
                 }
 
                 if (this.velocity.x == 0) {
-                    this.stateMachine.trigger("stopMoving");
+                    //this.stateMachine.trigger("stopMoving");
                 }
+            }
+            
+            if (KeyListener.keyBeginPress(Settings.CROUCH)) {
+                crouch(dt);
             }
 
             if (KeyListener.keyBeginPress(Settings.FIREBALL) && playerState == PlayerState.Fire && Fireball.canSpawn()) {
@@ -287,7 +291,9 @@ public class PlayerController extends PhysicsController {
     }
     
     public void crouch(float dt) {
-        
+        if (this.playerState != PlayerState.Small) {
+            stateMachine.trigger("toCrouch");
+        }
     }
     
     public void fireball() {

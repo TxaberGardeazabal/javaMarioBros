@@ -178,6 +178,9 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png"),
                 16,24,14,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesRed.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesRed.png"),
+                16,24,15,0));
         AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png"),
                 16,16,8,0));

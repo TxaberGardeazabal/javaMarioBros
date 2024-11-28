@@ -5,12 +5,17 @@
 package components.gamecomponents;
 
 import components.Component;
+import components.propertieComponents.Ground;
 import gameEngine.GameObject;
 import gameEngine.Window;
 import java.util.List;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
+import org.joml.Vector3f;
+import physics2D.RaycastInfo;
+import render.DebugDraw;
 import util.AssetPool;
+import util.Settings;
 
 /**
  * Controllador del enemigo koopa verde
@@ -22,6 +27,9 @@ public class KoopaAI extends Enemy {
     private float movingDebounce = 0.32f;
     private float stompDebounce = 0.32f;
     
+    private boolean fallsOnEdges = true;
+    private transient float fallDebounce = 0;
+    
     @Override
     public void update(float dt) {
         super.update(dt);
@@ -31,6 +39,9 @@ public class KoopaAI extends Enemy {
 
         movingDebounce -= dt;
         stompDebounce -= dt;
+        if (fallDebounce > 0) {
+            fallDebounce -= dt;
+        }
         
         if (!isShelled || isShellMoving) {
             if (goingRight) {
@@ -61,6 +72,7 @@ public class KoopaAI extends Enemy {
             stompDebounce = 0.32f;
             if (!isShelled) {
                 isShelled = true;
+                fallsOnEdges = true;
                 walkSpeed *= 3.0f;
                 this.stateMachine.trigger("squash");
                 stopAllForces();
@@ -156,5 +168,43 @@ public class KoopaAI extends Enemy {
                 }
             }
         }
+    }
+    
+    @Override
+    public boolean checkOnGround() {
+        Vector2f raycastBegin = new Vector2f(this.gameObject.transform.position);
+        raycastBegin.sub(innerWidth / 2.0f, 0.0f);
+        Vector2f raycastEnd = new Vector2f(raycastBegin).add(0.0f, castVal);
+        
+        RaycastInfo info = Window.getPhysics().raycast(this.gameObject, raycastBegin, raycastEnd);
+        
+        Vector2f raycast2Begin = new Vector2f(raycastBegin).add(innerWidth, 0.0f);
+        Vector2f raycast2End = new Vector2f(raycastEnd).add(innerWidth, 0.0f);
+        
+        RaycastInfo info2 = Window.getPhysics().raycast(this.gameObject, raycast2Begin, raycast2End);
+        
+        if (Settings.mGroundRaycast) {
+            DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1,0,0));
+         DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
+        }
+        
+        if (!fallsOnEdges) {
+            // XOR 
+            if (((info.hit && info.hitObj != null && info.hitObj.getComponent(Ground.class) != null) ^
+                (info2.hit && info2.hitObj != null && info2.hitObj.getComponent(Ground.class) != null))
+                    && fallDebounce <= 0) {
+                goingRight = !goingRight;
+                fallDebounce = 0.4f;
+            }
+        }
+        
+        onGround = (info.hit && info.hitObj != null && info.hitObj.getComponent(Ground.class) != null)
+                || (info2.hit && info2.hitObj != null && info2.hitObj.getComponent(Ground.class) != null);
+        
+        return onGround;
+    }
+
+    public void setFallsOnEdges(boolean fallsOnEdges) {
+        this.fallsOnEdges = fallsOnEdges;
     }
 }
