@@ -9,7 +9,6 @@ add new functionalities:
 + open the saveAs window when playing a new level (playing auto saves)
 - show contents of assetpool in editor (database)
 + add all that is left for the first levels
-+ make (big mario) crouch
 
 upgrade existing functionalities:
 -- style properties window

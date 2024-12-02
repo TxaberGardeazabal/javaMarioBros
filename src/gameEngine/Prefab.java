@@ -41,6 +41,7 @@ import components.gamecomponents.LevelController;
 import components.gamecomponents.LiveMushroom;
 import components.gamecomponents.MovingPlatform;
 import components.gamecomponents.MovingPlatformSource;
+import components.gamecomponents.ParatroopaAI;
 import components.gamecomponents.PlayerControlTransition;
 import components.gamecomponents.PlayerControlTransition.PlayerControl;
 import components.gamecomponents.StarAI;
@@ -229,16 +230,20 @@ public class Prefab {
         stateMachine.addStateTrigger(run.title, idle.title, "stopMoving");
         stateMachine.addStateTrigger(skid.title, idle.title, "stopMoving");
         stateMachine.addStateTrigger(crouch.title, idle.title, "stopMoving");
+        stateMachine.addStateTrigger(fireball.title, idle.title, "stopMoving");
         stateMachine.addStateTrigger(idle.title, walk.title, "toWalk");
         stateMachine.addStateTrigger(skid.title, walk.title, "toWalk");
         stateMachine.addStateTrigger(run.title, walk.title, "toWalk");
+        //stateMachine.addStateTrigger(fireball.title, walk.title, "toWalk");
         stateMachine.addStateTrigger(idle.title, run.title, "toSprint");
         stateMachine.addStateTrigger(walk.title, run.title, "toSprint");
         stateMachine.addStateTrigger(skid.title, run.title, "toSprint");
+        //stateMachine.addStateTrigger(fireball.title, run.title, "toSprint");
         stateMachine.addStateTrigger(run.title, skid.title, "toSkid");
         stateMachine.addStateTrigger(idle.title, crouch.title, "toCrouch");
         stateMachine.addStateTrigger(walk.title, crouch.title, "toCrouch");
         stateMachine.addStateTrigger(run.title, crouch.title, "toCrouch");
+        stateMachine.addStateTrigger(fireball.title, crouch.title, "toCrouch");
         
         stateMachine.addStateTrigger(jump.title, grow.title, "startGrow");
         stateMachine.addStateTrigger(grow.title, jump.title, "stopGrow");
@@ -246,7 +251,8 @@ public class Prefab {
         stateMachine.addStateTrigger(shrink.title, jump.title, "stopShrink");
         stateMachine.addStateTrigger(idle.title, fireball.title, "throwFireball");
         stateMachine.addStateTrigger(jump.title, fireball.title, "throwFireball");
-        stateMachine.addStateTrigger(fireball.title, idle.title, "stopThrow");
+        stateMachine.addStateTrigger(walk.title, fireball.title, "throwFireball");
+        stateMachine.addStateTrigger(run.title, fireball.title, "throwFireball");
         stateMachine.addStateTrigger(idle.title, jump.title, "jump");
         stateMachine.addStateTrigger(walk.title, jump.title, "jump");
         stateMachine.addStateTrigger(run.title, jump.title, "jump");
@@ -1309,6 +1315,46 @@ public class Prefab {
         kAi.setInnerWidth(0.25f * 0.7f);
         kAi.setCastVal(-0.19f);
         kAi.setFallsOnEdges(false);
+        turtle.addComponent(kAi);
+        
+        return turtle;
+    }
+    
+    public static GameObject generateRedParatroopa() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesRed.png");
+        GameObject turtle = generateSpriteObject(sprites.getSprite(0), 0.25f, 0.35f);
+        turtle.name = "Paratroopa";
+        
+        AnimationState fly = new AnimationState();
+        fly.title = "fly";
+        float defaultFrameTime = 0.23f;
+        fly.addFrame(sprites.getSprite(2), defaultFrameTime);
+        fly.addFrame(sprites.getSprite(3), defaultFrameTime);
+        fly.setLoop(true);
+        
+        StateMachine stateMachine = new StateMachine();
+        stateMachine.addState(fly);
+        stateMachine.setDefaultState(fly.title);
+        turtle.addComponent(stateMachine);
+        
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Static);
+        rb.setFixedRotation(true);
+        rb.setMass(0.1f);
+        rb.setGravityScale(0);
+        turtle.addComponent(rb);
+        
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.19f, 0.19f));
+        b2d.setOffset(new Vector2f(0, -0.05f));
+        turtle.addComponent(b2d);
+        
+        turtle.addComponent(new MovingPlatform());
+        
+        ParatroopaAI kAi = new ParatroopaAI();
+        kAi.setTerminalVelocity(new Vector2f(2.1f,3.1f));
+        kAi.setInnerWidth(0.25f * 0.7f);
+        kAi.setCastVal(-0.19f);
         turtle.addComponent(kAi);
         
         return turtle;

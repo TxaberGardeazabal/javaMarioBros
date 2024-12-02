@@ -1259,7 +1259,7 @@
       "type": "physics2D.components.PillboxCollider",
       "properties": {
         "showBoundaries": false,
-        "width": 0.39,
+        "width": 0.31,
         "height": 0.28,
         "offset": {
           "x": 0.0,

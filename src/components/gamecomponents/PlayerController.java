@@ -44,7 +44,8 @@ public class PlayerController extends PhysicsController {
     
     private PlayerState playerState = PlayerState.Small;
     public transient boolean isControlled = true;
-    public transient boolean isJumping = false;
+    //public transient boolean isJumping = false;
+    public transient boolean isCrouching = false;
     public transient boolean disableForces = false;
     private transient boolean hasEnded = false;
     private transient float groundDebounce = 0.0f;
@@ -60,6 +61,8 @@ public class PlayerController extends PhysicsController {
     private transient boolean isInvincible = false;
     private transient boolean isHurtInvincible = false;
     private transient int enemyBounce = 0;
+    private transient final float heightMarioSmall = 0.27f;
+    private transient final float heightMarioBig = 0.63f;
     
     private transient int invicivilityFrames = 1000;
     private transient int invicivilityFramesLeft = 0;
@@ -136,14 +139,14 @@ public class PlayerController extends PhysicsController {
         
         // controlls here
         if (isControlled) {
-            if (KeyListener.isKeyPressed(Settings.MOVERIGHT) && !KeyListener.isKeyPressed(Settings.MOVELEFT)) {
+            if (KeyListener.isKeyPressed(Settings.MOVERIGHT) && !KeyListener.isKeyPressed(Settings.MOVELEFT) && !isCrouching) {
                 if (KeyListener.isKeyPressed(Settings.SPRINT)) {
                     sprint(dt, true);
                 } else {
                     move(dt, true);
                 }
 
-            } else if (KeyListener.isKeyPressed(Settings.MOVELEFT) && !KeyListener.isKeyPressed(Settings.MOVERIGHT)) {
+            } else if (KeyListener.isKeyPressed(Settings.MOVELEFT) && !KeyListener.isKeyPressed(Settings.MOVERIGHT) && !isCrouching) {
                 if (KeyListener.isKeyPressed(Settings.SPRINT)) {
                     sprint(dt, false);
                 } else {
@@ -158,12 +161,21 @@ public class PlayerController extends PhysicsController {
                 }
 
                 if (this.velocity.x == 0) {
-                    //this.stateMachine.trigger("stopMoving");
+                    this.stateMachine.trigger("stopMoving");
                 }
             }
             
-            if (KeyListener.keyBeginPress(Settings.CROUCH)) {
+            if (KeyListener.isKeyPressed(Settings.CROUCH)) {
                 crouch(dt);
+            } else {
+                isCrouching = false;
+                if (this.playerState != PlayerState.Small) {
+                    PillboxCollider pb = gameObject.getComponent(PillboxCollider.class);
+                    if (pb != null) {
+                        pb.setHeight(heightMarioBig);
+                        pb.setOffset(new Vector2f(0,0));
+                    }
+                }
             }
 
             if (KeyListener.keyBeginPress(Settings.FIREBALL) && playerState == PlayerState.Fire && Fireball.canSpawn()) {
@@ -277,6 +289,11 @@ public class PlayerController extends PhysicsController {
                 AssetPool.getSound("assets/sounds/jump-super.ogg").stop();
                 AssetPool.getSound("assets/sounds/jump-super.ogg").play();
             }
+            
+            if (isCrouching) {
+                this.velocity.x += 0.2f;
+                groundDebounce = groundDebounceTime;
+            }
 
             jumpTime = 57;
             //this.velocity.y = jumpImpulse;
@@ -292,6 +309,12 @@ public class PlayerController extends PhysicsController {
     
     public void crouch(float dt) {
         if (this.playerState != PlayerState.Small) {
+            isCrouching = true;
+            PillboxCollider pb = gameObject.getComponent(PillboxCollider.class);
+            if (pb != null) {
+                pb.setHeight(heightMarioSmall);
+                pb.setOffset(new Vector2f(0,-0.09f));
+            }
             stateMachine.trigger("toCrouch");
         }
     }
@@ -311,6 +334,7 @@ public class PlayerController extends PhysicsController {
 
             Window.getScene().addGameObjectToScene(fireball);
             AssetPool.getSound("assets/sounds/fireball.ogg").play();
+            
         }
     }
     
@@ -367,7 +391,7 @@ public class PlayerController extends PhysicsController {
                 if (pb != null) {
                     jumpBoost *= bigJumpBoostFactor;
                     walkSpeed *= bigJumpBoostFactor;
-                    pb.setHeight(0.63f);
+                    pb.setHeight(heightMarioBig);
                 }
                 setCastVal(-0.22f);
                 
@@ -501,7 +525,7 @@ public class PlayerController extends PhysicsController {
                 if (pb != null) {
                     jumpBoost /= bigJumpBoostFactor;
                     walkSpeed /= bigJumpBoostFactor;
-                    pb.setHeight(0.31f);
+                    pb.setHeight(heightMarioSmall);
                 }
             }
         }

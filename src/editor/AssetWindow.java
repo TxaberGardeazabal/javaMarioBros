@@ -543,6 +543,12 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
+                if (OImGui.spriteButton(sprites.getSprite(2),uid++)) {
+                    GameObject object = Prefab.generateRedParatroopa();
+                    mc.pickUpObject(object);
+                }
+                
                 /*sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateItemBlock(sprites);

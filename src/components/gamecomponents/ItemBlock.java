@@ -88,7 +88,12 @@ public class ItemBlock extends Block{
 
         if ((info.hit && info.hitObj != null && info.hitObj.getComponent(Enemy.class) != null)
                 || (info2.hit && info2.hitObj != null && info2.hitObj.getComponent(Enemy.class) != null)) {
-            info.hitObj.getComponent(Enemy.class).die();
+            if (info.hitObj != null) {
+                info.hitObj.getComponent(Enemy.class).die();
+            } else {
+                info2.hitObj.getComponent(Enemy.class).die();
+            }
+            
         }
         
         switch(contents) {

@@ -74026,19 +74026,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 0.75,
                 "y": 1.0
               },
               {
+                "x": 0.75,
+                "y": 0.75
+              },
+              {
                 "x": 0.5,
                 "y": 0.75
               },
               {
-                "x": 0.25,
-                "y": 0.75
-              },
-              {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -74314,19 +74314,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 0.75,
                 "y": 1.0
               },
               {
+                "x": 0.75,
+                "y": 0.75
+              },
+              {
                 "x": 0.5,
                 "y": 0.75
               },
               {
-                "x": 0.25,
-                "y": 0.75
-              },
-              {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -74565,6 +74565,1094 @@
     "childGOs": []
   },
   {
+    "name": "Moving platform",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.625,
+            "y": 0.84999967
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.44,
+            "y": 0.12
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.1,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      },
+      {
+        "type": "components.gamecomponents.MovingPlatform",
+        "properties": {
+          "direction": "Right",
+          "distance": 2.0,
+          "duration": 1.5,
+          "destroyOnEnd": false,
+          "loops": true,
+          "linear": false,
+          "time": 0.0
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 1.625,
+                "y": 0.84999967
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 1.875,
+                "y": 0.84999967
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      }
+    ]
+  },
+  {
+    "name": "Platform generator",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 4.625,
+            "y": 0.375
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.gamecomponents.MovingPlatformSource",
+        "properties": {
+          "platformPrefab": "assets/prefabs/blocks/movingPlatformX4.prefab",
+          "direction": "Left",
+          "distance": 2.0,
+          "duration": 2.5,
+          "spawnFrecuency": 3.0
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "Moving platform",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.5750003,
+            "y": 1.1249994
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.44,
+            "y": 0.12
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.1,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      },
+      {
+        "type": "components.gamecomponents.MovingPlatform",
+        "properties": {
+          "direction": "Right",
+          "distance": 2.0,
+          "duration": 1.5,
+          "destroyOnEnd": false,
+          "loops": true,
+          "linear": false,
+          "time": 0.2
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 1.6250002,
+                "y": 1.1249994
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 1.8749998,
+                "y": 1.1249994
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      }
+    ]
+  },
+  {
+    "name": "Moving platform",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.6250002,
+            "y": 1.4249991
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.44,
+            "y": 0.12
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.1,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      },
+      {
+        "type": "components.gamecomponents.MovingPlatform",
+        "properties": {
+          "direction": "Right",
+          "distance": 2.0,
+          "duration": 1.5,
+          "destroyOnEnd": false,
+          "loops": true,
+          "linear": false,
+          "time": 0.4
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 1.6250002,
+                "y": 1.4249991
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 1.8749998,
+                "y": 1.4249991
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      }
+    ]
+  },
+  {
+    "name": "goomba",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 2.875,
+            "y": 0.375
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/enemies/enemiesGroundOverworld.png",
+              "height": 48,
+              "width": 48
+            },
+            "texCoords": [
+              {
+                "x": 0.6666667,
+                "y": 1.0
+              },
+              {
+                "x": 0.6666667,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.33333334,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.33333334,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "walk",
+                "trigger": "squash"
+              },
+              "squashed"
+            ]
+          ],
+          "states": [
+            {
+              "title": "walk",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesGroundOverworld.png",
+                      "height": 48,
+                      "width": 48
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.33333334,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.33333334,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesGroundOverworld.png",
+                      "height": 48,
+                      "width": 48
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.6666667,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.6666667,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.33333334,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.33333334,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "squashed",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesGroundOverworld.png",
+                      "height": 48,
+                      "width": 48
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.6666667,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.6666667,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "walk"
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.1,
+          "bodyType": "Dynamic",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.17,
+            "y": 0.1
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": -0.01
+          }
+        }
+      },
+      {
+        "type": "components.gamecomponents.GoombaAI",
+        "properties": {
+          "sizeX": 0.25,
+          "sizeY": 0.25,
+          "terminalVelocity": {
+            "x": 2.1,
+            "y": 3.1
+          },
+          "hasGravity": true,
+          "innerWidth": 0.175,
+          "castVal": -0.14
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "Koopa",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 0.55000126,
+            "y": 1.4250002
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.35
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 24.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+              "height": 96,
+              "width": 64
+            },
+            "texCoords": [
+              {
+                "x": 0.5,
+                "y": 1.0
+              },
+              {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
+                "x": 0.25,
+                "y": 0.75
+              },
+              {
+                "x": 0.25,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "walk",
+                "trigger": "squash"
+              },
+              "shell"
+            ]
+          ],
+          "states": [
+            {
+              "title": "walk",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "shell",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.75
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "walk"
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.1,
+          "bodyType": "Dynamic",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.19,
+            "y": 0.19
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": -0.05
+          }
+        }
+      },
+      {
+        "type": "components.gamecomponents.KoopaAI",
+        "properties": {
+          "movingDebounce": 0.32,
+          "stompDebounce": 0.32,
+          "fallsOnEdges": false,
+          "sizeX": 0.25,
+          "sizeY": 0.25,
+          "terminalVelocity": {
+            "x": 2.1,
+            "y": 3.1
+          },
+          "hasGravity": true,
+          "innerWidth": 0.175,
+          "castVal": -0.19
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
     "name": "mario",
     "enabled": true,
     "components": [
@@ -74572,8 +75660,8 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 0.3750001,
-            "y": 0.37499994
+            "x": 0.375,
+            "y": 0.375
           },
           "rotation": 0.0,
           "scale": {
@@ -74631,6 +75719,13 @@
                 "trigger": "stopMoving"
               },
               "idle"
+            ],
+            [
+              {
+                "state": "sprint",
+                "trigger": "throwFireball"
+              },
+              "fireball"
             ],
             [
               {
@@ -74844,6 +75939,13 @@
             ],
             [
               {
+                "state": "fireball",
+                "trigger": "toCrouch"
+              },
+              "crouch"
+            ],
+            [
+              {
                 "state": "walk",
                 "trigger": "die"
               },
@@ -74876,6 +75978,13 @@
                 "trigger": "jump"
               },
               "jump"
+            ],
+            [
+              {
+                "state": "walk",
+                "trigger": "throwFireball"
+              },
+              "fireball"
             ],
             [
               {
@@ -74922,7 +76031,7 @@
             [
               {
                 "state": "fireball",
-                "trigger": "stopThrow"
+                "trigger": "stopMoving"
               },
               "idle"
             ]
@@ -75813,7 +76922,7 @@
           "gravityScale": 0.0,
           "isSensor": false,
           "fixedRotation": true,
-          "continuousCollision": true
+          "continuousCollision": false
         }
       },
       {
@@ -75852,22 +76961,137 @@
     "childGOs": []
   },
   {
-    "name": "Moving platform",
+    "name": "Paratroopa",
     "enabled": true,
     "components": [
       {
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 1.625,
-            "y": 0.84999967
+            "x": 2.349998,
+            "y": 1.7000002
           },
           "rotation": 0.0,
           "scale": {
-            "x": 0.0,
-            "y": 0.0
+            "x": 0.25,
+            "y": 0.35
           },
           "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 24.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+              "height": 96,
+              "width": 64
+            },
+            "texCoords": [
+              {
+                "x": 1.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.75,
+                "y": 0.75
+              },
+              {
+                "x": 0.75,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": {},
+          "states": [
+            {
+              "title": "fly",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": true
+            }
+          ],
+          "defaultStateTitle": "fly"
         }
       },
       {
@@ -75875,21 +77099,21 @@
         "properties": {
           "angularDamping": 0.8,
           "linearDamping": 0.9,
-          "mass": 0.0,
+          "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
           "gravityScale": 0.0,
           "isSensor": false,
           "fixedRotation": true,
-          "continuousCollision": false
+          "continuousCollision": true
         }
       },
       {
         "type": "physics2D.components.Box2DCollider",
         "properties": {
           "halfSize": {
-            "x": 0.44,
-            "y": 0.12
+            "x": 0.19,
+            "y": 0.19
           },
           "origin": {
             "x": 0.0,
@@ -75897,583 +77121,40 @@
           },
           "showBoundaries": false,
           "offset": {
-            "x": 0.1,
-            "y": 0.0
+            "x": 0.0,
+            "y": -0.05
           }
         }
       },
       {
-        "type": "components.propertieComponents.Ground",
-        "properties": {}
-      },
-      {
         "type": "components.gamecomponents.MovingPlatform",
         "properties": {
-          "direction": "Right",
-          "distance": 2.0,
-          "duration": 1.5,
+          "direction": "Left",
+          "distance": 1.0,
+          "duration": 6.0,
           "destroyOnEnd": false,
           "loops": true,
           "linear": false,
           "time": 0.0
         }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": [
-      {
-        "name": "Platform",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 1.625,
-                "y": 0.84999967
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.125
-              },
-              "zIndex": 0
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 8.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
-                  "height": 16,
-                  "width": 16
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
       },
       {
-        "name": "Platform",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 1.875,
-                "y": 0.84999967
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.125
-              },
-              "zIndex": 0
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 8.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
-                  "height": 16,
-                  "width": 16
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      }
-    ]
-  },
-  {
-    "name": "Platform generator",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
+        "type": "components.gamecomponents.ParatroopaAI",
         "properties": {
-          "position": {
-            "x": 4.625,
-            "y": 0.375
+          "sizeX": 0.25,
+          "sizeY": 0.25,
+          "terminalVelocity": {
+            "x": 2.1,
+            "y": 3.1
           },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.gamecomponents.MovingPlatformSource",
-        "properties": {
-          "platformPrefab": "assets/prefabs/blocks/movingPlatformX4.prefab",
-          "direction": "Left",
-          "distance": 2.0,
-          "duration": 2.5,
-          "spawnFrecuency": 3.0
+          "hasGravity": true,
+          "innerWidth": 0.175,
+          "castVal": -0.19
         }
       }
     ],
     "doSerialization": true,
     "isDead": false,
     "childGOs": []
-  },
-  {
-    "name": "Moving platform",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 1.5750003,
-            "y": 1.1249994
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.0,
-          "bodyType": "Static",
-          "friction": 0.1,
-          "gravityScale": 0.0,
-          "isSensor": false,
-          "fixedRotation": true,
-          "continuousCollision": false
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.44,
-            "y": 0.12
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": false,
-          "offset": {
-            "x": 0.1,
-            "y": 0.0
-          }
-        }
-      },
-      {
-        "type": "components.propertieComponents.Ground",
-        "properties": {}
-      },
-      {
-        "type": "components.gamecomponents.MovingPlatform",
-        "properties": {
-          "direction": "Right",
-          "distance": 2.0,
-          "duration": 1.5,
-          "destroyOnEnd": false,
-          "loops": true,
-          "linear": false,
-          "time": 0.2
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": [
-      {
-        "name": "Platform",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 1.6250002,
-                "y": 1.1249994
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.125
-              },
-              "zIndex": 0
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 8.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
-                  "height": 16,
-                  "width": 16
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
-        "name": "Platform",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 1.8749998,
-                "y": 1.1249994
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.125
-              },
-              "zIndex": 0
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 8.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
-                  "height": 16,
-                  "width": 16
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      }
-    ]
-  },
-  {
-    "name": "Moving platform",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 1.6250002,
-            "y": 1.4249991
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.0,
-          "bodyType": "Static",
-          "friction": 0.1,
-          "gravityScale": 0.0,
-          "isSensor": false,
-          "fixedRotation": true,
-          "continuousCollision": false
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.44,
-            "y": 0.12
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": false,
-          "offset": {
-            "x": 0.1,
-            "y": 0.0
-          }
-        }
-      },
-      {
-        "type": "components.propertieComponents.Ground",
-        "properties": {}
-      },
-      {
-        "type": "components.gamecomponents.MovingPlatform",
-        "properties": {
-          "direction": "Right",
-          "distance": 2.0,
-          "duration": 1.5,
-          "destroyOnEnd": false,
-          "loops": true,
-          "linear": false,
-          "time": 0.4
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": [
-      {
-        "name": "Platform",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 1.6250002,
-                "y": 1.4249991
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.125
-              },
-              "zIndex": 0
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 8.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
-                  "height": 16,
-                  "width": 16
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
-        "name": "Platform",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 1.8749998,
-                "y": 1.4249991
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.125
-              },
-              "zIndex": 0
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 8.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
-                  "height": 16,
-                  "width": 16
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      }
-    ]
   }
 ]

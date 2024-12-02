@@ -24,10 +24,6 @@ public class PillboxCollider extends Collider {
     
     private Vector2f offset = new Vector2f();
     
-    public Vector2f getOffset() {
-        return this.offset;
-    }
-    
     @Override
     public void start() {
         this.topCircle.gameObject = this.gameObject;
@@ -124,5 +120,13 @@ public class PillboxCollider extends Collider {
 
     public Box2DCollider getBox() {
         return box;
+    }
+    
+    public Vector2f getOffset() {
+        return this.offset;
+    }
+    
+    public void setOffset(Vector2f offset) {
+        this.offset = offset;
     }
 }

@@ -25,9 +25,11 @@ public class MovingPlatform extends Component{
     private boolean loops = true;
     private boolean linear = false;
     
+    // el temporizador no llega a ser transient para que el usuario pueda hacer plataformas con diferentes offsets
+    private float time = 0;
+    
     private transient Vector2f target = new Vector2f();
     private transient Vector2f start;
-    private float time = 0;
     private transient GameObject collidingPlayer = null;
     
     @Override
@@ -103,6 +105,10 @@ public class MovingPlatform extends Component{
 
     public void setDuration(float duration) {
         this.duration = duration;
+    }
+    
+    public void setTime(float time) {
+        this.time = time;
     }
 
     public boolean isDestroyOnEnd() {
