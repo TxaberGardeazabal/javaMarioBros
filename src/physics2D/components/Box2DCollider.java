@@ -7,6 +7,7 @@ package physics2D.components;
 import gameEngine.Window;
 import org.joml.Vector2f;
 import render.DebugDraw;
+import util.JMath;
 
 /**
  * Objeto de colision de dos dimensiones con forma de cuadrado 
@@ -45,8 +46,10 @@ public class Box2DCollider extends Collider{
     @Override
     public void editorUpdate(float dt) {
         if (showBoundaries) {
-            
             Vector2f center = new Vector2f(this.gameObject.transform.position).add(this.offset);
+            if (this.gameObject.transform.rotation != 0) {
+                JMath.rotate(center, this.gameObject.transform.rotation, this.gameObject.transform.position);
+            }
             DebugDraw.addBox2D(center, this.halfSize, this.gameObject.transform.rotation);
         }
     }
@@ -55,6 +58,9 @@ public class Box2DCollider extends Collider{
     public void update(float dt) {
         if (showBoundaries) {
             Vector2f center = new Vector2f(this.gameObject.transform.position).add(this.offset);
+            if (this.gameObject.transform.rotation != 0) {
+                JMath.rotate(center, this.gameObject.transform.rotation, this.gameObject.transform.position);
+            }
             DebugDraw.addBox2D(center, this.halfSize, this.gameObject.transform.rotation);
         }
         

@@ -15,7 +15,7 @@ import util.Settings;
  * Bola de fuego que lanza mario en su forma de mario fuego, las bolas botan por la pantalla
  * @author txaber gardeazabal
  */
-public class Fireball extends PhysicsController{
+public class Fireball extends PhysicsController {
     // cuantas bolas pueden existir al mismo de tiempo
     private static final int LIMIT = 4;
     private static int fireballCount;

@@ -16,6 +16,7 @@ import components.gamecomponents.BlockCoin;
 import gameEngine.GameObject;
 import components.gamecomponents.BreakableBrick;
 import components.gamecomponents.Coin;
+import components.gamecomponents.FireRod;
 import components.gamecomponents.Flag;
 import components.gamecomponents.FlagPole;
 import components.gamecomponents.Flower;
@@ -30,6 +31,7 @@ import components.gamecomponents.MushroomAI;
 import components.gamecomponents.Pipe;
 import components.gamecomponents.PlayerController;
 import components.gamecomponents.StarAI;
+import components.propertieComponents.StageHazard;
 import components.propertieComponents.Ground;
 import gameEngine.Direction;
 import gameEngine.Prefab;
@@ -214,12 +216,6 @@ public class PropertiesWindow {
                             }
                             
                             if (ImGui.collapsingHeader("Blocks")) {
-                                if (ImGui.menuItem("Add ground")) {
-                                    if (activeGameObject.getComponent(Ground.class) == null) {
-                                        activeGameObject.addComponent(new Ground());
-                                    }
-                                }
-
                                 if (ImGui.menuItem("Add breakable")) {
                                     if (activeGameObject.getComponent(BreakableBrick.class) == null) {
                                         activeGameObject.addComponent(new BreakableBrick());
@@ -229,6 +225,19 @@ public class PropertiesWindow {
                                 if (ImGui.menuItem("Add itemBlock")) {
                                     if (activeGameObject.getComponent(ItemBlock.class) == null) {
                                         activeGameObject.addComponent(new ItemBlock());
+                                    }
+                                }
+                            }
+                            
+                            if (ImGui.collapsingHeader("properties")) {
+                                if (ImGui.menuItem("Add ground")) {
+                                    if (activeGameObject.getComponent(Ground.class) == null) {
+                                        activeGameObject.addComponent(new Ground());
+                                    }
+                                }
+                                if (ImGui.menuItem("Add enemy")) {
+                                    if (activeGameObject.getComponent(StageHazard.class) == null) {
+                                        activeGameObject.addComponent(new StageHazard());
                                     }
                                 }
                             }
@@ -261,6 +270,12 @@ public class PropertiesWindow {
                                 if (ImGui.menuItem("Add MovingPlatform logic")) {
                                     if (activeGameObject.getComponent(MovingPlatform.class) == null) {
                                         activeGameObject.addComponent(new MovingPlatform());
+                                    }
+                                }
+                                
+                                if (ImGui.menuItem("Add fire rod logic")) {
+                                    if (activeGameObject.getComponent(FireRod.class) == null) {
+                                        activeGameObject.addComponent(new FireRod());
                                     }
                                 }
                             }

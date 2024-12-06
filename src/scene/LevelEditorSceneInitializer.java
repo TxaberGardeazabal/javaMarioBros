@@ -184,6 +184,9 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png"),
                 16,16,8,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/bowser.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/bowser.png"),
+                32,32,4,0));
         AssetPool.addSpritesheet("assets/images/text/fontFace.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/text/fontFace.png"),
                 56,56,38,8));
@@ -196,6 +199,9 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/spriteSheets/particles/platformsTileable2.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/platformsTileable2.png"),
                 16,8,2,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/particles/fireJet.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/fireJet.png"),
+                24,8,2,0));
         
         
         // sounds

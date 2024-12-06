@@ -18,6 +18,7 @@ upgrade existing functionalities:
 add tiny flag on castle/towers
 refactor component so it handles object types (could have a class impementation)
 adjust the screen size so is 1:1 with the original game
+++ rotating transforms
 
 bugfixing:
 some window focus issues:
@@ -42,3 +43,4 @@ other:
 // transition desync issue: due to delta time variation the same transition may last more or less frames to complete leading to desyncs (known bug)
 // picking shader doesn't prevent extra placement of gameobjects if the object color is too light (known bug)
 // deleting spriteRenderers from the editor doesn't remove them from the renderer (known bug)
+// avoid placing mario on any platform with continous moving/rotating except it has movingplatform component (known bug)

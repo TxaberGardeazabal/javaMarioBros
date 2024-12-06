@@ -10,6 +10,7 @@ import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.Body;
 import org.joml.Vector2f;
 import physics2D.enums.BodyType;
+import util.JMath;
 
 /**
  * Wrapper para traducir las variables de objetos fisicos rigidos de Box2D.
@@ -44,7 +45,7 @@ public class Rigidbody2D extends Component{
                 this.velocity.set(vel.x, vel.y);
             } else if (this.bodyType == BodyType.Static) {
                 this.rawBody.setTransform(new Vec2(this.gameObject.transform.position.x, this.gameObject.transform.position.y), 
-                        this.gameObject.transform.rotation);
+                        (float) Math.toRadians(this.gameObject.transform.rotation));
             }
         }
         
@@ -80,6 +81,14 @@ public class Rigidbody2D extends Component{
         if (rawBody != null) {
             this.rawBody.setTransform(new Vec2(newPos.x,newPos.y), gameObject.transform.rotation);
         }
+    }
+    
+    public void setRotation(float newRotation) {
+        /*if (rawBody != null) {
+            Vec2 pos = rawBody.getPosition();
+            JMath.rotate(new Vector2f(pos.x,pos.y), newRotation, this.gameObject.transform.position);
+            this.rawBody.setTransform(new Vec2(gameObject.transform.position.x,gameObject.transform.position.y), newRotation);
+        }*/
     }
 
     public float getAngularVelocity() {

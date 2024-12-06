@@ -37,6 +37,7 @@ import components.gamecomponents.Fireball;
 import components.gamecomponents.Flag;
 import components.gamecomponents.FlagPole;
 import components.gamecomponents.BreakableBrick;
+import components.gamecomponents.FireRod;
 import components.gamecomponents.LevelController;
 import components.gamecomponents.LiveMushroom;
 import components.gamecomponents.MovingPlatform;
@@ -736,11 +737,8 @@ public class Prefab {
     
     public static GameObject generateFireball() {
         SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioParticles.png");
-        //GameObject coin = generateSpriteObject(Sprites.getSprite(4), 0.25f, 0.25f);
         Sprite sprite = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/particles/marioFireball.png"));
-        //Sprite sprite = Sprites.getSprite(0);
         
-        //GameObject fireball = generateSpriteObject(sprite, 5.12f, 5.12f);
         GameObject fireball = generateSpriteObject(sprite, 0.12f, 0.12f);
         fireball.name = "fireball";
         
@@ -1358,5 +1356,24 @@ public class Prefab {
         turtle.addComponent(kAi);
         
         return turtle;
+    }
+    
+    public static GameObject generateFireRod() {
+        SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+        GameObject fire = generateSpriteObject(Sprites.getSprite(3), 0.25f, 0.25f);
+        fire.name = "Fire rod";
+        
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Static);
+        rb.setFixedRotation(false);
+        rb.setMass(0.1f);
+        fire.addComponent(rb);
+
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.25f,0.25f));
+        fire.addComponent(b2d);
+        
+        fire.addComponent(new FireRod());
+        return fire;
     }
 }

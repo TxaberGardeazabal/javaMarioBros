@@ -7,6 +7,7 @@ package components.gamecomponents;
 import components.PhysicsController;
 import components.StateMachine;
 import components.TransitionMachine;
+import components.propertieComponents.StageHazard;
 import components.propertieComponents.Ground;
 import gameEngine.Direction;
 import gameEngine.GameObject;
@@ -373,11 +374,37 @@ public class PlayerController extends PhysicsController {
     }
     
     public boolean isInvincible() {
-        return isInvincible || this.isHurtInvincible() || playWinAnimation;
+        return isInvincible || isHurtInvincible || playWinAnimation;
     }
     
     public boolean isStarInvincible() {
         return isInvincible;
+    }
+    
+    @Override
+    public void beginCollision(GameObject collidingObj, Contact contact, Vector2f contactN) {
+        if (isDead || !contact.isEnabled()) return;
+        
+        if (collidingObj.getComponent(Ground.class) != null) {
+            if (Math.abs(contactN.x) > 0.8f) {
+                this.velocity.x = 0;
+            } else if (contactN.y > 0.8f) {
+                this.velocity.y = 0;
+                this.acceleration.y = 0;
+                this.jumpTime = 0;
+            }
+        }
+        
+    }
+    
+    @Override
+    public void preSolve(GameObject collidingObj, Contact contact, Vector2f contactN) {
+        if (collidingObj.getComponent(StageHazard.class) != null) {
+            if (!isInvincible()) {
+                this.hurt();
+            }
+            contact.setEnabled(false);
+        }
     }
     
     public void powerUp() {
@@ -417,21 +444,6 @@ public class PlayerController extends PhysicsController {
         invincBlinkFrames = invicivilityFrames;
         isInvincible = true;
         AssetPool.getSound("assets/sounds/powerup.ogg").play();
-    }
-    
-    @Override
-    public void beginCollision(GameObject collidingObj, Contact contact, Vector2f contactN) {
-        if (isDead || !contact.isEnabled()) return;
-        
-        if (collidingObj.getComponent(Ground.class) != null) {
-            if (Math.abs(contactN.x) > 0.8f) {
-                this.velocity.x = 0;
-            } else if (contactN.y > 0.8f) {
-                this.velocity.y = 0;
-                this.acceleration.y = 0;
-                this.jumpTime = 0;
-            }
-        }
     }
     
     public void die() {

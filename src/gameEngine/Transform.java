@@ -7,9 +7,10 @@ package gameEngine;
 
 import components.Component;
 import editor.OImGui;
+import org.joml.Vector2d;
 import org.joml.Vector2f;
-import physics2D.Physics2D;
 import physics2D.components.Rigidbody2D;
+import util.JMath;
 
 /**
  * La clase transform contiene la informacion de la posicion, rotacion y escala de un objeto dentro del mundo de juego
@@ -144,15 +145,27 @@ public class Transform extends Component{
      * @param z movimiento de rotacion en grados
      */
     public void rotate(float z) {
+        rotate(z, this.position);
+    }
+    
+    /**
+     * Rota este transform y todos sus hijos, solo en el eje z
+     * @param z movimiento de rotacion en grados
+     */
+    public void rotate(float z, Vector2f origin) {
         rotation += z;
+        
+        for (GameObject go : gameObject.getChildGOs()) {
+            Vector2f newPos = new Vector2f(go.transform.position);
+            JMath.rotate(newPos, z, origin);
+                    
+            go.transform.setPosition(newPos);
+            go.transform.rotate(z);
+        }
         
         // actualizar cuerpo fisico
         if (gameObject.getComponent(Rigidbody2D.class) != null) {
             gameObject.getComponent(Rigidbody2D.class).setPosition(position);
-        }
-        
-        for (GameObject go : gameObject.getChildGOs()) {
-            go.transform.rotate(z);
         }
     }
     
@@ -206,6 +219,47 @@ public class Transform extends Component{
         
         for (GameObject go : gameObject.getChildGOs()) {
             go.transform.translate(delta);
+        }
+    }
+    
+    public void setRotation(float newRotation) {
+        setRotation(newRotation, this.position);
+    }
+    
+    public void setRotation(float newRotation, Vector2f origin) {
+        float delta = newRotation - rotation;
+        rotation = newRotation;
+        
+        for (GameObject go : gameObject.getChildGOs()) {
+
+            Vector2f newPos = new Vector2f(go.transform.position);
+            JMath.rotate(newPos, delta, origin);
+                    
+            go.transform.setPosition(newPos);
+            go.transform.setRotation(newRotation, go.transform.position);
+        }
+        
+        // actualizar cuerpo fisico
+        if (gameObject.getComponent(Rigidbody2D.class) != null) {
+            gameObject.getComponent(Rigidbody2D.class).setRotation(newRotation);
+        }
+    }
+    
+    public void setRotationNoSpread(float newRotation, Vector2f origin) {
+        float delta = newRotation - rotation;
+        rotation = newRotation;
+        
+        for (GameObject go : gameObject.getChildGOs()) {
+
+            Vector2f newPos = new Vector2f(go.transform.position);
+            JMath.rotate(newPos, delta, origin);
+                    
+            go.transform.setPosition(newPos);
+        }
+        
+        // actualizar cuerpo fisico
+        if (gameObject.getComponent(Rigidbody2D.class) != null) {
+            gameObject.getComponent(Rigidbody2D.class).setRotation(newRotation);
         }
     }
 }
