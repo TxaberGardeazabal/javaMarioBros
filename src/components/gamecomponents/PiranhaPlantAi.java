@@ -16,7 +16,7 @@ import org.joml.Vector2f;
  * Controlador del enemigo planta pirana
  * @author txaber gardeazabal
  */
-public class PiranhaPlantAi extends Enemy {
+public class PiranhaPlantAI extends Enemy {
 
     private transient TransitionMachine tm;
     private transient boolean goingIn = false;

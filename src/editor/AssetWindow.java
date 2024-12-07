@@ -14,11 +14,9 @@ import gameEngine.PrefabSave;
 import gameEngine.Sound;
 import gameEngine.Window;
 import imgui.ImGui;
-import imgui.ImVec2;
 import imgui.type.ImInt;
 import java.io.File;
 import java.util.Collection;
-import org.joml.Vector2f;
 import util.AssetPool;
 import util.Settings;
 
@@ -552,6 +550,18 @@ public class AssetWindow {
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateFireRod();
+                    mc.pickUpObject(object);
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/bowser.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateBowser();
+                    mc.pickUpObject(object);
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/fireJet.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateFireJet();
                     mc.pickUpObject(object);
                 }
                 

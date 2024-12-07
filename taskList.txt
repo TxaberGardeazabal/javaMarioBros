@@ -18,7 +18,6 @@ upgrade existing functionalities:
 add tiny flag on castle/towers
 refactor component so it handles object types (could have a class impementation)
 adjust the screen size so is 1:1 with the original game
-++ rotating transforms
 
 bugfixing:
 some window focus issues:
@@ -30,7 +29,6 @@ player transitions jump function doesn't work correctly
 mario title image renders incorrectly
 + collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 seting rotation via imgui causes it to become -inf, also causes bugs with box2d
-sometimes playing the scene loads incorrect variables on some components, especially box2d physics components
 minimize the use of javaswing to prevent incompatibility crashes
 + tweak check on ground to make objects stay at the same distance from the ground (how?)
 + you can set parent object as its childs child and cause them to implode

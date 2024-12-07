@@ -4,7 +4,7 @@
  */
 package gameEngine;
 
-import components.gamecomponents.PiranhaPlantAi;
+import components.gamecomponents.PiranhaPlantAI;
 import UI.Digit;
 import UI.Digitalizer;
 import components.gamecomponents.GoombaAI;
@@ -33,6 +33,7 @@ import components.BlinkTransition;
 import components.TransitionMachine;
 import components.TransitionState;
 import components.TranslateTransition;
+import components.gamecomponents.BowserAI;
 import components.gamecomponents.Fireball;
 import components.gamecomponents.Flag;
 import components.gamecomponents.FlagPole;
@@ -47,6 +48,7 @@ import components.gamecomponents.PlayerControlTransition;
 import components.gamecomponents.PlayerControlTransition.PlayerControl;
 import components.gamecomponents.StarAI;
 import components.propertieComponents.Ground;
+import components.propertieComponents.StageHazard;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 import physics2D.components.Box2DCollider;
@@ -1224,7 +1226,7 @@ public class Prefab {
         b2d.setOffset(new Vector2f(0, 0.01f));
         plant.addComponent(b2d);
         
-        plant.addComponent(new PiranhaPlantAi());
+        plant.addComponent(new PiranhaPlantAI());
         return plant;
     }
     
@@ -1374,6 +1376,87 @@ public class Prefab {
         fire.addComponent(b2d);
         
         fire.addComponent(new FireRod());
+        return fire;
+    }
+    
+    public static GameObject generateBowser() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/bowser.png");
+        GameObject bowser = generateSpriteObject(sprites.getSprite(0), 0.5f, 0.5f);
+        bowser.name = "bowser";
+        
+        AnimationState walk = new AnimationState();
+        walk.title = "walk";
+        float defaultFrameTime = 0.23f;
+        walk.addFrame(sprites.getSprite(0), defaultFrameTime);
+        walk.addFrame(sprites.getSprite(1), defaultFrameTime);
+        walk.setLoop(true);
+        
+        AnimationState walk2 = new AnimationState();
+        walk2.title = "alternateWalk";
+        walk2.addFrame(sprites.getSprite(2), defaultFrameTime);
+        walk2.addFrame(sprites.getSprite(3), defaultFrameTime);
+        walk2.setLoop(true);
+        
+        StateMachine stateMachine = new StateMachine();
+        stateMachine.addState(walk);
+        stateMachine.setDefaultState(walk.title);
+        stateMachine.addState(walk2);
+        
+        stateMachine.addStateTrigger(walk.title, walk2.title, "toBreathe");
+        stateMachine.addStateTrigger(walk2.title, walk.title, "toWalk");
+        bowser.addComponent(stateMachine);
+        
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Dynamic);
+        rb.setFixedRotation(true);
+        rb.setMass(0.1f);
+        rb.setGravityScale(0);
+        bowser.addComponent(rb);
+        
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.35f, 0.35f));
+        b2d.setOffset(new Vector2f(0.06f, -0.03f));
+        bowser.addComponent(b2d);
+        bowser.addComponent(new BowserAI());
+        
+        return bowser;
+    }
+    
+    public static GameObject generateFireJet() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/fireJet.png");
+        GameObject fire = generateSpriteObject(sprites.getSprite(0), 0.375f, 0.125f);
+        fire.name = "fire jet";
+        
+        AnimationState idle = new AnimationState();
+        idle.title = "idle";
+        float defaultFrameTime = 0.08f;
+        idle.addFrame(sprites.getSprite(0), defaultFrameTime);
+        idle.addFrame(sprites.getSprite(1), defaultFrameTime);
+        idle.setLoop(true);
+        
+        StateMachine stateMachine = new StateMachine();
+        stateMachine.addState(idle);
+        stateMachine.setDefaultState(idle.title);
+        fire.addComponent(stateMachine);
+        
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Static);
+        rb.setFixedRotation(true);
+        rb.setMass(0.1f);
+        rb.setGravityScale(0);
+        fire.addComponent(rb);
+        
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.2f, 0.1f));
+        b2d.setOffset(new Vector2f(0.07f, 0));
+        fire.addComponent(b2d);
+        
+        TransitionMachine transitionMachine = new TransitionMachine(true, false);
+        TransitionState move = new TranslateTransition(new Vector2f(-10,0),10f);
+        transitionMachine.addTransition(move);
+        fire.addComponent(transitionMachine);
+        fire.addComponent(new StageHazard());
+        
         return fire;
     }
 }
