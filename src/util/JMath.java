@@ -77,6 +77,18 @@ public class JMath {
         return lerp(easeIn(x), easeOut(x), x);
     }
     
+    public static float spike(float x) {
+        return x <= 0.5 ? x/0.5f : flip(x)/0.5f;
+    }
+    
+    public static int getRandom(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
+    }
+    
+    public static float getRandom(float min, float max) {
+        return (float) ((Math.random() * (max - min)) + min);
+    }
+    
     /*
         ease in = x^2  incrementa el exponente para mayor curva
         flip = 1 - x  invertir

@@ -10,6 +10,7 @@ import gameEngine.Prefab;
 import gameEngine.Window;
 import org.joml.Vector2f;
 import util.AssetPool;
+import util.JMath;
 import util.Settings;
 
 /**
@@ -22,7 +23,13 @@ public class BowserAI extends Enemy {
     private float swapTime = 0;
     private float timeToBreathe = 6;
     private float breathTime = 0;
+    private float timeToJump = 5;
+    private float jumpTime = 0;
     private float health = 10;
+    private boolean jumpLastFrame = false;
+    
+    private boolean active = true;
+    private Vector2f frontOffset = new Vector2f(-0.375f,0.125f);
     
     @Override
     public void start() {
@@ -30,36 +37,62 @@ public class BowserAI extends Enemy {
         this.walkSpeed = 0.3f;
         this.sizeX = Settings.GRID_WIDTH * 2;
         this.sizeY = Settings.GRID_HEIGHT * 2;
+        this.innerWidth = 0.25f * 1.7f;
+        this.castVal = -0.27f;
         
         swapTime = timeToSwap;
         breathTime = timeToBreathe;
+        jumpTime = timeToJump;
     }
     
     @Override
     public void update(float dt) {
         super.update(dt);
+        if (!active || isDead) {
+            return;
+        }
+        
         swapTime -= dt;
         breathTime -= dt;
-      
+        jumpTime -= dt;
         
-        if (swapTime < 0) {
+        if (swapTime <= 0) {
             goingRight = !goingRight;
             swapTime = timeToSwap;
         }
-        
         if (goingRight) {
             velocity.x = walkSpeed;
         } else {
             velocity.x = -walkSpeed;
         }
         
-        if (breathTime < 0) {
+        if (breathTime <= 0) {
             spawnJet();
             stateMachine.trigger("toWalk");
             breathTime = timeToBreathe;
         } else if (breathTime < 1) {
             stateMachine.trigger("toBreathe");
         }
+         
+        checkOnGround();
+        if (jumpTime <= 0) {
+            this.velocity.y = 2.8f;
+
+            jumpTime = timeToJump;
+            jumpLastFrame = true;
+        } else if (!onGround) {
+            this.acceleration.y = Window.getPhysics().getGravity().y * 0.7f;
+        } else {
+            // check if a jump was done last frame
+            if (!jumpLastFrame) {
+                this.acceleration.y = 0;
+                this.velocity.y = 0;
+            } else {
+                jumpLastFrame = false;
+            }
+            
+        }
+        applyForces(dt);
     }
     
     @Override
@@ -73,7 +106,12 @@ public class BowserAI extends Enemy {
     
     private void spawnJet() {
         GameObject fireball = Prefab.generateFireJet();
-        fireball.transform.setPosition(gameObject.transform.position);
+        
+        float diff = JMath.getRandom(-0.45f, 0.45f);
+        fireball.transform.setPosition(new Vector2f(this.gameObject.transform.position)
+                .add(frontOffset)
+                .add(0,diff));
+
         TransitionMachine tm = fireball.getComponent(TransitionMachine.class);
         if (tm != null) {
             tm.start();

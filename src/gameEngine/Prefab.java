@@ -1414,8 +1414,8 @@ public class Prefab {
         bowser.addComponent(rb);
         
         Box2DCollider b2d = new Box2DCollider();
-        b2d.setHalfSize(new Vector2f(0.35f, 0.35f));
-        b2d.setOffset(new Vector2f(0.06f, -0.03f));
+        b2d.setHalfSize(new Vector2f(0.32f, 0.35f));
+        b2d.setOffset(new Vector2f(0.04f, -0.03f));
         bowser.addComponent(b2d);
         bowser.addComponent(new BowserAI());
         
