@@ -565,6 +565,12 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+                if (OImGui.spriteButton(sprites.getSprite(12),uid++)) {
+                    GameObject object = Prefab.generateAxe();
+                    mc.pickUpObject(object);
+                }
+                
                 /*sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateItemBlock(sprites);

@@ -7,6 +7,7 @@ package components.gamecomponents;
 import components.TransitionMachine;
 import gameEngine.GameObject;
 import gameEngine.Prefab;
+import gameEngine.PrefabSave;
 import gameEngine.Window;
 import org.joml.Vector2f;
 import util.AssetPool;
@@ -20,13 +21,13 @@ import util.Settings;
 public class BowserAI extends Enemy {
     
     private float timeToSwap = 4;
-    private float swapTime = 0;
+    private transient float swapTime = 0;
     private float timeToBreathe = 6;
-    private float breathTime = 0;
+    private transient float breathTime = 0;
     private float timeToJump = 5;
-    private float jumpTime = 0;
+    private transient float jumpTime = 0;
     private float health = 10;
-    private boolean jumpLastFrame = false;
+    private transient boolean jumpLastFrame = false;
     
     private boolean active = true;
     private Vector2f frontOffset = new Vector2f(-0.375f,0.125f);
@@ -105,19 +106,26 @@ public class BowserAI extends Enemy {
     }
     
     private void spawnJet() {
-        GameObject fireball = Prefab.generateFireJet();
+        PrefabSave firePre = new PrefabSave("assets/prefabs/particles/firejet.prefab");
+        GameObject fireball = firePre.load();
         
-        float diff = JMath.getRandom(-0.45f, 0.45f);
-        fireball.transform.setPosition(new Vector2f(this.gameObject.transform.position)
-                .add(frontOffset)
-                .add(0,diff));
+        if (fireball != null) {
+            float diff = JMath.getRandom(-0.45f, 0.45f);
+            fireball.transform.setPosition(new Vector2f(this.gameObject.transform.position)
+                    .add(frontOffset)
+                    .add(0,diff));
 
-        TransitionMachine tm = fireball.getComponent(TransitionMachine.class);
-        if (tm != null) {
-            tm.start();
-            tm.begin();
+            TransitionMachine tm = fireball.getComponent(TransitionMachine.class);
+            if (tm != null) {
+                tm.start();
+                tm.begin();
+            }
+            AssetPool.getSound("assets/sounds/bowserfire.ogg").play();
+            Window.getScene().addGameObjectToScene(fireball);
         }
-        AssetPool.getSound("assets/sounds/bowserfire.ogg").play();
-        Window.getScene().addGameObjectToScene(fireball);
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }

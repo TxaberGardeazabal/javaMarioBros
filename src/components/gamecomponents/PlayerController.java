@@ -97,24 +97,27 @@ public class PlayerController extends PhysicsController {
         
         if (playWinAnimation) {
             checkOnGround();
+            GameObject flag = Window.getScene().getGameObjectByName("flag");
             
             if (!transitionMachine.isPlaying() && hasEnded) {
-                // TODO: event doesn't seem to work
+                
                 EventSystem.notify(this.gameObject, new Event(EventType.MarioWin));
                 stateMachine.trigger("stopMoving");
                 stopAllForces();
                 
-            } else if (!Window.getScene().getGameObjectByName("flag").getComponent(TransitionMachine.class).isPlaying()) {
-                disableForces = false;
-                if (!transitionMachine.isPlaying()) {
-                    transitionMachine.startTransition(6);
+            } else if (flag != null) { 
+                if (!flag.getComponent(TransitionMachine.class).isPlaying()) {
+                    disableForces = false;
+                    if (!transitionMachine.isPlaying()) {
+                        transitionMachine.startTransition(6);
+                    }
+                    stateMachine.trigger("toWalk");
+                    AssetPool.getSound("assets/sounds/stage_clear.ogg").playIfNotPlaying();
+                    hasEnded = true;
+                } else if (onGround) {
+                    transitionMachine.stop();
                 }
-                stateMachine.trigger("toWalk");
-                AssetPool.getSound("assets/sounds/stage_clear.ogg").playIfNotPlaying();
-                hasEnded = true;
-            } else if (onGround) {
-                transitionMachine.stop();
-            }
+            } 
         }
         
         if (transformFramesLeft > 0) {
@@ -603,6 +606,18 @@ public class PlayerController extends PhysicsController {
             stateMachine.trigger("startCimbing");
             gameObject.transform.scale.x = -0.25f;
             transitionMachine.startTransition(5);
+        }
+    }
+    
+    public void playWinAnimation2() {
+        if (!playWinAnimation) {
+            playWinAnimation = true;
+            stopAllForces();
+            isControlled = false;
+            hasEnded = true;
+            transitionMachine.startTransition(6);
+            AssetPool.getSound("assets/sounds/world_clear.ogg").play();
+            AssetPool.getSound("assets/sounds/bowserfalls.ogg").play();
         }
     }
     

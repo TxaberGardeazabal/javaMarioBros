@@ -1,0 +1,194 @@
+{
+  "name": "fire jet",
+  "enabled": true,
+  "components": [
+    {
+      "type": "gameEngine.Transform",
+      "properties": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 0.0,
+        "scale": {
+          "x": 0.375,
+          "y": 0.125
+        },
+        "zIndex": 0
+      }
+    },
+    {
+      "type": "components.SpriteRenderer",
+      "properties": {
+        "color": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0,
+          "w": 1.0
+        },
+        "sprite": {
+          "Width": 24.0,
+          "height": 8.0,
+          "texture": {
+            "filepath": "assets/images/spriteSheets/particles/fireJet.png",
+            "height": 16,
+            "width": 24
+          },
+          "texCoords": [
+            {
+              "x": 1.0,
+              "y": 1.0
+            },
+            {
+              "x": 1.0,
+              "y": 0.5
+            },
+            {
+              "x": 0.0,
+              "y": 0.5
+            },
+            {
+              "x": 0.0,
+              "y": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "components.StateMachine",
+      "properties": {
+        "stateTransfers": {},
+        "states": [
+          {
+            "title": "idle",
+            "animationFrames": [
+              {
+                "sprite": {
+                  "Width": 24.0,
+                  "height": 8.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/particles/fireJet.png",
+                    "height": 16,
+                    "width": 24
+                  },
+                  "texCoords": [
+                    {
+                      "x": 1.0,
+                      "y": 1.0
+                    },
+                    {
+                      "x": 1.0,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 1.0
+                    }
+                  ]
+                },
+                "frameTime": 0.08,
+                "spriteNumber": 0
+              },
+              {
+                "sprite": {
+                  "Width": 24.0,
+                  "height": 8.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/particles/fireJet.png",
+                    "height": 16,
+                    "width": 24
+                  },
+                  "texCoords": [
+                    {
+                      "x": 1.0,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 1.0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 0.5
+                    }
+                  ]
+                },
+                "frameTime": 0.08,
+                "spriteNumber": 0
+              }
+            ],
+            "doesLoop": true
+          }
+        ],
+        "defaultStateTitle": "idle"
+      }
+    },
+    {
+      "type": "physics2D.components.Rigidbody2D",
+      "properties": {
+        "angularDamping": 0.8,
+        "linearDamping": 0.9,
+        "mass": 0.1,
+        "bodyType": "Static",
+        "friction": 0.1,
+        "gravityScale": 0.0,
+        "isSensor": false,
+        "fixedRotation": true,
+        "continuousCollision": true
+      }
+    },
+    {
+      "type": "physics2D.components.Box2DCollider",
+      "properties": {
+        "halfSize": {
+          "x": 0.2,
+          "y": 0.1
+        },
+        "origin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "showBoundaries": false,
+        "offset": {
+          "x": 0.07,
+          "y": 0.0
+        }
+      }
+    },
+    {
+      "type": "components.TransitionMachine",
+      "properties": {
+        "states": [
+          {
+            "type": "components.TranslateTransition",
+            "properties": {
+              "offset": {
+                "x": -10.0,
+                "y": 0.0
+              },
+              "duration": 10.0
+            }
+          }
+        ],
+        "linear": true,
+        "loops": false
+      }
+    },
+    {
+      "type": "components.propertieComponents.StageHazard",
+      "properties": {}
+    }
+  ],
+  "doSerialization": true,
+  "isDead": false,
+  "childGOs": []
+}

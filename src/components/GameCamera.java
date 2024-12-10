@@ -67,22 +67,22 @@ public class GameCamera extends Component{
             this.camera.clearColor.set(overworldColor);
         } else {
             if (player.getComponent(PlayerController.class) != null) {
-                if (!player.getComponent(PlayerController.class).hasWon()) {
-                    // mario solo se mueve a la derecha de la pantalla
-                    Dx = -(camera.position.x - Math.max(player.transform.position.x -2.5f, highestX));
-                    camera.position.x = Math.max(player.transform.position.x -2.5f, highestX);
-                    highestX = Math.max(highestX, camera.position.x);
 
-                    if (player.transform.position.y < -playerOffset) {
-                        Dy = -(this.camera.position.y - underGroundYLevel);
-                        this.camera.position.y = underGroundYLevel;
-                        this.camera.clearColor.set(underGroundColor);
-                    } else if (player.transform.position.y >= 0.0f) {
-                        Dy = -(this.camera.position.y - 0.0f);
-                        this.camera.position.y = 0.0f;
-                        this.camera.clearColor.set(overworldColor);
-                    }
+                // mario solo se mueve a la derecha de la pantalla
+                Dx = -(camera.position.x - Math.max(player.transform.position.x -2.5f, highestX));
+                camera.position.x = Math.max(player.transform.position.x -2.5f, highestX);
+                highestX = Math.max(highestX, camera.position.x);
+
+                if (player.transform.position.y < -playerOffset) {
+                    Dy = -(this.camera.position.y - underGroundYLevel);
+                    this.camera.position.y = underGroundYLevel;
+                    this.camera.clearColor.set(underGroundColor);
+                } else if (player.transform.position.y >= 0.0f) {
+                    Dy = -(this.camera.position.y - 0.0f);
+                    this.camera.position.y = 0.0f;
+                    this.camera.clearColor.set(overworldColor);
                 }
+                
             }
         }
         

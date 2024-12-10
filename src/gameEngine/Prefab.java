@@ -30,6 +30,7 @@ import UI.buttonBehaviors.LevelSelectButtonBehavior;
 import UI.buttonBehaviors.StartButtonBehavior;
 import UI.buttonBehaviors.TestBehavior;
 import components.BlinkTransition;
+import components.RotationTransition;
 import components.TransitionMachine;
 import components.TransitionState;
 import components.TranslateTransition;
@@ -38,6 +39,7 @@ import components.gamecomponents.Fireball;
 import components.gamecomponents.Flag;
 import components.gamecomponents.FlagPole;
 import components.gamecomponents.BreakableBrick;
+import components.gamecomponents.BridgeController;
 import components.gamecomponents.FireRod;
 import components.gamecomponents.LevelController;
 import components.gamecomponents.LiveMushroom;
@@ -1458,5 +1460,39 @@ public class Prefab {
         fire.addComponent(new StageHazard());
         
         return fire;
+    }
+    
+    public static GameObject generateAxe() {
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+        GameObject axe = generateSpriteObject(sprites.getSprite(12), 0.25f, 0.25f);
+        axe.name = "axe";
+        
+        AnimationState idle = new AnimationState();
+        idle.title = "idle";
+        float defaultFrameTime = 0.23f;
+        idle.addFrame(sprites.getSprite(12), defaultFrameTime);
+        idle.addFrame(sprites.getSprite(13), defaultFrameTime);
+        idle.addFrame(sprites.getSprite(14), defaultFrameTime);
+        idle.setLoop(true);
+        
+        StateMachine sm = new StateMachine();
+        sm.addState(idle);
+        sm.setDefaultState(idle.title);
+        axe.addComponent(sm);
+        
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Static);
+        rb.setFixedRotation(false);
+        rb.setMass(0.1f);
+        rb.setGravityScale(0);
+        axe.addComponent(rb);
+        
+        Box2DCollider b2d = new Box2DCollider();
+        b2d.setHalfSize(new Vector2f(0.25f, 0.25f));
+        b2d.setOffset(new Vector2f(0, 0));
+        axe.addComponent(b2d);
+        axe.addComponent(new BridgeController());
+        
+        return axe;
     }
 }

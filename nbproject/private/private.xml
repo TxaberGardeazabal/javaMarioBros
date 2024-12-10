@@ -14,16 +14,13 @@
         <group>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/taskList.txt</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/BowserAI.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/util/JMath.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/BridgeController.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/PlayerController.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/editor/AssetWindow.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/GoombaAI.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/PhysicsController.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/LevelEditorSceneInitializer.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/gameEngine/Prefab.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/Enemy.java</file>
             <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/scene/Scene.java</file>
-            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/TransitionMachine.java</file>
+            <file>file:/E:/txaber%20gardeazabal/Documents/NetBeansProjects/mario/src/components/gamecomponents/ItemBlock.java</file>
         </group>
     </open-files>
 </project-private>
