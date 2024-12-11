@@ -5,8 +5,12 @@
 package components.gamecomponents;
 
 import components.Component;
-import components.TransitionMachine;
 import gameEngine.GameObject;
+import java.util.HashMap;
+import java.util.Map;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import physics2D.components.Rigidbody2D;
@@ -28,10 +32,12 @@ public class Flower extends Component{
     public void beginCollision(GameObject go, Contact contact, Vector2f normal) {
         PlayerController playerController = go.getComponent(PlayerController.class);
         if (playerController != null) {
-            if (playerController.isSmall()) {
-                playerController.powerUp();
-            }
             playerController.powerUp();
+            
+            Map payload = new HashMap<>();
+            payload.put("points", "1000");
+            EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));
+
             this.gameObject.destroy();
         }
     }

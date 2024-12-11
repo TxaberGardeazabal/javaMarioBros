@@ -1899,19 +1899,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -2318,210 +2318,6 @@
     "childGOs": []
   },
   {
-    "name": "ground object",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 4.875,
-            "y": 0.875
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 16.0,
-            "height": 16.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
-              "height": 64,
-              "width": 112
-            },
-            "texCoords": [
-              {
-                "x": 0.2857143,
-                "y": 1.0
-              },
-              {
-                "x": 0.2857143,
-                "y": 0.75
-              },
-              {
-                "x": 0.14285715,
-                "y": 0.75
-              },
-              {
-                "x": 0.14285715,
-                "y": 1.0
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.0,
-          "bodyType": "Static",
-          "friction": 0.1,
-          "gravityScale": 1.0,
-          "isSensor": false,
-          "fixedRotation": false,
-          "continuousCollision": true
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": false,
-          "offset": {
-            "x": 0.0,
-            "y": 0.0
-          }
-        }
-      },
-      {
-        "type": "components.propertieComponents.Ground",
-        "properties": {}
-      },
-      {
-        "type": "components.gamecomponents.BreakableBrick",
-        "properties": {}
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
-    "name": "ground object",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 5.125,
-            "y": 0.875
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 16.0,
-            "height": 16.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
-              "height": 64,
-              "width": 112
-            },
-            "texCoords": [
-              {
-                "x": 0.2857143,
-                "y": 1.0
-              },
-              {
-                "x": 0.2857143,
-                "y": 0.75
-              },
-              {
-                "x": 0.14285715,
-                "y": 0.75
-              },
-              {
-                "x": 0.14285715,
-                "y": 1.0
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.0,
-          "bodyType": "Static",
-          "friction": 0.1,
-          "gravityScale": 1.0,
-          "isSensor": false,
-          "fixedRotation": false,
-          "continuousCollision": true
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": false,
-          "offset": {
-            "x": 0.0,
-            "y": 0.0
-          }
-        }
-      },
-      {
-        "type": "components.propertieComponents.Ground",
-        "properties": {}
-      },
-      {
-        "type": "components.gamecomponents.BreakableBrick",
-        "properties": {}
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
     "name": "item block",
     "enabled": true,
     "components": [
@@ -2559,19 +2355,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -2818,19 +2614,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -3077,19 +2873,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -3336,19 +3132,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -3595,19 +3391,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -3838,7 +3634,6 @@
       {
         "type": "components.gamecomponents.LevelController",
         "properties": {
-          "hasBegun": false,
           "saveFile": "assets/saveFile.txt",
           "skyColor": {
             "x": 0.48235294,
@@ -3859,6 +3654,8 @@
             "w": 0.0
           },
           "nextLevel": "",
+          "world": "",
+          "level": "",
           "time": 0.0
         }
       }
@@ -5623,19 +5420,19 @@
             },
             "texCoords": [
               {
-                "x": 0.33333334,
+                "x": 0.5555556,
                 "y": 1.0
               },
               {
-                "x": 0.33333334,
+                "x": 0.5555556,
                 "y": 0.75
               },
               {
-                "x": 0.22222222,
+                "x": 0.44444445,
                 "y": 0.75
               },
               {
-                "x": 0.22222222,
+                "x": 0.44444445,
                 "y": 1.0
               }
             ]
@@ -5860,19 +5657,19 @@
             },
             "texCoords": [
               {
-                "x": 0.7777778,
+                "x": 1.0,
                 "y": 1.0
               },
               {
-                "x": 0.7777778,
+                "x": 1.0,
                 "y": 0.75
               },
               {
-                "x": 0.6666667,
+                "x": 0.8888889,
                 "y": 0.75
               },
               {
-                "x": 0.6666667,
+                "x": 0.8888889,
                 "y": 1.0
               }
             ]
@@ -6106,19 +5903,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 0.75
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -7275,122 +7072,23 @@
     ],
     "doSerialization": true,
     "isDead": false,
-    "childGOs": [
-      {
-        "name": "ground object",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 6.125,
-                "y": 0.625
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.25
-              },
-              "zIndex": 0
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 16.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
-                  "height": 64,
-                  "width": 112
-                },
-                "texCoords": [
-                  {
-                    "x": 0.14285715,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 0.14285715,
-                    "y": 0.75
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 0.75
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "type": "physics2D.components.Rigidbody2D",
-            "properties": {
-              "angularDamping": 0.8,
-              "linearDamping": 0.9,
-              "mass": 0.0,
-              "bodyType": "Static",
-              "friction": 0.1,
-              "gravityScale": 1.0,
-              "isSensor": false,
-              "fixedRotation": false,
-              "continuousCollision": true
-            }
-          },
-          {
-            "type": "physics2D.components.Box2DCollider",
-            "properties": {
-              "halfSize": {
-                "x": 0.25,
-                "y": 0.25
-              },
-              "origin": {
-                "x": 0.0,
-                "y": 0.0
-              },
-              "showBoundaries": false,
-              "offset": {
-                "x": 0.0,
-                "y": 0.0
-              }
-            }
-          },
-          {
-            "type": "components.propertieComponents.Ground",
-            "properties": {}
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      }
-    ]
+    "childGOs": []
   },
   {
-    "name": "Koopa",
+    "name": "ground object",
     "enabled": true,
     "components": [
       {
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 0.875,
-            "y": 1.9249997
+            "x": 6.125,
+            "y": 0.625
           },
           "rotation": 0.0,
           "scale": {
             "x": 0.25,
-            "y": 0.35
+            "y": 0.25
           },
           "zIndex": 0
         }
@@ -7406,27 +7104,27 @@
           },
           "sprite": {
             "Width": 16.0,
-            "height": 24.0,
+            "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-              "height": 96,
-              "width": 64
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 0.14285715,
                 "y": 1.0
               },
               {
-                "x": 0.5,
+                "x": 0.14285715,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.0,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -7434,138 +7132,16 @@
         }
       },
       {
-        "type": "components.StateMachine",
-        "properties": {
-          "stateTransfers": [
-            [
-              {
-                "state": "walk",
-                "trigger": "squash"
-              },
-              "shell"
-            ]
-          ],
-          "states": [
-            {
-              "title": "walk",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 24.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-                      "height": 96,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 24.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-                      "height": 96,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": true
-            },
-            {
-              "title": "shell",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 24.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-                      "height": 96,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.75,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.5
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.5
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.75
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": false
-            }
-          ],
-          "defaultStateTitle": "walk"
-        }
-      },
-      {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
           "angularDamping": 0.8,
           "linearDamping": 0.9,
-          "mass": 0.1,
-          "bodyType": "Dynamic",
+          "mass": 0.0,
+          "bodyType": "Static",
           "friction": 0.1,
-          "gravityScale": 0.0,
+          "gravityScale": 1.0,
           "isSensor": false,
-          "fixedRotation": true,
+          "fixedRotation": false,
           "continuousCollision": true
         }
       },
@@ -7573,8 +7149,8 @@
         "type": "physics2D.components.Box2DCollider",
         "properties": {
           "halfSize": {
-            "x": 0.19,
-            "y": 0.19
+            "x": 0.25,
+            "y": 0.25
           },
           "origin": {
             "x": 0.0,
@@ -7583,26 +7159,13 @@
           "showBoundaries": false,
           "offset": {
             "x": 0.0,
-            "y": -0.05
+            "y": 0.0
           }
         }
       },
       {
-        "type": "components.gamecomponents.KoopaAI",
-        "properties": {
-          "movingDebounce": 0.32,
-          "stompDebounce": 0.32,
-          "fallsOnEdges": false,
-          "sizeX": 0.25,
-          "sizeY": 0.25,
-          "terminalVelocity": {
-            "x": 2.1,
-            "y": 3.1
-          },
-          "hasGravity": true,
-          "innerWidth": 0.175,
-          "castVal": -0.2
-        }
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
       }
     ],
     "doSerialization": true,
@@ -10017,7 +9580,7 @@
         "properties": {
           "position": {
             "x": 10.375,
-            "y": 0.625
+            "y": 0.87499976
           },
           "rotation": 0.0,
           "scale": {
@@ -10115,7 +9678,7 @@
         "properties": {
           "position": {
             "x": 10.375,
-            "y": 0.875
+            "y": 1.1249998
           },
           "rotation": 0.0,
           "scale": {
@@ -10144,19 +9707,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 0.25
               },
               {
-                "x": 0.75,
+                "x": 0.25,
                 "y": 0.0
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 0.0
               },
               {
-                "x": 0.5,
+                "x": 0.0,
                 "y": 0.25
               }
             ]
@@ -10289,8 +9852,8 @@
         "type": "physics2D.components.Box2DCollider",
         "properties": {
           "halfSize": {
-            "x": 0.25,
-            "y": 0.25
+            "x": 0.1,
+            "y": 0.2
           },
           "origin": {
             "x": 0.0,
@@ -13182,6 +12745,745 @@
       {
         "type": "components.propertieComponents.Ground",
         "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "sprite_obj_gen",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 12.874987,
+            "y": 0.6899997
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.375
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 24.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/mario/toadAndPeach.png",
+              "height": 24,
+              "width": 32
+            },
+            "texCoords": [
+              {
+                "x": 0.5,
+                "y": 1.0
+              },
+              {
+                "x": 0.5,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "breakable brick block",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 4.875,
+            "y": 0.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "idle",
+                "trigger": "break"
+              },
+              "broken"
+            ]
+          ],
+          "states": [
+            {
+              "title": "idle",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                      "height": 64,
+                      "width": 112
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.42857143,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.42857143,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.2857143,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.2857143,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.0,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            },
+            {
+              "title": "broken",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/marioParticles.png",
+                      "height": 80,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.8
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.0,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "idle"
+        }
+      },
+      {
+        "type": "components.TransitionMachine",
+        "properties": {
+          "states": [
+            {
+              "type": "components.TranslateTransition",
+              "properties": {
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.05
+                },
+                "duration": 0.15
+              }
+            },
+            {
+              "type": "components.TranslateTransition",
+              "properties": {
+                "offset": {
+                  "x": 0.0,
+                  "y": -0.05
+                },
+                "duration": 0.15
+              }
+            }
+          ],
+          "linear": true,
+          "loops": false
+        }
+      },
+      {
+        "type": "components.gamecomponents.BreakableBrick",
+        "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "breakable brick block",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 5.125,
+            "y": 0.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "idle",
+                "trigger": "break"
+              },
+              "broken"
+            ]
+          ],
+          "states": [
+            {
+              "title": "idle",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+                      "height": 64,
+                      "width": 112
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.42857143,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.42857143,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.2857143,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.2857143,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.0,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            },
+            {
+              "title": "broken",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/marioParticles.png",
+                      "height": 80,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.8
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.0,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "idle"
+        }
+      },
+      {
+        "type": "components.TransitionMachine",
+        "properties": {
+          "states": [
+            {
+              "type": "components.TranslateTransition",
+              "properties": {
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.05
+                },
+                "duration": 0.15
+              }
+            },
+            {
+              "type": "components.TranslateTransition",
+              "properties": {
+                "offset": {
+                  "x": 0.0,
+                  "y": -0.05
+                },
+                "duration": 0.15
+              }
+            }
+          ],
+          "linear": true,
+          "loops": false
+        }
+      },
+      {
+        "type": "components.gamecomponents.BreakableBrick",
+        "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "Koopa",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 0.875,
+            "y": 1.9249997
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.35
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 24.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+              "height": 96,
+              "width": 64
+            },
+            "texCoords": [
+              {
+                "x": 0.5,
+                "y": 1.0
+              },
+              {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
+                "x": 0.25,
+                "y": 0.75
+              },
+              {
+                "x": 0.25,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "walk",
+                "trigger": "squash"
+              },
+              "shell"
+            ]
+          ],
+          "states": [
+            {
+              "title": "walk",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": true
+            },
+            {
+              "title": "shell",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 24.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+                      "height": 96,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.75
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "walk"
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.1,
+          "bodyType": "Dynamic",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.19,
+            "y": 0.19
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": -0.05
+          }
+        }
+      },
+      {
+        "type": "components.gamecomponents.KoopaAI",
+        "properties": {
+          "movingDebounce": 0.32,
+          "stompDebounce": 0.32,
+          "fallsOnEdges": false,
+          "sizeX": 0.25,
+          "sizeY": 0.25,
+          "terminalVelocity": {
+            "x": 2.1,
+            "y": 3.1
+          },
+          "hasGravity": true,
+          "innerWidth": 0.175,
+          "castVal": -0.19
+        }
       }
     ],
     "doSerialization": true,

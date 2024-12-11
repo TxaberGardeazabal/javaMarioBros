@@ -7,6 +7,11 @@ package components.gamecomponents;
 import gameEngine.GameObject;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
+import java.util.HashMap;
+import java.util.Map;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 import org.joml.Vector2f;
 import physics2D.enums.BodyType;
 import util.AssetPool;
@@ -39,5 +44,13 @@ public class ParatroopaAI extends Enemy {
         
         this.rb.setBodyType(BodyType.Dynamic);
         die(direction.x < 0);
+    }
+    
+    @Override
+    public void die(boolean hitRight) {
+        Map payload = new HashMap<>();
+        payload.put("points", "200");
+        EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));
+        super.die(hitRight);
     }
 }

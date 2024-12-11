@@ -7,6 +7,11 @@ package components.gamecomponents;
 import components.PhysicsController;
 import components.TransitionMachine;
 import gameEngine.GameObject;
+import java.util.HashMap;
+import java.util.Map;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import physics2D.enums.BodyType;
@@ -64,6 +69,11 @@ public class MushroomAI extends PhysicsController {
             contact.setEnabled(false);
             if (!hitPlayer) {
                 playerController.powerUp();
+                
+                Map payload = new HashMap<>();
+                payload.put("points", "1000");
+                EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));
+        
                 this.gameObject.destroy();
                 hitPlayer = true;
             }

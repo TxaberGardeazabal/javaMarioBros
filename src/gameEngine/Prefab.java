@@ -827,7 +827,7 @@ public class Prefab {
         b2d.setHalfSize(new Vector2f(0.02f,0.12f));
         b2d.setOffset(new Vector2f(0f,-0.065f));
         flagPole.addComponent(b2d);
-        flagPole.addComponent(new FlagPole(true));
+        flagPole.addComponent(new FlagPole(true, 10));
         
         flagPole.transform.position.add(new Vector2f(0,Settings.GRID_HEIGHT * poleSize));
         
@@ -846,7 +846,7 @@ public class Prefab {
             b2d = new Box2DCollider();
             b2d.setHalfSize(new Vector2f(0.02f,0.25f));
             flagPole.addComponent(b2d);
-            flagPole.addComponent(new FlagPole(false));
+            flagPole.addComponent(new FlagPole(false ,i + 1));
             
             flagPole.transform.position.add(new Vector2f(0,Settings.GRID_HEIGHT * (i + 1)));
 
@@ -1488,7 +1488,7 @@ public class Prefab {
         axe.addComponent(rb);
         
         Box2DCollider b2d = new Box2DCollider();
-        b2d.setHalfSize(new Vector2f(0.25f, 0.25f));
+        b2d.setHalfSize(new Vector2f(0.1f, 0.2f));
         b2d.setOffset(new Vector2f(0, 0));
         axe.addComponent(b2d);
         axe.addComponent(new BridgeController());

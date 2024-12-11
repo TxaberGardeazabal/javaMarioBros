@@ -59,16 +59,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -162,16 +157,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -265,16 +255,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -368,16 +353,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -471,16 +451,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -574,16 +549,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -677,16 +647,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -780,16 +745,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -883,16 +843,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -986,16 +941,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1089,16 +1039,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1192,16 +1137,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1295,16 +1235,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1398,16 +1333,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1501,16 +1431,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1604,16 +1529,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1707,16 +1627,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1810,16 +1725,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -1913,16 +1823,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2016,16 +1921,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2119,16 +2019,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2222,16 +2117,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2325,16 +2215,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2428,16 +2313,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2531,16 +2411,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2634,16 +2509,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -2737,16 +2607,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -4021,16 +3886,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 25.0,
           "bodyType": "Dynamic",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 0.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -4080,7 +3940,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 5.125,
+            "x": 5.375001,
             "y": 0.375
           },
           "rotation": 0.0,
@@ -4132,16 +3992,161 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "levelController",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.gamecomponents.LevelController",
+        "properties": {
+          "saveFile": "assets/saveFile.txt",
+          "skyColor": {
+            "x": 92.0,
+            "y": 148.0,
+            "z": 252.0,
+            "w": 1.0
+          },
+          "overworldColor": {
+            "x": 92.0,
+            "y": 148.0,
+            "z": 252.0,
+            "w": 1.0
+          },
+          "underGroundColor": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "nextLevel": "",
+          "world": "",
+          "level": "",
+          "time": 20.0
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "ground object",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": -0.12499999,
+            "y": 0.375
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
@@ -4320,16 +4325,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -4357,7 +4357,8 @@
       {
         "type": "components.gamecomponents.FlagPole",
         "properties": {
-          "isTop": true
+          "isTop": true,
+          "poleHeightNumber": 10
         }
       }
     ],
@@ -4425,16 +4426,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -4462,7 +4458,8 @@
       {
         "type": "components.gamecomponents.FlagPole",
         "properties": {
-          "isTop": true
+          "isTop": false,
+          "poleHeightNumber": 1
         }
       }
     ],
@@ -4530,16 +4527,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -4567,7 +4559,8 @@
       {
         "type": "components.gamecomponents.FlagPole",
         "properties": {
-          "isTop": true
+          "isTop": false,
+          "poleHeightNumber": 2
         }
       }
     ],
@@ -4635,16 +4628,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -4672,7 +4660,8 @@
       {
         "type": "components.gamecomponents.FlagPole",
         "properties": {
-          "isTop": true
+          "isTop": false,
+          "poleHeightNumber": 3
         }
       }
     ],
@@ -4740,16 +4729,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -4777,7 +4761,8 @@
       {
         "type": "components.gamecomponents.FlagPole",
         "properties": {
-          "isTop": true
+          "isTop": false,
+          "poleHeightNumber": 4
         }
       }
     ],
@@ -4845,16 +4830,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -4882,7 +4862,8 @@
       {
         "type": "components.gamecomponents.FlagPole",
         "properties": {
-          "isTop": true
+          "isTop": false,
+          "poleHeightNumber": 5
         }
       }
     ],
@@ -4950,16 +4931,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -4987,7 +4963,8 @@
       {
         "type": "components.gamecomponents.FlagPole",
         "properties": {
-          "isTop": true
+          "isTop": false,
+          "poleHeightNumber": 6
         }
       }
     ],
@@ -5055,16 +5032,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -5092,7 +5064,8 @@
       {
         "type": "components.gamecomponents.FlagPole",
         "properties": {
-          "isTop": true
+          "isTop": false,
+          "poleHeightNumber": 7
         }
       }
     ],
@@ -5160,16 +5133,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -5197,7 +5165,8 @@
       {
         "type": "components.gamecomponents.FlagPole",
         "properties": {
-          "isTop": true
+          "isTop": false,
+          "poleHeightNumber": 8
         }
       }
     ],
@@ -5265,16 +5234,11 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
@@ -5302,7 +5266,8 @@
       {
         "type": "components.gamecomponents.FlagPole",
         "properties": {
-          "isTop": true
+          "isTop": false,
+          "poleHeightNumber": 9
         }
       }
     ],
@@ -5370,882 +5335,14 @@
       {
         "type": "physics2D.components.Rigidbody2D",
         "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.1,
           "bodyType": "Static",
           "friction": 0.1,
-          "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": true,
-          "continuousCollision": true
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": false,
-          "offset": {
-            "x": 0.0,
-            "y": 0.0
-          }
-        }
-      },
-      {
-        "type": "components.propertieComponents.Ground",
-        "properties": {}
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
-    "name": "levelController",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.gamecomponents.LevelController",
-        "properties": {
-          "hasBegun": false,
-          "saveFile": "assets/saveFile.txt",
-          "skyColor": {
-            "x": 92.0,
-            "y": 148.0,
-            "z": 252.0,
-            "w": 1.0
-          },
-          "overworldColor": {
-            "x": 92.0,
-            "y": 148.0,
-            "z": 252.0,
-            "w": 1.0
-          },
-          "underGroundColor": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 0.0
-          },
-          "nextLevel": "",
-          "time": 20.0
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
-    "name": "goomba",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 1.875,
-            "y": 2.875
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 16.0,
-            "height": 16.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/enemies/enemiesGroundOverworld.png",
-              "height": 48,
-              "width": 48
-            },
-            "texCoords": [
-              {
-                "x": 0.33333334,
-                "y": 1.0
-              },
-              {
-                "x": 0.33333334,
-                "y": 0.6666667
-              },
-              {
-                "x": 0.0,
-                "y": 0.6666667
-              },
-              {
-                "x": 0.0,
-                "y": 1.0
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "components.StateMachine",
-        "properties": {
-          "stateTransfers": [
-            [
-              {
-                "state": "walk",
-                "trigger": "squash"
-              },
-              "squashed"
-            ]
-          ],
-          "states": [
-            {
-              "title": "walk",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGroundOverworld.png",
-                      "height": 48,
-                      "width": 48
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.33333334,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.33333334,
-                        "y": 0.6666667
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 0.6666667
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGroundOverworld.png",
-                      "height": 48,
-                      "width": 48
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.6666667,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.6666667,
-                        "y": 0.6666667
-                      },
-                      {
-                        "x": 0.33333334,
-                        "y": 0.6666667
-                      },
-                      {
-                        "x": 0.33333334,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": true
-            },
-            {
-              "title": "squashed",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGroundOverworld.png",
-                      "height": 48,
-                      "width": 48
-                    },
-                    "texCoords": [
-                      {
-                        "x": 1.0,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 1.0,
-                        "y": 0.6666667
-                      },
-                      {
-                        "x": 0.6666667,
-                        "y": 0.6666667
-                      },
-                      {
-                        "x": 0.6666667,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": false
-            }
-          ],
-          "defaultStateTitle": "walk"
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.1,
-          "bodyType": "Dynamic",
-          "friction": 0.1,
-          "angularVelocity": 0.0,
-          "gravityScale": 0.0,
-          "isSensor": false,
-          "fixedRotation": true,
-          "continuousCollision": true
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.17,
-            "y": 0.1
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": true,
-          "offset": {
-            "x": 0.0,
-            "y": -0.01
-          }
-        }
-      },
-      {
-        "type": "components.gamecomponents.GoombaAI",
-        "properties": {
-          "sizeX": 0.0,
-          "sizeY": 0.0,
-          "terminalVelocity": {
-            "x": 2.1,
-            "y": 3.1
-          },
-          "hasGravity": true,
-          "innerWidth": 0.175,
-          "castVal": -0.14
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
-    "name": "Koopa",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 1.625,
-            "y": 2.875
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.25,
-            "y": 0.35
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 16.0,
-            "height": 24.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-              "height": 96,
-              "width": 64
-            },
-            "texCoords": [
-              {
-                "x": 0.25,
-                "y": 1.0
-              },
-              {
-                "x": 0.25,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
-                "y": 1.0
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "components.StateMachine",
-        "properties": {
-          "stateTransfers": [
-            [
-              {
-                "state": "walk",
-                "trigger": "squash"
-              },
-              "shell"
-            ]
-          ],
-          "states": [
-            {
-              "title": "walk",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 24.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-                      "height": 96,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 24.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-                      "height": 96,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": true
-            },
-            {
-              "title": "shell",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 24.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-                      "height": 96,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.75,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.5
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.5
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.75
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": false
-            }
-          ],
-          "defaultStateTitle": "walk"
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.1,
-          "bodyType": "Dynamic",
-          "friction": 0.1,
-          "angularVelocity": 0.0,
-          "gravityScale": 0.0,
-          "isSensor": false,
-          "fixedRotation": true,
-          "continuousCollision": true
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.19,
-            "y": 0.19
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": true,
-          "offset": {
-            "x": 0.0,
-            "y": -0.05
-          }
-        }
-      },
-      {
-        "type": "components.gamecomponents.KoopaAI",
-        "properties": {
-          "movingDebounce": 0.32,
-          "stompDebounce": 0.32,
-          "sizeX": 0.0,
-          "sizeY": 0.0,
-          "terminalVelocity": {
-            "x": 2.1,
-            "y": 3.1
-          },
-          "hasGravity": true,
-          "innerWidth": 0.175,
-          "castVal": -0.2
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
-    "name": "Koopa",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 0.875,
-            "y": 0.425
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.25,
-            "y": 0.35
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 16.0,
-            "height": 24.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-              "height": 96,
-              "width": 64
-            },
-            "texCoords": [
-              {
-                "x": 0.25,
-                "y": 1.0
-              },
-              {
-                "x": 0.25,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
-                "y": 1.0
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "components.StateMachine",
-        "properties": {
-          "stateTransfers": [
-            [
-              {
-                "state": "walk",
-                "trigger": "squash"
-              },
-              "shell"
-            ]
-          ],
-          "states": [
-            {
-              "title": "walk",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 24.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-                      "height": 96,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                },
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 24.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-                      "height": 96,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": true
-            },
-            {
-              "title": "shell",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "Width": 16.0,
-                    "height": 24.0,
-                    "texture": {
-                      "filepath": "assets/images/spriteSheets/enemies/enemiesGreenOverworld.png",
-                      "height": 96,
-                      "width": 64
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.75,
-                        "y": 0.75
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.5
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.5
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.75
-                      }
-                    ]
-                  },
-                  "frameTime": 0.23,
-                  "spriteNumber": 0
-                }
-              ],
-              "doesLoop": false
-            }
-          ],
-          "defaultStateTitle": "walk"
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.1,
-          "bodyType": "Dynamic",
-          "friction": 0.1,
-          "angularVelocity": 0.0,
-          "gravityScale": 0.0,
-          "isSensor": false,
-          "fixedRotation": true,
-          "continuousCollision": true
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.19,
-            "y": 0.19
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": false,
-          "offset": {
-            "x": 0.0,
-            "y": -0.05
-          }
-        }
-      },
-      {
-        "type": "components.gamecomponents.KoopaAI",
-        "properties": {
-          "movingDebounce": 0.32,
-          "stompDebounce": 0.32,
-          "sizeX": 0.0,
-          "sizeY": 0.0,
-          "terminalVelocity": {
-            "x": 2.1,
-            "y": 3.1
-          },
-          "hasGravity": true,
-          "innerWidth": 0.175,
-          "castVal": -0.2
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": []
-  },
-  {
-    "name": "ground object",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": -0.12499999,
-            "y": 0.375
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.25,
-            "y": 0.25
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "Width": 16.0,
-            "height": 16.0,
-            "texture": {
-              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
-              "height": 64,
-              "width": 112
-            },
-            "texCoords": [
-              {
-                "x": 0.14285715,
-                "y": 1.0
-              },
-              {
-                "x": 0.14285715,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
-                "y": 1.0
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.0,
-          "bodyType": "Static",
-          "friction": 0.1,
-          "angularVelocity": 0.0,
-          "gravityScale": 1.0,
-          "isSensor": false,
-          "fixedRotation": false,
           "continuousCollision": true
         }
       },

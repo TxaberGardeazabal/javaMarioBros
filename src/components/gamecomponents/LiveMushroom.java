@@ -22,7 +22,7 @@ public class LiveMushroom extends MushroomAI {
         if (playerController != null) {
             contact.setEnabled(false);
             if (!hitPlayer) {
-                EventSystem.notify(this.gameObject, new Event(EventType.oneUp));
+                EventSystem.notify(this.gameObject, new Event(EventType.OneUp));
                 this.gameObject.destroy();
                 hitPlayer = true;
             }

@@ -40847,6 +40847,3318 @@
       "doSerialization": true,
       "isDead": false,
       "childGOs": []
+    },
+    {
+      "name": "dashText",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 3.85,
+              "y": 2.625
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.16568047,
+              "y": 0.16568047
+            },
+            "zIndex": 50
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 56.0,
+              "height": 56.0,
+              "texture": {
+                "filepath": "assets/images/text/fontFace.png",
+                "height": 184,
+                "width": 959
+              },
+              "texCoords": [
+                {
+                  "x": 0.52554744,
+                  "y": 0.3043478
+                },
+                {
+                  "x": 0.52554744,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.46715328,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.46715328,
+                  "y": 0.3043478
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "vidas",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 5.625,
+              "y": 0.125
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "zIndex": 20
+          }
+        },
+        {
+          "type": "UI.Digitalizer",
+          "properties": {
+            "digits": [
+              {
+                "sm": {
+                  "stateTransfers": [
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ]
+                  ],
+                  "states": [
+                    {
+                      "title": "0",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.05839416,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.05839416,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.0,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.0,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "1",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.12513034,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.12513034,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.066736184,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.066736184,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "2",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.19186653,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.19186653,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.13347237,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.13347237,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "3",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.2586027,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.2586027,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.20020854,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.20020854,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "4",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.3253389,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.3253389,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.26694474,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.26694474,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "5",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.3920751,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.3920751,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.33368093,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.33368093,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "6",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.45881125,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.45881125,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.4004171,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.4004171,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "7",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.52554744,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.52554744,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.46715328,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.46715328,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "8",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.5922836,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.5922836,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.5338895,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.5338895,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "9",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.6590198,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.6590198,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.60062563,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.60062563,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    }
+                  ],
+                  "defaultStateTitle": "0"
+                }
+              }
+            ],
+            "value": 0
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": [
+        {
+          "name": "sprite_obj_gen",
+          "enabled": true,
+          "components": [
+            {
+              "type": "gameEngine.Transform",
+              "properties": {
+                "position": {
+                  "x": 5.7250004,
+                  "y": 0.125
+                },
+                "rotation": 0.0,
+                "scale": {
+                  "x": 0.16568047,
+                  "y": 0.16568047
+                },
+                "zIndex": 20
+              }
+            },
+            {
+              "type": "components.SpriteRenderer",
+              "properties": {
+                "color": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0,
+                  "w": 1.0
+                },
+                "sprite": {
+                  "Width": 56.0,
+                  "height": 56.0,
+                  "texture": {
+                    "filepath": "assets/images/text/fontFace.png",
+                    "height": 184,
+                    "width": 959
+                  },
+                  "texCoords": [
+                    {
+                      "x": 0.05839416,
+                      "y": 1.0
+                    },
+                    {
+                      "x": 0.05839416,
+                      "y": 0.6956522
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 0.6956522
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 1.0
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "components.StateMachine",
+              "properties": {
+                "stateTransfers": [
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ]
+                ],
+                "states": [
+                  {
+                    "title": "0",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/fontFace.png",
+                            "height": 184,
+                            "width": 959
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.05839416,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.05839416,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.0,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.0,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "1",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/fontFace.png",
+                            "height": 184,
+                            "width": 959
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.12513034,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.12513034,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.066736184,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.066736184,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "2",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/fontFace.png",
+                            "height": 184,
+                            "width": 959
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.19186653,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.19186653,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.13347237,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.13347237,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "3",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/fontFace.png",
+                            "height": 184,
+                            "width": 959
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.2586027,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.2586027,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.20020854,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.20020854,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "4",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/fontFace.png",
+                            "height": 184,
+                            "width": 959
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.3253389,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.3253389,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.26694474,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.26694474,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "5",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/fontFace.png",
+                            "height": 184,
+                            "width": 959
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.3920751,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.3920751,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.33368093,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.33368093,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "6",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/fontFace.png",
+                            "height": 184,
+                            "width": 959
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.45881125,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.45881125,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.4004171,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.4004171,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "7",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/fontFace.png",
+                            "height": 184,
+                            "width": 959
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.52554744,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.52554744,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.46715328,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.46715328,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "8",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/fontFace.png",
+                            "height": 184,
+                            "width": 959
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.5922836,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.5922836,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.5338895,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.5338895,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "9",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/fontFace.png",
+                            "height": 184,
+                            "width": 959
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.6590198,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.6590198,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.60062563,
+                              "y": 0.6956522
+                            },
+                            {
+                              "x": 0.60062563,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  }
+                ],
+                "defaultStateTitle": "0"
+              }
+            },
+            {
+              "type": "UI.Digit",
+              "properties": {
+                "sm": {
+                  "stateTransfers": [
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ]
+                  ],
+                  "states": [
+                    {
+                      "title": "0",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.05839416,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.05839416,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.0,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.0,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "1",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.12513034,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.12513034,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.066736184,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.066736184,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "2",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.19186653,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.19186653,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.13347237,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.13347237,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "3",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.2586027,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.2586027,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.20020854,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.20020854,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "4",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.3253389,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.3253389,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.26694474,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.26694474,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "5",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.3920751,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.3920751,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.33368093,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.33368093,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "6",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.45881125,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.45881125,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.4004171,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.4004171,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "7",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.52554744,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.52554744,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.46715328,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.46715328,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "8",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.5922836,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.5922836,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.5338895,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.5338895,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "9",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/fontFace.png",
+                              "height": 184,
+                              "width": 959
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.6590198,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.6590198,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.60062563,
+                                "y": 0.6956522
+                              },
+                              {
+                                "x": 0.60062563,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    }
+                  ],
+                  "defaultStateTitle": "0"
+                }
+              }
+            }
+          ],
+          "doSerialization": true,
+          "isDead": false,
+          "childGOs": []
+        }
+      ]
+    },
+    {
+      "name": "marioImage",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 5.3250036,
+              "y": 0.12499995
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.2,
+              "y": 0.2
+            },
+            "zIndex": 48
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/mario/marioSmall.png",
+                "height": 32,
+                "width": 240
+              },
+              "texCoords": [
+                {
+                  "x": 0.06666667,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.06666667,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.0,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "XText2",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 5.5250006,
+              "y": 0.125
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.15,
+              "y": 0.15
+            },
+            "zIndex": 50
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/particles/UIExtra.png",
+                "height": 16,
+                "width": 64
+              },
+              "texCoords": [
+                {
+                  "x": 0.25,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.25,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.0,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
     }
   ]
 }

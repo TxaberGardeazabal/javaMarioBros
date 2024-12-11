@@ -263,7 +263,7 @@ public class PropertiesWindow {
                                 
                                 if (ImGui.menuItem("Add flagpole logic")) {
                                     if (activeGameObject.getComponent(FlagPole.class) == null) {
-                                        activeGameObject.addComponent(new FlagPole(false));
+                                        activeGameObject.addComponent(new FlagPole(false, 1));
                                     }
                                 }
                                 

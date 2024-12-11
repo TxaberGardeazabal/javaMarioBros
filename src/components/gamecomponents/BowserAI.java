@@ -6,9 +6,13 @@ package components.gamecomponents;
 
 import components.TransitionMachine;
 import gameEngine.GameObject;
-import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
+import java.util.HashMap;
+import java.util.Map;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 import org.joml.Vector2f;
 import util.AssetPool;
 import util.JMath;
@@ -103,6 +107,14 @@ public class BowserAI extends Enemy {
             AssetPool.getSound("assets/sounds/bowserfalls.ogg").play();
             die();
         }
+    }
+    
+    @Override
+    public void die(boolean hitRight) {
+        Map payload = new HashMap<>();
+        payload.put("points", "50000");
+        EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));
+        super.die(hitRight);
     }
     
     private void spawnJet() {

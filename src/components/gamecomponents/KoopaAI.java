@@ -8,7 +8,12 @@ import components.Component;
 import components.propertieComponents.Ground;
 import gameEngine.GameObject;
 import gameEngine.Window;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
@@ -29,6 +34,7 @@ public class KoopaAI extends Enemy {
     
     private boolean fallsOnEdges = true;
     private transient float fallDebounce = 0;
+    private transient int hitCombo = 0;
     
     @Override
     public void update(float dt) {
@@ -81,12 +87,21 @@ public class KoopaAI extends Enemy {
                     isShellMoving = false;
                     stopAllForces();
                     AssetPool.getSound("assets/sounds/kick.ogg").play();
+                    hitCombo = 0;
                 } else {
                     isShellMoving = true;
                     AssetPool.getSound("assets/sounds/kick.ogg").play();
                 }
             }
         }
+    }
+    
+    @Override
+    public void die(boolean hitRight) {
+        Map payload = new HashMap<>();
+        payload.put("points", "200");
+        EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));
+        super.die(hitRight);
     }
     
     @Override
@@ -117,6 +132,8 @@ public class KoopaAI extends Enemy {
                         // player to koopa interactions
                         if (!playerController.isStarInvincible() && normal.y > 0.58f) {
                             playerController.enemyBounce();
+                            playerController.stompIncrement();
+                            
                             stomp();
                         } else if (!playerController.isInvincible()){
                             playerController.hurt();
@@ -128,12 +145,17 @@ public class KoopaAI extends Enemy {
                         } else {
                             if (normal.y > 0.58f) {
                                 playerController.enemyBounce();
+                                playerController.stompIncrement();
                                 stomp();
                                 goingRight = normal.x < 0;
                             } else if (!isShellMoving) {
                                 stomp();
                                 goingRight = normal.x < 0;
                                 movingDebounce = 0.32f;
+                                
+                                Map payload = new HashMap<>();
+                                payload.put("points", "400");
+                                EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));
                             }
                         }
                     }
@@ -156,6 +178,7 @@ public class KoopaAI extends Enemy {
                         if (otherKoopa.isShelled && otherKoopa.isShellMoving) {
                             die(normal.x < 0);
                         }
+                        hitIncrement();
                     }
                     
                 } else {
@@ -164,8 +187,11 @@ public class KoopaAI extends Enemy {
                         other.die(normal.x > 0);
                         contact.setEnabled(false);
                         AssetPool.getSound("assets/sounds/kick.ogg").play();
+                        hitIncrement();
                     }
                 }
+                
+                
             }
         }
     }
@@ -206,5 +232,43 @@ public class KoopaAI extends Enemy {
 
     public void setFallsOnEdges(boolean fallsOnEdges) {
         this.fallsOnEdges = fallsOnEdges;
+    }
+    
+    private void hitIncrement() {
+        Map payload = new HashMap<>();
+        
+        switch(hitCombo) {
+            case 0:
+                payload.put("points", "500");
+                break;
+            case 1:
+                payload.put("points", "800");
+                break;
+            case 2:
+                payload.put("points", "1000");
+                break;
+            case 3:
+                payload.put("points", "2000");
+                break;
+            case 4:
+                payload.put("points", "4000");
+                break;
+            case 5:
+                payload.put("points", "5000");
+                break;
+            case 6:
+                payload.put("points", "8000");
+                break;
+            case 7:
+                payload.put("points", "0");
+                EventSystem.notify(this.gameObject, new Event(EventType.OneUp));
+                hitCombo--;
+                break;
+            default:
+                payload.put("points", "0");
+                break;
+        }
+        hitCombo++;
+        EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));
     }
 }

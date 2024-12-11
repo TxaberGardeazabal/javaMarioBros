@@ -117,6 +117,7 @@ public class Enemy extends PhysicsController{
                 if (!playerController.isDead()) {
                     if (!playerController.isStarInvincible() && normal.y > 0.58f) {
                         playerController.enemyBounce();
+                        playerController.stompIncrement();
                         stomp();
                     } else if (!playerController.isInvincible()){
                         playerController.hurt();

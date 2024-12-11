@@ -205,6 +205,9 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/spriteSheets/particles/fireJet.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/fireJet.png"),
                 24,8,2,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/mario/toadAndPeach.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/mario/toadAndPeach.png"),
+                16,24,2,0));
         
         
         // sounds

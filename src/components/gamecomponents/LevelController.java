@@ -32,7 +32,7 @@ import util.AssetPool;
  */
 public class LevelController extends Component implements Observer{
     
-    private boolean hasBegun = false;
+    private transient boolean hasBegun = false;
     private String saveFile = "assets/saveFile.txt";
     private transient GameObject hud;
     
@@ -42,9 +42,9 @@ public class LevelController extends Component implements Observer{
     public Vector4f underGroundColor = new Vector4f(0.0f,0.0f,0.0f,0.0f);
     
     public String nextLevel = "";
-    public String world;
-    public String level;
-    public float time;
+    public String world = "";
+    public String level = "";
+    public float time = 0;
     private transient float timeLeft = time;
     private transient float timeBeforeLevelSwitch = 5;
     private transient boolean levelDone;
@@ -54,11 +54,13 @@ public class LevelController extends Component implements Observer{
     private transient PlayerController player;
     
     // hud
-    Digitalizer scoreD;
-    Digitalizer coinsD;
-    Digitalizer worldD;
-    Digitalizer levelD;
-    Digitalizer timeD;
+    private transient Digitalizer scoreD;
+    private transient Digitalizer coinsD;
+    private transient Digitalizer worldD;
+    private transient Digitalizer levelD;
+    private transient Digitalizer timeD;
+    private transient Digitalizer livesD;
+    
     
     
     @Override
@@ -94,6 +96,13 @@ public class LevelController extends Component implements Observer{
                     ConsoleWindow.LogCategory.warning);
         } else {
             hud.transform.translate(new Vector2f(0,0));
+            
+            scoreD = hud.getChildByName("puntos").getComponent(Digitalizer.class);
+            coinsD = hud.getChildByName("monedas").getComponent(Digitalizer.class);
+            worldD = hud.getChildByName("mundo").getComponent(Digitalizer.class);
+            levelD = hud.getChildByName("nivel").getComponent(Digitalizer.class);
+            timeD = hud.getChildByName("tiempo").getComponent(Digitalizer.class);
+            livesD = hud.getChildByName("vidas").getComponent(Digitalizer.class);
         }
         
         timeLeft = time;
@@ -112,17 +121,13 @@ public class LevelController extends Component implements Observer{
         }
         
         if (hud != null) {
-            scoreD = hud.getChildByName("puntos").getComponent(Digitalizer.class);
-            coinsD = hud.getChildByName("monedas").getComponent(Digitalizer.class);
-            worldD = hud.getChildByName("mundo").getComponent(Digitalizer.class);
-            levelD = hud.getChildByName("nivel").getComponent(Digitalizer.class);
-            timeD = hud.getChildByName("tiempo").getComponent(Digitalizer.class);
 
             scoreD.setValue(pData.score);
             coinsD.setValue(pData.coins);
             worldD.setValue(Integer.parseInt(world));
             levelD.setValue(Integer.parseInt(level));
             timeD.setValue((int) Math.floor(timeLeft));
+            livesD.setValue(pData.lives);
         }
         
         
@@ -142,9 +147,9 @@ public class LevelController extends Component implements Observer{
                 } else if (Window.getScene().getInitializer() instanceof MainMenuSceneInitializer) {
                     // do nothing
                 }
-            } else if (timeLeft >= 0) {
+            } else if (timeLeft > 0) {
                 timeLeft--;
-                pData.score += 100;
+                pData.score += 50;
                 AssetPool.getSound("assets/sounds/coin.ogg").play();
             } 
         } else {
@@ -220,7 +225,7 @@ public class LevelController extends Component implements Observer{
                 pData.score += Integer.parseInt(event.getPayload("points"));
 
                 return;
-            case oneUp:
+            case OneUp:
                 AssetPool.getSound("assets/sounds/1-up.ogg").play();
                 if (pData.lives < 99) {
                     pData.lives++;

@@ -11,9 +11,13 @@ import components.TranslateTransition;
 import components.propertieComponents.Ground;
 import editor.ConsoleWindow;
 import gameEngine.GameObject;
-import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
+import java.util.HashMap;
+import java.util.Map;
+import observers.EventSystem;
+import observers.events.Event;
+import observers.events.EventType;
 import physics2D.RaycastInfo;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
@@ -143,6 +147,10 @@ public class ItemBlock extends Block{
             coin.transform.position.set(gameObject.transform.position);
             coin.transform.position.y += 0.25f;
             Window.getScene().addGameObjectToScene(coin);
+            
+            Map payload = new HashMap<>();
+            payload.put("points", "200");
+            EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));
         }
     }
 

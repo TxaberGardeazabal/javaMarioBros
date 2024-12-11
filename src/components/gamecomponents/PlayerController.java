@@ -14,6 +14,8 @@ import gameEngine.GameObject;
 import gameEngine.KeyListener;
 import gameEngine.Prefab;
 import gameEngine.Window;
+import java.util.HashMap;
+import java.util.Map;
 import observers.EventSystem;
 import observers.events.Event;
 import observers.events.EventType;
@@ -64,6 +66,7 @@ public class PlayerController extends PhysicsController {
     private transient int enemyBounce = 0;
     private transient final float heightMarioSmall = 0.27f;
     private transient final float heightMarioBig = 0.63f;
+    private transient int stompCombo = 0;
     
     private transient int invicivilityFrames = 1000;
     private transient int invicivilityFramesLeft = 0;
@@ -231,6 +234,9 @@ public class PlayerController extends PhysicsController {
         } else {
             stateMachine.trigger("touchFloorIdle");
             airDebounce = airDebounceTime;
+            
+            // reset combo
+            stompCombo = 0;
         }
     }
     
@@ -664,5 +670,50 @@ public class PlayerController extends PhysicsController {
         this.disableForces = disableForces;
     }
     
-    
+    public void stompIncrement() {
+        Map payload = new HashMap<>();
+        
+        switch(stompCombo) {
+            case 0:
+                payload.put("points", "100");
+                break;
+            case 1:
+                payload.put("points", "200");
+                break;
+            case 2:
+                payload.put("points", "400");
+                break;
+            case 3:
+                payload.put("points", "500");
+                break;
+            case 4:
+                payload.put("points", "800");
+                break;
+            case 5:
+                payload.put("points", "1000");
+                break;
+            case 6:
+                payload.put("points", "2000");
+                break;
+            case 7:
+                payload.put("points", "4000");
+                break;
+            case 8:
+                payload.put("points", "5000");
+                break;
+            case 9:
+                payload.put("points", "8000");
+                break;
+            case 10:
+                payload.put("points", "0");
+                EventSystem.notify(this.gameObject, new Event(EventType.OneUp));
+                stompCombo--;
+                break;
+            default:
+                payload.put("points", "0");
+                break;
+        }
+        stompCombo++;
+        EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));
+    }
 }

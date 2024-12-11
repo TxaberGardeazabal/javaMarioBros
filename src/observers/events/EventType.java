@@ -25,6 +25,6 @@ public enum EventType {
         CoinGet,
         MarioWin,
         MarioDie,
-        oneUp,
-        ScoreUpdate
+        OneUp,
+        ScoreUpdate,
     };

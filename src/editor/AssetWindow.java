@@ -380,6 +380,12 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateUIText(sprites.getSprite(0));
+                    mc.pickUpObject(object);
+                }
+                
                 ImGui.sameLine();
                 ImGui.endTabItem();
             }
@@ -571,6 +577,16 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/toadAndPeach.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generateSpriteObject(sprites.getSprite(0), 0.25f, 0.375f);
+                    mc.pickUpObject(object);
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(1),uid++)) {
+                    GameObject object = Prefab.generateSpriteObject(sprites.getSprite(1), 0.25f, 0.375f);
+                    mc.pickUpObject(object);
+                }  
                 /*sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
                 if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateItemBlock(sprites);
