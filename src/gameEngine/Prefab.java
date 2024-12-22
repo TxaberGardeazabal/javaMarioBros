@@ -496,9 +496,9 @@ public class Prefab {
         return coin;
     }
     
-    public static GameObject generateMushroom() {
+    public static GameObject generateMushroom(int offset) {
         SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
-        GameObject mushroom = generateSpriteObject(Sprites.getSprite(0), 0.25f, 0.25f);
+        GameObject mushroom = generateSpriteObject(Sprites.getSprite(0 + offset), 0.25f, 0.25f);
         mushroom.name = "mushroom";
 
         Rigidbody2D rb = new Rigidbody2D();
@@ -517,18 +517,18 @@ public class Prefab {
         return mushroom;
     }
     
-    public static GameObject generateFlower() {
+    public static GameObject generateFlower(int offset) {
         SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
-        GameObject flower = generateSpriteObject(Sprites.getSprite(1), 0.25f, 0.25f);
+        GameObject flower = generateSpriteObject(Sprites.getSprite(1 + offset), 0.25f, 0.25f);
         flower.name = "flower";
 
         AnimationState idle = new AnimationState();
         idle.title = "flicker";
         float defaultFrameTime = 0.23f;
-        idle.addFrame(Sprites.getSprite(1), defaultFrameTime);
-        idle.addFrame(Sprites.getSprite(2), defaultFrameTime);
-        idle.addFrame(Sprites.getSprite(3), defaultFrameTime);
-        idle.addFrame(Sprites.getSprite(4), defaultFrameTime);
+        idle.addFrame(Sprites.getSprite(1 + offset), defaultFrameTime);
+        idle.addFrame(Sprites.getSprite(2 + offset), defaultFrameTime);
+        idle.addFrame(Sprites.getSprite(3 + offset), defaultFrameTime);
+        idle.addFrame(Sprites.getSprite(4 + offset), defaultFrameTime);
         idle.setLoop(true);
         
         StateMachine stateMachine = new StateMachine();
@@ -553,8 +553,7 @@ public class Prefab {
         return flower;
     }
     
-    public static GameObject generateGoomba() {
-        SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png");
+    public static GameObject generateGoomba(SpriteSheet Sprites) {
         GameObject goomba = generateSpriteObject(Sprites.getSprite(6), 0.25f, 0.25f);
         goomba.name = "goomba";
         
@@ -706,8 +705,7 @@ public class Prefab {
         return pipe;
     }
     
-    public static GameObject generateCoin() {
-        SpriteSheet Sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+    public static GameObject generateCoin(SpriteSheet Sprites) {
         GameObject coin = generateSpriteObject(Sprites.getSprite(4), 0.25f, 0.25f);
         coin.name = "coin";
         
@@ -1136,18 +1134,18 @@ public class Prefab {
         return ret;
     }
     
-    public static GameObject generateStar() {
+    public static GameObject generateStar(int offset) {
         SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
-        GameObject star = generateSpriteObject(sprites.getSprite(5), 0.25f, 0.25f);
+        GameObject star = generateSpriteObject(sprites.getSprite(5 + offset), 0.25f, 0.25f);
         star.name = "star powerup";
         
         AnimationState flicker = new AnimationState();
         flicker.title = "flicker";
         float defaultFrameTime = 0.23f;
-        flicker.addFrame(sprites.getSprite(5), defaultFrameTime);
-        flicker.addFrame(sprites.getSprite(6), defaultFrameTime);
-        flicker.addFrame(sprites.getSprite(7), defaultFrameTime);
-        flicker.addFrame(sprites.getSprite(8), defaultFrameTime);
+        flicker.addFrame(sprites.getSprite(5 + offset), defaultFrameTime);
+        flicker.addFrame(sprites.getSprite(6 + offset), defaultFrameTime);
+        flicker.addFrame(sprites.getSprite(7 + offset), defaultFrameTime);
+        flicker.addFrame(sprites.getSprite(8 + offset), defaultFrameTime);
         flicker.setLoop(true);
 
         StateMachine stateMachine = new StateMachine();
@@ -1249,22 +1247,6 @@ public class Prefab {
         platform.addComponent(new Ground());
         
         platform.addComponent(new MovingPlatform());
-        
-        return platform;
-    }
-    
-    public static GameObject generatePlatformFoundation() {
-        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable.png");
-        GameObject platform = generateSpriteObject(sprites.getSprite(0), 0.125f, 0.125f);
-        platform.name = "Platform";
-        
-        return platform;
-    }
-    
-    public static GameObject generatePlatformFoundation2() {
-        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable2.png");
-        GameObject platform = generateSpriteObject(sprites.getSprite(0), 0.25f, 0.125f);
-        platform.name = "Platform";
         
         return platform;
     }
@@ -1463,7 +1445,7 @@ public class Prefab {
     }
     
     public static GameObject generateAxe() {
-        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png");
+        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksOverworld.png");
         GameObject axe = generateSpriteObject(sprites.getSprite(12), 0.25f, 0.25f);
         axe.name = "axe";
         

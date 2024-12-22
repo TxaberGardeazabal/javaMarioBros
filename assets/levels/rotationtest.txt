@@ -31,7 +31,7 @@
             "Width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
               "height": 64,
               "width": 64
             },
@@ -132,7 +132,7 @@
                 "Width": 16.0,
                 "height": 16.0,
                 "texture": {
-                  "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                  "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
                   "height": 64,
                   "width": 64
                 },
@@ -335,7 +335,7 @@
             "Width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
               "height": 64,
               "width": 64
             },
@@ -536,7 +536,7 @@
             "Width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
               "height": 64,
               "width": 64
             },
@@ -737,7 +737,7 @@
             "Width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
               "height": 64,
               "width": 64
             },
@@ -938,7 +938,7 @@
             "Width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
               "height": 64,
               "width": 64
             },
@@ -1139,7 +1139,7 @@
             "Width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
               "height": 64,
               "width": 64
             },

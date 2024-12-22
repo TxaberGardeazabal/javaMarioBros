@@ -154,8 +154,17 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/spriteSheets/blocksAndScenery/skyCastle.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/blocksAndScenery/skyCastle.png"),
                 16,16,10,0));
-        AssetPool.addSpritesheet("assets/images/spriteSheets/particles/coinBlocks.png", 
-                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/coinBlocks.png"),
+        AssetPool.addSpritesheet("assets/images/spriteSheets/particles/coinBlocksOverworld.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/coinBlocksOverworld.png"),
+                16,16,15,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/particles/coinBlocksUnderground.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/coinBlocksUnderground.png"),
+                16,16,15,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/particles/coinBlocksCastle.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/coinBlocksCastle.png"),
+                16,16,15,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/particles/coinBlocksUnderwater.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/particles/coinBlocksUnderwater.png"),
                 16,16,15,0));
         AssetPool.addSpritesheet("assets/images/spriteSheets/mario/marioSmall.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/mario/marioSmall.png"),
@@ -181,11 +190,26 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png"),
                 16,24,14,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenUnderground.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGreenUnderground.png"),
+                16,24,14,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenUnderwater.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGreenUnderwater.png"),
+                16,24,14,0));
         AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesRed.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesRed.png"),
                 16,24,15,0));
         AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png"),
+                16,16,8,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundUnderground.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGroundUnderground.png"),
+                16,16,8,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundCastle.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGroundCastle.png"),
+                16,16,8,0));
+        AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundUnderwater.png", 
+                new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/enemiesGroundUnderwater.png"),
                 16,16,8,0));
         AssetPool.addSpritesheet("assets/images/spriteSheets/enemies/bowser.png", 
                 new SpriteSheet(AssetPool.getTexture("assets/images/spriteSheets/enemies/bowser.png"),

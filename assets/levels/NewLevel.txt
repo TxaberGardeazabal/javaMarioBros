@@ -79081,7 +79081,7 @@
             "Width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
               "height": 64,
               "width": 64
             },
@@ -79127,7 +79127,7 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
                       "height": 64,
                       "width": 64
                     },
@@ -79158,7 +79158,7 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
                       "height": 64,
                       "width": 64
                     },
@@ -79189,7 +79189,7 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
                       "height": 64,
                       "width": 64
                     },
@@ -79226,7 +79226,7 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
                       "height": 64,
                       "width": 64
                     },
@@ -79369,7 +79369,7 @@
             "Width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
               "height": 64,
               "width": 64
             },
@@ -79415,7 +79415,7 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
                       "height": 64,
                       "width": 64
                     },
@@ -79446,7 +79446,7 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
                       "height": 64,
                       "width": 64
                     },
@@ -79477,7 +79477,7 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
                       "height": 64,
                       "width": 64
                     },
@@ -79514,7 +79514,7 @@
                     "Width": 16.0,
                     "height": 16.0,
                     "texture": {
-                      "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
                       "height": 64,
                       "width": 64
                     },
@@ -80288,19 +80288,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.5,
-                "y": 0.75
-              },
-              {
                 "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.25,
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -81829,19 +81829,19 @@
             },
             "texCoords": [
               {
-                "x": 1.0,
+                "x": 0.75,
                 "y": 1.0
               },
               {
-                "x": 1.0,
-                "y": 0.75
-              },
-              {
                 "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.75,
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -82020,7 +82020,7 @@
             "Width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
               "height": 64,
               "width": 64
             },
