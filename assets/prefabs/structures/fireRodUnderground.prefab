@@ -1,5 +1,5 @@
 {
-  "name": "Fire rod",
+  "name": "fire rod",
   "enabled": true,
   "components": [
     {
@@ -14,7 +14,7 @@
           "x": 0.25,
           "y": 0.25
         },
-        "zIndex": 0
+        "zIndex": -1
       }
     },
     {
@@ -30,25 +30,25 @@
           "Width": 16.0,
           "height": 16.0,
           "texture": {
-            "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+            "filepath": "assets/images/spriteSheets/blocksAndScenery/groundUnderground.png",
             "height": 64,
-            "width": 64
+            "width": 112
           },
           "texCoords": [
             {
-              "x": 1.0,
+              "x": 0.5714286,
               "y": 1.0
             },
             {
-              "x": 1.0,
+              "x": 0.5714286,
               "y": 0.75
             },
             {
-              "x": 0.75,
+              "x": 0.42857143,
               "y": 0.75
             },
             {
-              "x": 0.75,
+              "x": 0.42857143,
               "y": 1.0
             }
           ]
@@ -60,7 +60,7 @@
       "properties": {
         "angularDamping": 0.8,
         "linearDamping": 0.9,
-        "mass": 0.1,
+        "mass": 0.0,
         "bodyType": "Static",
         "friction": 0.1,
         "gravityScale": 1.0,
@@ -80,7 +80,7 @@
           "x": 0.0,
           "y": 0.0
         },
-        "showBoundaries": false,
+        "showBoundaries": true,
         "offset": {
           "x": 0.0,
           "y": 0.0
@@ -103,7 +103,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.0,
+              "x": -1.9073486E-6,
               "y": 0.0
             },
             "rotation": 0.0,
@@ -139,7 +139,7 @@
               "x": 0.0,
               "y": 0.0
             },
-            "showBoundaries": false,
+            "showBoundaries": true,
             "offset": {
               "x": 0.3,
               "y": 0.0
@@ -170,8 +170,8 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": -9.536743E-7,
-                  "y": -2.3841858E-7
+                  "x": -2.861023E-6,
+                  "y": 0.0
                 },
                 "rotation": 0.0,
                 "scale": {
@@ -232,8 +232,8 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 0.12499797,
-                  "y": -2.3841858E-7
+                  "x": 0.12499511,
+                  "y": 0.0
                 },
                 "rotation": 0.0,
                 "scale": {
@@ -294,8 +294,8 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 0.2499969,
-                  "y": -2.3841858E-7
+                  "x": 0.24999332,
+                  "y": 0.0
                 },
                 "rotation": 0.0,
                 "scale": {
@@ -356,8 +356,8 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 0.37499583,
-                  "y": -2.3841858E-7
+                  "x": 0.37499237,
+                  "y": 0.0
                 },
                 "rotation": 0.0,
                 "scale": {
@@ -418,8 +418,8 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 0.49999475,
-                  "y": -2.3841858E-7
+                  "x": 0.49999142,
+                  "y": 0.0
                 },
                 "rotation": 0.0,
                 "scale": {
@@ -480,8 +480,8 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 0.6249937,
-                  "y": -2.3841858E-7
+                  "x": 0.62499,
+                  "y": 0.0
                 },
                 "rotation": 0.0,
                 "scale": {

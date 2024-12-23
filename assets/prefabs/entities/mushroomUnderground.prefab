@@ -1,0 +1,107 @@
+{
+  "name": "mushroom",
+  "enabled": true,
+  "components": [
+    {
+      "type": "gameEngine.Transform",
+      "properties": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 0.0,
+        "scale": {
+          "x": 0.25,
+          "y": 0.25
+        },
+        "zIndex": 0
+      }
+    },
+    {
+      "type": "components.SpriteRenderer",
+      "properties": {
+        "color": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0,
+          "w": 1.0
+        },
+        "sprite": {
+          "Width": 16.0,
+          "height": 16.0,
+          "texture": {
+            "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
+            "height": 64,
+            "width": 144
+          },
+          "texCoords": [
+            {
+              "x": 0.11111111,
+              "y": 0.5
+            },
+            {
+              "x": 0.11111111,
+              "y": 0.25
+            },
+            {
+              "x": 0.0,
+              "y": 0.25
+            },
+            {
+              "x": 0.0,
+              "y": 0.5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "physics2D.components.Rigidbody2D",
+      "properties": {
+        "angularDamping": 0.8,
+        "linearDamping": 0.9,
+        "mass": 0.0,
+        "bodyType": "Dynamic",
+        "friction": 0.1,
+        "gravityScale": 0.0,
+        "isSensor": false,
+        "fixedRotation": true,
+        "continuousCollision": false
+      }
+    },
+    {
+      "type": "physics2D.components.Box2DCollider",
+      "properties": {
+        "halfSize": {
+          "x": 0.2,
+          "y": 0.2
+        },
+        "origin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "showBoundaries": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.02
+        }
+      }
+    },
+    {
+      "type": "components.gamecomponents.MushroomAI",
+      "properties": {
+        "active": true,
+        "terminalVelocity": {
+          "x": 10.0,
+          "y": 10.0
+        },
+        "hasGravity": false,
+        "innerWidth": 0.175,
+        "castVal": -0.14
+      }
+    }
+  ],
+  "doSerialization": true,
+  "isDead": false,
+  "childGOs": []
+}

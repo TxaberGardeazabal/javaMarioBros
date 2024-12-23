@@ -596,8 +596,7 @@ public class Prefab {
         return goomba;
     }
     
-    public static GameObject generateKoopa() {
-        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
+    public static GameObject generateKoopa(SpriteSheet sprites) {
         GameObject turtle = generateSpriteObject(sprites.getSprite(0), 0.25f, 0.35f);
         turtle.name = "Koopa";
         
@@ -1197,8 +1196,7 @@ public class Prefab {
         return lc;
     }
     
-    public static GameObject generatePiranhaPlant() {
-        SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
+    public static GameObject generatePiranhaPlant(SpriteSheet sprites) {
         GameObject plant = generateSpriteObject(sprites.getSprite(4), 0.25f, 0.35f);
         plant.name = "Plant";
         

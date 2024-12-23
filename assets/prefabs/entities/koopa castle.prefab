@@ -1,5 +1,5 @@
 {
-  "name": "flower",
+  "name": "Koopa",
   "enabled": true,
   "components": [
     {
@@ -12,7 +12,7 @@
         "rotation": 0.0,
         "scale": {
           "x": 0.25,
-          "y": 0.25
+          "y": 0.35
         },
         "zIndex": 0
       }
@@ -28,27 +28,27 @@
         },
         "sprite": {
           "Width": 16.0,
-          "height": 16.0,
+          "height": 24.0,
           "texture": {
-            "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
-            "height": 64,
-            "width": 144
+            "filepath": "assets/images/spriteSheets/enemies/enemiesGreenUnderwater.png",
+            "height": 96,
+            "width": 64
           },
           "texCoords": [
             {
-              "x": 0.44444445,
+              "x": 0.5,
               "y": 1.0
             },
             {
-              "x": 0.44444445,
+              "x": 0.5,
               "y": 0.75
             },
             {
-              "x": 0.33333334,
+              "x": 0.25,
               "y": 0.75
             },
             {
-              "x": 0.33333334,
+              "x": 0.25,
               "y": 1.0
             }
           ]
@@ -58,35 +58,43 @@
     {
       "type": "components.StateMachine",
       "properties": {
-        "stateTransfers": {},
+        "stateTransfers": [
+          [
+            {
+              "state": "walk",
+              "trigger": "squash"
+            },
+            "shell"
+          ]
+        ],
         "states": [
           {
-            "title": "flicker",
+            "title": "walk",
             "animationFrames": [
               {
                 "sprite": {
                   "Width": 16.0,
-                  "height": 16.0,
+                  "height": 24.0,
                   "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
-                    "height": 64,
-                    "width": 144
+                    "filepath": "assets/images/spriteSheets/enemies/enemiesGreenUnderwater.png",
+                    "height": 96,
+                    "width": 64
                   },
                   "texCoords": [
                     {
-                      "x": 0.22222222,
+                      "x": 0.25,
                       "y": 1.0
                     },
                     {
-                      "x": 0.22222222,
+                      "x": 0.25,
                       "y": 0.75
                     },
                     {
-                      "x": 0.11111111,
+                      "x": 0.0,
                       "y": 0.75
                     },
                     {
-                      "x": 0.11111111,
+                      "x": 0.0,
                       "y": 1.0
                     }
                   ]
@@ -97,89 +105,27 @@
               {
                 "sprite": {
                   "Width": 16.0,
-                  "height": 16.0,
+                  "height": 24.0,
                   "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
-                    "height": 64,
-                    "width": 144
+                    "filepath": "assets/images/spriteSheets/enemies/enemiesGreenUnderwater.png",
+                    "height": 96,
+                    "width": 64
                   },
                   "texCoords": [
                     {
-                      "x": 0.33333334,
+                      "x": 0.5,
                       "y": 1.0
                     },
                     {
-                      "x": 0.33333334,
+                      "x": 0.5,
                       "y": 0.75
                     },
                     {
-                      "x": 0.22222222,
+                      "x": 0.25,
                       "y": 0.75
                     },
                     {
-                      "x": 0.22222222,
-                      "y": 1.0
-                    }
-                  ]
-                },
-                "frameTime": 0.23,
-                "spriteNumber": 0
-              },
-              {
-                "sprite": {
-                  "Width": 16.0,
-                  "height": 16.0,
-                  "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
-                    "height": 64,
-                    "width": 144
-                  },
-                  "texCoords": [
-                    {
-                      "x": 0.44444445,
-                      "y": 1.0
-                    },
-                    {
-                      "x": 0.44444445,
-                      "y": 0.75
-                    },
-                    {
-                      "x": 0.33333334,
-                      "y": 0.75
-                    },
-                    {
-                      "x": 0.33333334,
-                      "y": 1.0
-                    }
-                  ]
-                },
-                "frameTime": 0.23,
-                "spriteNumber": 0
-              },
-              {
-                "sprite": {
-                  "Width": 16.0,
-                  "height": 16.0,
-                  "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
-                    "height": 64,
-                    "width": 144
-                  },
-                  "texCoords": [
-                    {
-                      "x": 0.5555556,
-                      "y": 1.0
-                    },
-                    {
-                      "x": 0.5555556,
-                      "y": 0.75
-                    },
-                    {
-                      "x": 0.44444445,
-                      "y": 0.75
-                    },
-                    {
-                      "x": 0.44444445,
+                      "x": 0.25,
                       "y": 1.0
                     }
                   ]
@@ -189,36 +135,68 @@
               }
             ],
             "doesLoop": true
+          },
+          {
+            "title": "shell",
+            "animationFrames": [
+              {
+                "sprite": {
+                  "Width": 16.0,
+                  "height": 24.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/enemies/enemiesGreenUnderwater.png",
+                    "height": 96,
+                    "width": 64
+                  },
+                  "texCoords": [
+                    {
+                      "x": 0.75,
+                      "y": 0.75
+                    },
+                    {
+                      "x": 0.75,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                "frameTime": 0.23,
+                "spriteNumber": 0
+              }
+            ],
+            "doesLoop": false
           }
         ],
-        "defaultStateTitle": "flicker"
+        "defaultStateTitle": "walk"
       }
     },
     {
       "type": "physics2D.components.Rigidbody2D",
       "properties": {
-        "velocity": {
-          "x": 0.0,
-          "y": 0.0
-        },
         "angularDamping": 0.8,
         "linearDamping": 0.9,
-        "mass": 0.0,
-        "bodyType": "Static",
+        "mass": 0.1,
+        "bodyType": "Dynamic",
         "friction": 0.1,
-        "angularVelocity": 0.0,
         "gravityScale": 0.0,
-        "isSensor": true,
+        "isSensor": false,
         "fixedRotation": true,
-        "continuousCollision": false
+        "continuousCollision": true
       }
     },
     {
       "type": "physics2D.components.Box2DCollider",
       "properties": {
         "halfSize": {
-          "x": 0.2,
-          "y": 0.2
+          "x": 0.19,
+          "y": 0.19
         },
         "origin": {
           "x": 0.0,
@@ -227,13 +205,26 @@
         "showBoundaries": false,
         "offset": {
           "x": 0.0,
-          "y": 0.02
+          "y": -0.05
         }
       }
     },
     {
-      "type": "components.gamecomponents.Flower",
-      "properties": {}
+      "type": "components.gamecomponents.KoopaAI",
+      "properties": {
+        "movingDebounce": 0.32,
+        "stompDebounce": 0.32,
+        "fallsOnEdges": true,
+        "sizeX": 0.25,
+        "sizeY": 0.25,
+        "terminalVelocity": {
+          "x": 2.1,
+          "y": 3.1
+        },
+        "hasGravity": true,
+        "innerWidth": 0.175,
+        "castVal": -0.19
+      }
     }
   ],
   "doSerialization": true,

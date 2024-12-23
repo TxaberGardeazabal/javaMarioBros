@@ -1,0 +1,808 @@
+{
+  "name": "bridgeCollapse",
+  "enabled": true,
+  "components": [
+    {
+      "type": "gameEngine.Transform",
+      "properties": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 0.0,
+        "scale": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "zIndex": 1
+      }
+    }
+  ],
+  "doSerialization": true,
+  "isDead": false,
+  "childGOs": [
+    {
+      "name": "bridge",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -0.24999952,
+              "y": -0.24999928
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "zIndex": 0
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": [
+        {
+          "name": "ground object",
+          "enabled": true,
+          "components": [
+            {
+              "type": "gameEngine.Transform",
+              "properties": {
+                "position": {
+                  "x": -0.7499995,
+                  "y": -0.24999928
+                },
+                "rotation": 0.0,
+                "scale": {
+                  "x": 0.25,
+                  "y": 0.25
+                },
+                "zIndex": 0
+              }
+            },
+            {
+              "type": "components.SpriteRenderer",
+              "properties": {
+                "color": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0,
+                  "w": 1.0
+                },
+                "sprite": {
+                  "Width": 16.0,
+                  "height": 16.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/blocksAndScenery/skyCastle.png",
+                    "height": 32,
+                    "width": 80
+                  },
+                  "texCoords": [
+                    {
+                      "x": 1.0,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 1.0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.8,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.8,
+                      "y": 0.5
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "physics2D.components.Rigidbody2D",
+              "properties": {
+                "angularDamping": 0.8,
+                "linearDamping": 0.9,
+                "mass": 0.0,
+                "bodyType": "Static",
+                "friction": 0.1,
+                "gravityScale": 1.0,
+                "isSensor": false,
+                "fixedRotation": false,
+                "continuousCollision": true
+              }
+            },
+            {
+              "type": "physics2D.components.Box2DCollider",
+              "properties": {
+                "halfSize": {
+                  "x": 0.25,
+                  "y": 0.25
+                },
+                "origin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "showBoundaries": false,
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.0
+                }
+              }
+            },
+            {
+              "type": "components.propertieComponents.Ground",
+              "properties": {}
+            }
+          ],
+          "doSerialization": true,
+          "isDead": false,
+          "childGOs": []
+        },
+        {
+          "name": "ground object",
+          "enabled": true,
+          "components": [
+            {
+              "type": "gameEngine.Transform",
+              "properties": {
+                "position": {
+                  "x": -0.49999952,
+                  "y": -0.24999928
+                },
+                "rotation": 0.0,
+                "scale": {
+                  "x": 0.25,
+                  "y": 0.25
+                },
+                "zIndex": 0
+              }
+            },
+            {
+              "type": "components.SpriteRenderer",
+              "properties": {
+                "color": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0,
+                  "w": 1.0
+                },
+                "sprite": {
+                  "Width": 16.0,
+                  "height": 16.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/blocksAndScenery/skyCastle.png",
+                    "height": 32,
+                    "width": 80
+                  },
+                  "texCoords": [
+                    {
+                      "x": 1.0,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 1.0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.8,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.8,
+                      "y": 0.5
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "physics2D.components.Rigidbody2D",
+              "properties": {
+                "angularDamping": 0.8,
+                "linearDamping": 0.9,
+                "mass": 0.0,
+                "bodyType": "Static",
+                "friction": 0.1,
+                "gravityScale": 1.0,
+                "isSensor": false,
+                "fixedRotation": false,
+                "continuousCollision": true
+              }
+            },
+            {
+              "type": "physics2D.components.Box2DCollider",
+              "properties": {
+                "halfSize": {
+                  "x": 0.25,
+                  "y": 0.25
+                },
+                "origin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "showBoundaries": false,
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.0
+                }
+              }
+            },
+            {
+              "type": "components.propertieComponents.Ground",
+              "properties": {}
+            }
+          ],
+          "doSerialization": true,
+          "isDead": false,
+          "childGOs": []
+        },
+        {
+          "name": "ground object",
+          "enabled": true,
+          "components": [
+            {
+              "type": "gameEngine.Transform",
+              "properties": {
+                "position": {
+                  "x": -0.24999952,
+                  "y": -0.24999928
+                },
+                "rotation": 0.0,
+                "scale": {
+                  "x": 0.25,
+                  "y": 0.25
+                },
+                "zIndex": 0
+              }
+            },
+            {
+              "type": "components.SpriteRenderer",
+              "properties": {
+                "color": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0,
+                  "w": 1.0
+                },
+                "sprite": {
+                  "Width": 16.0,
+                  "height": 16.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/blocksAndScenery/skyCastle.png",
+                    "height": 32,
+                    "width": 80
+                  },
+                  "texCoords": [
+                    {
+                      "x": 1.0,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 1.0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.8,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.8,
+                      "y": 0.5
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "physics2D.components.Rigidbody2D",
+              "properties": {
+                "angularDamping": 0.8,
+                "linearDamping": 0.9,
+                "mass": 0.0,
+                "bodyType": "Static",
+                "friction": 0.1,
+                "gravityScale": 1.0,
+                "isSensor": false,
+                "fixedRotation": false,
+                "continuousCollision": true
+              }
+            },
+            {
+              "type": "physics2D.components.Box2DCollider",
+              "properties": {
+                "halfSize": {
+                  "x": 0.25,
+                  "y": 0.25
+                },
+                "origin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "showBoundaries": false,
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.0
+                }
+              }
+            },
+            {
+              "type": "components.propertieComponents.Ground",
+              "properties": {}
+            }
+          ],
+          "doSerialization": true,
+          "isDead": false,
+          "childGOs": []
+        }
+      ]
+    },
+    {
+      "name": "ground object",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundCastle.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.14285715,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.14285715,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.25
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.0,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": false,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.propertieComponents.Ground",
+          "properties": {}
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "ground object",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": -0.24999928
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/groundCastle.png",
+                "height": 64,
+                "width": 112
+              },
+              "texCoords": [
+                {
+                  "x": 0.14285715,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.14285715,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.25
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.0,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "gravityScale": 1.0,
+            "isSensor": false,
+            "fixedRotation": false,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.propertieComponents.Ground",
+          "properties": {}
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "chain",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": -0.24999952,
+              "y": 0.0
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": -1
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryCastle.png",
+                "height": 80,
+                "width": 128
+              },
+              "texCoords": [
+                {
+                  "x": 0.75,
+                  "y": 0.8
+                },
+                {
+                  "x": 0.75,
+                  "y": 0.6
+                },
+                {
+                  "x": 0.625,
+                  "y": 0.6
+                },
+                {
+                  "x": 0.625,
+                  "y": 0.8
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "axe",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.0,
+              "y": 0.25
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "zIndex": 0
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 16.0,
+              "height": 16.0,
+              "texture": {
+                "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                "height": 64,
+                "width": 64
+              },
+              "texCoords": [
+                {
+                  "x": 0.75,
+                  "y": 0.25
+                },
+                {
+                  "x": 0.75,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.25
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "components.StateMachine",
+          "properties": {
+            "stateTransfers": {},
+            "states": [
+              {
+                "title": "idle",
+                "animationFrames": [
+                  {
+                    "sprite": {
+                      "Width": 16.0,
+                      "height": 16.0,
+                      "texture": {
+                        "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                        "height": 64,
+                        "width": 64
+                      },
+                      "texCoords": [
+                        {
+                          "x": 0.25,
+                          "y": 0.25
+                        },
+                        {
+                          "x": 0.25,
+                          "y": 0.0
+                        },
+                        {
+                          "x": 0.0,
+                          "y": 0.0
+                        },
+                        {
+                          "x": 0.0,
+                          "y": 0.25
+                        }
+                      ]
+                    },
+                    "frameTime": 0.23,
+                    "spriteNumber": 0
+                  },
+                  {
+                    "sprite": {
+                      "Width": 16.0,
+                      "height": 16.0,
+                      "texture": {
+                        "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                        "height": 64,
+                        "width": 64
+                      },
+                      "texCoords": [
+                        {
+                          "x": 0.5,
+                          "y": 0.25
+                        },
+                        {
+                          "x": 0.5,
+                          "y": 0.0
+                        },
+                        {
+                          "x": 0.25,
+                          "y": 0.0
+                        },
+                        {
+                          "x": 0.25,
+                          "y": 0.25
+                        }
+                      ]
+                    },
+                    "frameTime": 0.23,
+                    "spriteNumber": 0
+                  },
+                  {
+                    "sprite": {
+                      "Width": 16.0,
+                      "height": 16.0,
+                      "texture": {
+                        "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                        "height": 64,
+                        "width": 64
+                      },
+                      "texCoords": [
+                        {
+                          "x": 0.75,
+                          "y": 0.25
+                        },
+                        {
+                          "x": 0.75,
+                          "y": 0.0
+                        },
+                        {
+                          "x": 0.5,
+                          "y": 0.0
+                        },
+                        {
+                          "x": 0.5,
+                          "y": 0.25
+                        }
+                      ]
+                    },
+                    "frameTime": 0.23,
+                    "spriteNumber": 0
+                  }
+                ],
+                "doesLoop": true
+              }
+            ],
+            "defaultStateTitle": "idle"
+          }
+        },
+        {
+          "type": "physics2D.components.Rigidbody2D",
+          "properties": {
+            "angularDamping": 0.8,
+            "linearDamping": 0.9,
+            "mass": 0.1,
+            "bodyType": "Static",
+            "friction": 0.1,
+            "gravityScale": 0.0,
+            "isSensor": false,
+            "fixedRotation": false,
+            "continuousCollision": true
+          }
+        },
+        {
+          "type": "physics2D.components.Box2DCollider",
+          "properties": {
+            "halfSize": {
+              "x": 0.1,
+              "y": 0.2
+            },
+            "origin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "showBoundaries": false,
+            "offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "type": "components.gamecomponents.BridgeController",
+          "properties": {}
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    }
+  ]
+}

@@ -13,6 +13,7 @@ import gameEngine.Direction;
 import gameEngine.GameObject;
 import gameEngine.KeyListener;
 import gameEngine.Prefab;
+import gameEngine.PrefabSave;
 import gameEngine.Window;
 import java.util.HashMap;
 import java.util.Map;
@@ -336,15 +337,17 @@ public class PlayerController extends PhysicsController {
                     : new Vector2f(-0.26f,0));
 
             this.stateMachine.trigger("throwFireball");
-            GameObject fireball = Prefab.generateFireball();
-            fireball.transform.position.set(position);
-            fireball.getComponent(Fireball.class).goingRight = 
-                    gameObject.transform.scale.x > 0;
-            fireball.getComponent(Rigidbody2D.class).setAngularVelocity(-30);
+            PrefabSave firePre = new PrefabSave("assets/prefabs/particles/marioFireball.prefab");
+            GameObject fireball = firePre.load();
+            if (fireball != null) {
+                fireball.transform.position.set(position);
+                fireball.getComponent(Fireball.class).goingRight = 
+                        gameObject.transform.scale.x > 0;
+                fireball.getComponent(Rigidbody2D.class).setAngularVelocity(-30);
 
-            Window.getScene().addGameObjectToScene(fireball);
-            AssetPool.getSound("assets/sounds/fireball.ogg").play();
-            
+                Window.getScene().addGameObjectToScene(fireball);
+                AssetPool.getSound("assets/sounds/fireball.ogg").play();
+            }
         }
     }
     

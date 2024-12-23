@@ -36,19 +36,19 @@
           },
           "texCoords": [
             {
-              "x": 0.25,
+              "x": 0.5,
               "y": 1.0
             },
             {
+              "x": 0.5,
+              "y": 0.0
+            },
+            {
               "x": 0.25,
               "y": 0.0
             },
             {
-              "x": 0.0,
-              "y": 0.0
-            },
-            {
-              "x": 0.0,
+              "x": 0.25,
               "y": 1.0
             }
           ]
@@ -201,20 +201,11 @@
           {
             "type": "components.TranslateTransition",
             "properties": {
-              "pointA": {
-                "x": 1.625,
-                "y": 1.125
-              },
-              "pointB": {
-                "x": 1.625,
-                "y": 1.875
-              },
               "offset": {
                 "x": 0.0,
                 "y": 0.75
               },
-              "duration": 0.3,
-              "finished": false
+              "duration": 0.3
             }
           },
           {
@@ -224,58 +215,17 @@
                 "x": 0.0,
                 "y": -0.5
               },
-              "duration": 0.2,
-              "finished": false
+              "duration": 0.2
             }
           }
         ],
-        "loops": false,
-        "isPlaying": true
+        "linear": true,
+        "loops": false
       }
     },
     {
       "type": "components.gamecomponents.BlockCoin",
-      "properties": {
-        "coinSpeed": 1.8,
-        "timeToKill": 0.15,
-        "isTop": false,
-        "tm": {
-          "states": [
-            {
-              "type": "components.TranslateTransition",
-              "properties": {
-                "pointA": {
-                  "x": 1.625,
-                  "y": 1.125
-                },
-                "pointB": {
-                  "x": 1.625,
-                  "y": 1.875
-                },
-                "offset": {
-                  "x": 0.0,
-                  "y": 0.75
-                },
-                "duration": 0.3,
-                "finished": false
-              }
-            },
-            {
-              "type": "components.TranslateTransition",
-              "properties": {
-                "offset": {
-                  "x": 0.0,
-                  "y": -0.5
-                },
-                "duration": 0.2,
-                "finished": false
-              }
-            }
-          ],
-          "loops": false,
-          "isPlaying": true
-        }
-      }
+      "properties": {}
     }
   ],
   "doSerialization": true,

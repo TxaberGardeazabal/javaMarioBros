@@ -37,19 +37,19 @@
           "texCoords": [
             {
               "x": 0.11111111,
-              "y": 1.0
+              "y": 0.25
             },
             {
               "x": 0.11111111,
-              "y": 0.75
+              "y": 0.0
             },
             {
               "x": 0.0,
-              "y": 0.75
+              "y": 0.0
             },
             {
               "x": 0.0,
-              "y": 1.0
+              "y": 0.25
             }
           ]
         }
@@ -58,16 +58,11 @@
     {
       "type": "physics2D.components.Rigidbody2D",
       "properties": {
-        "velocity": {
-          "x": 0.0,
-          "y": 0.0
-        },
         "angularDamping": 0.8,
         "linearDamping": 0.9,
         "mass": 0.0,
         "bodyType": "Dynamic",
         "friction": 0.1,
-        "angularVelocity": 0.0,
         "gravityScale": 0.0,
         "isSensor": false,
         "fixedRotation": true,

@@ -91,7 +91,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.25000024,
+              "x": 0.24999905,
               "y": -4.7683716E-7
             },
             "rotation": 0.0,
@@ -153,7 +153,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.50000024,
+              "x": 0.49999785,
               "y": -4.7683716E-7
             },
             "rotation": 0.0,
@@ -216,7 +216,7 @@
           "properties": {
             "position": {
               "x": -2.6226044E-6,
-              "y": 0.24999928
+              "y": 0.24999958
             },
             "rotation": 0.0,
             "scale": {
@@ -277,8 +277,8 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.24999738,
-              "y": 0.24999928
+              "x": 0.24999619,
+              "y": 0.24999958
             },
             "rotation": 0.0,
             "scale": {
@@ -339,8 +339,8 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.49999738,
-              "y": 0.24999928
+              "x": 0.499995,
+              "y": 0.24999958
             },
             "rotation": 0.0,
             "scale": {
@@ -402,7 +402,7 @@
           "properties": {
             "position": {
               "x": -5.4836273E-6,
-              "y": 0.49999905
+              "y": 0.4999995
             },
             "rotation": 0.0,
             "scale": {
@@ -463,8 +463,8 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.24999452,
-              "y": 0.49999905
+              "x": 0.24999332,
+              "y": 0.4999995
             },
             "rotation": 0.0,
             "scale": {
@@ -525,8 +525,8 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.49999452,
-              "y": 0.49999905
+              "x": 0.49999213,
+              "y": 0.4999995
             },
             "rotation": 0.0,
             "scale": {
@@ -588,7 +588,7 @@
           "properties": {
             "position": {
               "x": -8.34465E-6,
-              "y": 0.7499988
+              "y": 0.7499993
             },
             "rotation": 0.0,
             "scale": {
@@ -649,8 +649,8 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.24999166,
-              "y": 0.7499988
+              "x": 0.24999046,
+              "y": 0.7499993
             },
             "rotation": 0.0,
             "scale": {
@@ -711,8 +711,8 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.49999166,
-              "y": 0.7499988
+              "x": 0.49998927,
+              "y": 0.7499993
             },
             "rotation": 0.0,
             "scale": {
@@ -773,7 +773,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": -0.25000095,
+              "x": -0.24999976,
               "y": 0.9999995
             },
             "rotation": 0.0,
@@ -825,16 +825,11 @@
         {
           "type": "physics2D.components.Rigidbody2D",
           "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
             "angularDamping": 0.8,
             "linearDamping": 0.9,
             "mass": 0.0,
             "bodyType": "Static",
             "friction": 0.1,
-            "angularVelocity": 0.0,
             "gravityScale": 1.0,
             "isSensor": false,
             "fixedRotation": false,
@@ -928,16 +923,11 @@
         {
           "type": "physics2D.components.Rigidbody2D",
           "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
             "angularDamping": 0.8,
             "linearDamping": 0.9,
             "mass": 0.0,
             "bodyType": "Static",
             "friction": 0.1,
-            "angularVelocity": 0.0,
             "gravityScale": 1.0,
             "isSensor": false,
             "fixedRotation": false,
@@ -979,7 +969,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.25000024,
+              "x": 0.24999905,
               "y": 0.9999995
             },
             "rotation": 0.0,
@@ -1031,16 +1021,11 @@
         {
           "type": "physics2D.components.Rigidbody2D",
           "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
             "angularDamping": 0.8,
             "linearDamping": 0.9,
             "mass": 0.0,
             "bodyType": "Static",
             "friction": 0.1,
-            "angularVelocity": 0.0,
             "gravityScale": 1.0,
             "isSensor": false,
             "fixedRotation": false,
@@ -1082,7 +1067,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.50000024,
+              "x": 0.49999785,
               "y": 0.9999995
             },
             "rotation": 0.0,
@@ -1134,16 +1119,11 @@
         {
           "type": "physics2D.components.Rigidbody2D",
           "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
             "angularDamping": 0.8,
             "linearDamping": 0.9,
             "mass": 0.0,
             "bodyType": "Static",
             "friction": 0.1,
-            "angularVelocity": 0.0,
             "gravityScale": 1.0,
             "isSensor": false,
             "fixedRotation": false,
@@ -1185,7 +1165,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.75000286,
+              "x": 0.74999976,
               "y": 0.9999995
             },
             "rotation": 0.0,
@@ -1237,16 +1217,11 @@
         {
           "type": "physics2D.components.Rigidbody2D",
           "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
             "angularDamping": 0.8,
             "linearDamping": 0.9,
             "mass": 0.0,
             "bodyType": "Static",
             "friction": 0.1,
-            "angularVelocity": 0.0,
             "gravityScale": 1.0,
             "isSensor": false,
             "fixedRotation": false,

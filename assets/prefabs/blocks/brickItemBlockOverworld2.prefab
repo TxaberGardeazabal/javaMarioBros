@@ -1,5 +1,5 @@
 {
-  "name": "invisible block",
+  "name": "brick item block",
   "enabled": true,
   "components": [
     {
@@ -24,31 +24,31 @@
           "x": 1.0,
           "y": 1.0,
           "z": 1.0,
-          "w": 0.5
+          "w": 1.0
         },
         "sprite": {
           "Width": 16.0,
           "height": 16.0,
           "texture": {
-            "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+            "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
             "height": 64,
-            "width": 64
+            "width": 112
           },
           "texCoords": [
             {
-              "x": 0.25,
+              "x": 0.42857143,
               "y": 1.0
             },
             {
-              "x": 0.25,
+              "x": 0.42857143,
               "y": 0.75
             },
             {
-              "x": 0.0,
+              "x": 0.2857143,
               "y": 0.75
             },
             {
-              "x": 0.0,
+              "x": 0.2857143,
               "y": 1.0
             }
           ]
@@ -76,25 +76,25 @@
                   "Width": 16.0,
                   "height": 16.0,
                   "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                    "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
                     "height": 64,
-                    "width": 64
+                    "width": 112
                   },
                   "texCoords": [
                     {
-                      "x": 0.25,
+                      "x": 0.42857143,
                       "y": 1.0
                     },
                     {
-                      "x": 0.25,
+                      "x": 0.42857143,
                       "y": 0.75
                     },
                     {
-                      "x": 0.0,
+                      "x": 0.2857143,
                       "y": 0.75
                     },
                     {
-                      "x": 0.0,
+                      "x": 0.2857143,
                       "y": 1.0
                     }
                   ]
@@ -113,7 +113,7 @@
                   "Width": 16.0,
                   "height": 16.0,
                   "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
+                    "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
                     "height": 64,
                     "width": 64
                   },
@@ -149,16 +149,11 @@
     {
       "type": "physics2D.components.Rigidbody2D",
       "properties": {
-        "velocity": {
-          "x": 0.0,
-          "y": 0.0
-        },
         "angularDamping": 0.8,
         "linearDamping": 0.9,
         "mass": 0.0,
         "bodyType": "Static",
         "friction": 0.1,
-        "angularVelocity": 0.0,
         "gravityScale": 1.0,
         "isSensor": false,
         "fixedRotation": false,
@@ -176,12 +171,16 @@
           "x": 0.0,
           "y": 0.0
         },
-        "showBoundaries": false,
+        "showBoundaries": true,
         "offset": {
           "x": 0.0,
           "y": 0.0
         }
       }
+    },
+    {
+      "type": "components.propertieComponents.Ground",
+      "properties": {}
     },
     {
       "type": "components.TransitionMachine",
@@ -209,8 +208,7 @@
           }
         ],
         "linear": true,
-        "loops": false,
-        "isPlaying": false
+        "loops": false
       }
     },
     {
@@ -218,9 +216,7 @@
       "properties": {
         "contents": "Coin",
         "numberCoins": 5,
-        "isInvisible": true,
-        "firstFlag": true,
-        "bopSpeed": 0.4
+        "isInvisible": false
       }
     }
   ],

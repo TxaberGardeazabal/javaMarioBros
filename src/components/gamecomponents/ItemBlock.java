@@ -164,7 +164,7 @@ public class ItemBlock extends Block{
     
     private void spawnMushroom() {
         AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
-        PrefabSave mushPre = new PrefabSave("assets/prefabs/entities/mushroom.prefab");
+        PrefabSave mushPre = new PrefabSave("assets/prefabs/entities/mushroomOverworld.prefab");
         GameObject mush = mushPre.load();
         if (mush != null) {
             mush.getComponent(Rigidbody2D.class).setBodyType(BodyType.Static);
@@ -185,7 +185,7 @@ public class ItemBlock extends Block{
     
     private void spawnFlower() {
         AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();        
-        PrefabSave flowerPre = new PrefabSave("assets/prefabs/entities/fireFlower.prefab");
+        PrefabSave flowerPre = new PrefabSave("assets/prefabs/entities/fireFlowerOverworld.prefab");
         GameObject flower = flowerPre.load();
         if (flower != null) {
             TranslateTransition move = new TranslateTransition(new Vector2f(0,0.2f), 1);
@@ -208,7 +208,7 @@ public class ItemBlock extends Block{
 
     private void spawnStar() {
         AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
-        PrefabSave starPre = new PrefabSave("assets/prefabs/entities/star.prefab");
+        PrefabSave starPre = new PrefabSave("assets/prefabs/entities/starOverworld.prefab");
         GameObject star = starPre.load();
         if (star != null) {
             star.getComponent(Rigidbody2D.class).setBodyType(BodyType.Static);
@@ -229,7 +229,7 @@ public class ItemBlock extends Block{
     
     private void spawn1up() {
         AssetPool.getSound("assets/sounds/powerup_appears.ogg").play();
-        PrefabSave lifePre = new PrefabSave("assets/prefabs/entities/oneUpMushroom.prefab");
+        PrefabSave lifePre = new PrefabSave("assets/prefabs/entities/mushroom1up.prefab");
         GameObject life = lifePre.load();
         if (life != null) {
             life.getComponent(Rigidbody2D.class).setBodyType(BodyType.Static);

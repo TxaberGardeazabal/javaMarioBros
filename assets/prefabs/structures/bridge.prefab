@@ -81,16 +81,11 @@
         {
           "type": "physics2D.components.Rigidbody2D",
           "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
             "angularDamping": 0.8,
             "linearDamping": 0.9,
             "mass": 0.0,
             "bodyType": "Static",
             "friction": 0.1,
-            "angularVelocity": 0.0,
             "gravityScale": 1.0,
             "isSensor": false,
             "fixedRotation": false,
@@ -132,7 +127,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.25,
+              "x": 0.25000095,
               "y": 0.0
             },
             "rotation": 0.0,
@@ -184,16 +179,11 @@
         {
           "type": "physics2D.components.Rigidbody2D",
           "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
             "angularDamping": 0.8,
             "linearDamping": 0.9,
             "mass": 0.0,
             "bodyType": "Static",
             "friction": 0.1,
-            "angularVelocity": 0.0,
             "gravityScale": 1.0,
             "isSensor": false,
             "fixedRotation": false,
@@ -235,7 +225,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.5,
+              "x": 0.5000024,
               "y": 0.0
             },
             "rotation": 0.0,
@@ -287,16 +277,11 @@
         {
           "type": "physics2D.components.Rigidbody2D",
           "properties": {
-            "velocity": {
-              "x": 0.0,
-              "y": 0.0
-            },
             "angularDamping": 0.8,
             "linearDamping": 0.9,
             "mass": 0.0,
             "bodyType": "Static",
             "friction": 0.1,
-            "angularVelocity": 0.0,
             "gravityScale": 1.0,
             "isSensor": false,
             "fixedRotation": false,
@@ -400,7 +385,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.25,
+              "x": 0.25000095,
               "y": 0.25
             },
             "rotation": 0.0,
@@ -462,7 +447,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.5,
+              "x": 0.5000024,
               "y": 0.25
             },
             "rotation": 0.0,

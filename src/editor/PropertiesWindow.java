@@ -235,7 +235,7 @@ public class PropertiesWindow {
                                         activeGameObject.addComponent(new Ground());
                                     }
                                 }
-                                if (ImGui.menuItem("Add enemy")) {
+                                if (ImGui.menuItem("Add obstacle")) {
                                     if (activeGameObject.getComponent(StageHazard.class) == null) {
                                         activeGameObject.addComponent(new StageHazard());
                                     }

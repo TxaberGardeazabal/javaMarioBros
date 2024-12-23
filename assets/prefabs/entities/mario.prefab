@@ -69,6 +69,13 @@
           [
             {
               "state": "sprint",
+              "trigger": "throwFireball"
+            },
+            "fireball"
+          ],
+          [
+            {
+              "state": "sprint",
               "trigger": "jump"
             },
             "jump"
@@ -278,6 +285,13 @@
           ],
           [
             {
+              "state": "fireball",
+              "trigger": "toCrouch"
+            },
+            "crouch"
+          ],
+          [
+            {
               "state": "walk",
               "trigger": "die"
             },
@@ -310,6 +324,13 @@
               "trigger": "jump"
             },
             "jump"
+          ],
+          [
+            {
+              "state": "walk",
+              "trigger": "throwFireball"
+            },
+            "fireball"
           ],
           [
             {
@@ -356,7 +377,7 @@
           [
             {
               "state": "fireball",
-              "trigger": "stopThrow"
+              "trigger": "stopMoving"
             },
             "idle"
           ]
@@ -1239,16 +1260,11 @@
     {
       "type": "physics2D.components.Rigidbody2D",
       "properties": {
-        "velocity": {
-          "x": 0.0,
-          "y": 0.0
-        },
         "angularDamping": 0.8,
         "linearDamping": 0.9,
         "mass": 25.0,
         "bodyType": "Dynamic",
         "friction": 0.1,
-        "angularVelocity": 0.0,
         "gravityScale": 0.0,
         "isSensor": false,
         "fixedRotation": true,
@@ -1259,8 +1275,8 @@
       "type": "physics2D.components.PillboxCollider",
       "properties": {
         "showBoundaries": false,
-        "width": 0.31,
-        "height": 0.28,
+        "width": 0.39,
+        "height": 0.3,
         "offset": {
           "x": 0.0,
           "y": 0.0

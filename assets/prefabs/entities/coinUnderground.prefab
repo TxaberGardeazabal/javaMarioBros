@@ -1,0 +1,206 @@
+{
+  "name": "coin",
+  "enabled": true,
+  "components": [
+    {
+      "type": "gameEngine.Transform",
+      "properties": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 0.0,
+        "scale": {
+          "x": 0.25,
+          "y": 0.25
+        },
+        "zIndex": 0
+      }
+    },
+    {
+      "type": "components.SpriteRenderer",
+      "properties": {
+        "color": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0,
+          "w": 1.0
+        },
+        "sprite": {
+          "Width": 16.0,
+          "height": 16.0,
+          "texture": {
+            "filepath": "assets/images/spriteSheets/particles/coinBlocksUnderground.png",
+            "height": 64,
+            "width": 64
+          },
+          "texCoords": [
+            {
+              "x": 0.5,
+              "y": 0.75
+            },
+            {
+              "x": 0.5,
+              "y": 0.5
+            },
+            {
+              "x": 0.25,
+              "y": 0.5
+            },
+            {
+              "x": 0.25,
+              "y": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "components.StateMachine",
+      "properties": {
+        "stateTransfers": {},
+        "states": [
+          {
+            "title": "walk",
+            "animationFrames": [
+              {
+                "sprite": {
+                  "Width": 16.0,
+                  "height": 16.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/particles/coinBlocksUnderground.png",
+                    "height": 64,
+                    "width": 64
+                  },
+                  "texCoords": [
+                    {
+                      "x": 0.25,
+                      "y": 0.75
+                    },
+                    {
+                      "x": 0.25,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                "frameTime": 0.23,
+                "spriteNumber": 0
+              },
+              {
+                "sprite": {
+                  "Width": 16.0,
+                  "height": 16.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/particles/coinBlocksUnderground.png",
+                    "height": 64,
+                    "width": 64
+                  },
+                  "texCoords": [
+                    {
+                      "x": 0.5,
+                      "y": 0.75
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 0.25,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 0.25,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                "frameTime": 0.23,
+                "spriteNumber": 0
+              },
+              {
+                "sprite": {
+                  "Width": 16.0,
+                  "height": 16.0,
+                  "texture": {
+                    "filepath": "assets/images/spriteSheets/particles/coinBlocksUnderground.png",
+                    "height": 64,
+                    "width": 64
+                  },
+                  "texCoords": [
+                    {
+                      "x": 0.75,
+                      "y": 0.75
+                    },
+                    {
+                      "x": 0.75,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 0.5
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                "frameTime": 0.23,
+                "spriteNumber": 0
+              }
+            ],
+            "doesLoop": true
+          }
+        ],
+        "defaultStateTitle": "walk"
+      }
+    },
+    {
+      "type": "physics2D.components.Rigidbody2D",
+      "properties": {
+        "angularDamping": 0.8,
+        "linearDamping": 0.9,
+        "mass": 0.1,
+        "bodyType": "Static",
+        "friction": 0.1,
+        "gravityScale": 1.0,
+        "isSensor": false,
+        "fixedRotation": true,
+        "continuousCollision": true
+      }
+    },
+    {
+      "type": "physics2D.components.Box2DCollider",
+      "properties": {
+        "halfSize": {
+          "x": 0.1,
+          "y": 0.14
+        },
+        "origin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "showBoundaries": false,
+        "offset": {
+          "x": 0.0,
+          "y": -0.03
+        }
+      }
+    },
+    {
+      "type": "components.gamecomponents.Coin",
+      "properties": {}
+    }
+  ],
+  "doSerialization": true,
+  "isDead": false,
+  "childGOs": []
+}

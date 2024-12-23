@@ -47,7 +47,6 @@ public class AssetWindow {
         if (ImGui.beginTabBar("WindowTabBar")) {
             if (ImGui.beginTabItem("Solid blocks")) {
                 
-                
                 ImGui.columns(2);
                 ImGui.setColumnWidth(-1, 100);
                 boolean b = isGround;
@@ -307,7 +306,6 @@ public class AssetWindow {
                 ImGui.text("elementos de la interfaz de usuario");
                 int uid = 0;
                 
-                // TODO: make  theese into prefabs
                 Sprite text = new Sprite(AssetPool.getTexture("assets/images/text/mario.png"));
                 // mario
                 if (OImGui.spriteButton(text,uid++)) {
@@ -357,7 +355,7 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
-                // digitalizer
+                
                 text = new Sprite(AssetPool.getTexture("assets/images/text/Super_Mario_Bros._Logo.png"));
                 if (OImGui.spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateUIText(text);
@@ -394,11 +392,29 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                // toad
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/toadAndPeach.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    PrefabSave pre = new PrefabSave("assets/prefabs/UI/toad.prefab");
+                    GameObject object = pre.load();
+                    mc.pickUpObject(object);
+                }
+                
+                // peach
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/toadAndPeach.png");
+                if (OImGui.spriteButton(sprites.getSprite(1),uid++)) {
+                    PrefabSave pre = new PrefabSave("assets/prefabs/UI/peach.prefab");
+                    GameObject object = pre.load();
+                    mc.pickUpObject(object);
+                }
+                
                 ImGui.sameLine();
                 ImGui.endTabItem();
             }
             
-            if (ImGui.beginTabItem("Legacy")) {
+            if (ImGui.beginTabItem("Generate")) {
+                ImGui.text("Aqui estan todos los objetos que pueden ser generados por codigo, la mayoria de los assets han sido creados de esta manera y se encuentran aqui,\n "
+                        + "aun asi se recomienda crear los objetos desde las demas pestañas al ser las versiones mas actualizadas.");
                 int uid = 0;
                 
                 // empty object
@@ -698,38 +714,38 @@ public class AssetWindow {
                 // green koopa
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
                 if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
-                    GameObject object = Prefab.generateKoopa();
+                    GameObject object = Prefab.generateKoopa(sprites);
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenUnderground.png");
                 if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
-                    GameObject object = Prefab.generateKoopa();
+                    GameObject object = Prefab.generateKoopa(sprites);
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenUnderwater.png");
                 if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
-                    GameObject object = Prefab.generateKoopa();
+                    GameObject object = Prefab.generateKoopa(sprites);
                     mc.pickUpObject(object);
                 }
 
                 // piranha plant
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
                 if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
-                    GameObject object = Prefab.generatePiranhaPlant();
+                    GameObject object = Prefab.generatePiranhaPlant(sprites);
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenUnderground.png");
                 if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
-                    GameObject object = Prefab.generatePiranhaPlant();
+                    GameObject object = Prefab.generatePiranhaPlant(sprites);
                     mc.pickUpObject(object);
                 }
                 
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenUnderwater.png");
                 if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
-                    GameObject object = Prefab.generatePiranhaPlant();
+                    GameObject object = Prefab.generatePiranhaPlant(sprites);
                     mc.pickUpObject(object);
                 }
                 
@@ -793,6 +809,13 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                // fireball
+                sprite = new Sprite(AssetPool.getTexture("assets/images/spriteSheets/marioFireball.png"));
+                if (OImGui.spriteButton(sprite,uid++)) {
+                    GameObject object = Prefab.generateFireball();
+                    mc.pickUpObject(object);
+                }
+                
                 // fire jet
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/fireJet.png");
                 if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
@@ -820,7 +843,7 @@ public class AssetWindow {
             }
             
             if (ImGui.beginTabItem("Experimental")) {
-                ImGui.text("objetos experimentales creados para probar funcionalidades, NO USAR pueden corromper tus niveles");
+                ImGui.text("objetos experimentales creados para probar funcionalidades, no se recomienda usar al poder corromper niveles");
                 int uid = 0;
                 
                 SpriteSheet pipeSprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesFull.png");

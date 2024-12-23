@@ -1,0 +1,99 @@
+{
+  "name": "fireball",
+  "enabled": true,
+  "components": [
+    {
+      "type": "gameEngine.Transform",
+      "properties": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 0.0,
+        "scale": {
+          "x": 0.12,
+          "y": 0.12
+        },
+        "zIndex": 0
+      }
+    },
+    {
+      "type": "components.SpriteRenderer",
+      "properties": {
+        "color": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0,
+          "w": 1.0
+        },
+        "sprite": {
+          "Width": 8.0,
+          "height": 8.0,
+          "texture": {
+            "filepath": "assets/images/spriteSheets/particles/marioFireball.png",
+            "height": 8,
+            "width": 8
+          },
+          "texCoords": [
+            {
+              "x": 1.0,
+              "y": 1.0
+            },
+            {
+              "x": 1.0,
+              "y": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "physics2D.components.Rigidbody2D",
+      "properties": {
+        "angularDamping": 0.8,
+        "linearDamping": 0.9,
+        "mass": 0.1,
+        "bodyType": "Dynamic",
+        "friction": 0.1,
+        "gravityScale": 1.0,
+        "isSensor": false,
+        "fixedRotation": true,
+        "continuousCollision": false
+      }
+    },
+    {
+      "type": "physics2D.components.CircleCollider",
+      "properties": {
+        "radius": 0.08,
+        "showBoundaries": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0
+        }
+      }
+    },
+    {
+      "type": "components.gamecomponents.Fireball",
+      "properties": {
+        "terminalVelocity": {
+          "x": 10.0,
+          "y": 10.0
+        },
+        "hasGravity": true,
+        "innerWidth": 0.175,
+        "castVal": -0.14
+      }
+    }
+  ],
+  "doSerialization": true,
+  "isDead": false,
+  "childGOs": []
+}

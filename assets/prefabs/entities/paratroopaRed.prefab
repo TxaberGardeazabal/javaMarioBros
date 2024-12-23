@@ -1,5 +1,5 @@
 {
-  "name": "brick item block",
+  "name": "Paratroopa",
   "enabled": true,
   "components": [
     {
@@ -12,9 +12,9 @@
         "rotation": 0.0,
         "scale": {
           "x": 0.25,
-          "y": 0.25
+          "y": 0.35
         },
-        "zIndex": 1
+        "zIndex": 0
       }
     },
     {
@@ -28,27 +28,27 @@
         },
         "sprite": {
           "Width": 16.0,
-          "height": 16.0,
+          "height": 24.0,
           "texture": {
-            "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
-            "height": 64,
-            "width": 112
+            "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+            "height": 96,
+            "width": 64
           },
           "texCoords": [
             {
-              "x": 0.42857143,
+              "x": 0.75,
               "y": 1.0
             },
             {
-              "x": 0.42857143,
+              "x": 0.75,
               "y": 0.75
             },
             {
-              "x": 0.2857143,
+              "x": 0.5,
               "y": 0.75
             },
             {
-              "x": 0.2857143,
+              "x": 0.5,
               "y": 1.0
             }
           ]
@@ -58,63 +58,49 @@
     {
       "type": "components.StateMachine",
       "properties": {
-        "stateTransfers": [
-          [
-            {
-              "state": "active",
-              "trigger": "setInactive"
-            },
-            "inactive"
-          ]
-        ],
+        "stateTransfers": {},
         "states": [
           {
-            "title": "active",
+            "title": "fly",
             "animationFrames": [
               {
                 "sprite": {
                   "Width": 16.0,
-                  "height": 16.0,
+                  "height": 24.0,
                   "texture": {
-                    "filepath": "assets/images/spriteSheets/blocksAndScenery/groundOverworld.png",
-                    "height": 64,
-                    "width": 112
+                    "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+                    "height": 96,
+                    "width": 64
                   },
                   "texCoords": [
                     {
-                      "x": 0.42857143,
+                      "x": 0.75,
                       "y": 1.0
                     },
                     {
-                      "x": 0.42857143,
+                      "x": 0.75,
                       "y": 0.75
                     },
                     {
-                      "x": 0.2857143,
+                      "x": 0.5,
                       "y": 0.75
                     },
                     {
-                      "x": 0.2857143,
+                      "x": 0.5,
                       "y": 1.0
                     }
                   ]
                 },
-                "frameTime": 0.1,
+                "frameTime": 0.23,
                 "spriteNumber": 0
-              }
-            ],
-            "doesLoop": false
-          },
-          {
-            "title": "inactive",
-            "animationFrames": [
+              },
               {
                 "sprite": {
                   "Width": 16.0,
-                  "height": 16.0,
+                  "height": 24.0,
                   "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/coinBlocks.png",
-                    "height": 64,
+                    "filepath": "assets/images/spriteSheets/enemies/enemiesRed.png",
+                    "height": 96,
                     "width": 64
                   },
                   "texCoords": [
@@ -136,32 +122,27 @@
                     }
                   ]
                 },
-                "frameTime": 0.1,
+                "frameTime": 0.23,
                 "spriteNumber": 0
               }
             ],
-            "doesLoop": false
+            "doesLoop": true
           }
         ],
-        "defaultStateTitle": "active"
+        "defaultStateTitle": "fly"
       }
     },
     {
       "type": "physics2D.components.Rigidbody2D",
       "properties": {
-        "velocity": {
-          "x": 0.0,
-          "y": 0.0
-        },
         "angularDamping": 0.8,
         "linearDamping": 0.9,
-        "mass": 0.0,
+        "mass": 0.1,
         "bodyType": "Static",
         "friction": 0.1,
-        "angularVelocity": 0.0,
-        "gravityScale": 1.0,
+        "gravityScale": 0.0,
         "isSensor": false,
-        "fixedRotation": false,
+        "fixedRotation": true,
         "continuousCollision": true
       }
     },
@@ -169,8 +150,8 @@
       "type": "physics2D.components.Box2DCollider",
       "properties": {
         "halfSize": {
-          "x": 0.25,
-          "y": 0.25
+          "x": 0.19,
+          "y": 0.19
         },
         "origin": {
           "x": 0.0,
@@ -179,52 +160,34 @@
         "showBoundaries": false,
         "offset": {
           "x": 0.0,
-          "y": 0.0
+          "y": -0.05
         }
       }
     },
     {
-      "type": "components.propertieComponents.Ground",
-      "properties": {}
-    },
-    {
-      "type": "components.TransitionMachine",
+      "type": "components.gamecomponents.MovingPlatform",
       "properties": {
-        "states": [
-          {
-            "type": "components.TranslateTransition",
-            "properties": {
-              "offset": {
-                "x": 0.0,
-                "y": 0.05
-              },
-              "duration": 0.15
-            }
-          },
-          {
-            "type": "components.TranslateTransition",
-            "properties": {
-              "offset": {
-                "x": 0.0,
-                "y": -0.05
-              },
-              "duration": 0.15
-            }
-          }
-        ],
-        "linear": true,
-        "loops": false,
-        "isPlaying": false
+        "direction": "Left",
+        "distance": 2.0,
+        "duration": 1.5,
+        "destroyOnEnd": false,
+        "loops": true,
+        "linear": false,
+        "time": 0.0
       }
     },
     {
-      "type": "components.gamecomponents.ItemBlock",
+      "type": "components.gamecomponents.ParatroopaAI",
       "properties": {
-        "contents": "Coin",
-        "numberCoins": 5,
-        "isInvisible": false,
-        "firstFlag": true,
-        "bopSpeed": 0.4
+        "sizeX": 0.25,
+        "sizeY": 0.25,
+        "terminalVelocity": {
+          "x": 2.1,
+          "y": 3.1
+        },
+        "hasGravity": true,
+        "innerWidth": 0.175,
+        "castVal": -0.19
       }
     }
   ],
