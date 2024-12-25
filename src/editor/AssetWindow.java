@@ -100,8 +100,9 @@ public class AssetWindow {
                 int uid = 0;
                 
                 PrefabSave pre = new PrefabSave("");
-                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesFull.png");
                 
+                // pipes
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/pipesFull.png");
                 if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     pre.setFilepath("assets/prefabs/blocks/pipeUp.prefab");
                     GameObject object = pre.load();
@@ -134,28 +135,186 @@ public class AssetWindow {
                     }
                 }
                 
+                // itemBlocks
+                // overworld
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksOverworld.png");
+                SpriteSheet sprites2 = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png");
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/invItemBlockOverworld.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
                 
                 if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
-                    pre.setFilepath("assets/prefabs/blocks/itemBlock.prefab");
+                    pre.setFilepath("assets/prefabs/blocks/itemBlockOverworld.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
                         mc.pickUpObject(object);
                     }
                 }
                 
+                if (OImGui.spriteButton(sprites2.getSprite(1),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickItemBlockOverworld1.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites2.getSprite(2),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickItemBlockOverworld2.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // underground
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksUnderground.png");
+                sprites2 = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundUnderground.png");
                 if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
-                    pre.setFilepath("assets/prefabs/blocks/invisibleItemBlock.prefab");
+                    pre.setFilepath("assets/prefabs/blocks/invItemBlockUnderground.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
                         mc.pickUpObject(object);
                     }
                 }
                 
-                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundOverworld.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/itemBlockUnderground.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites2.getSprite(1),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickItemBlockUnderground1.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites2.getSprite(2),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickItemBlockUnderground2.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // castle
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksCastle.png");
+                sprites2 = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundCastle.png");
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/invItemBlockCastle.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/itemBlockCastle.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites2.getSprite(1),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickItemBlockCastle1.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites2.getSprite(2),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickItemBlockCastle2.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // underwater
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksUnderwater.png");
+                sprites2 = AssetPool.getSpritesheet("assets/images/spriteSheets/blocksAndScenery/groundUnderwater.png");
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/invItemBlockUnderwater.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/itemBlockUnderwater.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites2.getSprite(1),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickItemBlockUnderwater1.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites2.getSprite(2),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickItemBlockUnderwater2.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // brick blocks
+                // overworld
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioParticles.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickBlockOverworld1.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickBlockOverworld2.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // underground
+                if (OImGui.spriteButton(sprites.getSprite(1),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickBlockUnderground1.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
                 
                 if (OImGui.spriteButton(sprites.getSprite(1),uid++)) {
-                    pre.setFilepath("assets/prefabs/blocks/brickItemBlock1.prefab");
+                    pre.setFilepath("assets/prefabs/blocks/brickBlockUnderground2.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // castle
+                if (OImGui.spriteButton(sprites.getSprite(2),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickBlockCastle1.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
                         mc.pickUpObject(object);
@@ -163,7 +322,16 @@ public class AssetWindow {
                 }
                 
                 if (OImGui.spriteButton(sprites.getSprite(2),uid++)) {
-                    pre.setFilepath("assets/prefabs/blocks/brickItemBlock2.prefab");
+                    pre.setFilepath("assets/prefabs/blocks/brickBlockCastle2.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // underwater
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/brickBlockUnderwater1.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
                         mc.pickUpObject(object);
@@ -171,7 +339,88 @@ public class AssetWindow {
                 }
                 
                 if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
-                    pre.setFilepath("assets/prefabs/fireRod.prefab");
+                    pre.setFilepath("assets/prefabs/blocks/brickBlockUnderwater2.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // platforms
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/platformsTileable.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/movingPlatformX2.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/movingPlatformX3.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/movingPlatformX4.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/movingPlatformX6.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // fire rod
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksOverworld.png");
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
+                    pre.setFilepath("assets/prefabs/structures/fireRodOverworld.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksUnderground.png");
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
+                    pre.setFilepath("assets/prefabs/structures/fireRodUnderground.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksCastle.png");
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
+                    pre.setFilepath("assets/prefabs/structures/fireRodCastle.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksUnderwater.png");
+                if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
+                    pre.setFilepath("assets/prefabs/structures/fireRodUnderwater.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // axe
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksOverworld.png");
+                if (OImGui.spriteButton(sprites.getSprite(12),uid++)) {
+                    pre.setFilepath("assets/prefabs/blocks/axe.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
                         mc.pickUpObject(object);
@@ -186,6 +435,7 @@ public class AssetWindow {
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioSmall.png");
                 PrefabSave pre = new PrefabSave("");
                 
+                // mario
                 if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     pre.setFilepath("assets/prefabs/entities/mario.prefab");
                     GameObject object = pre.load();
@@ -194,56 +444,27 @@ public class AssetWindow {
                     }
                 }
                 
-                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksOverworld.png");
-                
-                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
-                    pre.setFilepath("assets/prefabs/entities/levelCoin.prefab");
-                    GameObject object = pre.load();
-                    if (object != null) {
-                        mc.pickUpObject(object);
-                    }
-                }
-                
-                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png");
-                
-                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
-                    pre.setFilepath("assets/prefabs/entities/goomba.prefab");
-                    GameObject object = pre.load();
-                    if (object != null) {
-                        mc.pickUpObject(object);
-                    }
-                }
-                
-                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
-                
-                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
-                    pre.setFilepath("assets/prefabs/entities/greenKoopa.prefab");
-                    GameObject object = pre.load();
-                    if (object != null) {
-                        mc.pickUpObject(object);
-                    }
-                }
-                
+                // mario powerups + collectibles
+                // mushroom
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/marioPowerups.png");
-                
                 if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
-                    pre.setFilepath("assets/prefabs/entities/mushroom.prefab");
+                    pre.setFilepath("assets/prefabs/entities/mushroomOverworld.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
                         mc.pickUpObject(object);
                     }
                 }
                 
-                if (OImGui.spriteButton(sprites.getSprite(1),uid++)) {
-                    pre.setFilepath("assets/prefabs/entities/fireFlower.prefab");
+                if (OImGui.spriteButton(sprites.getSprite(18),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/mushroomUnderground.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
                         mc.pickUpObject(object);
                     }
                 }
                 
-                if (OImGui.spriteButton(sprites.getSprite(6),uid++)) {
-                    pre.setFilepath("assets/prefabs/entities/star.prefab");
+                if (OImGui.spriteButton(sprites.getSprite(27),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/mushroomCastle.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
                         mc.pickUpObject(object);
@@ -251,19 +472,242 @@ public class AssetWindow {
                 }
                 
                 if (OImGui.spriteButton(sprites.getSprite(9),uid++)) {
-                    pre.setFilepath("assets/prefabs/entities/oneUpMushroom.prefab");
+                    pre.setFilepath("assets/prefabs/entities/mushroom1up.prefab");
                     GameObject object = pre.load();
                     if (object != null) {
                         mc.pickUpObject(object);
                     }
                 }
+                
+                // flower
+                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/fireFlowerOverworld.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(13),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/fireFlowerUnderGround.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(22),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/fireFlowerCastle.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(31),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/fireFlowerUnderwater.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // star
+                if (OImGui.spriteButton(sprites.getSprite(8),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/starOverworld.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+               
+                if (OImGui.spriteButton(sprites.getSprite(17),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/starUnderwater.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+               
+                if (OImGui.spriteButton(sprites.getSprite(26),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/starCastle.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+               
+                if (OImGui.spriteButton(sprites.getSprite(35),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/starUnderwater.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // coins
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksOverworld.png");
+                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/coinOverworld.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksUnderground.png");
+                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/coinUnderground.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksCastle.png");
+                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/coinCastle.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksUnderwater.png");
+                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/coinUnderwater.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // enemies
+                // goomba
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundOverworld.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/goombaOverworld.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundUnderground.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/goombaUnderground.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundCastle.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/goombaCastle.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGroundUnderwater.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/goombaUnderwater.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // koopa + paratroopa
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/koopaOverworld.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenUnderground.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/koopaUnderground.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenUnderwater.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/koopaUnderwater.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesRed.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/koopaRed.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                if (OImGui.spriteButton(sprites.getSprite(2),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/paratroopaRed.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // piranha plant
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenOverworld.png");
+                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/piranhaPlantOverworld.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenUnderground.png");
+                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/piranhaPlantUnderground.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesGreenUnderwater.png");
+                if (OImGui.spriteButton(sprites.getSprite(4),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/piranhaPlantUnderwater.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
+                // bowser
+                sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/bowser.png");
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    pre.setFilepath("assets/prefabs/entities/bowser.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
                 ImGui.endTabItem();
             }
             
             if (ImGui.beginTabItem("assembled structures")) {
-                int uid = 0;
                 PrefabSave pre = new PrefabSave("");
-                
                 
                 File StructureDir = new File("assets/prefabs/structures");
                 File[] blocks = StructureDir.listFiles();
@@ -619,7 +1063,16 @@ public class AssetWindow {
                     if (Window.getScene().getGameObjectWith(LevelController.class) == null) {
                         GameObject object = Prefab.generateLevelController();
                         Window.getScene().addGameObjectToScene(object);
-                        //object.start();
+                    }
+                }
+                
+                // Hud item
+                sprites = AssetPool.getSpritesheet("assets/images/text/fontFace.png");
+                if (OImGui.spriteButton(sprites.getSprite(17),uid++)) {
+                    PrefabSave pre = new PrefabSave("assets/prefabs/UI/HUD.prefab");
+                    GameObject object = pre.load();
+                    if (object != null) {
+                       mc.pickUpObject(object); 
                     }
                 }
                 
@@ -860,6 +1313,7 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                // constant rotation test
                 sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/particles/coinBlocksOverworld.png");
                 if (OImGui.spriteButton(sprites.getSprite(3),uid++)) {
                     GameObject object = Prefab.generateFireRod();

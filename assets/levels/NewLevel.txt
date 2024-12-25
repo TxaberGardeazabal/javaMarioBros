@@ -22799,7 +22799,10 @@
           "nextLevel": "assets/levels/level1.txt",
           "world": "1",
           "level": "1",
-          "time": 600.0
+          "time": 600.0,
+          "mainTheme": "",
+          "secondaryTheme": "",
+          "levelEndTheme": ""
         }
       }
     ],
@@ -80288,19 +80291,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 1.0
               },
               {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
                 "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 1.0
               }
             ]
@@ -81829,19 +81832,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 1.0,
                 "y": 1.0
               },
               {
+                "x": 1.0,
+                "y": 0.75
+              },
+              {
                 "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.5,
-                "y": 0.75
-              },
-              {
-                "x": 0.5,
+                "x": 0.75,
                 "y": 1.0
               }
             ]
@@ -83720,5 +83723,3179 @@
     "doSerialization": true,
     "isDead": false,
     "childGOs": []
+  },
+  {
+    "name": "Fire rod",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.125,
+            "y": 1.125
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+              "height": 64,
+              "width": 64
+            },
+            "texCoords": [
+              {
+                "x": 1.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.75,
+                "y": 0.75
+              },
+              {
+                "x": 0.75,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.1,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "rod",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 3.125,
+                "y": 1.125
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": -1
+            }
+          },
+          {
+            "type": "physics2D.components.Rigidbody2D",
+            "properties": {
+              "angularDamping": 0.8,
+              "linearDamping": 0.9,
+              "mass": 0.0,
+              "bodyType": "Static",
+              "friction": 0.1,
+              "gravityScale": 1.0,
+              "isSensor": false,
+              "fixedRotation": false,
+              "continuousCollision": true
+            }
+          },
+          {
+            "type": "physics2D.components.Box2DCollider",
+            "properties": {
+              "halfSize": {
+                "x": 0.7,
+                "y": 0.09
+              },
+              "origin": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "showBoundaries": false,
+              "offset": {
+                "x": 0.3,
+                "y": 0.0
+              }
+            }
+          },
+          {
+            "type": "components.propertieComponents.StageHazard",
+            "properties": {}
+          },
+          {
+            "type": "components.gamecomponents.FireRod",
+            "properties": {
+              "clockWise": false,
+              "duration": 5.0,
+              "time": 0.0
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.124999,
+                    "y": 1.125
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.2499976,
+                    "y": 1.125
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.3749955,
+                    "y": 1.125
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.4999938,
+                    "y": 1.125
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.6249924,
+                    "y": 1.125
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.7499905,
+                    "y": 1.125
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "fire rod",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.125,
+            "y": 0.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": -1
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundUnderground.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.5714286,
+                "y": 1.0
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.75
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "rod",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 3.124998,
+                "y": 0.875
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": -1
+            }
+          },
+          {
+            "type": "physics2D.components.Rigidbody2D",
+            "properties": {
+              "angularDamping": 0.8,
+              "linearDamping": 0.9,
+              "mass": 0.0,
+              "bodyType": "Static",
+              "friction": 0.1,
+              "gravityScale": 1.0,
+              "isSensor": false,
+              "fixedRotation": false,
+              "continuousCollision": true
+            }
+          },
+          {
+            "type": "physics2D.components.Box2DCollider",
+            "properties": {
+              "halfSize": {
+                "x": 0.7,
+                "y": 0.09
+              },
+              "origin": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "showBoundaries": false,
+              "offset": {
+                "x": 0.3,
+                "y": 0.0
+              }
+            }
+          },
+          {
+            "type": "components.propertieComponents.StageHazard",
+            "properties": {}
+          },
+          {
+            "type": "components.gamecomponents.FireRod",
+            "properties": {
+              "clockWise": false,
+              "duration": 5.0,
+              "time": 0.0
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.1249971,
+                    "y": 0.875
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.2499952,
+                    "y": 0.875
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.3749933,
+                    "y": 0.875
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.4999924,
+                    "y": 0.875
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.6249914,
+                    "y": 0.875
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.74999,
+                    "y": 0.875
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "fire Rod",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.125,
+            "y": 0.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": -1
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundCastle.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.5714286,
+                "y": 1.0
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.75
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "rod",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 3.1249952,
+                "y": 0.625
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": -1
+            }
+          },
+          {
+            "type": "physics2D.components.Rigidbody2D",
+            "properties": {
+              "angularDamping": 0.8,
+              "linearDamping": 0.9,
+              "mass": 0.0,
+              "bodyType": "Static",
+              "friction": 0.1,
+              "gravityScale": 1.0,
+              "isSensor": false,
+              "fixedRotation": false,
+              "continuousCollision": true
+            }
+          },
+          {
+            "type": "physics2D.components.Box2DCollider",
+            "properties": {
+              "halfSize": {
+                "x": 0.7,
+                "y": 0.09
+              },
+              "origin": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "showBoundaries": false,
+              "offset": {
+                "x": 0.3,
+                "y": 0.0
+              }
+            }
+          },
+          {
+            "type": "components.propertieComponents.StageHazard",
+            "properties": {}
+          },
+          {
+            "type": "components.gamecomponents.FireRod",
+            "properties": {
+              "clockWise": false,
+              "duration": 5.0,
+              "time": 0.0
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.1249943,
+                    "y": 0.625
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.2499933,
+                    "y": 0.625
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.374992,
+                    "y": 0.625
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.499991,
+                    "y": 0.625
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.62499,
+                    "y": 0.625
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.7499886,
+                    "y": 0.625
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "fire rod",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.125,
+            "y": 0.375
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": -1
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/blocksAndScenery/groundUnderwater.png",
+              "height": 64,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.5714286,
+                "y": 1.0
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.75
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "rod",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 3.1250017,
+                "y": 0.375
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": -1
+            }
+          },
+          {
+            "type": "physics2D.components.Rigidbody2D",
+            "properties": {
+              "angularDamping": 0.8,
+              "linearDamping": 0.9,
+              "mass": 0.0,
+              "bodyType": "Static",
+              "friction": 0.1,
+              "gravityScale": 1.0,
+              "isSensor": false,
+              "fixedRotation": false,
+              "continuousCollision": true
+            }
+          },
+          {
+            "type": "physics2D.components.Box2DCollider",
+            "properties": {
+              "halfSize": {
+                "x": 0.7,
+                "y": 0.09
+              },
+              "origin": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "showBoundaries": false,
+              "offset": {
+                "x": 0.3,
+                "y": 0.0
+              }
+            }
+          },
+          {
+            "type": "components.propertieComponents.StageHazard",
+            "properties": {}
+          },
+          {
+            "type": "components.gamecomponents.FireRod",
+            "properties": {
+              "clockWise": false,
+              "duration": 5.0,
+              "time": 0.0
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.1250007,
+                    "y": 0.375
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.2499986,
+                    "y": 0.375
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.3749967,
+                    "y": 0.375
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.4999957,
+                    "y": 0.375
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.6249948,
+                    "y": 0.375
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "fireSprite",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.7499933,
+                    "y": 0.375
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.12,
+                    "y": 0.12
+                  },
+                  "zIndex": 51
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 8.0,
+                    "height": 8.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/marioFireball.png",
+                      "height": 8,
+                      "width": 8
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "axe",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 1.875,
+            "y": 0.375
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+              "height": 64,
+              "width": 64
+            },
+            "texCoords": [
+              {
+                "x": 0.75,
+                "y": 0.25
+              },
+              {
+                "x": 0.75,
+                "y": 0.0
+              },
+              {
+                "x": 0.5,
+                "y": 0.0
+              },
+              {
+                "x": 0.5,
+                "y": 0.25
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "components.StateMachine",
+        "properties": {
+          "stateTransfers": {},
+          "states": [
+            {
+              "title": "idle",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.25
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.25
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                },
+                {
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                      "height": 64,
+                      "width": 64
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.25
+                      }
+                    ]
+                  },
+                  "frameTime": 0.23,
+                  "spriteNumber": 0
+                }
+              ],
+              "doesLoop": true
+            }
+          ],
+          "defaultStateTitle": "idle"
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.1,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.1,
+            "y": 0.2
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": false,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.gamecomponents.BridgeController",
+        "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "bridgeCollapse",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 7.625,
+            "y": 0.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 1
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "bridge",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 7.3750005,
+                "y": 0.6250007
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": 0
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "ground object",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 6.8750005,
+                    "y": 0.6250007
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.25,
+                    "y": 0.25
+                  },
+                  "zIndex": 0
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/blocksAndScenery/skyCastle.png",
+                      "height": 32,
+                      "width": 80
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 0.5
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": false,
+                  "fixedRotation": false,
+                  "continuousCollision": true
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.25,
+                    "y": 0.25
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": false,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              },
+              {
+                "type": "components.propertieComponents.Ground",
+                "properties": {}
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "ground object",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 7.1250005,
+                    "y": 0.6250007
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.25,
+                    "y": 0.25
+                  },
+                  "zIndex": 0
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/blocksAndScenery/skyCastle.png",
+                      "height": 32,
+                      "width": 80
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 0.5
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": false,
+                  "fixedRotation": false,
+                  "continuousCollision": true
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.25,
+                    "y": 0.25
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": false,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              },
+              {
+                "type": "components.propertieComponents.Ground",
+                "properties": {}
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "ground object",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 7.3750005,
+                    "y": 0.6250007
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.25,
+                    "y": 0.25
+                  },
+                  "zIndex": 0
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 16.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/spriteSheets/blocksAndScenery/skyCastle.png",
+                      "height": 32,
+                      "width": 80
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 0.5
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": false,
+                  "fixedRotation": false,
+                  "continuousCollision": true
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.25,
+                    "y": 0.25
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": false,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              },
+              {
+                "type": "components.propertieComponents.Ground",
+                "properties": {}
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      },
+      {
+        "name": "ground object",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 7.625,
+                "y": 0.875
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/groundCastle.png",
+                  "height": 64,
+                  "width": 112
+                },
+                "texCoords": [
+                  {
+                    "x": 0.14285715,
+                    "y": 0.25
+                  },
+                  {
+                    "x": 0.14285715,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.25
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "physics2D.components.Rigidbody2D",
+            "properties": {
+              "angularDamping": 0.8,
+              "linearDamping": 0.9,
+              "mass": 0.0,
+              "bodyType": "Static",
+              "friction": 0.1,
+              "gravityScale": 1.0,
+              "isSensor": false,
+              "fixedRotation": false,
+              "continuousCollision": true
+            }
+          },
+          {
+            "type": "physics2D.components.Box2DCollider",
+            "properties": {
+              "halfSize": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "origin": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "showBoundaries": false,
+              "offset": {
+                "x": 0.0,
+                "y": 0.0
+              }
+            }
+          },
+          {
+            "type": "components.propertieComponents.Ground",
+            "properties": {}
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "ground object",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 7.625,
+                "y": 0.6250007
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/groundCastle.png",
+                  "height": 64,
+                  "width": 112
+                },
+                "texCoords": [
+                  {
+                    "x": 0.14285715,
+                    "y": 0.25
+                  },
+                  {
+                    "x": 0.14285715,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.25
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "physics2D.components.Rigidbody2D",
+            "properties": {
+              "angularDamping": 0.8,
+              "linearDamping": 0.9,
+              "mass": 0.0,
+              "bodyType": "Static",
+              "friction": 0.1,
+              "gravityScale": 1.0,
+              "isSensor": false,
+              "fixedRotation": false,
+              "continuousCollision": true
+            }
+          },
+          {
+            "type": "physics2D.components.Box2DCollider",
+            "properties": {
+              "halfSize": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "origin": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "showBoundaries": false,
+              "offset": {
+                "x": 0.0,
+                "y": 0.0
+              }
+            }
+          },
+          {
+            "type": "components.propertieComponents.Ground",
+            "properties": {}
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "chain",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 7.3750005,
+                "y": 0.875
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": -1
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryCastle.png",
+                  "height": 80,
+                  "width": 128
+                },
+                "texCoords": [
+                  {
+                    "x": 0.75,
+                    "y": 0.8
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.625,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.625,
+                    "y": 0.8
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "axe",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 7.625,
+                "y": 1.125
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                  "height": 64,
+                  "width": 64
+                },
+                "texCoords": [
+                  {
+                    "x": 0.75,
+                    "y": 0.25
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": 0.25
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "components.StateMachine",
+            "properties": {
+              "stateTransfers": {},
+              "states": [
+                {
+                  "title": "idle",
+                  "animationFrames": [
+                    {
+                      "sprite": {
+                        "Width": 16.0,
+                        "height": 16.0,
+                        "texture": {
+                          "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                          "height": 64,
+                          "width": 64
+                        },
+                        "texCoords": [
+                          {
+                            "x": 0.25,
+                            "y": 0.25
+                          },
+                          {
+                            "x": 0.25,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.0,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.0,
+                            "y": 0.25
+                          }
+                        ]
+                      },
+                      "frameTime": 0.23,
+                      "spriteNumber": 0
+                    },
+                    {
+                      "sprite": {
+                        "Width": 16.0,
+                        "height": 16.0,
+                        "texture": {
+                          "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                          "height": 64,
+                          "width": 64
+                        },
+                        "texCoords": [
+                          {
+                            "x": 0.5,
+                            "y": 0.25
+                          },
+                          {
+                            "x": 0.5,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.25,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.25,
+                            "y": 0.25
+                          }
+                        ]
+                      },
+                      "frameTime": 0.23,
+                      "spriteNumber": 0
+                    },
+                    {
+                      "sprite": {
+                        "Width": 16.0,
+                        "height": 16.0,
+                        "texture": {
+                          "filepath": "assets/images/spriteSheets/particles/coinBlocksOverworld.png",
+                          "height": 64,
+                          "width": 64
+                        },
+                        "texCoords": [
+                          {
+                            "x": 0.75,
+                            "y": 0.25
+                          },
+                          {
+                            "x": 0.75,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.5,
+                            "y": 0.0
+                          },
+                          {
+                            "x": 0.5,
+                            "y": 0.25
+                          }
+                        ]
+                      },
+                      "frameTime": 0.23,
+                      "spriteNumber": 0
+                    }
+                  ],
+                  "doesLoop": true
+                }
+              ],
+              "defaultStateTitle": "idle"
+            }
+          },
+          {
+            "type": "physics2D.components.Rigidbody2D",
+            "properties": {
+              "angularDamping": 0.8,
+              "linearDamping": 0.9,
+              "mass": 0.1,
+              "bodyType": "Static",
+              "friction": 0.1,
+              "gravityScale": 0.0,
+              "isSensor": false,
+              "fixedRotation": false,
+              "continuousCollision": true
+            }
+          },
+          {
+            "type": "physics2D.components.Box2DCollider",
+            "properties": {
+              "halfSize": {
+                "x": 0.1,
+                "y": 0.2
+              },
+              "origin": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "showBoundaries": false,
+              "offset": {
+                "x": 0.0,
+                "y": 0.0
+              }
+            }
+          },
+          {
+            "type": "components.gamecomponents.BridgeController",
+            "properties": {}
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      }
+    ]
   }
 ]

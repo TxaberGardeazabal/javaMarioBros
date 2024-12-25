@@ -30,25 +30,25 @@
           "Width": 16.0,
           "height": 16.0,
           "texture": {
-            "filepath": "assets/images/spriteSheets/particles/coinBlocksUnderwater.png",
+            "filepath": "assets/images/spriteSheets/particles/coinBlocksCastle.png",
             "height": 64,
             "width": 64
           },
           "texCoords": [
             {
-              "x": 0.75,
+              "x": 0.5,
               "y": 0.75
             },
             {
-              "x": 0.75,
-              "y": 0.5
-            },
-            {
               "x": 0.5,
               "y": 0.5
             },
             {
-              "x": 0.5,
+              "x": 0.25,
+              "y": 0.5
+            },
+            {
+              "x": 0.25,
               "y": 0.75
             }
           ]
@@ -68,7 +68,7 @@
                   "Width": 16.0,
                   "height": 16.0,
                   "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/coinBlocksUnderwater.png",
+                    "filepath": "assets/images/spriteSheets/particles/coinBlocksCastle.png",
                     "height": 64,
                     "width": 64
                   },
@@ -99,7 +99,7 @@
                   "Width": 16.0,
                   "height": 16.0,
                   "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/coinBlocksUnderwater.png",
+                    "filepath": "assets/images/spriteSheets/particles/coinBlocksCastle.png",
                     "height": 64,
                     "width": 64
                   },
@@ -130,7 +130,7 @@
                   "Width": 16.0,
                   "height": 16.0,
                   "texture": {
-                    "filepath": "assets/images/spriteSheets/particles/coinBlocksUnderwater.png",
+                    "filepath": "assets/images/spriteSheets/particles/coinBlocksCastle.png",
                     "height": 64,
                     "width": 64
                   },

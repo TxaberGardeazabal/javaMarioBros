@@ -9,13 +9,16 @@ add new functionalities:
 + open the saveAs window when playing a new level (playing auto saves)
 - show contents of assetpool in editor (database)
 + add all that is left for the first levels
++ add tiny flag on castle/towers
++ add  fireball explosion
++ implement level music system
++ implement underground transitions
 
 upgrade existing functionalities:
 -- style properties window
 -- add all controlls in settings class and use those
 - refractor and document
 - on savemenus show file name in selector
-add tiny flag on castle/towers
 - refactor component so it handles object types (could have a class impementation)
 adjust the screen size so is 1:1 with the original game
 
@@ -32,6 +35,7 @@ seting rotation via imgui causes it to become -inf, also causes bugs with box2d
 minimize the use of javaswing to prevent incompatibility crashes
 - tweak check on ground to make objects stay at the same distance from the ground (how?)
 + you can set parent object as its childs child and cause them to implode
++ jumping on an airbone enemy (such as a paratroopa) sometimes trigger multiple jump detects wich messes the score system
 
 other:
 // make pillbox changes ep #58

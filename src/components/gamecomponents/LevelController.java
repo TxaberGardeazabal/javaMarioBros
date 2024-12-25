@@ -10,6 +10,7 @@ import com.google.gson.GsonBuilder;
 import components.Component;
 import editor.ConsoleWindow;
 import gameEngine.GameObject;
+import gameEngine.Sound;
 import gameEngine.Window;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -48,6 +49,13 @@ public class LevelController extends Component implements Observer{
     private transient float timeLeft = time;
     private transient float timeBeforeLevelSwitch = 5;
     private transient boolean levelDone;
+    
+    public String mainTheme = "";
+    public String secondaryTheme = "";
+    public String levelEndTheme = "";
+    private transient Sound mainTrack;
+    private transient Sound secondaryTrack;
+    private transient Sound levelEndTrack;
     
     // player data
     private transient PlayerData pData;
@@ -103,6 +111,24 @@ public class LevelController extends Component implements Observer{
             levelD = hud.getChildByName("nivel").getComponent(Digitalizer.class);
             timeD = hud.getChildByName("tiempo").getComponent(Digitalizer.class);
             livesD = hud.getChildByName("vidas").getComponent(Digitalizer.class);
+        }
+        
+        mainTrack = AssetPool.getSound(mainTheme);
+        secondaryTrack = AssetPool.getSound(secondaryTheme);
+        levelEndTrack = AssetPool.getSound(levelEndTheme);
+        if (mainTrack == null) {
+            ConsoleWindow.addLog("LevelController: main theme not set",
+                    ConsoleWindow.LogCategory.warning);
+        }
+        
+        if (secondaryTrack == null) {
+            ConsoleWindow.addLog("LevelController: secondary theme not set",
+                    ConsoleWindow.LogCategory.warning);
+        }
+        
+        if (levelEndTrack == null) {
+            ConsoleWindow.addLog("LevelController: end theme not set",
+                    ConsoleWindow.LogCategory.warning);
         }
         
         timeLeft = time;
@@ -220,8 +246,9 @@ public class LevelController extends Component implements Observer{
                 
                 return;
             case ScoreUpdate:
-                ConsoleWindow.addLog("score + "+event.getPayload("points"),
+                /*ConsoleWindow.addLog("score + "+event.getPayload("points"),
                     ConsoleWindow.LogCategory.info);
+                */
                 pData.score += Integer.parseInt(event.getPayload("points"));
 
                 return;
@@ -238,5 +265,15 @@ public class LevelController extends Component implements Observer{
         EventSystem.removeObserver(this);
     }
     
-    
+    private void changeTracks() {
+        if (mainTrack != null && secondaryTrack != null) {
+            if (mainTrack.isPlaying()) {
+                mainTrack.stop();
+                secondaryTrack.play();
+            } else {
+                secondaryTrack.stop();
+                mainTrack.play();
+            }
+        }
+    }
 }

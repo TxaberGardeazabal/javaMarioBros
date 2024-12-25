@@ -323,9 +323,17 @@ public class PropertiesWindow {
                     lc.time = OImGui.dragFloat("level timer", lc.time);
                     lc.nextLevel = OImGui.inputText("next level", lc.nextLevel);
 
+                    ImGui.separator();
+                    
                     OImGui.colorPicker4("sky color", lc.skyColor);
                     OImGui.colorPicker4("overworld color", lc.overworldColor);
                     OImGui.colorPicker4("underground color", lc.underGroundColor);
+                    
+                    ImGui.separator();
+                    
+                    lc.mainTheme = OImGui.inputText("main theme", lc.mainTheme);
+                    lc.secondaryTheme = OImGui.inputText("main theme", lc.secondaryTheme);
+                    lc.levelEndTheme = OImGui.inputText("main theme", lc.levelEndTheme);
                 } else {
                     ImGui.text("no level controller");
                     

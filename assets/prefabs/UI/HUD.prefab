@@ -41941,6 +41941,1015 @@
                   ],
                   "defaultStateTitle": "0"
                 }
+              },
+              {
+                "sm": {
+                  "stateTransfers": [
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ]
+                  ],
+                  "states": [
+                    {
+                      "title": "0",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.088748015,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.088748015,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.0,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.0,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "1",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.19017433,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.19017433,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.10142631,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.10142631,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "2",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.29160064,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.29160064,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.20285262,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.20285262,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "3",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.39302695,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.39302695,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.3042789,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.3042789,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "4",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.49445325,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.49445325,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.40570524,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.40570524,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "5",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.59587955,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.59587955,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.5071315,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.5071315,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "6",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.69730586,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.69730586,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.6085578,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.6085578,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "7",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.79873216,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.79873216,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.7099841,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.7099841,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "8",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.90015846,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.90015846,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.8114105,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.8114105,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "9",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 1.0015848,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 1.0015848,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.9128368,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.9128368,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    }
+                  ],
+                  "defaultStateTitle": "0"
+                }
               }
             ],
             "value": 0
@@ -44014,6 +45023,2090 @@
                               },
                               {
                                 "x": 0.60062563,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    }
+                  ],
+                  "defaultStateTitle": "0"
+                }
+              }
+            }
+          ],
+          "doSerialization": true,
+          "isDead": false,
+          "childGOs": []
+        },
+        {
+          "name": "sprite_obj_gen",
+          "enabled": true,
+          "components": [
+            {
+              "type": "gameEngine.Transform",
+              "properties": {
+                "position": {
+                  "x": 5.9250126,
+                  "y": 0.124999054
+                },
+                "rotation": 0.0,
+                "scale": {
+                  "x": 0.16568047,
+                  "y": 0.16568047
+                },
+                "zIndex": 20
+              }
+            },
+            {
+              "type": "components.SpriteRenderer",
+              "properties": {
+                "color": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0,
+                  "w": 1.0
+                },
+                "sprite": {
+                  "Width": 56.0,
+                  "height": 56.0,
+                  "texture": {
+                    "filepath": "assets/images/text/numeros.png",
+                    "height": 56,
+                    "width": 631
+                  },
+                  "texCoords": [
+                    {
+                      "x": 0.088748015,
+                      "y": 1.0
+                    },
+                    {
+                      "x": 0.088748015,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.0,
+                      "y": 1.0
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "components.StateMachine",
+              "properties": {
+                "stateTransfers": [
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "7"
+                    },
+                    "7"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "3"
+                    },
+                    "3"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "8"
+                    },
+                    "8"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "4"
+                    },
+                    "4"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "0"
+                    },
+                    "0"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "9"
+                    },
+                    "9"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "5",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "5"
+                    },
+                    "5"
+                  ],
+                  [
+                    {
+                      "state": "6",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "7",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "8",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "9",
+                      "trigger": "1"
+                    },
+                    "1"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "1",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "2",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "3",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ],
+                  [
+                    {
+                      "state": "0",
+                      "trigger": "2"
+                    },
+                    "2"
+                  ],
+                  [
+                    {
+                      "state": "4",
+                      "trigger": "6"
+                    },
+                    "6"
+                  ]
+                ],
+                "states": [
+                  {
+                    "title": "0",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/numeros.png",
+                            "height": 56,
+                            "width": 631
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.088748015,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.088748015,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.0,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.0,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "1",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/numeros.png",
+                            "height": 56,
+                            "width": 631
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.19017433,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.19017433,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.10142631,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.10142631,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "2",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/numeros.png",
+                            "height": 56,
+                            "width": 631
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.29160064,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.29160064,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.20285262,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.20285262,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "3",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/numeros.png",
+                            "height": 56,
+                            "width": 631
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.39302695,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.39302695,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.3042789,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.3042789,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "4",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/numeros.png",
+                            "height": 56,
+                            "width": 631
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.49445325,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.49445325,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.40570524,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.40570524,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "5",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/numeros.png",
+                            "height": 56,
+                            "width": 631
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.59587955,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.59587955,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.5071315,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.5071315,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "6",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/numeros.png",
+                            "height": 56,
+                            "width": 631
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.69730586,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.69730586,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.6085578,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.6085578,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "7",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/numeros.png",
+                            "height": 56,
+                            "width": 631
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.79873216,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.79873216,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.7099841,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.7099841,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "8",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/numeros.png",
+                            "height": 56,
+                            "width": 631
+                          },
+                          "texCoords": [
+                            {
+                              "x": 0.90015846,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 0.90015846,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.8114105,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.8114105,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  },
+                  {
+                    "title": "9",
+                    "animationFrames": [
+                      {
+                        "sprite": {
+                          "Width": 56.0,
+                          "height": 56.0,
+                          "texture": {
+                            "filepath": "assets/images/text/numeros.png",
+                            "height": 56,
+                            "width": 631
+                          },
+                          "texCoords": [
+                            {
+                              "x": 1.0015848,
+                              "y": 1.0
+                            },
+                            {
+                              "x": 1.0015848,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.9128368,
+                              "y": 0.0
+                            },
+                            {
+                              "x": 0.9128368,
+                              "y": 1.0
+                            }
+                          ]
+                        },
+                        "frameTime": 0.0,
+                        "spriteNumber": 0
+                      }
+                    ],
+                    "doesLoop": false
+                  }
+                ],
+                "defaultStateTitle": "0"
+              }
+            },
+            {
+              "type": "UI.Digit",
+              "properties": {
+                "sm": {
+                  "stateTransfers": [
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "7"
+                      },
+                      "7"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "3"
+                      },
+                      "3"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "8"
+                      },
+                      "8"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "4"
+                      },
+                      "4"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "0"
+                      },
+                      "0"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "9"
+                      },
+                      "9"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "5",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "5"
+                      },
+                      "5"
+                    ],
+                    [
+                      {
+                        "state": "6",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "7",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "8",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "9",
+                        "trigger": "1"
+                      },
+                      "1"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "1",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "2",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "3",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ],
+                    [
+                      {
+                        "state": "0",
+                        "trigger": "2"
+                      },
+                      "2"
+                    ],
+                    [
+                      {
+                        "state": "4",
+                        "trigger": "6"
+                      },
+                      "6"
+                    ]
+                  ],
+                  "states": [
+                    {
+                      "title": "0",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.088748015,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.088748015,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.0,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.0,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "1",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.19017433,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.19017433,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.10142631,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.10142631,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "2",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.29160064,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.29160064,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.20285262,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.20285262,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "3",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.39302695,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.39302695,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.3042789,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.3042789,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "4",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.49445325,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.49445325,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.40570524,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.40570524,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "5",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.59587955,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.59587955,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.5071315,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.5071315,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "6",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.69730586,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.69730586,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.6085578,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.6085578,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "7",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.79873216,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.79873216,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.7099841,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.7099841,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "8",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 0.90015846,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 0.90015846,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.8114105,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.8114105,
+                                "y": 1.0
+                              }
+                            ]
+                          },
+                          "frameTime": 0.0,
+                          "spriteNumber": 0
+                        }
+                      ],
+                      "doesLoop": false
+                    },
+                    {
+                      "title": "9",
+                      "animationFrames": [
+                        {
+                          "sprite": {
+                            "Width": 56.0,
+                            "height": 56.0,
+                            "texture": {
+                              "filepath": "assets/images/text/numeros.png",
+                              "height": 56,
+                              "width": 631
+                            },
+                            "texCoords": [
+                              {
+                                "x": 1.0015848,
+                                "y": 1.0
+                              },
+                              {
+                                "x": 1.0015848,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.9128368,
+                                "y": 0.0
+                              },
+                              {
+                                "x": 0.9128368,
                                 "y": 1.0
                               }
                             ]
