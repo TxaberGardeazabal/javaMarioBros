@@ -27,4 +27,8 @@ public enum EventType {
         MarioDie,
         OneUp,
         ScoreUpdate,
+        SwapTheme,
+        PlayWarning,
+        PlayInvincible,
+        PlayEndTrack
     };

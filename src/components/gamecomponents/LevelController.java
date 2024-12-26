@@ -50,13 +50,6 @@ public class LevelController extends Component implements Observer{
     private transient float timeBeforeLevelSwitch = 5;
     private transient boolean levelDone;
     
-    public String mainTheme = "";
-    public String secondaryTheme = "";
-    public String levelEndTheme = "";
-    private transient Sound mainTrack;
-    private transient Sound secondaryTrack;
-    private transient Sound levelEndTrack;
-    
     // player data
     private transient PlayerData pData;
     private transient PlayerController player;
@@ -68,8 +61,6 @@ public class LevelController extends Component implements Observer{
     private transient Digitalizer levelD;
     private transient Digitalizer timeD;
     private transient Digitalizer livesD;
-    
-    
     
     @Override
     public void start() {
@@ -111,24 +102,6 @@ public class LevelController extends Component implements Observer{
             levelD = hud.getChildByName("nivel").getComponent(Digitalizer.class);
             timeD = hud.getChildByName("tiempo").getComponent(Digitalizer.class);
             livesD = hud.getChildByName("vidas").getComponent(Digitalizer.class);
-        }
-        
-        mainTrack = AssetPool.getSound(mainTheme);
-        secondaryTrack = AssetPool.getSound(secondaryTheme);
-        levelEndTrack = AssetPool.getSound(levelEndTheme);
-        if (mainTrack == null) {
-            ConsoleWindow.addLog("LevelController: main theme not set",
-                    ConsoleWindow.LogCategory.warning);
-        }
-        
-        if (secondaryTrack == null) {
-            ConsoleWindow.addLog("LevelController: secondary theme not set",
-                    ConsoleWindow.LogCategory.warning);
-        }
-        
-        if (levelEndTrack == null) {
-            ConsoleWindow.addLog("LevelController: end theme not set",
-                    ConsoleWindow.LogCategory.warning);
         }
         
         timeLeft = time;
@@ -263,17 +236,5 @@ public class LevelController extends Component implements Observer{
     @Override
     public void destroy() {
         EventSystem.removeObserver(this);
-    }
-    
-    private void changeTracks() {
-        if (mainTrack != null && secondaryTrack != null) {
-            if (mainTrack.isPlaying()) {
-                mainTrack.stop();
-                secondaryTrack.play();
-            } else {
-                secondaryTrack.stop();
-                mainTrack.play();
-            }
-        }
     }
 }

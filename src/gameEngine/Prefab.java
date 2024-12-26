@@ -45,6 +45,7 @@ import components.gamecomponents.LevelController;
 import components.gamecomponents.LiveMushroom;
 import components.gamecomponents.MovingPlatform;
 import components.gamecomponents.MovingPlatformSource;
+import components.gamecomponents.MusicController;
 import components.gamecomponents.ParatroopaAI;
 import components.gamecomponents.PlayerControlTransition;
 import components.gamecomponents.PlayerControlTransition.PlayerControl;
@@ -1474,5 +1475,12 @@ public class Prefab {
         axe.addComponent(new BridgeController());
         
         return axe;
+    }
+    
+    public static GameObject generateMusicController() {
+        GameObject mc = generateEmptyObject();
+        mc.name = "musicController";
+        mc.addComponent(new MusicController());
+        return mc;
     }
 }

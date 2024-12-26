@@ -238,6 +238,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSound("assets/sounds/1-up.ogg", false);
         AssetPool.addSound("assets/sounds/bowserfalls.ogg", false);
         AssetPool.addSound("assets/sounds/bowserfire.ogg", false);
+        AssetPool.addSound("assets/sounds/bowser's-castle.ogg", false);
         AssetPool.addSound("assets/sounds/break_block.ogg", false);
         AssetPool.addSound("assets/sounds/bump.ogg", false);
         AssetPool.addSound("assets/sounds/coin.ogg", false);
@@ -256,6 +257,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSound("assets/sounds/powerup_appears.ogg", false);
         AssetPool.addSound("assets/sounds/stage_clear.ogg", false);
         AssetPool.addSound("assets/sounds/stomp.ogg", false);
+        AssetPool.addSound("assets/sounds/underground.ogg", false);
         AssetPool.addSound("assets/sounds/vine.ogg", false);
         AssetPool.addSound("assets/sounds/warning.ogg", false);
         AssetPool.addSound("assets/sounds/world_clear.ogg", false);

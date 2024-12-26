@@ -28,6 +28,7 @@ import components.gamecomponents.LevelController;
 import components.gamecomponents.LiveMushroom;
 import components.gamecomponents.MovingPlatform;
 import components.gamecomponents.MushroomAI;
+import components.gamecomponents.MusicController;
 import components.gamecomponents.Pipe;
 import components.gamecomponents.PlayerController;
 import components.gamecomponents.StarAI;
@@ -38,6 +39,7 @@ import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
 import imgui.internal.ImGui;
+import imgui.type.ImBoolean;
 import java.util.List;
 import javax.swing.JOptionPane;
 import org.joml.Vector2f;
@@ -315,29 +317,49 @@ public class PropertiesWindow {
                 ImGui.endTabItem();
             }
             if (ImGui.beginTabItem("Level configuration")) {
+                
                 GameObject lcObj = Window.getScene().getGameObjectWith(LevelController.class);
                 if (lcObj != null) {
                     LevelController lc = lcObj.getComponent(LevelController.class);
-                    lc.world = OImGui.inputText("world", lc.world);
-                    lc.level = OImGui.inputText("level", lc.level);
-                    lc.time = OImGui.dragFloat("level timer", lc.time);
-                    lc.nextLevel = OImGui.inputText("next level", lc.nextLevel);
+                    ImBoolean test = new ImBoolean(true);
+                    if (ImGui.collapsingHeader("Level controller",test)) {
+                        lc.world = OImGui.inputText("world", lc.world);
+                        lc.level = OImGui.inputText("level", lc.level);
+                        lc.time = OImGui.dragFloat("level timer", lc.time);
+                        lc.nextLevel = OImGui.inputText("next level", lc.nextLevel);
 
-                    ImGui.separator();
+                        ImGui.separator();
+
+                        OImGui.colorPicker4("sky color", lc.skyColor);
+                        OImGui.colorPicker4("overworld color", lc.overworldColor);
+                        OImGui.colorPicker4("underground color", lc.underGroundColor);
+                    }
                     
-                    OImGui.colorPicker4("sky color", lc.skyColor);
-                    OImGui.colorPicker4("overworld color", lc.overworldColor);
-                    OImGui.colorPicker4("underground color", lc.underGroundColor);
-                    
-                    ImGui.separator();
-                    
-                    lc.mainTheme = OImGui.inputText("main theme", lc.mainTheme);
-                    lc.secondaryTheme = OImGui.inputText("main theme", lc.secondaryTheme);
-                    lc.levelEndTheme = OImGui.inputText("main theme", lc.levelEndTheme);
                 } else {
                     ImGui.text("no level controller");
                     
                     if (ImGui.button("add level controller object")) {
+                        if (Window.getScene().getGameObjectWith(LevelController.class) == null) {
+                            GameObject object = Prefab.generateLevelController();
+                            Window.getScene().addGameObjectToScene(object);
+
+                        }
+                    }
+                }
+                
+                GameObject mcObj = Window.getScene().getGameObjectWith(MusicController.class);
+                if (mcObj != null) {
+                    MusicController muc = mcObj.getComponent(MusicController.class);
+                    ImBoolean test = new ImBoolean(true);
+                    if (ImGui.collapsingHeader("Music controller",test)) {
+                        muc.mainTheme = OImGui.inputText("main theme", muc.mainTheme);
+                        muc.secondaryTheme = OImGui.inputText("main theme", muc.secondaryTheme);
+                        muc.levelEndTheme = OImGui.inputText("main theme", muc.levelEndTheme);
+                    }
+                } else {
+                    ImGui.text("no music controller");
+                    
+                    if (ImGui.button("add music controller object")) {
                         if (Window.getScene().getGameObjectWith(LevelController.class) == null) {
                             GameObject object = Prefab.generateLevelController();
                             Window.getScene().addGameObjectToScene(object);
