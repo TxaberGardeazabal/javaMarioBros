@@ -23,8 +23,8 @@ public class MusicController extends Component implements Observer{
     public transient boolean mainFlag = true;
     
     // set sounds
-    private transient Sound invincible = AssetPool.getSound("assets/sounds/invincible.ogg");
-    private transient Sound warning = AssetPool.getSound("assets/sounds/warning.ogg");
+    private transient Sound invincible;
+    private transient Sound warning;
 
     // level tracks
     public String mainTheme = "";
@@ -39,6 +39,9 @@ public class MusicController extends Component implements Observer{
         mainTrack = AssetPool.getSound(mainTheme);
         secondaryTrack = AssetPool.getSound(secondaryTheme);
         levelEndTrack = AssetPool.getSound(levelEndTheme);
+        invincible = AssetPool.getSound("assets/sounds/invincible.ogg");
+        warning = AssetPool.getSound("assets/sounds/warning.ogg");
+        
         if (mainTrack == null) {
             ConsoleWindow.addLog("MusicController: main theme not set",
                     ConsoleWindow.LogCategory.warning);
@@ -62,13 +65,11 @@ public class MusicController extends Component implements Observer{
     
     @Override
     public void update(float dt) {
-        if (!currentTrack.isPlaying()) {
+        if (currentTrack.equals(warning) && !currentTrack.isPlaying()) {
             if (mainFlag) {
-                currentTrack = secondaryTrack;
-                mainFlag = false;
-            } else {
                 currentTrack = mainTrack;
-                mainFlag = true;
+            } else {
+                currentTrack = secondaryTrack;
             }
             currentTrack.play();
         }
@@ -103,23 +104,22 @@ public class MusicController extends Component implements Observer{
                 currentTrack = levelEndTrack;
                 currentTrack.play();
                 break;
+            case StopAllTracks:
+                currentTrack.stop();
+                break;
+            case ResumeMainTrack:
+                if (mainFlag) {
+                    currentTrack = mainTrack;
+                } else {
+                    currentTrack = secondaryTrack;
+                }
+                currentTrack.play();
+                break;
         }
     }
     
     @Override
     public void destroy() {
         EventSystem.removeObserver(this);
-    }
-    
-    private void changeTracks() {
-        if (mainTrack != null && secondaryTrack != null) {
-            if (mainTrack.isPlaying()) {
-                mainTrack.stop();
-                secondaryTrack.play();
-            } else {
-                secondaryTrack.stop();
-                mainTrack.play();
-            }
-        }
     }
 }

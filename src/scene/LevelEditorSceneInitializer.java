@@ -344,6 +344,8 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 Window.setRuntimePlaying(false);
                 Window.getImGuiLayer().getGameViewWindow().setIsPlaying(false);
                 
+                AssetPool.stopAllSound();
+                
                 Window.changeScene(new LevelEditorSceneInitializer(), Window.getScene().getLevelFilepath());
                 break;
             case LoadLevel:

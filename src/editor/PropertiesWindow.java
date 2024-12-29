@@ -347,21 +347,22 @@ public class PropertiesWindow {
                     }
                 }
                 
+                ImGui.separator();
                 GameObject mcObj = Window.getScene().getGameObjectWith(MusicController.class);
                 if (mcObj != null) {
                     MusicController muc = mcObj.getComponent(MusicController.class);
                     ImBoolean test = new ImBoolean(true);
                     if (ImGui.collapsingHeader("Music controller",test)) {
                         muc.mainTheme = OImGui.inputText("main theme", muc.mainTheme);
-                        muc.secondaryTheme = OImGui.inputText("main theme", muc.secondaryTheme);
-                        muc.levelEndTheme = OImGui.inputText("main theme", muc.levelEndTheme);
+                        muc.secondaryTheme = OImGui.inputText("secondary theme", muc.secondaryTheme);
+                        muc.levelEndTheme = OImGui.inputText("level end theme", muc.levelEndTheme);
                     }
                 } else {
                     ImGui.text("no music controller");
                     
                     if (ImGui.button("add music controller object")) {
-                        if (Window.getScene().getGameObjectWith(LevelController.class) == null) {
-                            GameObject object = Prefab.generateLevelController();
+                        if (Window.getScene().getGameObjectWith(MusicController.class) == null) {
+                            GameObject object = Prefab.generateMusicController();
                             Window.getScene().addGameObjectToScene(object);
 
                         }

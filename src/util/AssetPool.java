@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import render.Shader;
 import render.Texture;
@@ -161,5 +162,10 @@ public class AssetPool {
         return AssetPool.sounds.values();
     }
     
-    
+    public static void stopAllSound() {
+        Collection<Sound> c = sounds.values();
+        for (Sound s : c) {
+            s.stop();
+        }
+    }
 }

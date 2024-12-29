@@ -159,6 +159,8 @@ public class LevelController extends Component implements Observer{
         
             if (timeLeft <= 0 && !player.isDead()) {
                 player.die();
+            } else if (timeLeft <= 100 && timeLeft > 99.9) {
+                EventSystem.notify(this.gameObject, new Event(EventType.PlayWarning));
             }
         }
         

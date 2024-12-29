@@ -12,7 +12,6 @@ import components.propertieComponents.Ground;
 import gameEngine.Direction;
 import gameEngine.GameObject;
 import gameEngine.KeyListener;
-import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
 import java.util.HashMap;
@@ -69,7 +68,7 @@ public class PlayerController extends PhysicsController {
     private transient final float heightMarioBig = 0.63f;
     private transient int stompCombo = 0;
     
-    private transient int invicivilityFrames = 1000;
+    private transient int invicivilityFrames = 1700;
     private transient int invicivilityFramesLeft = 0;
     private transient float blinkTime = 0.0f;
     private transient int transformFrames = 100;
@@ -114,9 +113,9 @@ public class PlayerController extends PhysicsController {
                     disableForces = false;
                     if (!transitionMachine.isPlaying()) {
                         transitionMachine.startTransition(6);
+                        EventSystem.notify(this.gameObject, new Event(EventType.PlayEndTrack));
                     }
                     stateMachine.trigger("toWalk");
-                    AssetPool.getSound("assets/sounds/stage_clear.ogg").playIfNotPlaying();
                     hasEnded = true;
                 } else if (onGround) {
                     transitionMachine.stop();
@@ -455,7 +454,8 @@ public class PlayerController extends PhysicsController {
     public void invinciblePowerUp() {
         invincBlinkFrames = invicivilityFrames;
         isInvincible = true;
-        AssetPool.getSound("assets/sounds/powerup.ogg").play();
+        
+        EventSystem.notify(this.gameObject, new Event(EventType.PlayInvincible));
     }
     
     public void die() {
@@ -465,6 +465,7 @@ public class PlayerController extends PhysicsController {
         this.isDead = true;
         this.rb.setIsSensor(true);
         AssetPool.getSound("assets/sounds/mario_die.ogg").play();
+        EventSystem.notify(this.gameObject, new Event(EventType.StopAllTracks));
     }
     
     public void hurt() {
@@ -478,6 +479,8 @@ public class PlayerController extends PhysicsController {
                 this.rb.setIsSensor(true);
                 
                 AssetPool.getSound("assets/sounds/mario_die.ogg").play();
+                EventSystem.notify(this.gameObject, new Event(EventType.StopAllTracks));
+                
                 jumpTime = 25;
                 this.rb.setBodyType(BodyType.Kinematic);
                 break;
@@ -583,6 +586,8 @@ public class PlayerController extends PhysicsController {
             blinkS = 0;
             if (isInvincible) {
                 this.isInvincible = false;
+                EventSystem.notify(this.gameObject, new Event(EventType.StopAllTracks));
+                EventSystem.notify(this.gameObject, new Event(EventType.ResumeMainTrack));
             }
             switch (this.playerState) {
                 case Small:
@@ -595,7 +600,6 @@ public class PlayerController extends PhysicsController {
                     stateMachine.changeSpriteSheetSkin(AssetPool.getSpritesheet("assets/images/spriteSheets/mario/marioBig.png"),36);
                     break;
             }
-            
         }
     }
     
@@ -615,6 +619,7 @@ public class PlayerController extends PhysicsController {
             stateMachine.trigger("startCimbing");
             gameObject.transform.scale.x = -0.25f;
             transitionMachine.startTransition(5);
+            EventSystem.notify(this.gameObject, new Event(EventType.StopAllTracks));
         }
     }
     
@@ -625,8 +630,8 @@ public class PlayerController extends PhysicsController {
             isControlled = false;
             hasEnded = true;
             transitionMachine.startTransition(6);
-            AssetPool.getSound("assets/sounds/world_clear.ogg").play();
             AssetPool.getSound("assets/sounds/bowserfalls.ogg").play();
+            EventSystem.notify(this.gameObject, new Event(EventType.PlayEndTrack));
         }
     }
     

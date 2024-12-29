@@ -30,5 +30,7 @@ public enum EventType {
         SwapTheme,
         PlayWarning,
         PlayInvincible,
-        PlayEndTrack
+        PlayEndTrack,
+        StopAllTracks,
+        ResumeMainTrack
     };
