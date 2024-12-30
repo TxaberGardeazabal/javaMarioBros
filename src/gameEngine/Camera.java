@@ -19,9 +19,10 @@ public class Camera {
     public Vector2f position;
     
     private float projectionWidth = 6;
-    private float prijectionHeight = 3;
+    private float projectionHeight = 3;
+    // para al aspect ratio original usar 6 / 3.5 (original es 4 / 3)
     public Vector4f clearColor = new Vector4f(1,1,1,1);
-    private Vector2f projectionSize = new Vector2f(projectionWidth, prijectionHeight);
+    private Vector2f projectionSize = new Vector2f(projectionWidth, projectionHeight);
     
     private float zoom = 1.0f;
     private float zoomLimitMax = 3.0f;

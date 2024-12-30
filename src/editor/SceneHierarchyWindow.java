@@ -123,7 +123,17 @@ public class SceneHierarchyWindow {
                 if (payloadObj.getClass().isAssignableFrom(GameObject.class)) {
                     GameObject receivedObj = (GameObject)payloadObj;
 
-                    if (!receivedObj.equals(obj) && !obj.getChildGOs().contains(receivedObj)) {
+                    // check the reciever is not the higher hierarchy parent
+                    boolean flag = true;
+                    GameObject testObj = obj;
+                    while (testObj.getParent() != null) {
+                        if (testObj.getParent().equals(payloadObj)) {
+                            flag = false;
+                        }
+                        testObj = testObj.getParent();
+                    }
+                    
+                    if (!receivedObj.equals(obj) && !obj.getChildGOs().contains(receivedObj) && flag) {
                         // delete old go reference
                         if (receivedObj.getParent() != null) {
                             receivedObj.getParent().removeChild(receivedObj);

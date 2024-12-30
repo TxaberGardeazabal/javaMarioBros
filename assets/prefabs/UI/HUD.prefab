@@ -40685,19 +40685,19 @@
               },
               "texCoords": [
                 {
-                  "x": 0.75,
+                  "x": 1.0,
                   "y": 1.0
                 },
                 {
+                  "x": 1.0,
+                  "y": 0.0
+                },
+                {
                   "x": 0.75,
                   "y": 0.0
                 },
                 {
-                  "x": 0.5,
-                  "y": 0.0
-                },
-                {
-                  "x": 0.5,
+                  "x": 0.75,
                   "y": 1.0
                 }
               ]
@@ -40918,7 +40918,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 5.625,
+              "x": 5.4999995,
               "y": 0.125
             },
             "rotation": 0.0,
@@ -42967,7 +42967,7 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 5.7250004,
+                  "x": 5.6,
                   "y": 0.125
                 },
                 "rotation": 0.0,
@@ -45051,7 +45051,7 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 5.9250126,
+                  "x": 5.800012,
                   "y": 0.124999054
                 },
                 "rotation": 0.0,
@@ -47137,7 +47137,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 5.3250036,
+              "x": 5.200003,
               "y": 0.12499995
             },
             "rotation": 0.0,
@@ -47199,7 +47199,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 5.5250006,
+              "x": 5.4,
               "y": 0.125
             },
             "rotation": 0.0,
