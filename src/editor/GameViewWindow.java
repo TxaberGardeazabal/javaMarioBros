@@ -10,10 +10,12 @@ import imgui.ImVec2;
 import imgui.flag.ImGuiWindowFlags;
 import gameEngine.Window;
 import imgui.type.ImBoolean;
+import java.io.File;
 import observers.EventSystem;
 import observers.events.Event;
 import observers.events.EventType;
 import org.joml.Vector2f;
+import util.Settings;
 /**
  * Controlador de ventana principal del juego.
  * En esta ventana se muestra todo el juego parado o en marcha
@@ -37,8 +39,15 @@ public class GameViewWindow {
         
             if (ImGui.menuItem("Play", "", isPlaying, !isPlaying)) {
 
-                isPlaying = true;
-                EventSystem.notify(null, new Event(EventType.EditorStartPlay));
+                String absolutePath = Window.getScene().getLevelFilepath();
+                File testFile = new File(Settings.defaultLevel);
+                if (absolutePath.equals(testFile.getAbsolutePath())) {
+                    // prevents the player from overriding the default level
+                    Window.getImGuiLayer().getMenuBar().saveAs();
+                } else {
+                    isPlaying = true;
+                    EventSystem.notify(null, new Event(EventType.EditorStartPlay));
+                }
             }
             if (ImGui.menuItem("Stop", "", !isPlaying, isPlaying)) {
                 isPlaying = false;

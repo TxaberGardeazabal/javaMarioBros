@@ -1256,9 +1256,15 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
-                // platform spawner
+                // platform spawner x 4
                 if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
                     GameObject object = Prefab.generatePlatformSpawner();
+                    mc.pickUpObject(object);
+                }
+                
+                // platform spawner x 6
+                if (OImGui.spriteButton(sprites.getSprite(0),uid++)) {
+                    GameObject object = Prefab.generatePlatformSpawner2();
                     mc.pickUpObject(object);
                 }
                 

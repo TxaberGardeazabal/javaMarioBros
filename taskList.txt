@@ -5,11 +5,9 @@ add new functionalities:
 - in level scenes only assets that are used should be loaded.
 -- make water levels
 -- add above cloud zones
-+ open the saveAs window when playing a new level (playing auto saves)
 - show contents of assetpool in editor (database)
 + add tiny flag on castle/towers
 + add  fireball explosion
-+ implement underground transitions
 
 upgrade existing functionalities:
 -- style properties window
@@ -31,7 +29,6 @@ seting rotation via imgui causes it to become -inf, also causes bugs with box2d
 minimize the use of javaswing to prevent incompatibility crashes
 - tweak check on ground to make objects stay at the same distance from the ground (how?)
 + jumping on an airbone enemy (such as a paratroopa) sometimes trigger multiple jump detects wich messes the score system
-+ saving as saves as a empty new level
 
 other:
 // make pillbox changes ep #58

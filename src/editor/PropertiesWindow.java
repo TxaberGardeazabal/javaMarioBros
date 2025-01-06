@@ -32,6 +32,7 @@ import components.gamecomponents.MusicController;
 import components.gamecomponents.Pipe;
 import components.gamecomponents.PlayerController;
 import components.gamecomponents.StarAI;
+import components.gamecomponents.TrackSwapScript;
 import components.propertieComponents.StageHazard;
 import components.propertieComponents.Ground;
 import gameEngine.Direction;
@@ -278,6 +279,12 @@ public class PropertiesWindow {
                                 if (ImGui.menuItem("Add fire rod logic")) {
                                     if (activeGameObject.getComponent(FireRod.class) == null) {
                                         activeGameObject.addComponent(new FireRod());
+                                    }
+                                }
+                                
+                                if (ImGui.menuItem("Add track swap script")) {
+                                    if (activeGameObject.getComponent(TrackSwapScript.class) == null) {
+                                        activeGameObject.addComponent(new TrackSwapScript());
                                     }
                                 }
                             }

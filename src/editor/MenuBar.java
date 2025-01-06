@@ -74,7 +74,7 @@ public class MenuBar {
                     }
                     
                     EventSystem.notify(null, new Event(EventType.EndWindow));
-                    File file = new File(Settings.mainMenuPath);
+                    File file = new File(Settings.mainMenuLevel);
                     Window.changeScene(new MainMenuSceneInitializer(), file.getAbsolutePath());
                 }
             }
@@ -252,7 +252,15 @@ public class MenuBar {
     }
     
     private void save() {
-        File file = new File(Window.getScene().getLevelFilepath());
+        String absolutePath = Window.getScene().getLevelFilepath();
+        File testFile = new File(Settings.defaultLevel);
+        if (absolutePath.equals(testFile.getAbsolutePath())) {
+            // prevents the player from overriding the default level
+            saveAs();
+            return;
+        }
+        
+        File file = new File(absolutePath);
         if (!file.exists()) {
             saveAs();
         } else {
@@ -260,7 +268,7 @@ public class MenuBar {
         }
     }
     
-    private void saveAs() {
+    public void saveAs() {
         JFileChooser fileChooser = this.configSaveWindow();
         int response = fileChooser.showSaveDialog(null);
 
@@ -271,15 +279,23 @@ public class MenuBar {
                 path = path.concat(".txt");
             }
 
+            File testFile = new File(Settings.defaultLevel);
+            if (path.equals(testFile.getAbsolutePath())) {
+                // prevents the player from overriding the default level
+                JOptionPane.showMessageDialog(null, "please save the level on a different file instead of the default one", "Save As", JOptionPane.WARNING_MESSAGE);
+                ConsoleWindow.addLog("ERROR: couldn't create file "+path, ConsoleWindow.LogCategory.error);
+                return;
+            }
+            
             File file = new File(path);
-
             if (!file.exists()) {
                 try {
                     // create a file
                     boolean fileCreated = file.createNewFile();
                     if (fileCreated) {
-                        Window.getScene().changeLevelFilepath(fileChooser.getSelectedFile().getAbsolutePath());
+                        Window.getScene().changeLevelFilepath(path);
                         EventSystem.notify(null, new Event(EventType.SaveLevel));
+                        Window.changeScene(new LevelEditorSceneInitializer(), path);
                     } else {
                         JOptionPane.showMessageDialog(null, "ERROR: couldn't create file "+file.getAbsolutePath());
                     }
@@ -311,7 +327,7 @@ public class MenuBar {
             String levelFilepath = Window.getScene().getLevelFilepath();
             File file = new File(levelFilepath);
             file.delete();
-            File file2 = new File(Settings.mainMenuPath);
+            File file2 = new File(Settings.mainMenuLevel);
             Window.changeScene(new LevelSceneInitializer(), file2.getAbsolutePath());
         }
     }

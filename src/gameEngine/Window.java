@@ -46,6 +46,7 @@ import render.Renderer;
 import render.Shader;
 import scene.SceneInitializer;
 import util.AssetPool;
+import util.Settings;
 /**
  * Ventana principal del programa, al solo necesitar una es singleton
  * @author txaber
@@ -129,8 +130,8 @@ public class Window {
         initWindow();
         this.imGuiLayer.initImGui(glslVersion);
         
-        File file = new File("assets/levels/NewLevel.txt");
-        //File file = new File("assets/levels/mainmenu.txt");
+        File file = new File(Settings.defaultLevel);
+        //File file = new File(Settings.mainMenuLevel);
         
         Window.changeScene(new LevelEditorSceneInitializer(), file.getAbsolutePath());
         //Window.changeScene(new MainMenuSceneInitializer(), file.getAbsolutePath());

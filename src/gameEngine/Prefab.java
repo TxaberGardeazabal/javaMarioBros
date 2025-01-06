@@ -1258,6 +1258,14 @@ public class Prefab {
         return spawner;
     }
     
+    public static GameObject generatePlatformSpawner2() {
+        GameObject spawner = generateEmptyObject();
+        spawner.name = "Platform generator";
+        
+        spawner.addComponent(new MovingPlatformSource("assets/prefabs/blocks/movingPlatformX6.prefab"));
+        return spawner;
+    }
+    
     public static GameObject generateRedKoopa() {
         SpriteSheet sprites = AssetPool.getSpritesheet("assets/images/spriteSheets/enemies/enemiesRed.png");
         GameObject turtle = generateSpriteObject(sprites.getSprite(0), 0.25f, 0.35f);

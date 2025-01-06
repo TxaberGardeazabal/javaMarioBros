@@ -79,9 +79,10 @@ public class Settings {
     
     // other
     public static float worldGravityMul = 0.7f;
-    public static String mainMenuPath = "assets/levels/mainmenu.txt";
-    public static String defaultLevel = "add filepath here when I make default level";
+    public static String mainMenuLevel = "assets/levels/mainmenu.txt";
+    public static String defaultLevel = "assets/levels/NewLevel.txt";
     public static String customPrefabPath = "assets/prefabs";
+    public static String rootFolder = "assets";
     
     /**
      * Convierte una ruta de asset absoluta en una relativa a la carpeta raiz
@@ -89,7 +90,6 @@ public class Settings {
      * @return 
      */
     public static String getRelativePath(String absPath) {
-        String rootFolder = "assets"; // could customize this?
         String[] res = absPath.split(rootFolder);
         return rootFolder.concat(res[1]);
     }
