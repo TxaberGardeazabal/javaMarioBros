@@ -193,7 +193,7 @@ public class Pipe extends Component {
         if (collidingPlayer == null) {
             return false;
         }
-        ConsoleWindow.addLog(gameObject.name + " has detected "+collidingPlayer.gameObject.name, ConsoleWindow.LogCategory.info);
+        //ConsoleWindow.addLog(gameObject.name + " has detected "+collidingPlayer.gameObject.name, ConsoleWindow.LogCategory.info);
         /*
             find the boundaries of the pipe and the player to find if the player is in the pipe entrance,
             we add a tiny offset to the pipe so it doesn't require perfect positioning, it's still a bit weird but I don't care

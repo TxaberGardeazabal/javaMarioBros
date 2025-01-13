@@ -25,7 +25,7 @@ public class ParatroopaAI extends Enemy {
     @Override
     public void stomp() {
         AssetPool.getSound("assets/sounds/kick.ogg").play();
-        PrefabSave pre = new PrefabSave("assets/prefabs/entities/RedKoopa.prefab");
+        PrefabSave pre = new PrefabSave("assets/prefabs/entities/koopaRed.prefab");
         GameObject turtle = pre.load();
         if (turtle != null) {
             turtle.transform.setPosition(this.gameObject.transform.position);
