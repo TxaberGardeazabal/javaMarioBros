@@ -31,6 +31,7 @@ minimize the use of javaswing to prevent incompatibility crashes
 + jumping on an airbone enemy (such as a paratroopa) sometimes trigger multiple jump detects wich messes the score system
 + pipes don't work on big mario
 + change screen size
+changing levels in editor messes up imgui inputs
 
 other:
 // make pillbox changes ep #58
