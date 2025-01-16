@@ -42,7 +42,7 @@
           "x": 0.0,
           "y": 0.0
         },
-        "showBoundaries": false,
+        "showBoundaries": true,
         "offset": {
           "x": 0.125,
           "y": 0.0
@@ -192,6 +192,91 @@
       "doSerialization": true,
       "isDead": false,
       "childGOs": []
+    },
+    {
+      "name": "sensorAnchor",
+      "enabled": true,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 0.12500048,
+              "y": 2.3841858E-7
+            },
+            "rotation": 0.0015334934,
+            "scale": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "zIndex": 0
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": [
+        {
+          "name": "sensor",
+          "enabled": true,
+          "components": [
+            {
+              "type": "gameEngine.Transform",
+              "properties": {
+                "position": {
+                  "x": 0.125,
+                  "y": 0.10000014
+                },
+                "rotation": 0.0015334934,
+                "scale": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "zIndex": 0
+              }
+            },
+            {
+              "type": "physics2D.components.Rigidbody2D",
+              "properties": {
+                "angularDamping": 0.8,
+                "linearDamping": 0.9,
+                "mass": 0.0,
+                "bodyType": "Static",
+                "friction": 0.1,
+                "gravityScale": 1.0,
+                "isSensor": true,
+                "fixedRotation": false,
+                "continuousCollision": true
+              }
+            },
+            {
+              "type": "physics2D.components.Box2DCollider",
+              "properties": {
+                "halfSize": {
+                  "x": 0.45,
+                  "y": 0.05
+                },
+                "origin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "showBoundaries": true,
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.0
+                }
+              }
+            },
+            {
+              "type": "components.gamecomponents.PlayerSensor",
+              "properties": {}
+            }
+          ],
+          "doSerialization": true,
+          "isDead": false,
+          "childGOs": []
+        }
+      ]
     }
   ]
 }

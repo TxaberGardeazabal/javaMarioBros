@@ -7,14 +7,12 @@ package components.gamecomponents;
 import components.Component;
 import components.TransitionMachine;
 import components.TranslateTransition;
-import editor.ConsoleWindow;
 import gameEngine.Direction;
 import gameEngine.GameObject;
 import gameEngine.KeyListener;
 import gameEngine.Prefab;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
-import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import render.DebugDraw;
@@ -32,11 +30,11 @@ public class Pipe extends Component {
     private boolean hasPiranhaPlant = false;
     
     private transient GameObject connectingPipe = null;
-    private transient float entranceVectorTolerance = 0.7f;
     private transient PlayerController collidingPlayer = null;
     private transient boolean playerEntering = false;
     private transient boolean playerExiting = false;
     private transient boolean spawnFlag = false;
+    private transient GameObject sensor;
 
     public Pipe(Direction direction) {
         this.direction = direction;
@@ -45,6 +43,11 @@ public class Pipe extends Component {
     @Override
     public void start () {
         connectingPipe = Window.getScene().getGameObjectByName(connectingPipeName);
+        
+        // get the sensor
+        try {
+            sensor = gameObject.getChildByName("sensorAnchor").getChildByName("sensor");
+        } catch (NullPointerException e) {}
     }
     
     @Override
@@ -99,6 +102,11 @@ public class Pipe extends Component {
             return;
         }
         
+        PlayerSensor playerS = null;
+        if (sensor != null) {
+            playerS = sensor.getComponent(PlayerSensor.class);
+        }
+        
         if (playerEntering != false) {
             if (!collidingPlayer.getTransitionMachine().isPlaying()) {
                 playerEntering = false;
@@ -119,8 +127,9 @@ public class Pipe extends Component {
                 collidingPlayer = null;
                 // transition end
             }
-        } else if (isTraversable && collidingPlayer != null) {
+        } else if (isTraversable && playerS != null && playerS.isObjectPresent()) {
             playerEntering = false;
+            collidingPlayer = playerS.getCollidingObject().getComponent(PlayerController.class);
             
             switch(direction) {
                 case Up:
@@ -159,22 +168,6 @@ public class Pipe extends Component {
             }
         }
     }
-    
-    @Override
-    public void beginCollision(GameObject go, Contact cntc, Vector2f normal) {
-        PlayerController playerController = go.getComponent(PlayerController.class);
-        if (playerController != null) {
-            collidingPlayer = playerController;
-        }
-    }
-    
-    @Override
-    public void endCollision(GameObject go, Contact cntc, Vector2f normal) {
-        PlayerController playerController = go.getComponent(PlayerController.class);
-        if (playerController != null && !(playerEntering || playerExiting)) {
-            collidingPlayer = null;
-        }
-    }
 
     /**
      * Devuelve la posicion donde mario debe aparecer en la tuberia destino.
@@ -198,8 +191,8 @@ public class Pipe extends Component {
             find the boundaries of the pipe and the player to find if the player is in the pipe entrance,
             we add a tiny offset to the pipe so it doesn't require perfect positioning, it's still a bit weird but I don't care
         */
-        Vector2f min = new Vector2f(gameObject.transform.position).sub(new Vector2f(gameObject.transform.scale).mul(0.5f)).add(0.025f,0.025f);
-        Vector2f max = new Vector2f(gameObject.transform.position).add(new Vector2f(gameObject.transform.scale).mul(0.5f)).sub(0.025f,0.025f);
+        Vector2f min = new Vector2f(gameObject.transform.position).sub(new Vector2f(gameObject.transform.scale).mul(0.5f)).add(0.025f,0);
+        Vector2f max = new Vector2f(gameObject.transform.position).add(new Vector2f(gameObject.transform.scale).mul(0.5f)).sub(0.025f,0);
         Vector2f playerMin = new Vector2f(collidingPlayer.gameObject.transform.position).sub(new Vector2f(collidingPlayer.gameObject.transform.scale).mul(0.5f));
         Vector2f playerMax = new Vector2f(collidingPlayer.gameObject.transform.position).add(new Vector2f(collidingPlayer.gameObject.transform.scale).mul(0.5f));
         

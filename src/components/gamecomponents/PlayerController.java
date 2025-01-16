@@ -174,13 +174,13 @@ public class PlayerController extends PhysicsController {
             
             if (KeyListener.isKeyPressed(Settings.CROUCH)) {
                 crouch(dt);
-            } else {
+            } else if (isCrouching) {
                 isCrouching = false;
                 if (this.playerState != PlayerState.Small) {
                     PillboxCollider pb = gameObject.getComponent(PillboxCollider.class);
                     if (pb != null) {
-                        pb.setHeight(heightMarioBig);
                         pb.setOffset(new Vector2f(0,0));
+                        pb.setHeight(heightMarioBig);
                     }
                 }
             }
@@ -319,12 +319,12 @@ public class PlayerController extends PhysicsController {
     
     public void crouch(float dt) {
         if (this.playerState != PlayerState.Small) {
-            isCrouching = true;
             PillboxCollider pb = gameObject.getComponent(PillboxCollider.class);
-            if (pb != null) {
+            if (pb != null && isCrouching) {
                 pb.setHeight(heightMarioSmall);
                 pb.setOffset(new Vector2f(0,-0.09f));
             }
+            isCrouching = true;
             stateMachine.trigger("toCrouch");
         }
     }

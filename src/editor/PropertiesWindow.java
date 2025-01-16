@@ -31,6 +31,7 @@ import components.gamecomponents.MushroomAI;
 import components.gamecomponents.MusicController;
 import components.gamecomponents.Pipe;
 import components.gamecomponents.PlayerController;
+import components.gamecomponents.PlayerSensor;
 import components.gamecomponents.StarAI;
 import components.gamecomponents.TrackSwapScript;
 import components.propertieComponents.StageHazard;
@@ -285,6 +286,12 @@ public class PropertiesWindow {
                                 if (ImGui.menuItem("Add track swap script")) {
                                     if (activeGameObject.getComponent(TrackSwapScript.class) == null) {
                                         activeGameObject.addComponent(new TrackSwapScript());
+                                    }
+                                }
+                                
+                                if (ImGui.menuItem("Add player sensor script")) {
+                                    if (activeGameObject.getComponent(PlayerSensor.class) == null) {
+                                        activeGameObject.addComponent(new PlayerSensor());
                                     }
                                 }
                             }

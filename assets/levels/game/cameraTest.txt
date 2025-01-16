@@ -81,7 +81,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -179,7 +179,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -277,7 +277,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -375,7 +375,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -473,7 +473,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -571,7 +571,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -669,7 +669,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -767,7 +767,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -865,7 +865,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -963,7 +963,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -1061,7 +1061,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -1159,7 +1159,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -1257,7 +1257,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -1355,7 +1355,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -1453,7 +1453,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -1551,7 +1551,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -1649,7 +1649,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -1747,7 +1747,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -1845,7 +1845,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -1943,7 +1943,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -2041,7 +2041,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -2139,7 +2139,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -2237,7 +2237,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -2335,7 +2335,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -3606,7 +3606,7 @@
       {
         "type": "physics2D.components.PillboxCollider",
         "properties": {
-          "showBoundaries": false,
+          "showBoundaries": true,
           "width": 0.39,
           "height": 0.27,
           "offset": {
@@ -3720,7 +3720,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -3818,7 +3818,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -3916,7 +3916,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -4014,7 +4014,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -4112,7 +4112,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -4210,7 +4210,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -4308,7 +4308,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -4406,7 +4406,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -4504,7 +4504,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -4602,7 +4602,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -4700,7 +4700,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -4754,19 +4754,19 @@
             },
             "texCoords": [
               {
-                "x": 0.6666667,
+                "x": 0.33333334,
                 "y": 1.0
               },
               {
-                "x": 0.6666667,
-                "y": 0.6666667
-              },
-              {
                 "x": 0.33333334,
                 "y": 0.6666667
               },
               {
-                "x": 0.33333334,
+                "x": 0.0,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -4920,7 +4920,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.01
@@ -4984,19 +4984,19 @@
             },
             "texCoords": [
               {
-                "x": 0.6666667,
+                "x": 0.33333334,
                 "y": 1.0
               },
               {
-                "x": 0.6666667,
-                "y": 0.6666667
-              },
-              {
                 "x": 0.33333334,
                 "y": 0.6666667
               },
               {
-                "x": 0.33333334,
+                "x": 0.0,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -5150,7 +5150,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.01
@@ -5258,7 +5258,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -5356,7 +5356,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -5454,7 +5454,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -5508,19 +5508,19 @@
             },
             "texCoords": [
               {
-                "x": 0.6666667,
+                "x": 0.33333334,
                 "y": 1.0
               },
               {
-                "x": 0.6666667,
-                "y": 0.6666667
-              },
-              {
                 "x": 0.33333334,
                 "y": 0.6666667
               },
               {
-                "x": 0.33333334,
+                "x": 0.0,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -5674,7 +5674,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.01
@@ -5738,19 +5738,19 @@
             },
             "texCoords": [
               {
-                "x": 0.6666667,
+                "x": 0.33333334,
                 "y": 1.0
               },
               {
-                "x": 0.6666667,
-                "y": 0.6666667
-              },
-              {
                 "x": 0.33333334,
                 "y": 0.6666667
               },
               {
-                "x": 0.33333334,
+                "x": 0.0,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -5904,7 +5904,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.01
@@ -5968,19 +5968,19 @@
             },
             "texCoords": [
               {
-                "x": 0.6666667,
+                "x": 0.33333334,
                 "y": 1.0
               },
               {
-                "x": 0.6666667,
-                "y": 0.6666667
-              },
-              {
                 "x": 0.33333334,
                 "y": 0.6666667
               },
               {
-                "x": 0.33333334,
+                "x": 0.0,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -6134,7 +6134,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.01
@@ -6198,19 +6198,19 @@
             },
             "texCoords": [
               {
-                "x": 0.6666667,
+                "x": 0.33333334,
                 "y": 1.0
               },
               {
-                "x": 0.6666667,
-                "y": 0.6666667
-              },
-              {
                 "x": 0.33333334,
                 "y": 0.6666667
               },
               {
-                "x": 0.33333334,
+                "x": 0.0,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -6364,7 +6364,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.01
@@ -6472,7 +6472,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -6579,7 +6579,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -6686,7 +6686,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -6709,7 +6709,93 @@
     ],
     "doSerialization": true,
     "isDead": false,
-    "childGOs": []
+    "childGOs": [
+      {
+        "name": "sensorAnchor",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 2.75,
+                "y": 0.75
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": -2
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "sensor",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.05,
+                    "y": 0.75
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "zIndex": -1
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": true,
+                  "fixedRotation": false,
+                  "continuousCollision": true
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.08,
+                    "y": 0.4
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": true,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              },
+              {
+                "type": "components.gamecomponents.PlayerSensor",
+                "properties": {}
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "warpPipeDown",
@@ -6793,7 +6879,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -6816,7 +6902,93 @@
     ],
     "doSerialization": true,
     "isDead": false,
-    "childGOs": []
+    "childGOs": [
+      {
+        "name": "sensorAnchor",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 2.25,
+                "y": 1.75
+              },
+              "rotation": 269.99878,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": -2
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "sensor",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 2.249996,
+                    "y": 1.4500034
+                  },
+                  "rotation": 269.99878,
+                  "scale": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "zIndex": -1
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": true,
+                  "fixedRotation": false,
+                  "continuousCollision": true
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.08,
+                    "y": 0.4
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": true,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              },
+              {
+                "type": "components.gamecomponents.PlayerSensor",
+                "properties": {}
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "warpPipeLeft",
@@ -6829,7 +7001,7 @@
             "x": 3.5000045,
             "y": 1.2749999
           },
-          "rotation": 0.0,
+          "rotation": 5.9455633E-6,
           "scale": {
             "x": 0.5,
             "y": 0.5
@@ -6900,7 +7072,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -6923,7 +7095,93 @@
     ],
     "doSerialization": true,
     "isDead": false,
-    "childGOs": []
+    "childGOs": [
+      {
+        "name": "sensorAnchor",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 3.4999998,
+                "y": 1.2749997
+              },
+              "rotation": 179.99944,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": -2
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "sensor",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.2000027,
+                    "y": 1.2750026
+                  },
+                  "rotation": 179.99944,
+                  "scale": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "zIndex": -1
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": true,
+                  "fixedRotation": false,
+                  "continuousCollision": true
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.08,
+                    "y": 0.4
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": true,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              },
+              {
+                "type": "components.gamecomponents.PlayerSensor",
+                "properties": {}
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "ground object",
@@ -7007,7 +7265,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -7061,19 +7319,19 @@
             },
             "texCoords": [
               {
-                "x": 0.33333334,
+                "x": 0.22222222,
                 "y": 1.0
               },
               {
-                "x": 0.33333334,
-                "y": 0.75
-              },
-              {
                 "x": 0.22222222,
                 "y": 0.75
               },
               {
-                "x": 0.22222222,
+                "x": 0.11111111,
+                "y": 0.75
+              },
+              {
+                "x": 0.11111111,
                 "y": 1.0
               }
             ]
@@ -7244,7 +7502,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -7259,203 +7517,6 @@
     "doSerialization": true,
     "isDead": false,
     "childGOs": []
-  },
-  {
-    "name": "Moving platform",
-    "enabled": true,
-    "components": [
-      {
-        "type": "gameEngine.Transform",
-        "properties": {
-          "position": {
-            "x": 4.125,
-            "y": 1.8749998
-          },
-          "rotation": 0.0,
-          "scale": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "zIndex": 0
-        }
-      },
-      {
-        "type": "physics2D.components.Rigidbody2D",
-        "properties": {
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.0,
-          "bodyType": "Static",
-          "friction": 0.1,
-          "gravityScale": 0.0,
-          "isSensor": false,
-          "fixedRotation": true,
-          "continuousCollision": false
-        }
-      },
-      {
-        "type": "physics2D.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.54,
-            "y": 0.12
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "showBoundaries": false,
-          "offset": {
-            "x": 0.1,
-            "y": 0.0
-          }
-        }
-      },
-      {
-        "type": "components.propertieComponents.Ground",
-        "properties": {}
-      },
-      {
-        "type": "components.gamecomponents.MovingPlatform",
-        "properties": {
-          "direction": "Right",
-          "distance": 2.0,
-          "duration": 1.5,
-          "destroyOnEnd": false,
-          "loops": true,
-          "linear": false,
-          "time": 0.0
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false,
-    "childGOs": [
-      {
-        "name": "Platform",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 4.125,
-                "y": 1.8749998
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.125
-              },
-              "zIndex": 0
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 8.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
-                  "height": 16,
-                  "width": 16
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
-        "name": "Platform",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 4.375,
-                "y": 1.8749998
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.125
-              },
-              "zIndex": 0
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 8.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
-                  "height": 16,
-                  "width": 16
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 0.5
-                  },
-                  {
-                    "x": 0.0,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      }
-    ]
   },
   {
     "name": "ground object",
@@ -7539,7 +7600,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -7637,7 +7698,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -7735,7 +7796,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -7833,7 +7894,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -7931,7 +7992,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -8029,7 +8090,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -8127,7 +8188,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -8225,7 +8286,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -8323,7 +8384,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -8421,7 +8482,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -8436,5 +8497,1240 @@
     "doSerialization": true,
     "isDead": false,
     "childGOs": []
+  },
+  {
+    "name": "mushroom",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 3.125,
+            "y": 1.125
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "Width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spriteSheets/particles/marioPowerups.png",
+              "height": 64,
+              "width": 144
+            },
+            "texCoords": [
+              {
+                "x": 0.11111111,
+                "y": 1.0
+              },
+              {
+                "x": 0.11111111,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Dynamic",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.2,
+            "y": 0.2
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": true,
+          "offset": {
+            "x": 0.0,
+            "y": 0.02
+          }
+        }
+      },
+      {
+        "type": "components.gamecomponents.MushroomAI",
+        "properties": {
+          "active": true,
+          "terminalVelocity": {
+            "x": 10.0,
+            "y": 10.0
+          },
+          "hasGravity": false,
+          "innerWidth": 0.175,
+          "castVal": -0.14
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": []
+  },
+  {
+    "name": "Moving platform",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 4.125,
+            "y": 1.875
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.75,
+            "y": 0.12
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": true,
+          "offset": {
+            "x": 0.25,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      },
+      {
+        "type": "components.gamecomponents.MovingPlatform",
+        "properties": {
+          "direction": "Right",
+          "distance": 0.5,
+          "duration": 1.5,
+          "destroyOnEnd": false,
+          "loops": true,
+          "linear": false,
+          "time": 0.0
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 4.125,
+                "y": 1.875
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 4.375,
+                "y": 1.875
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 4.625,
+                "y": 1.875
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "sensorAnchor",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 4.375,
+                "y": 1.875
+              },
+              "rotation": 0.0015334934,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": 0
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "sensor",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 4.3750005,
+                    "y": 1.9749994
+                  },
+                  "rotation": 0.0015334934,
+                  "scale": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "zIndex": 0
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": true,
+                  "fixedRotation": false,
+                  "continuousCollision": true
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.7,
+                    "y": 0.05
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": true,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              },
+              {
+                "type": "components.gamecomponents.PlayerSensor",
+                "properties": {}
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Moving platform",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 4.650002,
+            "y": 2.125
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.5,
+            "y": 0.12
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": true,
+          "offset": {
+            "x": 0.125,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      },
+      {
+        "type": "components.gamecomponents.MovingPlatform",
+        "properties": {
+          "direction": "Right",
+          "distance": 0.5,
+          "duration": 1.5,
+          "destroyOnEnd": false,
+          "loops": true,
+          "linear": false,
+          "time": 0.0
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 4.650002,
+                "y": 2.125
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 4.900002,
+                "y": 2.125
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "sensorAnchor",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 4.7750025,
+                "y": 2.1250002
+              },
+              "rotation": 0.0015334934,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": 0
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "sensor",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 4.775002,
+                    "y": 2.2250001
+                  },
+                  "rotation": 0.0015334934,
+                  "scale": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "zIndex": 0
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": true,
+                  "fixedRotation": false,
+                  "continuousCollision": true
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.45,
+                    "y": 0.05
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": true,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              },
+              {
+                "type": "components.gamecomponents.PlayerSensor",
+                "properties": {}
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Moving platform",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 5.0500035,
+            "y": 2.375
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.36,
+            "y": 0.12
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": true,
+          "offset": {
+            "x": 0.03,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      },
+      {
+        "type": "components.gamecomponents.MovingPlatform",
+        "properties": {
+          "direction": "Right",
+          "distance": 0.5,
+          "duration": 1.5,
+          "destroyOnEnd": false,
+          "loops": true,
+          "linear": false,
+          "time": 0.0
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 5.0250034,
+                "y": 2.375
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 5.200004,
+                "y": 2.375
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.125,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 8.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 0.5,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "sensorAnchor",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 5.0750036,
+                "y": 2.375
+              },
+              "rotation": 0.0015334934,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": 0
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "sensor",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 5.075004,
+                    "y": 2.4749994
+                  },
+                  "rotation": 0.0015334934,
+                  "scale": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "zIndex": 0
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": true,
+                  "fixedRotation": false,
+                  "continuousCollision": true
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.3,
+                    "y": 0.05
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": true,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              },
+              {
+                "type": "components.gamecomponents.PlayerSensor",
+                "properties": {}
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Moving platform",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": 5.2750044,
+            "y": 2.625
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": -1
+        }
+      },
+      {
+        "type": "physics2D.components.Rigidbody2D",
+        "properties": {
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false
+        }
+      },
+      {
+        "type": "physics2D.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.12
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "showBoundaries": true,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      },
+      {
+        "type": "components.propertieComponents.Ground",
+        "properties": {}
+      },
+      {
+        "type": "components.gamecomponents.MovingPlatform",
+        "properties": {
+          "direction": "Right",
+          "distance": 0.5,
+          "duration": 1.5,
+          "destroyOnEnd": false,
+          "loops": true,
+          "linear": false,
+          "time": 0.0
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false,
+    "childGOs": [
+      {
+        "name": "Platform",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 5.2750044,
+                "y": 2.625
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.125
+              },
+              "zIndex": 0
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 8.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/particles/platformsTileable2.png",
+                  "height": 16,
+                  "width": 16
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  {
+                    "x": 0.0,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "sensorAnchor",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 5.2750044,
+                "y": 2.625
+              },
+              "rotation": 0.0015334934,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": 0
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "sensor",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 5.275005,
+                    "y": 2.7249994
+                  },
+                  "rotation": 0.0015334934,
+                  "scale": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "zIndex": 0
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": true,
+                  "fixedRotation": false,
+                  "continuousCollision": true
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.2,
+                    "y": 0.05
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": true,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              },
+              {
+                "type": "components.gamecomponents.PlayerSensor",
+                "properties": {}
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
+      }
+    ]
   }
 ]

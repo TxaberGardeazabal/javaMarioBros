@@ -31,6 +31,7 @@ public class MovingPlatform extends Component{
     private transient Vector2f target = new Vector2f();
     private transient Vector2f start;
     private transient GameObject collidingPlayer = null;
+    private transient GameObject sensor = null;
     
     @Override
     public void start() {
@@ -50,37 +51,52 @@ public class MovingPlatform extends Component{
                 target = new Vector2f(this.gameObject.transform.position).add(new Vector2f(distance,0));
                 break;
         }
-        
+        // get the sensor
+        try {
+            sensor = gameObject.getChildByName("sensorAnchor").getChildByName("sensor");
+        } catch (NullPointerException e) {}
     }
     
     @Override
     public void update(float dt) {
 
-            if (time < duration) {
-                if (linear) {
-                    this.gameObject.transform.setPosition(new Vector2f(
-                        JMath.lerp(start.x, target.x, time/duration),
-                        JMath.lerp(start.y, target.y, time/duration)));
-                } else {
-                    if (time/duration <= 0.5f) {
-                        this.gameObject.transform.setPosition(new Vector2f(
-                            JMath.lerp(start.x, target.x, JMath.easeInOut((time/duration)/0.5f)),
-                            JMath.lerp(start.y, target.y, JMath.easeInOut((time/duration)/0.5f))));
-                    } else {
-                        this.gameObject.transform.setPosition(new Vector2f(
-                            JMath.lerp(start.x, target.x, JMath.easeInOut(JMath.flip(time/duration)/0.5f)),
-                            JMath.lerp(start.y, target.y, JMath.easeInOut(JMath.flip(time/duration)/0.5f))));
-                    }
-                }
-                time += dt;
+        try {
+            PlayerSensor playerS = sensor.getComponent(PlayerSensor.class);
+            if (playerS.isObjectPresent()) {
+                collidingPlayer = playerS.getCollidingObject();
+                this.gameObject.addChild(collidingPlayer);
+            } else if (collidingPlayer != null) {
+                this.gameObject.removeChild(collidingPlayer);
+                collidingPlayer.setParent(null);
+                collidingPlayer = null;
+            }
+            
+        } catch (NullPointerException e) {}
+        
+        if (time < duration) {
+            if (linear) {
+                this.gameObject.transform.setPosition(new Vector2f(
+                    JMath.lerp(start.x, target.x, time/duration),
+                    JMath.lerp(start.y, target.y, time/duration)));
             } else {
-                if (loops) {
-                    time = 0; 
-                } else if (destroyOnEnd) {
-                    this.gameObject.destroy();
+                if (time/duration <= 0.5f) {
+                    this.gameObject.transform.setPosition(new Vector2f(
+                        JMath.lerp(start.x, target.x, JMath.easeInOut((time/duration)/0.5f)),
+                        JMath.lerp(start.y, target.y, JMath.easeInOut((time/duration)/0.5f))));
+                } else {
+                    this.gameObject.transform.setPosition(new Vector2f(
+                        JMath.lerp(start.x, target.x, JMath.easeInOut(JMath.flip(time/duration)/0.5f)),
+                        JMath.lerp(start.y, target.y, JMath.easeInOut(JMath.flip(time/duration)/0.5f))));
                 }
             }
-        
+            time += dt;
+        } else {
+            if (loops) {
+                time = 0; 
+            } else if (destroyOnEnd) {
+                this.gameObject.destroy();
+            }
+        }
     }
 
     public Direction getDirection() {
@@ -135,7 +151,7 @@ public class MovingPlatform extends Component{
         this.linear = linear;
     }
     
-    @Override
+    /*@Override
     public void beginCollision(GameObject collidingObj,Contact cntct,Vector2f hitNormal) {
         if (collidingObj.getComponent(PhysicsController.class) != null && hitNormal.y > 0.8f) {
             this.gameObject.addChild(collidingObj);
@@ -150,7 +166,7 @@ public class MovingPlatform extends Component{
             collidingPlayer.setParent(null);
             collidingPlayer = null;
         }
-    }
+    }*/
     
     @Override
     public void destroy() {

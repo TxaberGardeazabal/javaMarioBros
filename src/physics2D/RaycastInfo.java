@@ -9,6 +9,8 @@ import org.jbox2d.callbacks.RayCastCallback;
 import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.Fixture;
 import org.joml.Vector2f;
+import physics2D.components.Box2DCollider;
+import physics2D.components.Rigidbody2D;
 
 /**
  * Wrapper para la informacion devuelta por el rayCast
@@ -35,15 +37,24 @@ public class RaycastInfo implements RayCastCallback{
     
     @Override
     public float reportFixture(Fixture fxtr, Vec2 point, Vec2 normal, float fraction) {
-        if (fxtr.getUserData() == requestingObj) {
+        if (fxtr.getUserData().equals(requestingObj)) {
             return 1;
         }
-        this.fixture = fxtr;
-        this.point = new Vector2f(point.x, point.y);
-        this.normal = new Vector2f(normal.x, normal.y);
-        this.fraction = fraction;
-        this.hit = fraction != 0;
-        this.hitObj = (GameObject)fxtr.getUserData();
+        GameObject tmp = (GameObject)fxtr.getUserData();
+        try {
+            if (tmp.getComponent(Rigidbody2D.class).isSensor()) {
+                return 1;
+            }
+        } 
+        catch (NullPointerException e) {}
+        finally {
+            this.fixture = fxtr;
+            this.point = new Vector2f(point.x, point.y);
+            this.normal = new Vector2f(normal.x, normal.y);
+            this.fraction = fraction;
+            this.hit = fraction != 0;
+            this.hitObj = (GameObject)fxtr.getUserData();
+        }
         
         return fraction;
     }
