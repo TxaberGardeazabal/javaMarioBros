@@ -8,6 +8,7 @@ add new functionalities:
 - show contents of assetpool in editor (database)
 + add tiny flag on castle/towers
 + add  fireball explosion
+++ create menu level, menu flow and test level flow
 
 upgrade existing functionalities:
 -- style properties window

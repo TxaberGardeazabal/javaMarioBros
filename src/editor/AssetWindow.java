@@ -800,7 +800,7 @@ public class AssetWindow {
                 }
                 
                 
-                text = new Sprite(AssetPool.getTexture("assets/images/text/Super_Mario_Bros._Logo.png"));
+                text = new Sprite(AssetPool.getTexture("assets/images/text/super_mario_bros_title.png"));
                 if (OImGui.spriteButton(text,uid++)) {
                     GameObject object = Prefab.generateUIText(text);
                     mc.pickUpObject(object);
