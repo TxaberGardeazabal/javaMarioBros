@@ -2,13 +2,12 @@ add new functionalities:
 -- add rotation gizmo
 -- find how to load spritesheets automaticaly instead of hardcoding all of them (maybe in the assetpool).
 -- make adding, changing and removing of spritesheets in gameobjects
-- in level scenes only assets that are used should be loaded.
+-- in level scenes only assets that are used should be loaded.
 -- make water levels
 -- add above cloud zones
 - show contents of assetpool in editor (database)
-+ add tiny flag on castle/towers
-+ add  fireball explosion
-++ create menu level, menu flow and test level flow
+- add tiny flag on castle/towers
+- add  fireball explosion
 
 upgrade existing functionalities:
 -- style properties window
@@ -24,7 +23,6 @@ some window focus issues:
    imgui windows clipping into screen bar and headers not showing correctly
 imgui string editing sucks
 player transitions jump function doesn't work correctly
-+ mario title image renders incorrectly
 - collisions are janky, disabling contacts in presolve doesn't prevent unwanted collisions
 seting rotation via imgui causes it to become -inf, also causes bugs with box2d
 minimize the use of javaswing to prevent incompatibility crashes
@@ -42,3 +40,13 @@ other:
 // picking shader doesn't prevent extra placement of gameobjects if the object color is too light (known bug)
 // deleting spriteRenderers from the editor doesn't remove them from the renderer (known bug)
 // avoid placing mario on any platform with continous moving/rotating except it has movingplatform component (known bug)
+
+left to do:
+    make a menu level
+    apply pipe and platform changes retroactively to other levels
+    scale UI components
+    decide to change screen size ratio and UI
+    the level should save and reload when mario dies
+    implement level select
+    bug: key listener sometimes detects the control key while is not pressed
+    bug: jumping on an airbone enemy (such as a paratroopa) sometimes trigger multiple jump detects wich messes the score system

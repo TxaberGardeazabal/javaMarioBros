@@ -8,7 +8,6 @@ package gameEngine;
 import editor.ConsoleWindow;
 import editor.GameViewWindow;
 import java.io.File;
-import scene.LevelEditorSceneInitializer;
 import scene.Scene;
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import org.lwjgl.glfw.GLFWErrorCallback;
@@ -44,6 +43,9 @@ import render.Framebuffer;
 import render.PickingTexture;
 import render.Renderer;
 import render.Shader;
+import scene.LevelEditorSceneInitializer;
+import scene.LevelSceneInitializer;
+import scene.MainMenuSceneInitializer;
 import scene.SceneInitializer;
 import util.AssetPool;
 import util.Settings;
@@ -68,6 +70,7 @@ public class Window {
     private GameViewWindow gameViewWindow;
     private static Scene currentScene; 
     private boolean runtimePlaying = false;
+    private boolean shouldClose = false;
 
     private Window() {
         this.width = 1920;
@@ -130,11 +133,12 @@ public class Window {
         initWindow();
         this.imGuiLayer.initImGui(glslVersion);
         
-        File file = new File(Settings.defaultLevel);
-        //File file = new File(Settings.mainMenuLevel);
+        //File file = new File(Settings.defaultLevel);
+        File file = new File(Settings.mainMenuLevel);
         
-        Window.changeScene(new LevelEditorSceneInitializer(), file.getAbsolutePath());
-        //Window.changeScene(new MainMenuSceneInitializer(), file.getAbsolutePath());
+        //Window.changeScene(new LevelEditorSceneInitializer(), file.getAbsolutePath());
+        Window.changeScene(new MainMenuSceneInitializer(), file.getAbsolutePath());
+        //Window.changeScene(new LevelSceneInitializer(), file.getAbsolutePath());
     }
 
     /*
@@ -148,7 +152,7 @@ public class Window {
         Shader defaultShader = AssetPool.getShader("assets/shaders/default.glsl");
         Shader pickingShader = AssetPool.getShader("assets/shaders/pickingShader.glsl");
         
-        while (!GLFW.glfwWindowShouldClose(glfwWindow)) {
+        while (!GLFW.glfwWindowShouldClose(glfwWindow) && !shouldClose) {
             // Poll for window events. The key callback above will only be
             // invoked during this call.
             GLFW.glfwPollEvents();
@@ -191,7 +195,7 @@ public class Window {
             
             this.framebuffer.unbind();
             imGuiLayer.update(dt, currentScene);
-            
+
             GLFW.glfwSwapBuffers(glfwWindow); // swap the color buffers
             KeyListener.endFrame();
             MouseListener.endFrame();
@@ -338,7 +342,15 @@ public class Window {
         get().runtimePlaying = runtimePlaying;
     }
     
+    /**
+    * swaps the window title with a new one.
+    * @param newTitle a String with the new title
+    */
     public void changeTitle(String newTitle) {
         GLFW.glfwSetWindowTitle(glfwWindow, newTitle);
+    }
+    
+    public void close() {
+        shouldClose = true;
     }
 }

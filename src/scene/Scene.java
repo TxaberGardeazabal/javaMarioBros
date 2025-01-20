@@ -458,7 +458,7 @@ public class Scene {
             }
         }
     }
-
+    
     public Observer getInitializer() {
         return this.sceneInitializer;
     }

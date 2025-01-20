@@ -20,10 +20,10 @@ public class StartButtonBehavior implements ButtonBehavior{
 
     @Override
     public void onClick() {
-        Map a = new HashMap<>();
-        File file = new File("assets/levels/NewLevel.txt");
-        a.put("filepath", file.getAbsolutePath());
-        EventSystem.notify(null, new Event(EventType.PlayLevel, a));
+        Map firstLevel = new HashMap<>();
+        File file = new File("assets/levels/game/1-1.txt");
+        firstLevel.put("filepath", file.getAbsolutePath());
+        EventSystem.notify(null, new Event(EventType.PlayLevel, firstLevel));
     }
 
     @Override

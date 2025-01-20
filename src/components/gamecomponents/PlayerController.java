@@ -107,6 +107,7 @@ public class PlayerController extends PhysicsController {
                 EventSystem.notify(this.gameObject, new Event(EventType.MarioWin));
                 stateMachine.trigger("stopMoving");
                 stopAllForces();
+                playWinAnimation = false;
                 
             } else if (flag != null) { 
                 if (!flag.getComponent(TransitionMachine.class).isPlaying()) {

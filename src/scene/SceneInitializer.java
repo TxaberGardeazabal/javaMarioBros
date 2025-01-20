@@ -4,7 +4,11 @@
  */
 package scene;
 
+import components.SpriteRenderer;
+import components.StateMachine;
+import gameEngine.GameObject;
 import observers.Observer;
+import util.AssetPool;
 
 /**
  * Clase padre con la que se cargan los datos necesarios de cada escena.
@@ -21,6 +25,26 @@ public abstract class SceneInitializer implements Observer{
      * @param scene referencia a la escena
      */
     public abstract void loadResources(Scene scene);
+    
+    /*
+    * Recarga las texturas de la escena con las texturas de dentro del AssetPool
+    */
+    protected void refreshTextures(Scene scene) {
+        // load into scene objects
+        for (GameObject g : scene.getGameObjects()) {
+            if (g.getComponent(SpriteRenderer.class) != null) {
+                SpriteRenderer spr = g.getComponent(SpriteRenderer.class);
+                if (spr.getTexture() != null) {
+                    spr.setTexture(AssetPool.getTexture(spr.getTexture().getFilepath()));
+                }
+            }
+            
+            if (g.getComponent(StateMachine.class) != null) {
+                StateMachine stateMachine = g.getComponent(StateMachine.class);
+                stateMachine.refreshTextures();
+            }
+        }
+    }
     /**
      * Ejecuta codigo imgui para la escena
      */

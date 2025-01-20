@@ -47,7 +47,7 @@ public class LevelController extends Component implements Observer{
     public float time = 0;
     private transient float timeLeft = time;
     private transient float timeBeforeLevelSwitch = 5;
-    private transient boolean levelDone;
+    private transient boolean levelDone = false;
     
     // player data
     private transient PlayerData pData;
@@ -104,7 +104,6 @@ public class LevelController extends Component implements Observer{
         }
         
         timeLeft = time;
-        levelDone = false;
         
         EventSystem.addObserver(this);
     }
@@ -127,7 +126,6 @@ public class LevelController extends Component implements Observer{
             timeD.setValue((int) Math.floor(timeLeft));
             livesD.setValue(pData.lives);
         }
-        
         
         if (levelDone) {
             timeBeforeLevelSwitch -= dt;
@@ -198,7 +196,6 @@ public class LevelController extends Component implements Observer{
                 return;
             case MarioWin:
                 levelDone = true;
-
                 return;
             case MarioDie:
                 if (Window.getScene().getInitializer() instanceof MainMenuSceneInitializer) {

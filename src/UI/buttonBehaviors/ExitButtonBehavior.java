@@ -18,7 +18,7 @@ public class ExitButtonBehavior implements ButtonBehavior {
     
     @Override
     public void onClick() {
-        EventSystem.notify(null, new Event(EventType.PlayLevel));
+        EventSystem.notify(null, new Event(EventType.Exit));
     }
 
     @Override
