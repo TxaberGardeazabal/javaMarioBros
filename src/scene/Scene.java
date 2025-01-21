@@ -107,6 +107,8 @@ public class Scene {
                 if (go.isDirty()) {
                     this.renderer.add(go);
                     this.physics.add(go);
+                    // reset flag
+                    go.setIsDirty(false);
                 }
                 go.update(dt);
             } else {
@@ -170,6 +172,8 @@ public class Scene {
                 if (go.isDirty()) {
                     this.renderer.add(go);
                     this.physics.add(go);
+                    // reset flag
+                    go.setIsDirty(false);
                 }
                 go.editorUpdate(dt);
             } else {

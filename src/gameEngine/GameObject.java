@@ -170,17 +170,11 @@ public class GameObject {
      * @param dt tiempo en segundos desde el anterior frame
      */
     public void update(float dt) {
-        if (isDirty) {
-            isDirty = false;
-        }
-        
         if (enabled) {
             for (int i = 0; i < components.size(); i++) {
                 components.get(i).update(dt);
             }
-            
         }
-        
     }
     
     /**
@@ -188,10 +182,6 @@ public class GameObject {
      * @param dt tiempo en segundos desde el anterior frame
      */
     public void lateUpdate(float dt) {
-        if (isDirty) {
-            isDirty = false;
-        }
-        
         if (enabled) {
             for (int i = 0; i < components.size(); i++) {
                 components.get(i).lateUpdate(dt);
@@ -204,10 +194,6 @@ public class GameObject {
      * @param dt tiempo en segundos desde el anterior frame
      */
     public void editorUpdate(float dt) {
-        if (isDirty) {
-            isDirty = false;
-        }
-        
         if (enabled) {
             for (int i = 0; i < components.size(); i++) {
                 components.get(i).editorUpdate(dt);
@@ -235,9 +221,7 @@ public class GameObject {
         for (int i = 0; i < components.size(); i++) {
             ImBoolean test = new ImBoolean(true);
             if (ImGui.collapsingHeader(components.get(i).getClass().getSimpleName(), test)) {
-                components.get(i).imGui();
-                
-                
+                components.get(i).imGui(); 
             }
             if (!test.get()) {
                 this.components.remove(i);
