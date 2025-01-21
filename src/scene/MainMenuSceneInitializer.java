@@ -89,7 +89,6 @@ public class MainMenuSceneInitializer extends SceneInitializer{
             case Exit:
                 Window.get().close();
                 break;
-            
         }
     }
     

@@ -37,11 +37,6 @@ public class Renderer {
         if (spr != null) {
             add(spr);
         }
-        /*
-        FontRenderer fr = go.getComponent(FontRenderer.class);
-        if (fr != null) {
-            add(fr);
-        }*/
     }
     
     /**

@@ -806,6 +806,12 @@ public class AssetWindow {
                     mc.pickUpObject(object);
                 }
                 
+                text = new Sprite(AssetPool.getTexture("assets/images/text/game_over.png"));
+                if (OImGui.spriteButton(text,uid++)) {
+                    GameObject object = Prefab.generateUIText(text);
+                    mc.pickUpObject(object);
+                }
+                
                 SpriteSheet text2 = AssetPool.getSpritesheet("assets/images/text/fontFace.png");
                 if (OImGui.spriteButton(text2.getSprite(0),uid++)) {
                     GameObject object = Prefab.generateDigitalizer(6);

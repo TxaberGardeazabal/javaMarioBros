@@ -148,6 +148,7 @@ public class Settings {
         AssetPool.getTexture("assets/images/text/editor.png");
         AssetPool.getTexture("assets/images/text/salir.png");
         AssetPool.getTexture("assets/images/text/seleccionar_nivel.png");
+        AssetPool.getTexture("assets/images/text/game_over.png");
         AssetPool.getTexture("assets/images/text/super_mario_bros_title.png");
         
         // spritesheets

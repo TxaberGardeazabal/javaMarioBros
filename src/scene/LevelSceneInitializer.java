@@ -5,19 +5,12 @@
 package scene;
 
 import components.GameCamera;
-import components.SpriteRenderer;
-import components.SpriteSheet;
-import components.StateMachine;
 import components.gamecomponents.HoleLogic;
-import editor.ConsoleWindow;
 import gameEngine.GameObject;
 import gameEngine.Window;
 import observers.events.Event;
-import static observers.events.EventType.GameEngineStartPlay;
-import static observers.events.EventType.GameEngineStopPlay;
 import static observers.events.EventType.LoadLevel;
 import static observers.events.EventType.SaveLevel;
-import util.AssetPool;
 import util.Settings;
 
 /**
@@ -76,23 +69,14 @@ public class LevelSceneInitializer extends SceneInitializer {
     @Override
     public void onNotify(GameObject go, Event event) {
         switch(event.type) {
-            case GameEngineStartPlay:
-                ConsoleWindow.addLog("starting level: "+Window.getScene().getLevelFilepath(), ConsoleWindow.LogCategory.info);
-                Window.setRuntimePlaying(true);
-                Window.getScene().save();
-                Window.changeScene(new LevelSceneInitializer(), Window.getScene().getLevelFilepath());
-                break;
-            case GameEngineStopPlay:
-                ConsoleWindow.addLog("ending level: "+Window.getScene().getLevelFilepath(), ConsoleWindow.LogCategory.info);
-                Window.setRuntimePlaying(false);
-                Window.changeScene(new LevelEditorSceneInitializer(), Window.getScene().getLevelFilepath());
-                break;
             case LoadLevel:
-                Window.changeScene(new LevelEditorSceneInitializer(), Window.getScene().getLevelFilepath());
+                Window.changeScene(new LevelSceneInitializer(), Window.getScene().getLevelFilepath());
                 break;
             case SaveLevel:
                 Window.getScene().save();
                 break;
+            case EndWindow:
+                Window.changeScene(new MainMenuSceneInitializer(), Settings.mainMenuLevel);
         }
     }
     

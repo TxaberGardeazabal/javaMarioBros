@@ -48,6 +48,7 @@ public class LevelController extends Component implements Observer{
     private transient float timeLeft = time;
     private transient float timeBeforeLevelSwitch = 5;
     private transient boolean levelDone = false;
+    private transient boolean gameOver = false;
     
     // player data
     private transient PlayerData pData;
@@ -60,25 +61,11 @@ public class LevelController extends Component implements Observer{
     private transient Digitalizer levelD;
     private transient Digitalizer timeD;
     private transient Digitalizer livesD;
+    private transient GameObject gameOverT;
     
     @Override
     public void start() {
-        // load player data
-        Gson gson = new GsonBuilder().setPrettyPrinting()
-                .enableComplexMapKeySerialization()
-                .create();
-        
-        String inFile = "";
-        try {
-            inFile = new String(Files.readAllBytes(Paths.get(saveFile)));
-        } catch (IOException ex ) {
-            ConsoleWindow.addLog("Error al cargar: No se pudo acceder al archivo: "+saveFile+" ,comprueba que el archivo exista y esta aplicacion tenga permisos de edicion",
-                    ConsoleWindow.LogCategory.error);
-        }
-        
-        if (!inFile.equals("")) {
-            pData = gson.fromJson(inFile, PlayerData.class);
-        }
+        loadProgress();
         
         GameObject tmp = Window.getScene().getGameObjectWith(PlayerController.class);
         if (tmp == null) {
@@ -101,6 +88,12 @@ public class LevelController extends Component implements Observer{
             levelD = hud.getChildByName("nivel").getComponent(Digitalizer.class);
             timeD = hud.getChildByName("tiempo").getComponent(Digitalizer.class);
             livesD = hud.getChildByName("vidas").getComponent(Digitalizer.class);
+            
+            gameOverT = hud.getChildByName("gameOverText");
+            if (gameOverT != null) {
+                gameOverT.setEnabled(false);
+            }
+            
         }
         
         timeLeft = time;
@@ -125,6 +118,14 @@ public class LevelController extends Component implements Observer{
             levelD.setValue(Integer.parseInt(level));
             timeD.setValue((int) Math.floor(timeLeft));
             livesD.setValue(pData.lives);
+        }
+        
+        if (gameOver) {
+            if (!AssetPool.getSound("assets/sounds/gameover.ogg").isPlaying()) {
+
+                EventSystem.notify(null,new Event(EventType.EndWindow));
+            }
+            return;
         }
         
         if (levelDone) {
@@ -166,7 +167,7 @@ public class LevelController extends Component implements Observer{
     /**
      * guarda las variables actuales del jugador en el archivo de save.
      */
-    public void saveProgress() {
+    private void saveProgress() {
         Gson gson = new GsonBuilder().setPrettyPrinting()
                 .enableComplexMapKeySerialization()
                 .create();
@@ -179,6 +180,28 @@ public class LevelController extends Component implements Observer{
         } catch(IOException e) {
             ConsoleWindow.addLog("Error al guardar el archivo de save: no se pudo guardar el archivo "+saveFile, 
                     ConsoleWindow.LogCategory.error);
+        }
+    }
+    
+    /**
+     * guarda las variables actuales del jugador en el archivo de save.
+     */
+    private void loadProgress() {
+        // load player data
+        Gson gson = new GsonBuilder().setPrettyPrinting()
+                .enableComplexMapKeySerialization()
+                .create();
+        
+        String inFile = "";
+        try {
+            inFile = new String(Files.readAllBytes(Paths.get(saveFile)));
+        } catch (IOException ex ) {
+            ConsoleWindow.addLog("Error al cargar: No se pudo acceder al archivo: "+saveFile+" ,comprueba que el archivo exista y esta aplicacion tenga permisos de edicion",
+                    ConsoleWindow.LogCategory.error);
+        }
+        
+        if (!inFile.equals("")) {
+            pData = gson.fromJson(inFile, PlayerData.class);
         }
     }
 
@@ -201,19 +224,32 @@ public class LevelController extends Component implements Observer{
                 if (Window.getScene().getInitializer() instanceof MainMenuSceneInitializer) {
                     // do nothing
                     return;
-                }
-                
-                pData.lives--;
-                if (pData.lives <= 0) {
-                    // game over
-                    if (pData.topScore < pData.score) {
-                        pData.topScore = pData.score;
+                } else if (Window.getScene().getInitializer() instanceof LevelSceneInitializer) {
+                    
+                    if (pData.lives - 1 > 0) {
+                        // to save just the lives: reload, update and save
+                        loadProgress();
+                        pData.lives--;
+                        saveProgress();
+                        
+                        EventSystem.notify(null,new Event(EventType.LoadLevel));
+                    } else {
+                        // game over
+                        PlayerData resetData = new PlayerData();
+                        if (pData.topScore < pData.score) {
+                            resetData.topScore = pData.score;
+                        }
+                        pData = resetData;
+                        saveProgress();
+                        
+                        gameOverT.setEnabled(true);
+                        AssetPool.getSound("assets/sounds/gameover.ogg").play();
+                        gameOver = true;
                     }
-                    saveProgress();
-                    // TODO: level logic
-                    ConsoleWindow.addLog("game over",
-                        ConsoleWindow.LogCategory.info);
                 }
+                    
+                
+                
                 
                 return;
             case ScoreUpdate:

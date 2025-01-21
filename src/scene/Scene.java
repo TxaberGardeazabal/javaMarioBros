@@ -144,27 +144,15 @@ public class Scene {
         for (int i = 0; i < gameObjects.size(); i++) {
             GameObject go = gameObjects.get(i);
             if (go.isEnabled()) {
-                // add them back from the disabled state
-                /*if (go.isDirty()) {
-                    this.renderer.add(go);
-                    this.physics.add(go);
-                }*/
                 go.lateUpdate(dt);
-            } else {
-                // remove them if disabled
-                /*if (go.isDirty()) {
-                    this.renderer.destroyGameObject(go);
-                    this.physics.destroyGameObject(go);
-                    // reset flag
-                    go.setIsDirty(false);
-                }*/
-            }
-            /*if (go.isDead()) {
+            } 
+            
+            if (go.isDead()) {
                 gameObjects.remove(i);
                 this.renderer.destroyGameObject(go);
                 this.physics.destroyGameObject(go);
                 i--;
-            }*/
+            }
         }
     }
     

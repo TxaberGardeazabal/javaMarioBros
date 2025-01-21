@@ -10,7 +10,7 @@ package components.gamecomponents;
  */
 public class PlayerData {
     public int coins = 0;
-    public int lives = 3;
+    public int lives = 1;
     public int score = 0;
     public PlayerController.PlayerState playerState = PlayerController.PlayerState.Small;
     public int topScore = 0;

@@ -41,12 +41,15 @@ other:
 // deleting spriteRenderers from the editor doesn't remove them from the renderer (known bug)
 // avoid placing mario on any platform with continous moving/rotating except it has movingplatform component (known bug)
 
-left to do:
+left to do !important:
     make a menu level
     apply pipe and platform changes retroactively to other levels
     scale UI components
     decide to change screen size ratio and UI
-    the level should save and reload when mario dies
+    make mario big or fire at the start of the level
     implement level select
+    add level end text
     bug: key listener sometimes detects the control key while is not pressed
     bug: jumping on an airbone enemy (such as a paratroopa) sometimes trigger multiple jump detects wich messes the score system
+    bug: silence all sounds when changing levels and menus
+    bug: disabled objects enabled at runtime are not rendered for some reason
