@@ -157,7 +157,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 Window.setRuntimePlaying(false);
                 Window.getImGuiLayer().getGameViewWindow().setIsPlaying(false);
                 
-                AssetPool.stopAllSound();
+                AssetPool.stopAllSounds();
                 
                 Window.changeScene(new LevelEditorSceneInitializer(), Window.getScene().getLevelFilepath());
                 break;
@@ -170,6 +170,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 Window.getScene().save();
                 break;
             case EndWindow:
+                AssetPool.stopAllSounds();
                 endImGui();
                 break;
         }

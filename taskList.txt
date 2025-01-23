@@ -43,13 +43,8 @@ other:
 
 left to do !important:
     make a menu level
-    apply pipe and platform changes retroactively to other levels
     scale UI components
     decide to change screen size ratio and UI
     make mario big or fire at the start of the level
-    implement level select
-    add level end text
-    bug: key listener sometimes detects the control key while is not pressed
     bug: jumping on an airbone enemy (such as a paratroopa) sometimes trigger multiple jump detects wich messes the score system
-    bug: silence all sounds when changing levels and menus
-    bug: disabled objects enabled at runtime are not rendered for some reason
+    bug: paratroopas staying in ther track after being hit by a turtle shell

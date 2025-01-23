@@ -11,6 +11,7 @@ import gameEngine.Window;
 import observers.events.Event;
 import static observers.events.EventType.LoadLevel;
 import static observers.events.EventType.SaveLevel;
+import util.AssetPool;
 import util.Settings;
 
 /**
@@ -76,6 +77,7 @@ public class LevelSceneInitializer extends SceneInitializer {
                 Window.getScene().save();
                 break;
             case EndWindow:
+                AssetPool.stopAllSounds();
                 Window.changeScene(new MainMenuSceneInitializer(), Settings.mainMenuLevel);
         }
     }

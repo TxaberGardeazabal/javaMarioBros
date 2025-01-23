@@ -162,7 +162,7 @@ public class AssetPool {
         return AssetPool.sounds.values();
     }
     
-    public static void stopAllSound() {
+    public static void stopAllSounds() {
         Collection<Sound> c = sounds.values();
         for (Sound s : c) {
             s.stop();

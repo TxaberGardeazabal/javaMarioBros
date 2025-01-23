@@ -708,6 +708,7 @@ public class AssetWindow {
             
             if (ImGui.beginTabItem("assembled structures")) {
                 PrefabSave pre = new PrefabSave("");
+                int uid = 0;
                 
                 File StructureDir = new File("assets/prefabs/structures");
                 File[] blocks = StructureDir.listFiles();
@@ -723,6 +724,15 @@ public class AssetWindow {
                     }
                     
                 }
+                
+                pre.setFilepath("assets/prefabs/UI/HUD.prefab");
+                if (ImGui.button(Settings.getRelativePath("assets/prefabs/UI/HUD.prefab"))) {
+                    GameObject object = pre.load();
+                    if (object != null) {
+                        mc.pickUpObject(object);
+                    }
+                }
+                
                 ImGui.endTabItem();
             }
             

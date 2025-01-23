@@ -3702,7 +3702,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -3800,7 +3800,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -3898,7 +3898,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -4331,7 +4331,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -4429,7 +4429,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -4527,7 +4527,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -5394,7 +5394,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -5492,7 +5492,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -5590,7 +5590,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -5688,7 +5688,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -5786,7 +5786,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -12025,7 +12025,7 @@
         "type": "gameEngine.Transform",
         "properties": {
           "position": {
-            "x": 0.125,
+            "x": 0.12500001,
             "y": 1.3750005
           },
           "rotation": 0.0,
@@ -12047,7 +12047,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.625,
             "y": 0.375
@@ -12077,502 +12077,6 @@
     "isDead": false,
     "childGOs": [
       {
-        "name": "pipe",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 0.625,
-                "y": 1.3750005
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.25
-              },
-              "zIndex": 3
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 16.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                  "height": 80,
-                  "width": 128
-                },
-                "texCoords": [
-                  {
-                    "x": 0.875,
-                    "y": 0.4
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.2
-                  },
-                  {
-                    "x": 0.75,
-                    "y": 0.2
-                  },
-                  {
-                    "x": 0.75,
-                    "y": 0.4
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
-        "name": "pipe",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 0.875,
-                "y": 1.3750005
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.25
-              },
-              "zIndex": 3
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 16.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                  "height": 80,
-                  "width": 128
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 0.8
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.6
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.6
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.8
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
-        "name": "pipe",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 0.625,
-                "y": 1.625
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.25
-              },
-              "zIndex": 3
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 16.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                  "height": 80,
-                  "width": 128
-                },
-                "texCoords": [
-                  {
-                    "x": 0.875,
-                    "y": 0.6
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.4
-                  },
-                  {
-                    "x": 0.75,
-                    "y": 0.4
-                  },
-                  {
-                    "x": 0.75,
-                    "y": 0.6
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
-        "name": "pipe",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 0.875,
-                "y": 1.625
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.25
-              },
-              "zIndex": 3
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 16.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                  "height": 80,
-                  "width": 128
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 0.8
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.6
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.6
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.8
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
-        "name": "pipe",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 0.625,
-                "y": 1.8749988
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.25
-              },
-              "zIndex": 3
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 16.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                  "height": 80,
-                  "width": 128
-                },
-                "texCoords": [
-                  {
-                    "x": 0.875,
-                    "y": 0.8
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.6
-                  },
-                  {
-                    "x": 0.75,
-                    "y": 0.6
-                  },
-                  {
-                    "x": 0.75,
-                    "y": 0.8
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
-        "name": "pipe",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 0.875,
-                "y": 1.8749988
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.25
-              },
-              "zIndex": 3
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 16.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                  "height": 80,
-                  "width": 128
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 0.8
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.6
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.6
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.8
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
-        "name": "pipe",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 0.625,
-                "y": 2.124998
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.25
-              },
-              "zIndex": 3
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 16.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                  "height": 80,
-                  "width": 128
-                },
-                "texCoords": [
-                  {
-                    "x": 0.875,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.8
-                  },
-                  {
-                    "x": 0.75,
-                    "y": 0.8
-                  },
-                  {
-                    "x": 0.75,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
-        "name": "pipe",
-        "enabled": true,
-        "components": [
-          {
-            "type": "gameEngine.Transform",
-            "properties": {
-              "position": {
-                "x": 0.875,
-                "y": 2.124998
-              },
-              "rotation": 0.0,
-              "scale": {
-                "x": 0.25,
-                "y": 0.25
-              },
-              "zIndex": 3
-            }
-          },
-          {
-            "type": "components.SpriteRenderer",
-            "properties": {
-              "color": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0,
-                "w": 1.0
-              },
-              "sprite": {
-                "Width": 16.0,
-                "height": 16.0,
-                "texture": {
-                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
-                  "height": 80,
-                  "width": 128
-                },
-                "texCoords": [
-                  {
-                    "x": 1.0,
-                    "y": 1.0
-                  },
-                  {
-                    "x": 1.0,
-                    "y": 0.8
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 0.8
-                  },
-                  {
-                    "x": 0.875,
-                    "y": 1.0
-                  }
-                ]
-              }
-            }
-          }
-        ],
-        "doSerialization": true,
-        "isDead": false,
-        "childGOs": []
-      },
-      {
         "name": "warpPipeLeft",
         "enabled": true,
         "components": [
@@ -12580,10 +12084,10 @@
             "type": "gameEngine.Transform",
             "properties": {
               "position": {
-                "x": 0.250001,
-                "y": 1.4999992
+                "x": 0.25,
+                "y": 1.5
               },
-              "rotation": 0.0,
+              "rotation": 5.9455633E-6,
               "scale": {
                 "x": 0.5,
                 "y": 0.5
@@ -12654,7 +12158,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -12673,6 +12177,588 @@
           {
             "type": "components.propertieComponents.Ground",
             "properties": {}
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "sensorAnchor",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 0.24999523,
+                    "y": 1.5
+                  },
+                  "rotation": 179.99944,
+                  "scale": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "zIndex": -2
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": [
+              {
+                "name": "sensor",
+                "enabled": true,
+                "components": [
+                  {
+                    "type": "gameEngine.Transform",
+                    "properties": {
+                      "position": {
+                        "x": -0.05000186,
+                        "y": 1.5000029
+                      },
+                      "rotation": 179.99944,
+                      "scale": {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      "zIndex": -1
+                    }
+                  },
+                  {
+                    "type": "physics2D.components.Rigidbody2D",
+                    "properties": {
+                      "angularDamping": 0.8,
+                      "linearDamping": 0.9,
+                      "mass": 0.0,
+                      "bodyType": "Static",
+                      "friction": 0.1,
+                      "gravityScale": 1.0,
+                      "isSensor": true,
+                      "fixedRotation": false,
+                      "continuousCollision": true
+                    }
+                  },
+                  {
+                    "type": "physics2D.components.Box2DCollider",
+                    "properties": {
+                      "halfSize": {
+                        "x": 0.08,
+                        "y": 0.4
+                      },
+                      "origin": {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      "showBoundaries": true,
+                      "offset": {
+                        "x": 0.0,
+                        "y": 0.0
+                      }
+                    }
+                  },
+                  {
+                    "type": "components.gamecomponents.PlayerSensor",
+                    "properties": {}
+                  }
+                ],
+                "doSerialization": true,
+                "isDead": false,
+                "childGOs": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "pipe",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 0.6250001,
+                "y": 1.3750006
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 3
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                  "height": 80,
+                  "width": 128
+                },
+                "texCoords": [
+                  {
+                    "x": 0.875,
+                    "y": 0.4
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.2
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.2
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.4
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "pipe",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 0.8749999,
+                "y": 1.3750006
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 3
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                  "height": 80,
+                  "width": 128
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 0.8
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.8
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "pipe",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 0.6249999,
+                "y": 1.6250001
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 3
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                  "height": 80,
+                  "width": 128
+                },
+                "texCoords": [
+                  {
+                    "x": 0.875,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.4
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.4
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.6
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "pipe",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 0.8749999,
+                "y": 1.6250001
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 3
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                  "height": 80,
+                  "width": 128
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 0.8
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.8
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "pipe",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 0.6249999,
+                "y": 1.8749989
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 3
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                  "height": 80,
+                  "width": 128
+                },
+                "texCoords": [
+                  {
+                    "x": 0.875,
+                    "y": 0.8
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.8
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "pipe",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 0.8749999,
+                "y": 1.8749989
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 3
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                  "height": 80,
+                  "width": 128
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 0.8
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.6
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.8
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "pipe",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 0.6249999,
+                "y": 2.1249976
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 3
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                  "height": 80,
+                  "width": 128
+                },
+                "texCoords": [
+                  {
+                    "x": 0.875,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.8
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.8
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": []
+      },
+      {
+        "name": "pipe",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 0.8749999,
+                "y": 2.1249976
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.25,
+                "y": 0.25
+              },
+              "zIndex": 3
+            }
+          },
+          {
+            "type": "components.SpriteRenderer",
+            "properties": {
+              "color": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0,
+                "w": 1.0
+              },
+              "sprite": {
+                "Width": 16.0,
+                "height": 16.0,
+                "texture": {
+                  "filepath": "assets/images/spriteSheets/blocksAndScenery/pipesAndSceneryOverworld.png",
+                  "height": 80,
+                  "width": 128
+                },
+                "texCoords": [
+                  {
+                    "x": 1.0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 1.0,
+                    "y": 0.8
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 0.8
+                  },
+                  {
+                    "x": 0.875,
+                    "y": 1.0
+                  }
+                ]
+              }
+            }
           }
         ],
         "doSerialization": true,
@@ -12871,7 +12957,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": -0.065
@@ -12972,7 +13058,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -13073,7 +13159,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -13174,7 +13260,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -13275,7 +13361,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -13376,7 +13462,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -13477,7 +13563,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -13578,7 +13664,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -13679,7 +13765,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -13780,7 +13866,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -13881,7 +13967,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -13981,7 +14067,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -14040,7 +14126,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.3,
                 "y": 0.0
@@ -14544,7 +14630,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -14642,7 +14728,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -14740,7 +14826,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -14886,7 +14972,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -14984,7 +15070,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -15082,7 +15168,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -15182,7 +15268,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -15280,7 +15366,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -15548,7 +15634,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.0,
                 "y": 0.0
@@ -15739,7 +15825,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -16023,7 +16109,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -16249,7 +16335,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -16475,7 +16561,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -16701,7 +16787,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -16985,7 +17071,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -17211,7 +17297,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -17437,7 +17523,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -17663,7 +17749,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -17885,7 +17971,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -18169,7 +18255,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -18457,7 +18543,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -18683,7 +18769,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -18909,7 +18995,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -19135,7 +19221,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -19361,7 +19447,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -19496,7 +19582,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -19718,7 +19804,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -19940,7 +20026,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -20162,7 +20248,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -20384,7 +20470,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -20606,7 +20692,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -20828,7 +20914,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -21050,7 +21136,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -21272,7 +21358,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -21379,7 +21465,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -21486,7 +21572,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -21593,7 +21679,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -21656,19 +21742,19 @@
             },
             "texCoords": [
               {
-                "x": 0.22222222,
+                "x": 0.5555556,
                 "y": 1.0
               },
               {
-                "x": 0.22222222,
+                "x": 0.5555556,
                 "y": 0.75
               },
               {
-                "x": 0.11111111,
+                "x": 0.44444445,
                 "y": 0.75
               },
               {
-                "x": 0.11111111,
+                "x": 0.44444445,
                 "y": 1.0
               }
             ]
@@ -21839,7 +21925,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -21893,19 +21979,19 @@
             },
             "texCoords": [
               {
-                "x": 0.22222222,
+                "x": 0.5555556,
                 "y": 0.75
               },
               {
-                "x": 0.22222222,
+                "x": 0.5555556,
                 "y": 0.5
               },
               {
-                "x": 0.11111111,
+                "x": 0.44444445,
                 "y": 0.5
               },
               {
-                "x": 0.11111111,
+                "x": 0.44444445,
                 "y": 0.75
               }
             ]
@@ -22076,7 +22162,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -22130,19 +22216,19 @@
             },
             "texCoords": [
               {
-                "x": 0.22222222,
+                "x": 0.5555556,
                 "y": 0.5
               },
               {
-                "x": 0.22222222,
+                "x": 0.5555556,
                 "y": 0.25
               },
               {
-                "x": 0.11111111,
+                "x": 0.44444445,
                 "y": 0.25
               },
               {
-                "x": 0.11111111,
+                "x": 0.44444445,
                 "y": 0.5
               }
             ]
@@ -22313,7 +22399,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -22367,19 +22453,19 @@
             },
             "texCoords": [
               {
-                "x": 0.22222222,
+                "x": 0.5555556,
                 "y": 0.25
               },
               {
-                "x": 0.22222222,
+                "x": 0.5555556,
                 "y": 0.0
               },
               {
-                "x": 0.11111111,
+                "x": 0.44444445,
                 "y": 0.0
               },
               {
-                "x": 0.11111111,
+                "x": 0.44444445,
                 "y": 0.25
               }
             ]
@@ -22550,7 +22636,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -22604,19 +22690,19 @@
             },
             "texCoords": [
               {
-                "x": 0.6666667,
+                "x": 1.0,
                 "y": 1.0
               },
               {
-                "x": 0.6666667,
+                "x": 1.0,
                 "y": 0.75
               },
               {
-                "x": 0.5555556,
+                "x": 0.8888889,
                 "y": 0.75
               },
               {
-                "x": 0.5555556,
+                "x": 0.8888889,
                 "y": 1.0
               }
             ]
@@ -22787,7 +22873,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -22850,19 +22936,19 @@
             },
             "texCoords": [
               {
-                "x": 0.6666667,
+                "x": 1.0,
                 "y": 0.75
               },
               {
-                "x": 0.6666667,
+                "x": 1.0,
                 "y": 0.5
               },
               {
-                "x": 0.5555556,
+                "x": 0.8888889,
                 "y": 0.5
               },
               {
-                "x": 0.5555556,
+                "x": 0.8888889,
                 "y": 0.75
               }
             ]
@@ -23033,7 +23119,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -23096,19 +23182,19 @@
             },
             "texCoords": [
               {
-                "x": 0.6666667,
+                "x": 1.0,
                 "y": 0.5
               },
               {
-                "x": 0.6666667,
+                "x": 1.0,
                 "y": 0.25
               },
               {
-                "x": 0.5555556,
+                "x": 0.8888889,
                 "y": 0.25
               },
               {
-                "x": 0.5555556,
+                "x": 0.8888889,
                 "y": 0.5
               }
             ]
@@ -23279,7 +23365,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -23342,19 +23428,19 @@
             },
             "texCoords": [
               {
-                "x": 0.6666667,
+                "x": 1.0,
                 "y": 0.25
               },
               {
-                "x": 0.6666667,
+                "x": 1.0,
                 "y": 0.0
               },
               {
-                "x": 0.5555556,
+                "x": 0.8888889,
                 "y": 0.0
               },
               {
-                "x": 0.5555556,
+                "x": 0.8888889,
                 "y": 0.25
               }
             ]
@@ -23525,7 +23611,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.02
@@ -23740,7 +23826,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.03
@@ -23946,7 +24032,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.03
@@ -24152,7 +24238,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.03
@@ -24358,7 +24444,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.03
@@ -24412,19 +24498,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5,
+                "x": 1.0,
                 "y": 1.0
               },
               {
-                "x": 0.5,
+                "x": 1.0,
                 "y": 0.0
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.0
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 1.0
               }
             ]
@@ -24767,7 +24853,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.07,
             "y": 0.0
@@ -24992,7 +25078,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -25046,19 +25132,19 @@
             },
             "texCoords": [
               {
-                "x": 0.33333334,
+                "x": 0.6666667,
                 "y": 1.0
               },
               {
+                "x": 0.6666667,
+                "y": 0.6666667
+              },
+              {
                 "x": 0.33333334,
                 "y": 0.6666667
               },
               {
-                "x": 0.0,
-                "y": 0.6666667
-              },
-              {
-                "x": 0.0,
+                "x": 0.33333334,
                 "y": 1.0
               }
             ]
@@ -25212,7 +25298,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.01
@@ -25276,19 +25362,19 @@
             },
             "texCoords": [
               {
-                "x": 0.33333334,
+                "x": 0.6666667,
                 "y": 1.0
               },
               {
+                "x": 0.6666667,
+                "y": 0.6666667
+              },
+              {
                 "x": 0.33333334,
                 "y": 0.6666667
               },
               {
-                "x": 0.0,
-                "y": 0.6666667
-              },
-              {
-                "x": 0.0,
+                "x": 0.33333334,
                 "y": 1.0
               }
             ]
@@ -25442,7 +25528,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.01
@@ -25506,19 +25592,19 @@
             },
             "texCoords": [
               {
-                "x": 0.33333334,
+                "x": 0.6666667,
                 "y": 1.0
               },
               {
+                "x": 0.6666667,
+                "y": 0.6666667
+              },
+              {
                 "x": 0.33333334,
                 "y": 0.6666667
               },
               {
-                "x": 0.0,
-                "y": 0.6666667
-              },
-              {
-                "x": 0.0,
+                "x": 0.33333334,
                 "y": 1.0
               }
             ]
@@ -25672,7 +25758,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.01
@@ -25736,19 +25822,19 @@
             },
             "texCoords": [
               {
-                "x": 0.33333334,
+                "x": 0.6666667,
                 "y": 1.0
               },
               {
+                "x": 0.6666667,
+                "y": 0.6666667
+              },
+              {
                 "x": 0.33333334,
                 "y": 0.6666667
               },
               {
-                "x": 0.0,
-                "y": 0.6666667
-              },
-              {
-                "x": 0.0,
+                "x": 0.33333334,
                 "y": 1.0
               }
             ]
@@ -25902,7 +25988,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.01
@@ -25966,19 +26052,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 1.0
               },
               {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
                 "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 1.0
               }
             ]
@@ -26132,7 +26218,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.05
@@ -27437,7 +27523,7 @@
       {
         "type": "physics2D.components.PillboxCollider",
         "properties": {
-          "showBoundaries": false,
+          "showBoundaries": true,
           "width": 0.39,
           "height": 0.3,
           "offset": {
@@ -27507,19 +27593,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 0.75
               },
               {
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
                 "x": 0.25,
                 "y": 0.5
               },
               {
-                "x": 0.0,
-                "y": 0.5
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 0.75
               }
             ]
@@ -27628,7 +27714,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.01
@@ -27695,19 +27781,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 0.75
               },
               {
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
                 "x": 0.25,
                 "y": 0.5
               },
               {
-                "x": 0.0,
-                "y": 0.5
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 0.75
               }
             ]
@@ -27816,7 +27902,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.01
@@ -27883,19 +27969,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 0.75
               },
               {
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
                 "x": 0.25,
                 "y": 0.5
               },
               {
-                "x": 0.0,
-                "y": 0.5
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 0.75
               }
             ]
@@ -28004,7 +28090,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.01
@@ -28071,19 +28157,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 1.0
               },
               {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
                 "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 1.0
               }
             ]
@@ -28237,7 +28323,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.05
@@ -28304,19 +28390,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 1.0
               },
               {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
                 "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 1.0
               }
             ]
@@ -28470,7 +28556,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.05
@@ -28537,19 +28623,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 1.0
               },
               {
+                "x": 0.5,
+                "y": 0.75
+              },
+              {
                 "x": 0.25,
                 "y": 0.75
               },
               {
-                "x": 0.0,
-                "y": 0.75
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 1.0
               }
             ]
@@ -28703,7 +28789,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.05
@@ -28770,19 +28856,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 1.0,
                 "y": 1.0
               },
               {
+                "x": 1.0,
+                "y": 0.75
+              },
+              {
                 "x": 0.75,
                 "y": 0.75
               },
               {
-                "x": 0.5,
-                "y": 0.75
-              },
-              {
-                "x": 0.5,
+                "x": 0.75,
                 "y": 1.0
               }
             ]
@@ -28891,7 +28977,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": -0.05
@@ -28967,19 +29053,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.5,
                 "y": 1.0
               },
               {
+                "x": 0.5,
+                "y": 0.0
+              },
+              {
                 "x": 0.25,
                 "y": 0.0
               },
               {
-                "x": 0.0,
-                "y": 0.0
-              },
-              {
-                "x": 0.0,
+                "x": 0.25,
                 "y": 1.0
               }
             ]
@@ -29171,7 +29257,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.04,
             "y": -0.03
@@ -29405,7 +29491,7 @@
         "type": "physics2D.components.CircleCollider",
         "properties": {
           "radius": 0.08,
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -29545,7 +29631,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -29604,7 +29690,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.3,
                 "y": 0.0
@@ -30085,7 +30171,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -30144,7 +30230,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.3,
                 "y": 0.0
@@ -30625,7 +30711,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -30684,7 +30770,7 @@
                 "x": 0.0,
                 "y": 0.0
               },
-              "showBoundaries": false,
+              "showBoundaries": true,
               "offset": {
                 "x": 0.3,
                 "y": 0.0
@@ -31158,7 +31244,7 @@
         "type": "physics2D.components.CircleCollider",
         "properties": {
           "radius": 0.08,
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -31290,7 +31376,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -31381,7 +31467,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -31483,7 +31569,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -31574,7 +31660,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -31676,7 +31762,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -31767,7 +31853,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -31869,7 +31955,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -31960,7 +32046,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -32024,7 +32110,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.0,
             "y": 0.0
@@ -32180,7 +32266,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -32244,7 +32330,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.03,
             "y": 0.0
@@ -32462,7 +32548,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -32526,7 +32612,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.125,
             "y": 0.0
@@ -32744,7 +32830,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -32808,7 +32894,7 @@
             "x": 0.0,
             "y": 0.0
           },
-          "showBoundaries": false,
+          "showBoundaries": true,
           "offset": {
             "x": 0.25,
             "y": 0.0
@@ -33088,7 +33174,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0

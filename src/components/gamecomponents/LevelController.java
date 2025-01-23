@@ -247,7 +247,6 @@ public class LevelController extends Component implements Observer{
                         gameOver = true;
                     }
                 }
-gameOverT.setEnabled(true);
                 return;
             case ScoreUpdate:
                 /*ConsoleWindow.addLog("score + "+event.getPayload("points"),

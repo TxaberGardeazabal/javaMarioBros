@@ -33,7 +33,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 0.175001,
+              "x": 0.1750009,
               "y": 2.625
             },
             "rotation": 0.0,
@@ -6118,7 +6118,7 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 0.175001,
+                  "x": 0.1750009,
                   "y": 2.625
                 },
                 "rotation": 0.0,
@@ -8202,7 +8202,7 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 0.37500128,
+                  "x": 0.3750012,
                   "y": 2.625
                 },
                 "rotation": 0.0,
@@ -10286,7 +10286,7 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 0.57500136,
+                  "x": 0.57500124,
                   "y": 2.625
                 },
                 "rotation": 0.0,
@@ -38321,7 +38321,7 @@
               "type": "gameEngine.Transform",
               "properties": {
                 "position": {
-                  "x": 2.575001,
+                  "x": 2.5750008,
                   "y": 2.625
                 },
                 "rotation": 0.0,
@@ -40593,7 +40593,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 2.1500003,
+              "x": 2.1500006,
               "y": 2.625
             },
             "rotation": 0.0,
@@ -40655,7 +40655,7 @@
           "type": "gameEngine.Transform",
           "properties": {
             "position": {
-              "x": 1.9749997,
+              "x": 1.9749994,
               "y": 2.625
             },
             "rotation": 0.0,
@@ -40685,19 +40685,19 @@
               },
               "texCoords": [
                 {
-                  "x": 1.0,
+                  "x": 0.75,
                   "y": 1.0
                 },
                 {
-                  "x": 1.0,
-                  "y": 0.0
-                },
-                {
                   "x": 0.75,
                   "y": 0.0
                 },
                 {
-                  "x": 0.75,
+                  "x": 0.5,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.5,
                   "y": 1.0
                 }
               ]
@@ -45052,7 +45052,7 @@
               "properties": {
                 "position": {
                   "x": 5.800012,
-                  "y": 0.124999054
+                  "y": 0.12499905
                 },
                 "rotation": 0.0,
                 "scale": {
@@ -47138,7 +47138,7 @@
           "properties": {
             "position": {
               "x": 5.200003,
-              "y": 0.12499995
+              "y": 0.125
             },
             "rotation": 0.0,
             "scale": {
@@ -47234,6 +47234,68 @@
                 },
                 {
                   "x": 0.25,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.0,
+                  "y": 1.0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "doSerialization": true,
+      "isDead": false,
+      "childGOs": []
+    },
+    {
+      "name": "gameOverText",
+      "enabled": false,
+      "components": [
+        {
+          "type": "gameEngine.Transform",
+          "properties": {
+            "position": {
+              "x": 3.0000005,
+              "y": 1.7500001
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 1.6775148,
+              "y": 0.16568047
+            },
+            "zIndex": 20
+          }
+        },
+        {
+          "type": "components.SpriteRenderer",
+          "properties": {
+            "color": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0,
+              "w": 1.0
+            },
+            "sprite": {
+              "Width": 567.0,
+              "height": 56.0,
+              "texture": {
+                "filepath": "assets/images/text/game_over.png",
+                "height": 56,
+                "width": 567
+              },
+              "texCoords": [
+                {
+                  "x": 1.0,
+                  "y": 1.0
+                },
+                {
+                  "x": 1.0,
                   "y": 0.0
                 },
                 {

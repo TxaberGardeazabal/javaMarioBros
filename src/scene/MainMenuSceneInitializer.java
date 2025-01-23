@@ -5,9 +5,6 @@
 package scene;
 
 import components.GameCamera;
-import components.SpriteRenderer;
-import components.SpriteSheet;
-import components.StateMachine;
 import components.gamecomponents.HoleLogic;
 import editor.ConsoleWindow;
 import gameEngine.GameObject;
@@ -80,10 +77,12 @@ public class MainMenuSceneInitializer extends SceneInitializer{
     public void onNotify(GameObject go, Event event) {
         switch(event.type) {
             case PlayLevel:
+                AssetPool.stopAllSounds();
                 Window.changeScene(new LevelSceneInitializer(), event.getPayload("filepath"));
                 break;
             case OpenInEditor:
                 Window.setRuntimePlaying(false);
+                AssetPool.stopAllSounds();
                 Window.changeScene(new LevelEditorSceneInitializer(), event.getPayload("filepath"));
                 break;
             case Exit:

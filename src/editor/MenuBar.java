@@ -25,6 +25,7 @@ import physics2D.components.PillboxCollider;
 import scene.LevelEditorSceneInitializer;
 import scene.LevelSceneInitializer;
 import scene.MainMenuSceneInitializer;
+import util.AssetPool;
 import util.Settings;
 
 /**
@@ -215,6 +216,7 @@ public class MenuBar {
                     if (Settings.isValidFile(fileChooser.getSelectedFile().getAbsolutePath(),"txt")) {
                         int res2 = JOptionPane.showConfirmDialog(null, "Are you sure you want to overwrite this file?", "New level", JOptionPane.OK_CANCEL_OPTION);
                         if (res2 == 0) {
+                            AssetPool.stopAllSounds();
                             Window.changeScene(new LevelEditorSceneInitializer(), file.getAbsolutePath());
                         }
                     } else {
@@ -242,6 +244,7 @@ public class MenuBar {
                         save();
                     }
 
+                    AssetPool.stopAllSounds();
                     Window.changeScene(new LevelEditorSceneInitializer(), file.getAbsolutePath());
                 }
 
@@ -318,6 +321,7 @@ public class MenuBar {
     }
     
     private void reload() {
+        AssetPool.stopAllSounds();
         EventSystem.notify(null,new Event(EventType.LoadLevel));
     }
     
@@ -328,6 +332,7 @@ public class MenuBar {
             File file = new File(levelFilepath);
             file.delete();
             File file2 = new File(Settings.mainMenuLevel);
+            AssetPool.stopAllSounds();
             Window.changeScene(new LevelSceneInitializer(), file2.getAbsolutePath());
         }
     }
