@@ -21,6 +21,7 @@ import physics2D.components.Rigidbody2D;
  */
 public class Flower extends Component{
     private transient Rigidbody2D rb;
+    protected transient boolean hitPlayer = false;
     
     @Override
     public void start() {
@@ -31,13 +32,15 @@ public class Flower extends Component{
     @Override
     public void beginCollision(GameObject go, Contact contact, Vector2f normal) {
         PlayerController playerController = go.getComponent(PlayerController.class);
-        if (playerController != null) {
+        if (playerController != null && !hitPlayer) {
+            playerController.powerUp();
             playerController.powerUp();
             
             Map payload = new HashMap<>();
             payload.put("points", "1000");
             EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));
 
+            hitPlayer = true;
             this.gameObject.destroy();
         }
     }

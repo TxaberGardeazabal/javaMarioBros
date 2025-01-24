@@ -45,6 +45,5 @@ left to do !important:
     make a menu level
     scale UI components
     decide to change screen size ratio and UI
-    make mario big or fire at the start of the level
     bug: jumping on an airbone enemy (such as a paratroopa) sometimes trigger multiple jump detects wich messes the score system
     bug: paratroopas staying in ther track after being hit by a turtle shell

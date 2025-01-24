@@ -8,6 +8,7 @@ import UI.Digitalizer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import components.Component;
+import components.gamecomponents.PlayerController.PlayerState;
 import editor.ConsoleWindow;
 import gameEngine.GameObject;
 import gameEngine.Window;
@@ -47,6 +48,7 @@ public class LevelController extends Component implements Observer{
     public float time = 0;
     private transient float timeLeft = time;
     private transient float timeBeforeLevelSwitch = 5;
+    private transient boolean powerUpNextFrame = false;
     private transient boolean levelDone = false;
     private transient boolean gameOver = false;
     
@@ -73,6 +75,10 @@ public class LevelController extends Component implements Observer{
                     ConsoleWindow.LogCategory.warning);
         } else {
             player = tmp.getComponent(PlayerController.class);
+            if (pData.playerState != PlayerState.Small) {
+                powerUpNextFrame = true;
+            }
+            
         }
         
         hud = Window.getScene().getGameObjectByName("HUD");
@@ -108,6 +114,22 @@ public class LevelController extends Component implements Observer{
         }*/
         if (player == null) {
             return;
+        }
+        
+        // makes mario big at the start of the level
+        if (powerUpNextFrame) {
+            switch (pData.playerState) {
+                case Small:
+                    break;
+                case Big:
+                    player.powerUp();
+                    break;
+                case Fire:
+                    player.powerUp();
+                    player.powerUp();
+                    break;
+            }
+            powerUpNextFrame = false;
         }
         
         if (hud != null) {

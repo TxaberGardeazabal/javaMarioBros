@@ -448,6 +448,7 @@ public class PlayerController extends PhysicsController {
                 
                 break;
             case Fire:
+                AssetPool.getSound("assets/sounds/powerup.ogg").play();
                 break;
         } 
     }
