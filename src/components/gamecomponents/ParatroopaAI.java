@@ -48,6 +48,12 @@ public class ParatroopaAI extends Enemy {
     
     @Override
     public void die(boolean hitRight) {
+        MovingPlatform mp = this.gameObject.getComponent(MovingPlatform.class);
+        if (mp != null) {
+            mp.setLoops(false);
+            mp.setTime(mp.getDuration());
+        }
+        
         Map payload = new HashMap<>();
         payload.put("points", "200");
         EventSystem.notify(this.gameObject, new Event(EventType.ScoreUpdate, payload));

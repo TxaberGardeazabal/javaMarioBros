@@ -60,9 +60,11 @@ public class BreakableBrick extends Block {
             DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1,0,0));
         }
 
-        if ((info.hit && info.hitObj != null && info.hitObj.getComponent(Enemy.class) != null)
-                || (info2.hit && info2.hitObj != null && info2.hitObj.getComponent(Enemy.class) != null)) {
+        if (info.hit && info.hitObj != null && info.hitObj.getComponent(Enemy.class) != null) {
             info.hitObj.getComponent(Enemy.class).die();
+        }
+        if (info2.hit && info2.hitObj != null && info2.hitObj.getComponent(Enemy.class) != null) {
+            info2.hitObj.getComponent(Enemy.class).die();
         }
     }
     

@@ -27,9 +27,9 @@ player transitions jump function doesn't work correctly
 seting rotation via imgui causes it to become -inf, also causes bugs with box2d
 minimize the use of javaswing to prevent incompatibility crashes
 - tweak check on ground to make objects stay at the same distance from the ground (how?)
-+ jumping on an airbone enemy (such as a paratroopa) sometimes trigger multiple jump detects wich messes the score system
-+ change screen size
+- change screen size
 changing levels in editor messes up imgui inputs
+++ sync hud movement with camera movement
 
 other:
 // make pillbox changes ep #58
@@ -40,10 +40,3 @@ other:
 // picking shader doesn't prevent extra placement of gameobjects if the object color is too light (known bug)
 // deleting spriteRenderers from the editor doesn't remove them from the renderer (known bug)
 // avoid placing mario on any platform with continous moving/rotating except it has movingplatform component (known bug)
-
-left to do !important:
-    make a menu level
-    scale UI components
-    decide to change screen size ratio and UI
-    bug: jumping on an airbone enemy (such as a paratroopa) sometimes trigger multiple jump detects wich messes the score system
-    bug: paratroopas staying in ther track after being hit by a turtle shell

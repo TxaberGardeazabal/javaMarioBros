@@ -45,7 +45,7 @@ public class RaycastInfo implements RayCastCallback{
             if (tmp.getComponent(Rigidbody2D.class).isSensor()) {
                 return 1;
             }
-        } 
+        }
         catch (NullPointerException e) {}
         finally {
             this.fixture = fxtr;

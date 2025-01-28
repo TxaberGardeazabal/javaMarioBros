@@ -81,6 +81,7 @@ public class KoopaAI extends Enemy {
                 fallsOnEdges = true;
                 walkSpeed *= 3.0f;
                 this.stateMachine.trigger("squash");
+                AssetPool.getSound("assets/sounds/kick.ogg").play();
                 stopAllForces();
             } else {
                 if (isShellMoving) {

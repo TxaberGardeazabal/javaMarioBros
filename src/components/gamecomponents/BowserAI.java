@@ -4,15 +4,19 @@
  */
 package components.gamecomponents;
 
+import components.Component;
 import components.TransitionMachine;
 import gameEngine.GameObject;
 import gameEngine.PrefabSave;
 import gameEngine.Window;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import observers.EventSystem;
 import observers.events.Event;
 import observers.events.EventType;
+import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import util.AssetPool;
 import util.JMath;
@@ -24,6 +28,8 @@ import util.Settings;
  */
 public class BowserAI extends Enemy {
     
+    private boolean active = true;
+    
     private float timeToSwap = 4;
     private transient float swapTime = 0;
     private float timeToBreathe = 6;
@@ -33,8 +39,10 @@ public class BowserAI extends Enemy {
     private float health = 10;
     private transient boolean jumpLastFrame = false;
     
-    private boolean active = true;
+    // fire jet logic
     private Vector2f frontOffset = new Vector2f(-0.375f,0.125f);
+    private int maxFirejets = 2;
+    private ArrayList<GameObject> fireObjects = new ArrayList();
     
     @Override
     public void start() {
@@ -122,10 +130,18 @@ public class BowserAI extends Enemy {
         GameObject fireball = firePre.load();
         
         if (fireball != null) {
+            if (fireObjects.size() == maxFirejets) {
+                // remove the oldest one
+                fireObjects.get(0).destroy();
+                fireObjects.remove(0);
+            }
+            fireObjects.add(fireball);
+            
             float diff = JMath.getRandom(-0.45f, 0.45f);
             fireball.transform.setPosition(new Vector2f(this.gameObject.transform.position)
                     .add(frontOffset)
                     .add(0,diff));
+            
 
             TransitionMachine tm = fireball.getComponent(TransitionMachine.class);
             if (tm != null) {
@@ -139,5 +155,33 @@ public class BowserAI extends Enemy {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+    
+    @Override
+    public void preSolve(GameObject go, Contact contact, Vector2f normal) {
+        if (isDead) {
+            return;
+        }
+        
+        List<Component> comps = go.getAllComponents();
+        for (Component component : comps) {
+            if (component instanceof PlayerController) {
+                PlayerController playerController = (PlayerController)component;
+                if (!playerController.isDead()) {
+                    if (!playerController.isInvincible()){
+                        playerController.hurt();
+                    } else if (playerController.isStarInvincible()) {
+                        die(normal.x < 0);
+                    }
+                    contact.setEnabled(false);
+                }
+                
+            } else if (component instanceof Fireball) {
+                Fireball f = (Fireball) component;
+                f.delete();
+                fireballHit(normal);
+            }
+        }
+        
     }
 }

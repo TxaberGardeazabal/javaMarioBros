@@ -89,8 +89,8 @@ public class ImGuiLayer {
         
         setupDockSpace();
         currentScene.imGui();
-        // remove this
-        ImGui.showDemoWindow();
+        // remove this in test builds
+        // ImGui.showDemoWindow();
         if (gameViewWindow != null) {
             gameViewWindow.imGui();
         }
