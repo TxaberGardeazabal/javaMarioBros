@@ -57,13 +57,13 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 0.1750009,
-                    "y": 2.6750002
+                    "x": 0.325001,
+                    "y": 2.65
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": -0.024896145,
-                    "y": -0.01770401
+                    "x": 0.0,
+                    "y": 0.0
                   },
                   "zIndex": 20
                 }
@@ -6142,13 +6142,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 0.1750009,
-                        "y": 2.6750002
+                        "x": 0.325001,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.14078431,
-                        "y": 0.14797644
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -8226,13 +8226,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 0.3500012,
-                        "y": 2.6750002
+                        "x": 0.47500134,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.14078431,
-                        "y": 0.14797644
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -10310,13 +10310,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 0.5250013,
-                        "y": 2.6750002
+                        "x": 0.6250012,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.14078431,
-                        "y": 0.14797644
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -12394,13 +12394,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 0.7000004,
-                        "y": 2.6750002
+                        "x": 0.77500033,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.14078431,
-                        "y": 0.14797644
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -14478,13 +14478,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 0.8749993,
-                        "y": 2.6750002
+                        "x": 0.92499924,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.14078431,
-                        "y": 0.14797644
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -16562,13 +16562,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 1.0499986,
-                        "y": 2.6750002
+                        "x": 1.0749986,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.14078431,
-                        "y": 0.14797644
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -18648,13 +18648,13 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 5.3250017,
-                    "y": 2.6750002
+                    "x": 5.375002,
+                    "y": 2.65
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": -0.024896145,
-                    "y": -0.0132780075
+                    "x": 0.0,
+                    "y": 0.0
                   },
                   "zIndex": 20
                 }
@@ -21706,13 +21706,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 5.3250017,
-                        "y": 2.6750002
+                        "x": 5.375002,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.14078431,
-                        "y": 0.15240245
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -23790,13 +23790,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 5.5000014,
-                        "y": 2.6750002
+                        "x": 5.5250015,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.14078431,
-                        "y": 0.15240245
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -25875,12 +25875,12 @@
                     "properties": {
                       "position": {
                         "x": 5.6750016,
-                        "y": 2.6750002
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.14078431,
-                        "y": 0.15240245
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -27960,13 +27960,13 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 3.625001,
-                    "y": 2.6750002
+                    "x": 3.6750011,
+                    "y": 2.65
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": -0.01991725,
-                    "y": -0.0132780075
+                    "x": 0.0,
+                    "y": 0.0
                   },
                   "zIndex": 20
                 }
@@ -29000,13 +29000,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 3.625,
-                        "y": 2.6750002
+                        "x": 3.6750002,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.1457632,
-                        "y": 0.15240245
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -31086,8 +31086,8 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 4.125,
-                    "y": 2.6750002
+                    "x": 4.075,
+                    "y": 2.65
                   },
                   "rotation": 0.0,
                   "scale": {
@@ -32126,13 +32126,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 4.1,
-                        "y": 2.6750002
+                        "x": 4.075,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.14576344,
-                        "y": 0.15240245
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -34212,13 +34212,13 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 2.375001,
-                    "y": 2.6750002
+                    "x": 2.3250008,
+                    "y": 2.65
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": -0.014937639,
-                    "y": -0.0132780075
+                    "x": 0.0,
+                    "y": 0.0
                   },
                   "zIndex": 20
                 }
@@ -36261,13 +36261,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 2.375001,
-                        "y": 2.6750002
+                        "x": 2.3250008,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.15074281,
-                        "y": 0.15240245
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -38345,13 +38345,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 2.5750008,
-                        "y": 2.6750002
+                        "x": 2.4750004,
+                        "y": 2.65
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.15074281,
-                        "y": 0.15240245
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -40432,12 +40432,12 @@
                 "properties": {
                   "position": {
                     "x": 0.625,
-                    "y": 2.875
+                    "y": 2.8249998
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 0.8197401,
-                    "y": 0.13027243
+                    "x": 0.719,
+                    "y": 0.132
                   },
                   "zIndex": 20
                 }
@@ -40494,12 +40494,12 @@
                 "properties": {
                   "position": {
                     "x": 3.875,
-                    "y": 2.875
+                    "y": 2.8249998
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 0.87328464,
-                    "y": 0.13027243
+                    "x": 0.738,
+                    "y": 0.132
                   },
                   "zIndex": 20
                 }
@@ -40555,13 +40555,13 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 5.375,
-                    "y": 2.875
+                    "x": 5.325,
+                    "y": 2.8249998
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 1.0053377,
-                    "y": 0.13469844
+                    "x": 0.852,
+                    "y": 0.132
                   },
                   "zIndex": 20
                 }
@@ -40618,12 +40618,12 @@
                 "properties": {
                   "position": {
                     "x": 2.1500006,
-                    "y": 2.6750002
+                    "y": 2.65
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 0.12510388,
-                    "y": 0.13672201
+                    "x": 0.123,
+                    "y": 0.123
                   },
                   "zIndex": 20
                 }
@@ -40679,13 +40679,13 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 1.9749994,
-                    "y": 2.6750002
+                    "x": 1.9999995,
+                    "y": 2.65
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 0.24999999,
-                    "y": 0.24999999
+                    "x": 0.25,
+                    "y": 0.25
                   },
                   "zIndex": 20
                 }
@@ -40709,19 +40709,19 @@
                     },
                     "texCoords": [
                       {
-                        "x": 0.75,
+                        "x": 0.5,
                         "y": 1.0
                       },
                       {
-                        "x": 0.75,
-                        "y": 0.0
-                      },
-                      {
                         "x": 0.5,
                         "y": 0.0
                       },
                       {
-                        "x": 0.5,
+                        "x": 0.25,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.25,
                         "y": 1.0
                       }
                     ]
@@ -40880,15 +40880,15 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 3.85,
-                    "y": 2.6750002
+                    "x": 3.875,
+                    "y": 2.65
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 0.14576344,
-                    "y": 0.14797644
+                    "x": 0.132,
+                    "y": 0.132
                   },
-                  "zIndex": 50
+                  "zIndex": 20
                 }
               },
               {
@@ -40942,12 +40942,12 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 5.6,
+                    "x": 5.575,
                     "y": 0.125
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": -0.0101799965,
+                    "x": 0.0,
                     "y": 0.0
                   },
                   "zIndex": 20
@@ -42991,13 +42991,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 5.6,
+                        "x": 5.575,
                         "y": 0.125
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.15550046,
-                        "y": 0.16568045
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -45075,13 +45075,13 @@
                     "type": "gameEngine.Transform",
                     "properties": {
                       "position": {
-                        "x": 5.800012,
+                        "x": 5.725012,
                         "y": 0.12499905
                       },
                       "rotation": 0.0,
                       "scale": {
-                        "x": 0.15550046,
-                        "y": 0.16568045
+                        "x": 0.132,
+                        "y": 0.132
                       },
                       "zIndex": 20
                     }
@@ -47161,15 +47161,15 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 5.200003,
+                    "x": 5.2250032,
                     "y": 0.125
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 0.20000003,
+                    "x": 0.2,
                     "y": 0.2
                   },
-                  "zIndex": 48
+                  "zIndex": 20
                 }
               },
               {
@@ -47228,10 +47228,10 @@
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 0.13506214,
-                    "y": 0.14114802
+                    "x": 0.123,
+                    "y": 0.123
                   },
-                  "zIndex": 50
+                  "zIndex": 20
                 }
               },
               {
@@ -47278,7 +47278,69 @@
             "childGOs": []
           },
           {
-            "name": "start_button",
+            "name": "gameOverText",
+            "enabled": false,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 3.0000005,
+                    "y": 1.75
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 1.6775148,
+                    "y": 0.16568047
+                  },
+                  "zIndex": 20
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 567.0,
+                    "height": 56.0,
+                    "texture": {
+                      "filepath": "assets/images/text/game_over.png",
+                      "height": 56,
+                      "width": 567
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "title",
             "enabled": true,
             "components": [
               {
@@ -47286,12 +47348,74 @@
                 "properties": {
                   "position": {
                     "x": 2.875,
-                    "y": 1.3250005
+                    "y": 1.9999987
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 1.0618733,
-                    "y": 0.11731559
+                    "x": 2.5335245,
+                    "y": 0.9971366
+                  },
+                  "zIndex": 20
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 356.0,
+                    "height": 141.0,
+                    "texture": {
+                      "filepath": "assets/images/text/super_mario_bros_title.png",
+                      "height": 141,
+                      "width": 356
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "start_button",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 2.8750029,
+                    "y": 1.325
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.975,
+                    "y": 0.124
                   },
                   "zIndex": 20
                 }
@@ -47349,148 +47473,6 @@
             "childGOs": []
           },
           {
-            "name": "exit_button",
-            "enabled": true,
-            "components": [
-              {
-                "type": "gameEngine.Transform",
-                "properties": {
-                  "position": {
-                    "x": 2.875,
-                    "y": 0.8000003
-                  },
-                  "rotation": 0.0,
-                  "scale": {
-                    "x": 0.8389879,
-                    "y": 0.121712506
-                  },
-                  "zIndex": 20
-                }
-              },
-              {
-                "type": "components.SpriteRenderer",
-                "properties": {
-                  "color": {
-                    "x": 1.0,
-                    "y": 1.0,
-                    "z": 1.0,
-                    "w": 1.0
-                  },
-                  "sprite": {
-                    "Width": 312.0,
-                    "height": 56.0,
-                    "texture": {
-                      "filepath": "assets/images/text/salir.png",
-                      "height": 56,
-                      "width": 312
-                    },
-                    "texCoords": [
-                      {
-                        "x": 1.0,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 1.0,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  }
-                }
-              },
-              {
-                "type": "UI.UIButton",
-                "properties": {
-                  "buttonBehavior": {
-                    "type": "UI.buttonBehaviors.ExitButtonBehavior",
-                    "properties": {}
-                  }
-                }
-              }
-            ],
-            "doSerialization": true,
-            "isDead": false,
-            "childGOs": []
-          },
-          {
-            "name": "editor_button",
-            "enabled": true,
-            "components": [
-              {
-                "type": "gameEngine.Transform",
-                "properties": {
-                  "position": {
-                    "x": 2.875,
-                    "y": 0.97500014
-                  },
-                  "rotation": 0.0,
-                  "scale": {
-                    "x": 0.9862921,
-                    "y": 0.11731559
-                  },
-                  "zIndex": 20
-                }
-              },
-              {
-                "type": "components.SpriteRenderer",
-                "properties": {
-                  "color": {
-                    "x": 1.0,
-                    "y": 1.0,
-                    "z": 1.0,
-                    "w": 1.0
-                  },
-                  "sprite": {
-                    "Width": 376.0,
-                    "height": 56.0,
-                    "texture": {
-                      "filepath": "assets/images/text/editor.png",
-                      "height": 56,
-                      "width": 376
-                    },
-                    "texCoords": [
-                      {
-                        "x": 1.0,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 1.0,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  }
-                }
-              },
-              {
-                "type": "UI.UIButton",
-                "properties": {
-                  "buttonBehavior": {
-                    "type": "UI.buttonBehaviors.EditorButtonBehavior",
-                    "properties": {}
-                  }
-                }
-              }
-            ],
-            "doSerialization": true,
-            "isDead": false,
-            "childGOs": []
-          },
-          {
             "name": "select_button",
             "enabled": true,
             "components": [
@@ -47498,13 +47480,13 @@
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 2.874999,
-                    "y": 1.1500005
+                    "x": 2.8750024,
+                    "y": 1.1499997
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 2.9276745,
-                    "y": 0.12171239
+                    "x": 2.394,
+                    "y": 0.124
                   },
                   "zIndex": 20
                 }
@@ -47562,22 +47544,22 @@
             "childGOs": []
           },
           {
-            "name": "title",
+            "name": "editor_button",
             "enabled": true,
             "components": [
               {
                 "type": "gameEngine.Transform",
                 "properties": {
                   "position": {
-                    "x": 2.9500003,
-                    "y": 1.9999987
+                    "x": 2.8750021,
+                    "y": 0.97500014
                   },
                   "rotation": 0.0,
                   "scale": {
-                    "x": 2.5335245,
-                    "y": 0.9971366
+                    "x": 0.834,
+                    "y": 0.124
                   },
-                  "zIndex": 50
+                  "zIndex": 20
                 }
               },
               {
@@ -47590,12 +47572,12 @@
                     "w": 1.0
                   },
                   "sprite": {
-                    "Width": 356.0,
-                    "height": 141.0,
+                    "Width": 376.0,
+                    "height": 56.0,
                     "texture": {
-                      "filepath": "assets/images/text/super_mario_bros_title.png",
-                      "height": 141,
-                      "width": 356
+                      "filepath": "assets/images/text/editor.png",
+                      "height": 56,
+                      "width": 376
                     },
                     "texCoords": [
                       {
@@ -47615,6 +47597,86 @@
                         "y": 1.0
                       }
                     ]
+                  }
+                }
+              },
+              {
+                "type": "UI.UIButton",
+                "properties": {
+                  "buttonBehavior": {
+                    "type": "UI.buttonBehaviors.EditorButtonBehavior",
+                    "properties": {}
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          },
+          {
+            "name": "exit_button",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": 2.8750024,
+                    "y": 0.8000008
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.692,
+                    "y": 0.124
+                  },
+                  "zIndex": 20
+                }
+              },
+              {
+                "type": "components.SpriteRenderer",
+                "properties": {
+                  "color": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                  },
+                  "sprite": {
+                    "Width": 312.0,
+                    "height": 56.0,
+                    "texture": {
+                      "filepath": "assets/images/text/salir.png",
+                      "height": 56,
+                      "width": 312
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "UI.UIButton",
+                "properties": {
+                  "buttonBehavior": {
+                    "type": "UI.buttonBehaviors.ExitButtonBehavior",
+                    "properties": {}
                   }
                 }
               }
@@ -56466,19 +56528,19 @@
                     },
                     "texCoords": [
                       {
-                        "x": 0.75,
+                        "x": 0.25,
                         "y": 1.0
                       },
                       {
-                        "x": 0.75,
+                        "x": 0.25,
                         "y": 0.75
                       },
                       {
-                        "x": 0.5,
+                        "x": 0.0,
                         "y": 0.75
                       },
                       {
-                        "x": 0.5,
+                        "x": 0.0,
                         "y": 1.0
                       }
                     ]
@@ -56754,19 +56816,19 @@
                     },
                     "texCoords": [
                       {
-                        "x": 0.75,
+                        "x": 0.25,
                         "y": 1.0
                       },
                       {
-                        "x": 0.75,
+                        "x": 0.25,
                         "y": 0.75
                       },
                       {
-                        "x": 0.5,
+                        "x": 0.0,
                         "y": 0.75
                       },
                       {
-                        "x": 0.5,
+                        "x": 0.0,
                         "y": 1.0
                       }
                     ]

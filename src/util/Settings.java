@@ -82,7 +82,7 @@ public class Settings {
     public static float worldGravityMul = 0.7f;
     public static String mainMenuLevel = "assets/levels/game/mainMenu.txt";
     public static String defaultLevel = "assets/levels/NewLevel.txt";
-    public static String customPrefabPath = "assets/prefabs";
+    public static String customPrefabPath = "assets/prefabs/custom";
     public static String rootFolder = "assets";
     
     /**

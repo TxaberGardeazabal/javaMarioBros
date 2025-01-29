@@ -95,7 +95,6 @@ public class ImGuiLayer {
             gameViewWindow.imGui();
         }
         if (propertiesWindow != null) {
-            propertiesWindow.update(dt);
             propertiesWindow.imGui();
         }
         if (sceneHierarchy != null) {

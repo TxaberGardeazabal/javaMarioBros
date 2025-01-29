@@ -1,7 +1,7 @@
 {
-  "coins": 0,
+  "coins": 00,
   "lives": 3,
-  "score": 000000,
+  "score": 00,
   "playerState": "Small",
   "topScore": 0
 }

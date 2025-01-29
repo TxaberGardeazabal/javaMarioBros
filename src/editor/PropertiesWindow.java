@@ -60,13 +60,8 @@ import util.Settings;
 public class PropertiesWindow {
     private MouseControls mc;
     
-
     public PropertiesWindow(MouseControls mouseControls) {
         this.mc = mouseControls;
-    }
-    
-    public void update(float dt) {
-        
     }
     
     /**
