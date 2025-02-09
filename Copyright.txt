@@ -1,3 +1,8 @@
+Basado en la aplicacion creado por gameWithGabe: https://github.com/codingminecraft/Mario
+editado por txaberGardeazabal
+
+
+Fuente de SMB de la NES por TheWolfBunny:
 Copyright (c) 2016-2024,  “TheWolfBunny” (https://fontstruct.com/fontstructors/1258630/thewolfbunny)
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
