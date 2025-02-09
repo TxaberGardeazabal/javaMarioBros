@@ -40709,19 +40709,19 @@
                     },
                     "texCoords": [
                       {
-                        "x": 0.5,
+                        "x": 0.75,
                         "y": 1.0
                       },
                       {
+                        "x": 0.75,
+                        "y": 0.0
+                      },
+                      {
                         "x": 0.5,
                         "y": 0.0
                       },
                       {
-                        "x": 0.25,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.25,
+                        "x": 0.5,
                         "y": 1.0
                       }
                     ]
@@ -49065,7 +49065,7 @@
           {
             "type": "physics2D.components.PillboxCollider",
             "properties": {
-              "showBoundaries": false,
+              "showBoundaries": true,
               "width": 0.39,
               "height": 0.3,
               "offset": {
@@ -49225,7 +49225,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -49323,7 +49323,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -49421,7 +49421,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -49521,7 +49521,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 3.25,
                     "y": 0.125
@@ -54270,7 +54270,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -54368,7 +54368,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -54466,7 +54466,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -54587,7 +54587,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 1.25,
                         "y": 0.0
@@ -56278,7 +56278,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -56376,7 +56376,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -56474,7 +56474,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -56725,7 +56725,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -57013,7 +57013,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.0,
                     "y": 0.0
@@ -57148,7 +57148,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.375,
                     "y": 0.0
@@ -57433,7 +57433,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 0.375,
                     "y": 0.0
@@ -57826,7 +57826,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": -0.065
@@ -57927,7 +57927,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -58028,7 +58028,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -58129,7 +58129,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -58230,7 +58230,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -58331,7 +58331,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -58432,7 +58432,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -58533,7 +58533,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -58634,7 +58634,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -58735,7 +58735,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -58836,7 +58836,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -58936,7 +58936,7 @@
                     "x": 0.0,
                     "y": 0.0
                   },
-                  "showBoundaries": false,
+                  "showBoundaries": true,
                   "offset": {
                     "x": 6.0,
                     "y": 0.125
@@ -66139,7 +66139,7 @@
                         "x": 0.0,
                         "y": 0.0
                       },
-                      "showBoundaries": false,
+                      "showBoundaries": true,
                       "offset": {
                         "x": 0.0,
                         "y": 0.0
@@ -72792,7 +72792,120 @@
             ]
           }
         ]
+      },
+      {
+        "name": "other",
+        "enabled": true,
+        "components": [
+          {
+            "type": "gameEngine.Transform",
+            "properties": {
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "rotation": 0.0,
+              "scale": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "zIndex": -1
+            }
+          }
+        ],
+        "doSerialization": true,
+        "isDead": false,
+        "childGOs": [
+          {
+            "name": "levelEdge",
+            "enabled": true,
+            "components": [
+              {
+                "type": "gameEngine.Transform",
+                "properties": {
+                  "position": {
+                    "x": -0.125,
+                    "y": 1.4999992
+                  },
+                  "rotation": 0.0,
+                  "scale": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "zIndex": 0
+                }
+              },
+              {
+                "type": "physics2D.components.Rigidbody2D",
+                "properties": {
+                  "angularDamping": 0.8,
+                  "linearDamping": 0.9,
+                  "mass": 0.0,
+                  "bodyType": "Static",
+                  "friction": 0.1,
+                  "gravityScale": 1.0,
+                  "isSensor": false,
+                  "fixedRotation": false,
+                  "continuousCollision": false
+                }
+              },
+              {
+                "type": "physics2D.components.Box2DCollider",
+                "properties": {
+                  "halfSize": {
+                    "x": 0.25,
+                    "y": 3.0
+                  },
+                  "origin": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "showBoundaries": true,
+                  "offset": {
+                    "x": 0.0,
+                    "y": 0.0
+                  }
+                }
+              }
+            ],
+            "doSerialization": true,
+            "isDead": false,
+            "childGOs": []
+          }
+        ]
       }
     ]
+  },
+  {
+    "name": "empty_obj_gen",
+    "enabled": true,
+    "components": [
+      {
+        "type": "gameEngine.Transform",
+        "properties": {
+          "position": {
+            "x": -1.375,
+            "y": 4.125
+          },
+          "rotation": 0.0,
+          "scale": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "zIndex": 0
+        }
+      },
+      {
+        "type": "components.propertieComponents.NonPickable",
+        "properties": {}
+      },
+      {
+        "type": "components.propertieComponents.ShadowObj",
+        "properties": {}
+      }
+    ],
+    "doSerialization": true,
+    "isDead": true,
+    "childGOs": []
   }
 ]
